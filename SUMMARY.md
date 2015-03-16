@@ -11,5 +11,5 @@
    * Ribbon
    * Shortcuts
    * Script Library
-* Toolbox
+* [Toolbox](toolbox.md)
 
