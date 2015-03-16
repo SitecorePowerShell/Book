@@ -16,5 +16,5 @@
 * [Reports](reports.md)
    * [Authoring Reports](authoring_reports.md)
 * [Task Scheduler](task_scheduler.md)
-   * Authoring Tasks
+   * [Authoring Tasks](authoring_tasks.md)
 
