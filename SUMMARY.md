@@ -17,5 +17,5 @@
    * [Authoring Reports](authoring_reports.md)
 * [Task Scheduler](task_scheduler.md)
    * [Authoring Tasks](authoring_tasks.md)
-* Security
+* [Security](security.md)
 
