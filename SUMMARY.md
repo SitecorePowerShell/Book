@@ -9,4 +9,5 @@
 * [Integrated Scripting Environment](integrated_scripting_environment.md)
    * Text Editor
    * Ribbon
+   * Shortcuts
 
