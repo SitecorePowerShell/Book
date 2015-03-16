@@ -11,4 +11,5 @@
    * Ribbon
    * Shortcuts
    * Script Library
+* Toolbox
 
