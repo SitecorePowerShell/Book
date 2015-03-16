@@ -10,3 +10,4 @@ As an example, let’s run the Unused media items report.
 
 Once the report completes, the results appear in a report window.
 
+![Unused Media Items Output](Reports-output.png)
