@@ -14,4 +14,5 @@
 * [Toolbox](toolbox.md)
 * Modules
 * [Reports](reports.md)
+   * Authoring Reports
 
