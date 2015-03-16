@@ -10,4 +10,5 @@
    * Text Editor
    * Ribbon
    * Shortcuts
+   * Script Library
 
