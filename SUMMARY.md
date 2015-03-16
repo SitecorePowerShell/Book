@@ -13,5 +13,5 @@
    * Script Library
 * [Toolbox](toolbox.md)
 * Modules
-* Reports
+* [Reports](reports.md)
 
