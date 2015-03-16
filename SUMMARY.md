@@ -6,5 +6,5 @@
 * Console
    * [Running Commands](running_commands.md)
    * [Command Discovery](command_discovery.md)
-* Integrated Scripting Environment
+* [Integrated Scripting Environment](integrated_scripting_environment.md)
 
