@@ -15,5 +15,5 @@
 * Modules
 * [Reports](reports.md)
    * [Authoring Reports](authoring_reports.md)
-* Task Scheduler
+* [Task Scheduler](task_scheduler.md)
 
