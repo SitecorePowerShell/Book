@@ -5,4 +5,5 @@
    * [Installation](installation.md)
 * Console
    * [Running Commands](running_commands.md)
+   * Command Discovery
 
