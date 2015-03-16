@@ -4,4 +4,5 @@
 * [Getting Started](chapter1.md)
    * [Installation](installation.md)
 * Console
+   * Running Commands
 
