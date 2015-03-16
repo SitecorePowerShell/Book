@@ -1,4 +1,4 @@
-My Awesome Book
+Sitecore PowerShell Extensions
 =======
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+The Sitecore PowerShell Extensions (SPE) module is one of the best ways to manage Sitecore. The module includes a command line interface and integrated scripting environment to help automate and aggregate a variety of tasks.
