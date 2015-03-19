@@ -5,7 +5,7 @@ The Sitecore PowerShell Extensions (SPE) module is one of the best ways to manag
 
 By no means is this book a complete and authoritative guide to all things SPE, but we sure hope to provide you enough to be effective.
 
-We've maintained a fairly comprehensive list of links to [blogs and videos](http://blog.najmanowicz.com/sitecore-powershell-console/) to help you learn all there is to know about SPE. We hope you find this book helpful.
+We've also maintained a fairly comprehensive list of links to [blogs and videos](http://blog.najmanowicz.com/sitecore-powershell-console/) to help you learn all there is to know about SPE. We hope you find this book helpful.
 
 Development Team:
 
