@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Getting Started](chapter1.md)
+* [Getting Started](getting_started.md)
    * [Installation](installation.md)
 * [Console](console.md)
    * [Running Commands](running_commands.md)
