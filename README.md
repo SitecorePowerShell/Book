@@ -1,3 +1,5 @@
+![logo](cover.jpg)
+
 Sitecore PowerShell Extensions
 =======
 
