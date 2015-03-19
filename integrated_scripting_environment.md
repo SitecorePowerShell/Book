@@ -4,4 +4,4 @@ The ISE is a great way to group together various commands into what is commonly 
 
 ![ISE](ISE-empty.png)
 
-As you can see, the ISE closely resembles the Windows PowerShell ISE version 3 or later.
+As you can see, the ISE closely resembles the Windows PowerShell ISE version 3 or later.![](logo-45x45.jpg)
