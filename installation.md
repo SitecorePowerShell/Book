@@ -6,3 +6,4 @@ Immediately following the installation you'll find these new items added to the 
 1. Sitecore -> PowerShell CLI
 2. Sitecore -> Toolbox
 3. Sitecore -> Development Tools -> PowerShell ISE
+4. Sitecore -> Reporting Tools -> PowerShell Reports
