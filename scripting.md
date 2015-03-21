@@ -16,6 +16,6 @@ Let's see some of the features in the ISE:
   * Save As - Creates a new copy of the current script to the library.
   * Reload - Opens the original copy of the current script without saving modification.
  2. The *Script* chunk:
-  * Execute - Runs the current script.
+  * Execute - Runs the current script as a background job or in the http context.
   * Abort - Stops the execution of an executing script.
   * 
