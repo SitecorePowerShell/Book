@@ -6,4 +6,4 @@ The Integrated Scripting Environment (ISE) is a great way to group together comm
 Here's a quick look at the ISE:
 ![ISE](images/screenshots/ise-empty.png)
 
-![](SNAG-0143.png)
+![](images/screenshots/ise-numbered.png)
