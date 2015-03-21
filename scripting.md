@@ -5,5 +5,3 @@ The Integrated Scripting Environment (ISE) is a great way to group together comm
 
 Here's a quick look at the ISE:
 ![ISE](images/screenshots/ise-empty.png)
-
-As you can see, the ISE closely resembles the Windows PowerShell ISE version 3 or later.
