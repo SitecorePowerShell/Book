@@ -19,8 +19,8 @@ Something to note about the console:
  ```
  **Note:** The command *cd* is an alias for *Set-Location*.
  
-* The SPE module provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* are pulled from the Web.config settings. Run the command *Get-Variable* to see the complete list.
- * AppPath - Path to the installed directory for Sitecore.
+* The SPE module provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* are extract from the Web.config settings. Run the command *Get-Variable* to see the complete list.
+ * AppPath - The website directory.
  * Me - Current logged in user for Sitecore.
  * PWD - Present working directory for the console.
  * SitecoreDataFolder
