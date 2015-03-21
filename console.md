@@ -9,7 +9,7 @@ A few things to note about the console:
 * You can interact with the providers available in the standard Windows PowerShell Console. Below are some of the important providers.
  * FileSystem - Supports interacting with files and folders.
  * CmsItemProvider - Supports interacting with the Sitecore content items.
-* The SPE module provides some convenient variables out of the box for use in running commands and scripts.
+* The SPE module provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* are pulled from the Web.config settings.
  * AppPath - Path to the installed directory for Sitecore.
  * Me - Current logged in user for Sitecore.
  * PWD - Present working directory for the console.
