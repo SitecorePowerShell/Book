@@ -9,6 +9,8 @@ Here's a quick look at the ISE:
 Let's see some of the features in the ISE:
 ![ISE Home](images/screenshots/ise-home.png)
 
+![ISE Home](images/screenshots/ise-home.png)
+
  1. The *Write* chunk:
   * New - Creates a new script or module.
   * Open - Opens an existing script for the library.
