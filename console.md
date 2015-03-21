@@ -33,4 +33,4 @@ Something to note about the console:
  * SitecoreSerializationFolder
  * SitecoreTempFolder
 
- **Note:** Any new variables created in the console are stored within the session of each console instance; when the session ends the variables are removed.
+ **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
