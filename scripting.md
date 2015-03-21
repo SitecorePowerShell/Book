@@ -18,4 +18,6 @@ Let's see some of the features in the ISE:
  2. The *Script* chunk:
   * Execute - Runs the current script as a background job or in the http context.
   * Abort - Stops the execution of an executing script.
-  * 
+  * Runtime
+ 3. The *Context* chunk:
+  * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory).
