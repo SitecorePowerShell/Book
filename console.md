@@ -11,7 +11,7 @@ A few things to note about the console:
  * CmsItemProvider - Supports interacting with the Sitecore content items.
 * The console prompt typically begins with *PS master:\\>*. The present working directory is using the *CmsItemProvider* and set to the *master* database. 
  
- **Example**: Change directories between providers.
+ **Example:** Change directories between providers.
  ```powershell
  PS master:\> cd core:
  PS core:\> cd C:
