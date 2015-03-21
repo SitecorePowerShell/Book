@@ -22,6 +22,6 @@ Let's see some of the features in the ISE:
  3. The *Context* chunk:
   * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory).
   * Session - Specifies the session to use when executing the script. Resused sessions live in the *HttpSession*.
- 4. The *Text* panel:
+ 4. The *Text* area:
   * This is where you type all the commands for the script.
  5. The *Output* panel:
