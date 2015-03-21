@@ -5,7 +5,6 @@
    * [Installation](installation.md)
 * [Console](console.md)
 * [Scripting](scripting.md)
-   * Script Library
 * [Toolbox](toolbox.md)
 * Modules
 * [Reports](reports.md)
