@@ -5,7 +5,6 @@
    * [Installation](installation.md)
 * [Console](console.md)
    * [Running Commands](running_commands.md)
-   * [Command Discovery](command_discovery.md)
 * [Integrated Scripting Environment](integrated_scripting_environment.md)
    * Text Editor
    * Ribbon
