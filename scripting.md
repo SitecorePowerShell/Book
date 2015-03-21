@@ -24,4 +24,7 @@ Let's see some of the features in the ISE:
   * Session - Specifies the session to use when executing the script. Resused sessions live in the *HttpSession*.
  4. The *Text* area:
   * This is where you type all the commands for the script.
- 5. The *Output* panel:
+ 5. The *Output* pane:
+  * This is where you see the output of your script.
+ 6. The *Settings* tab:
+  * This is for the other ribbon options.
