@@ -21,4 +21,7 @@ Let's see some of the features in the ISE:
   * Runtime
  3. The *Context* chunk:
   * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory).
-  * Session - Specifies the session to use when executing the script. Resused sessions live in the *HttpSession*. 
+  * Session - Specifies the session to use when executing the script. Resused sessions live in the *HttpSession*.
+ 4. The *Text Editor*:
+  * This is where you type all the commands for the script.
+ 5. The 
