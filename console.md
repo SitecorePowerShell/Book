@@ -33,4 +33,4 @@ Something to note about the console:
  * SitecoreSerializationFolder
  * SitecoreTempFolder
 
- ![](cover.jpg)**Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
+ **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
