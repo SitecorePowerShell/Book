@@ -23,7 +23,7 @@ Something to note about the console:
  * AppPath - The website directory.
  * Me - Current logged in user for Sitecore.
  * PWD - Present working directory for the console.
- * SitecoreDataFolder
+ * SitecoreDataFolder - The data directory.
  * SitecoreDebugFolder
  * SitecoreIndexFolder
  * SitecoreLayoutFolder
