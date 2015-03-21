@@ -10,7 +10,7 @@ Let's see some of the features in the ISE:
 ![ISE Numbered](images/screenshots/ise-numbered.png)
 
  1. The *Write* chunk:
-  * New - Creates a new script.
+  * New - Creates a new script or module.
   * Open - Opens an existing script for the library.
   * Save - Saves the current script to the library.
   * Save As - Creates a new copy of the current script to the library.
