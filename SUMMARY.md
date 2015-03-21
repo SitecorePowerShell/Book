@@ -5,7 +5,6 @@
    * [Installation](installation.md)
 * [Console](console.md)
 * [Scripting](scripting.md)
-   * Text Editor
    * Ribbon
    * Shortcuts
    * Script Library
