@@ -36,3 +36,7 @@ Let's see some of the features in the ISE:
   * This indicates the current position of the cursor.
  9. The *Splitter* strip:
   * This is where you change the height of the output pane.
+ 10. The *Preferences* chunk:
+  * Settings - Specifies the console, ise, and results look and behave.
+ 11. The *Integration* chunk:
+ * Rebuild All - Rebuilds the gutter, ribbon, and control panel integration.
