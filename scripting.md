@@ -9,7 +9,7 @@ Here's a quick look at the ISE:
 Let's see some of the features in the ISE:
 ![ISE Home](images/screenshots/ise-home.png)
 
-![ISE Home](images/screenshots/ise-home.png)
+![ISE Home](images/screenshots/ise-settings.png)
 
  1. The *Write* chunk:
   * New - Creates a new script or module.
