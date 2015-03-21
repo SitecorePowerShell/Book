@@ -5,7 +5,7 @@ The [Sitecore PowerShell Extensions][1] (SPE) module is one of the best ways to 
 
 By no means is this book a complete and authoritative guide to all things SPE, but we sure hope to provide you enough to be effective.
 
-We've also maintained a fairly comprehensive list of links to [blogs and videos][2] to help you on your journey to SPE awesomeness. Happy coding!
+We also maintaine a comprehensive list of links to [blogs and videos][2] to help you on your journey to SPE awesomeness. Happy coding!
 
 Development Team:
 
