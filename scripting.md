@@ -7,7 +7,7 @@ Here's a quick look at the ISE:
 ![ISE](images/screenshots/ise-empty.png)
 
 Let's see some of the features in the ISE:
-![ISE Numbered](images/screenshots/ise-numbered.png)
+![ISE Home](images/screenshots/ise-home.png)
 
  1. The *Write* chunk:
   * New - Creates a new script or module.
