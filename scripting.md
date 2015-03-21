@@ -28,3 +28,9 @@ Let's see some of the features in the ISE:
   * This is where you see the output of your script.
  6. The *Settings* tab:
   * This is for the other ribbon options.
+ 7. The *Tips* strip:
+  * This is where you find helpful shortcuts.
+ 8. The *Line* and *Column* indicator:
+  * This indicates the current position of the cursor.
+ 9. The *Splitter* strip:
+  * This is where you change the height of the output pane.
