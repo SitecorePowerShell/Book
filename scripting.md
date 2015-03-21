@@ -1,6 +1,7 @@
 # Scripting
 
-The ISE is a great way to group together various commands into what is commonly known as a script. Windows PowerShell is a combination of small utility commands and a syntax that lends itself to scripting. Below is an example of the SPE ISE.
+Once you move beyond running a single commands, you will begin to combine those into scripts for automation.
+The Integrated Scripting Environment (ISE) is a great way to group together those individual commands. Below is an example of the SPE ISE.
 
 ![ISE](images/screenshots/ISE-empty.png)
 
