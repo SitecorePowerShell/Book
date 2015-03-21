@@ -1,6 +1,6 @@
 # Console
 
-The SPE Console is a command line interface (CLI) that provides a streamlined tool to working with Windows PowersShell and Sitecore.
+The SPE Console is a command line interface (CLI) designed for efficiency. The console provides a streamlined tool for working within the Windows PowersShell and Sitecore environments.
 
 Here's a quick look at the Console:
 ![Console](Console-Empty.png)
