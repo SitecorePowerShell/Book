@@ -4,7 +4,6 @@
 * [Getting Started](getting_started.md)
    * [Installation](installation.md)
 * [Console](console.md)
-   * [Running Commands](running_commands.md)
 * [Scripting](scripting.md)
    * Text Editor
    * Ribbon
