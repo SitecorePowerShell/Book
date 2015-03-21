@@ -5,17 +5,17 @@ The [Sitecore PowerShell Extensions][1] (SPE) module is one of the best ways to 
 
 By no means is this book a complete and authoritative guide to all things SPE, but we sure hope to provide you enough to be effective.
 
-We've also maintained a fairly comprehensive list of links to [blogs and videos](http://blog.najmanowicz.com/sitecore-powershell-console/) to help you on your journey to SPE awesomeness. Happy coding!
+We've also maintained a fairly comprehensive list of links to [blogs and videos][2] to help you on your journey to SPE awesomeness. Happy coding!
 
 Development Team:
 
-* [Adam Najmanowicz](http://blog.najmanowicz.com/)
-* [Michael West](http://michaellwest.blogspot.com/)
-* [Mike Reynolds](http://sitecorejunkie.com/)
+* [Adam Najmanowicz][3]
+* [Michael West][4]
+* [Mike Reynolds][5]
 
 
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
-[2]:
-[3]:
-[4]:
-[5]:
+[2]: http://blog.najmanowicz.com/sitecore-powershell-console/
+[3]: http://blog.najmanowicz.com/
+[4]: http://michaellwest.blogspot.com/
+[5]: http://sitecorejunkie.com/
