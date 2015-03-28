@@ -39,4 +39,4 @@ Now let's review each of the different features; take note of the numbered label
  10. The *Preferences* chunk:
   * Settings - Specifies the console, ise, and results look and behave.
  11. The *Integration* chunk:
- * Rebuild All - Rebuilds the gutter, ribbon, and control panel integration.
+  * Rebuild All - Rebuilds the gutter, ribbon, and control panel integration.
