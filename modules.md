@@ -7,4 +7,4 @@ Some benefits to using modules:
 * The out-of-the-box scripts are in their own module.
 * See Adam's post on the module design.
 
-[1](http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/)
+[1]: http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/
