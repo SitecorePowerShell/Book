@@ -16,6 +16,7 @@ To create your own Toolbox item take the following steps:
  * Right click the *Toolbox* library and choose *PowerShell Script*.
 ![Libary Script](images/screenshots/library-createscript.png)
 3. Open and edit the *PowerShell Script* using the ISE.
+![ISE Edit](images/screenshots/script-editise.png)
 4. Run the *Rebuild All* command in the ISE by navigating to the *Settings* tab and selecting the icon to rebuild. Be certain to enable the module before running the rebuild command.
 ![ISE Settings Tab](images/screenshots/ise-settingstab.png)
 5. Verify the new toolbox item appears in the Toolbox.
