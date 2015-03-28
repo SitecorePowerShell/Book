@@ -10,7 +10,7 @@ To create your own Toolbox item take the following steps:
 1. Create the *Toolbox* folder under an SPE module. Use the context menu to simplify the process.
  * Right click the module name and choose Scripts -> Create libraries for integration points.
 ![Module Libraries](images/screenshots/module-createlibraries.png)
- * Select the *Toolbox* item and click *Proceed*.
+ * Select the *Toolbox* item and click *Proceed*.  
 ![Module Toolbox Library](images/screenshots/module-createtoolboxlibrary.png)
 2. Create a *PowerShell Script* under the *Toolbox* item.
  * Right click the *Toolbox* library and choose *PowerShell Script*.  
