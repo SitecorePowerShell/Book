@@ -6,7 +6,7 @@ The Integrated Scripting Environment (ISE) is a great way to group together comm
 Here's a quick look at the ISE:
 ![ISE](images/screenshots/ise-empty.png)
 
-Let's see some of the features in the ISE:
+Now let's review each of the different features; take note of the numbered labels:
 ![ISE Home](images/screenshots/ise-home.png)
 
 ![ISE Home](images/screenshots/ise-settings.png)
