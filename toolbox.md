@@ -1,4 +1,4 @@
 # Toolbox
 
-The PowerShell Toolbox is basically a short to quickly get to frequently used scripts.
+The PowerShell Toolbox is quick way to access frequently used scripts.
 
