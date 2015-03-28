@@ -11,7 +11,6 @@ To create your own Toolbox item take the following steps:
  * Right click the module name and choose Scripts -> Create libraries for integration points.
 
 ![Module Libraries](images/screenshots/module-createlibraries.png)
- 
  * Select the *Toolbox* item and click *Proceed*.
 
 ![Module Toolbox Library](images/screenshots/module-createtoolboxlibrary.png)
