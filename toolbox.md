@@ -13,7 +13,7 @@ To create your own Toolbox item take the following steps:
  * Select the *Toolbox* item and click *Proceed*.
 ![Module Toolbox Library](images/screenshots/module-createtoolboxlibrary.png)
 2. Create a *PowerShell Script* under the *Toolbox* item.
- * Right click the *Toolbox* library and choose *PowerShell Script*.
+ * Right click the *Toolbox* library and choose *PowerShell Script*.  
 ![Libary Script](images/screenshots/library-createscript.png)
 3. Open and edit the *PowerShell Script* using the ISE.  
 ![ISE Edit](images/screenshots/script-editise.png)
