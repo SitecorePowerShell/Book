@@ -6,7 +6,7 @@
 * [Console](console.md)
 * [Scripting](scripting.md)
 * [Toolbox](toolbox.md)
-* Modules
+* [Modules](modules.md)
 * [Reports](reports.md)
    * [Authoring Reports](authoring_reports.md)
 * [Task Scheduler](task_scheduler.md)
