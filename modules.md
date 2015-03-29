@@ -10,6 +10,6 @@ Some benefits to using modules:
 Getting started with your own module is a short process.
 
 1. Navigate to the *Script Library* item and choose the module option.
-
+![New Module](images/screenshots/library-createnewmodule.png)
 
 [1]: http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/
