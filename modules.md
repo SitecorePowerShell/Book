@@ -16,6 +16,8 @@ Getting started with your own module is a short process.
 ![Integration Points](images/screenshots/module-createlibraries.png)
 4. Select the appropriate integration points for your module.
 ![Integration Point Libraries](images/screenshots/module-createtoolboxlibrary.png)
+5. Select the module and enable for use. This is where you would also open the ISE to rebuild integrations.
+![Module Activation](images/screenshots/module-activationdisabled.png)
 
 
 [1]: http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/
