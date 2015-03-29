@@ -7,4 +7,9 @@ Some benefits to using modules:
 * The out-of-the-box scripts are in their own module called *Platform*.
 * Adam's [post][1] on the module design goes in-depth to why we proposed this architectural change.
 
+Getting started with your own module is a short process.
+
+1. Navigate to the *Script Library* item and choose the module option.
+
+
 [1]: http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/
