@@ -37,5 +37,5 @@ Something to note about the console:
 | SitecoreTempFolder    | /temp  |
 
  **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
- 
+
 [1]: https://github.com/SitecorePowerShell/Console/issues/314
