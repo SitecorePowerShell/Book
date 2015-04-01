@@ -14,7 +14,7 @@ Something to note about the console:
  **Example:** Change directories between providers.
  ```powershell
  PS master:\> cd core:
- PS core:\> cd C:
+ PS core:\> cd C:\
  PS C:\> Set-Location -Path master:
  ```
  **Note:** The command *cd* is an alias for *Set-Location*.
