@@ -20,18 +20,21 @@ Something to note about the console:
  **Note:** Include the backslash in the path (i.e. **C:\\**) to get the root of the drive when interacting with the *FileSystem* provider; the behavior seen is different than you might expeect because of *w3wp.exe*. See issue #[314][1].
  
 * SPE provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* derive from the Web.config settings. Run the command *Get-Variable* to see the complete list.
- * AppPath - The website directory.
- * Me - Current logged in user for Sitecore.
- * PWD - Present working directory for the console.
- * SitecoreDataFolder - The data directory.
- * SitecoreDebugFolder
- * SitecoreIndexFolder
- * SitecoreLayoutFolder
- * SitecoreLogFolder
- * SitecoreMediaFolder
- * SitecorePackageFolder
- * SitecoreSerializationFolder
- * SitecoreTempFolder
+
+| Variable | Example |
+| -------- | ----------- |
+| AppPath  | C:\Inetpub\wwwroot\Console\Website\ |
+| Me        | sitecore\admin    |
+| PWD       | master:\     |
+| SitecoreDataFolder    | C:\Inetpub\wwwroot\Console\Data\    |
+| SitecoreDebugFolder   | C:\Inetpub\wwwroot\Console\Data\/debug  |
+| SitecoreIndexFolder   | C:\Inetpub\wwwroot\Console\Data\/indexes  |
+| SitecoreLayoutFolder  | C:\Inetpub\wwwroot\Console\Website\layouts  |
+| SitecoreLogFolder     | C:\Inetpub\wwwroot\Console\Data\/logs  |
+| SitecoreMediaFolder   | C:\Inetpub\wwwroot\Console\Website\upload  |
+| SitecorePackageFolder | C:\Inetpub\wwwroot\Console\Data\/packages  |
+| SitecoreSerializationFolder   | C:\Inetpub\wwwroot\Console\Data\/serialization  |
+| SitecoreTempFolder    | /temp  |
 
  **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
  
