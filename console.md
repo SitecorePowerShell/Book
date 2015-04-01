@@ -17,7 +17,7 @@ Something to note about the console:
  PS core:\> cd C:
  PS C:\windows\system32\inetsrv> Set-Location -Path master:
  ```
- **Note:** Use **C:\\** to get the root path.
+ **Note:** Include the backslash in the path (i.e. **C:\\**) to get the root of the drive when interacting with the *Filesystem* provider; the behavior seen is different than you might expeect because of *w3wp.exe*.
  
 * The SPE module provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* are extract from the Web.config settings. Run the command *Get-Variable* to see the complete list.
  * AppPath - The website directory.
