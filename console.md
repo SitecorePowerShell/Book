@@ -19,7 +19,7 @@ Something to note about the console:
  ```
  **Note:** Include the backslash in the path (i.e. **C:\\**) to get the root of the drive when interacting with the *FileSystem* provider; the behavior seen is different than you might expeect because of *w3wp.exe*. See issue #[314][1].
  
-* The SPE module provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* are extract from the Web.config settings. Run the command *Get-Variable* to see the complete list.
+* SPE provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* are extract from the Web.config settings. Run the command *Get-Variable* to see the complete list.
  * AppPath - The website directory.
  * Me - Current logged in user for Sitecore.
  * PWD - Present working directory for the console.
