@@ -16,6 +16,7 @@ The console prompt typically begins with *PS master:\\>*. The present working di
  PS master:\> cd core:
  PS core:\> cd C:
  PS C:\windows\system32\inetsrv> Set-Location -Path master:
+ PS master:\>
  ```
  **Note:** Include the backslash in the path (i.e. **C:\\**) to get the root of the drive when interacting with the *FileSystem* provider; the behavior seen is different than you might expeect because of *w3wp.exe*. See issue #[314][1].
  
