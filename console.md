@@ -14,10 +14,10 @@ Something to note about the console:
  **Example:** Change directories between providers.
  ```powershell
  PS master:\> cd core:
- PS core:\> cd C:\
- PS C:\> Set-Location -Path master:
+ PS core:\> cd C:
+ PS C:\windows\system32\inetsrv> Set-Location -Path master:
  ```
- **Note:** The command *cd* is an alias for *Set-Location*.
+ **Note:** Use **C:\\** to get the root path.
  
 * The SPE module provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* are extract from the Web.config settings. Run the command *Get-Variable* to see the complete list.
  * AppPath - The website directory.
