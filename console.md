@@ -42,10 +42,24 @@ SPE provides some convenient variables out of the box for use in running command
  **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
  
 #### Shortcuts
-There several shortcuts available in the console to help improve the user experience.
+These shortcuts in the console should help improve the user experience.
 
 | Shortcut  | Usage |
 | --------  | ----- |
-| tab       | Use to autocomplete commands. Press tab again to cycle through commands.  |
+| TAB       | Autocomplete commands. Press tab again to cycle through commands.  |
+| Up Arrow/Ctrl-P   | Show previous command from history    |
+| Down Arrow/Ctrl-N | Show next command from history        |
+| Delete/backspace  | Remove one character from right/left to the cursor    |
+| Left Arrow/Ctrl-B | Move cursor to the left   |
+| Right Arrow/Ctrl-F    | Move cursor to the right  |
+| Ctrl-Left Arrow   | Move cursor to previous word  |
+| Ctrl-Right Arrow  | Move cursor to next word  |
+| Ctrl-A/Home       | Move cursor to the beginning of the line  |
+| Ctrl-E/End        | Move cursor to the end of the line    |
+| Ctrl-K/Ctrl-H     | Remove the text after the cursor  |
+| Ctrl-U            | Remove the text before the cursor |
+| Ctrl-V            | Insert text from the clipboard    |
+|   
+
 
 [1]: https://github.com/SitecorePowerShell/Console/issues/314
