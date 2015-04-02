@@ -42,7 +42,7 @@ SPE provides some convenient variables out of the box for use in running command
  **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
  
 #### Shortcuts
-These shortcuts in the console should help improve the user experience.
+Below are the shortcuts available in the console.
 
 | Shortcut  | Usage |
 | --------  | ----- |
