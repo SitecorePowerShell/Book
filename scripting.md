@@ -15,8 +15,8 @@ Now let's review each of the different features; take note of the numbered label
   * New - Creates a new script or module.
   * Open - Opens an existing script for the library.
   * Save - Saves the current script to the library.
-  * Save As - Creates a new copy of the current script to the library.
-  * Reload - Opens the original copy of the current script without saving modification.
+  * Save As - Saves a copy of the current script to the library.
+  * Reload - Opens the original copy of the current script without saving any modifications.
  2. The *Script* chunk:
   * Execute - Runs the current script as a background job or in the http context.
   * Abort - Stops the execution of an executing script.
