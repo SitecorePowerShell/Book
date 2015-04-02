@@ -42,5 +42,10 @@ SPE provides some convenient variables out of the box for use in running command
  **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
  
 #### Shortcuts
+There several shortcuts available in the console to help improve the user experience.
+
+| Shortcut  | Usage |
+| --------  | ----- |
+| tab       | Use to autocomplete commands. Press tab again to cycle through commands.  |
 
 [1]: https://github.com/SitecorePowerShell/Console/issues/314
