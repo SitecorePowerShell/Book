@@ -24,7 +24,7 @@ Now let's review each of the different features; take note of the numbered label
  3. The *Context* chunk:
   * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory).
   * Session - Specifies the session to use when executing the script. Resused sessions live in the *HttpSession*.
- 4. The *Text* area:
+ 4. The *Script* editor:
   * This is where you type all the commands for the script.
  5. The *Output* pane:
   * This is where you see the output of your script.
