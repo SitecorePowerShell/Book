@@ -8,7 +8,7 @@ The command shown above is simply a type exposed as a public method in the *Cogn
 
 Beneath *Schedules* you can create as many tasks as Sitecore will allow. Configure the *Command* and *Items* fields like that shown below.
 
-![PowerShell Script Task](images/screenshots/tasks-testschedule.png)
+![PowerShell Script Task](images/screenshots/tasks-archiveschedule.png)
 
 The *Items* field contains the path to a script in the *Script Library*. Below are scripts found out-of-the-box.
 
