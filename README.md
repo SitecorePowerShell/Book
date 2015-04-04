@@ -7,11 +7,14 @@ By no means is this book a complete and authoritative guide to all things SPE, b
 
 We also maintaine a comprehensive list of links to [blogs and videos][2] to help you on your journey to SPE awesomeness. Happy coding!
 
-Development Team:
+#### Development Team
 
 * [Adam Najmanowicz][3]
 * [Michael West][4]
 * [Mike Reynolds][5]
+
+####Support
+Questions, comments, and feature requests should be submitted on [Github][6].
 
 
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
@@ -19,3 +22,4 @@ Development Team:
 [3]: http://blog.najmanowicz.com/
 [4]: http://michaellwest.blogspot.com/
 [5]: http://sitecorejunkie.com/
+[6]: https://github.com/SitecorePowerShell/Console
