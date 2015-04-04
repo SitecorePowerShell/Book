@@ -6,7 +6,7 @@ Windows Management Framework 3+ : [Download][3]
 
 The SPE module installs like any other for Sitecore. 
 
-Download the module from the [Sitecore Marketplace][1] and install through the _Installation Wizard_.
+[Download][1] the module from the [Sitecore Marketplace][4] and install through the _Installation Wizard_.
 
 Following the installation you'll find these new items added to the Sitecore menu:
 * Sitecore -> PowerShell Console
@@ -17,3 +17,4 @@ Following the installation you'll find these new items added to the Sitecore men
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
 [2]: http://www.microsoft.com/en-us/download/details.aspx?id=30653
 [3]: http://www.microsoft.com/en-us/download/details.aspx?id=40855
+[4]: https://marketplace.sitecore.net/
