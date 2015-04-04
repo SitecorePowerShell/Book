@@ -1,6 +1,6 @@
 # Installation
 
-The SPE module installs just like any other Sitecore module. 
+The SPE module installs like any other for Sitecore. 
 
 Download the module from the [Sitecore Marketplace][1] and install through the _Installation Wizard_.
 
