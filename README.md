@@ -18,7 +18,6 @@ We also maintain a comprehensive list of links to [blogs and videos][2] to help 
 #### Help and Support
 Questions, comments, and feature requests should be submitted on [GitHub][6].
 
-
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
 [2]: http://blog.najmanowicz.com/sitecore-powershell-console/
 [3]: http://blog.najmanowicz.com/
