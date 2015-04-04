@@ -29,10 +29,13 @@ To search for and retrieve more than one user, use the Filter parameter.
 ### -Identity&nbsp; &lt;AccountIdentity&gt;
 Specifies the Sitecore user by providing one of the following values.
  
-    Local Name
-        Example: admin
-    Fully Qualified Name
-        Example: sitecore\admi
+Local Name:
+ 
+    admin
+ 
+Fully Qualified Name:
+ 
+    sitecore\admi
  
  
  
