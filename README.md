@@ -5,9 +5,7 @@ The [Sitecore PowerShell Extensions][1] (SPE) module is one of the best ways to 
 
 The SPE module works with the Sitecore process, capable of making native calls to the Sitecore API. Running commands and writing scripts follow the standard and well-known Windows PowerShell syntax. Windows PowerShell is a common tool used in IT for desktop and server management, so we decided to stick with that as a framework to build upon.
 
-The following book should provide you with enough information to use SPE. Don't worry, you will be able to use it without having to writing any code.
-
-By no means is this book a complete and authoritative guide to all things SPE, but we sure hope to provide you enough to be effective.
+The following book should provide you with enough information to use be effective as using SPE. Don't worry, you will be able to use it without having to writing any code.
 
 We also maintain a comprehensive list of links to [blogs and videos][2] to help you on your journey to SPE awesomeness. Happy coding!
 
