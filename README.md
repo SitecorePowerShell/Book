@@ -9,9 +9,9 @@ We also maintaine a comprehensive list of links to [blogs and videos][2] to help
 
 #### Development Team
 
-* [Adam Najmanowicz][3]
-* [Michael West][4]
-* [Mike Reynolds][5]
+* [Adam Najmanowicz][3] - [@adamnaj][7]
+* [Michael West][4] - [@michaelwest101][8]
+* [Mike Reynolds][5] - [@mike_i_reynolds][9]
 
 #### Help and Support
 Questions, comments, and feature requests should be submitted on [GitHub][6].
@@ -23,3 +23,6 @@ Questions, comments, and feature requests should be submitted on [GitHub][6].
 [4]: http://michaellwest.blogspot.com/
 [5]: http://sitecorejunkie.com/
 [6]: https://github.com/SitecorePowerShell/Console
+[7]: https://twitter.com/adamnaj
+[8]: https://twitter.com/MichaelWest101
+[9]: https://twitter.com/mike_i_reynolds
