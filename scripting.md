@@ -23,7 +23,7 @@ Now let's review each of the different features; take note of the numbered label
   * Runtime
  3. **Context**:
   * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory).
-  * Session - Specifies the session to use when executing the script. Resused sessions live in the *HttpSession*.
+  * Session - Specifies the session to use when executing the script. Reused sessions live in the *HttpSession*.
  4. **Script**:
   * This is where you type all the commands for the script.
  5. **Output**:
