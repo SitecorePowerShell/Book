@@ -5,11 +5,11 @@ The SPE Console is a command line interface (CLI) designed for efficiency. The c
 ![PowerShell Console](images/screenshots/cli-empty.png)
 
 #### Providers
-You can interact with the providers available in the standard Windows PowerShell Console. Below are some of the important providers.Run the command ``` Get-PSProvider ``` to see the complete list.
+You can interact with the providers available in the standard Windows PowerShell Console. Below are some of the important providers.Run the command ` Get-PSProvider ` to see the complete list.
  * FileSystem - Supports interacting with files and folders.
  * CmsItemProvider - Supports interacting with the Sitecore content items.
 
-The console prompt typically begins with ``` PS master:\> ```. The present working directory is using the *CmsItemProvider* and set to the *master* database. 
+The console prompt typically begins with ` PS master:\> `. The present working directory is using the *CmsItemProvider* and set to the *master* database. 
  
  **Example:** Change directories between providers.
  ```powershell
