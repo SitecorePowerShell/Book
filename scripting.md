@@ -11,31 +11,31 @@ Now let's review each of the different features; take note of the numbered label
 
 ![ISE Settings Tab](images/screenshots/ise-settings.png)
 
- 1. The *Write* chunk:
+ 1. **Write**:
   * New - Creates a new script or module.
   * Open - Opens an existing script for the library.
   * Save - Saves the current script to the library.
   * Save As - Saves a copy of the current script to the library.
   * Reload - Opens the original copy of the current script without saving any modifications.
- 2. The *Script* chunk:
+ 2. **Script**:
   * Execute - Runs the current script as a background job or in the http context.
   * Abort - Stops the execution of an executing script.
   * Runtime
- 3. The *Context* chunk:
+ 3. **Context**:
   * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory).
   * Session - Specifies the session to use when executing the script. Resused sessions live in the *HttpSession*.
- 4. The *Script* editor:
+ 4. **Script**:
   * This is where you type all the commands for the script.
- 5. The *Output* pane:
+ 5. **Output**:
   * This is where you see the output of your script.
  6. The Home and Settings tabs.
- 7. The *Tips* strip:
+ 7. **Tips**:
   * This is where you find helpful shortcuts.
- 8. The *Line* and *Column* indicator:
+ 8. **Line** and **Column**:
   * This indicates the current position of the cursor.
- 9. The *Splitter* strip:
+ 9. **Splitter**:
   * This is where you change the height of the output pane.
- 10. The *Preferences* chunk:
+ 10. **Preferences**:
   * Settings - Specifies the console, ise, and results look and behave.
- 11. The *Integration* chunk:
+ 11. **Integration**:
   * Rebuild All - Rebuilds the gutter, ribbon, and control panel integration.
