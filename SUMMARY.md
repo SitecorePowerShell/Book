@@ -9,7 +9,7 @@
 * [Modules](modules.md)
 * [Reports](reports.md)
    * [Authoring Reports](authoring_reports.md)
-* [Task Scheduler](task_scheduler.md)
+* [Tasks](tasks.md)
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
 
