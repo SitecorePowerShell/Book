@@ -52,10 +52,12 @@ Examples:
 The following examples show how to use the filter syntax.
  
 To get all the users, use the asterisk wildcard:
-Get-User -Filter *
+ 
+    Get-User -Filter *
  
 To get all the users in a domain use the following command:
-Get-User -Filter "sitecore\*"
+ 
+    Get-User -Filter "sitecore\*"
  
  
  
