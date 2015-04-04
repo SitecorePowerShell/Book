@@ -28,8 +28,7 @@ Now let's review each of the different features; take note of the numbered label
   * This is where you type all the commands for the script.
  5. The *Output* pane:
   * This is where you see the output of your script.
- 6. The *Settings* tab:
-  * This is for the other ribbon options.
+ 6. The Home and Settings tabs.
  7. The *Tips* strip:
   * This is where you find helpful shortcuts.
  8. The *Line* and *Column* indicator:
