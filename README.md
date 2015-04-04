@@ -1,4 +1,4 @@
-![logo](images/logos/logo-45x45.jpg "") Sitecore PowerShell Extensions
+![logo](images/logos/logo-45x45.jpg "c") Sitecore PowerShell Extensions
 =======
 
 The [Sitecore PowerShell Extensions][1] (SPE) module is one of the best ways to manage and extend Sitecore. The module includes a command line (CLI) and scripting environment (ISE) for automating tasks.
