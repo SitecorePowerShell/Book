@@ -1,5 +1,4 @@
 figure {
-    text-align: center;
     display: table;
     margin: 10px auto; /* not needed unless you want centered */
 }
