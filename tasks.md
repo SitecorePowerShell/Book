@@ -7,3 +7,5 @@ The task scheduler is a great way to run scripts in a periodic fashion. You may 
 The command shown above is simply a type exposed as a public method in the *Cognifide.PowerShell* assembly. There exists an update method which accepts one or more items and executes the associated script.
 
 Beneath *Schedules* you can create as many tasks as Sitecore will allow. Configure the *Command* and *Items* fields like that shown below.
+
+[Future Screenshot of a task]
