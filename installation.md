@@ -1,8 +1,8 @@
 # Installation
 
 #### Prerequisites
-Windows Management Framework 3+ : [Download][2]
-
+Microsoft .NET Framework 4+ : [Download][2]
+Windows Management Framework 3+ : [Download][3]
 
 The SPE module installs like any other for Sitecore. 
 
@@ -15,4 +15,5 @@ Following the installation you'll find these new items added to the Sitecore men
 * Sitecore -> Reporting Tools -> PowerShell Reports
 
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
-[2]: http://www.microsoft.com/en-us/download/details.aspx?id=40855
+[2]: http://www.microsoft.com/en-us/download/details.aspx?id=30653
+[3]: http://www.microsoft.com/en-us/download/details.aspx?id=40855
