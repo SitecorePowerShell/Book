@@ -21,7 +21,7 @@ The console prompt typically begins with ` PS master:\> `. The present working d
  **Note:** Include the backslash in the path (i.e. **C:\\**) to get the root of the drive when interacting with the *FileSystem* provider; the behavior seen is different than you might expeect because of *w3wp.exe*. See issue #[314][1].
 
 #### Variables
-SPE provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* derive from the Web.config settings. Run the command``` Get-Variable ``` to see the complete list.
+SPE provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* derive from the Web.config settings. Run the command ` Get-Variable ` to see the complete list.
 
 | Variable | Example |
 | -------- | ----------- |
