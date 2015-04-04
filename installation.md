@@ -1,7 +1,7 @@
 # Installation
 
 #### Prerequisites
-Microsoft .NET Framework 4+ : [Download][2]
+Microsoft .NET Framework 4+ : [Download][2]  
 Windows Management Framework 3+ : [Download][3]
 
 The SPE module installs like any other for Sitecore. 
