@@ -11,5 +11,5 @@
 * [Tasks](tasks.md)
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
-* Appendix
+* [Appendix](appendix.md)
 
