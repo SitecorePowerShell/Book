@@ -12,9 +12,10 @@ Beneath *Schedules* you can create as many tasks as Sitecore will allow. Configu
 
 The *Items* field contains the path to a script in the *Script Library*. Below are scripts found out-of-the-box.
 
-| Module | Path |
+| Module | Script |
 | ------ | ---- |
-| Task Management | /sitecore/system/Modules/PowerShell/Script Library/Task Management/Tasks/Archive Item Versions |
-| User Session Management | /sitecore/system/Modules/PowerShell/Script Library/User Session Management/Tasks/Remove idle user sessions |
+| System Maintenance | Archive Sitecore logs, Clean up deleted items older than 30 days |
+| Task Management | Archive Item Versions |
+| User Session Management | Remove idle user sessions |
 
 
