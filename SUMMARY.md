@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Getting Started](getting_started.md)
-   * [Installation](installation.md)
+* [Installation](installation.md)
 * [Console](console.md)
 * [Scripting](scripting.md)
 * [Toolbox](toolbox.md)
