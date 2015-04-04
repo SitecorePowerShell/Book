@@ -15,4 +15,6 @@ The *Items* field contains the path to a script in the *Script Library*. Below a
 | Module | Path |
 | ------ | ---- |
 | Task Management | /sitecore/system/Modules/PowerShell/Script Library/Task Management/Tasks/Archive Item Versions |
+| User Session Management | /sitecore/system/Modules/PowerShell/Script Library/User Session Management/Tasks/Remove idle user sessions |
+
 
