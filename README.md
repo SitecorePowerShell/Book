@@ -14,7 +14,7 @@ We also maintaine a comprehensive list of links to [blogs and videos][2] to help
 * [Mike Reynolds][5]
 
 ####Support
-Questions, comments, and feature requests should be submitted on [Github][6].
+Questions, comments, and feature requests should be submitted on [GitHub][6].
 
 
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
