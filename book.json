@@ -4,7 +4,7 @@
     ],
     "pluginsConfig": {
         "image-captions": {
-            "caption": "Image - _CAPTION_"
+            "caption": "Figure - _CAPTION_"
         }
     }
 }
