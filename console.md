@@ -59,7 +59,6 @@ Below are the shortcuts available in the console.
 | Ctrl-K/Ctrl-H     | Remove the text after the cursor  |
 | Ctrl-U            | Remove the text before the cursor |
 | Ctrl-V            | Insert text from the clipboard    |
-|   
 
 
 [1]: https://github.com/SitecorePowerShell/Console/issues/314
