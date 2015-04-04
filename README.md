@@ -13,7 +13,7 @@ We also maintaine a comprehensive list of links to [blogs and videos][2] to help
 * [Michael West][4]
 * [Mike Reynolds][5]
 
-####Support
+#### Help and Support
 Questions, comments, and feature requests should be submitted on [GitHub][6].
 
 
