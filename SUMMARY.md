@@ -14,5 +14,5 @@
 * [Appendix](appendix.md)
    * Commands
        * [Get-User](get-user.md)
-* Working with Sitecore items
+* [Working with Sitecore items](working_with_sitecore_items.md)
 
