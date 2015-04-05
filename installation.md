@@ -19,6 +19,8 @@ Following the installation you'll find these new items added to the Sitecore men
 
 You may also clone the project from [GitHub][5] and compile it. This allows you to access the latest functionality without waiting for a new release. See the following [article][6] for instructions on how to get up and running.
 
+> $ git clone https://github.com/SitecorePowerShell/Console.git  
+
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
 [2]: http://www.microsoft.com/en-us/download/details.aspx?id=30653
 [3]: http://www.microsoft.com/en-us/download/details.aspx?id=40855
