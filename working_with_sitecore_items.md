@@ -5,7 +5,7 @@
 
 Sitecore items should be retrtieved  with use of ```Get-Item``` and ```Get-ChildItem``` cmdlets. That is because those 2 cmdlets add a PowerShell wrapping around them.
 
-If you have retrieved your item directly using the Sitecore API you can still add the nice wrapper. You can do that my piping them through the ```Wrap-Item``` commandlet. Allways ise the  latest version to leverage the full potential of the environment.
+If you have retrieved your item directly using the Sitecore API you can still add the nice wrapper. You can do that my piping them through the ```Wrap-Item``` commandlet. Always ise the  latest version to leverage the full potential of the environment.
 
 ## Getting Items based on path
 
@@ -58,7 +58,7 @@ Home        en-GB    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-You can see that those can be used in conjunction to retrieve all possible variants of an item in every language and every version. Filters like ```en-*``` are allowed. Nn execution with such filter would return all items in the English language, ignoring the region.
+You can see that those can be used in conjunction to retrieve all possible variants of an item in every language and every version. Filters like ```en-*``` are allowed. An execution with such filter would return all items in the English language, ignoring the region.
 
 Similarly ```Get-ChildItem``` supports this functionality for its children.
 
