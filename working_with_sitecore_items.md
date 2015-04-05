@@ -27,7 +27,7 @@ DisplayName Language ID                                     Version TemplateName
 Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-I’ve formatted the output above to show you that indeed the right language was returned. If you want to get all languages – the commandlet will support wildcards for both -Language and -Version parameter. The following returns the latest version for all languages of an item:
+I’ve formatted the output above to show you that indeed the right language was returned. The cmdlet supports wildcards for both ```-Language``` and ```-Version``` parameter. The following returns the latest version for all languages of an item:
 ```
 PS master:\>Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
   
