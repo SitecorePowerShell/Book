@@ -10,7 +10,8 @@ If you have retrieved your item directly using the Sitecore API you can still ad
 ## Getting Items based on path
 
 If you know the path to your item and the database you can retrieve your item as follows:
-```
+
+```powershell
 PS master:\>Get-Item master:/content/home
  
 Name Children Languages                Id                                     TemplateName
@@ -19,7 +20,8 @@ Home True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sa
 ```
 
 You might have noticed that I’ve skipped the /sitecore part in the path. This is because this item is represented by the root item of the drive ```master:```. The above will return the latest version of the item in your current language. But what if you want the item in another language? No problem – let’s retrieve the Danish version of Home…
-```
+
+```powershell
 PS master:\>Get-Item master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
 
 DisplayName Language ID                                     Version TemplateName
@@ -28,7 +30,8 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
 I’ve formatted the output above to show you that indeed the right language was returned. The cmdlet supports wildcards for both ```-Language``` and ```-Version``` parameter. The following returns the latest version for all languages of an item:
-```
+
+```powershell
 PS master:\>Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
   
 DisplayName Language ID                                     Version TemplateName
@@ -43,7 +46,7 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 The ```en-US``` above shows version number as 2 - which means that there are or at some point were other versions. Let’s retrieve the item in all languages and all versions…
 
-```
+```powershell
 PS master:\>Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
   
 DisplayName Language ID                                     Version TemplateName
@@ -95,7 +98,8 @@ Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       Tena
 ## Getting large number of filtered items with Sitecore queries
 
 It’s not always the most efficient to operate on items by traversing the tree using ```Get-ChildItem```. This is especially true if you need to work on large trees but need to select only a few items of e.g. a specific template. For this we’ve introduced support for the Sitecore query within our provider. Following example fetches all items in /sitecore/content/ branch in the ```master``` database for items of "Sample Item template":
-```
+
+```powershell
 PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
   
 Name                             Children Languages                Id                                     TemplateName
@@ -105,7 +109,8 @@ Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA
 ```
 
 Naturally the -Language parameter still works…
-```
+
+```powershell
 PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -auto
   
 DisplayName  Language ID                                     Version TemplateName
@@ -128,18 +133,20 @@ Hjem         da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ## Using ID to address an item.
 
 You can also fetch for items by ID like:
-```
+
+```powershell
 PS master:\>Get-Item master: -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
   
 Name  Children Languages                Id                                     TemplateName
 ----  -------- ---------                --                                     ------------
 Home  True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
+
 ## Using Item Uri
 
 You can query item using its Uri. Uri contains information about version and language encoded directly in it:
 
-```
+```powershell
 PS master:\>Get-Item master: -Uri "sitecore://master/{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}?lang=en&ver=1"
   
 Name Children Languages                Id                                     TemplateName
@@ -153,11 +160,13 @@ In both of the above cases you need to specify a database (like ```master:```) a
 
 I often see the following two ways of accessing and changing fields used in scripts:
 
-```
+```powershell
 Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
 ```
+
 Or something that would feel natural to a Sitecore developer:
-```
+
+```powershell
 $item = Get-Item master:/content/home
 $item.Editing.BeginEdit()
 $item["Title"] = "New Title"
@@ -165,29 +174,38 @@ $item.Editing.EndEdit()
 ```
 
 Those approaches while working are not the most efficient notation for modifying item content. Items that you’re getting from the provider give you a better way of doing it. Provider exposes your Sitecore fields as semi-native PowerShell properties. Instead of doing the above you can do:
-```
+
+```powershell
 $item = Get-Item master:/content/home
 $item.Title = "New Title"
 ```
+
 … or even shorter if you don’t want to use a variable:
-```
+
+```powershell
 (Get-Item master:/content/home).Title = "New Title"
 ```
+
 It also doesn’t work for string properties exclusively. There are a other hidden gems in those properties. For example if we detect that the field is a Date or Datetime field, we will return System.DateTime typed value from a field rather than the string Sitecore stores internally.
-```
+
+```powershell
 PS master:\>(Get-Item master:/content/home).__Created
 Monday, April 07, 2008 1:59:00 PM
 ```
 
 And not just read – you can also assign ```System.DateTime``` value to such PowerShell “native” property:
-```
+
+```powershell
 PS master:\>(Get-Item master:/content/home).__Created = [DateTime]::Now
 ```
+
 Now let’s read it again:
-```
+
+```powershell
 PS master:\>(Get-Item master:/content/home).__Created
 Monday, October 13, 2014 1:59:41 AM
 ```
+
 Great we’ve just changed it! Our property handlers take care of all the necessary ```.Editing.BeginEdit```s and ```.Editing.EndEdit```s.
 
 It works for assigning content items and media items as well. If your item has link fields in it, you can assign other items to them and not worry about the link format – we will do all the plumbing for you.
@@ -198,20 +216,21 @@ To provide an example – I’ve extended my home with additional fields as foll
 
 I can do the following to assign an image to my Image field
 
-```
+```powershell
 (Get-Item master:/content/home).Image = Get-Item 'master:\media library\logo'
 ```
 
 Easy enough, isn’t it? Let us (the PowerShell Extensions) detect the field type for you and worry about what to call! Now let’s assign a content item to GeneralLink and Link fields… just like you expected:
 
-```
+```powershell
 (Get-Item master:/content/home).GeneralLink = Get-Item 'master:\content\CognifideCom'
 ```
 
 Even better – if you assign a media item to it, it will detect that and do the right thing assigning it as a media link.
 
 What about fields that accept lists of items? We’ve got your back here as well. Let’s assign all children of ```/sitecore/content/``` item to the ItemList field:
-```
+
+```powershell
 (Get-Item master:/content/home).ItemList = Get-ChildItem 'master:\content\'
 ```
 Ok, so let’s see how our item looks in the Content editor after all the assignments that we’ve just performed:
