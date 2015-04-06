@@ -3,9 +3,9 @@
 
 ## How do I retrieve my Sitecore items the PowerShell way?
 
-Sitecore items should be retrtieved  with use of ```Get-Item``` and ```Get-ChildItem``` cmdlets. That is because those 2 cmdlets add a PowerShell wrapping around them.
+Retrieve Sitecore items with use of `Get-Item` and `Get-ChildItem` cmdlets. That is because those 2 cmdlets add a PowerShell wrapping around them.
 
-If you have retrieved your item directly using the Sitecore API you can still add the nice wrapper. You can do that my piping them through the ```Wrap-Item``` commandlet. Always ise the  latest version to leverage the full potential of the environment.
+If you have retrieved your item directly using the Sitecore API you can still add the nice wrapper. You can do that my piping them through the `Wrap-Item` commandlet. Always use the latest version of SPE to leverage the full potential of the environment.
 
 ## Getting Items based on path
 
@@ -173,7 +173,7 @@ $item["Title"] = "New Title"
 $item.Editing.EndEdit()
 ```
 
-Those approaches while working are not the most efficient notation for modifying item content. Items that you’re getting from the provider give you a better way of doing it. Provider exposes your Sitecore fields as semi-native PowerShell properties. Instead of doing the above you can do:
+Those approaches while working are not the most efficient notation for modifying item content. Items that you're getting from the provider give you a better way of doing it. Provider exposes your Sitecore fields as semi-native PowerShell properties. Instead of doing the above you can do:
 
 ```powershell
 $item = Get-Item master:/content/home
@@ -193,20 +193,20 @@ PS master:\>(Get-Item master:/content/home).__Created
 Monday, April 07, 2008 1:59:00 PM
 ```
 
-And not just read – you can also assign ```System.DateTime``` value to such PowerShell “native” property:
+And not just read – you can also assign `System.DateTime` value to such PowerShell “native” property:
 
 ```powershell
 PS master:\>(Get-Item master:/content/home).__Created = [DateTime]::Now
 ```
 
-Now let’s read it again:
+Now let's read it again:
 
 ```powershell
 PS master:\>(Get-Item master:/content/home).__Created
 Monday, October 13, 2014 1:59:41 AM
 ```
 
-Great we’ve just changed it! Our property handlers take care of all the necessary ```.Editing.BeginEdit```s and ```.Editing.EndEdit```s.
+Great we’ve just changed it! Our property handlers take care of all the necessary usages of `.Editing.BeginEdit` and `.Editing.EndEdit`.
 
 It works for assigning content items and media items as well. If your item has link fields in it, you can assign other items to them and not worry about the link format – we will do all the plumbing for you.
 
@@ -228,12 +228,12 @@ Easy enough, isn’t it? Let us (the PowerShell Extensions) detect the field typ
 
 Even better – if you assign a media item to it, it will detect that and do the right thing assigning it as a media link.
 
-What about fields that accept lists of items? We’ve got your back here as well. Let’s assign all children of ```/sitecore/content/``` item to the ItemList field:
+What about fields that accept lists of items? We’ve got your back here as well. Let’s assign all children of `/sitecore/content/` item to the ItemList field:
 
 ```powershell
 (Get-Item master:/content/home).ItemList = Get-ChildItem 'master:\content\'
 ```
-Ok, so let’s see how our item looks in the Content editor after all the assignments that we’ve just performed:
+Ok, so let's see how our item looks in the Content editor after all the assignments that we've just performed:
 
 ![](http://blog.najmanowicz.com/wp-content/uploads/2014/10/image1.png)
 
@@ -243,4 +243,4 @@ Those little improvements make your scripts much more succinct and understandabl
 
 ## When not to use the automated properties?
 
-As with every rule there is an exception to this one. Those automated properties perform the ```$item.Editing.BeginEdit()``` and ```$item.Editing.EndEdit()``` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call ```$item.Editing.BeginEdit()``` yourself before modifying the item. Subsequently call the ```$item[“field name”] = “new value”``` for each property modify. Finally end with the ```$item.Editing.EndEdit()```. Choosing this way is situational and will usually only be required if you’re working with a large volume of data. In those cases you might also want to introduce the ```Sitecore.Data.BulkUpdateContext``` trick used in [this blog post](http://bartlomiejmucha.com/en/blog).
+As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`. Choosing this way is situational and will usually only be required if you’re working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` trick used in [this blog post](http://bartlomiejmucha.com/en/blog).
