@@ -4,6 +4,7 @@
 * [Installation](installation.md)
 * [Console](console.md)
 * [Scripting](scripting.md)
+* [Working with Sitecore items](working_with_sitecore_items.md)
 * [Toolbox](toolbox.md)
 * [Modules](modules.md)
 * [Reports](reports.md)
@@ -14,5 +15,4 @@
 * [Appendix](appendix.md)
    * Commands
        * [Get-User](get-user.md)
-* [Working with Sitecore items](working_with_sitecore_items.md)
 
