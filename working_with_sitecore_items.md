@@ -19,7 +19,7 @@ Name Children Languages                Id                                     Te
 Home True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-You might have noticed that I’ve skipped the /sitecore part in the path. This is because this item is represented by the root item of the drive ```master:```. The above will return the latest version of the item in your current language. But what if you want the item in another language? No problem – let’s retrieve the Danish version of Home…
+You might have noticed that I’ve skipped the /sitecore part in the path. This is because this item is represented by the root item of the drive `master:`. The above will return the latest version of the item in your current language. But what if you want the item in another language? No problem – let’s retrieve the Danish version of Home…
 
 ```powershell
 PS master:\>Get-Item master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
@@ -29,7 +29,7 @@ DisplayName Language ID                                     Version TemplateName
 Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-I’ve formatted the output above to show you that indeed the right language was returned. The cmdlet supports wildcards for both ```-Language``` and ```-Version``` parameter. The following returns the latest version for all languages of an item:
+I’ve formatted the output above to show you that indeed the right language was returned. The cmdlet supports wildcards for both `-Language` and `-Version` parameter. The following returns the latest version for all languages of an item:
 
 ```powershell
 PS master:\>Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
@@ -44,7 +44,7 @@ Home        en-GB    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-The ```en-US``` above shows version number as 2 - which means that there are or at some point were other versions. Let’s retrieve the item in all languages and all versions…
+The `en-US` above shows version number as 2 - which means that there are or at some point were other versions. Let’s retrieve the item in all languages and all versions…
 
 ```powershell
 PS master:\>Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
@@ -63,7 +63,7 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 You can see that those can be used in conjunction to retrieve all possible variants of an item in every language and every version. Filters like ```en-*``` are allowed. An execution with such filter would return all items in the English language, ignoring the region.
 
-Similarly ```Get-ChildItem``` supports this functionality for its children.
+Similarly `Get-ChildItem` supports this functionality for its children.
 
 ```powershell
 PS master:\>Get-ChildItem master:/content -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName
@@ -97,7 +97,7 @@ Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       Tena
 
 ## Getting large number of filtered items with Sitecore queries
 
-It’s not always the most efficient to operate on items by traversing the tree using ```Get-ChildItem```. This is especially true if you need to work on large trees but need to select only a few items of e.g. a specific template. For this we’ve introduced support for the Sitecore query within our provider. Following example fetches all items in /sitecore/content/ branch in the ```master``` database for items of "Sample Item template":
+It's not always the most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items of e.g. a specific template. For this we’ve introduced support for the Sitecore query within our provider. Following example fetches all items in /sitecore/content/ branch in the `master` database for items of "Sample Item template":
 
 ```powershell
 PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
