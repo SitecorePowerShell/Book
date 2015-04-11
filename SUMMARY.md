@@ -13,6 +13,6 @@
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
 * [Appendix](appendix.md)
-   * Commands
+   * [Commands](appendix/commands.md)
        * [Get-User](appendix/commands/get-user.md)
 
