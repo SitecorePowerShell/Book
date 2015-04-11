@@ -14,5 +14,5 @@
 * [Security](security.md)
 * [Appendix](appendix.md)
    * Commands
-       * [Get-User](get-user.md)
+       * [Get-User](appendix/commands/get-user.md)
 
