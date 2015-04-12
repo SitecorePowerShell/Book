@@ -1,4 +1,4 @@
-﻿# Export-Item 
+# Export-Item 
  
 Serializes sitecore item to server disk drive. This command used to be named Serialize-Item - a matching alias added for compatibility with older scripts. 
  
@@ -201,3 +201,4 @@ PS master:\> Export-Item -Path master:\content\home
 * <a href='http://stackoverflow.com/questions/20195718/sitecore-serialization-powershell' target='_blank'>http://stackoverflow.com/questions/20195718/sitecore-serialization-powershell</a><br/> 
  
 * <a href='http://stackoverflow.com/questions/20283438/sitecore-powershell-deserialization-core-db' target='_blank'>http://stackoverflow.com/questions/20283438/sitecore-powershell-deserialization-core-db</a><br/>
+
