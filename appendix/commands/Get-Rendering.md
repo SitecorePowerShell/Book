@@ -1,4 +1,4 @@
-﻿# Get-Rendering 
+# Get-Rendering 
  
 Returns RenderingDefinition from an item based on provided filtering parameters. 
  
@@ -243,3 +243,4 @@ PS master:\> Get-Item master:\content\home | Get-Rendering -Placeholder "*main*"
 * Get-Layout 
  
 * Set-Layout
+
