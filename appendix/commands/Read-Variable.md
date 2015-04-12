@@ -1,4 +1,4 @@
-﻿# Read-Variable 
+# Read-Variable 
  
 Prompts user to provide values for variables required by the script to perform its operation. 
  
@@ -250,3 +250,4 @@ if($result -ne "ok")
 * Show-YesNoCancel 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
