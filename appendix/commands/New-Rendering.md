@@ -1,4 +1,4 @@
-﻿# New-Rendering 
+# New-Rendering 
  
 Creates new rendering definition that can later be added to an item. 
  
@@ -263,3 +263,4 @@ PS master:\> Add-Rendering -Item $item -PlaceHolder "main" -Rendering $rendering
 * Get-Layout 
  
 * Set-Layout
+
