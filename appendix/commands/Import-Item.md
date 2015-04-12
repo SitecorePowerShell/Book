@@ -1,4 +1,4 @@
-﻿# Import-Item 
+# Import-Item 
  
 Deserializes sitecore item from server disk drive. This command used to be named Deserialize-Item - a matching alias added for compatibility with older scripts. 
  
@@ -201,3 +201,4 @@ PS master:\> Import-Item -path "c:\project\data\serialization\master\sitecore\co
 * <a href='http://stackoverflow.com/questions/20195718/sitecore-serialization-powershell' target='_blank'>http://stackoverflow.com/questions/20195718/sitecore-serialization-powershell</a><br/> 
  
 * <a href='http://stackoverflow.com/questions/20283438/sitecore-powershell-deserialization-core-db' target='_blank'>http://stackoverflow.com/questions/20283438/sitecore-powershell-deserialization-core-db</a><br/>
+
