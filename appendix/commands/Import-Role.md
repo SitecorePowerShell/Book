@@ -1,4 +1,4 @@
-﻿# Import-Role 
+# Import-Role 
  
 Imports (deserializes) Sitecore roles from the Sitecore server disk drive. 
  
@@ -167,3 +167,4 @@ PS master:\> Import-Role -Path C:\my\Serialization\Folder\Admins.role
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
