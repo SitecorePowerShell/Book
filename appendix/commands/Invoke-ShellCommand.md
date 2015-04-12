@@ -1,4 +1,4 @@
-﻿# Invoke-ShellCommand 
+# Invoke-ShellCommand 
  
 Executes Sitecore Shell command for an item.
 This command used to be named Execute-ShellCommand - a matching alias added for compatibility with older scripts. 
@@ -156,3 +156,4 @@ PS master:\> Get-Item master:/content/home | Invoke-ShellCommand "contenteditor:
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
