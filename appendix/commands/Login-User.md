@@ -1,4 +1,4 @@
-﻿# Login-User 
+# Login-User 
  
 Logs a user in and performs further script instructions in the context of the user. 
  
@@ -61,3 +61,4 @@ PS master:\> Login-User -Identity "sitecore\admin" -Password "b"
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
