@@ -1,4 +1,4 @@
-﻿# Remove-User 
+# Remove-User 
  
 Removes the Sitecore user. 
  
@@ -118,3 +118,4 @@ PS master:\> Get-User -Filter sitecore\m* | Remove-User
 * Set-User 
  
 * Unlock-User
+
