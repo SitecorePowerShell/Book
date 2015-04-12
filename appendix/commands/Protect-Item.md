@@ -1,4 +1,4 @@
-﻿# Protect-Item 
+# Protect-Item 
  
 Protects the Sitecore item by the current or specified user. 
  
@@ -165,3 +165,4 @@ Home                             False    {en, ja-JP, de-DE, da}   {110D559F-DEA
 * Unprotect-Item 
  
 * Get-Item
+
