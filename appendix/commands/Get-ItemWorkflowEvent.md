@@ -1,4 +1,4 @@
-﻿# Get-ItemWorkflowEvent 
+# Get-ItemWorkflowEvent 
  
 Retrieves entries from the history store notifying of workflow state change of a specific item. 
  
@@ -148,3 +148,4 @@ User     : sitecore\admin
 * Execute-Workflow 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
