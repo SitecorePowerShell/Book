@@ -1,4 +1,4 @@
-﻿# Get-Database 
+# Get-Database 
  
 Retrieve Sitecore Database. 
  
@@ -109,3 +109,4 @@ master               {en, de-DE, es-ES, pt-BR...}   False      False
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
