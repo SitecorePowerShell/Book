@@ -1,4 +1,4 @@
-﻿# Show-Alert 
+# Show-Alert 
  
 Pauses the script and shows an alert to the user. 
  
@@ -65,3 +65,4 @@ PS master:\> Show-Alert "Hello world."
 * Show-YesNoCancel 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
