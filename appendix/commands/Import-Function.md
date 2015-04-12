@@ -1,4 +1,4 @@
-﻿# Import-Function 
+# Import-Function 
  
 Imports a function script from the script library's "Functions" folder. 
  
@@ -46,3 +46,4 @@ PS master:\> Import-Function -Name Resolve-Error
 * Invoke-Script 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
