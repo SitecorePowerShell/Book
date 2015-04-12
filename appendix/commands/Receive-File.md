@@ -1,4 +1,4 @@
-﻿# Receive-File 
+# Receive-File 
  
 Shows a dialog to users allowing to upload files to either server file system or items in media library. 
  
@@ -277,3 +277,4 @@ text False    {en, da}  {307BCF7D-27FD-46FC-BE83-D9ED640CB09F} File
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
