@@ -1,4 +1,4 @@
-﻿# Get-Layout 
+# Get-Layout 
  
 Retrieves Layout of an item. 
  
@@ -134,3 +134,4 @@ PS master:\> Get-Layout -Path master:\content\home
 * Remove-Rendering 
  
 * Set-Layout
+
