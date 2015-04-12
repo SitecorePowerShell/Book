@@ -1,4 +1,4 @@
-﻿# New-ItemWorkflowEvent 
+# New-ItemWorkflowEvent 
  
 Creates new entry in the history store notifying of workflow state change. 
  
@@ -165,3 +165,4 @@ PS master:\> New-ItemWorkflowEvent -Path master:\content\home -lanuage "en" -Tex
 * Execute-Workflow 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
