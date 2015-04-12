@@ -14,3 +14,5 @@
 * [Security](security.md)
 * [Appendix](appendix.md)
    * [Commands](appendix/commands.md)
+       * Command Help
+
