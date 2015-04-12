@@ -1,4 +1,4 @@
-﻿# Get-Index 
+# Get-Index 
  
 Returns Sitecore database indices. 
  
@@ -73,3 +73,4 @@ PS master:\> Get-Index -Database "master"
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
