@@ -44,7 +44,7 @@ The following commands are distributed with the Sitecore PowerShell Extensions m
 * [Get-SpeModuleFeatureRoot](https://github.com/SitecorePowerShell/Console/blob/master/Documentation/Markdown/Get-SpeModuleFeatureRoot.md)
 * [Get-TaskSchedule](https://github.com/SitecorePowerShell/Console/blob/master/Documentation/Markdown/Get-TaskSchedule.md)
 * [Get-UpdatePackageDiff](https://github.com/SitecorePowerShell/Console/blob/master/Documentation/Markdown/Get-UpdatePackageDiff.md)
-* [Get-User](appendix/help/Get-User.md)
+* [Get-User](help/Get-User.md)
 * [Get-UserAgent](https://github.com/SitecorePowerShell/Console/blob/master/Documentation/Markdown/Get-UserAgent.md)
 * [Import-Function](https://github.com/SitecorePowerShell/Console/blob/master/Documentation/Markdown/Import-Function.md)
 * [Import-Item](https://github.com/SitecorePowerShell/Console/blob/master/Documentation/Markdown/Import-Item.md)
