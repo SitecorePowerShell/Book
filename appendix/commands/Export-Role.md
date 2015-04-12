@@ -1,4 +1,4 @@
-﻿# Export-Role 
+# Export-Role 
  
 Exports (serializes) Sitecore roles to server disk drive. 
  
@@ -179,3 +179,4 @@ PS master:\> Export-Role -Path C:\my\Serialization\Folder\Authors.role -Identity
 * Import-Item 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
