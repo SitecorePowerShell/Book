@@ -1,4 +1,4 @@
-﻿# Remove-Rendering 
+# Remove-Rendering 
  
 Removes renderings from an item. 
  
@@ -263,3 +263,4 @@ PS master:\> Remove-Rendering -Path master:\content\home -PlaceHolder "main*" -D
 * Get-Layout 
  
 * Set-Layout
+
