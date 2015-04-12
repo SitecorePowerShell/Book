@@ -1,4 +1,4 @@
-﻿# Remove-ItemLanguage 
+# Remove-ItemLanguage 
  
 Removes Language from a single item or a branch of items 
  
@@ -178,3 +178,4 @@ PS master:\> Remove-ItemLanguage -Path master:\content\home -ExcludeLanguage "en
 * Add-ItemLanguage 
  
 * Remove-Item
+
