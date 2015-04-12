@@ -1,4 +1,4 @@
-﻿# Unlock-User 
+# Unlock-User 
  
 Unlocks the specified Sitecore user. 
  
@@ -109,3 +109,4 @@ PS master:\> Get-User -Filter * | Unlock-User
 * Remove-User 
  
 * Set-User
+
