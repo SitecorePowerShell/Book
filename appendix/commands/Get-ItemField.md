@@ -1,4 +1,4 @@
-﻿# Get-ItemField 
+# Get-ItemField 
  
 Retrieves item fields as either names or fields or template fields. 
  
@@ -243,3 +243,4 @@ __Preview                           __Preview                          Appearanc
 * Get-ItemTemplate 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
