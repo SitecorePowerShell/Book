@@ -1,4 +1,4 @@
-﻿# Initialize-Item 
+# Initialize-Item 
  
 Wraps Sitecore item with PowerShell property equivalents of fields for easy assignment of values to fields and automatic saving.
 This command can also be used to translate the the "Sitecore.ContentSearch.SearchTypes.SearchResultItem" items obtained from the Find-Item commandlet into full Sitecore Items.
@@ -93,3 +93,4 @@ $item.Title = "New Title"
 * Get-ChildItem 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
