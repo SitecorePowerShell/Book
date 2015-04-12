@@ -1,4 +1,4 @@
-﻿# Get-ItemTemplate 
+# Get-ItemTemplate 
  
 Retrieves item template and its base templates. 
  
@@ -162,3 +162,4 @@ PS master:\> Get-Item -Path master:/content/Home | Get-ItemTemplate -Recurse | f
 * Get-ItemField 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
