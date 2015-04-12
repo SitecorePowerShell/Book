@@ -1,4 +1,4 @@
-﻿# Get-Preset 
+# Get-Preset 
  
 Returns a serialization preset for use with Serialize-Item. 
  
@@ -70,3 +70,4 @@ AssetsOptimiser master   /sitecore/system/Modules/Optimiser
 * Deserialize-Item 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
