@@ -1,4 +1,4 @@
-﻿# Get-SearchIndex 
+# Get-SearchIndex 
  
 Returns sitecore Search indices. 
  
@@ -52,3 +52,4 @@ WeBlog Lucene.Net.Analysis.Standard.StandardAnalyzer Lucene.Net.Store.SimpleFSDi
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
