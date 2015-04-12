@@ -14,5 +14,5 @@
 * [Security](security.md)
 * [Appendix](appendix.md)
    * [Commands](appendix/commands.md)
-       * [Command Help](command_help.md)
+       * [Get-User](appendix/help/Get-User.md)
 
