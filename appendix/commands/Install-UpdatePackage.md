@@ -1,4 +1,4 @@
-﻿# Install-UpdatePackage 
+# Install-UpdatePackage 
  
 Installs .update that are used by Sitecore CMS updates, TDS and are created by Courier 
  
@@ -98,3 +98,4 @@ PS master:\> Install-UpdatePackage -Path "C:\Projects\LaunchSitecore.TDSMaster.u
 * Get-UpdatePackageDiff 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
