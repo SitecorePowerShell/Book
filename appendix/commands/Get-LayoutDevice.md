@@ -1,4 +1,4 @@
-﻿# Get-LayoutDevice 
+# Get-LayoutDevice 
  
 Returns Sitecore Layout device. 
  
@@ -109,3 +109,4 @@ PS master:\> Get-LayoutDevice *
 * Get-Layout 
  
 * Set-Layout
+
