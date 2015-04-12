@@ -1,4 +1,4 @@
-﻿# Show-FieldEditor 
+# Show-FieldEditor 
  
 Shows Field editor for a provided item. 
  
@@ -274,3 +274,4 @@ PS master:\> Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -Inclu
 * Show-YesNoCancel 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
