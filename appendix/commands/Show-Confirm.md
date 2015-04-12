@@ -1,4 +1,4 @@
-﻿# Show-Confirm 
+# Show-Confirm 
  
 Shows a user a confirmation request message box. 
  
@@ -69,3 +69,4 @@ yes
 * Show-YesNoCancel 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
