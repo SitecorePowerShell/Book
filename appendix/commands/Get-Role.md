@@ -1,4 +1,4 @@
-﻿# Get-Role 
+# Get-Role 
  
 Gets one or more Sitecore roles. 
  
@@ -132,3 +132,4 @@ sitecore\Developer                       sitecore     False
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/> 
  
 * Get-RoleMember
+
