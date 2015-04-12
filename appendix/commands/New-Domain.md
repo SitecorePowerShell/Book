@@ -1,4 +1,4 @@
-﻿# New-Domain 
+# New-Domain 
  
 Creates a new domain with the specified name. 
  
@@ -77,3 +77,4 @@ PS master:\> New-Domain -Path master:\content\home
 * Get-Domain 
  
 * Remove-Domain
+
