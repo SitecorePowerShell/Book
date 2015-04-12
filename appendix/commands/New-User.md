@@ -1,4 +1,4 @@
-﻿# New-User 
+# New-User 
  
 Creates a new Sitecore user. 
  
@@ -198,3 +198,4 @@ sitecore\michael2        sitecore     False           False
 * Remove-User 
  
 * Unlock-User
+
