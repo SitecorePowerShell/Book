@@ -1,4 +1,4 @@
-﻿# ConvertFrom-CliXml 
+# ConvertFrom-CliXml 
  
 Imports a CLIXML string and creates corresponding objects within PowerShell. 
  
@@ -76,3 +76,4 @@ PS master:\> $myCliXmlItem | ConvertFrom-CliXml
 * Import-CliXml 
  
 * <a href='https://github.com/SitecorePowerShell/Console/issues/218' target='_blank'>https://github.com/SitecorePowerShell/Console/issues/218</a><br/>
+
