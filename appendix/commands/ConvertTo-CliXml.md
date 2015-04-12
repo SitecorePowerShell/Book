@@ -1,4 +1,4 @@
-﻿# ConvertTo-CliXml 
+# ConvertTo-CliXml 
  
 Returns an XML-based representation of an object or objects. 
  
@@ -76,3 +76,4 @@ PS master:\> $myCliXmlItem | ConvertFrom-CliXml
 * Export-CliXml 
  
 * Import-CliXml
+
