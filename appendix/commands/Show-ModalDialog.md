@@ -1,4 +1,4 @@
-﻿# Show-ModalDialog 
+# Show-ModalDialog 
  
 Shows Sitecore Sheer control as a modal dialog. 
  
@@ -149,3 +149,4 @@ PS master:\> Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes 
 * Show-YesNoCancel 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
