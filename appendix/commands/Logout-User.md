@@ -1,4 +1,4 @@
-﻿# Logout-User 
+# Logout-User 
  
 Logs the current user out. 
  
@@ -31,3 +31,4 @@ PS master:\> Logout-User
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
