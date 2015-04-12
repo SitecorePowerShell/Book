@@ -1,4 +1,4 @@
-# Add-ItemLanguage 
+﻿# Add-ItemLanguage 
  
 Creates a version of the item in a new language based on a language version already existing. 
  
@@ -22,8 +22,7 @@ Based on parameters you can make the commandlet bahave differently when a versio
 ### -Recurse&nbsp; &lt;SwitchParameter&gt; 
  
 Process the item and all of its children.
-
- 
+ 
 
 | | |
 | - | - |
@@ -40,8 +39,7 @@ Accepts one of 3 pretty self explanatory actions:
 - Skip - if language version exists don't do anything
 - Append - if language version exists create a new version with values copied from the original language
 - OverwriteLatest - if language version exists overwrite the last version with values copied from the original language
-
- 
+ 
 
 | | |
 | - | - |
@@ -55,8 +53,7 @@ Accepts one of 3 pretty self explanatory actions:
 ### -TargetLanguage&nbsp; &lt;String[]&gt; 
  
 Language or a list of languages that should be created
-
- 
+ 
 
 | | |
 | - | - |
@@ -70,8 +67,7 @@ Language or a list of languages that should be created
 ### -DoNotCopyFields&nbsp; &lt;SwitchParameter&gt; 
  
 Creates a version in the target language but does not copy field values from the original language
-
- 
+ 
 
 | | |
 | - | - |
@@ -88,8 +84,7 @@ List of fields that should not be copied over from original item this can contai
 On top of the ignored fields in the -IgnoredFields the following fields are ignored as configured within the Cognifide.PowerShell.config file in the following location:
 configuration/sitecore/powershell/translation/ignoredFields.
 Fields ignored out of the box include:__Archive date, __Archive Version date, __Lock, __Owner, __Page Level Test Set Definition, __Reminder date, __Reminder recipients, __Reminder text
-
- 
+ 
 
 | | |
 | - | - |
@@ -103,8 +98,7 @@ Fields ignored out of the box include:__Archive date, __Archive Version date, __
 ### -Language&nbsp; &lt;String[]&gt; 
  
 If specified - language that will be used as source language.
-
- 
+ 
 
 | | |
 | - | - |
@@ -118,8 +112,7 @@ If specified - language that will be used as source language.
 ### -Item&nbsp; &lt;Item&gt; 
  
 The item to be processed.
-
- 
+ 
 
 | | |
 | - | - |
@@ -133,8 +126,7 @@ The item to be processed.
 ### -Path&nbsp; &lt;String&gt; 
  
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
-
- 
+ 
 
 | | |
 | - | - |
@@ -148,8 +140,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 ### -Id&nbsp; &lt;String&gt; 
  
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
-
- 
+ 
 
 | | |
 | - | - |
@@ -163,8 +154,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 ### -Database&nbsp; &lt;Database&gt; 
  
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
-
- 
+ 
 
 | | |
 | - | - |
