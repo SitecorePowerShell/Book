@@ -1,4 +1,4 @@
-﻿# New-ItemClone 
+# New-ItemClone 
  
 Creates a new item clone based on the item provided. 
  
@@ -156,3 +156,4 @@ PS master:\> New-ItemClone -Path master:\content\home -Destination $newTarget -N
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/> 
  
 * <a href='https://github.com/SitecorePowerShell/Console/issues/218' target='_blank'>https://github.com/SitecorePowerShell/Console/issues/218</a><br/>
+
