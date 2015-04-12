@@ -1,4 +1,4 @@
-﻿# Export-User 
+# Export-User 
  
 Export-User. 
  
@@ -174,3 +174,4 @@ PS master:\> Export-User -Identify sitecore\admin
 * Get-User 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
