@@ -1,7 +1,7 @@
 # Commands
 
 The following commands are distributed with the Sitecore PowerShell Extensions module.
-* [Add-ItemLanguage](appendix/commands/Add-ItemLanguage.md)
+* [Add-ItemLanguage](https://github.com/SitecorePowerShell/Console/blob/master/Documentation/Markdown/Add-ItemLanguage.md)
 * [Add-Rendering](appendix/commands/Add-Rendering.md)
 * [Add-RoleMember](appendix/commands/Add-RoleMember.md)
 * [Close-Window](appendix/commands/Close-Window.md)
