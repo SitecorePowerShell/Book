@@ -1,4 +1,4 @@
-﻿# Add-Rendering 
+# Add-Rendering 
  
 Adds Rendering to Item. 
  
@@ -207,3 +207,4 @@ PS master:\> Add-Rendering -Item $item -PlaceHolder "main" -Rendering $rendering
 * Get-Layout 
  
 * Set-Layout
+
