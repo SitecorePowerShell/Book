@@ -1,4 +1,4 @@
-﻿# Expand-Token 
+# Expand-Token 
  
 Expands tokens on items. 
  
@@ -123,3 +123,4 @@ PS master:\> Get-Item master:\content\home | Expand-Token
 * <a href='http://sitecorejunkie.com/2014/05/27/launch-powershell-scripts-in-the-item-context-menu-using-sitecore-powershell-extensions/' target='_blank'>http://sitecorejunkie.com/2014/05/27/launch-powershell-scripts-in-the-item-context-menu-using-sitecore-powershell-extensions/</a><br/> 
  
 * <a href='http://sitecorejunkie.com/2014/06/02/make-bulk-item-updates-using-sitecore-powershell-extensions/' target='_blank'>http://sitecorejunkie.com/2014/06/02/make-bulk-item-updates-using-sitecore-powershell-extensions/</a><br/>
+
