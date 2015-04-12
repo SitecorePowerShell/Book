@@ -1,4 +1,4 @@
-﻿# Get-Cache 
+# Get-Cache 
  
 Retrieves a Sitecore cache. 
  
@@ -59,3 +59,4 @@ master[data]                             True           3427    7420654   209715
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
