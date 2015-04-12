@@ -1,4 +1,4 @@
-﻿# Set-UserPassword 
+# Set-UserPassword 
  
 Sets the Sitecore user password. 
  
@@ -132,3 +132,4 @@ PS master:\> "michael","adam","mike" | Set-UserPassword -NewPassword b -Reset
 * Get-User 
  
 * Set-User
+
