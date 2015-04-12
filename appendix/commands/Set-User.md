@@ -1,4 +1,4 @@
-﻿# Set-User 
+# Set-User 
  
 Sets the Sitecore user properties. 
  
@@ -244,3 +244,4 @@ PS master:\>$user.Profile.GetCustomProperty("HireDate")
 * Remove-User 
  
 * Unlock-User
+
