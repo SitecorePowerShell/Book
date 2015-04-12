@@ -1,4 +1,4 @@
-﻿# Write-Log 
+# Write-Log 
  
 Writes text to the Sitecore event log. 
  
@@ -89,3 +89,4 @@ PS master:\> Write-Log "Information."
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
