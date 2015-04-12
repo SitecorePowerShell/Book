@@ -1,4 +1,4 @@
-﻿# New-Package 
+# New-Package 
  
 Creates a new Sitecore install package object. 
  
@@ -89,3 +89,4 @@ $package.Sources.Add($source);
 * <a href='https://gist.github.com/AdamNaj/f4251cb2645a1bfcddae' target='_blank'>https://gist.github.com/AdamNaj/f4251cb2645a1bfcddae</a><br/> 
  
 * <a href='https://www.youtube.com/watch?v=60BGRDNONo0&list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b&index=7' target='_blank'>https://www.youtube.com/watch?v=60BGRDNONo0&list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b&index=7</a><br/>
+
