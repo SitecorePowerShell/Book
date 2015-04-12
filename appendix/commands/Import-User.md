@@ -1,4 +1,4 @@
-﻿# Import-User 
+# Import-User 
  
 Imports (deserializes) Sitecore users from the Sitecore server disk drive. 
  
@@ -167,3 +167,4 @@ PS master:\> Import-User -Path C:\my\Serialization\Folder\Admin.user
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
