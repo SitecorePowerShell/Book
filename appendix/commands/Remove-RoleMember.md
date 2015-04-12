@@ -1,4 +1,4 @@
-﻿# Remove-RoleMember 
+# Remove-RoleMember 
  
 Removes one or more Sitecore users from the specified role. 
  
@@ -86,3 +86,4 @@ PS master:\> Remove-RoleMember -Identity developer -Members "michael","adam","mi
 * Add-RoleMember 
  
 * Get-RoleMember
+
