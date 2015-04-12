@@ -1,4 +1,4 @@
-﻿# Get-ItemClone 
+# Get-ItemClone 
  
 Returns clones of item provided. 
  
@@ -113,3 +113,4 @@ PS master:\> Get-ItemClone -Path master:\content\home
 * <a href='https://github.com/SitecorePowerShell/Console/issues/218' target='_blank'>https://github.com/SitecorePowerShell/Console/issues/218</a><br/> 
  
 * Get-Item
+
