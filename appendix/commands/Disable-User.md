@@ -1,4 +1,4 @@
-﻿# Disable-User 
+# Disable-User 
  
 Disables the specified Sitecore user. 
  
@@ -101,3 +101,4 @@ PS master:\> Get-User -Filter * | Disable-User
 ## Related Topics 
  
 * <a href='http://michaellwest.blogspot.com' target='_blank'>http://michaellwest.blogspot.com</a><br/>
+
