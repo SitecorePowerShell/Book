@@ -1,4 +1,4 @@
-﻿# Add-RoleMember 
+# Add-RoleMember 
  
 Adds one or more Sitecore users to the specified role. 
  
@@ -86,3 +86,4 @@ PS master:\> Add-RoleMember -Identity developer -Members "michael","adam","mike"
 * Get-RoleMember 
  
 * Remove-RoleMember
+
