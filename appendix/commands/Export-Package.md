@@ -1,4 +1,4 @@
-﻿# Export-Package 
+# Export-Package 
  
 Exports Sitecore installation package project. 
  
@@ -142,3 +142,4 @@ $package.Sources.Add($source);
 * <a href='http://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/' target='_blank'>http://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/</a><br/> 
  
 * <a href='https://gist.github.com/AdamNaj/f4251cb2645a1bfcddae' target='_blank'>https://gist.github.com/AdamNaj/f4251cb2645a1bfcddae</a><br/>
+
