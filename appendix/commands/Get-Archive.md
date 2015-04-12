@@ -1,4 +1,4 @@
-﻿# Get-Archive 
+# Get-Archive 
  
 Returns Sitecore database archives. 
  
@@ -78,3 +78,4 @@ recyclebin                                   1950
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
