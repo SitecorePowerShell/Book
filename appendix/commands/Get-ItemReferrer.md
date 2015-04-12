@@ -1,4 +1,4 @@
-﻿# Get-ItemReferrer 
+# Get-ItemReferrer 
  
 Get other items linking to the provided item. 
  
@@ -169,3 +169,4 @@ TargetPath         : /sitecore/content/Home
 * Get-ItemReference 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
