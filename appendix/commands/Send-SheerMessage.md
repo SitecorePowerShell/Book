@@ -1,4 +1,4 @@
-﻿# Send-SheerMessage 
+# Send-SheerMessage 
  
 Sends a sheer message to the app in which context the script is executing. 
  
@@ -61,3 +61,4 @@ Send-SheerMessage -Name 'ise:save'
 ## Related Topics 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
