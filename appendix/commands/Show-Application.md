@@ -1,4 +1,4 @@
-﻿# Show-Application 
+# Show-Application 
  
 Executes Sitecore Sheer application. 
  
@@ -180,3 +180,4 @@ Show-Application `
 * Show-YesNoCancel 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
