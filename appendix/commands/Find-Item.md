@@ -1,4 +1,4 @@
-﻿# Find-Item 
+# Find-Item 
  
 Allows to find items using the Sitecore Content Search API. 
  
@@ -202,3 +202,4 @@ Find-Item `
 * <a href='http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library' target='_blank'>http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library</a><br/> 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
