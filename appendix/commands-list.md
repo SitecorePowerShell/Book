@@ -1,4 +1,3 @@
-* [Appendix](appendix.md)
  * [Add-ItemLanguage](appendix/help/Add-ItemLanguage.md)
  * [Add-Rendering](appendix/help/Add-Rendering.md)
  * [Add-RoleMember](appendix/help/Add-RoleMember.md)
