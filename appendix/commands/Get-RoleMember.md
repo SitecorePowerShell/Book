@@ -1,4 +1,4 @@
-﻿# Get-RoleMember 
+# Get-RoleMember 
  
 Gets the Sitecore users in the role. 
  
@@ -147,3 +147,4 @@ Name        : sitecore\Developer
 * Remove-RoleMember 
  
 * Add-RoleMember
+
