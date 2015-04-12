@@ -1,4 +1,4 @@
-﻿# Remove-Session 
+# Remove-Session 
  
 Removes one or more Sitecore user sessions. 
  
@@ -89,3 +89,4 @@ PS master:\> Get-Session -Identity michael | Remove-Session
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/> 
  
 * Get-Session
+
