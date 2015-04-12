@@ -1,4 +1,4 @@
-﻿# Export-UpdatePackage 
+# Export-UpdatePackage 
  
 Saves a sitecore serialization diff list as a Sitecore Update Package. 
  
@@ -126,3 +126,4 @@ Export-UpdatePackage -Path C:\temp\SerializationDiff.update -CommandList $diff -
 * <a href='https://github.com/adoprog/Sitecore-Courier' target='_blank'>https://github.com/adoprog/Sitecore-Courier</a><br/> 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
