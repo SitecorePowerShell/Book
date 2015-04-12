@@ -1,4 +1,4 @@
-﻿# Add-ItemLanguage 
+# Add-ItemLanguage 
  
 Creates a version of the item in a new language based on a language version already existing. 
  
@@ -213,3 +213,4 @@ Get-ChildItem "master:\content\home" -Language "en" -Recurse | `
 * Remove-ItemLanguage 
  
 * New-Item
+
