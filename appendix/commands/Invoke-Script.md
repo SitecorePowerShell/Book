@@ -1,4 +1,4 @@
-﻿# Invoke-Script 
+# Invoke-Script 
  
 Executes a script from Sitecore PowerShell Extensions Script Library.
 This command used to be named Execute-Script - a matching alias added for compatibility with older scripts. 
@@ -84,3 +84,4 @@ PS master:\> Invoke-Script 'Examples\Script Testing\Long Running Script with Pro
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/> 
  
 * Import-Function
+
