@@ -1,4 +1,4 @@
-﻿# Get-User 
+# Get-User 
  
 Gets one or more Sitecore users. 
  
@@ -175,3 +175,4 @@ sitecore\michael         sitecore     False           False
 * Remove-User 
  
 * Unlock-User
+
