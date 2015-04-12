@@ -1,4 +1,4 @@
-﻿# Get-Session 
+# Get-Session 
  
 Gets one or more Sitecore user sessions. 
  
@@ -117,3 +117,4 @@ Created                LastRequest            SessionID                  UserNam
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/> 
  
 * Remove-Session
+
