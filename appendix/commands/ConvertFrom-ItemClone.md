@@ -1,4 +1,4 @@
-﻿# ConvertFrom-ItemClone 
+# ConvertFrom-ItemClone 
  
 Converts item from clone to fully independent item. 
  
@@ -109,3 +109,4 @@ PS master:\> ConvertFrom-ItemClone -Path master:\content\home
 * Get-ItemClone 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
