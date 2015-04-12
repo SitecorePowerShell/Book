@@ -1,4 +1,4 @@
-﻿# Show-YesNoCancel 
+# Show-YesNoCancel 
  
 Shows Yes/No/Cancel dialog to the user and returns user choice. 
  
@@ -102,3 +102,4 @@ cancel
 * Show-YesNoCancel 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
