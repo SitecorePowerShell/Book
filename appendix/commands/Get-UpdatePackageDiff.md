@@ -1,4 +1,4 @@
-﻿# Get-UpdatePackageDiff 
+# Get-UpdatePackageDiff 
  
 Performs a diff operation between the Source and taget path akin to Sitecore Courier. The diff is the difference that takes the content of Source folder and transforms it to Target.
 IMPORTANT! This functionality requires changes to web.config file on your sitecore server to work. Please consult the first Example. 
@@ -115,3 +115,4 @@ Export-UpdatePackage -Path C:\temp\SerializationDiff.update -CommandList $diff -
 * <a href='https://github.com/adoprog/Sitecore-Courier' target='_blank'>https://github.com/adoprog/Sitecore-Courier</a><br/> 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
