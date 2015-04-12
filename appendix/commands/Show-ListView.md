@@ -1,4 +1,4 @@
-﻿# Show-ListView 
+# Show-ListView 
  
 Sends output to an interactive table in a separate window. 
  
@@ -299,3 +299,4 @@ PS master:\> Get-ItemReferrer -path 'master:\templates\Sample\Sample Item' |
 * <a href='http://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions/' target='_blank'>http://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions/</a><br/> 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
