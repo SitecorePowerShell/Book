@@ -1,4 +1,4 @@
-﻿# Get-Domain 
+# Get-Domain 
  
 Gets all available domains or the specified domain. 
  
@@ -63,3 +63,4 @@ PS master:\> Get-Domain -Path master:\content\home
 * Remove-Domain 
  
 * New-Domain
+
