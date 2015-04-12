@@ -1,4 +1,4 @@
-﻿# Update-ListView 
+# Update-ListView 
  
 Updates List View (created by Show-ListView) data. 
  
@@ -106,3 +106,4 @@ Get-ChildItem -Path master:\system\Tasks\Schedules -Recurse | Where-Object { $_.
 * Show-ListView 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
