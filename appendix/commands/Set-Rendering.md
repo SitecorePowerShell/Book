@@ -1,4 +1,4 @@
-﻿# Set-Rendering 
+# Set-Rendering 
  
 Updates rendering with new values. 
  
@@ -190,3 +190,4 @@ PS master:\> Get-Rendering -Item $item -PlaceHolder "main" | Foreach-Object { $_
 * Get-Layout 
  
 * Set-Layout
+
