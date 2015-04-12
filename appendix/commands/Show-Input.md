@@ -1,4 +1,4 @@
-﻿# Show-Input 
+# Show-Input 
  
 Shows prompt message box asking user to provide a text string. 
  
@@ -145,3 +145,4 @@ Show-Input "Please provide 5 characters at most" -MaxLength 5
 * Show-YesNoCancel 
  
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
