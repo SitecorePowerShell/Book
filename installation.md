@@ -27,8 +27,8 @@ You may also clone the project from [GitHub][5] and compile it. This allows you 
 > $ git clone https://github.com/SitecorePowerShell/Console.git  
 
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
-[2]: http://www.microsoft.com/en-us/download/details.aspx?id=30653
-[3]: http://www.microsoft.com/en-us/download/details.aspx?id=40855
+[2]: http://www.microsoft.com/en-us/download/details.aspx?id=30653 "Link to version 4.5"
+[3]: http://www.microsoft.com/en-us/download/details.aspx?id=40855 "Link to version 4"
 [4]: https://marketplace.sitecore.net/
 [5]: https://github.com/SitecorePowerShell/Console
 [6]: http://blog.najmanowicz.com/2015/03/03/set-up-sitecore-powershell-extensions-development-environment/
