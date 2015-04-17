@@ -1,8 +1,13 @@
 # Installation
 
 #### Prerequisites
-Microsoft .NET Framework 4+ : [Download][2]  
-Windows Management Framework 3+ : [Download][3]
+* Windows 7+
+* Microsoft .NET Framework 4+ : [Download][2]  
+* Windows Management Framework 3+ : [Download][3]
+ * The link provided will get you up to PowerShell 4
+ * [Detecting your PowerShell version][7]
+* PowerShell [Execution Policy][8] set to `RemoteSigned`
+
 
 #### Download the Module
 The SPE module installs like any other for Sitecore. 
@@ -27,3 +32,5 @@ You may also clone the project from [GitHub][5] and compile it. This allows you 
 [4]: https://marketplace.sitecore.net/
 [5]: https://github.com/SitecorePowerShell/Console
 [6]: http://blog.najmanowicz.com/2015/03/03/set-up-sitecore-powershell-extensions-development-environment/
+[7]: http://stackoverflow.com/questions/1825585/determine-installed-powershell-version
+[8]: https://technet.microsoft.com/en-us/library/ee176961.aspx
