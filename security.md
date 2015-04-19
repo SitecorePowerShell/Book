@@ -13,3 +13,7 @@ The first policy relates to the Application Pool service account running in IIS.
 ##### Sitecore User Account
 
 The second policy is tied to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be through the Sitecore API.
+
+#### Security Hardening
+
+TBD
