@@ -4,6 +4,10 @@
 
 Command-line interface
 
+## IIS
+
+Internet Information Services
+
 ## ISE
 
 Integrated Scripting Environment
@@ -14,4 +18,4 @@ Sitecore PowerShell Extensions
 
 ## IIS
 
-Internet Information Services
+Internet Information Services : web server for Microsoft Windows
