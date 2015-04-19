@@ -49,3 +49,4 @@ Below are the shortcuts available in the console.
 | Ctrl-Space       | Autocomplete commands. Press tab again to cycle through commands.  |
 | Ctrl-Enter | Displays the command help window. |
 | Ctrl-Z | Undo the previous change. |
+There are more just not yet documented...
