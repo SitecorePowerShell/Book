@@ -39,3 +39,13 @@ Now let's review each of the different features; take note of the numbered label
   * Settings - Specifies the console, ise, and results look and behave.
  11. **Integration**:
   * Rebuild All - Rebuilds the gutter, ribbon, and control panel integration.
+ 
+#### Shortcuts
+Below are the shortcuts available in the console.
+
+| Shortcut  | Usage |
+| --------  | ----- |
+| TAB       | Indent |
+| Ctrl-Space       | Autocomplete commands. Press tab again to cycle through commands.  |
+| Ctrl-Enter | Displays the command help window. |
+| Ctrl-Z | Undo the previous change. |
