@@ -275,3 +275,40 @@ Those little improvements make your scripts much more succinct and understandabl
 ## When not to use the automated properties?
 
 As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`. Choosing this way is situational and will usually only be required if you're working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` trick used in [this blog post](http://bartlomiejmucha.com/en/blog).
+
+Example: The following sets multiple automated properties while using the `Sitecore.Data.BulkUpdateContext`.
+
+```powershell
+function New-UsingBlock {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory = $true)]
+        [IDisposable]
+        $InputObject,
+  
+        [Parameter(Mandatory = $true)]
+        [ScriptBlock]
+        $ScriptBlock
+    )
+ 
+    try {
+        $ScriptBlock.Invoke()
+    } finally {
+        if ($InputObject) {
+            $InputObject.Dispose()
+        }
+    }
+}
+
+Get-ChildItem -Path "master:\content\home" | % { Remove-Item -Path $_.ItemPath }
+
+New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
+    for($i = 1; $i -lt 10; $i++) {
+        $item = New-Item "master:/content/home/sample item $($i)" -Type "/sitecore/templates/Sample/Sample Item"
+        $item.Editing.BeginEdit()
+        $item["Title"] = "Sample Item $($i)"
+        $item["Text"] = "Sample Item $($i)"
+        $item.Editing.EndEdit() | Out-Null
+    }
+}
+```
