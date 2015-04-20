@@ -22,7 +22,7 @@ The time will come when you need to lock down the SPE module. The following sect
 
 You can disable the web services using the configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
 
-Look for the following section and disable as needed.
+Look for the following section and enable/disable as needed.
 
 ```xml
 <sitecore>
