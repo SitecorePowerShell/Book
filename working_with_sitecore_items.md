@@ -2,20 +2,31 @@
 
 ## How do I retrieve my Sitecore items the PowerShell way?
 
-Retrieve Sitecore items with use of `Get-Item` and `Get-ChildItem` cmdlets. That is because those 2 cmdlets add a PowerShell wrapping around them.
+The following two commands will retrieve Sitecore items:
+* `Get-Item` - Returns a single item at the specified path.
+* `Get-ChildItem` - Returns one or more child items from the specified path.
 
-If you have retrieved your item directly using the Sitecore API you can still add the nice wrapper. You can do that my piping them through the `Wrap-Item` commandlet. Always use the latest version of SPE to leverage the full potential of the environment.
+Below we will show how to use each command with the Windows PowerShell syntax followed by the common C# equivalent.
 
-## Getting Items based on path
+If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that my piping them through the `Wrap-Item` commandlet. Always use the latest version of SPE to leverage the full potential of the environment.
 
-If you know the path to your item and the database you can retrieve your item as follows:
+## Get the Item by path
+
+The following example will retrieve the item based on the Sitecore path.
 
 ```powershell
-PS master:\>Get-Item master:/content/home
+PS master:\>Get-Item master:\content\home
  
 Name Children Languages                Id                                     TemplateName
 ---- -------- ---------                --                                     ------------
 Home True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
+```
+
+Let's have a look at the equivalent code in C#.
+
+```csharp
+Sitecore.Data.Database master = Sitecore.Configuration.Factory.GetDatabase("master");
+Sitecore.Data.Items.Item item = master.GetItem("/sitecore/content/home");
 ```
 
 You might have noticed that I’ve skipped the /sitecore part in the path. This is because this item is represented by the root item of the drive `master:`. The above will return the latest version of the item in your current language. But what if you want the item in another language? No problem – let’s retrieve the Danish version of Home…
