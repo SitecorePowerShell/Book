@@ -300,11 +300,8 @@ function New-UsingBlock {
     }
 }
 
-Get-ChildItem -Path "master:\content\home" | % { Remove-Item -Path $_.ItemPath }
-
 New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
-    for($i = 1; $i -lt 10; $i++) {
-        $item = New-Item "master:/content/home/sample item $($i)" -Type "/sitecore/templates/Sample/Sample Item"
+    foreach($item in Get-ChildItem -Path "master:\content\home") {
         $item.Editing.BeginEdit()
         $item["Title"] = "Sample Item $($i)"
         $item["Text"] = "Sample Item $($i)"
