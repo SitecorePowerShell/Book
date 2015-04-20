@@ -180,15 +180,17 @@ In all the examples you'll notice we specified the database. Windows PowerShell 
 * HKLM: - The registry provider for HKEY_LOCAL_MACHINE.
 * C: - The filesystem provider for the C drive.
 
-## What do the item extensions allow you to do?
+## Changing item properties
 
-I often see the following two ways of accessing and changing fields used in scripts:
+We often see the following two ways of accessing and changing fields used in scripts. One uses `Set-ItemProperty` and the other is more natural to a Sitecore developer.
+
+**Example:** The following sets the title property using `Set-ItemProperty`.
 
 ```powershell
 Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
 ```
 
-Or something that would feel natural to a Sitecore developer:
+Example: The following sets the title property using `BeginEdit` and `EndEdit` methods.
 
 ```powershell
 $item = Get-Item master:/content/home
@@ -197,14 +199,16 @@ $item["Title"] = "New Title"
 $item.Editing.EndEdit()
 ```
 
-Those approaches while working are not the most efficient notation for modifying item content. Items that you're getting from the provider give you a better way of doing it. Provider exposes your Sitecore fields as semi-native PowerShell properties. Instead of doing the above you can do:
+The previous examples work but are not the most efficient ways to change item content. The items returned by the provider expose the Sitecore item fields as semi-native PowerShell properties.
+
+**Example:** The following sets the title property using the semi-native PowerShell property.
 
 ```powershell
 $item = Get-Item master:/content/home
 $item.Title = "New Title"
 ```
 
-… or even shorter if you don’t want to use a variable:
+**Example:** The following sets the title property using the semi-native PowerShell property without the use of a variable.
 
 ```powershell
 (Get-Item master:/content/home).Title = "New Title"
