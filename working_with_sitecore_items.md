@@ -60,7 +60,9 @@ Home        en-GB    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-The `en-US` above shows version number as 2 - which means that there are or at some point were other versions. Let’s retrieve the item in all languages and all versions…
+Notice that the item with language `en-US` at its third version.
+
+**Example:** The following will retrieve the item in all languages and all versions.
 
 ```powershell
 PS master:\>Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
