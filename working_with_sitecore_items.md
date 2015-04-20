@@ -190,7 +190,7 @@ We often see the following two ways of accessing and changing fields used in scr
 PS master:\>Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
 ```
 
-Example: The following sets the title property using `BeginEdit` and `EndEdit` methods.
+Example: The following sets the title property using `.Editing.BeginEdit` and `.Editing.EndEdit` methods.
 
 ```powershell
 PS master:\>$item = Get-Item master:/content/home
@@ -228,30 +228,27 @@ Monday, April 07, 2008 1:59:00 PM
 
 ```powershell
 PS master:\>(Get-Item master:/content/home).__Created = [DateTime]::Now
-```
-
-Now let's read it again:
-
-```powershell
 PS master:\>(Get-Item master:/content/home).__Created
 Monday, October 13, 2014 1:59:41 AM
 ```
 
-Great we’ve just changed it! Our property handlers take care of all the necessary usages of `.Editing.BeginEdit` and `.Editing.EndEdit`.
+Great we've just changed it! Our property handlers take care of all the necessary usages of `.Editing.BeginEdit` and `.Editing.EndEdit`.
 
-It works for assigning content items and media items as well. If your item has link fields in it, you can assign other items to them and not worry about the link format – we will do all the plumbing for you.
+It works for assigning content and media items. If your item has link fields in it, you can assign other items to them and not worry about the link format – we will do all the plumbing for you.
 
 To provide an example – I’ve extended my home with additional fields as follows:
 
 ![image](http://blog.najmanowicz.com/wp-content/uploads/2014/10/image.png)
 
-I can do the following to assign an image to my Image field
+**Example:** The following assigns an image to the Image field.
 
 ```powershell
 (Get-Item master:/content/home).Image = Get-Item 'master:\media library\logo'
 ```
 
-Easy enough, isn’t it? Let us (the PowerShell Extensions) detect the field type for you and worry about what to call! Now let’s assign a content item to GeneralLink and Link fields… just like you expected:
+Easy enough, isn't it? Let us (the Sitecore PowerShell Extensions) detect the field type for you and worry about what to call! Now let's assign a content item to GeneralLink and Link fields… just like you expected.
+
+**Example:** The following assigns a content item to a *GeneralLink* field.
 
 ```powershell
 (Get-Item master:/content/home).GeneralLink = Get-Item 'master:\content\CognifideCom'
