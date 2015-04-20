@@ -1,6 +1,5 @@
 # Working with Sitecore items
 
-
 ## How do I retrieve my Sitecore items the PowerShell way?
 
 Retrieve Sitecore items with use of `Get-Item` and `Get-ChildItem` cmdlets. That is because those 2 cmdlets add a PowerShell wrapping around them.
