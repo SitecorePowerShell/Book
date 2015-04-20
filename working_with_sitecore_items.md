@@ -79,9 +79,9 @@ Home        en-GB    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-You can see that those can be used in conjunction to retrieve all possible variants of an item in every language and every version. Filters like ```en-*``` are allowed. An execution with such filter would return all items in the English language, ignoring the region.
+You can see that specifying the language and version using the wildcard will retrieve all possible variants of an item. The wildcard can also include a partial match like `en-*`. The use of that filter would return all items in the English language, ignoring the region.
 
-Similarly `Get-ChildItem` supports this functionality for its children.
+**Example:** The following will retrieve the child items in all languages and all versions.
 
 ```powershell
 PS master:\>Get-ChildItem master:/content -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName
