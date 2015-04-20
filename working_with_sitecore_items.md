@@ -10,7 +10,7 @@ Below we will show how to use each command with the Windows PowerShell syntax fo
 
 If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that my piping them through the `Wrap-Item` commandlet. Always use the latest version of SPE to leverage the full potential of the environment.
 
-## Get items by path
+## Get items by Path
 
 **Example:** The following will retrieve the item based on the Sitecore path.
 
@@ -113,7 +113,7 @@ Showcase            en       {DB8C05B8-25B5-42DE-B6CB-4ACE186283DA} 1       Tena
 Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       TenantTemplate
 ```
 
-## Getting items by path with Sitecore query
+## Getting items by Path with Sitecore query
 
 It's not always the most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items of e.g. a specific template. For this we’ve introduced support for the Sitecore query within our provider. 
 
@@ -176,7 +176,9 @@ Name Children Languages                Id                                     Te
 Home True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-In all the examples you'll notice that the database is specified. This is because Windows PowerShell needs to know in context of which provider those parameters are executed.
+In all the examples you'll notice we specified the database. Windows PowerShell needs to know which provider to execute within. Other examples of providers include the following:
+* HKLM: - The registry provider for HKEY_LOCAL_MACHINE.
+* C: - The filesystem provider for the C drive.
 
 ## What do the item extensions allow you to do?
 
