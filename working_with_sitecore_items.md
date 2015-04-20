@@ -256,7 +256,9 @@ Easy enough, isn't it? Let us (the Sitecore PowerShell Extensions) detect the fi
 
 Even better – if you assign a media item to it, it will detect that and do the right thing assigning it as a media link.
 
-What about fields that accept lists of items? We’ve got your back here as well. Let’s assign all children of `/sitecore/content/` item to the ItemList field:
+What about fields that accept lists of items? We've got your back here as well.
+
+**Example:** The following assigns all children of `/sitecore/content/` item to the ItemList field.
 
 ```powershell
 (Get-Item master:/content/home).ItemList = Get-ChildItem 'master:\content\'
