@@ -81,7 +81,7 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 You can see that specifying the language and version using the wildcard will retrieve all possible variants of an item. The wildcard can also include a partial match like `en-*`. The use of that filter would return all items in the English language, ignoring the region.
 
-**Example:** The following will retrieve the child items in all languages and all versions.
+**Example:** The following will retrieve the child items in all languages and versions.
 
 ```powershell
 PS master:\>Get-ChildItem master:/content -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName
@@ -117,7 +117,7 @@ Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       Tena
 
 It's not always the most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items of e.g. a specific template. For this we’ve introduced support for the Sitecore query within our provider. 
 
-**Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of "Sample Item template".
+**Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of "Sample Item".
 
 ```powershell
 PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
@@ -128,7 +128,7 @@ Copy of Home                     True     {en, de-DE, es-ES, pt... {503713E5-F9E
 Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-Naturally the -Language parameter still works…
+**Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of "Sample Item" in all versions and languages.
 
 ```powershell
 PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -auto
