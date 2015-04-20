@@ -120,7 +120,7 @@ It's not always the most efficient to operate on items by traversing the tree us
 **Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of *Sample Item*.
 
 ```powershell
-PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
+PS master:\>Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
   
 Name                             Children Languages                Id                                     TemplateName
 ----                             -------- ---------                --                                     ------------
@@ -131,7 +131,7 @@ Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA
 **Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of *Sample Item* in all versions and languages.
 
 ```powershell
-PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -AutoSize
+PS master:\>Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -AutoSize
   
 DisplayName  Language ID                                     Version TemplateName
 -----------  -------- --                                     ------- ------------
@@ -155,7 +155,7 @@ Hjem         da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 **Example:** The following retrieves an item by id.
 
 ```powershell
-PS master:\>Get-Item master: -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+PS master:\>Get-Item -Path master: -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
   
 Name  Children Languages                Id                                     TemplateName
 ----  -------- ---------                --                                     ------------
@@ -169,14 +169,14 @@ The Uri encodes the language and version within the path.
 **Example:** The following retrieves an item by uri.
 
 ```powershell
-PS master:\>Get-Item master: -Uri "sitecore://master/{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}?lang=en&ver=1"
+PS master:\>Get-Item -Path master: -Uri "sitecore://master/{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}?lang=en&ver=1"
   
 Name Children Languages                Id                                     TemplateName
 ---- -------- ---------                --                                     ------------
 Home True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-In both of the above cases you need to specify a database (like ```master:```) as the path. This is because PowerShell needs to know in context of which provider those parameters are executed.  Other providers do not support those for obvious reasons. (e.g. files don’t have versions or support for languages).
+In all the examples you'll notice that the database is specified. This is because Windows PowerShell needs to know in context of which provider those parameters are executed.
 
 ## What do the item extensions allow you to do?
 
