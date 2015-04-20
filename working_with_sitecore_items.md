@@ -200,9 +200,9 @@ PS master:\>$item.Editing.EndEdit()
 ```
 **Note:** The above example may also be written in the ISE where no console prompt is visible.
 
-The previous examples work but are not the most efficient ways to change item content. The items returned by the provider expose the Sitecore item fields as semi-native PowerShell properties.
+The previous examples work but are not the most efficient ways to change item content. The items returned by the provider expose the Sitecore item fields as automated PowerShell properties.
 
-**Example:** The following sets the title property using the semi-native PowerShell property.
+**Example:** The following sets the title property using the automated PowerShell property.
 
 ```powershell
 PS master:\>$item = Get-Item master:/content/home
@@ -224,7 +224,7 @@ PS master:\>(Get-Item master:/content/home).__Created
 Monday, April 07, 2008 1:59:00 PM
 ```
 
-**Example:** The following assigns a `System.DateTime` value to the PowerShell "native" property.
+**Example:** The following assigns a `System.DateTime` value to the PowerShell automated property.
 
 ```powershell
 PS master:\>(Get-Item master:/content/home).__Created = [DateTime]::Now
@@ -268,10 +268,10 @@ Ok, so let's see how our item looks in the Content editor after all the assignme
 
 ![ItemList Assignment](http://blog.najmanowicz.com/wp-content/uploads/2014/10/image1.png)
 
-Great! Looks like it worked…
+Great! Looks like it worked.
 
 Those little improvements make your scripts much more succinct and understandable. Try it for yourself!
 
 ## When not to use the automated properties?
 
-As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`. Choosing this way is situational and will usually only be required if you’re working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` trick used in [this blog post](http://bartlomiejmucha.com/en/blog).
+As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`. Choosing this way is situational and will usually only be required if you're working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` trick used in [this blog post](http://bartlomiejmucha.com/en/blog).
