@@ -12,7 +12,7 @@ If you have retrieved your items directly using the Sitecore API you can still a
 
 ## Get the Item by path
 
-The following example will retrieve the item based on the Sitecore path.
+**Example:** The following example will retrieve the item based on the Sitecore path.
 
 ```powershell
 PS master:\>Get-Item -Path master:\content\home
@@ -31,7 +31,9 @@ Sitecore.Data.Database master = Sitecore.Configuration.Factory.GetDatabase("mast
 Sitecore.Data.Items.Item item = master.GetItem("/sitecore/content/home");
 ```
 
-The above will return the latest version of the item in your current language. But what if you want the item in another language? No problem – let’s retrieve the Danish version of *Home*.
+The above will return the latest version of the item in your current language. But what if you want the item in another language? No problem!
+
+**Example:** The following example will retrieve the Danish version of the *Home* item.
 
 ```powershell
 PS master:\>Get-Item -Path master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
