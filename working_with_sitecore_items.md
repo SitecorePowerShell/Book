@@ -12,7 +12,7 @@ If you have retrieved your items directly using the Sitecore API you can still a
 
 ## Get the Item by path
 
-**Example:** The following example will retrieve the item based on the Sitecore path.
+**Example:** The following will retrieve the item based on the Sitecore path.
 
 ```powershell
 PS master:\>Get-Item -Path master:\content\home
@@ -33,7 +33,7 @@ Sitecore.Data.Items.Item item = master.GetItem("/sitecore/content/home");
 
 The above will return the latest version of the item in your current language. But what if you want the item in another language? No problem!
 
-**Example:** The following example will retrieve the Danish version of the *Home* item.
+**Example:** The following will retrieve the Danish version of the *Home* item.
 
 ```powershell
 PS master:\>Get-Item -Path master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
@@ -45,7 +45,7 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 I've formatted the output above to show you that indeed the right language was returned. The cmdlet supports wildcards for both `-Language` and `-Version` parameters. You may have also noticed that the forward and backward slashes can be used interchangeably. 
 
-The following returns the latest version for all languages of an item:
+**Example:** The following will return the latest version for all languages of an item.
 
 ```powershell
 PS master:\>Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
