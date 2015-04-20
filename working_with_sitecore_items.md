@@ -215,7 +215,7 @@ PS master:\>$item.Title = "New Title"
 (Get-Item master:/content/home).Title = "New Title"
 ```
 
-It also doesn’t work for string properties exclusively. There are a other hidden gems in those properties. For example if we detect that the field is a Date or Datetime field, we will return System.DateTime typed value from a field rather than the string Sitecore stores internally.
+This technique may be used for a wide variety of property types. There are a other hidden gems in those properties. For example if we detect that the field is a Date or Datetime field, we will return `System.DateTime` typed value from a field rather than the `System.String` Sitecore stores internally.
 
 **Example:** The following gets the created date.
 
@@ -224,7 +224,7 @@ PS master:\>(Get-Item master:/content/home).__Created
 Monday, April 07, 2008 1:59:00 PM
 ```
 
-And not just read – you can also assign `System.DateTime` value to such PowerShell “native” property:
+**Example:** The following assigns a `System.DateTime` value to the PowerShell "native" property.
 
 ```powershell
 PS master:\>(Get-Item master:/content/home).__Created = [DateTime]::Now
