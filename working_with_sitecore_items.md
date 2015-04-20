@@ -187,16 +187,16 @@ We often see the following two ways of accessing and changing fields used in scr
 **Example:** The following sets the title property using `Set-ItemProperty`.
 
 ```powershell
-Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
+PS master:\>Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
 ```
 
 Example: The following sets the title property using `BeginEdit` and `EndEdit` methods.
 
 ```powershell
-$item = Get-Item master:/content/home
-$item.Editing.BeginEdit()
-$item["Title"] = "New Title"
-$item.Editing.EndEdit()
+PS master:\>$item = Get-Item master:/content/home
+PS master:\>$item.Editing.BeginEdit()
+PS master:\>$item["Title"] = "New Title"
+PS master:\>$item.Editing.EndEdit()
 ```
 
 The previous examples work but are not the most efficient ways to change item content. The items returned by the provider expose the Sitecore item fields as semi-native PowerShell properties.
@@ -204,8 +204,8 @@ The previous examples work but are not the most efficient ways to change item co
 **Example:** The following sets the title property using the semi-native PowerShell property.
 
 ```powershell
-$item = Get-Item master:/content/home
-$item.Title = "New Title"
+PS master:\>$item = Get-Item master:/content/home
+PS master:\>$item.Title = "New Title"
 ```
 
 **Example:** The following sets the title property using the semi-native PowerShell property without the use of a variable.
@@ -215,6 +215,8 @@ $item.Title = "New Title"
 ```
 
 It also doesn’t work for string properties exclusively. There are a other hidden gems in those properties. For example if we detect that the field is a Date or Datetime field, we will return System.DateTime typed value from a field rather than the string Sitecore stores internally.
+
+**Example:** The following gets the created date.
 
 ```powershell
 PS master:\>(Get-Item master:/content/home).__Created
