@@ -16,4 +16,21 @@ The second policy is tied to the Sitecore user account. The code executed throug
 
 #### Security Hardening
 
-TBD
+The time will come when you need to lock down the SPE module. The following section outlines steps you can take to secure the module.
+
+##### Web Services
+
+You can disable the web services using the configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
+
+Look for the following section and disable as needed.
+
+```xml
+<sitecore>
+    <services>
+        <restfulv1 enabled="false" />
+        <restfulv2 enabled="true" />
+        <remoting enabled="true" />
+        <client enabled="true" />
+    </services>
+</sitecore>
+```
