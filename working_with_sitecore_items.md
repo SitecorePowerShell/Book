@@ -15,12 +15,14 @@ If you have retrieved your items directly using the Sitecore API you can still a
 The following example will retrieve the item based on the Sitecore path.
 
 ```powershell
-PS master:\>Get-Item master:\content\home
+PS master:\>Get-Item -Path master:\content\home
  
 Name Children Languages                Id                                     TemplateName
 ---- -------- ---------                --                                     ------------
 Home True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
+
+As you may have noticed, the `/sitecore` portion of the path is unnecessary. This is because the *sitecore* item is represented by the root item of the drive `master:` and is therefore optional.
 
 Let's have a look at the equivalent code in C#.
 
@@ -29,17 +31,19 @@ Sitecore.Data.Database master = Sitecore.Configuration.Factory.GetDatabase("mast
 Sitecore.Data.Items.Item item = master.GetItem("/sitecore/content/home");
 ```
 
-You might have noticed that I’ve skipped the /sitecore part in the path. This is because this item is represented by the root item of the drive `master:`. The above will return the latest version of the item in your current language. But what if you want the item in another language? No problem – let’s retrieve the Danish version of Home…
+The above will return the latest version of the item in your current language. But what if you want the item in another language? No problem – let’s retrieve the Danish version of *Home*.
 
 ```powershell
-PS master:\>Get-Item master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
+PS master:\>Get-Item -Path master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
 
 DisplayName Language ID                                     Version TemplateName
 ----------- -------- --                                     ------- ------------
 Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-I’ve formatted the output above to show you that indeed the right language was returned. The cmdlet supports wildcards for both `-Language` and `-Version` parameter. The following returns the latest version for all languages of an item:
+I've formatted the output above to show you that indeed the right language was returned. The cmdlet supports wildcards for both `-Language` and `-Version` parameters. You may have also noticed that the forward and backward slashes can be used interchangeably. 
+
+The following returns the latest version for all languages of an item:
 
 ```powershell
 PS master:\>Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
