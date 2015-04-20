@@ -131,7 +131,7 @@ Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA
 **Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of "Sample Item" in all versions and languages.
 
 ```powershell
-PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -auto
+PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -AutoSize
   
 DisplayName  Language ID                                     Version TemplateName
 -----------  -------- --                                     ------- ------------
