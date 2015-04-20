@@ -10,7 +10,7 @@ Below we will show how to use each command with the Windows PowerShell syntax fo
 
 If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that my piping them through the `Wrap-Item` commandlet. Always use the latest version of SPE to leverage the full potential of the environment.
 
-## Get the Item by path
+## Get items by path
 
 **Example:** The following will retrieve the item based on the Sitecore path.
 
@@ -113,11 +113,11 @@ Showcase            en       {DB8C05B8-25B5-42DE-B6CB-4ACE186283DA} 1       Tena
 Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       TenantTemplate
 ```
 
-## Getting the item by Sitecore query
+## Getting items by path with Sitecore query
 
 It's not always the most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items of e.g. a specific template. For this we’ve introduced support for the Sitecore query within our provider. 
 
-**Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of "Sample Item".
+**Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of *Sample Item*.
 
 ```powershell
 PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
@@ -128,7 +128,7 @@ Copy of Home                     True     {en, de-DE, es-ES, pt... {503713E5-F9E
 Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-**Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of "Sample Item" in all versions and languages.
+**Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of *Sample Item* in all versions and languages.
 
 ```powershell
 PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -AutoSize
@@ -150,9 +150,9 @@ Home         en-GB    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Hjem         da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-## Using ID to address an item.
+##  Get items by Id
 
-You can also fetch for items by ID like:
+**Example:** The following retrieves an item by id.
 
 ```powershell
 PS master:\>Get-Item master: -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
@@ -162,9 +162,11 @@ Name  Children Languages                Id                                     T
 Home  True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-## Using Item Uri
+## Get items by Uri
 
-You can query item using its Uri. Uri contains information about version and language encoded directly in it:
+The Uri encodes the language and version within the path.
+
+**Example:** The following retrieves an item by uri.
 
 ```powershell
 PS master:\>Get-Item master: -Uri "sitecore://master/{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}?lang=en&ver=1"
