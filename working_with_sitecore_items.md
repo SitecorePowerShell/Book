@@ -113,9 +113,11 @@ Showcase            en       {DB8C05B8-25B5-42DE-B6CB-4ACE186283DA} 1       Tena
 Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       TenantTemplate
 ```
 
-## Getting large number of filtered items with Sitecore queries
+## Getting the item by Sitecore query
 
-It's not always the most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items of e.g. a specific template. For this we’ve introduced support for the Sitecore query within our provider. Following example fetches all items in /sitecore/content/ branch in the `master` database for items of "Sample Item template":
+It's not always the most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items of e.g. a specific template. For this we’ve introduced support for the Sitecore query within our provider. 
+
+**Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of "Sample Item template".
 
 ```powershell
 PS master:\>Get-Item master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
