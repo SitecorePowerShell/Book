@@ -303,8 +303,8 @@ function New-UsingBlock {
 New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
     foreach($item in Get-ChildItem -Path "master:\content\home") {
         $item.Editing.BeginEdit()
-        $item["Title"] = "Sample Item $($i)"
-        $item["Text"] = "Sample Item $($i)"
+        $item["Title"] = "Sample Item"
+        $item["Text"] = "Sample Item"
         $item.Editing.EndEdit() | Out-Null
     }
 }
