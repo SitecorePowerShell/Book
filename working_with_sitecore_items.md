@@ -198,6 +198,7 @@ PS master:\>$item.Editing.BeginEdit()
 PS master:\>$item["Title"] = "New Title"
 PS master:\>$item.Editing.EndEdit()
 ```
+**Note:** The above example may also be written in the ISE where no console prompt is visible.
 
 The previous examples work but are not the most efficient ways to change item content. The items returned by the provider expose the Sitecore item fields as semi-native PowerShell properties.
 
