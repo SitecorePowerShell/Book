@@ -2,9 +2,9 @@
 
 * [Introduction](README.md)
 * [Installation](installation.md)
+* [Working with Sitecore items](working_with_sitecore_items.md)
 * [Console](console.md)
 * [Scripting](scripting.md)
-* [Working with Sitecore items](working_with_sitecore_items.md)
 * [Toolbox](toolbox.md)
 * [Modules](modules.md)
 * [Reports](reports.md)
@@ -13,4 +13,4 @@
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
 * [Appendix](appendix.md)
-{% include './appendix/commands-list.md' %}
+
