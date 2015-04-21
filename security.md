@@ -16,11 +16,11 @@ The second policy is tied to the Sitecore user account. The code executed throug
 
 #### Security Hardening
 
-The time will come when you need to lock down the SPE module. The following section outlines steps you can take to secure the module.
+The time will come when you need to lock down the SPE module. The following section outlines steps you can take to minimize the surface area for attack.
 
-##### Web Services
+##### Disable Web Services
 
-You can disable the web services overriding the configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
+You can disable the web services by overriding the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
 
 Look for the following section and enable/disable as needed.
 
@@ -34,3 +34,54 @@ Look for the following section and enable/disable as needed.
     </services>
 </sitecore>
 ```
+
+* **RESTful v1** - Used in early version of SPE. Disabled by default. Service associated with `RemoteScriptCall.ashx`.
+* **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
+* **Remoting** - Used when passing scripts to SPE for execution. Service associated with `RemoteAutomation.asmx`.
+* **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
+
+##### Restrict Users and Roles
+
+Deny access to the web services for unauthenticated users and roles using the `<deny>` element as described [here][1] in `sitecore modules\PowerShell\Services\web.config`.
+
+**Example:** The following configuration will deny anonymous calls to the web services.
+
+```xml
+<configuration>
+    <system.web>
+      <authorization>
+        <deny users="?" />
+      </authorization>
+    </system.web>
+</configuration>
+```
+
+##### Minimal Web Service Configuration
+
+The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as the Content Delivery.
+
+**Required:**
+* `App_Config\Include\Cognifide.PowerShell.config`
+* `bin\Cognifide.PowerShell.dll`
+* `sitecore modules\PowerShell\Services\web.config`
+* `sitecore modules\PowerShell\Services\RemoteAutomation.asmx`
+ 
+You will also need to patch the configuration with the following:
+
+```xml
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+    <sitecore>
+        <controlSources>
+            <source mode="on" namespace="Cognifide.PowerShell.Client.Controls" assembly="Cognifide.PowerShell">
+                <patch:delete />
+            </source>
+            <source mode="on" namespace="Cognifide.PowerShell.Client.Applications"
+                  folder="/sitecore modules/Shell/PowerShell/" deep="true">
+                <patch:delete />
+            </source>
+        </controlSources>
+    </sitecore>
+</configuration>
+```
+
+[1]: https://msdn.microsoft.com/en-us/library/8aeskccd%28v=vs.71%29.aspx
