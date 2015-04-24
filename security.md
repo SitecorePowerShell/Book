@@ -37,7 +37,7 @@ Look for the following section and enable/disable as needed.
 
 ##### Restrict Users and Roles
 
-Restrict Windows authenticated users and roles using the `<deny>` element.
+Restrict Windows authenticated users and roles using the `<deny>` element as described [here][1].
 
 ```xml
 <configuration>
@@ -59,3 +59,5 @@ The following files are the bare minimum for setting up SPE in an environment. T
 * `bin\Cognifide.PowerShell.dll`
 * `sitecore modules\PowerShell\Services\web.config`
 * `sitecore modules\PowerShell\Services\RemoteAutomation.asmx`
+
+[1]: https://msdn.microsoft.com/en-us/library/8aeskccd%28v=vs.71%29.aspx
