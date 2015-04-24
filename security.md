@@ -39,11 +39,6 @@ Look for the following section and enable/disable as needed.
 
 The following files are the bare minimum for setting up SPE in an environment. This setup is suitable for environments such as the Content Delivery.
 
-<table>
-    <thead>
-        <tr></tr>
-    </thead>
-</table>
 * .\Website\App_Config\Include\Cognifide.PowerShell.config
 * .\Website\bin\Cognifide.PowerShell.dll
 * .\Website\sitecore modules\PowerShell\Services\RemoteAutomation.asmx
