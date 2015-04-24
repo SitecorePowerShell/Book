@@ -37,7 +37,7 @@ Look for the following section and enable/disable as needed.
 
 ##### Restrict Users and Roles
 
-Restrict users and roles using the `<deny>` element.
+Restrict Windows users and roles using the `<deny>` element.
 
 ```xml
 <configuration>
