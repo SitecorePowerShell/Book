@@ -35,6 +35,21 @@ Look for the following section and enable/disable as needed.
 </sitecore>
 ```
 
+##### Restrict Users and Roles
+
+Restrict users and roles using the `<deny>` element.
+
+```xml
+<configuration>
+    <system.web>
+        <authorization>
+            <deny users="comma-separated list of users" 
+                roles="comma-separated list of roles"/>
+        </authorization>
+    </system.web>
+</configuration>
+```
+
 ##### Minimal Web Service Configuration
 
 The following files are the bare minimum for setting up SPE in an environment. This setup is suitable for environments such as the Content Delivery.
