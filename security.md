@@ -18,7 +18,7 @@ The second policy is tied to the Sitecore user account. The code executed throug
 
 The time will come when you need to lock down the SPE module. The following section outlines steps you can take to secure the module.
 
-##### Web Services
+##### Disable Web Services
 
 You can disable the web services overriding the configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
 
@@ -34,3 +34,17 @@ Look for the following section and enable/disable as needed.
     </services>
 </sitecore>
 ```
+
+##### Minimal Web Service Configuration
+
+The following files are the bare minimum for setting up SPE in an environment. This setup is suitable for environments such as the Content Delivery.
+
+<table>
+    <thead>
+        <tr></tr>
+    </thead>
+</table>
+* .\Website\App_Config\Include\Cognifide.PowerShell.config
+* .\Website\bin\Cognifide.PowerShell.dll
+* .\Website\sitecore modules\PowerShell\Services\RemoteAutomation.asmx
+* .\Website\sitecore modules\PowerShell\Services\web.config
