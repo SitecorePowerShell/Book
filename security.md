@@ -52,7 +52,7 @@ Restrict to Windows authenticated users and roles using the `<deny>` element as 
 
 ##### Minimal Web Service Configuration
 
-The following list are the bare minimum files required for setting up SPE in an environment. This setup is suitable for environments such as the Content Delivery.
+The following list are the bare minimum files required for setting up SPE in an environment for web service consumption. This setup is suitable for environments such as the Content Delivery.
 
 **Required:**
 * `App_Config\Include\Cognifide.PowerShell.config`
