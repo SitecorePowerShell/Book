@@ -16,11 +16,11 @@ The second policy is tied to the Sitecore user account. The code executed throug
 
 #### Security Hardening
 
-The time will come when you need to lock down the SPE module. The following section outlines steps you can take to secure the module.
+The time will come when you need to lock down the SPE module. The following section outlines steps you can take to minimize the surface area for attack.
 
 ##### Disable Web Services
 
-You can disable the web services overriding the configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
+You can disable the web services by overriding the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
 
 Look for the following section and enable/disable as needed.
 
@@ -34,6 +34,11 @@ Look for the following section and enable/disable as needed.
     </services>
 </sitecore>
 ```
+
+* **RESTful v1** - Legacy service disabled by default. Service associated with `RemoteScriptCall.ashx`.
+* **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
+* **Remoting** - Used when passing scripts to SPE for execution. Service associated with `RemoteAutomation.asmx`.
+* **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
 
 ##### Restrict Users and Roles
 
