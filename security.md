@@ -37,7 +37,7 @@ Look for the following section and enable/disable as needed.
 
 ##### Restrict Users and Roles
 
-Restrict to Windows authenticated users and roles using the `<deny>` element as described [here][1] in `sitecore modules\PowerShell\Services\web.config`.
+Restrict access to the web service to Windows authenticated users and roles using the `<deny>` element as described [here][1] in `sitecore modules\PowerShell\Services\web.config`.
 
 ```xml
 <configuration>
