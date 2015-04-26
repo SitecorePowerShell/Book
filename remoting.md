@@ -4,20 +4,17 @@ There are a number of use cases where you need to remotely run scripts within SP
 
 #### Communication between Sitecore instances
 
-**Example:** Local SPE to Remote SPE
+**Example:** The following connects a local instance of SPE to a remote instance and executes the provided script.
 
 ```powershell
-# Import functions
 Import-Function -Name New-ScriptSession
 Import-Function -Name Invoke-RemoteScript
 
-$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "http://remotespe/sitecore%20modules/PowerShell/Services/RemoteAutomation.asmx"
+$url = "http://remotespe/sitecore%20modules/PowerShell/Services/RemoteAutomation.asmx"
+$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri $url
 
 $script1 = {
     [Sitecore.Security.Accounts.User]$user = Get-User -Identity admin
-}
-
-$script2 = {
     $user
     $params.date.ToString()
 }
@@ -27,3 +24,10 @@ $args = @{
 }
 
 Invoke-RemoteScript -ScriptBlock $script1 -Session $session -ArgumentList $args
+
+Name                     Domain       IsAdministrator IsAuthenticated
+----                     ------       --------------- ---------------
+sitecore\admin           sitecore     True            False          
+4/26/2015 6:15:41 PM
+
+```
