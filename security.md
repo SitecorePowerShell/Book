@@ -55,7 +55,7 @@ Grant access to the web service for authenticated users and roles using the `<de
 </configuration>
 ```
 
-Example: The following configuration will deny anonymous calls to the web services.
+**Example:** The following configuration will deny anonymous calls to the web services.
 
 ```xml
 <configuration>
@@ -66,7 +66,6 @@ Example: The following configuration will deny anonymous calls to the web servic
     </system.web>
 </configuration>
 ```
-
 
 ##### Minimal Web Service Configuration
 
