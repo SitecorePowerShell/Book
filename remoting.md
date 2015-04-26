@@ -4,9 +4,9 @@ There are a number of use cases where you need to remotely run scripts within SP
 
 #### Remoting Automation Service
 
-The 
+We have provided a handy way of executing scripts via web service using the Remoting Automation Service.
 
-#### Sitecore to Sitecore communication
+##### Sitecore to Sitecore communication
 
 **Example:** The following connects a local instance of SPE to a remote instance and executes the provided script.
 
@@ -35,7 +35,7 @@ sitecore\admin           sitecore     True            False
 4/26/2015 6:15:41 PM
 ```
 
-#### Windows PowerShell ISE to Sitecore communication
+##### Windows PowerShell ISE to Sitecore communication
 
 **Example:** The following connects Windows PowerShell ISE to a remote Sitecore instance and executes the provided script.
 
