@@ -9,7 +9,7 @@
 * [Modules](modules.md)
 * [Reports](reports.md)
    * [Authoring Reports](authoring_reports.md)
-* [Web API](web_api.md)
+* [Remoting](remoting.md)
 * [Tasks](tasks.md)
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
