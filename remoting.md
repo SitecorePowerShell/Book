@@ -2,7 +2,9 @@
 
 There are a number of use cases where you need to remotely run scripts within SPE. Here we will try to cover a few of those use cases.
 
-#### Example: Local SPE to Remote SPE
+#### Communication between Sitecore instances
+
+**Example:** Local SPE to Remote SPE
 
 ```powershell
 # Import functions
