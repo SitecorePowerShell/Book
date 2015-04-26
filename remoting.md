@@ -13,7 +13,7 @@ Import-Function -Name Invoke-RemoteScript
 $url = "http://remotespe/sitecore%20modules/PowerShell/Services/RemoteAutomation.asmx"
 $session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri $url
 
-$script1 = {
+$script = {
     [Sitecore.Security.Accounts.User]$user = Get-User -Identity admin
     $user
     $params.date.ToString()
@@ -23,7 +23,7 @@ $args = @{
     "date" = [datetime]::Now
 }
 
-Invoke-RemoteScript -ScriptBlock $script1 -Session $session -ArgumentList $args
+Invoke-RemoteScript -ScriptBlock $script -Session $session -ArgumentList $args
 
 Name                     Domain       IsAdministrator IsAuthenticated
 ----                     ------       --------------- ---------------
