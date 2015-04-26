@@ -9,9 +9,9 @@
 * [Modules](modules.md)
 * [Reports](reports.md)
    * [Authoring Reports](authoring_reports.md)
+* Web API
 * [Tasks](tasks.md)
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
 * [Appendix](appendix.md)
-* Web API
 
