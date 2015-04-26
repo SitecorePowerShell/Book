@@ -42,7 +42,7 @@ Look for the following section and enable/disable as needed.
 
 ##### Restrict Users and Roles
 
-Grant access to the web service for authenticated users and roles using the `<deny>` element as described [here][1] in `sitecore modules\PowerShell\Services\web.config`.
+Deny access to the web services for unauthenticated users and roles using the `<deny>` element as described [here][1] in `sitecore modules\PowerShell\Services\web.config`.
 
 **Example:** The following configuration will deny anonymous calls to the web services.
 
