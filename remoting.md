@@ -2,6 +2,10 @@
 
 There are a number of use cases where you need to remotely run scripts within SPE. Here we will try to cover a few of those use cases.
 
+#### Remoting Automation Service
+
+The 
+
 #### Sitecore to Sitecore communication
 
 **Example:** The following connects a local instance of SPE to a remote instance and executes the provided script.
