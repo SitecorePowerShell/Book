@@ -44,17 +44,6 @@ Look for the following section and enable/disable as needed.
 
 Grant access to the web service for authenticated users and roles using the `<deny>` element as described [here][1] in `sitecore modules\PowerShell\Services\web.config`.
 
-```xml
-<configuration>
-    <system.web>
-        <authorization>
-            <deny users="comma-separated list of users" 
-                roles="comma-separated list of roles"/>
-        </authorization>
-    </system.web>
-</configuration>
-```
-
 **Example:** The following configuration will deny anonymous calls to the web services.
 
 ```xml
