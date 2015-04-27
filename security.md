@@ -72,6 +72,13 @@ You will also need to patch the configuration with the following:
 <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
     <sitecore>
         <controlSources>
+            <source mode="on" namespace="Cognifide.PowerShell.Client.Controls" assembly="Cognifide.PowerShell">
+                <patch:delete />
+            </source>
+            <source mode="on" namespace="Cognifide.PowerShell.Client.Applications"
+                  folder="/sitecore modules/Shell/PowerShell/" deep="true">
+                <patch:delete />
+            </source>
         </controlSources>
     </sitecore>
 </configuration>
