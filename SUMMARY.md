@@ -4,7 +4,7 @@
 * [Installation](installation.md)
 * [Console](console.md)
 * [Working with Items](working_with_items.md)
-* Working with Item Languages
+ * Working with Item Languages
 * [Scripting](scripting.md)
 * [Toolbox](toolbox.md)
 * [Modules](modules.md)
