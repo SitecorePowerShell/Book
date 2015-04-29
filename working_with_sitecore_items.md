@@ -279,7 +279,6 @@ As with every rule there is an exception to this one. Those automated properties
 Example: The following sets multiple automated properties while using the `Sitecore.Data.BulkUpdateContext`.
 
 ```powershell
-function New-UsingBlock {
 Import-Function -Name New-UsingBlock
 
 New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
