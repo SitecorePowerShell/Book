@@ -22,7 +22,7 @@ Name Children Languages                Id                                     Te
 Home True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-As you may have noticed, the `/sitecore` portion of the path is unnecessary. This is because the *sitecore* item is represented by the root item of the drive `master:` and is therefore optional.
+As you may have noticed, the `/sitecore` portion of the path is unnecessary. This is because the *Sitecore* item is represented by the root item of the drive `master:` and is therefore optional.
 
 Let's have a look at the equivalent code in C#.
 
@@ -43,7 +43,7 @@ DisplayName Language ID                                     Version TemplateName
 Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-I've formatted the output above to show you that indeed the right language was returned. The cmdlet supports wildcards for both `-Language` and `-Version` parameters. You may have also noticed that the forward and backward slashes can be used interchangeably. 
+I've formatted the output above to show you that indeed the right language was returned. The command supports wildcards for both `-Language` and `-Version` parameters. You may have also noticed that the forward and backward slashes can be used interchangeably. 
 
 **Example:** The following will return the latest version for all languages of an item.
 
@@ -62,7 +62,7 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 Notice that the item with language `en-US` at its third version.
 
-**Example:** The following will retrieve the item in all languages and all versions.
+**Example:** The following will return the item in all languages and all versions.
 
 ```powershell
 PS master:\> Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
