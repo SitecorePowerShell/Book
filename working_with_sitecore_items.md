@@ -62,7 +62,7 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 Notice that the item with language `en-US` at its third version.
 
-**Example:** The following will return the item in all languages and all versions.
+**Example:** The following will return the item in all languages and versions.
 
 ```powershell
 PS master:\> Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
