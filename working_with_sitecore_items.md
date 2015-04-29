@@ -292,4 +292,4 @@ New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
 ```
 
 #### References
-* Original blog post - [Working with Sitecore Items in PowerShell Extensions](http://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
+* [Working with Sitecore Items in PowerShell Extensions](http://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
