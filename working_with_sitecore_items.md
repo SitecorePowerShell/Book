@@ -260,7 +260,7 @@ What about fields that accept lists of items? We've got your back here as well.
 (Get-Item master:/content/home).ItemList = Get-ChildItem 'master:\content\'
 ```
 
-Ok, so let's see how our item looks in the Content editor after all the assignments that we've just performed:
+Let's see how our item looks in the Content editor after all the assignments that we've just performed:
 
 ![ItemList Assignment](http://blog.najmanowicz.com/wp-content/uploads/2014/10/image1.png)
 
