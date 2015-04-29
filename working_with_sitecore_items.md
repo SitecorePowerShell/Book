@@ -215,7 +215,7 @@ $item.Title = "New Title"
 (Get-Item master:/content/home).Title = "New Title"
 ```
 
-This technique may be used for a wide variety of property types. There are a other hidden gems in those properties. For example if we detect that the field is a Date or DateTime field, we will return `System.DateTime` typed value from a field rather than the `System.String` Sitecore stores internally.
+This technique may be used for a wide variety of property types. There are a other hidden gems in those properties. For example if we detect that the field is a *Date* or *Datetime* field, we will return `System.DateTime` typed value from a field rather than the `System.String` Sitecore stores internally.
 
 **Example:** The following gets the created date.
 
