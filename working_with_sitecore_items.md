@@ -115,7 +115,7 @@ Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       Tena
 
 ## Getting items by Path with Sitecore query
 
-It's not always the most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items of e.g. a specific template. For this we’ve introduced support for the Sitecore query within our provider. 
+It's not always most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items (e.g. a specific template). For this we’ve introduced support for the Sitecore query within our provider. 
 
 **Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of *Sample Item*.
 
