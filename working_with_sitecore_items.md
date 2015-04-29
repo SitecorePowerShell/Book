@@ -244,7 +244,7 @@ To provide an example – I’ve extended my home with additional fields as foll
 (Get-Item master:/content/home).Image = Get-Item 'master:\media library\logo'
 ```
 
-Easy enough, isn't it? Let us (the Sitecore PowerShell Extensions) detect the field type for you and worry about what to call! Now let's assign a content item to GeneralLink and Link fields… just like you expected.
+Easy enough, isn't it? Let SPE detect the field type for you and worry about what to call! Now let's assign a content item to *GeneralLink*.
 
 **Example:** The following assigns a content item to a *GeneralLink* field.
 
