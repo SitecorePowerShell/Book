@@ -15,7 +15,7 @@ If you have retrieved your items directly using the Sitecore API you can still a
 **Example:** The following will retrieve the item based on the Sitecore path.
 
 ```powershell
-PS master:\>Get-Item -Path master:\content\home
+PS master:\> Get-Item -Path master:\content\home
  
 Name Children Languages                Id                                     TemplateName
 ---- -------- ---------                --                                     ------------
@@ -36,7 +36,7 @@ The above will return the latest version of the item in your current language. B
 **Example:** The following will retrieve the Danish version of the *Home* item.
 
 ```powershell
-PS master:\>Get-Item -Path master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
+PS master:\> Get-Item -Path master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
 
 DisplayName Language ID                                     Version TemplateName
 ----------- -------- --                                     ------- ------------
@@ -48,7 +48,7 @@ I've formatted the output above to show you that indeed the right language was r
 **Example:** The following will return the latest version for all languages of an item.
 
 ```powershell
-PS master:\>Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
+PS master:\> Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
   
 DisplayName Language ID                                     Version TemplateName
 ----------- -------- --                                     ------- ------------
@@ -65,7 +65,7 @@ Notice that the item with language `en-US` at its third version.
 **Example:** The following will retrieve the item in all languages and all versions.
 
 ```powershell
-PS master:\>Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
+PS master:\> Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
   
 DisplayName Language ID                                     Version TemplateName
 ----------- -------- --                                     ------- ------------
@@ -84,7 +84,7 @@ You can see that specifying the language and version using the wildcard will ret
 **Example:** The following will retrieve the child items in all languages and versions.
 
 ```powershell
-PS master:\>Get-ChildItem master:/content -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName
+PS master:\> Get-ChildItem master:/content -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName
   
 DisplayName         Language ID                                     Version TemplateName
 -----------         -------- --                                     ------- ------------
@@ -120,7 +120,7 @@ It's not always the most efficient to operate on items by traversing the tree us
 **Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of *Sample Item*.
 
 ```powershell
-PS master:\>Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
+PS master:\> Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
   
 Name                             Children Languages                Id                                     TemplateName
 ----                             -------- ---------                --                                     ------------
@@ -131,7 +131,7 @@ Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA
 **Example:** The following retrieves all items beneath the path */sitecore/content/* with the template of *Sample Item* in all versions and languages.
 
 ```powershell
-PS master:\>Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -AutoSize
+PS master:\> Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -AutoSize
   
 DisplayName  Language ID                                     Version TemplateName
 -----------  -------- --                                     ------- ------------
@@ -155,7 +155,7 @@ Hjem         da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 **Example:** The following retrieves an item by id.
 
 ```powershell
-PS master:\>Get-Item -Path master: -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+PS master:\> Get-Item -Path master: -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
   
 Name  Children Languages                Id                                     TemplateName
 ----  -------- ---------                --                                     ------------
@@ -169,7 +169,7 @@ The Uri encodes the language and version within the path.
 **Example:** The following retrieves an item by uri.
 
 ```powershell
-PS master:\>Get-Item -Path master: -Uri "sitecore://master/{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}?lang=en&ver=1"
+PS master:\> Get-Item -Path master: -Uri "sitecore://master/{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}?lang=en&ver=1"
   
 Name Children Languages                Id                                     TemplateName
 ---- -------- ---------                --                                     ------------
@@ -187,16 +187,16 @@ We often see the following two ways of accessing and changing fields used in scr
 **Example:** The following sets the title property using `Set-ItemProperty`.
 
 ```powershell
-PS master:\>Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
+PS master:\> Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
 ```
 
 Example: The following sets the title property using `.Editing.BeginEdit` and `.Editing.EndEdit` methods.
 
 ```powershell
-PS master:\>$item = Get-Item master:/content/home
-PS master:\>$item.Editing.BeginEdit()
-PS master:\>$item["Title"] = "New Title"
-PS master:\>$item.Editing.EndEdit()
+PS master:\> $item = Get-Item master:/content/home
+PS master:\> $item.Editing.BeginEdit()
+PS master:\> $item["Title"] = "New Title"
+PS master:\> $item.Editing.EndEdit()
 ```
 **Note:** The above example may also be written in the ISE where no console prompt is visible.
 
@@ -205,8 +205,8 @@ The previous examples work but are not the most efficient ways to change item co
 **Example:** The following sets the title property using the automated PowerShell property.
 
 ```powershell
-PS master:\>$item = Get-Item master:/content/home
-PS master:\>$item.Title = "New Title"
+PS master:\> $item = Get-Item master:/content/home
+PS master:\> $item.Title = "New Title"
 ```
 
 **Example:** The following sets the title property using the semi-native PowerShell property without the use of a variable.
@@ -220,15 +220,15 @@ This technique may be used for a wide variety of property types. There are a oth
 **Example:** The following gets the created date.
 
 ```powershell
-PS master:\>(Get-Item master:/content/home).__Created
+PS master:\> (Get-Item master:/content/home).__Created
 Monday, April 07, 2008 1:59:00 PM
 ```
 
 **Example:** The following assigns a `System.DateTime` value to the PowerShell automated property.
 
 ```powershell
-PS master:\>(Get-Item master:/content/home).__Created = [DateTime]::Now
-PS master:\>(Get-Item master:/content/home).__Created
+PS master:\> (Get-Item master:/content/home).__Created = [DateTime]::Now
+PS master:\> (Get-Item master:/content/home).__Created
 Monday, October 13, 2014 1:59:41 AM
 ```
 
