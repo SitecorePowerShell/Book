@@ -162,8 +162,6 @@ Name  Children Languages                Id                                     T
 Home  True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-**Note:** The path `master:` is still required so that PowerShell knows to use the `CmsItemProvider`.
-
 ## Get items by Uri
 
 The Uri encodes the language and version within the path.
