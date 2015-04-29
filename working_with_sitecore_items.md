@@ -238,7 +238,7 @@ It works for assigning content and media items. If your item has link fields in 
 
 To provide an example – I’ve extended my home with additional fields as follows:
 
-![image](http://blog.najmanowicz.com/wp-content/uploads/2014/10/image.png)
+![Extended Sample Item](http://blog.najmanowicz.com/wp-content/uploads/2014/10/image.png)
 
 **Example:** The following assigns an image to the Image field.
 
