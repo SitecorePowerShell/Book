@@ -1,6 +1,6 @@
 # Working with Sitecore items
 
-## How do I retrieve my Sitecore items the PowerShell way?
+#### How do I retrieve my Sitecore items the PowerShell way?
 
 The following two commands will retrieve Sitecore items:
 * `Get-Item` - Returns a single item at the specified path.
@@ -10,7 +10,7 @@ Below we will show how to use each command with the Windows PowerShell syntax fo
 
 If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Initialize-Item` command.
 
-## Get items by Path
+#### Get items by Path
 
 **Example:** The following will retrieve the item based on the Sitecore path.
 
@@ -113,7 +113,7 @@ Showcase            en       {DB8C05B8-25B5-42DE-B6CB-4ACE186283DA} 1       Tena
 Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       TenantTemplate
 ```
 
-## Getting items by Path with Sitecore query
+#### Getting items by Path with Sitecore query
 
 It's not always most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items (e.g. a specific template). For this we’ve introduced support for the Sitecore query within our provider. 
 
@@ -150,7 +150,7 @@ Home         en-GB    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Hjem         da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-##  Get items by Id
+####  Get items by Id
 
 **Example:** The following retrieves an item by id.
 
@@ -162,7 +162,7 @@ Name  Children Languages                Id                                     T
 Home  True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-## Get items by Uri
+#### Get items by Uri
 
 The Uri encodes the language and version within the path.
 
@@ -180,7 +180,7 @@ In all the examples you'll notice we specified the database. Windows PowerShell 
 * **HKLM:** - The registry provider for HKEY_LOCAL_MACHINE.
 * **C:** - The filesystem provider for the C drive.
 
-## Changing item properties
+#### Changing item properties
 
 We often see the following two ways of accessing and changing fields used in scripts. One uses `Set-ItemProperty` and the other is more natural to a Sitecore developer.
 
@@ -268,7 +268,7 @@ Great! Looks like it worked.
 
 Those little improvements make your scripts much more succinct and understandable. Try it for yourself!
 
-## When not to use the automated properties?
+#### When not to use the automated properties?
 
 As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`. 
 
