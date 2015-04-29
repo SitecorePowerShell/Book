@@ -45,7 +45,7 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 I've formatted the output above to show you that indeed the right language was returned. The command supports wildcards for both `-Language` and `-Version` parameters. You may have also noticed that the forward and backward slashes can be used interchangeably. 
 
-**Example:** The following will return the latest version for all languages of an item.
+**Example:** The following retrieves the latest version for all languages of an item.
 
 ```powershell
 PS master:\> Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
@@ -62,7 +62,7 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 Notice that the item with language `en-US` at its third version.
 
-**Example:** The following will return the item in all languages and versions.
+**Example:** The following retrieves the item in all languages and versions.
 
 ```powershell
 PS master:\> Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
@@ -81,7 +81,7 @@ Hjem        da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 You can see that specifying the language and version using the wildcard will retrieve all possible variants of an item. The wildcard can also include a partial match like `en-*`. The use of that filter would return all items in the English language, ignoring the region.
 
-**Example:** The following will retrieve the child items in all languages and versions.
+**Example:** The following retrieves the child items in all languages and versions.
 
 ```powershell
 PS master:\> Get-ChildItem master:/content -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName
