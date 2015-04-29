@@ -63,7 +63,7 @@ sitecore\admin           sitecore     True            False
 4/26/2015 6:15:41 PM
 ```
 
-References:
+**References:**
 * Adam's initial post on [Remoting][1]
 
 [1]: http://blog.najmanowicz.com/2014/10/10/sitecore-powershell-extensions-remoting/
