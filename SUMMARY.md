@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Installation](installation.md)
 * [Console](console.md)
-   * [Managing Items](working_with_sitecore_items.md)
+   * [Working with Items](working_with_items.md)
    * Managing Item Languages
 * [Scripting](scripting.md)
 * [Toolbox](toolbox.md)
