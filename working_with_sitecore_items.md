@@ -252,8 +252,6 @@ Easy enough, isn't it? Let SPE detect the field type for you and worry about wha
 (Get-Item master:/content/home).GeneralLink = Get-Item 'master:\content\CognifideCom'
 ```
 
-Even better – if you assign a media item to it, it will detect that and do the right thing assigning it as a media link.
-
 What about fields that accept lists of items? We've got your back here as well.
 
 **Example:** The following assigns all children of `/sitecore/content/` item to the ItemList field.
