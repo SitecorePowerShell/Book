@@ -270,7 +270,9 @@ Those little improvements make your scripts much more succinct and understandabl
 
 ## When not to use the automated properties?
 
-As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`. Choosing this way is situational and will usually only be required if you're working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` trick used in [this blog post](http://bartlomiejmucha.com/en/blog).
+As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`. 
+
+Choosing this way is situational and will usually only be required if you're working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` trick used in [this blog post](http://bartlomiejmucha.com/en/blog).
 
 Example: The following sets multiple automated properties while using the `Sitecore.Data.BulkUpdateContext`.
 
