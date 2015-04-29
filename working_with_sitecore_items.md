@@ -254,7 +254,7 @@ Easy enough, isn't it? Let SPE detect the field type for you and worry about wha
 
 What about fields that accept lists of items? We've got your back here as well.
 
-**Example:** The following assigns all children of `/sitecore/content/` item to the ItemList field.
+**Example:** The following assigns all children of `/sitecore/content/` item to the *ItemList* field.
 
 ```powershell
 (Get-Item master:/content/home).ItemList = Get-ChildItem 'master:\content\'
