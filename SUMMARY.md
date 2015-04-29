@@ -4,7 +4,7 @@
 * [Installation](installation.md)
 * [Console](console.md)
    * [Managing Items](working_with_sitecore_items.md)
-   * Managing Languages
+   * Managing Item Languages
 * [Scripting](scripting.md)
 * [Toolbox](toolbox.md)
 * [Modules](modules.md)
