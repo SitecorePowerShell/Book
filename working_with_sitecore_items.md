@@ -232,9 +232,7 @@ PS master:\> (Get-Item master:/content/home).__Created
 Monday, October 13, 2014 1:59:41 AM
 ```
 
-Great we've just changed it! Our property handlers take care of all the necessary usages of `.Editing.BeginEdit` and `.Editing.EndEdit`.
-
-It works for assigning content and media items. If your item has link fields in it, you can assign other items to them and not worry about the link format – we will do all the plumbing for you.
+Great we've just changed it! Our property handlers take care of all the necessary usages of `.Editing.BeginEdit` and `.Editing.EndEdit`. This method can be applied for a variety of field types such as *GeneralLink* and *Image*.
 
 To provide an example – I’ve extended my home with additional fields as follows:
 
