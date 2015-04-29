@@ -280,25 +280,7 @@ Example: The following sets multiple automated properties while using the `Sitec
 
 ```powershell
 function New-UsingBlock {
-    [CmdletBinding()]
-    param (
-        [Parameter(Mandatory = $true)]
-        [IDisposable]
-        $InputObject,
-  
-        [Parameter(Mandatory = $true)]
-        [ScriptBlock]
-        $ScriptBlock
-    )
- 
-    try {
-        $ScriptBlock.Invoke()
-    } finally {
-        if ($InputObject) {
-            $InputObject.Dispose()
-        }
-    }
-}
+Import-Function -Name New-UsingBlock
 
 New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
     foreach($item in Get-ChildItem -Path "master:\content\home") {
