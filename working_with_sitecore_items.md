@@ -8,7 +8,7 @@ The following two commands will retrieve Sitecore items:
 
 Below we will show how to use each command with the Windows PowerShell syntax followed by the common C# equivalent.
 
-If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that my piping them through the `Wrap-Item` commandlet. Always use the latest version of SPE to leverage the full potential of the environment.
+If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Wrap-Item` commandlet. Always use the latest version of SPE to leverage the full potential of the environment.
 
 ## Get items by Path
 
