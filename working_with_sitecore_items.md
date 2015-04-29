@@ -190,7 +190,7 @@ We often see the following two ways of accessing and changing fields used in scr
 PS master:\> Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
 ```
 
-Example: The following sets the title property using `.Editing.BeginEdit` and `.Editing.EndEdit` methods.
+**Example:** The following sets the title property using `.Editing.BeginEdit` and `.Editing.EndEdit` methods.
 
 ```powershell
 PS master:\> $item = Get-Item master:/content/home
