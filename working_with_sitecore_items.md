@@ -193,10 +193,10 @@ PS master:\> Set-ItemProperty -Path master:/content/home -Name "Title" -Value "N
 **Example:** The following sets the title property using `.Editing.BeginEdit` and `.Editing.EndEdit` methods.
 
 ```powershell
-PS master:\> $item = Get-Item master:/content/home
-PS master:\> $item.Editing.BeginEdit()
-PS master:\> $item["Title"] = "New Title"
-PS master:\> $item.Editing.EndEdit()
+$item = Get-Item master:/content/home
+$item.Editing.BeginEdit()
+$item["Title"] = "New Title"
+$item.Editing.EndEdit()
 ```
 **Note:** The above example may also be written in the ISE where no console prompt is visible.
 
@@ -205,8 +205,8 @@ The previous examples work but are not the most efficient ways to change item co
 **Example:** The following sets the title property using the automated PowerShell property.
 
 ```powershell
-PS master:\> $item = Get-Item master:/content/home
-PS master:\> $item.Title = "New Title"
+$item = Get-Item master:/content/home
+$item.Title = "New Title"
 ```
 
 **Example:** The following sets the title property using the semi-native PowerShell property without the use of a variable.
