@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [Installation](installation.md)
-   * Interfaces
 * [Console](console.md)
 * [Working with Items](working_with_items.md)
    * [Item Languages](item_languages.md)
