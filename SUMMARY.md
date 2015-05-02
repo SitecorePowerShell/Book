@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Installation](installation.md)
+* Interfaces
 * [Console](console.md)
    * [Working with Sitecore items](working_with_sitecore_items.md)
 * [Scripting](scripting.md)
@@ -14,5 +15,4 @@
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
 * [Appendix](appendix.md)
-* Interfaces
 
