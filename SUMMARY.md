@@ -16,3 +16,4 @@
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
 * [Appendix](appendix.md)
+{% include './appendix/commands-list.md' %}
