@@ -289,7 +289,17 @@ New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
 }
 ```
 
-## 
+Some other classes you may want to use with `New-UsingBlock` function:
+* `Sitecore.SecurityModel.SecurityDisabler`
+* `Sitecore.Data.BulkUpdateContext`
+* `Sitecore.Globalization.LanguageSwitcher`
+* `Sitecore.Sites.SiteContextSwitcher`
+* `Sitecore.Data.DatabaseSwitcher`
+* `Sitecore.Security.Accounts.UserSwitcher`
+* `Sitecore.Data.Items.EditContext`
+* `Sitecore.Data.Proxies.ProxyDisabler`
+* `Sitecore.Data.DatabaseCacheDisabler`
+* `Sitecore.Data.Events.EventDisabler`
 #### References
 
 * [Working with Sitecore Items in PowerShell Extensions](http://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
