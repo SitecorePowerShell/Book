@@ -289,7 +289,7 @@ New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
 }
 ```
 
-Some other classes you may want to use with `New-UsingBlock` function:
+Some other classes you may want to use with the `New-UsingBlock` function:
 * `Sitecore.SecurityModel.SecurityDisabler`
 * `Sitecore.Data.BulkUpdateContext`
 * `Sitecore.Globalization.LanguageSwitcher`
