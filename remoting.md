@@ -14,7 +14,7 @@ We have provided a handy way of executing scripts via web service using the Remo
 Import-Function -Name New-ScriptSession
 Import-Function -Name Invoke-RemoteScript
 
-$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "http://remotespe"
+$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "http://remotesitecore"
 
 $script = {
     [Sitecore.Security.Accounts.User]$user = Get-User -Identity admin
@@ -41,24 +41,20 @@ sitecore\admin           sitecore     True            False
 ```powershell
 Import-Module -Name SPE
 
-$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "http://remotespe"
+$instanceUrls = @("http://remotesitecore")
+$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri $instanceUrls
 
-$script = {
-    [Sitecore.Security.Accounts.User]$user = Get-User -Identity admin
-    $user
-    $params.date.ToString()
-}
+$libraryPath = "/sitecore/media library/images/image.png"
+Get-Item -Path C:\image.png | Send-MediaItem -Session $session -Destination $libraryPath
 
-$args = @{
-    "date" = [datetime]::Now
-}
+$savePath = "C:\image-$([datetime]::Now.ToString("yyyyddMM-HHmmss")).png"
+Receive-MediaItem -Session $session -Path $libraryPath -Destination $savePath
 
-Invoke-RemoteScript -ScriptBlock $script -Session $session -ArgumentList $args
+    Directory: C:\
 
-Name                     Domain       IsAdministrator IsAuthenticated
-----                     ------       --------------- ---------------
-sitecore\admin           sitecore     True            False          
-4/26/2015 6:15:41 PM
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+-a---         5/25/2015  11:23 AM          0 image-20152505-112302.png  
 ```
 
 **References:**
