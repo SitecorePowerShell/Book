@@ -14,8 +14,7 @@ We have provided a handy way of executing scripts via web service using the Remo
 Import-Function -Name New-ScriptSession
 Import-Function -Name Invoke-RemoteScript
 
-$url = "http://remotespe/sitecore%20modules/PowerShell/Services/RemoteAutomation.asmx"
-$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri $url
+$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "http://remotespe"
 
 $script = {
     [Sitecore.Security.Accounts.User]$user = Get-User -Identity admin
@@ -42,8 +41,7 @@ sitecore\admin           sitecore     True            False
 ```powershell
 Import-Module -Name SPE
 
-$url = "http://remotespe/sitecore%20modules/PowerShell/Services/RemoteAutomation.asmx"
-$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri $url
+$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "http://remotespe"
 
 $script = {
     [Sitecore.Security.Accounts.User]$user = Get-User -Identity admin
