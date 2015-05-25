@@ -10,7 +10,9 @@ Beneath *Schedules* you can create as many tasks as Sitecore will allow. Configu
 
 ![PowerShell Script Task](images/screenshots/tasks-archiveschedule.png)
 
-The *Items* field contains the path to a script in the *Script Library*. Below are scripts found out-of-the-box.
+The *Items* field contains the path to a script in the *Script Library*. 
+
+Below are scripts found out-of-the-box with SPE.
 
 | Module | Script |
 | ------ | ---- |
