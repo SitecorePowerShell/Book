@@ -14,7 +14,7 @@ When using the IIS identities such as *ApplicationPoolIdentity* and *NetworkServ
 
 ##### Sitecore User Account
 
-The second policy is tied to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be through the Sitecore API.
+The second policy relates to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be through the Sitecore API.
 
 #### Security Hardening
 
