@@ -1,10 +1,11 @@
 # Summary
 
 * [Introduction](README.md)
+   * Releases
 * [Installation](installation.md)
 * Interfaces
- * [Command Line Console](console.md)
- * [Integrated Scripting Environment](scripting.md)
+   * [Command Line Console](console.md)
+   * [Integrated Scripting Environment](scripting.md)
 * [Working with Items](working_with_items.md)
    * [Item Languages](item_languages.md)
 * [Toolbox](toolbox.md)
@@ -16,4 +17,4 @@
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
 * [Appendix](appendix.md)
-{% include './appendix/commands-list.md' %}
+
