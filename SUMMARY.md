@@ -1,6 +1,5 @@
 # Summary
 
-* [introduction](README.md)
 * [Releases](releases.md)
 * [Introduction](README.md)
 * [Installation](installation.md)
