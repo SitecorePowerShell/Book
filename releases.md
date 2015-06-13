@@ -46,7 +46,7 @@ Page Editor Notification
 
 #### Package up security
 
-The package commands now include a new one called New-SecuritySource which adds security settings to packages.
+The package commands now include a new one called `New-SecuritySource` which adds security settings to packages.
 
 #### Script errors log to the ERROR log
 
@@ -56,12 +56,14 @@ One of the pain points I noticed was that script errors encountered by scripts r
 
 In order to provider better maintenance or SPE we decided to make a few adjustments. Nothing too crazy.
 
-First we split the functionality that was different in Sitecore versions (like the Rules engine) into a separate library called Cognifide.PowerShell.VersionSpecific.dll. Doing this allowed us to maintain a single branch of code, where the version specific libraries are compiled with their respective Sitecore versions. 
+First we split the functionality that was different in Sitecore versions (like the Rules engine) into a separate library called `Cognifide.PowerShell.VersionSpecific.dll`. Doing this allowed us to maintain a single branch of code, where the version specific libraries are compiled with their respective Sitecore versions. 
 
-Second we split the Cognifide.PowerShell.config by removing previously unused events section. There are 3 or so events that SPE depends on, so we kept that in the original file. Any of the events you wish to use like "item:saved" will now reside in Cognifide.PowerShell.Events.config.
+Second we split the `Cognifide.PowerShell.config` by removing previously unused events section. There are 3 or so events that SPE depends on, so we kept that in the original file. Any of the events you wish to use like "item:saved" will now reside in Cognifide.PowerShell.Events.config.
 
-Third we added a new library called Cognifide.PowerShell.Package.dll which enables the deletion of items and files when installing anti-packages. The library does not have any dependencies other than the Sitecore libraries.
+Third we added a new library called `Cognifide.PowerShell.Package.dll` which enables the deletion of items and files when installing anti-packages. The library does not have any dependencies other than the Sitecore libraries.
 
 #### Prescript functionality removed
 
 We decided that the Prescript functionality was unlikely to be widely used and only introduced confusion when scripts executed. In some situations your prescript would execute, and in others it would never execute. It's gone.
+
+- Michael
