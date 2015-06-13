@@ -1,8 +1,7 @@
 # Summary
 
-* [introduction](README.md)
-* [Releases](releases.md)
 * [Introduction](README.md)
+* [Releases](releases.md)
 * [Installation](installation.md)
 * Interfaces
    * [Command Line Console](console.md)
