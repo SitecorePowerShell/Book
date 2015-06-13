@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Releases
 * [Installation](installation.md)
 * Interfaces
    * [Command Line Console](console.md)
