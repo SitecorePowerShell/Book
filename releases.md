@@ -68,6 +68,6 @@ We decided that the Prescript functionality was unlikely to be widely used and o
 
 
 
-###### Happing Coding
+###### Happy Coding
 
 // Michael
