@@ -1,6 +1,7 @@
 # Summary
 
-* Releases
+* [introduction](README.md)
+* [Releases](releases.md)
 * [Introduction](README.md)
 * [Installation](installation.md)
 * Interfaces
@@ -17,5 +18,4 @@
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
 * [Appendix](appendix.md)
-
 
