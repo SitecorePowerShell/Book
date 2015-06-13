@@ -1,7 +1,6 @@
 # Summary
 
 * [Releases](releases.md)
-* 
 * [Introduction](README.md)
 * [Installation](installation.md)
 * Interfaces
