@@ -5,10 +5,10 @@ It's already June and been way too long since I last sat down to collect my thou
 
 ### New Features
 
-- 337 Create anti-packages
-- 368 Content Editor Warning integration
-- 364 Page Editor Notification integration
-- 341 New-SecuritySource command for package creation
+- [337](https://github.com/SitecorePowerShell/Console/issues/337) Create anti-packages
+- [368](https://github.com/SitecorePowerShell/Console/issues/368) Content Editor Warning integration
+- [364](https://github.com/SitecorePowerShell/Console/issues/364) Page Editor Notification integration
+- [341](https://github.com/SitecorePowerShell/Console/issues/341) New-SecuritySource command for package creation
 
 ### Enhancements
 
