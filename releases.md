@@ -1,7 +1,6 @@
 # Releases
 
 ## Version 3.1
-It's already June and been way too long since I last sat down to collect my thoughts. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. I'll list a few of those below and explain a few important ones in this post. I ask that you provide any and all feedback either on twitter or github.
 
 ### New Features
 
@@ -12,12 +11,12 @@ It's already June and been way too long since I last sat down to collect my thou
 
 ### Enhancements
 
-- [333](https://github.com/SitecorePowerShell/Console/issues/333) Write-Log now defaults to the DEBUG log
-- [363](https://github.com/SitecorePowerShell/Console/issues/363) Script errors are now logged to the ERROR log, which will then show line numbers
-- [339](https://github.com/SitecorePowerShell/Console/issues/339) New-FileSource and New-ExplicitFileSource commands support InstallMode for package creation
-- [338](https://github.com/SitecorePowerShell/Console/issues/338) Export-Package command supports NoClobber for package creation
-- [336](https://github.com/SitecorePowerShell/Console/issues/336) Cognifide.PowerShell.config event settings moved to a separate include file
-- [361](https://github.com/SitecorePowerShell/Console/issues/361) Find-Item command now supports "Contains" filter
+- [333](https://github.com/SitecorePowerShell/Console/issues/333) `Write-Log` now defaults to the **DEBUG** log
+- [363](https://github.com/SitecorePowerShell/Console/issues/363) Script errors are now logged to the **ERROR** log, which will then show line numbers
+- [339](https://github.com/SitecorePowerShell/Console/issues/339) `New-FileSource` and `New-ExplicitFileSource` commands support `InstallMode` for package creation
+- [338](https://github.com/SitecorePowerShell/Console/issues/338) `Export-Package` command supports `NoClobber` for package creation
+- [336](https://github.com/SitecorePowerShell/Console/issues/336) Event settings moved to a separate include file
+- [361](https://github.com/SitecorePowerShell/Console/issues/361) `Find-Item` command now supports **Contains** filter
 - [334](https://github.com/SitecorePowerShell/Console/issues/334) System Maintenance Module now contains optimization scripts
 - [350](https://github.com/SitecorePowerShell/Console/issues/350) New version specific library introduced for compatibility
 
