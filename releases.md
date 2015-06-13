@@ -23,10 +23,10 @@ It's already June and been way too long since I last sat down to collect my thou
 
 ### Fixes/Changes
 
-- 366 LoggingIn, LoggedIn, and LoggedOut pipelines now use the variable $pipelineArgs rather than $args
-- 365 Prescript functionality removed from ISE/Console/Default settings
-- 357 Find-Item command no longer throws "Operation Unsupported" warning
-- 358 Remove-RoleMember command did not properly remove users from roles
+- [366](https://github.com/SitecorePowerShell/Console/issues/366) LoggingIn, LoggedIn, and LoggedOut pipelines now use the variable $pipelineArgs rather than $args
+- [365](https://github.com/SitecorePowerShell/Console/issues/365) Prescript functionality removed from ISE/Console/Default settings
+- [357](https://github.com/SitecorePowerShell/Console/issues/357) Find-Item command no longer throws "Operation Unsupported" warning
+- [358](https://github.com/SitecorePowerShell/Console/issues/358) Remove-RoleMember command did not properly remove users from roles
 
 
 #### Create anti-packages
