@@ -66,4 +66,8 @@ Third we added a new library called `Cognifide.PowerShell.Package.dll` which ena
 
 We decided that the Prescript functionality was unlikely to be widely used and only introduced confusion when scripts executed. In some situations your prescript would execute, and in others it would never execute. It's gone.
 
-- Michael
+
+
+###### Happing Coding
+
+// Michael
