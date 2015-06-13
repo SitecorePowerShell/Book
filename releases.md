@@ -40,8 +40,9 @@ Now it's possible to write a script for generating warnings in the Content Edito
 
 #### Content Editor Warning
 
+[![Content Editor Notification](images/screenshots/contenteditor-expirewarning.png)
 
-[![Experience Editor Notification](images/screenshots/experienceeditor-expirenotification.png)]
+[![Experience Editor Notification](images/screenshots/experienceeditor-expirenotification.png)
 
 
 #### Package up security
