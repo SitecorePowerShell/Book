@@ -89,8 +89,8 @@ Function    Send-MediaItem      SPE
 One of the pain points I noticed was that script errors encountered by scripts running outside of the Console and ISE provided insufficient details. Now you can find the error details and with line numbers in the log.
 
 ```
-4620 19:05:24 ERROR The property 'Icon' cannot be found on this object. Verify that the property exists and can be set.At line:9 char:1
-+ $warning.Icon = $icon
+4620 19:05:24 ERROR The property 'Icon1' cannot be found on this object. Verify that the property exists and can be set.At line:9 char:1
++ $warning.Icon1 = $icon
 + ~~~~~~~~~~~~~~~~~~~~~
 ```
 
