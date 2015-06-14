@@ -65,6 +65,25 @@ Either from the downloads section on the Sitecore Marketplace or in Github repo 
 
 You'll want to extract the contents to your Windows PowerShell module directory as defined in `$env:PSModulePath` or perhaps even add a new path if necessary.
 
+Since I am using the module under my account I can save it my `$home` path:
+
+`C:\Users\Michael\Documents\WindowsPowerShell\Modules\SPE`
+
+Running `Get-Command` you can get the list of supported commands:
+
+```ps
+PS C:\Windows\system32> Get-Command -Module SPE
+
+CommandType Name                ModuleName
+----------- ----                ----------
+Function    ConvertFrom-CliXml  SPE
+Function    ConvertTo-CliXml    SPE
+Function    Invoke-RemoteScript SPE
+Function    New-ScriptSession   SPE
+Function    Receive-MediaItem   SPE
+Function    Send-MediaItem      SPE
+```
+
 #### Script errors log to the ERROR log
 
 One of the pain points I noticed was that script errors encountered by scripts running outside of the Console and ISE provided insufficient details. Now you can find the error details and with line numbers in the log.
