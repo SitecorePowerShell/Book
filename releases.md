@@ -96,7 +96,7 @@ One of the pain points I noticed was that script errors encountered by scripts r
 
 #### New config file and libraries introduced
 
-In order to provider better maintenance or SPE we decided to make a few adjustments. Nothing too crazy.
+In order to provider better maintenance for SPE we decided to make a few adjustments. Nothing too crazy.
 
 First we split the functionality that was different in Sitecore versions (like the Rules engine) into a separate library called `Cognifide.PowerShell.VersionSpecific.dll`. Doing this allowed us to maintain a single branch of code, where the version specific libraries are compiled with their respective Sitecore versions. 
 
