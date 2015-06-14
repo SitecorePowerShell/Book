@@ -34,9 +34,9 @@ It's already June and been way too long since I last sat down to collect my thou
 
 This is one of those exciting new features, mainly because SPE has had the ability to create packages for a long time, so why not the reverse?! A new library needs to be included in order for the a delete post step to work. It works very much like you find in Sitecore Rocks. If you haven't used that you are missing out on a great tool. 
 
-[![Toolbox](images/screenshots/toolbox-createantipackage.png)
+![Toolbox](images/screenshots/toolbox-createantipackage.png)
 
-[![Package Browser](images/screenshots/modaldialog-packages.png)
+![Package Browser](images/screenshots/modaldialog-packages.png)
 
 #### Content/Page Editor Message integration
 
@@ -45,9 +45,9 @@ Now it's possible to write a script for generating warnings in the Content Edito
 
 #### Content Editor Warning
 
-[![Content Editor Notification](images/screenshots/contenteditor-expirewarning.png)
+![Content Editor Notification](images/screenshots/contenteditor-expirewarning.png)
 
-[![Experience Editor Notification](images/screenshots/experienceeditor-expirenotification.png)
+![Experience Editor Notification](images/screenshots/experienceeditor-expirenotification.png)
 
 
 #### Package up security
