@@ -10,6 +10,7 @@ It's already June and been way too long since I last sat down to collect my thou
 - [368](https://github.com/SitecorePowerShell/Console/issues/368) Content Editor Warning integration
 - [364](https://github.com/SitecorePowerShell/Console/issues/364) Page Editor Notification integration
 - [341](https://github.com/SitecorePowerShell/Console/issues/341) New-SecuritySource command for package creation
+- [324](https://github.com/SitecorePowerShell/Console/issues/324) SPE Remoting module for use outside of Sitecore
 
 ### Enhancements
 
@@ -52,9 +53,17 @@ Now it's possible to write a script for generating warnings in the Content Edito
 ![Experience Editor Notification](images/screenshots/experienceeditor-expirenotification.png)
 
 
-#### Package up security
+#### Package security settings
 
 The package commands now include a new one called `New-SecuritySource` which adds security settings to packages.
+
+#### SPE module for use outside of Sitecore
+
+We have finally introduced a Windows PowerShell module that can be used outside of Sitecore. The module includes commands to interact with the SPE web services and should be the preferred method.
+
+Either from the downloads section on the Sitecore Marketplace or in Github repo you'll find the package `SPE Remoting-3.1.zip`. 
+
+You'll want to extract the contents to your Windows PowerShell module directory as defined in `$env:PSModulePath` or perhaps even add a new path if necessary.
 
 #### Script errors log to the ERROR log
 
