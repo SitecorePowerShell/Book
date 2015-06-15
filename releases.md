@@ -6,6 +6,7 @@ It's already June and been way too long since I last sat down to collect my thou
 ### New Features
 
 - [337](https://github.com/SitecorePowerShell/Console/issues/337) Create anti-packages
+- [293](https://github.com/SitecorePowerShell/Console/issues/293) Rules-based report creator
 - [374](https://github.com/SitecorePowerShell/Console/issues/374) Modal dialog with parameters
 - [368](https://github.com/SitecorePowerShell/Console/issues/368) Content Editor Warning integration
 - [364](https://github.com/SitecorePowerShell/Console/issues/364) Page Editor Notification integration
