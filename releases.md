@@ -7,9 +7,10 @@ It's already June and been way too long since we last released SPE. The SPE team
 
 - [337](https://github.com/SitecorePowerShell/Console/issues/337) Create anti-packages
 - [293](https://github.com/SitecorePowerShell/Console/issues/293) Rules-based report creator
+- [318](https://github.com/SitecorePowerShell/Console/issues/318) **Content Editor** "Insert" menu integration 
 - [374](https://github.com/SitecorePowerShell/Console/issues/374) Modal dialog with parameters passed through Url handles
-- [368](https://github.com/SitecorePowerShell/Console/issues/368) Content Editor Warning integration
-- [364](https://github.com/SitecorePowerShell/Console/issues/364) Page Editor Notification integration
+- [368](https://github.com/SitecorePowerShell/Console/issues/368) Content Editor warning integration
+- [364](https://github.com/SitecorePowerShell/Console/issues/364) Experience Editor notification integration
 - [341](https://github.com/SitecorePowerShell/Console/issues/341) New-SecuritySource command added to enable inclusion of Users and Roles in packages
 - [324](https://github.com/SitecorePowerShell/Console/issues/324) New SPE Remoting module for use outside of Sitecore
 - [372](https://github.com/SitecorePowerShell/Console/issues/372) Most Recently Used scripts are now user specific and be stored in master database with user settings.
@@ -17,6 +18,7 @@ It's already June and been way too long since we last released SPE. The SPE team
 
 ### Enhancements
 
+- [326](https://github.com/SitecorePowerShell/Console/issues/326) `Read-Variable` cmdlet provides the ability to edit Sitecore rules.
 - [333](https://github.com/SitecorePowerShell/Console/issues/333) `Write-Log` now defaults to the **DEBUG** log
 - [363](https://github.com/SitecorePowerShell/Console/issues/363) Script errors are now logged to the **ERROR** log, which will then show line numbers
 - [339](https://github.com/SitecorePowerShell/Console/issues/339) `New-FileSource` and `New-ExplicitFileSource` commands support `InstallMode` for package creation
