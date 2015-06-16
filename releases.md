@@ -76,8 +76,17 @@ Now it's possible to write a script for generating warnings in the Content Edito
 The package commands now include a new one called `New-SecuritySource` which adds the ability to store Users and Roles in packages created with SPE.
 
 #### ISE Script opening enhancements
+Your Most Recently Used scripts are now specific to your account. This means that if your colleagues are using ISE as well you will no longer see their most recently used scripts.
 
+![Most Recently Used Scripts Gallery](images/screenshots/IseMru1.png)
 
+While we were at it, we've also added the tree view for faster access to your scripts. In the second tab in that gallery you can open scripts really quickly. Also if you are already editing a script - your currently edited script will be highlighted so you can switch between scripts in a single module much quicker. 
+
+![Switch between scripts quicker](images/screenshots/IseMru2.png)
+
+Not stopping there, we have also added the ability to open scripts from other databases. You can see the database selector drop-down in the above screenshot that gives you ability to open scripts in a different database than your current context database. This gives you ability to edit your scripts in the `master` database while you're working in **Content Editor** in `core` database.
+
+The same database switcher has also been added to the full **Open Script** dialog.
 
 #### SPE module for use outside of Sitecore
 
