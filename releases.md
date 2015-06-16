@@ -1,7 +1,7 @@
 # Releases
 
 ## Version 3.1
-It's already June and been way too long since I last sat down to collect my thoughts. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. I'll list a few of those below and explain a few important ones in this post. I ask that you provide any and all feedback either on twitter or github.
+It's already June and been way too long since we last released SPE. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. I'll list a few of those below and explain a few important ones in this post. I ask that you provide any and all feedback either on twitter or github.
 
 ### New Features
 
@@ -126,4 +126,4 @@ We decided that the Prescript functionality was unlikely to be widely used and o
 
 ###### Happy Coding
 
-###### // Michael
+###### // Michael and Adam
