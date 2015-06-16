@@ -10,8 +10,10 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [374](https://github.com/SitecorePowerShell/Console/issues/374) Modal dialog with parameters passed through Url handles
 - [368](https://github.com/SitecorePowerShell/Console/issues/368) Content Editor Warning integration
 - [364](https://github.com/SitecorePowerShell/Console/issues/364) Page Editor Notification integration
-- [341](https://github.com/SitecorePowerShell/Console/issues/341) New-SecuritySource command to enable inclusion of Users and Roles in packages
+- [341](https://github.com/SitecorePowerShell/Console/issues/341) New-SecuritySource command added to enable inclusion of Users and Roles in packages
 - [324](https://github.com/SitecorePowerShell/Console/issues/324) New SPE Remoting module for use outside of Sitecore
+- [372](https://github.com/SitecorePowerShell/Console/issues/372) Most Recently Used scripts are now user specific and be stored in master database with user settings.
+- [371](https://github.com/SitecorePowerShell/Console/issues/371) Ability to open and save in ISE scripts stored in different database than the current ContentDatabase.
 
 ### Enhancements
 
@@ -20,17 +22,19 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [339](https://github.com/SitecorePowerShell/Console/issues/339) `New-FileSource` and `New-ExplicitFileSource` commands support `InstallMode` for package creation
 - [338](https://github.com/SitecorePowerShell/Console/issues/338) `Export-Package` command supports `NoClobber` for package creation
 - [336](https://github.com/SitecorePowerShell/Console/issues/336) Event settings moved to a separate include file
-- [361](https://github.com/SitecorePowerShell/Console/issues/361) `Find-Item` command now supports **Contains** filter
-- [334](https://github.com/SitecorePowerShell/Console/issues/334) System Maintenance Module now contains optimization scripts
-- [350](https://github.com/SitecorePowerShell/Console/issues/350) New version specific library introduced for compatibility
+- [334](https://github.com/SitecorePowerShell/Console/issues/334) Added System Maintenance Module containing instance optimization scripts
+- [350](https://github.com/SitecorePowerShell/Console/issues/350) New version specific dll introduced for compatibility
 
-### Fixes/Changes
+### Fixes
 
 - [366](https://github.com/SitecorePowerShell/Console/issues/366) **LoggingIn**, **LoggedIn**, and **LoggedOut** pipelines now use the variable `$pipelineArgs` rather than `$args`
-- [365](https://github.com/SitecorePowerShell/Console/issues/365) Prescript functionality removed from **ISE**, **Console**, and **Default** settings
 - [357](https://github.com/SitecorePowerShell/Console/issues/357) `Find-Item` command no longer throws *Operation Unsupported* warning
-- [358](https://github.com/SitecorePowerShell/Console/issues/358) `Remove-RoleMember` command did not properly remove users from roles
+- [358](https://github.com/SitecorePowerShell/Console/issues/358) `Remove-RoleMember` command did not properly remove users from roles.
+- [361](https://github.com/SitecorePowerShell/Console/issues/361) `Find-Item` command **Contains** filter indicates properly that case sensitiveness is not Supported by Sitecore if that functionality is used.
 
+### Potential Breaking Changes
+- [365](https://github.com/SitecorePowerShell/Console/issues/365) Prescript functionality removed from **ISE**, **Console**, and **Default** settings
+- [365](https://github.com/SitecorePowerShell/Console/issues/373) `Core` database no longer can contain scripts
 
 #### Create anti-packages
 
@@ -67,9 +71,13 @@ Now it's possible to write a script for generating warnings in the Content Edito
 ![Experience Editor Notification](images/screenshots/experienceeditor-expirenotification.png)
 
 
-#### Package security settings
+#### Package Users and Roles
 
-The package commands now include a new one called `New-SecuritySource` which adds security settings to packages.
+The package commands now include a new one called `New-SecuritySource` which adds the ability to store Users and Roles in packages created with SPE.
+
+#### ISE Script opening enhancements
+
+
 
 #### SPE module for use outside of Sitecore
 
@@ -118,9 +126,15 @@ Second we've split the `Cognifide.PowerShell.config` by removing previously unus
 
 Third we added a new library called `Cognifide.PowerShell.Package.dll` which enables the deletion of items and files when installing anti-packages. The library does not have any dependencies other than the Sitecore libraries.
 
-#### Prescript functionality removed
+### Removed functionality
+
+#### Prescript
 
 We decided that the Prescript functionality was unlikely to be widely used and only introduced confusion when scripts executed. In some situations your prescript would execute, and in others it would never execute. It's gone.
+
+#### Core database scripts
+
+The existence of script libraries in core database was problematic to at least one of our users [375](https://github.com/SitecorePowerShell/Console/issues/375) and we've never really leveraged that capability in the platform either. As a result this functionality has been removed and if you've put any scripts there, you are now asked to kindly move them to either master database or one of the publishing target databases.
 
 ###### Happy Scripting!
 
