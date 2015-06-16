@@ -26,6 +26,7 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [336](https://github.com/SitecorePowerShell/Console/issues/336) Event settings moved to a separate include file
 - [334](https://github.com/SitecorePowerShell/Console/issues/334) Added System Maintenance Module containing instance optimization scripts
 - [350](https://github.com/SitecorePowerShell/Console/issues/350) New version specific dll introduced for compatibility
+- [316](https://github.com/SitecorePowerShell/Console/issues/316) Ability to set height of a field in dialog created by `Read-Variable`
 
 ### Fixes
 
@@ -60,12 +61,14 @@ Choose which custom fields and standard fields you wish to be included in the fi
 
 ![Rules Report Fields](images/screenshots/toolbox-rulesreportfields.png)
 
-#### Content/Page Editor Message integration
+#### Content Editor Insert Menu Integration
+If you put a script in the `Content Editor/Insert Item/` library in an active module it will automatically get exposed to your users when they select an "Insert" option on an item in content tree in **Content Editor**. Just like with other integrations you can control if and when the script appears by setting appropriate rules on the script item.
+
+![Content Editor](ContentEditorInsertMenu.png)
+
+#### Content/Experience Editor Message integration
 
 Now it's possible to write a script for generating warnings in the Content Editor and notifications in the Page Editor. We've included a new module in SPE called License Expiration that utilizes the new functionality into something useful. Every module does include a disable feature.
-![](ContentEditorInsertMenu.png)
-
-#### Content Editor Warning
 
 ![Content Editor Notification](images/screenshots/contenteditor-expirewarning.png)
 
