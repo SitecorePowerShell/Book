@@ -20,7 +20,6 @@ Sitecore PowerShell Extensions
 
 ## Add-ItemAcl
 SPE Cmdlet - Adds new access rule to an item allowing for the item to have the access granted or denied for a provided role or user.
-[appendix/commands/Test-ItemAcl.html]
 
 ## Add-ItemLanguage
 SPE Cmdlet - Creates a version of the item in a new language based on an existing language version.
