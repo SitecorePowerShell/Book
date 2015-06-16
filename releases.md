@@ -13,7 +13,7 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [368](https://github.com/SitecorePowerShell/Console/issues/368) **Content Editor** warning integration
 - [364](https://github.com/SitecorePowerShell/Console/issues/364) **Experience Editor** notification integration
 - [227](https://github.com/SitecorePowerShell/Console/issues/227) New cmdlets for managing Item security allowing for changing which users/roles can do what to which items.
-- [341](https://github.com/SitecorePowerShell/Console/issues/341) `New-SecuritySource` command added to enable inclusion of Users and Roles in packages
+- [341](https://github.com/SitecorePowerShell/Console/issues/341) [`New-SecuritySource`](appendix/commands/New-SecuritySource.html) command added to enable inclusion of Users and Roles in packages
 - [324](https://github.com/SitecorePowerShell/Console/issues/324) New SPE Remoting module for use outside of Sitecore
 - [372](https://github.com/SitecorePowerShell/Console/issues/372) Most Recently Used scripts are now user specific and be stored in master database with user settings.
 - [371](https://github.com/SitecorePowerShell/Console/issues/371) Ability to open and save in ISE scripts stored in different database than the current ContentDatabase.
