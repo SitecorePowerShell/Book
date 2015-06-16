@@ -45,6 +45,10 @@ It's already June and been way too long since we last released SPE. The SPE team
 
 ### Stuff we're so excited about that we needed to tell you more so you don't miss out!
 
+#### Improved documentation
+
+We have gone through a great deal of docs we've generated for out commandlets and fixed and improved those. As you could before - you can put the text cursor after any cmdlet and press Ctrl+Enter to see the help for it - it's just that now you will see a lot more info there with better explanation and examples. We have also consolidated our documentation effort on this book. We will still blog and record videos but we recognize the need for a centralized and are going to act upon it.
+
 #### Create anti-packages
 
 This is one of those exciting new features, mainly because SPE has had the ability to create packages for a long time, so why not the reverse!? A new library needs to be included in order for the a delete post step to work. It works very much like the feature you can find in Sitecore Rocks. If you haven't used that you are missing out on a great tool. 
