@@ -8,10 +8,10 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [337](https://github.com/SitecorePowerShell/Console/issues/337) Create anti-packages
 - [293](https://github.com/SitecorePowerShell/Console/issues/293) Rules-based report creator
 - [318](https://github.com/SitecorePowerShell/Console/issues/318) **Content Editor** "Insert" menu integration 
-- [368](https://github.com/SitecorePowerShell/Console/issues/368) Content Editor warning integration
-- [364](https://github.com/SitecorePowerShell/Console/issues/364) Experience Editor notification integration
+- [368](https://github.com/SitecorePowerShell/Console/issues/368) **Content Editor** warning integration
+- [364](https://github.com/SitecorePowerShell/Console/issues/364) **Experience Editor** notification integration
 - [227](https://github.com/SitecorePowerShell/Console/issues/227) New cmdlets for managing Item security allowing for changing which users/roles can do what to which items.
-- [341](https://github.com/SitecorePowerShell/Console/issues/341) New-SecuritySource command added to enable inclusion of Users and Roles in packages
+- [341](https://github.com/SitecorePowerShell/Console/issues/341) `New-SecuritySource` command added to enable inclusion of Users and Roles in packages
 - [324](https://github.com/SitecorePowerShell/Console/issues/324) New SPE Remoting module for use outside of Sitecore
 - [372](https://github.com/SitecorePowerShell/Console/issues/372) Most Recently Used scripts are now user specific and be stored in master database with user settings.
 - [371](https://github.com/SitecorePowerShell/Console/issues/371) Ability to open and save in ISE scripts stored in different database than the current ContentDatabase.
@@ -30,24 +30,25 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [374](https://github.com/SitecorePowerShell/Console/issues/374) `Show-ModalDialog` can pass parameters through Url handles opening more OOTB Sitecore dialogs for re-use.
 
 ### Fixes
-
-- [366](https://github.com/SitecorePowerShell/Console/issues/366) **LoggingIn**, **LoggedIn**, and **LoggedOut** pipelines now use the variable `$pipelineArgs` rather than `$args`
 - [357](https://github.com/SitecorePowerShell/Console/issues/357) `Find-Item` command no longer throws *Operation Unsupported* warning
 - [358](https://github.com/SitecorePowerShell/Console/issues/358) `Remove-RoleMember` command did not properly remove users from roles.
 - [361](https://github.com/SitecorePowerShell/Console/issues/361) `Find-Item` command **Contains** filter indicates properly that case sensitiveness is not Supported by Sitecore if that functionality is used.
 
 ### Potential Breaking Changes
 - [365](https://github.com/SitecorePowerShell/Console/issues/365) Prescript functionality removed from **ISE**, **Console**, and **Default** settings
-- [365](https://github.com/SitecorePowerShell/Console/issues/373) `Core` database no longer can contain scripts
+- [365](https://github.com/SitecorePowerShell/Console/issues/373) `core` database no longer can contain scripts
+- [366](https://github.com/SitecorePowerShell/Console/issues/366)  LoggingIn, LoggedIn, and LoggedOut pipelines now use the variable $pipelineArgs rather than $args
 
 #### Create anti-packages
 
 This is one of those exciting new features, mainly because SPE has had the ability to create packages for a long time, so why not the reverse!? A new library needs to be included in order for the a delete post step to work. It works very much like you find in Sitecore Rocks. If you haven't used that you are missing out on a great tool. 
 
 We started off by adding a new toolbox item.
+
 ![Toolbox](images/screenshots/toolbox-createantipackage.png)
 
 We enhanced the experience by adding a modal dialog.
+
 ![Package Browser](images/screenshots/modaldialog-packages.png)
 
 #### Rules-based report creator
