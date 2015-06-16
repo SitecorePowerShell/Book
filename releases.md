@@ -162,31 +162,33 @@ We decided that the Prescript functionality was unlikely to be widely used and o
 
 The existence of script libraries in core database was problematic to at least one of our users [375](https://github.com/SitecorePowerShell/Console/issues/375) and we've never really leveraged that capability in the platform either. As a result this functionality has been removed and if you've put any scripts there, you are now asked to kindly move them to either master database or one of the publishing target databases.
 
+
 ###### Happy Scripting!
 
 ###### // Michael and Adam
 
-## Version 3.1 (June 2015)
+## Github issue lists for past releases
+### Version 3.1 (June 2015)
   Release Notes: http://bit.ly/ScPs31Iss
-## Version 3.0 (February 2015)
+### Version 3.0 (February 2015)
   Release Notes: http://bit.ly/ScPs30Iss
-## Version 2.8 (December 2014)
+### Version 2.8 (December 2014)
   Release Notes: http://bit.ly/ScPs28Iss
-## Version 2.7.5 (November 2014)
+### Version 2.7.5 (November 2014)
   Release Notes: http://bit.ly/ScPs275Iss
-## Version 2.7.1 (September 2014)
+### Version 2.7.1 (September 2014)
   Release Notes: http://bit.ly/ScPs271Iss
-## Version 2.7 (August 2014)
+### Version 2.7 (August 2014)
   Release Notes: http://bit.ly/ScPs27Iss
-## Version 2.6 (April 2014)
+### Version 2.6 (April 2014)
   Release Notes: http://bit.ly/ScPs26Iss
-## Version 2.5 (28 October 2013)
+### Version 2.5 (28 October 2013)
   Release Notes: http://bit.ly/ScPs25Iss
-## Version 2.4 (23 September 2013)
+### Version 2.4 (23 September 2013)
   Release Notes: http://bit.ly/ScPs24Iss
-## Version 2.3.1 (1 September 2013)
+### Version 2.3.1 (1 September 2013)
   Release Notes: http://bit.ly/ScPs23Iss
-## Version 2.2 (30 July 2013)
+### Version 2.2 (30 July 2013)
   Release Notes: http://bit.ly/ScPs22Iss
-## Version 2.1 (15 July 2013)
+### Version 2.1 (15 July 2013)
   Release Notes: http://bit.ly/ScPs21Iss
