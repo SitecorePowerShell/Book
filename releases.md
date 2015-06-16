@@ -8,9 +8,9 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [337](https://github.com/SitecorePowerShell/Console/issues/337) Create anti-packages
 - [293](https://github.com/SitecorePowerShell/Console/issues/293) Rules-based report creator
 - [318](https://github.com/SitecorePowerShell/Console/issues/318) **Content Editor** "Insert" menu integration 
-- [374](https://github.com/SitecorePowerShell/Console/issues/374) Modal dialog with parameters passed through Url handles
 - [368](https://github.com/SitecorePowerShell/Console/issues/368) Content Editor warning integration
 - [364](https://github.com/SitecorePowerShell/Console/issues/364) Experience Editor notification integration
+- [227](https://github.com/SitecorePowerShell/Console/issues/227) New cmdlets for managing Item security allowing for changing which users/roles can do what to which items.
 - [341](https://github.com/SitecorePowerShell/Console/issues/341) New-SecuritySource command added to enable inclusion of Users and Roles in packages
 - [324](https://github.com/SitecorePowerShell/Console/issues/324) New SPE Remoting module for use outside of Sitecore
 - [372](https://github.com/SitecorePowerShell/Console/issues/372) Most Recently Used scripts are now user specific and be stored in master database with user settings.
@@ -27,6 +27,7 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [334](https://github.com/SitecorePowerShell/Console/issues/334) Added System Maintenance Module containing instance optimization scripts
 - [350](https://github.com/SitecorePowerShell/Console/issues/350) New version specific dll introduced for compatibility
 - [316](https://github.com/SitecorePowerShell/Console/issues/316) Ability to set height of a field in dialog created by `Read-Variable`
+- [374](https://github.com/SitecorePowerShell/Console/issues/374) `Show-ModalDialog` can pass parameters through Url handles opening more OOTB Sitecore dialogs for re-use.
 
 ### Fixes
 
@@ -78,7 +79,7 @@ Now it's possible to write a script for generating warnings in the Content Edito
 
 #### Package Users and Roles
 
-The package commands now include a new one called `New-SecuritySource` which adds the ability to store Users and Roles in packages created with SPE.
+The package commands now include a new one called [`New-SecuritySource`](appendix/commands/New-SecuritySource) which adds the ability to store Users and Roles in packages created with SPE.
 
 #### ISE Script opening enhancements
 Your Most Recently Used scripts are now specific to your account. This means that if your colleagues are using ISE as well you will no longer see their most recently used scripts.
