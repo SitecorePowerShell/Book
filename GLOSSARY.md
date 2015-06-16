@@ -30,6 +30,9 @@ SPE Cmdlet - Adds a rendering to a chosen device for the presentation of an item
 ## Add-RoleMember
 SPE Cmdlet - Adds one or more Sitecore users to the specified role.
 
+## Clear-Item
+Windows Cmdlet - Deletes the contents of an item, but does not delete the item.
+
 ## Clear-ItemAcl
 SPE Cmdlet - Removes all security information from the item specified.
 
@@ -48,6 +51,9 @@ ConvertTo-Bucket [-Item] <Item> [<CommonParameters>]
 
 ## ConvertTo-CliXml
 SPE Cmdlet - Exports Microsoft .NET objects froms PowerShell to a CliXml string.
+
+## Copy-Item
+Windows Cmdlet - Copies an item from one location to another.
 
 ## Disable-User
 SPE Cmdlet - Disables the specified Sitecore user.
@@ -90,6 +96,9 @@ SPE Cmdlet - Gets all available domains or the specified domain.
 
 ## Get-Index
 SPE Cmdlet - Returns Sitecore database indices.
+
+## Get-Item
+Windows Cmdlet - Gets the item at the specified location.
 
 ## Get-ItemAcl
 SPE Cmdlet - Retrieves security access rules from an item.
@@ -186,6 +195,9 @@ SPE Cmdlet - Installs a Sitecore package from the specified path.
 ## Install-UpdatePackage
 SPE Cmdlet - Installs a Sitecore update package from the specified path.
 
+## Invoke-Item
+Windows Cmdlet - Performs the default action on the specified item.
+
 ## Invoke-Script
 SPE Cmdlet - Executes a script from Sitecore PowerShell Extensions Script Library.
 This command used to be named Execute-Script - a matching alias added for compatibility with older scripts.
@@ -207,6 +219,9 @@ SPE Cmdlet - Logs a user in and performs further script instructions in the cont
 ## Logout-User
 SPE Cmdlet - Logs the current user out.
 
+## Move-Item
+Windows Cmdlet - Moves an item from one location to another.
+
 ## New-Domain
 SPE Cmdlet - Creates a new domain with the specified name.
 
@@ -218,6 +233,9 @@ SPE Cmdlet - Creates new Explicit Item Source that can be added to a Sitecore pa
 
 ## New-FileSource
 SPE Cmdlet - Creates new File source that can be added to a Sitecore package.
+
+## New-Item
+Windows Cmdlet - Creates a new item.
 
 ## New-ItemAcl
 SPE Cmdlet - Creates a new access rule for use with Set-ItemAcl and Add-ItemAcl cmdlets.
@@ -258,6 +276,9 @@ SPE Cmdlet - Shows a dialog to users allowing to upload files to either server f
 ## Remove-Domain
 SPE Cmdlet - Removes the specified domain.
 
+## Remove-Item
+Windows Cmdlet - Deletes the specified items.
+
 ## Remove-ItemLanguage
 SPE Cmdlet - Removes Language from a single item or a branch of items
 
@@ -276,6 +297,9 @@ SPE Cmdlet - Removes one or more Sitecore user sessions.
 ## Remove-User
 SPE Cmdlet - Removes the Sitecore user.
 
+## Rename-Item
+Windows Cmdlet - Renames an item in a Windows PowerShell provider namespace.
+
 ## Restart-Application
 SPE Cmdlet - Restarts the Sitecore Application pool.
 
@@ -287,6 +311,9 @@ SPE Cmdlet - Sends a sheer message to the app in which context the script is exe
 
 ## Set-HostProperty
 SPE Cmdlet - Sets the current host property.
+
+## Set-Item
+Windows Cmdlet - Changes the value of an item to the value specified in the command.
 
 ## Set-ItemAcl
 SPE Cmdlet - Sets new security information on an item overwriting the previous settings.
