@@ -42,6 +42,18 @@ We started off by adding a new toolbox item.
 We enhanced the experience by adding a modal dialog.
 ![Package Browser](images/screenshots/modaldialog-packages.png)
 
+#### Rules-based report creator
+
+We had this idea to allow users to generate reports without having to know PowerShell. With this simple toolbox item you can generate a new report in under a minute.
+
+After you launch the toolbox item *Rules based report* you are prompted with a dialog to choose the root node along with the rules.
+
+![Rules Based Report](images/screenshots/toolbox-rulesbasedreport.png)
+
+Choose which custom fields and standard fields you wish to be included in the final report.
+
+![Rules Report Fields](images/screenshots/toolbox-rulesreportfields.png)
+
 #### Content/Page Editor Message integration
 
 Now it's possible to write a script for generating warnings in the Content Editor and notifications in the Page Editor. We've included a new module in SPE called License Expiration that utilizes the new functionality into something useful. Every module does include a disable feature.
