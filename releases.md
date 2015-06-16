@@ -117,7 +117,7 @@ Since I am using the module under my account I can save it my `$home` path:
 
 `C:\Users\Michael\Documents\WindowsPowerShell\Modules\SPE`
 
-Running `Get-Command` you can get the list of supported commands:
+Running [`Get-Command`](appendix/commands/Get-Command.html) you can get the list of supported commands:
 
 ```ps
 PS C:\Windows\system32> Get-Command -Module SPE
