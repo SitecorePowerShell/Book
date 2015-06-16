@@ -47,7 +47,7 @@ It's already June and been way too long since we last released SPE. The SPE team
 
 #### Improved documentation
 
-We have gone through a great deal of docs we've generated for out commandlets and fixed and improved those. As you could before - you can put the text cursor after any cmdlet and press Ctrl+Enter to see the help for it - it's just that now you will see a lot more info there with better explanation and examples. We have also consolidated our documentation effort on this book. We will still blog and record videos but we recognize the need for a centralized and are going to act upon it.
+We have gone through most of the documentation wehave created for out cmdlets; fixed and improved those. Just like  you could before - you can put the text cursor after any cmdlet and press Ctrl+Enter to see the help for it - it's just that now you will see a lot more info there with better explanation and examples. We have also consolidated our documentation effort on this book. We will still blog and record videos but we recognize the need for a centralized and are going to act upon it.
 
 #### Create anti-packages
 
