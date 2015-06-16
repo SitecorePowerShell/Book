@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Releases](releases.md)
 * [Installation](installation.md)
 * Interfaces
    * [Command Line Console](console.md)
@@ -16,6 +15,6 @@
 * [Tasks](tasks.md)
    * [Authoring Tasks](authoring_tasks.md)
 * [Security](security.md)
+* [Releases](releases.md)
 * [Appendix](appendix.md)
 {% include './appendix/commands-list.md' %}
-
