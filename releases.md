@@ -175,26 +175,26 @@ The existence of script libraries in core database was problematic to at least o
 
 ## Github issue lists for past releases
 #### Version 3.1 (June 2015)
-  Release Notes: http://bit.ly/ScPs31Iss
+  [Release Notes](http://bit.ly/ScPs31Iss)
 #### Version 3.0 (February 2015)
-  Release Notes: http://bit.ly/ScPs30Iss
+  [Release Notes](http://bit.ly/ScPs30Iss)
 #### Version 2.8 (December 2014)
-  Release Notes: http://bit.ly/ScPs28Iss
+  [Release Notes](http://bit.ly/ScPs28Iss)
 #### Version 2.7.5 (November 2014)
-  Release Notes: http://bit.ly/ScPs275Iss
+  [Release Notes](http://bit.ly/ScPs275Iss)
 #### Version 2.7.1 (September 2014)
-  Release Notes: http://bit.ly/ScPs271Iss
+  [Release Notes](http://bit.ly/ScPs271Iss)
 #### Version 2.7 (August 2014)
-  Release Notes: http://bit.ly/ScPs27Iss
+  [Release Notes](http://bit.ly/ScPs27Iss)
 #### Version 2.6 (April 2014)
-  Release Notes: http://bit.ly/ScPs26Iss
+  [Release Notes](http://bit.ly/ScPs26Iss)
 #### Version 2.5 (28 October 2013)
-  Release Notes: http://bit.ly/ScPs25Iss
+  [Release Notes](http://bit.ly/ScPs25Iss)
 #### Version 2.4 (23 September 2013)
-  Release Notes: http://bit.ly/ScPs24Iss
+  [Release Notes](http://bit.ly/ScPs24Iss)
 #### Version 2.3.1 (1 September 2013)
-  Release Notes: http://bit.ly/ScPs23Iss
+  [Release Notes](http://bit.ly/ScPs23Iss)
 #### Version 2.2 (30 July 2013)
-  Release Notes: http://bit.ly/ScPs22Iss
+  [Release Notes](http://bit.ly/ScPs22Iss)
 #### Version 2.1 (15 July 2013)
-  Release Notes: http://bit.ly/ScPs21Iss
+  [Release Notes](http://bit.ly/ScPs21Iss)
