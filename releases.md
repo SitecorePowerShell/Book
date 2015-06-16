@@ -20,21 +20,21 @@ It's already June and been way too long since we last released SPE. The SPE team
 
 #### Enhancements
 
-- [326](https://github.com/SitecorePowerShell/Console/issues/326) `Read-Variable` cmdlet provides the ability to edit Sitecore rules.
-- [333](https://github.com/SitecorePowerShell/Console/issues/333) `Write-Log` now defaults to the **DEBUG** log
+- [326](https://github.com/SitecorePowerShell/Console/issues/326) [`Read-Variable`](appendix/commands/Read-Variable.html) cmdlet provides the ability to edit Sitecore rules.
+- [333](https://github.com/SitecorePowerShell/Console/issues/333) [`Write-Log`](appendix/commands/Write-Log.html) now defaults to the **DEBUG** log
 - [363](https://github.com/SitecorePowerShell/Console/issues/363) Script errors are now logged to the **ERROR** log, which will then show line numbers
-- [339](https://github.com/SitecorePowerShell/Console/issues/339) `New-FileSource` and `New-ExplicitFileSource` commands support `InstallMode` for package creation
-- [338](https://github.com/SitecorePowerShell/Console/issues/338) `Export-Package` command supports `NoClobber` for package creation
+- [339](https://github.com/SitecorePowerShell/Console/issues/339) [`New-FileSource`](appendix/commands/New-FileSource.html) and [`New-ExplicitFileSource`](appendix/commands/New-ExplicitFileSource.html) commands support `InstallMode` for package creation
+- [338](https://github.com/SitecorePowerShell/Console/issues/338) [`Export-Package`](appendix/commands/Export-Package.html) command supports `NoClobber` for package creation
 - [336](https://github.com/SitecorePowerShell/Console/issues/336) Event settings moved to a separate include file
 - [334](https://github.com/SitecorePowerShell/Console/issues/334) Added System Maintenance Module containing instance optimization scripts
 - [350](https://github.com/SitecorePowerShell/Console/issues/350) New version specific dll introduced for compatibility
 - [316](https://github.com/SitecorePowerShell/Console/issues/316) Ability to set height of a field in dialog created by `Read-Variable`
-- [374](https://github.com/SitecorePowerShell/Console/issues/374) `Show-ModalDialog` can pass parameters through Url handles opening more OOTB Sitecore dialogs for re-use.
+- [374](https://github.com/SitecorePowerShell/Console/issues/374) [`Show-ModalDialog`](appendix/commands/Show-ModalDialog.html) can pass parameters through Url handles opening more OOTB Sitecore dialogs for re-use.
 
 #### Fixes
-- [357](https://github.com/SitecorePowerShell/Console/issues/357) `Find-Item` command no longer throws *Operation Unsupported* warning
-- [358](https://github.com/SitecorePowerShell/Console/issues/358) `Remove-RoleMember` command did not properly remove users from roles.
-- [361](https://github.com/SitecorePowerShell/Console/issues/361) `Find-Item` command **Contains** filter indicates properly that case sensitiveness is not Supported by Sitecore if that functionality is used.
+- [357](https://github.com/SitecorePowerShell/Console/issues/357) [`Find-Item`](appendix/commands/Find-Item.html) command no longer throws *Operation Unsupported* warning
+- [358](https://github.com/SitecorePowerShell/Console/issues/358) [`Remove-RoleMember`](appendix/commands/Remove-RoleMember.html) command did not properly remove users from roles.
+- [361](https://github.com/SitecorePowerShell/Console/issues/361) [`Find-Item`](appendix/commands/Find-Item.html) command **Contains** filter indicates properly that case sensitiveness is not Supported by Sitecore if that functionality is used.
 
 #### Potential Breaking Changes
 - [365](https://github.com/SitecorePowerShell/Console/issues/365) Prescript functionality removed from **ISE**, **Console**, and **Default** settings
