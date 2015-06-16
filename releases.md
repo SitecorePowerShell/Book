@@ -3,7 +3,9 @@
 ## Version 3.1
 It's already June and been way too long since we last released SPE. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. The most important changes are explained below. As always - please provide any and all feedback either on twitter or GitHub.
 
-### New Features
+### Short summary of important changes
+
+#### New Features
 
 - [337](https://github.com/SitecorePowerShell/Console/issues/337) Create anti-packages
 - [293](https://github.com/SitecorePowerShell/Console/issues/293) Rules-based report creator
@@ -16,7 +18,7 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [372](https://github.com/SitecorePowerShell/Console/issues/372) Most Recently Used scripts are now user specific and be stored in master database with user settings.
 - [371](https://github.com/SitecorePowerShell/Console/issues/371) Ability to open and save in ISE scripts stored in different database than the current ContentDatabase.
 
-### Enhancements
+#### Enhancements
 
 - [326](https://github.com/SitecorePowerShell/Console/issues/326) `Read-Variable` cmdlet provides the ability to edit Sitecore rules.
 - [333](https://github.com/SitecorePowerShell/Console/issues/333) `Write-Log` now defaults to the **DEBUG** log
@@ -29,19 +31,21 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [316](https://github.com/SitecorePowerShell/Console/issues/316) Ability to set height of a field in dialog created by `Read-Variable`
 - [374](https://github.com/SitecorePowerShell/Console/issues/374) `Show-ModalDialog` can pass parameters through Url handles opening more OOTB Sitecore dialogs for re-use.
 
-### Fixes
+#### Fixes
 - [357](https://github.com/SitecorePowerShell/Console/issues/357) `Find-Item` command no longer throws *Operation Unsupported* warning
 - [358](https://github.com/SitecorePowerShell/Console/issues/358) `Remove-RoleMember` command did not properly remove users from roles.
 - [361](https://github.com/SitecorePowerShell/Console/issues/361) `Find-Item` command **Contains** filter indicates properly that case sensitiveness is not Supported by Sitecore if that functionality is used.
 
-### Potential Breaking Changes
+#### Potential Breaking Changes
 - [365](https://github.com/SitecorePowerShell/Console/issues/365) Prescript functionality removed from **ISE**, **Console**, and **Default** settings
 - [365](https://github.com/SitecorePowerShell/Console/issues/373) `core` database no longer can contain scripts
 - [366](https://github.com/SitecorePowerShell/Console/issues/366)  LoggingIn, LoggedIn, and LoggedOut pipelines now use the variable $pipelineArgs rather than $args
 
+### Stuff we're so excited about that we needed to tell you more so you don't miss out!
+
 #### Create anti-packages
 
-This is one of those exciting new features, mainly because SPE has had the ability to create packages for a long time, so why not the reverse!? A new library needs to be included in order for the a delete post step to work. It works very much like you find in Sitecore Rocks. If you haven't used that you are missing out on a great tool. 
+This is one of those exciting new features, mainly because SPE has had the ability to create packages for a long time, so why not the reverse!? A new library needs to be included in order for the a delete post step to work. It works very much like the feature you can find in Sitecore Rocks. If you haven't used that you are missing out on a great tool. 
 
 We started off by adding a new toolbox item.
 
@@ -74,7 +78,6 @@ Now it's possible to write a script for generating warnings in the Content Edito
 
 ![Content Editor Notification](images/screenshots/contenteditor-expirewarning.png)
 
-
 ![Experience Editor Notification](images/screenshots/experienceeditor-expirenotification.png)
 
 #### Manage Item Security
@@ -86,7 +89,7 @@ The module commands now include a number of comands that allow for managing item
 - [`Clear-ItemAcl`](appendix/commands/Clear-ItemAcl.html) - Removes all security information from the item specified.
 - [`Test-ItemAcl`](appendix/commands/Test-ItemAcl.html) allows script to determine whether the specified user can perform a specified operation.
 
-#### Package Users and Roles
+#### Packaging of Users and Roles
 The module commands now include a new one called [`New-SecuritySource`](appendix/commands/New-SecuritySource.html) which adds the ability to store Users and Roles in packages created with SPE.
 
 #### ISE Script opening enhancements
@@ -129,7 +132,7 @@ Function    Receive-MediaItem   SPE
 Function    Send-MediaItem      SPE
 ```
 
-#### Script errors log to the ERROR log
+#### Script errors log to the Sitecore ERROR log
 
 One of the pain points I noticed was that script errors encountered by scripts running outside of the Console and ISE provided insufficient details. Now you can find the error details and with line numbers in the log.
 
@@ -141,11 +144,11 @@ One of the pain points I noticed was that script errors encountered by scripts r
 
 #### New config file and libraries introduced
 
-In order to provide better maintenance for SPE we decided to make a few adjustments. Nothing too crazy.
+In order to improve how we maintain SPE and to be able to work off of a common branch to support both Sitecore 7 and 8  we've shifted a few things around. Nothing too crazy.
 
-First we split the functionality that was different in Sitecore versions (like the Rules engine) into a separate library called `Cognifide.PowerShell.VersionSpecific.dll`. Doing this allowed us to maintain a single branch of code, where the version specific libraries are compiled with their respective Sitecore versions.
+First we split the functionality that was different between major Sitecore versions (like classes moving between assembiles) into a separate dll called `Cognifide.PowerShell.VersionSpecific.dll`. Doing this allowed us to maintain a single branch of code, where the version specific libraries are compiled with their respective Sitecore versions.
 
-Second we've split the `Cognifide.PowerShell.config` by removing previously unused events section. There are 3 or so events that SPE depends on, so we kept that in the original file. Any of the events you wish to use like `"item:saved"` will now reside in `Cognifide.PowerShell.Events.config.disabled`, if you want to use events simply rename it to `Cognifide.PowerShell.Events.config`.
+Second we've split the `Cognifide.PowerShell.config` by removing previously unused events section. There are 3 or so events that SPE depends on, so we kept that in the original file. Any of the events you wish to use like `"item:saved"` will now reside in `Cognifide.PowerShell.Events.config.disabled`, if you want to enable hooking into Sitecore events simply rename it to `Cognifide.PowerShell.Events.config`.
 
 Third we added a new library called `Cognifide.PowerShell.Package.dll` which enables the deletion of items and files when installing anti-packages. The library does not have any dependencies other than the Sitecore libraries.
 
