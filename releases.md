@@ -28,7 +28,7 @@ It's already June and been way too long since we last released SPE. The SPE team
 - [336](https://github.com/SitecorePowerShell/Console/issues/336) Event settings moved to a separate include file
 - [334](https://github.com/SitecorePowerShell/Console/issues/334) Added System Maintenance Module containing instance optimization scripts
 - [350](https://github.com/SitecorePowerShell/Console/issues/350) New version specific dll introduced for compatibility
-- [316](https://github.com/SitecorePowerShell/Console/issues/316) Ability to set height of a field in dialog created by `Read-Variable`
+- [316](https://github.com/SitecorePowerShell/Console/issues/316) Ability to set height of a field in dialog created by [`Read-Variable`](appendix/commands/Read-Variable.html)
 - [374](https://github.com/SitecorePowerShell/Console/issues/374) [`Show-ModalDialog`](appendix/commands/Show-ModalDialog.html) can pass parameters through Url handles opening more OOTB Sitecore dialogs for re-use.
 
 #### Fixes
