@@ -63,7 +63,7 @@ Choose which custom fields and standard fields you wish to be included in the fi
 #### Content/Page Editor Message integration
 
 Now it's possible to write a script for generating warnings in the Content Editor and notifications in the Page Editor. We've included a new module in SPE called License Expiration that utilizes the new functionality into something useful. Every module does include a disable feature.
-
+![](ContentEditorInsertMenu.png)
 
 #### Content Editor Warning
 
