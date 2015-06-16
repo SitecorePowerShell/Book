@@ -1,17 +1,17 @@
 # Releases
 
 ## Version 3.1
-It's already June and been way too long since we last released SPE. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. I'll list a few of those below and explain a few important ones in this post. I ask that you provide any and all feedback either on twitter or github.
+It's already June and been way too long since we last released SPE. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. The most important changes are explained below. As always - please provide any and all feedback either on twitter or GitHub.
 
 ### New Features
 
 - [337](https://github.com/SitecorePowerShell/Console/issues/337) Create anti-packages
 - [293](https://github.com/SitecorePowerShell/Console/issues/293) Rules-based report creator
-- [374](https://github.com/SitecorePowerShell/Console/issues/374) Modal dialog with parameters
+- [374](https://github.com/SitecorePowerShell/Console/issues/374) Modal dialog with parameters passed through Url handles
 - [368](https://github.com/SitecorePowerShell/Console/issues/368) Content Editor Warning integration
 - [364](https://github.com/SitecorePowerShell/Console/issues/364) Page Editor Notification integration
-- [341](https://github.com/SitecorePowerShell/Console/issues/341) New-SecuritySource command for package creation
-- [324](https://github.com/SitecorePowerShell/Console/issues/324) SPE Remoting module for use outside of Sitecore
+- [341](https://github.com/SitecorePowerShell/Console/issues/341) New-SecuritySource command to enable inclusion of Users and Roles in packages
+- [324](https://github.com/SitecorePowerShell/Console/issues/324) New SPE Remoting module for use outside of Sitecore
 
 ### Enhancements
 
@@ -110,11 +110,11 @@ One of the pain points I noticed was that script errors encountered by scripts r
 
 #### New config file and libraries introduced
 
-In order to provider better maintenance for SPE we decided to make a few adjustments. Nothing too crazy.
+In order to provide better maintenance for SPE we decided to make a few adjustments. Nothing too crazy.
 
-First we split the functionality that was different in Sitecore versions (like the Rules engine) into a separate library called `Cognifide.PowerShell.VersionSpecific.dll`. Doing this allowed us to maintain a single branch of code, where the version specific libraries are compiled with their respective Sitecore versions. 
+First we split the functionality that was different in Sitecore versions (like the Rules engine) into a separate library called `Cognifide.PowerShell.VersionSpecific.dll`. Doing this allowed us to maintain a single branch of code, where the version specific libraries are compiled with their respective Sitecore versions.
 
-Second we split the `Cognifide.PowerShell.config` by removing previously unused events section. There are 3 or so events that SPE depends on, so we kept that in the original file. Any of the events you wish to use like `"item:saved"` will now reside in `Cognifide.PowerShell.Events.config`.
+Second we've split the `Cognifide.PowerShell.config` by removing previously unused events section. There are 3 or so events that SPE depends on, so we kept that in the original file. Any of the events you wish to use like `"item:saved"` will now reside in `Cognifide.PowerShell.Events.config.disabled`, if you want to use events simply rename it to `Cognifide.PowerShell.Events.config`.
 
 Third we added a new library called `Cognifide.PowerShell.Package.dll` which enables the deletion of items and files when installing anti-packages. The library does not have any dependencies other than the Sitecore libraries.
 
@@ -122,8 +122,31 @@ Third we added a new library called `Cognifide.PowerShell.Package.dll` which ena
 
 We decided that the Prescript functionality was unlikely to be widely used and only introduced confusion when scripts executed. In some situations your prescript would execute, and in others it would never execute. It's gone.
 
-
-
-###### Happy Coding
+###### Happy Scripting!
 
 ###### // Michael and Adam
+
+## Version 3.1 (June 2015)
+  Release Notes: http://bit.ly/ScPs31Iss
+## Version 3.0 (February 2015)
+  Release Notes: http://bit.ly/ScPs30Iss
+## Version 2.8 (December 2014)
+  Release Notes: http://bit.ly/ScPs28Iss
+## Version 2.7.5 (November 2014)
+  Release Notes: http://bit.ly/ScPs275Iss
+## Version 2.7.1 (September 2014)
+  Release Notes: http://bit.ly/ScPs271Iss
+## Version 2.7 (August 2014)
+  Release Notes: http://bit.ly/ScPs27Iss
+## Version 2.6 (April 2014)
+  Release Notes: http://bit.ly/ScPs26Iss
+## Version 2.5 (28 October 2013)
+  Release Notes: http://bit.ly/ScPs25Iss
+## Version 2.4 (23 September 2013)
+  Release Notes: http://bit.ly/ScPs24Iss
+## Version 2.3.1 (1 September 2013)
+  Release Notes: http://bit.ly/ScPs23Iss
+## Version 2.2 (30 July 2013)
+  Release Notes: http://bit.ly/ScPs22Iss
+## Version 2.1 (15 July 2013)
+  Release Notes: http://bit.ly/ScPs21Iss
