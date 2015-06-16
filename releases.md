@@ -81,7 +81,8 @@ The module commands now include a number of comands that allow for managing item
 - [`New-ItemAcl`](appendix/commands/New-ItemAcl.html) - Creates a new access rule for use with `Set-ItemAcl` and `Add-ItemAcl` cmdlets.
 - [`Get-ItemAcl`](appendix/commands/Get-ItemAcl.html) - Retrieves security access rules from an item. Those rules can later be used with `Set-ItemAcl` and `Add-ItemAcl` cmdlets to copy them to another item or manipulated and saved back to the same item.
 - [`Add-ItemAcl`](appendix/commands/Add-ItemAcl.html) - Adds new access rule to an item allowing for the item to have the access granted or denied for a provided role or user. The new rules will be appended to the existing security descriptors on the item.
-- [`Set-ItemAcl`](appendix/commands/Set-ItemAcl.html) -Sets new security information on an item. The new rules will overwrite the existing security descriptors on the item.
+- [`Set-ItemAcl`](appendix/commands/Set-ItemAcl.html) - Sets new security information on an item. The new rules will overwrite the existing security descriptors on the item.
+- [`Clear-ItemAcl`](appendix/commands/Clear-ItemAcl.html) - Removes all security information from the item specified.
 - [`Test-ItemAcl`](appendix/commands/Test-ItemAcl.html) allows script to determine whether the specified user can perform a specified operation.
 
 #### Package Users and Roles
