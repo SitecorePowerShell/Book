@@ -1,7 +1,9 @@
 # Releases
 
 ## Version 3.1
-It's already June and been way too long since we last released SPE. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. The most important changes are explained below. As always - please provide any and all feedback either on twitter or GitHub.
+It's already June and been way too long since we last released SPE. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. The most important changes are explained below. As always - please provide any and all feedback either on twitter or GitHub. 
+
+[Full issue list available on GitHub](http://bit.ly/ScPs31Iss)
 
 ### Short summary of important changes
 
@@ -168,27 +170,27 @@ The existence of script libraries in core database was problematic to at least o
 ###### // Michael and Adam
 
 ## Github issue lists for past releases
-### Version 3.1 (June 2015)
+#### Version 3.1 (June 2015)
   Release Notes: http://bit.ly/ScPs31Iss
-### Version 3.0 (February 2015)
+#### Version 3.0 (February 2015)
   Release Notes: http://bit.ly/ScPs30Iss
-### Version 2.8 (December 2014)
+#### Version 2.8 (December 2014)
   Release Notes: http://bit.ly/ScPs28Iss
-### Version 2.7.5 (November 2014)
+#### Version 2.7.5 (November 2014)
   Release Notes: http://bit.ly/ScPs275Iss
-### Version 2.7.1 (September 2014)
+#### Version 2.7.1 (September 2014)
   Release Notes: http://bit.ly/ScPs271Iss
-### Version 2.7 (August 2014)
+#### Version 2.7 (August 2014)
   Release Notes: http://bit.ly/ScPs27Iss
-### Version 2.6 (April 2014)
+#### Version 2.6 (April 2014)
   Release Notes: http://bit.ly/ScPs26Iss
-### Version 2.5 (28 October 2013)
+#### Version 2.5 (28 October 2013)
   Release Notes: http://bit.ly/ScPs25Iss
-### Version 2.4 (23 September 2013)
+#### Version 2.4 (23 September 2013)
   Release Notes: http://bit.ly/ScPs24Iss
-### Version 2.3.1 (1 September 2013)
+#### Version 2.3.1 (1 September 2013)
   Release Notes: http://bit.ly/ScPs23Iss
-### Version 2.2 (30 July 2013)
+#### Version 2.2 (30 July 2013)
   Release Notes: http://bit.ly/ScPs22Iss
-### Version 2.1 (15 July 2013)
+#### Version 2.1 (15 July 2013)
   Release Notes: http://bit.ly/ScPs21Iss
