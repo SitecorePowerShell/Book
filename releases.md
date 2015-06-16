@@ -79,7 +79,7 @@ Now it's possible to write a script for generating warnings in the Content Edito
 
 #### Package Users and Roles
 
-The package commands now include a new one called [`New-SecuritySource`](appendix/commands/New-SecuritySource) which adds the ability to store Users and Roles in packages created with SPE.
+The package commands now include a new one called [`New-SecuritySource`](appendix/commands/New-SecuritySource.html) which adds the ability to store Users and Roles in packages created with SPE.
 
 #### ISE Script opening enhancements
 Your Most Recently Used scripts are now specific to your account. This means that if your colleagues are using ISE as well you will no longer see their most recently used scripts.
