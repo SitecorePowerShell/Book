@@ -23,7 +23,7 @@ Questions, comments, and feature requests should be submitted on [GitHub][6].
 [3]: http://blog.najmanowicz.com/
 [4]: http://michaellwest.blogspot.com/
 [5]: http://sitecorejunkie.com/
-[6]: https://github.com/SitecorePowerShell/Console
+[6]: https://git.io/spe
 [7]: https://twitter.com/adamnaj
 [8]: https://twitter.com/MichaelWest101
 [9]: https://twitter.com/mike_i_reynolds
