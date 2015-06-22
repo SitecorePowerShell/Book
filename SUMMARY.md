@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Installation](installation.md)
-* Interfaces
+* [Interfaces](interfaces.md)
    * [Command Line Console](console.md)
    * [Integrated Scripting Environment](scripting.md)
 * [Working with Items](working_with_items.md)
@@ -17,4 +17,4 @@
 * [Security](security.md)
 * [Releases](releases.md)
 * [Appendix](appendix.md)
-{% include './appendix/commands-list.md' %}
+
