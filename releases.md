@@ -76,7 +76,7 @@ Choose which custom fields and standard fields you wish to be included in the fi
 #### Content Editor Insert Menu Integration
 If you put a script in the `Content Editor/Insert Item/` library in an active module it will automatically get exposed to your users when they select an "Insert" option on an item in content tree in **Content Editor**. Just like with other integrations you can control if and when the script appears by setting appropriate rules on the script item.
 
-![Content Editor](images/screenshots/contenteditor-insertmenu.png)
+![Content Editor Insert Menu](images/screenshots/contenteditor-insertmenu.png)
 
 #### Content/Experience Editor Message integration
 
