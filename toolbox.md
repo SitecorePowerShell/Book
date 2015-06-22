@@ -4,7 +4,7 @@ The PowerShell Toolbox is quick way to access frequently used scripts.
 
 Navigate to Sitecore -> PowerShell Toolbox and after selecting you should see the configured scripts:
 
-![Toolbox](images/screenshots/toolbox-shortcut.png)
+![Toolbox](images/screenshots/toolbox-list.png)
 
 To create your own Toolbox item take the following steps:
 1. Create the *Toolbox* folder under an SPE module. Use the context menu to simplify the process.
