@@ -5,7 +5,7 @@
 * [Interfaces](interfaces.md)
    * [Command Line Console](console.md)
    * [Integrated Scripting Environment](scripting.md)
-* [Working with Items](working_with_items.md)
+* [Working with Items](working-with-items.md)
    * [Item Languages](item_languages.md)
 * [Toolbox](toolbox.md)
 * [Modules](modules.md)
