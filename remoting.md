@@ -61,7 +61,11 @@ Mode                LastWriteTime     Length Name
 
 If you have configured the services to run under *Windows Authentication* mode then you'll need to use the **Credential** parameter for the commands.
 
+You'll definitely know you need it when you receive an error like the following:
 
+```powershell
+New-WebServiceProxy : The request failed with HTTP status 401: Unauthorized.
+```
 
 
 **References:**
