@@ -55,7 +55,7 @@ This is one of those exciting new features, mainly because SPE has had the abili
 
 We started off by adding a new toolbox item.
 
-![Toolbox](images/screenshots/toolbox-createantipackage.png)
+![Toolbox](images/screenshots/toolbox-list.png)
 
 We enhanced the experience by adding a modal dialog.
 
