@@ -57,6 +57,13 @@ Mode                LastWriteTime     Length Name
 -a---         5/25/2015  11:23 AM          0 image-20152505-112302.png  
 ```
 
+##### Windows Authenticated Requests
+
+If you have configured the services to run under *Windows Authentication* mode then you'll need to use the **Credential** parameter for the commands.
+
+
+
+
 **References:**
 * Adam's initial post on [Remoting][1]
 
