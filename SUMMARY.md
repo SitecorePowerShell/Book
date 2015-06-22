@@ -13,7 +13,7 @@
    * [Authoring Reports](authoring-reports.md)
 * [Remoting](remoting.md)
 * [Tasks](tasks.md)
-   * [Authoring Tasks](authoring_tasks.md)
+   * [Authoring Tasks](authoring-tasks.md)
 * [Security](security.md)
 * [Releases](releases.md)
 * [Appendix](appendix.md)
