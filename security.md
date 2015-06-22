@@ -58,6 +58,8 @@ Deny access to the web services for unauthenticated users and roles using the `<
 </configuration>
 ```
 
+If you disable *Anonymous Authentication* and enable *Windows Authentication* in IIS, such as the directory `sitecore modules\PowerShell\Services\` you'll need to use the **Credential** parameter for any command that interacts with the services. See the Remoting section for examples.
+
 ##### Minimal Web Service Configuration
 
 The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as the Content Delivery.
