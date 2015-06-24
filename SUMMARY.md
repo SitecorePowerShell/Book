@@ -17,6 +17,5 @@
 * [Security](security.md)
 * [Releases](releases.md)
 * [Appendix](appendix.md)
-{% include 'git+https://github.com/SitecorePowerShell/Console.git/Documentation/Markdown/Add-ItemAcl.md' %}
 {% include './appendix/commands-list.md' %}
 
