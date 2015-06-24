@@ -67,6 +67,17 @@ You'll definitely know you need it when you receive an error like the following:
 New-WebServiceProxy : The request failed with HTTP status 401: Unauthorized.
 ```
 
+**Example:** The following connects Windows PowerShell ISE to a remote Sitecore instance using Windows credentials and executes the provided script.
+
+```powershell
+$credential = Get-Credential
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://concentrasitecore -Credential $credential
+Invoke-RemoteScript -Session $session -ScriptBlock { Get-User -id admin }
+
+Name                     Domain       IsAdministrator IsAuthenticated
+----                     ------       --------------- ---------------
+sitecore\admin           sitecore     True            False          
+```
 
 **References:**
 * Adam's initial post on [Remoting][1]
