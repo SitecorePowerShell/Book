@@ -71,7 +71,7 @@ New-WebServiceProxy : The request failed with HTTP status 401: Unauthorized.
 
 ```powershell
 $credential = Get-Credential
-$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://concentrasitecore -Credential $credential
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore -Credential $credential
 Invoke-RemoteScript -Session $session -ScriptBlock { Get-User -id admin }
 
 Name                     Domain       IsAdministrator IsAuthenticated
