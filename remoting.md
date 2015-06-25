@@ -57,6 +57,16 @@ Mode                LastWriteTime     Length Name
 -a---         5/25/2015  11:23 AM          0 image-20152505-112302.png  
 ```
 
+**Example:** The following downloads all the images in the media library under the specified directory.
+
+```powershel
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
+
+Invoke-RemoteScript -Session $session -ScriptBlock { 
+        Get-ChildItem -Path "master:/sitecore/media library/Images/Icons/" | Select-Object -Expand ItemPath 
+    } | Receive-MediaItem -Session $session -Destination C:\Temp\Images\
+```
+
 ##### Windows Authenticated Requests
 
 If you have configured the services to run under *Windows Authentication* mode then you'll need to use the **Credential** parameter for the commands.
