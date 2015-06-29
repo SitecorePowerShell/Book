@@ -7,6 +7,8 @@
 | SPE 3.1 | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
 | SPE 3.0 | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
 
+**Legend:** "&#8211;" - not supported; "&#x2713;" - supported.
+
 ## Commands
  
 The following commands are distributed with the Sitecore PowerShell Extensions module.
