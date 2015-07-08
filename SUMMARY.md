@@ -5,6 +5,7 @@
 * [Interfaces](interfaces.md)
    * [Command Line Console](console.md)
    * [Integrated Scripting Environment](scripting.md)
+   * Variable Dialog
 * [Working with Items](working-with-items.md)
    * [Item Languages](item-languages.md)
 * [Toolbox](toolbox.md)
@@ -17,5 +18,4 @@
 * [Security](security.md)
 * [Releases](releases.md)
 * [Appendix](appendix.md)
-{% include './appendix/commands-list.md' %}
 
