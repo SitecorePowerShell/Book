@@ -19,6 +19,7 @@ Receive-File
 Send-File
 
 ### Field Editor
+Show-FieldEditor
 
 ### User Input
 Show-Input
