@@ -15,7 +15,18 @@ Show-Alert -Title "SPE is great!"
 Read-Variable
 
 ### Confirmation
-Show-Confirm
+
+**Example:** The following displays a modal dialog with an OK or Cancel confirmation.
+```powershell
+Show-Confirm -Title "Click OK to acknowledge SPE is great!"
+```
+| Button | Return |
+| -- | -- |
+| OK | yes |
+| Cancel | no |
+
+
+![Show Confirm](images/screenshots/modaldialog-showconfirm.png)
 
 ### Download
 Receive-File
