@@ -22,6 +22,7 @@ Read-Variable
 ```powershell
 Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 ```
+
 | Button Name | Return Value |
 | -- | -- |
 | OK | yes |
@@ -36,6 +37,8 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 ```powershell
 Receive-File (get-item "master:\media library\Files") -AdvancedDialog
 ```
+| Button Name | Return Value |
+| Close | undetermined |
 
 ![Receive File](images/screenshots/modaldialog-receivefileadvanced.png)
 
