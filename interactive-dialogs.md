@@ -37,8 +37,7 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 ```powershell
 Receive-File (get-item "master:\media library\Files") -AdvancedDialog
 ```
-| Button Name | Return Value |
-| Close | undetermined |
+No return value.
 
 ![Receive File](images/screenshots/modaldialog-receivefileadvanced.png)
 
