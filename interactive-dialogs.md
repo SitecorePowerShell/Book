@@ -9,6 +9,8 @@ We've provided a few commands to interact with the user through dialogs.
 Show-Alert -Title "SPE is great!"
 ```
 
+No return value.
+
 ![Show Alert](images/screenshots/modaldialog-showalert.png)
 
 ### Variable Settings
