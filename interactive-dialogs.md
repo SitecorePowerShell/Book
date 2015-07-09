@@ -20,7 +20,7 @@ Read-Variable
 ```powershell
 Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 ```
-| Button | Return |
+| Button Name | Return Value |
 | -- | -- |
 | OK | yes |
 | Cancel | no |
