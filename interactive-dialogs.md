@@ -30,10 +30,13 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 
 ![Show Confirm](images/screenshots/modaldialog-showconfirm.png)
 
-### Download
-Receive-File
-
 ### Upload
+
+```powershell
+Receive-File (get-item "master:\media library\Files") -AdvancedDialog
+```
+
+### Download
 Send-File
 
 ### Field Editor
