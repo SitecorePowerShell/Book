@@ -42,7 +42,13 @@ No return value.
 ![Receive File](images/screenshots/modaldialog-receivefileadvanced.png)
 
 ### Download
-Send-File
+
+**Example:** The following displays a download dialog.
+```powershell
+Get-Item -Path "master:\media library\Files\readme" | Send-File
+```
+
+![Download](images/screenshots/modaldialog-download.png)
 
 ### Field Editor
 Show-FieldEditor
