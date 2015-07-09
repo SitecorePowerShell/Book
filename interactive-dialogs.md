@@ -32,9 +32,12 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 
 ### Upload
 
+**Example:** The following displays an advanced upload dialog.
 ```powershell
 Receive-File (get-item "master:\media library\Files") -AdvancedDialog
 ```
+
+![Receive File](images/screenshots/modaldialog-receivefileadvanced.png)
 
 ### Download
 Send-File
