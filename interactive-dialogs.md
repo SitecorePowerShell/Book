@@ -54,7 +54,19 @@ Get-Item -Path "master:\media library\Files\readme" | Send-File
 Show-FieldEditor
 
 ### User Input
-Show-Input
+
+**Example:** The following displays an input dialog for text.
+```powershell
+Show-Input "Please provide 5 characters at most" -MaxLength 5
+```
+
+| Button Name | Return Value |
+| -- | -- |
+| OK | < user input > |
+| Cancel | $null |
+
+
+![Show Input](images/screenshots/modaldialog-showinput.png)
 
 ### File Browser
 Show-ModalDialog
