@@ -102,7 +102,7 @@ Show-ModalDialog
 
 **Example:** The following displays a list view dialog with the child items under the Sitecore tree.
 ```powershell
-Get-Item -path master:\* | Show-ListView -Property Name, DisplayName, ProviderPath, TemplateName, Language
+Get-Item -Path master:\* | Show-ListView -Property Name, DisplayName, ProviderPath, TemplateName, Language
 ```
 
 ![Show List View](images/screenshots/modaldialog-showlistview.png)
