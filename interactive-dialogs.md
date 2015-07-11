@@ -96,7 +96,24 @@ Show-Input "Please provide 5 characters at most" -MaxLength 5
 ![Show Input](images/screenshots/modaldialog-showinput.png)
 
 ### File Browser
-Show-ModalDialog
+
+**Example:** The following displays a file browser dialog.
+```powershell
+Show-ModalDialog -HandleParameters @{
+    "h"="Create an Anti-Package"; 
+    "t" = "Select a package that needs an anti-package"; 
+    "ic"="People/16x16/box.png"; 
+    "ok"="Pick";
+    "ask"="";
+    "path"= "packPath:$SitecorePackageFolder";
+    "mask"="*.zip";
+} -Control "Installer.Browse"
+```
+
+| Button Name | Return Value |
+| -- | -- |
+| OK | < selected file > |
+| Cancel | undetermined |
 
 ### Data List
 
