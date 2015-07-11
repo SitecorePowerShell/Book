@@ -68,7 +68,13 @@ Get-Item -Path "master:\media library\Files\readme" | Send-File
 ![Download](images/screenshots/modaldialog-download.png)
 
 ### Field Editor
-Show-FieldEditor
+
+**Example:** The following displays a field editor dialog.
+```powershell
+Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
+```
+
+
 
 ### User Input
 
