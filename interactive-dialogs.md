@@ -28,7 +28,6 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 | OK | yes |
 | Cancel | no |
 
-
 ![Show Confirm](images/screenshots/modaldialog-showconfirm.png)
 
 ### Confirmation Choice
@@ -52,7 +51,7 @@ Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_
 
 **Example:** The following displays an advanced upload dialog.
 ```powershell
-Receive-File (get-item "master:\media library\Files") -AdvancedDialog
+Receive-File (Get-Item "master:\media library\Files") -AdvancedDialog
 ```
 No return value.
 
