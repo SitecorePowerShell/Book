@@ -99,7 +99,13 @@ Show-Input "Please provide 5 characters at most" -MaxLength 5
 Show-ModalDialog
 
 ### Data List
-Show-ListView
+
+**Example:** The following displays a list view dialog with the child items under the Sitecore tree.
+```powershell
+Get-Item -path master:\* | Show-ListView -Property Name, DisplayName, ProviderPath, TemplateName, Language
+```
+
+![Show List View](images/screenshots/modaldialog-showlistview.png)
 
 ### Results
 Show-Result
