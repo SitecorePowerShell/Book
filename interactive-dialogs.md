@@ -38,6 +38,8 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_0)"; btn_1="No (returns btn_1)"; btn_2="returns btn_2"; te="Have you downloaded SPE?"; cp="Important Questions"} -Height 120 -Width 400
 ```
 
+**Note:** The hashtable keys should be incremented like *btn_0*, *btn_1*, and so on. The return value is the key name.
+
 | Button Name | Return Value |
 | -- | -- |
 | < first button > | btn_0 |
