@@ -115,6 +115,8 @@ Show-ModalDialog -HandleParameters @{
 | OK | < selected file > |
 | Cancel | undetermined |
 
+![Show File Browser](images/screenshots/modaldialog-showfilebrowser.png)
+
 ### Data List
 
 **Example:** The following displays a list view dialog with the child items under the Sitecore tree.
