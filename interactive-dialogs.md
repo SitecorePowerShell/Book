@@ -31,6 +31,14 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 
 ![Show Confirm](images/screenshots/modaldialog-showconfirm.png)
 
+### Confirmation Choice
+
+```powershell
+Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_0)"; btn_1="No (returns btn_1)"; btn_2="returns btn_2"; te="Have you downloaded SPE?"; cp="Important Questions"} -Height 120 -Width 400
+```
+
+![Show Confirm Choice](images/screenshots/modaldialog-showconfirmchoice.png)
+
 ### Upload
 
 **Example:** The following displays an advanced upload dialog.
