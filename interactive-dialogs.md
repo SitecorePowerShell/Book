@@ -74,7 +74,7 @@ Get-Item -Path "master:\media library\Files\readme" | Send-File
 Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
 ```
 
-
+![Show Field Editor](images/screenshots/modaldialog-showfieldeditor.png)
 
 ### User Input
 
