@@ -33,9 +33,16 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 
 ### Confirmation Choice
 
+**Example:** The following displays a modal dialog with choices.
 ```powershell
 Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_0)"; btn_1="No (returns btn_1)"; btn_2="returns btn_2"; te="Have you downloaded SPE?"; cp="Important Questions"} -Height 120 -Width 400
 ```
+
+| Button Name | Return Value |
+| -- | -- |
+| < first button > | btn_0 |
+| < second button > | btn_1 |
+| < third button > | btn_2 |
 
 ![Show Confirm Choice](images/screenshots/modaldialog-showconfirmchoice.png)
 
