@@ -14,7 +14,37 @@ No return value.
 ![Show Alert](images/screenshots/modaldialog-showalert.png)
 
 ### Variable Settings
-Read-Variable
+
+**Example:** The following displays a dialog with a dropdown.
+
+**Note:** The name *selectedOption* will result in a variable that contains the selected option.
+```powershell
+$options = @{
+    "A"="a"
+    "B"="b"
+}
+
+$props = @{
+    Parameters = @(
+        @{Name="selectedOption"; Title="Choose an option"; Options=$options; Tooltip="Choose one."}
+    )
+    Title = "Option selector"
+    Description = "Choose the right option."
+    Width = 300
+    Height = 300
+    ShowHints = $true
+}
+
+Read-Variable @props
+```
+
+| Button Name | Return Value |
+| -- | -- |
+| OK | ok |
+| Cancel | cancel |
+| < variables > | < selection > |
+
+![Read Variable](images/screenshots/modaldialog-readvariable.png)
 
 ### Confirmation
 
