@@ -147,6 +147,18 @@ Show-ModalDialog -HandleParameters @{
 
 ![Show File Browser](images/screenshots/modaldialog-showfilebrowser.png)
 
+**Example:** The following displays a simple file browser dialog.
+```powershell
+Show-ModalDialog -HandleParameters @{
+    "h"="FileBrowser";
+} -Control "FileBrowser"
+```
+
+| Button Name | Return Value |
+| -- | -- |
+| OK | < selected file > |
+| Cancel | undetermined |
+
 ### Data List
 
 **Example:** The following displays a list view dialog with the child items under the Sitecore tree.
