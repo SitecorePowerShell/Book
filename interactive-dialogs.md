@@ -127,7 +127,7 @@ Show-Input "Please provide 5 characters at most" -MaxLength 5
 
 ### File Browser
 
-**Example:** The following displays a file browser dialog installation packages.
+**Example:** The following displays a file browser dialog for installation packages.
 ```powershell
 Show-ModalDialog -HandleParameters @{
     "h"="Create an Anti-Package"; 
