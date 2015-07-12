@@ -151,7 +151,7 @@ Show-ModalDialog -HandleParameters @{
 ```powershell
 Show-ModalDialog -HandleParameters @{
     "h"="FileBrowser";
-} -Control "FileBrowser"
+} -Control "FileBrowser" -Width 500
 ```
 
 | Button Name | Return Value |
