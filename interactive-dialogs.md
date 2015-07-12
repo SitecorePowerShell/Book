@@ -159,7 +159,7 @@ Show-ModalDialog -HandleParameters @{
 | OK | < selected file > |
 | Cancel | undetermined |
 
-
+![Show File Browser](images/screenshots/modaldialog-simplefilebrowser.png)
 
 ### Data List
 
