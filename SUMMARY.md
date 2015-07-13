@@ -18,4 +18,5 @@
 * [Security](security.md)
 * [Releases](releases.md)
 * [Appendix](appendix.md)
+{% include './appendix/commands-list.md' %}
 
