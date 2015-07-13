@@ -11,8 +11,7 @@ We have provided a handy way of executing scripts via web service using the Remo
 **Example:** The following connects a local instance of SPE to a remote instance and executes the provided script.
 
 ```powershell
-Import-Function -Name New-ScriptSession
-Import-Function -Name Invoke-RemoteScript
+Import-Function -Name Remoting2
 
 $session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "http://remotesitecore"
 
