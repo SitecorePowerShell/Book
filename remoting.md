@@ -89,6 +89,8 @@ sitecore\admin           sitecore     True            False
 ```
 
 **References:**
+* Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]
 
 [1]: http://blog.najmanowicz.com/2014/10/10/sitecore-powershell-extensions-remoting/
+[2]: http://michaellwest.blogspot.com/2015/07/sitecore-powershell-extensions-remoting.html
