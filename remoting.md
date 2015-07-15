@@ -44,9 +44,7 @@ To setup this scenario you'll need to follow these steps:
 ```powershell
 Import-Module -Name SPE
 
-# If you need to connect to more than one instance of Sitecore add it to the list.
-$instanceUrls = @("http://remotesitecore")
-$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri $instanceUrls
+$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri http://remotesitecore
 
 $libraryPath = "/sitecore/media library/images/image.png"
 Get-Item -Path C:\image.png | Send-MediaItem -Session $session -Destination $libraryPath
@@ -84,6 +82,7 @@ New-WebServiceProxy : The request failed with HTTP status 401: Unauthorized.
 **Example:** The following connects Windows PowerShell ISE to a remote Sitecore instance using Windows credentials and executes the provided script.
 
 ```powershell
+Import-Module -Name SPE
 $credential = Get-Credential
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore -Credential $credential
 Invoke-RemoteScript -Session $session -ScriptBlock { Get-User -id admin }
@@ -91,6 +90,15 @@ Invoke-RemoteScript -Session $session -ScriptBlock { Get-User -id admin }
 Name                     Domain       IsAdministrator IsAuthenticated
 ----                     ------       --------------- ---------------
 sitecore\admin           sitecore     True            False          
+```
+
+**Example:** The following connects to several remote instances of Sitecore and returns the server name.
+
+```powershell
+# If you need to connect to more than one instance of Sitecore add it to the list.
+$instanceUrls = @("http://remotesitecore","http://remotesitecore2")
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri $instanceUrls
+Invoke-RemoteScript -Session $session -ScriptBlock { $env:computername }
 ```
 
 **References:**
