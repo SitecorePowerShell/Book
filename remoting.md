@@ -44,6 +44,7 @@ To setup this scenario you'll need to follow these steps:
 ```powershell
 Import-Module -Name SPE
 
+# If you need to connect to more than one instance of Sitecore add it to the list.
 $instanceUrls = @("http://remotesitecore")
 $session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri $instanceUrls
 
