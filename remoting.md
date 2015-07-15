@@ -35,6 +35,10 @@ sitecore\admin           sitecore     True            False
 
 ##### Windows PowerShell ISE to Sitecore communication
 
+To setup this scenario you'll need to follow these steps:
+* Download the SPE Remoting package from the Sitecore Marketplace.
+* Extract the package to to your module path. Instructions can be found [here][3].
+
 **Example:** The following connects Windows PowerShell ISE to a remote Sitecore instance and executes the provided script.
 
 ```powershell
@@ -94,3 +98,4 @@ sitecore\admin           sitecore     True            False
 
 [1]: http://blog.najmanowicz.com/2014/10/10/sitecore-powershell-extensions-remoting/
 [2]: http://michaellwest.blogspot.com/2015/07/sitecore-powershell-extensions-remoting.html
+[3]: https://msdn.microsoft.com/en-us/library/dd878350(v=vs.85).aspx
