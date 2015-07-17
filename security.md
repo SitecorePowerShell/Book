@@ -67,6 +67,7 @@ The following files are the bare minimum required to support SPE web services. T
 **Required:**
 * `App_Config\Include\Cognifide.PowerShell.config`
 * `bin\Cognifide.PowerShell.dll`
+* `bin\Cognifide.PowerShell.VersionSpecific.dll`
 * `sitecore modules\PowerShell\Services\web.config`
 * `sitecore modules\PowerShell\Services\RemoteAutomation.asmx`
  
