@@ -46,7 +46,16 @@ Below are the shortcuts available in the console.
 | Shortcut  | Usage |
 | --------  | ----- |
 | TAB       | Indent |
-| Ctrl-Space       | Autocomplete commands. Press tab again to cycle through commands.  |
+| Ctrl-Space       | Autocomplete commands. Use the up or down direction keys to cycle through options.  |
 | Ctrl-Enter | Displays the command help window. |
 | Ctrl-Z | Undo the previous change. |
-There are more just not yet documented...
+| Ctrl-Alt-Shift +  | Increase the font size |
+| Ctrl-Alt-Shift -  | Decrease the font size |
+| Ctrl-E | Executes the script |
+| Alt-E | Executes the selected text in the script |
+| Ctrl-Shift-E | Aborts the running script |
+| Ctrl-F | Search for keywords in the script |
+
+For more commands built into the script editor see [here][1]
+
+[1]: https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts

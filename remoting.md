@@ -6,6 +6,10 @@ There are a number of use cases where you need to remotely run scripts within SP
 
 We have provided a handy way of executing scripts via web service using the Remoting Automation Service.
 
+##### Video Tutorial
+
+[![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
+
 ##### Sitecore to Sitecore communication
 
 **Example:** The following connects a local instance of SPE to a remote instance and executes the provided script.

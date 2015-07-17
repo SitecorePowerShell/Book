@@ -66,6 +66,7 @@ The following files are the bare minimum required to support SPE web services. T
 
 **Required:**
 * `App_Config\Include\Cognifide.PowerShell.config`
+* `App_Config\Include\Cognifide.PowerShell.Minimal.config`
 * `bin\Cognifide.PowerShell.dll`
 * `bin\Cognifide.PowerShell.VersionSpecific.dll`
 * `sitecore modules\PowerShell\Services\web.config`
@@ -88,5 +89,7 @@ You will also need to patch the configuration with the following:
     </sitecore>
 </configuration>
 ```
+
+For your convenience we've included a package bundled with all of the above called *SPE Minimal-3.x for Sitecore x.zip*. Any of the disabled configuration files should be enabled following extraction.
 
 [1]: https://msdn.microsoft.com/en-us/library/8aeskccd%28v=vs.71%29.aspx

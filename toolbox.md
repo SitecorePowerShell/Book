@@ -6,6 +6,38 @@ Navigate to Sitecore -> PowerShell Toolbox and after selecting you should see th
 
 ![Toolbox](images/screenshots/toolbox-list.png)
 
+#### Available Tools
+
+##### Index Viewer
+
+This tool provides similar functionality to the [Index Viewer][1] module. Search and rebuild the index on-demand.
+
+##### Logged in Session Manager
+
+View the list of user sessions and "kick" them out as needed.
+
+##### Rules based report
+
+Generate a report using the Sitecore Rules Engine.
+
+##### PowerShell Background Session Manager
+
+View the list of SPE sessions and "kill" them as needed.
+
+##### Create Anti-Package
+
+This tool provides similar functionality to the [Sitecore Rocks][2] module.
+
+##### Re-create Site from Sitemap
+
+Simple tool for generating a site tree using an existing sitemap.
+
+##### Task Manager
+
+View and manage the configured scheduled tasks.
+
+#### Create Tools for the Toolbox
+
 To create your own Toolbox item take the following steps:
 1. Create the *Toolbox* folder under an SPE module. Use the context menu to simplify the process.
  * Right click the module name and choose Scripts -> Create libraries for integration points.
@@ -22,5 +54,5 @@ To create your own Toolbox item take the following steps:
 5. Verify the new toolbox item appears in the Toolbox.  
 ![Toolbox Item](images/screenshots/toolbox-newitem.png)
 
-
-
+[1]: http://marketplace.sitecore.net/en/Modules/I/Index_Viewer.aspx
+[2]: https://marketplace.sitecore.net/en/Modules/S/Sitecore_Rocks.aspx
