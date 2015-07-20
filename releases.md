@@ -38,6 +38,8 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 
 #### Potential Breaking Changes
 
+- [376](https://github.com/SitecorePowerShell/Console/issues/376) Compress-Archive api change
+
 ## Version 3.1
 It's already June and been way too long since we last released SPE. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. The most important changes are explained below. As always - please provide any and all feedback either on twitter or GitHub. 
 
