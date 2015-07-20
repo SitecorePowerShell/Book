@@ -15,10 +15,11 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 
 #### Enhancements
 
-- [421](https://github.com/SitecorePowerShell/Console/issues/421) Dialogs with Multiple Columns
+- [421](https://github.com/SitecorePowerShell/Console/issues/421) Read-Variable dialogs with multiple columns
 - [415](https://github.com/SitecorePowerShell/Console/issues/415) Find-Item criteria now supports inverted *Filter*
 - [418](https://github.com/SitecorePowerShell/Console/issues/418) Improved formatting for Find-Item results
 - [417](https://github.com/SitecorePowerShell/Console/issues/417) Verbose messages are now yellow and black
+- [413](https://github.com/SitecorePowerShell/Console/issues/413) Read-Variable dialogs with non-editable text
 
 #### Fixes
 
