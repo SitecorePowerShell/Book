@@ -11,6 +11,7 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 #### New Features
 
 - [](https://github.com/SitecorePowerShell/Console/issues/)
+- [390](https://github.com/SitecorePowerShell/Console/issues/390) ISE plugin added to execute selected text
 - [422](https://github.com/SitecorePowerShell/Console/issues/422) Expand-Archive command added
 - [411](https://github.com/SitecorePowerShell/Console/issues/411) ISE dialog to search for scripts by name
 - [396](https://github.com/SitecorePowerShell/Console/issues/396) New-Role, Test-Role, Remove-Role commands added
