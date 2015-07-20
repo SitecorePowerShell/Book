@@ -10,7 +10,6 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 
 #### New Features
 
-- [](https://github.com/SitecorePowerShell/Console/issues/)
 - [383](https://github.com/SitecorePowerShell/Console/issues/383) ISE plugin tab added
 - [390](https://github.com/SitecorePowerShell/Console/issues/390) ISE plugin added to execute selected text
 - [388](https://github.com/SitecorePowerShell/Console/issues/388) ISE plugin added to prettify text
