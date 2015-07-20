@@ -23,6 +23,7 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 - [417](https://github.com/SitecorePowerShell/Console/issues/417) Verbose messages are now yellow and black
 - [413](https://github.com/SitecorePowerShell/Console/issues/413) Read-Variable dialogs with non-editable text
 - [412](https://github.com/SitecorePowerShell/Console/issues/412) Show-ListView can execute scripts for selected row
+- [391](https://github.com/SitecorePowerShell/Console/issues/391) Find-Item *DecendentOf* criteria added for faster searches
 
 #### Fixes
 
