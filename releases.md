@@ -16,6 +16,7 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 #### Enhancements
 
 - [421](https://github.com/SitecorePowerShell/Console/issues/421) Dialogs with Multiple Columns
+- [418](https://github.com/SitecorePowerShell/Console/issues/418) Improved formatting for Find-Item results
 
 #### Fixes
 
