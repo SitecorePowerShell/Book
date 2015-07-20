@@ -10,11 +10,16 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 
 #### New Features
 
+- [](https://github.com/SitecorePowerShell/Console/issues/)
+- [422](https://github.com/SitecorePowerShell/Console/issues/422) Expand-Archive command added
+
 #### Enhancements
 
 - [421](https://github.com/SitecorePowerShell/Console/issues/421) Dialogs with Multiple Columns
 
 #### Fixes
+
+- [420](https://github.com/SitecorePowerShell/Console/issues/420) Find-Item *Contains* criteria complained about case sensitivity
 
 #### Potential Breaking Changes
 
