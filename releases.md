@@ -12,6 +12,8 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 
 #### Enhancements
 
+- [421](https://github.com/SitecorePowerShell/Console/issues/421) Dialogs with Multiple Columns
+
 #### Fixes
 
 #### Potential Breaking Changes
