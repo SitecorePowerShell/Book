@@ -12,6 +12,7 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 
 - [](https://github.com/SitecorePowerShell/Console/issues/)
 - [422](https://github.com/SitecorePowerShell/Console/issues/422) Expand-Archive command added
+- [411](https://github.com/SitecorePowerShell/Console/issues/411) ISE dialog to search for scripts by name
 
 #### Enhancements
 
