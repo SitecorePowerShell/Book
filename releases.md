@@ -24,6 +24,7 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 
 - [420](https://github.com/SitecorePowerShell/Console/issues/420) Find-Item *Contains* criteria complained about case sensitivity
 - [419](https://github.com/SitecorePowerShell/Console/issues/419) ISE did not format data in the results pane
+- [414](https://github.com/SitecorePowerShell/Console/issues/414) ISE buttons would enable at the wrong time
 
 #### Potential Breaking Changes
 
