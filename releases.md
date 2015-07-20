@@ -6,7 +6,15 @@ under a month! Please provide your feedback either on Twitter or Github.
 
 [Full issue list available on GitHub]
 
+### Summary of important changes
 
+#### New Features
+
+#### Enhancements
+
+#### Fixes
+
+#### Potential Breaking Changes
 
 ## Version 3.1
 It's already June and been way too long since we last released SPE. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. The most important changes are explained below. As always - please provide any and all feedback either on twitter or GitHub. 
