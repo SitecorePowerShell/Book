@@ -12,7 +12,6 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 
 - [](https://github.com/SitecorePowerShell/Console/issues/)
 - [390](https://github.com/SitecorePowerShell/Console/issues/390) ISE plugin added to execute selected text
-- [382](https://github.com/SitecorePowerShell/Console/issues/382) SPE Remoting module improvements
 - [422](https://github.com/SitecorePowerShell/Console/issues/422) Expand-Archive command added
 - [411](https://github.com/SitecorePowerShell/Console/issues/411) ISE dialog to search for scripts by name
 - [396](https://github.com/SitecorePowerShell/Console/issues/396) New-Role, Test-Role, Remove-Role commands added
@@ -20,6 +19,7 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 #### Enhancements
 
 - [421](https://github.com/SitecorePowerShell/Console/issues/421) Read-Variable dialogs with multiple columns
+- [382](https://github.com/SitecorePowerShell/Console/issues/382) SPE Remoting module improvements
 - [415](https://github.com/SitecorePowerShell/Console/issues/415) Find-Item criteria now supports inverted *Filter*
 - [418](https://github.com/SitecorePowerShell/Console/issues/418) Improved formatting for Find-Item results
 - [417](https://github.com/SitecorePowerShell/Console/issues/417) Verbose messages are now yellow and black
