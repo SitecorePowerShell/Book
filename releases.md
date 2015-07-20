@@ -24,6 +24,7 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 - [382](https://github.com/SitecorePowerShell/Console/issues/382) SPE Remoting module improvements
 - [415](https://github.com/SitecorePowerShell/Console/issues/415) Find-Item criteria now supports inverted *Filter*
 - [418](https://github.com/SitecorePowerShell/Console/issues/418) Improved formatting for Find-Item results
+- [379](https://github.com/SitecorePowerShell/Console/issues/379) SPE Remoting support for Windows Authentication
 - [417](https://github.com/SitecorePowerShell/Console/issues/417) Verbose messages are now yellow and black
 - [413](https://github.com/SitecorePowerShell/Console/issues/413) Read-Variable dialogs with non-editable text
 - [412](https://github.com/SitecorePowerShell/Console/issues/412) Show-ListView can execute scripts for selected row
