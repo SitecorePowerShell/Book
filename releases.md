@@ -11,22 +11,22 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 #### New Features
 
 - [383](https://github.com/SitecorePowerShell/Console/issues/383) ISE plugin tab added
-- [390](https://github.com/SitecorePowerShell/Console/issues/390) ISE plugin added to execute selected text
-- [388](https://github.com/SitecorePowerShell/Console/issues/388) ISE plugin added to prettify text
+- [390](https://github.com/SitecorePowerShell/Console/issues/390) ISE plugin added to find scripts containing selected text
+- [388](https://github.com/SitecorePowerShell/Console/issues/388) ISE plugin added to prettify edited script
 - [422](https://github.com/SitecorePowerShell/Console/issues/422) Expand-Archive command added
 - [411](https://github.com/SitecorePowerShell/Console/issues/411) ISE dialog to search for scripts by name
 - [396](https://github.com/SitecorePowerShell/Console/issues/396) New-Role, Test-Role, Remove-Role commands added
 
 #### Enhancements
 
-- [421](https://github.com/SitecorePowerShell/Console/issues/421) Read-Variable dialogs with multiple columns
+- [421](https://github.com/SitecorePowerShell/Console/issues/421) Read-Variable dialogs can now show variable editors in a grid-like scenario where you can assign 1-2 columns per editor.
+- [413](https://github.com/SitecorePowerShell/Console/issues/413) Read-Variable dialogs showing  non-editable messages (for additional dialog explanatory messages where needed)
+- [412](https://github.com/SitecorePowerShell/Console/issues/412) Show-ListView can now contain links executing actions in a specific report row
 - [382](https://github.com/SitecorePowerShell/Console/issues/382) SPE Remoting module improvements
 - [415](https://github.com/SitecorePowerShell/Console/issues/415) Find-Item criteria now supports inverted *Filter*
 - [418](https://github.com/SitecorePowerShell/Console/issues/418) Improved formatting for Find-Item results
 - [379](https://github.com/SitecorePowerShell/Console/issues/379) SPE Remoting support for Windows Authentication
 - [417](https://github.com/SitecorePowerShell/Console/issues/417) Verbose messages are now yellow and black
-- [413](https://github.com/SitecorePowerShell/Console/issues/413) Read-Variable dialogs with non-editable text
-- [412](https://github.com/SitecorePowerShell/Console/issues/412) Show-ListView can execute scripts for selected row
 - [391](https://github.com/SitecorePowerShell/Console/issues/391) Find-Item *DecendentOf* criteria added for faster searches
 
 #### Fixes
