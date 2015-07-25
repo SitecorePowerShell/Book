@@ -28,15 +28,7 @@ You may also clone the project from [GitHub][5] and compile it. This allows you 
 
 #### Troubleshooting
 
-##### Hanging Installation
-Some users have reported an [issue](https://github.com/SitecorePowerShell/Console/issues/404) where the package installation in Sitecore hangs while installing SPE. One possible fix is to disable the Sitecore Analytics feature; this of course assumes you do not plan on using it for your instance.
-
-```powershell
-$paths = @("C:\inetpub\wwwroot\Console\Website\App_Config\Include\*")
-$patterns = @("Sitecore.Analytics*.config", "Sitecore.ExperienceAnalytics*.config")
- 
-$paths | Get-ChildItem -Include $patterns -Recurse | Rename-Item -NewName { $PSItem.Name + ".disabled" }
-```
+See the troubleshooting section [here](troubleshooting.md)
 
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
 [2]: http://www.microsoft.com/en-us/download/details.aspx?id=30653 "Link to version 4.5"
