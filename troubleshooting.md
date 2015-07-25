@@ -9,3 +9,7 @@ $patterns = @("Sitecore.Analytics*.config", "Sitecore.ExperienceAnalytics*.confi
  
 $paths | Get-ChildItem -Include $patterns -Recurse | Rename-Item -NewName { $PSItem.Name + ".disabled" }
 ```
+
+#### ISE throws exception with /sitecore/content/home is missing
+
+- [394](https://github.com/SitecorePowerShell/Console/issues/394) - Missing Home item (fixed in 3.2 - interim workaround found in the issue conversation)
