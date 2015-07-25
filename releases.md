@@ -21,7 +21,8 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 
 - [421](https://github.com/SitecorePowerShell/Console/issues/421) Read-Variable dialogs can now show variable editors in a grid-like scenario where you can assign 1-2 columns per editor.
 - [413](https://github.com/SitecorePowerShell/Console/issues/413) Read-Variable dialogs showing  non-editable messages (for additional dialog explanatory messages where needed)
-- [259](https://github.com/SitecorePowerShell/Console/issues/413) Read-Variable dialogs can now have mandatory fields.
+- [259](https://github.com/SitecorePowerShell/Console/issues/259) Read-Variable dialogs can now have mandatory fields.
+- [427](https://github.com/SitecorePowerShell/Console/issues/427) Read-Variable dialogs can now have placeholder text.
 - [412](https://github.com/SitecorePowerShell/Console/issues/412) Show-ListView can now contain links executing actions in a specific report row
 - [382](https://github.com/SitecorePowerShell/Console/issues/382) SPE Remoting module improvements
 - [415](https://github.com/SitecorePowerShell/Console/issues/415) Find-Item criteria now supports inverted *Filter*
