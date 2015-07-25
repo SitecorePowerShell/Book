@@ -17,6 +17,7 @@
    * [Authoring Tasks](authoring-tasks.md)
 * [Security](security.md)
 * [Releases](releases.md)
+* [Troubleshooting](troubleshooting.md)
 * [Appendix](appendix.md)
 {% include './appendix/commands-list.md' %}
 
