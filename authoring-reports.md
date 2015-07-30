@@ -1,6 +1,6 @@
 # Authoring Reports
 
-Building reports is a straightforward task. We've provided a variety of examples for you to model to design your own. 
+Building reports is a straightforward task. We've provided a variety of examples for you to model when designing your own. 
 The **Authorable Reports** module includes reports such as *Index Viewer* and *Rules based report*. 
 
 **Examples:**
