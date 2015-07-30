@@ -4,7 +4,7 @@ The reports which come out of the box provide a wide variety of information rega
 
 ![Reports](images/screenshots/reports.png)
 
-As an example, let’s run the Unused media items report.
+As an example, let's run the Unused media items report.
 
 ![Unused Media Items](images/screenshots/reports-unusedmedia.png)
 
