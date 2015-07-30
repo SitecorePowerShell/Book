@@ -9,7 +9,7 @@ The **Authorable Reports** module includes reports such as *Index Viewer* and *R
 
 #### Static Reports
 
-Some other reports used for auditing are included in the **Content Reports** module. Below are some examples on how to create your own.
+The **Content Reports** module includes other reports used for auditing. Below are some examples on how to create your own.
 
 **Examples:**
  * [Images with an empty alt field][1]
