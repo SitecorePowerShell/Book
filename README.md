@@ -16,6 +16,9 @@ We also maintain a comprehensive list of links to [blogs and videos][2] to help 
 * [Mike Reynolds][5] | [@mike_i_reynolds][9]
 
 #### Help and Support
+
+See the [Troubleshooting](troubleshooting.md) section for some common fixes.
+
 Questions, comments, and feature requests should be submitted on [GitHub][6].
 
 [1]: https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx
