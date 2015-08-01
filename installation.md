@@ -15,9 +15,9 @@ The SPE module installs like any other for Sitecore.
 [Download][1] the module from the [Sitecore Marketplace][4] and install through the _Installation Wizard_.
 
 Following the installation you'll find these new items added to the Sitecore menu:
-* Sitecore -> PowerShell Console
-* Sitecore -> PowerShell Toolbox
-* Sitecore -> Development Tools -> PowerShell ISE
+* Sitecore -> [PowerShell Console](console.md)
+* Sitecore -> [PowerShell Toolbox](toolbox.md)
+* Sitecore -> Development Tools -> [PowerShell ISE](scripting.md)
 * Sitecore -> Reporting Tools -> PowerShell Reports
 
 #### Compile Your Own Binaries
