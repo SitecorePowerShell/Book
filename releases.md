@@ -16,6 +16,7 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 - [422](https://github.com/SitecorePowerShell/Console/issues/422) Expand-Archive command added
 - [411](https://github.com/SitecorePowerShell/Console/issues/411) ISE dialog to search for scripts by name
 - [396](https://github.com/SitecorePowerShell/Console/issues/396) New-Role, Test-Role, Remove-Role commands added
+- [435](https://github.com/SitecorePowerShell/Console/issues/435) Get-SearchIndex, Rebuild-SearchIndex, Stop-SearchIndex, Resume-SearchIndex, Suspend-SearchIndex commands added
 
 #### Enhancements
 
