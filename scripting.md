@@ -56,6 +56,6 @@ Below are the shortcuts available in the console.
 | Ctrl-Shift-E | Aborts the running script |
 | Ctrl-F | Search for keywords in the script |
 
-For more commands built into the code editor see [here][1]
+For more commands built into the script editor see [here][1]
 
 [1]: https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts
