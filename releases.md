@@ -33,6 +33,7 @@ under a month! Please provide your feedback on Twitter and the Marketplace or re
 - [379](https://github.com/SitecorePowerShell/Console/issues/379) SPE Remoting support for Windows Authentication
 - [417](https://github.com/SitecorePowerShell/Console/issues/417) Verbose messages are now yellow and black
 - [391](https://github.com/SitecorePowerShell/Console/issues/391) Find-Item *DecendentOf* criteria added for faster searches
+- [424](https://github.com/SitecorePowerShell/Console/issues/424) Find-Item supports Fuzzy and Date search
 
 #### Fixes
 
