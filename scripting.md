@@ -46,7 +46,7 @@ Below are the shortcuts available in the console.
 | Shortcut  | Usage |
 | --------  | ----- |
 | TAB       | Indent |
-| Ctrl-Space       | Autocomplete commands. Press tab again to cycle through commands.  |
+| Ctrl-Space       | Autocomplete commands. Use the up or down direction keys to cycle through options.  |
 | Ctrl-Enter | Displays the command help window. |
 | Ctrl-Z | Undo the previous change. |
 There are more just not yet documented...
