@@ -49,4 +49,6 @@ Below are the shortcuts available in the console.
 | Ctrl-Space       | Autocomplete commands. Use the up or down direction keys to cycle through options.  |
 | Ctrl-Enter | Displays the command help window. |
 | Ctrl-Z | Undo the previous change. |
+| Ctrl-Alt-Shift +  | Increase the font size |
+| Ctrl-Alt-Shift -  | Decrease the font size |
 There are more just not yet documented...
