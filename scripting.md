@@ -55,4 +55,7 @@ Below are the shortcuts available in the console.
 | Alt-E | Executes the selected text in the script |
 | Ctrl-Shift-E | Aborts the running script |
 | Ctrl-F | Search for keywords in the script |
-There are more just not yet documented...
+
+For more commands built into the code editor see [here][1]
+
+[1]: https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts
