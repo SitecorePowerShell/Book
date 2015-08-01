@@ -54,4 +54,5 @@ Below are the shortcuts available in the console.
 | Ctrl-E | Executes the script |
 | Alt-E | Executes the selected text in the script |
 | Ctrl-Shift-E | Aborts the running script |
+| Ctrl-F | Search for keywords in the script |
 There are more just not yet documented...
