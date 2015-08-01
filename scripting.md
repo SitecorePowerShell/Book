@@ -51,4 +51,6 @@ Below are the shortcuts available in the console.
 | Ctrl-Z | Undo the previous change. |
 | Ctrl-Alt-Shift +  | Increase the font size |
 | Ctrl-Alt-Shift -  | Decrease the font size |
+| Ctrl-E | Executes the script |
+| Alt-E | Executes the selected text in the script |
 There are more just not yet documented...
