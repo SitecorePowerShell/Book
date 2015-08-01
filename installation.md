@@ -18,7 +18,7 @@ Following the installation you'll find these new items added to the Sitecore men
 * Sitecore -> [PowerShell Console](console.md)
 * Sitecore -> [PowerShell Toolbox](toolbox.md)
 * Sitecore -> Development Tools -> [PowerShell ISE](scripting.md)
-* Sitecore -> Reporting Tools -> PowerShell Reports
+* Sitecore -> Reporting Tools -> [PowerShell Reports](reports.md)
 
 #### Compile Your Own Binaries
 
