@@ -26,6 +26,10 @@ We've added a context menu item to provide you with a shortcut to the Task Sched
 
 ![Insert Option for Task](images/screenshots/task-inserttask.png)
 
+The scheduled task is capable of running 1-to-many scripts. Choose all that apply for the selected task.
+
 ![Dialog to Select Task Scripts](images/screenshots/task-createtaskwithscripts.png)
+
+The task schedule has an intuitive dialog for working with and changing the frequency. 
 
 ![Dialog to Edit Task Schedule](images/screenshots/task-edittaskschedule.png)
