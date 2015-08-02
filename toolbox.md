@@ -16,6 +16,10 @@ This tool provides similar functionality to the [Index Viewer][1] module.
 
 View the list of user sessions and "kick" them out as needed.
 
+##### Rules based report
+
+Generate a report using the Sitecore Rules Engine.
+
 #### Create Tools for the Toolbox
 
 To create your own Toolbox item take the following steps:
