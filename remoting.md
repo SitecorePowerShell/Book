@@ -39,7 +39,7 @@ To setup this scenario you'll need to follow these steps:
 * Download the SPE Remoting package from the Sitecore Marketplace.
 * Extract the package to to your module path. Instructions can be found [here][3].
 
-[![SPE Remoting Module](images/logos/logo-video.png)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
+[![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
 
 **Example:** The following connects Windows PowerShell ISE to a remote Sitecore instance and executes the provided script.
 
