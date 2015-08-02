@@ -39,4 +39,6 @@ The task schedule has an intuitive dialog for working with and changing the freq
 
 ![Dialog to Edit Task Schedule](images/screenshots/task-edittaskschedule.png)
 
+#### Video Tutorial
+
 [![Scheduled Task Editor](http://img.youtube.com/vi/Q6QKqRwrkuU/0.jpg)](https://youtu.be/Q6QKqRwrkuU "Click for a quick demo")
