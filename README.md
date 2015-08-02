@@ -3,7 +3,7 @@
 
 The [Sitecore PowerShell Extensions][1] (SPE) module is a Sitecore development accelerator which can drastically increase your productivity and curtail the amount of time it takes to deliver a Sitecore solution. 
 
-The module provides a command line (CLI) and scripting environment (ISE) for automating tasks. SPE works with the Sitecore process, capable of making native calls to the Sitecore API, manipulating files, and performing statistical analysis on your content. Running commands and writing scripts follow the standard and well-known Windows PowerShell syntax. Windows PowerShell is a common tool used in IT for desktop and server management, so we decided to stick with that as a framework to build upon.
+The module provides a command line (CLI) and scripting environment (ISE) for automating tasks. SPE works with the Sitecore process, capable of making native calls to the Sitecore API and manipulating files. Running commands and writing scripts follow the standard and well-known Windows PowerShell syntax. Windows PowerShell is a common tool used in IT for desktop and server management, so we decided to stick with that as a framework to build upon.
 
 Below are some of the things you get with SPE:
 * [Index Viewer](toolbox.md)
