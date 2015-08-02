@@ -3,8 +3,7 @@
 Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback on Twitter and the [Marketplace][1] or report issues on [Github][2].
 
 ## Version 3.2
-We've managed to turnaround a release in 
-under a month!
+We've managed to turnaround a release in around a month!
 
 [Full issue list available on GitHub]
 
