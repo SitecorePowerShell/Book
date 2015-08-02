@@ -19,6 +19,10 @@ Below are some of the scripts found out-of-the-box with SPE.
 | System Maintenance | Archive Sitecore logs, Clean up deleted items older than 30 days |
 | User Session Management | Remove idle user sessions |
 
+#### Create Tasks
+
+
+
 #### Manage Tasks
 
 We've added a context menu item to provide you with a shortcut to the Task Editor.
