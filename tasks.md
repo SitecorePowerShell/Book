@@ -21,7 +21,7 @@ Below are some of the scripts found out-of-the-box with SPE.
 
 #### Create and Manage Tasks
 
-We've added a context menu item to provide you with a shortcut to the Task Editor.
+We've added a context menu item to provide you with a shortcut to the Scheduled Task Editor.
 
 
 
