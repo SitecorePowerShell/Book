@@ -9,7 +9,7 @@ Below are some of the things you get with SPE:
 * Index Viewer
 * Task Manager
 * Package Manager
-* Report Runner
+* [Report Runner](reports.md)
 * User Session Manager
 * Bulk Rename/Remove/Create Tool
 * Calculator
