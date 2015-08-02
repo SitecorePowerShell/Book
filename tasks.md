@@ -24,4 +24,8 @@ Below are some of the scripts found out-of-the-box with SPE.
 We've added a context menu item to provide you with a shortcut to the Task Scheduler Editor.
 
 
+![Insert Option for Task](images/screenshots/task-inserttask.png)
 
+![Dialog to Select Task Scripts](images/screenshots/task-createtaskwithscripts.png)
+
+![Dialog to Edit Task Schedule](images/screenshots/task-edittaskschedule.png)
