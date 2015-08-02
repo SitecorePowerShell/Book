@@ -6,6 +6,12 @@ Navigate to Sitecore -> PowerShell Toolbox and after selecting you should see th
 
 ![Toolbox](images/screenshots/toolbox-list.png)
 
+#### Available Tools
+
+##### Index Viewer
+
+The Index Viewer provides similar functionality to the [Index Viewer][1] module.
+
 #### Create Tools for the Toolbox
 
 To create your own Toolbox item take the following steps:
@@ -24,5 +30,4 @@ To create your own Toolbox item take the following steps:
 5. Verify the new toolbox item appears in the Toolbox.  
 ![Toolbox Item](images/screenshots/toolbox-newitem.png)
 
-
-
+[1]: http://marketplace.sitecore.net/en/Modules/I/Index_Viewer.aspx
