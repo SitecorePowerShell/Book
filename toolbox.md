@@ -10,7 +10,7 @@ Navigate to Sitecore -> PowerShell Toolbox and after selecting you should see th
 
 ##### Index Viewer
 
-This tool provides similar functionality to the [Index Viewer][1] module.
+This tool provides similar functionality to the [Index Viewer][1] module. Search and rebuild the index on-demand.
 
 ##### Logged in Session Manager
 
