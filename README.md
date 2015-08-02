@@ -19,6 +19,10 @@ The following book should provide you with enough information to use and be  pro
 
 We also maintain a comprehensive list of links to [blogs and videos][2] to help you on your journey to SPE awesomeness. Happy coding!
 
+#### Video Training
+
+We have a video series available to help walk you through the module [here][13].
+
 **Endorsements:**
 
 *"There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API"* - [Alistair Deneys][11] - Sitecore Symposium 2012
@@ -49,3 +53,4 @@ Questions, comments, and feature requests should be submitted on [GitHub][6].
 [10]: http://www.sitecore.net/learn/blogs/technical-blogs/john-west-sitecore-blog/posts/2015/02/maximize-sitecore-developer-productivity.aspx
 [11]: https://twitter.com/adeneys
 [12]: https://twitter.com/sitecorejohn
+[13]: https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b
