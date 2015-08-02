@@ -28,6 +28,14 @@ View the list of SPE sessions and "kill" them as needed.
 
 This tool provides similar functionality to the [Sitecore Rocks][2] module.
 
+##### Re-create Site from Sitemap
+
+Simple tool for generating a site tree using an existing sitemap.
+
+##### Task Manager
+
+View and manage the configured scheduled tasks.
+
 #### Create Tools for the Toolbox
 
 To create your own Toolbox item take the following steps:
