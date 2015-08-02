@@ -38,3 +38,5 @@ The scheduled task is capable of running 1-to-many scripts. Choose all that appl
 The task schedule has an intuitive dialog for working with and changing the frequency. 
 
 ![Dialog to Edit Task Schedule](images/screenshots/task-edittaskschedule.png)
+
+[![Scheduled Task Editor](http://img.youtube.com/vi/Q6QKqRwrkuU/0.jpg)](https://youtu.be/Q6QKqRwrkuU "Click for a quick demo")
