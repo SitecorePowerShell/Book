@@ -17,7 +17,6 @@ Below are some of the scripts found out-of-the-box with SPE.
 | Module | Script |
 | ------ | ---- |
 | System Maintenance | Archive Sitecore logs, Clean up deleted items older than 30 days |
-| Task Management | Archive Item Versions |
 | User Session Management | Remove idle user sessions |
 
 
