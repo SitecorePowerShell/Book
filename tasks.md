@@ -1,6 +1,14 @@
 # Task Scheduler
 
-The task scheduler is a great way to run scripts in a periodic fashion. You may find the need to automatically archive log files into a compressed file. Perhaps send an email with a generated report based on stale site content. To help make the setup simple, we've provided a *Task Command*.
+The task scheduler is a great way to run scripts in a periodic fashion. You may find the need to automatically archive log files into a compressed file. Perhaps send an email with a generated report based on stale site content. 
+
+##### Video Tutorial
+
+[![Scheduled Task Editor](http://img.youtube.com/vi/Q6QKqRwrkuU/0.jpg)](https://youtu.be/Q6QKqRwrkuU "Click for a quick demo")
+
+##### Scheduled Task Setup
+
+To help make the setup simple, we've provided a *Task Command*.
 
 ![PowerShell Script Command](images/screenshots/tasks-powershellscriptcommand.png)
 
@@ -38,7 +46,3 @@ The scheduled task is capable of running 1-to-many scripts. Choose all that appl
 The task schedule has an intuitive dialog for working with and changing the frequency. 
 
 ![Dialog to Edit Task Schedule](images/screenshots/task-edittaskschedule.png)
-
-#### Video Tutorial
-
-[![Scheduled Task Editor](http://img.youtube.com/vi/Q6QKqRwrkuU/0.jpg)](https://youtu.be/Q6QKqRwrkuU "Click for a quick demo")
