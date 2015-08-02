@@ -10,7 +10,11 @@ Navigate to Sitecore -> PowerShell Toolbox and after selecting you should see th
 
 ##### Index Viewer
 
-The Index Viewer provides similar functionality to the [Index Viewer][1] module.
+This tool provides similar functionality to the [Index Viewer][1] module.
+
+##### Logged in Session Manager
+
+View the list of user sessions and "kick" them out as needed.
 
 #### Create Tools for the Toolbox
 
