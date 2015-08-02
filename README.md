@@ -20,9 +20,9 @@ We also maintain a comprehensive list of links to [blogs and videos][2] to help 
 
 **Endorsments:**
 
-*"There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API"* - Alistair Deneys - Sitecore Symposium 2012
+*"There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API"* - [Alistair Deneys][11] - Sitecore Symposium 2012
 
-Recommended by John West to use as a tool for [maximizing Sitecore developer productivity][10].
+Recommended by [John West][12] to use as a tool for [maximizing Sitecore developer productivity][10].
 
 #### Development Team
 
@@ -46,3 +46,5 @@ Questions, comments, and feature requests should be submitted on [GitHub][6].
 [8]: https://twitter.com/MichaelWest101
 [9]: https://twitter.com/mike_i_reynolds
 [10]: http://www.sitecore.net/learn/blogs/technical-blogs/john-west-sitecore-blog/posts/2015/02/maximize-sitecore-developer-productivity.aspx
+[11]: https://twitter.com/adeneys
+[12]: https://twitter.com/sitecorejohn
