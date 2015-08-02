@@ -7,7 +7,7 @@ The module provides a command line (CLI) and scripting environment (ISE) for aut
 
 Below are some of the things you get with SPE:
 * [Index Viewer](toolbox.md)
-* [Task Manager](toolbox.md)
+* [Scheduled Task Manager](toolbox.md)
 * Package Creator
 * [Report Runner](reports.md)
 * [User Session Manager](toolbox.md)
