@@ -6,7 +6,7 @@ The task scheduler is a great way to run scripts in a periodic fashion. You may 
 
 [![Scheduled Task Editor](http://img.youtube.com/vi/Q6QKqRwrkuU/0.jpg)](https://youtu.be/Q6QKqRwrkuU "Click for a quick demo")
 
-##### Scheduled Task Setup
+#### Scheduled Task Command
 
 To help make the setup simple, we've provided a *Task Command*.
 
