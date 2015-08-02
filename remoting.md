@@ -39,6 +39,9 @@ To setup this scenario you'll need to follow these steps:
 * Download the SPE Remoting package from the Sitecore Marketplace.
 * Extract the package to to your module path. Instructions can be found [here][3].
 
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/fGvT8eDdWrg" frameborder="0" allowfullscreen></iframe>
+
+
 **Example:** The following connects Windows PowerShell ISE to a remote Sitecore instance and executes the provided script.
 
 ```powershell
