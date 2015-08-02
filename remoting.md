@@ -43,6 +43,8 @@ To setup this scenario you'll need to follow these steps:
 " target="_blank"><img src="http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg"
 alt="SPE Remoting Module" width="560" height="315" /></a>
 
+[![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg)
+
 **Example:** The following connects Windows PowerShell ISE to a remote Sitecore instance and executes the provided script.
 
 ```powershell
