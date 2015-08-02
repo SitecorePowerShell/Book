@@ -1,6 +1,6 @@
 # Releases
 
-Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback on Twitter and the Marketplace or report issues on Github.
+Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback on Twitter and the [Marketplace][1] or report issues on [Github][2].
 
 ## Version 3.2
 We've managed to turnaround a release in 
@@ -245,3 +245,6 @@ The existence of script libraries in core database was problematic to at least o
   [Release Notes](http://bit.ly/ScPs22Iss)
 #### Version 2.1 (15 July 2013)
   [Release Notes](http://bit.ly/ScPs21Iss)
+
+[1]: https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx
+[2]: https://git.io/spe
