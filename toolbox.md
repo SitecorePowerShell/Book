@@ -6,6 +6,8 @@ Navigate to Sitecore -> PowerShell Toolbox and after selecting you should see th
 
 ![Toolbox](images/screenshots/toolbox-list.png)
 
+#### Create Tools for the Toolbox
+
 To create your own Toolbox item take the following steps:
 1. Create the *Toolbox* folder under an SPE module. Use the context menu to simplify the process.
  * Right click the module name and choose Scripts -> Create libraries for integration points.
