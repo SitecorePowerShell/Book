@@ -24,6 +24,10 @@ Generate a report using the Sitecore Rules Engine.
 
 View the list of SPE sessions and "kill" them as needed.
 
+##### Create Anti-Package
+
+This tool provides similar functionality to the [Sitecore Rocks][2] module.
+
 #### Create Tools for the Toolbox
 
 To create your own Toolbox item take the following steps:
@@ -43,3 +47,4 @@ To create your own Toolbox item take the following steps:
 ![Toolbox Item](images/screenshots/toolbox-newitem.png)
 
 [1]: http://marketplace.sitecore.net/en/Modules/I/Index_Viewer.aspx
+[2]: https://marketplace.sitecore.net/en/Modules/S/Sitecore_Rocks.aspx
