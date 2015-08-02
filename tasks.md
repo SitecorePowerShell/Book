@@ -23,8 +23,9 @@ Below are some of the scripts found out-of-the-box with SPE.
 
 We've added a context menu item to provide you with a shortcut to the Task Scheduler Editor.
 
-
 ![Insert Option for Task](images/screenshots/task-inserttask.png)
+
+![Run or Edit Task Schedule](images/screenshots/task-runedittask.png)
 
 The scheduled task is capable of running 1-to-many scripts. Choose all that apply for the selected task.
 
