@@ -4,6 +4,8 @@ The reports which come out of the box provide a wide variety of information rega
 
 We've built quite a few reports, many similar to the [Advanced System Report][1] module.
 
+##### Running a Report
+
 ![Reports](images/screenshots/reports.png)
 
 As an example, let's run the Unused media items report.
