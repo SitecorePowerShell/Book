@@ -20,6 +20,10 @@ View the list of user sessions and "kick" them out as needed.
 
 Generate a report using the Sitecore Rules Engine.
 
+##### PowerShell Background Session Manager
+
+View the list of SPE sessions and "kill" them as needed.
+
 #### Create Tools for the Toolbox
 
 To create your own Toolbox item take the following steps:
