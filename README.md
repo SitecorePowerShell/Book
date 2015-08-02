@@ -19,7 +19,7 @@ The following book should provide you with enough information to use and be  pro
 
 We also maintain a comprehensive list of links to [blogs and videos][2] to help you on your journey to SPE awesomeness. Happy coding!
 
-**Endorsments:**
+**Endorsements:**
 
 *"There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API"* - [Alistair Deneys][11] - Sitecore Symposium 2012
 
