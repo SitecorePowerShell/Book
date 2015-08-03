@@ -21,6 +21,10 @@ Below are some of the things you get with SPE:
 
 Recommended by [John West][12] to use as a tool for [maximizing Sitecore developer productivity][10].
 
+*" **Get a job done with a one liner!**
+Just provisioned a new language for the whole content tree with a one-liner. Whaaaat?
+Have to included it as a default install it for all sandboxes now."* - [Alex Shyba][1]'s comment on Marketplace
+
 #### Training Material
 
 The following book should provide you with enough information to use and be  productive with SPE. Don't worry, you will be able to use it without having to write any code.
