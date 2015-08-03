@@ -3,7 +3,7 @@
 Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback on Twitter and the [Marketplace][1] or report issues on [Github][2].
 
 ## Version 3.2
-We've managed to turnaround a release in around a month!
+We've managed to turnaround a release in a little over a month!
 
 [Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=milestone%3A3.2+is%3Aclosed) - 62 issues closed!
 
