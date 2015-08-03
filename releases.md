@@ -5,7 +5,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 ## Version 3.2
 We've managed to turnaround a release in around a month!
 
-[Full issue list available on GitHub]
+[Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=milestone%3A3.2+is%3Aclosed) - 62 issues closed!
 
 ### Summary of important changes
 
