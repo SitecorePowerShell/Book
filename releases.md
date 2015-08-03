@@ -11,40 +11,43 @@ We've managed to turnaround a release in around a month!
 
 #### New Features
 
-- [383](https://github.com/SitecorePowerShell/Console/issues/383) ISE plugin tab added
+- [383](https://github.com/SitecorePowerShell/Console/issues/383) ISE plugin tab and integration point added - you can now write scripts to process your scripts!
 - [390](https://github.com/SitecorePowerShell/Console/issues/390) ISE plugin added to find scripts containing selected text
 - [388](https://github.com/SitecorePowerShell/Console/issues/388) ISE plugin added to prettify edited script
-- [422](https://github.com/SitecorePowerShell/Console/issues/422) Expand-Archive command added
+- [422](https://github.com/SitecorePowerShell/Console/issues/422) `Expand-Archive` command added
 - [411](https://github.com/SitecorePowerShell/Console/issues/411) ISE dialog to search for scripts by name
-- [396](https://github.com/SitecorePowerShell/Console/issues/396) New-Role, Test-Role, Remove-Role commands added
-- [435](https://github.com/SitecorePowerShell/Console/issues/435) Get-SearchIndex, Rebuild-SearchIndex, Stop-SearchIndex, Resume-SearchIndex, Suspend-SearchIndex commands added
-- [434](https://github.com/SitecorePowerShell/Console/issues/434) Render-ReportField script added to improve Authorable Reports
+- [396](https://github.com/SitecorePowerShell/Console/issues/396) `New-Role`, `Test-Role`, `Remove-Role` commands added
+- [435](https://github.com/SitecorePowerShell/Console/issues/435) `Get-SearchIndex`, `Rebuild-SearchIndex`, `Stop-SearchIndex`, `Resume-SearchIndex`, `Suspend-SearchIndex` commands added
+- [434](https://github.com/SitecorePowerShell/Console/issues/434) `Render-ReportField` function-script added to improve Authorable Reports
 
 #### Enhancements
 
-- [438](https://github.com/SitecorePowerShell/Console/issues/438) Console and ISE results are output in real time
-- [421](https://github.com/SitecorePowerShell/Console/issues/421) Read-Variable dialogs can now show variable editors in a grid-like scenario where you can assign 1-2 columns per editor
-- [413](https://github.com/SitecorePowerShell/Console/issues/413) Read-Variable dialogs showing  non-editable messages (for additional dialog explanatory messages where needed)
-- [259](https://github.com/SitecorePowerShell/Console/issues/259) Read-Variable dialogs can now have mandatory fields
-- [427](https://github.com/SitecorePowerShell/Console/issues/427) Read-Variable dialogs can now have placeholder text.
-- [412](https://github.com/SitecorePowerShell/Console/issues/412) Show-ListView can now contain links executing actions in a specific report row
+- [438](https://github.com/SitecorePowerShell/Console/issues/438) Console and [436](https://github.com/SitecorePowerShell/Console/issues/436) ISE results are output in real time
+- [421](https://github.com/SitecorePowerShell/Console/issues/421) `Read-Variable` dialogs can now show variable editors in a grid-like manner where you can assign 1-12 columns per variable editor
+- [413](https://github.com/SitecorePowerShell/Console/issues/413) `Read-Variable` dialogs showing  non-editable messages (for additional dialog explanatory messages where needed)
+- [259](https://github.com/SitecorePowerShell/Console/issues/259) `Read-Variable` dialogs can now have mandatory fields
+- [427](https://github.com/SitecorePowerShell/Console/issues/427) `Read-Variable` dialogs can now have placeholder text.
+- [412](https://github.com/SitecorePowerShell/Console/issues/412) `Show-ListView` can now contain links executing actions in a specific report row
 - [382](https://github.com/SitecorePowerShell/Console/issues/382) SPE Remoting module improvements
-- [415](https://github.com/SitecorePowerShell/Console/issues/415) Find-Item criteria now supports inverted *Filter*
-- [418](https://github.com/SitecorePowerShell/Console/issues/418) Improved formatting for Find-Item results
+- [415](https://github.com/SitecorePowerShell/Console/issues/415) `Find-Item` criteria now supports inverted *Filter*
+- [418](https://github.com/SitecorePowerShell/Console/issues/418) Improved formatting for `Find-Item` results
 - [379](https://github.com/SitecorePowerShell/Console/issues/379) SPE Remoting support for Windows Authentication
 - [417](https://github.com/SitecorePowerShell/Console/issues/417) Verbose messages are now yellow and black
-- [391](https://github.com/SitecorePowerShell/Console/issues/391) Find-Item *DecendentOf* criteria added for faster searches
-- [424](https://github.com/SitecorePowerShell/Console/issues/424) Find-Item supports Fuzzy and Date search
+- [391](https://github.com/SitecorePowerShell/Console/issues/391) `Find-Item` *DecendentOf* criteria added for faster searches
+- [424](https://github.com/SitecorePowerShell/Console/issues/424) `Find-Item` supports Fuzzy and Date search
+- [401](https://github.com/SitecorePowerShell/Console/issues/401) `Read-Variable` supports "item" editor that has no value selected on input or output.
 
 #### Fixes
 
-- [420](https://github.com/SitecorePowerShell/Console/issues/420) Find-Item *Contains* criteria complained about case sensitivity
+- [420](https://github.com/SitecorePowerShell/Console/issues/420) `Find-Item` *Contains* criteria complained about case sensitivity
 - [419](https://github.com/SitecorePowerShell/Console/issues/419) ISE did not format data in the results pane
 - [414](https://github.com/SitecorePowerShell/Console/issues/414) ISE buttons would enable at the wrong time
-
+- ... many, many more
+- 
 #### Potential Breaking Changes
 
-- [376](https://github.com/SitecorePowerShell/Console/issues/376) Compress-Archive api change
+- [376](https://github.com/SitecorePowerShell/Console/issues/376) `Compress-Archive` api change
+- [356](https://github.com/SitecorePowerShell/Console/issues/356) Changes in existing commandlets for old Sitecore search APIs - `Get-SearchIndex` repurposed for new api, `Get-Index` and `Get-ItemByUri` are no longer available.
 
 ## Version 3.1
 It's already June and been way too long since we last released SPE. The SPE team has been hard at work preparing for version 3.1 and we hope this version introduces many welcomed changes long overdue. The most important changes are explained below. As always - please provide any and all feedback either on twitter or GitHub. 
