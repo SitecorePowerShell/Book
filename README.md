@@ -23,7 +23,7 @@ Recommended by [John West][12] to use as a tool for [maximizing Sitecore develop
 
 *" **Get a job done with a one liner!**
 Just provisioned a new language for the whole content tree with a one-liner. Whaaaat?
-Have to included it as a default install it for all sandboxes now."* - [Alex Shyba][1]'s comment on Marketplace
+Have to include it as a default install for all sandboxes now."* - [Alex Shyba][1]'s comment on Marketplace
 
 #### Training Material
 
