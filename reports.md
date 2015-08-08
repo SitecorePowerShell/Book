@@ -16,4 +16,12 @@ Once the report completes, the results appear in a report window.
 
 ![Unused Media Items Output](images/screenshots/reports-output.png)
 
+#### Reports in SPE similar to ASR
+
+##### Content Audit
+
+* Broken Links
+* Items have no publishable version
+* Stale workflow items
+
 [1]: https://marketplace.sitecore.net/en/Modules/A/Advanced_System_Reporter.aspx
