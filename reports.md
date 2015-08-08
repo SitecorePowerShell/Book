@@ -49,4 +49,13 @@ Once the report completes, the results appear in a report window.
 | | Regex Item Searcher |
 | | Renderings |
 
+**Report Location:**
+
+* Configuration Audit report <sup>1</sup>
+* Content Audit report <sup>2</sup>
+* Media Audit report <sup>3</sup>
+* Solution Audit report <sup>4</sup>
+
+
+
 [1]: https://marketplace.sitecore.net/en/Modules/A/Advanced_System_Reporter.aspx
