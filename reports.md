@@ -41,7 +41,7 @@ Once the report completes, the results appear in a report window.
 | Logged in Session Manager<sup>5</sup> | Logged in Users |
 | | Multiple versions |
 | | My Owned Items |
-| | Not recently modified |
+| Media items last updated before date<sup>3</sup> | Not recently modified |
 | | Orphaned media assets report |
 | | Owned items |
 | | Recent Workflow History |
