@@ -20,9 +20,7 @@ Once the report completes, the results appear in a report window.
 
 ##### Content Audit
 
-* Items have no publishable version
-* Stale workflow items
-* 
+While SPE contains many reports available for use, they don't necessarily match identical to ASR reports. We've done our best to build only those that seem most relevant or likely to be used. If you find that a report in ASR that you would like to exist in SPE don't hesitate to submit a request.
 
 | SPE Report | ASR Report |
 | -- | -- |
