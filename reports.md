@@ -20,8 +20,33 @@ Once the report completes, the results appear in a report window.
 
 ##### Content Audit
 
-* Broken Links
 * Items have no publishable version
 * Stale workflow items
+* 
+
+| SPE Report | ASR Report |
+| -- | -- |
+| | | Active Aliases |
+| | Aliases |
+| | Audit |
+| Broken Links | | Broken Links |
+| | Broken Links in publishable items |
+| | Item History |
+| | Items with Invalid Names |
+| | Items with Security for an account |
+| | Items with Tokens in Fields |
+| | Links |
+| | Locked Items |
+| | Logged errors |
+| | Logged in Users |
+| | Multiple versions |
+| | My Owned Items |
+| | Not recently modified |
+| | Orphaned media assets report |
+| | Owned items |
+| | Recent Workflow History |
+| | Recently Modified |
+| | Regex Item Searcher |
+| | Renderings |
 
 [1]: https://marketplace.sitecore.net/en/Modules/A/Advanced_System_Reporter.aspx
