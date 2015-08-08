@@ -49,6 +49,7 @@ Once the report completes, the results appear in a report window.
 | | Regex Item Searcher |
 | | Renderings |
 | Index Viewer<sup>5</sup> | - |
+| Rules based report | - |
 
 **Report Location:**
 
