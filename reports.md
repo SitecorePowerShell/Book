@@ -38,7 +38,7 @@ Once the report completes, the results appear in a report window.
 | | Links |
 | | Locked Items |
 | | Logged errors |
-| | Logged in Users |
+| Logged in Session Manager | Logged in Users |
 | | Multiple versions |
 | | My Owned Items |
 | | Not recently modified |
