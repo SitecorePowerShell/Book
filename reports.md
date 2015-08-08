@@ -29,7 +29,7 @@ Once the report completes, the results appear in a report window.
 | | Active Aliases |
 | | Aliases |
 | | Audit |
-| Broken Links | Broken Links |
+| Broken Links<sup>2</sup> | Broken Links |
 | | Broken Links in publishable items |
 | | Item History |
 | | Items with Invalid Names |
@@ -38,7 +38,7 @@ Once the report completes, the results appear in a report window.
 | | Links |
 | | Locked Items |
 | | Logged errors |
-| Logged in Session Manager | Logged in Users |
+| Logged in Session Manager<sup>5</sup> | Logged in Users |
 | | Multiple versions |
 | | My Owned Items |
 | | Not recently modified |
@@ -55,7 +55,7 @@ Once the report completes, the results appear in a report window.
 * Content Audit report <sup>2</sup>
 * Media Audit report <sup>3</sup>
 * Solution Audit report <sup>4</sup>
-
+* Toolbox <sup>5</sup>
 
 
 [1]: https://marketplace.sitecore.net/en/Modules/A/Advanced_System_Reporter.aspx
