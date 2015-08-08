@@ -29,7 +29,7 @@ While SPE contains many reports, they don't match identical to ASR reports. We'v
 | | Broken Links in publishable items |
 | | Item History |
 | | Items with Invalid Names |
-| | Items with Security for an account |
+| Items with security for an account<sup>2</sup> | Items with Security for an account |
 | | Items with Tokens in Fields |
 | | Links |
 | Locked Items<sup>2</sup> | Locked Items |
