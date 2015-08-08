@@ -47,7 +47,7 @@ While SPE contains many reports, they don't match identical to ASR reports. We'v
 | Index Viewer<sup>5</sup> | - |
 | Rules based report<sup>5</sup> | - |
 
-**Report Location:** Check the reports in SPE under these section to see the full list.
+**Report Location:** Check the reports in SPE under these sections to see the full list.
 
 * Configuration Audit report <sup>1</sup>
 * Content Audit report <sup>2</sup>
