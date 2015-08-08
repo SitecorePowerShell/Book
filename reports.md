@@ -26,7 +26,7 @@ Once the report completes, the results appear in a report window.
 
 | SPE Report | ASR Report |
 | -- | -- |
-| | | Active Aliases |
+| | Active Aliases |
 | | Aliases |
 | | Audit |
 | Broken Links | Broken Links |
