@@ -18,7 +18,7 @@ Once the report completes, the results appear in a report window.
 
 #### Reports in SPE similar to ASR
 
-While SPE contains many reports, they don't necessarily match identical to ASR reports. We've done our best to build only those that seem most relevant or likely to be used. If you find that a report in ASR that you would like to exist in SPE please submit a request.
+While SPE contains many reports, they don't match identical to ASR reports. We've done our best to build those that seem most relevant or likely to be used. If you find a report in ASR that you would like to exist in SPE please submit a request.
 
 | SPE Report | ASR Report |
 | -- | -- |
