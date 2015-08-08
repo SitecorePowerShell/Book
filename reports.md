@@ -42,7 +42,7 @@ Once the report completes, the results appear in a report window.
 | | Multiple versions |
 | | My Owned Items |
 | Media items last updated before date<sup>3</sup> | Not recently modified |
-| | Orphaned media assets report |
+| Media items not used by content items<sup>3</sup> | Orphaned media assets report |
 | | Owned items |
 | | Recent Workflow History |
 | Media items last updated after date<sup>3</sup> | Recently Modified |
