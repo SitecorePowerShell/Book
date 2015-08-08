@@ -36,7 +36,7 @@ Once the report completes, the results appear in a report window.
 | | Items with Security for an account |
 | | Items with Tokens in Fields |
 | | Links |
-| | Locked Items |
+| Locked Items<sup>2</sup> | Locked Items |
 | | Logged errors |
 | Logged in Session Manager<sup>5</sup> | Logged in Users |
 | | Multiple versions |
