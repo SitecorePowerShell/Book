@@ -48,7 +48,7 @@ Once the report completes, the results appear in a report window.
 | | Recently Modified |
 | | Regex Item Searcher |
 | | Renderings |
-| Index Viewer<sup>5</sup> | |
+| Index Viewer<sup>5</sup> | - |
 
 **Report Location:**
 
