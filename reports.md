@@ -29,7 +29,7 @@ Once the report completes, the results appear in a report window.
 | | | Active Aliases |
 | | Aliases |
 | | Audit |
-| Broken Links | | Broken Links |
+| Broken Links | Broken Links |
 | | Broken Links in publishable items |
 | | Item History |
 | | Items with Invalid Names |
