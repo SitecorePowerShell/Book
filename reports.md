@@ -45,7 +45,7 @@ Once the report completes, the results appear in a report window.
 | | Orphaned media assets report |
 | | Owned items |
 | | Recent Workflow History |
-| | Recently Modified |
+| Media items last updated after date<sup>3</sup> | Recently Modified |
 | | Regex Item Searcher |
 | | Renderings |
 | Index Viewer<sup>5</sup> | - |
