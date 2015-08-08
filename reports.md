@@ -46,6 +46,7 @@ While SPE contains many reports, they don't match identical to ASR reports. We'v
 | | Renderings |
 | Index Viewer<sup>5</sup> | - |
 | Rules based report<sup>5</sup> | - |
+| Task Manager report<sup>5</sup> | - |
 
 **Report Location:** Check the reports in SPE under these sections to see the full list.
 
