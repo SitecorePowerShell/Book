@@ -2,7 +2,7 @@
 
 The reports which come out of the box provide a wide variety of information regarding your Sitecore installation.
 
-We've built quite a few reports, many similar to the [Advanced System Report][1] module.
+We've built quite a few reports, many similar to the [Advanced System Report][1] (ASR) module.
 
 #### Running a Report
 
