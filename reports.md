@@ -35,7 +35,7 @@ While SPE contains many reports, they don't match identical to ASR reports. We'v
 | Locked Items<sup>2</sup> | Locked Items |
 | | Logged errors |
 | Logged in Session Manager<sup>5</sup> | Logged in Users |
-| | Multiple versions |
+| Limit number of versions<sup>4</sup> | Multiple versions |
 | | My Owned Items |
 | Media items last updated before date<sup>3</sup> | Not recently modified |
 | Media items not used by content items<sup>3</sup> | Orphaned media assets report |
