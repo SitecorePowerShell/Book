@@ -25,7 +25,7 @@ Recommended by [John West][12] to use as a tool for [maximizing Sitecore develop
 Just provisioned a new language for the whole content tree with a one-liner. Whaaaat?
 Have to include it as a default install for all sandboxes now."* - [Alex Shyba][1]'s comment on Marketplace
 
-*"Thank you for the GitBook. Invaluable Reference."* - [Nick Wesselman][14]
+*"Thank you for the GitBook. Invaluable Reference."* - [Nick Wesselman][14]'s [tweet][15]
 
 #### Training Material
 
@@ -61,3 +61,4 @@ Questions, comments, and feature requests should be submitted on [GitHub][6].
 [12]: https://twitter.com/sitecorejohn
 [13]: https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b
 [14]: https://twitter.com/techphoria414
+[15]: https://twitter.com/techphoria414/status/632033887632289792
