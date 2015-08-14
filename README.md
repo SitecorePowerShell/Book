@@ -25,6 +25,8 @@ Recommended by [John West][12] to use as a tool for [maximizing Sitecore develop
 Just provisioned a new language for the whole content tree with a one-liner. Whaaaat?
 Have to include it as a default install for all sandboxes now."* - [Alex Shyba][1]'s comment on Marketplace
 
+*"Thank you for the GitBook. Invaluable Reference."* - [Nick Wesselman][14]
+
 #### Training Material
 
 The following book should provide you with enough information to use and be  productive with SPE. Don't worry, you will be able to use it without having to write any code.
@@ -58,3 +60,4 @@ Questions, comments, and feature requests should be submitted on [GitHub][6].
 [11]: https://twitter.com/adeneys
 [12]: https://twitter.com/sitecorejohn
 [13]: https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b
+[14]: https://twitter.com/techphoria414
