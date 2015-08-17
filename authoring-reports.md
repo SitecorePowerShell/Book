@@ -20,7 +20,7 @@ The **Content Reports** module includes other reports used for auditing. Below a
  
 #### Examples from the community!
 
-Active Commerce for Sitecore product has published reports on Github that you can checkout [here][4].
+[Active Commerce][5] for Sitecore product has published reports on Github that you can checkout [here][4].
  
 
 
@@ -28,3 +28,4 @@ Active Commerce for Sitecore product has published reports on Github that you ca
 [2]: http://michaellwest.blogspot.com/2014/04/reports-with-sitecore-powershell.html
 [3]: http://blog.najmanowicz.com/2015/05/05/turn-your-sitecore-powershell-reports-into-applications-with-action-scripts/
 [4]: https://github.com/ActiveCommerce/activecommerce-powershell-extensions
+[5]: http://www.activecommerce.com/
