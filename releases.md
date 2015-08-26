@@ -16,6 +16,7 @@ Checkout the new changes for this release below!
 #### Enhancements
 
 - [473](https://github.com/SitecorePowerShell/Console/issues/473) Read-Host and Read-Variable support capturing passwords. Read-Host is now a supported command.
+- [454](https://github.com/SitecorePowerShell/Console/issues/454) Added the ability to download files and media items through the Restful API.
 
 #### Fixes
 
