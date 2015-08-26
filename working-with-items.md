@@ -19,7 +19,7 @@ The following are the primary commands we use to manage Sitecore items:
 | Uri | &#8211; | &#x2713; | |
 | Parent | &#8211; | &#8211; | |
 | AmbiguouisPaths | &#8211; | &#x2713; | |
-| TransfereOptioins | &#x2713; | | |
+| TransferOptions | &#x2713; | &#8211; | |
 
 **Legend:** "&#8211;" - not supported; "&#x2713;" - supported.
 
