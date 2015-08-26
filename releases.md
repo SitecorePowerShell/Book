@@ -13,6 +13,8 @@ Checkout the new changes for this release below!
 
 #### Enhancements
 
+[473](https://github.com/SitecorePowerShell/Console/issues/473) Read-Host and Read-Variable support capturing passwords
+
 #### Fixes
 
 #### Potential Breaking Changes
