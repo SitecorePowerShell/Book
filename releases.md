@@ -19,7 +19,7 @@ Checkout the new changes for this release below!
 
 #### Fixes
 
-[457](https://github.com/SitecorePowerShell/Console/pull/457) `Remove-Rendering` encountered error when removing more than one rendering.
+[457](https://github.com/SitecorePowerShell/Console/pull/457) `Remove-Rendering` encountered error when removing more than one rendering. - @kasaku
 
 #### Potential Breaking Changes
 
