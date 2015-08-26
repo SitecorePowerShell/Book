@@ -4,6 +4,17 @@
 
 The following are the primary commands we use to manage Sitecore items:
 
+|  | Copy-Item | Get-Item | Get-ChildItem |
+| -- | -- | -- | -- |
+| FailSilently | 1:2 | 2:2 | 3:2 |
+| Query | 1:3 | 2:3 | 3:3 |
+| Language | 1:4 | 2:4 | 3:4 |
+| Version | 1:5 | 2:5 | 3:5 |
+| StartWorkflow | 1:6 | 2:6 | 3:6 |
+| Permanently | 1:7 | 2:7 | 3:7 |
+
+
+* `Copy-Item`
 * `Get-Item` - Returns a single item at the specified path.
 * `Get-ChildItem` - Returns one or more child items from the specified path.
 * `Move-Item`
