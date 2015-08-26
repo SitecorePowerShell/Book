@@ -2,6 +2,21 @@
 
 Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback on Twitter and the [Marketplace][1] or report issues on [Github][2].
 
+## Version 3.3
+Checkout the new changes for this release below!
+
+[Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=milestone%3A3.3+is%3Aclosed)
+
+### Summary of important changes
+
+#### New Features
+
+#### Enhancements
+
+#### Fixes
+
+#### Potential Breaking Changes
+
 ## Version 3.2
 We've managed to turnaround a release in a little over a month!
 
