@@ -2,9 +2,14 @@
 
 #### How do I retrieve my Sitecore items the PowerShell way?
 
-The following two commands will retrieve Sitecore items:
+The following are the primary commands we use to manage Sitecore items:
+
 * `Get-Item` - Returns a single item at the specified path.
 * `Get-ChildItem` - Returns one or more child items from the specified path.
+* `Move-Item`
+* `New-Item`
+* `Remove-Item`
+* `Rename-Item`
 
 Below we will show how to use each command with the Windows PowerShell syntax followed by the common C# equivalent.
 
