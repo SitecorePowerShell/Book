@@ -105,6 +105,8 @@ $session = New-ScriptSession -Username admin -Password b -ConnectionUri $instanc
 Invoke-RemoteScript -Session $session -ScriptBlock { $env:computername }
 ```
 
+#### File and Media Service
+
 **References:**
 * Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]
