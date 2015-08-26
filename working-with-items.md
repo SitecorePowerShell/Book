@@ -7,18 +7,18 @@ The following are the primary commands we use to manage Sitecore items:
 |  | Copy-Item | Get-Item | Get-ChildItem |
 | -- | -- | -- | -- |
 | FailSilently | &#x2713; | 2:2 | 3:2 |
-| Query | &#x2713; | 2:3 | 3:3 |
-| Language | &#x2713; | 2:4 | 3:4 |
-| Version | &#x2713; | 2:5 | 3:5 |
+| Query | 1:3 | &#x2713; | 3:3 |
+| Language | 1:4 | &#x2713; | 3:4 |
+| Version | 1:5 | &#x2713; | 3:5 |
 | StartWorkflow | 1:6 | 2:6 | 3:6 |
 | Permanently | 1:7 | 2:7 | 3:7 |
 | Item | &#x2713; | | |
 | DestinationItem | &#x2713; | | |
-| ID | &#x2713; | | |
-| Database | &#x2713; | | |
-| Uri | &#x2713; | | |
+| ID | | &#x2713; | |
+| Database | | &#x2713; | |
+| Uri | | &#x2713; | |
 | Parent | | | |
-| AmbiguouisPaths | &#x2713; | | |
+| AmbiguouisPaths | | &#x2713; | |
 | TransfereOptioins | &#x2713; | | |
 
 
