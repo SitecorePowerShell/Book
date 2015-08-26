@@ -12,6 +12,7 @@ Checkout the new changes for this release below!
 #### New Features
 
 - [463](https://github.com/SitecorePowerShell/Console/issues/463) `Receive-ScriptSession`, `Stop-ScriptSession`, `Start-ScriptSession` commands added to help with long running scripts.
+- [446](https://github.com/SitecorePowerShell/Console/issues/446) Type accelerators are now supported in SPE. Includes `Item`, `AccountIdentity`, `User`, and others.
 
 #### Enhancements
 
