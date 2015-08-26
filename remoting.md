@@ -107,6 +107,8 @@ Invoke-RemoteScript -Session $session -ScriptBlock { $env:computername }
 
 #### File and Media Service
 
+We have provided a new service for downloading all files and media items from the server. This disabled by default and can be enabled using a patch file. See the [Security](security.md) page for more details about the services available and how to configure.
+
 **References:**
 * Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]
