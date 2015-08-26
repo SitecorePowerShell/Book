@@ -32,6 +32,8 @@ Look for the following section and enable/disable as needed.
         <restfulv1 enabled="false" />
         <restfulv2 enabled="true" />
         <remoting enabled="true" />
+        <fileDownload enabled="false" />
+        <mediaDownload enabled="false" />
         <client enabled="true" />
     </services>
 </sitecore>
@@ -40,6 +42,8 @@ Look for the following section and enable/disable as needed.
 * **RESTful v1** - Used in early version of SPE. Disabled by default. Service associated with `RemoteScriptCall.ashx`.
 * **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
 * **Remoting** - Used when passing scripts to SPE for execution. Service associated with `RemoteAutomation.asmx`.
+* **File Download** - Used when the url contains contains all the information needed to download a file from the server. Service associated with `RemoteScriptCall.ashx`.
+* **Media Item Download** - Used when the url contains contains all the information needed to download a media item from the server. Service associated with `RemoteScriptCall.ashx`.
 * **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
 
 ##### Restrict Users and Roles
