@@ -11,15 +11,15 @@ Checkout the new changes for this release below!
 
 #### New Features
 
-[463](https://github.com/SitecorePowerShell/Console/issues/463) `Receive-ScriptSession`, `Stop-ScriptSession`, `Start-ScriptSession` commands added to help with long running scripts.
+- [463](https://github.com/SitecorePowerShell/Console/issues/463) `Receive-ScriptSession`, `Stop-ScriptSession`, `Start-ScriptSession` commands added to help with long running scripts.
 
 #### Enhancements
 
-[473](https://github.com/SitecorePowerShell/Console/issues/473) Read-Host and Read-Variable support capturing passwords. Read-Host is now a supported command.
+- [473](https://github.com/SitecorePowerShell/Console/issues/473) Read-Host and Read-Variable support capturing passwords. Read-Host is now a supported command.
 
 #### Fixes
 
-[457](https://github.com/SitecorePowerShell/Console/pull/457) `Remove-Rendering` encountered error when removing more than one rendering. - @kasaku
+- [457](https://github.com/SitecorePowerShell/Console/pull/457) `Remove-Rendering` encountered error when removing more than one rendering.
 
 #### Potential Breaking Changes
 
