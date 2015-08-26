@@ -8,17 +8,17 @@ The following are the primary commands we use to manage Sitecore items:
 | -- | -- | -- | -- |
 | FailSilently | &#x2713; | &#8211; | 3:2 |
 | Query | &#8211; | &#x2713; | 3:3 |
-| Language | &#8211; | &#x2713; | 3:4 |
-| Version | &#8211; | &#x2713; | 3:5 |
+| Language | &#8211; | &#x2713; | &#x2713; |
+| Version | &#8211; | &#x2713; | &#x2713; |
 | StartWorkflow | &#8211; | &#8211; | 3:6 |
 | Permanently | &#8211; | &#8211; | 3:7 |
-| Item | &#x2713; | &#8211; | |
+| Item | &#x2713; | &#8211; | &#x2713; |
 | DestinationItem | &#x2713; | &#8211; | |
-| ID | &#8211; | &#x2713; | |
+| ID | &#8211; | &#x2713; | &#x2713; |
 | Database | &#8211; | &#x2713; | |
 | Uri | &#8211; | &#x2713; | |
 | Parent | &#8211; | &#8211; | |
-| AmbiguouisPaths | &#8211; | &#x2713; | |
+| AmbiguousPaths | &#8211; | &#x2713; | &#x2713; |
 | TransferOptions | &#x2713; | &#8211; | |
 
 **Legend:** "&#8211;" - not supported; "&#x2713;" - supported.
