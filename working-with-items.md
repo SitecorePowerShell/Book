@@ -6,7 +6,7 @@ The following are the primary commands we use to manage Sitecore items:
 
 |  | Copy-Item | Get-Item | Get-ChildItem |
 | -- | -- | -- | -- |
-| FailSilently | 1:2 | 2:2 | 3:2 |
+| FailSilently | &#x2713; | 2:2 | 3:2 |
 | Query | 1:3 | 2:3 | 3:3 |
 | Language | 1:4 | 2:4 | 3:4 |
 | Version | 1:5 | 2:5 | 3:5 |
