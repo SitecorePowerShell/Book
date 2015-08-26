@@ -12,6 +12,14 @@ The following are the primary commands we use to manage Sitecore items:
 | Version | 1:5 | 2:5 | 3:5 |
 | StartWorkflow | 1:6 | 2:6 | 3:6 |
 | Permanently | 1:7 | 2:7 | 3:7 |
+| Item | | | |
+| DestinationItem | | | |
+| ID | | | |
+| Database | | | |
+| Uri | | | |
+| Parent | | | |
+| AmbiguouisPaths | | | |
+| TransfereOptioins | | | |
 
 
 * `Copy-Item`
