@@ -120,6 +120,7 @@ Receive-RemoteItem -Session $session -Path "default.js" -RootPath App -Destinati
 **Example:** The following downloads a single media item from the library.
 
 ```powershell
+Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
 ```
