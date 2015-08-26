@@ -17,6 +17,7 @@ Checkout the new changes for this release below!
 
 - [473](https://github.com/SitecorePowerShell/Console/issues/473) Read-Host and Read-Variable support capturing passwords. Read-Host is now a supported command.
 - [454](https://github.com/SitecorePowerShell/Console/issues/454) Added the ability to download files and media items through the Restful API.
+- [453](https://github.com/SitecorePowerShell/Console/issues/453) Enhanced ISE theme and reduced the need for maintenance.
 
 #### Fixes
 
