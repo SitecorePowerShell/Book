@@ -11,6 +11,8 @@ Checkout the new changes for this release below!
 
 #### New Features
 
+[463](https://github.com/SitecorePowerShell/Console/issues/463) `Receive-ScriptSession`, `Stop-ScriptSession`, `Start-ScriptSession` commands added to help with long running scripts.
+
 #### Enhancements
 
 [473](https://github.com/SitecorePowerShell/Console/issues/473) Read-Host and Read-Variable support capturing passwords. Read-Host is now a supported command.
