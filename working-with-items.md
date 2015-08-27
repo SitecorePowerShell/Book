@@ -2,7 +2,7 @@
 
 #### How do I retrieve my Sitecore items the PowerShell way?
 
-The following are the primary commands we use to manage Sitecore items. You may be wondering why we call the out more specifically than the other commands. We do this because they are included by default in Windows PowerShell in what is called a *Provider*.
+The following are the primary commands we use to manage Sitecore items. You may be wondering why we call the out more specifically than the other commands. We do this because they are included by default in Windows PowerShell in what is called a *Provider*. The provider only allows adding extra parameters as *Dynamic Parameters*.
 
 |  | Copy-Item | Get-Item | Get-ChildItem | Move-Item | New-Item | Remove-Item |
 | -- | -- | -- | -- | -- | -- | -- |
