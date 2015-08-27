@@ -18,7 +18,7 @@ The following commands provide you with the core methods needed to manage your c
 | Query | | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
 | StartWorkflow | | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
 | TransferOptions | | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
-| Uri | | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
+| Uri | Matches the item by ItemUri. | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
 | Version | | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 
 **Legend:** "&#8211;" - not supported; "&#x2713;" - supported.
