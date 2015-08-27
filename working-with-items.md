@@ -12,14 +12,14 @@ The following commands provide you with the core methods needed to manage your c
 | FailSilently | Unauthorized access errors will be suppressed | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#x2713; |
 | ID | Matches the item by ID. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 | Item | Instance item. | &#x2713; | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; |
-| Language | | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | &#8211; |
+| Language | Specifies the languages to include. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | &#8211; |
 | Parent | | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
 | Permanently | Specifies the item should be deleted rather than recycled. | &#8211; | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; |
 | Query | Matches the items by an XPath query. | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
 | StartWorkflow | | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
 | TransferOptions | Options flag used when copying from one database to another. | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
 | Uri | Matches the item by ItemUri. | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
-| Version | | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
+| Version | Specifies the version to include. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 
 **Legend:** "&#8211;" - not supported; "&#x2713;" - supported.
 
