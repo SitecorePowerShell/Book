@@ -14,7 +14,7 @@ The following commands provide you with the core methods needed to manage your c
 | Item | Instance item. | &#x2713; | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; |
 | Language | | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | &#8211; |
 | Parent | | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
-| Permanently | | &#8211; | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; |
+| Permanently | Specifies the item should be deleted rather than recycled. | &#8211; | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; |
 | Query | Matches the items by an XPath query. | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
 | StartWorkflow | | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
 | TransferOptions | Options flag used when copying from one database to another. | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
