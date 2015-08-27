@@ -9,7 +9,7 @@ The following commands provide you with the core methods needed to manage your c
 | AmbiguousPaths | | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 | Database | | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
 | DestinationItem | | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
-| FailSilently | | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#x2713; |
+| FailSilently | Unauthorized access errors will be suppressed | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#x2713; |
 | ID | | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 | Item | | &#x2713; | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; |
 | Language | | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | &#8211; |
