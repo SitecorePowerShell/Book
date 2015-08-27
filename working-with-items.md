@@ -4,22 +4,22 @@
 
 The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using *Dynamic Parameters*. These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provide this table to help you discover the hidden gems within each command.
 
-|  | Copy-Item | Get-Item | Get-ChildItem | Move-Item | New-Item | Remove-Item |
-| -- | -- | -- | -- | -- | -- | -- |
-| FailSilently | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#x2713; |
-| Query | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | |
-| Language | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | |
-| Version | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | |
-| StartWorkflow | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | |
-| Permanently | &#8211; | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; |
-| Item | &#x2713; | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; |
-| DestinationItem | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | |
-| ID | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | |
-| Database | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | |
-| Uri | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | |
-| Parent | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | |
-| AmbiguousPaths | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | |
-| TransferOptions | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | |
+|  | Copy-Item | Get-Item | Get-ChildItem | Move-Item | New-Item | Remove-Item | Rename-Item |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| FailSilently | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#x2713; | |
+| Query | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | | |
+| Language | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | | |
+| Version | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | | |
+| StartWorkflow | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | | |
+| Permanently | &#8211; | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | |
+| Item | &#x2713; | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | |
+| DestinationItem | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | | |
+| ID | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | | |
+| Database | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | | |
+| Uri | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | | |
+| Parent | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | | |
+| AmbiguousPaths | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | | |
+| TransferOptions | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | | |
 
 **Legend:** "&#8211;" - not supported; "&#x2713;" - supported.
 
