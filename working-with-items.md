@@ -8,7 +8,7 @@ The following commands provide you with the core methods needed to manage your c
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | AmbiguousPaths | More than one item matches the criteria so show them all. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 | Database | The specified database will be used. Requires the ID to be set.  | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
-| DestinationItem | | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
+| DestinationItem | Parent item to receive the copied item. | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
 | FailSilently | Unauthorized access errors will be suppressed | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#x2713; |
 | ID | Matches the item by ID. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 | Item | | &#x2713; | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; |
