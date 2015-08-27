@@ -15,7 +15,7 @@ The following commands provide you with the core methods needed to manage your c
 | Language | | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | &#8211; |
 | Parent | | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
 | Permanently | | &#8211; | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; |
-| Query | | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
+| Query | Matches the items by an XPath query. | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
 | StartWorkflow | | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
 | TransferOptions | | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
 | Uri | Matches the item by ItemUri. | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
