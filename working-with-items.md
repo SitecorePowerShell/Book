@@ -23,15 +23,6 @@ The following commands provide you with the core methods needed to manage your c
 
 **Legend:** "&#8211;" - not supported; "&#x2713;" - supported.
 
-
-* `Copy-Item`
-* `Get-Item` - Returns a single item at the specified path.
-* `Get-ChildItem` - Returns one or more child items from the specified path.
-* `Move-Item`
-* `New-Item`
-* `Remove-Item`
-* `Rename-Item`
-
 Below we will show how to use each command with the Windows PowerShell syntax followed by the common C# equivalent.
 
 If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Initialize-Item` command.
