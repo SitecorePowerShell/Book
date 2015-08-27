@@ -4,7 +4,7 @@
 
 The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using [Dynamic Parameters][1]. These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provide this table to help you discover the hidden gems within each command.
 
-|  | Copy-Item | Get-Item | Get-ChildItem | Move-Item | New-Item | Remove-Item |
+| Parameter Name | Copy-Item | Get-Item | Get-ChildItem | Move-Item | New-Item | Remove-Item |
 | -- | -- | -- | -- | -- | -- | -- |
 | AmbiguousPaths | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 | Database | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
