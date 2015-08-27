@@ -7,7 +7,7 @@ The following commands provide you with the core methods needed to manage your c
 | Parameter Name | Description | Copy-Item | Get-Item | Get-ChildItem | Move-Item | New-Item | Remove-Item |
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | AmbiguousPaths | More than one item matches the criteria so show them all. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
-| Database | | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
+| Database | The database will be used when the ID is specified.  | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
 | DestinationItem | | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
 | FailSilently | Unauthorized access errors will be suppressed | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#x2713; |
 | ID | | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
