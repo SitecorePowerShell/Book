@@ -309,6 +309,12 @@ Some other classes you may want to use with the `New-UsingBlock` function:
 * `Sitecore.Data.Proxies.ProxyDisabler`
 * `Sitecore.Data.DatabaseCacheDisabler`
 * `Sitecore.Data.Events.EventDisabler`
+
+#### Copy items to another database
+
+
+
+
 #### References
 
 * [Working with Sitecore Items in PowerShell Extensions](http://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
