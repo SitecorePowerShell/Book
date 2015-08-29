@@ -347,7 +347,7 @@ Sample Item 3                    False    {en}                     {F6F4F7B7-5E7
 
 #### Remove items permanently
 
-**Example:** The following removes items permanently. Proceed with caution.
+**Example:** The following removes the item permanently. Proceed with caution.
 
 ```powershell
 Remove-Item -Path "master:\content\home\sample item\Sample Item 3" -Permanently
