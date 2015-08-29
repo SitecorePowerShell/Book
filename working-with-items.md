@@ -310,7 +310,7 @@ Some other classes you may want to use with the `New-UsingBlock` function:
 * `Sitecore.Data.DatabaseCacheDisabler`
 * `Sitecore.Data.Events.EventDisabler`
 
-#### Copy items to a new distination
+#### Copy items to a new destination
 
 You will find yourself one day in need of copying items on a small to large scale. The `Copy-Item` command will likely meet the need.
 
@@ -322,6 +322,15 @@ Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "m
 
 **Note:** The item name will match just as you type it in the command. Lowercase name in the destination will result in an item with a lowercase name.
 
+#### Move items to a new destination
+
+There is a always a better way to do something. Moving items en masse is certainly one that you don't want to do by hand.
+
+**Example:** The following moves the item from one parent to another.
+
+``powershell
+Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "master:\content\home\sample item 2\Sample Item 2-1"
+```
 
 #### References
 
