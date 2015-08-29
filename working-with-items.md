@@ -337,12 +337,20 @@ Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "m
 **Example:** The following creates a new item with the specified template.
 
 ```powershell
-PS master:\>New-Item -Path "master:\content\home\sample item\Sample Item 3" -ItemType "Sample/Sample Item"
+New-Item -Path "master:\content\home\sample item\Sample Item 3" -ItemType "Sample/Sample Item"
  
 Name                             Children Languages                Id                                     TemplateName
 ----                             -------- ---------                --                                     ------------
 Sample Item 3                    False    {en}                     {F6F4F7B7-5E72-4C16-9294-218D80ED89E8} Sample Item
  
+```
+
+#### Remove items permanently
+
+**Example:** The following removes items permanently. Proceed with caution.
+
+```powershell
+Remove-Item -Path "master:\content\home\sample item\Sample Item 3" -Permanently
 ```
 
 #### References
