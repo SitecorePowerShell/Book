@@ -324,7 +324,7 @@ Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "m
 
 #### Move items to a new destination
 
-There is a always a better way to do something. Moving items en masse is certainly one that you don't want to do by hand.
+There is a always a better way to do something. Moving items en masse is certainly one that you don't want to do by hand. If the destination item exists the moved item will be added as a child. If the destination item does not exist the source item will be renamed when moved.
 
 **Example:** The following moves the item from one parent to another.
 
