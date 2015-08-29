@@ -39,6 +39,7 @@ We also maintain a comprehensive list of links to [blogs and videos][2] to help 
 
 * [Adam Najmanowicz][3] | [@adamnaj][7]
 * [Michael West][4] | [@michaelwest101][8]
+* [Mike Reynolds][5] | [@mike_i_reynolds][9]
 
 #### Help and Support
 
