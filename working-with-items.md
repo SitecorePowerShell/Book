@@ -105,11 +105,6 @@ PS master:\> Get-ChildItem master:/content -Language * -Version * | Format-Table
   
 DisplayName         Language ID                                     Version TemplateName
 -----------         -------- --                                     ------- ------------
-Copy of Home        en       {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
-Home                de-DE    {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
-Copy of Home        pl-PL    {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
-Copy of Home        en-US    {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
-Hjem                da       {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
 Home                en       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Home                de-DE    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Home                pl-PL    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
