@@ -310,7 +310,7 @@ Some other classes you may want to use with the `New-UsingBlock` function:
 * `Sitecore.Data.DatabaseCacheDisabler`
 * `Sitecore.Data.Events.EventDisabler`
 
-#### Copy items to another database
+#### Copy items to a new distination
 
 You will find yourself one day in need of copying items on a small to large scale. The `Copy-Item` command will likely meet the need.
 
