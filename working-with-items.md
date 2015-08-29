@@ -185,7 +185,7 @@ Name Children Languages                Id                                     Te
 Home True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-In all the examples you'll notice we specified the database. Windows PowerShell needs to know which provider to execute within. Other examples of providers include the following:
+In all the examples you'll notice we specified the database. Windows PowerShell needs to know which provider to execute within. This also signals to SPE to show the dynamic parameters. Other examples of providers include the following:
 * **HKLM:** - The registry provider for HKEY_LOCAL_MACHINE.
 * **C:** - The filesystem provider for the C drive.
 
