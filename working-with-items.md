@@ -329,7 +329,7 @@ There is a always a better way to do something. Moving items en masse is certain
 **Example:** The following moves the item from one parent to another.
 
 ``powershell
-Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "master:\content\home\sample item 2\Sample Item 2-1"
+Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "master:\content\home\sample item 2\"
 ```
 
 #### References
