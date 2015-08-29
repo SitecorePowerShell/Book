@@ -312,7 +312,15 @@ Some other classes you may want to use with the `New-UsingBlock` function:
 
 #### Copy items to another database
 
+You will find yourself one day in need of copying items on a small to large scale. The `Copy-Item` command will likely meet the need.
 
+**Example:** The following copies the item to the specified path with a new ID.
+
+```powershell
+Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "master:\content\home\Sample Item\Sample Item 2"
+```
+
+**Note:** The item name will match just as you type it in the command. Lowercase name in the destination will result in an item with a lowercase name.
 
 
 #### References
