@@ -332,6 +332,19 @@ There is a always a better way to do something. Moving items en masse is certain
 Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "master:\content\home\sample item 2\"
 ```
 
+#### Create new items
+
+**Example:** The following creates a new item with the specified template.
+
+```powershell
+PS master:\>New-Item -Path "master:\content\home\sample item\Sample Item 3" -ItemType "Sample/Sample Item"
+ 
+Name                             Children Languages                Id                                     TemplateName
+----                             -------- ---------                --                                     ------------
+Sample Item 3                    False    {en}                     {F6F4F7B7-5E72-4C16-9294-218D80ED89E8} Sample Item
+ 
+```
+
 #### References
 
 * [Working with Sitecore Items in PowerShell Extensions](http://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
