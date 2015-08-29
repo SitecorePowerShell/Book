@@ -120,9 +120,6 @@ GetEngaged          de-DE    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       Tena
 GetEngaged          es-ES    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
 GetEngaged          pt-BR    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
 GetEngaged          pl-PL    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
-RetailTheatre       en       {436460CF-33E2-47C0-90B5-F856630266E3} 1       Node
-Showcase            en       {DB8C05B8-25B5-42DE-B6CB-4ACE186283DA} 1       TenantTemplate
-Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       TenantTemplate
 ```
 
 #### Getting items by Path with Sitecore query
