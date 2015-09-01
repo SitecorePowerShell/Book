@@ -5,7 +5,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 ## Version 3.3
 Yet another little-over-a-month update and in many aspects a major one!
 
-[Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=milestone%3A3.3+is%3Aclosed) - 35 issues and new team members @Kasaku & @marrrcin!
+[Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=milestone%3A3.3+is%3Aclosed) - 35 issues and new contributing members [@Kasaku](https://github.com/Kasaku) & [@marrrcin](https://github.com/marrrcin)!
 
 ### Summary of important changes
 
