@@ -105,6 +105,26 @@ $session = New-ScriptSession -Username admin -Password b -ConnectionUri $instanc
 Invoke-RemoteScript -Session $session -ScriptBlock { $env:computername }
 ```
 
+#### File and Media Service
+
+We have provided a service for downloading all files and media items from the server. This disabled by default and can be enabled using a patch file. See the [Security](security.md) page for more details about the services available and how to configure.
+
+**Example:** The following downloads a single file from the *Package* directory.
+
+```powershell
+Import-Module -Name SPE
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
+Receive-RemoteItem -Session $session -Path "default.js" -RootPath App -Destination "C:\Files\"
+```
+
+**Example:** The following downloads a single media item from the library.
+
+```powershell
+Import-Module -Name SPE
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
+Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
+```
+
 **References:**
 * Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]

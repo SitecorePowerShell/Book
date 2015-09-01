@@ -1,12 +1,29 @@
 # Working with Sitecore items
 
-#### How do I retrieve my Sitecore items the PowerShell way?
+#### How do I manage my content through PowerShell?
 
-The following two commands will retrieve Sitecore items:
-* `Get-Item` - Returns a single item at the specified path.
-* `Get-ChildItem` - Returns one or more child items from the specified path.
+The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using [Dynamic Parameters][1]. These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provided this table to help you discover the hidden gems within each command.
 
-Below we will show how to use each command with the Windows PowerShell syntax followed by the common C# equivalent.
+| Parameter Name | Description | Copy-Item | Get-Item | Get-ChildItem | Move-Item | New-Item | Remove-Item |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| AmbiguousPaths | More than one item matches the criteria so show them all. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
+| Database | The specified database will be used. Requires the ID to be set.  | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
+| DestinationItem | Parent item to receive the copied item. | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
+| FailSilently | Unauthorized access errors will be suppressed | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#x2713; |
+| ID | Matches the item by ID. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
+| Item | Instance item. | &#x2713; | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; |
+| Language | Specifies the languages to include. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | &#8211; |
+| Parent | Specifies the parent item. | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
+| Permanently | Specifies the item should be deleted rather than recycled. | &#8211; | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; |
+| Query | Matches the items by an XPath query. | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
+| StartWorkflow | Initiates the default workflow, if any. | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
+| TransferOptions | Options flag used when copying from one database to another. | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
+| Uri | Matches the item by ItemUri. | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
+| Version | Specifies the version to include. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
+
+**Legend:** "&#8211;" - not supported; "&#x2713;" - supported.
+
+Below we will show how to use each command with the Windows PowerShell syntax followed by some examples of the common C# equivalent.
 
 If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Initialize-Item` command.
 
@@ -88,11 +105,6 @@ PS master:\> Get-ChildItem master:/content -Language * -Version * | Format-Table
   
 DisplayName         Language ID                                     Version TemplateName
 -----------         -------- --                                     ------- ------------
-Copy of Home        en       {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
-Home                de-DE    {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
-Copy of Home        pl-PL    {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
-Copy of Home        en-US    {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
-Hjem                da       {503713E5-F9EE-4847-AEAF-DD13FD853004} 1       Sample Item
 Home                en       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Home                de-DE    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Home                pl-PL    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
@@ -108,9 +120,6 @@ GetEngaged          de-DE    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       Tena
 GetEngaged          es-ES    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
 GetEngaged          pt-BR    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
 GetEngaged          pl-PL    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
-RetailTheatre       en       {436460CF-33E2-47C0-90B5-F856630266E3} 1       Node
-Showcase            en       {DB8C05B8-25B5-42DE-B6CB-4ACE186283DA} 1       TenantTemplate
-Zengage             en       {D55FE1D5-1CAC-4A2E-9DFE-D624D0F51886} 1       TenantTemplate
 ```
 
 #### Getting items by Path with Sitecore query
@@ -176,7 +185,7 @@ Name Children Languages                Id                                     Te
 Home True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-In all the examples you'll notice we specified the database. Windows PowerShell needs to know which provider to execute within. Other examples of providers include the following:
+In all the examples you'll notice we specified the database. Windows PowerShell needs to know which provider to execute within. This also signals to SPE to show the dynamic parameters. Other examples of providers include the following:
 * **HKLM:** - The registry provider for HKEY_LOCAL_MACHINE.
 * **C:** - The filesystem provider for the C drive.
 
@@ -300,6 +309,52 @@ Some other classes you may want to use with the `New-UsingBlock` function:
 * `Sitecore.Data.Proxies.ProxyDisabler`
 * `Sitecore.Data.DatabaseCacheDisabler`
 * `Sitecore.Data.Events.EventDisabler`
+
+#### Copy items to a new destination
+
+You will find yourself one day in need of copying items on a small to large scale. The `Copy-Item` command will likely meet the need.
+
+**Example:** The following copies the item to the specified path with a new ID.
+
+```powershell
+Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "master:\content\home\Sample Item\Sample Item 2"
+```
+
+**Note:** The item name will match just as you type it in the command. Lowercase name in the destination will result in an item with a lowercase name.
+
+#### Move items to a new destination
+
+There is a always a better way to do something. Moving items en masse is certainly one that you don't want to do by hand. If the destination item exists the moved item will be added as a child. If the destination item does not exist the source item will be renamed when moved.
+
+**Example:** The following moves the item from one parent to another.
+
+```powershell
+Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "master:\content\home\sample item 2\"
+```
+
+#### Create new items
+
+**Example:** The following creates a new item with the specified template.
+
+```powershell
+New-Item -Path "master:\content\home\sample item\Sample Item 3" -ItemType "Sample/Sample Item"
+ 
+Name                             Children Languages                Id                                     TemplateName
+----                             -------- ---------                --                                     ------------
+Sample Item 3                    False    {en}                     {F6F4F7B7-5E72-4C16-9294-218D80ED89E8} Sample Item
+ 
+```
+
+#### Remove items permanently
+
+**Example:** The following removes the item permanently. Proceed with caution.
+
+```powershell
+Remove-Item -Path "master:\content\home\sample item\Sample Item 3" -Permanently
+```
+
 #### References
 
 * [Working with Sitecore Items in PowerShell Extensions](http://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
+ 
+[1]: https://technet.microsoft.com/en-us/library/dd878299%28v=vs.85%29.aspx
