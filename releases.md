@@ -35,7 +35,6 @@ Yet another little-over-a-month update and in many aspects a major one!
 - [463](https://github.com/SitecorePowerShell/Console/issues/463) The changes to `Get-ScriptSession` syntax can potentially interfere with scripts using it
 
 
-
 ## Version 3.2
 We've managed to turnaround a release in a little over a month!
 
