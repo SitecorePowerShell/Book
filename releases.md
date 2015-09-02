@@ -32,7 +32,7 @@ Yet another little-over-a-month update and in many aspects a major one!
 - [Lots and lots more of them... actually 10 more!](https://github.com/SitecorePowerShell/Console/issues?q=milestone%3A3.3+is%3Aclosed+label%3Abug)
 
 #### Potential Breaking Changes
-- [463](https://github.com/SitecorePowerShell/Console/issues/463) The changes to `Get-ScriptSession` syntax can potentially interfere with scripts using it
+- You may find that the changes to [463](https://github.com/SitecorePowerShell/Console/issues/463) `Get-ScriptSession` syntax can potentially interfere with scripts using it.
 
 
 ## Version 3.2
