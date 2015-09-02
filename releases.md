@@ -28,7 +28,7 @@ Yet another little-over-a-month update and in many aspects a major one!
 - Last but not least our second new contributor @marrrcin has contributed [444](https://github.com/SitecorePowerShell/Console/issues/444) a way to Get-ChildItem by providing item ID with the `-ID` parameter rather than using the path.
 #### Fixes
 - We discovered that when removing more than one rendering the [453](https://github.com/SitecorePowerShell/Console/pull/453) `Remove-Rendering` command encountered an error .
-- [455](https://github.com/SitecorePowerShell/Console/issues/455) `Get-ItemReference` command returned the wrong item.
+- The very useful [455](https://github.com/SitecorePowerShell/Console/issues/455) `Get-ItemReference` command returned the wrong item, so we fixed that.
 - [Lots and lots more of them... actually 10 more!](https://github.com/SitecorePowerShell/Console/issues?q=milestone%3A3.3+is%3Aclosed+label%3Abug)
 
 #### Potential Breaking Changes
