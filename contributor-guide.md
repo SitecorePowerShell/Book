@@ -6,3 +6,7 @@ High level steps:
 3. Install latest version of SPE found here C:\Projects\SitecorePowerShell\Data\packages
 4. Execute C:\Projects\SitecorePowerShell\Setup-Folders.ps1
 5. Revert Sitecore trees to the latest items
+6. Setup Sitecore libraries
+7. Add post-build setup
+8. Serialize item changes
+9. 
