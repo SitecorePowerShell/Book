@@ -34,5 +34,5 @@ The solution is upgraded to Visual Studio 2015.
  - Sitecore.Logging.dll
  - Sitecore.NVelocity.dll
  - Sitecore.Update.dll
-
+5. 
 
