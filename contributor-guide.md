@@ -41,4 +41,4 @@ The solution is upgraded to Visual Studio 2015.
 . C:\inetpub\wwwroot\Console\setup-Folders.ps1
 ```
 8. Compile the solution in Visual Studio
-9. 
+9. Sync all of the Sitecore items
