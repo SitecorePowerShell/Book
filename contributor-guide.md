@@ -23,7 +23,7 @@ The solution is upgraded to Visual Studio 2015.
  git init
  git remote add origin https://github.com/SitecorePowerShell/Console.git
  git fetch origin
- 
+ git checkout -b master --track origin/master
  
  ```
 
