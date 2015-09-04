@@ -12,7 +12,9 @@ High level steps:
 
 The following guide should provide you with enough information to setup a development environment configured to contribute to SPE.
 
+The solution is upgraded to Visual Studio 2015.
+
 1. Meet the prerequisites found [here](installation.md)
-2. Ensure Visual Studio 2015 is installed.
+2. 
 
 
