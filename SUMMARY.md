@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Installation](installation.md)
-   * Contributor Guide
+   * [Contributor Guide](contributor-guide.md)
 * [Interfaces](interfaces.md)
    * [Command Line Console](console.md)
    * [Integrated Scripting Environment](scripting.md)
