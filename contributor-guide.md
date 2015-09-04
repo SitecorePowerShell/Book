@@ -17,7 +17,6 @@ The solution is upgraded to Visual Studio 2015.
 1. Meet the prerequisites found [here](installation.md)
 2. Install Sitecore 8+ to `C:\inetpub\wwwroot\Console`
 3. Fetch source code to installation path
-
 ```bash
  cd "C:\inetpub\wwwroot\Console"
  git init
@@ -26,5 +25,6 @@ The solution is upgraded to Visual Studio 2015.
  git checkout -b master --track origin/master
  
  ```
+4. 
 
 
