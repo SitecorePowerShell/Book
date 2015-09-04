@@ -13,5 +13,6 @@ High level steps:
 The following guide should provide you with enough information to setup a development environment configured to contribute to SPE.
 
 1. Meeting the prerequisites found [here](installation.md)
+2. 
 
 
