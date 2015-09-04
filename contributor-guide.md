@@ -24,7 +24,7 @@ The solution is upgraded to Visual Studio 2015.
  git fetch origin
  git checkout -b master --track origin/master
  ```
-4. Copy Sitecore dependencies to `C:\inetpub\wwwroot\Console\Libraries' path
+4. Copy Sitecore dependencies to `C:\inetpub\wwwroot\Console\Libraries` path
  - Sitecore.Analytics.dll
  - Sitecore.Client.dll
  - Sitecore.ContentSearch.dll
