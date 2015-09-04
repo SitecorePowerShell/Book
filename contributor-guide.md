@@ -9,4 +9,5 @@ High level steps:
 6. Setup Sitecore libraries
 7. Add post-build setup
 8. Serialize item changes
-9. 
+
+The following guide should provide you with enough information to setup a development environment configured to contribute to SPE.
