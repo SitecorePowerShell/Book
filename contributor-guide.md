@@ -25,6 +25,7 @@ The solution is upgraded to Visual Studio 2015.
  git checkout -b master --track origin/master
  ```
 4. Copy Sitecore dependencies
+ - Sitecore.Analytics.dll
  - Sitecore.Client.dll
  - Sitecore.ContentSearch.dll
  - Sitecore.ContentSearch.Linq.dll
