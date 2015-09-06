@@ -24,7 +24,7 @@ Following the installation you'll find these new items added to the Sitecore men
 
 You may also clone the project from [GitHub][5] and compile it. This allows you to access the latest functionality without waiting for a new release. See the following [article][6] for instructions on how to get up and running.
 
-> $ git clone https://github.com/SitecorePowerShell/Console.git  
+We've also written a [contributor guide](contributor-guide.md) in this book. 
 
 #### Troubleshooting
 
@@ -35,6 +35,6 @@ See the troubleshooting section [here](troubleshooting.md)
 [3]: http://www.microsoft.com/en-us/download/details.aspx?id=40855 "Link to version 4"
 [4]: https://marketplace.sitecore.net/
 [5]: https://git.io/spe
-[6]: http://blog.najmanowicz.com/2015/03/03/set-up-sitecore-powershell-extensions-development-environment/
+[6]: #
 [7]: http://stackoverflow.com/questions/1825585/determine-installed-powershell-version
 [8]: https://technet.microsoft.com/en-us/library/ee176961.aspx

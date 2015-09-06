@@ -6,7 +6,7 @@ There are a number of use cases where you need to remotely run scripts within SP
 
 We have provided a handy way of executing scripts via web service using the Remoting Automation Service.
 
-##### Video Tutorial
+##### Remoting Module Setup
 
 [![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
 
@@ -123,6 +123,58 @@ Receive-RemoteItem -Session $session -Path "default.js" -RootPath App -Destinati
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
+```
+
+#### Script Sessions and Web API Tutorial
+
+[![SPE Web API](http://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)](https://www.youtube.com/watch?v=SmZBGKOryzQ "Click for a quick demo")
+
+#### Advanced Script Sessions
+
+Inevitably you will need to have long running processes triggered remotely. In order to support this functionality without encountering a timeout using `Invoke-RemoteScript` you can use the following list of commands.
+
+* Get-ScriptSession - Returns details about script sessions.
+* Receive-ScriptSession - Returns the results of a completed script session.
+* Remove-ScriptSession - Removes the script session from memory.
+* Start-ScriptSession - Executes a new script session.
+* Stop-ScriptSession - Terminates an existing script session.
+* Wait-ScriptSession - Waits for all the script sessions to complete before continuing.
+ 
+**Example:** The following remotely runs a `ScriptSession` and polls the server until completed.
+```powershell
+Import-Module -Name SPE
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
+
+$job = Invoke-RemoteScript -Session $session -ScriptBlock {
+    Start-ScriptSession -ScriptBlock {
+        # Replace the contents of this scriptblock with your installation steps. 
+        # I just put $true there so something would come back.
+        Start-Sleep -Seconds 10
+        [PSCustomObject]@{"IsComplete"=$true}
+    }
+}
+
+$keepRunning = $true
+while($keepRunning) {
+    $done = Invoke-RemoteScript -Session $session -ScriptBlock {
+        $scriptSession = Get-ScriptSession -Id $params.JobId
+        $scriptSession.State -ne "Busy"
+    } -Arguments @{"JobId" = $job.ID} 
+
+    if($done) {
+        $keepRunning = $false
+
+        Invoke-RemoteScript -Session $session -ScriptBlock {
+            $scriptSession = Get-ScriptSession -Id $params.JobId
+            if($scriptSession.State -ne "Busy") {
+                $scriptSession | Receive-ScriptSession
+            }
+        } -Arguments @{"JobId" = $job.ID}    
+    } else {
+        Start-Sleep -Milliseconds 500
+    }
+}
+
 ```
 
 **References:**
