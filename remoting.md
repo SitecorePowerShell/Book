@@ -135,6 +135,43 @@ Inevitably you will need to have long running processes triggered remotely. In o
 * Start-ScriptSession - Executes a new script session.
 * Stop-ScriptSession - Terminates an existing script session.
 * Wait-ScriptSession - Waits for all the script sessions to complete before continuing.
+ 
+**Example:** The following remotely runs a `ScriptSession` and polls the server until completed.
+```powershell
+Import-Module -Name SPE
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
+
+$job = Invoke-RemoteScript -Session $session -ScriptBlock {
+    Start-ScriptSession -ScriptBlock {
+        # Replace the contents of this scriptblock with your installation steps. 
+        # I just put $true there so something would come back.
+        Start-Sleep -Seconds 10
+        [PSCustomObject]@{"IsComplete"=$true}
+    }
+}
+
+$keepRunning = $true
+while($keepRunning) {
+    $done = Invoke-RemoteScript -Session $session -ScriptBlock {
+        $scriptSession = Get-ScriptSession -Id $params.JobId
+        $scriptSession.State -ne "Busy"
+    } -Arguments @{"JobId" = $job.ID} 
+
+    if($done) {
+        $keepRunning = $false
+
+        Invoke-RemoteScript -Session $session -ScriptBlock {
+            $scriptSession = Get-ScriptSession -Id $params.JobId
+            if($scriptSession.State -ne "Busy") {
+                $scriptSession | Receive-ScriptSession
+            }
+        } -Arguments @{"JobId" = $job.ID}    
+    } else {
+        Start-Sleep -Milliseconds 500
+    }
+}
+
+```
 
 **References:**
 * Michael's follow up post on [Remoting][2]
