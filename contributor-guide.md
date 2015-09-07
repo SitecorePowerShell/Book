@@ -40,3 +40,4 @@ The solution is upgraded to Visual Studio 2015.
 ```
 10. Navigate to http://console/sitecore/login and verify that SPE works as expected.
 
+#### Multiple Instance
