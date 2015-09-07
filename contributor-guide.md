@@ -38,7 +38,10 @@ The solution is upgraded to Visual Studio 2015.
  - Sitecore.Update.dll
 7. Run the Windows PowerShell script as an Administrator 
 ```powershell
-. C:\inetpub\wwwroot\Console\setup-Folders.ps1
+. C:\inetpub\wwwroot\Console\Setup-Folders.ps1
 ```
 8. Compile the solution in Visual Studio
-9. Sync all of the Sitecore items
+9. Sync Sitecore items with the Windows PowerShell script as an Administrator
+```
+. C:\inetpub\wwwroot\Console\Setup-Module.ps1
+```
