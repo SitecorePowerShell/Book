@@ -14,7 +14,7 @@ The following guide should provide you with enough information to setup a develo
 
 The solution is upgraded to Visual Studio 2015.
 
-### Single Instance Option
+#### Single Instance
 
 1. Meet the prerequisites found [here](installation.md)
 2. Install Sitecore 8+ to `C:\inetpub\wwwroot\Console`
