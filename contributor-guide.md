@@ -49,15 +49,15 @@ The solution is upgraded to Visual Studio 2015.
  - `C:\inetpub\wwwroot\Sitecore7`
 3. Fetch source code to installation path
 ```
- cd "C:\inetpub\wwwroot\Console"
+ cd "C:\Projects\SitecorePowerShell\"
  git init
  git remote add origin https://github.com/SitecorePowerShell/Console.git
  git fetch origin
  git checkout -b master --track origin/master
  ```
-4. Copy `C:\inetpub\wwwroot\Console\deploy.targets.sample` to `C:\inetpub\wwwroot\Console\deploy.targets`
+4. Copy `C:\Projects\SitecorePowerShell\deploy.targets.sample` to `C:\Projects\SitecorePowerShell\deploy.targets`
 5. Edit the paths in `deploy.targets` with the appropriate *SitecorePath* and *LibrariesPath*
-6. Copy Sitecore dependencies to `C:\inetpub\wwwroot\Console\Libraries`
+6. Copy Sitecore dependencies to `C:\Projects\SitecorePowerShell\Libraries`
  - Sitecore.Analytics.dll
  - Sitecore.Client.dll
  - Sitecore.ContentSearch.dll
