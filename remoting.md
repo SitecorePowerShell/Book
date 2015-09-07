@@ -129,7 +129,12 @@ Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination
 
 Inevitably you will need to have long running processes triggered remotely. In order to support this functionality without encountering a timeout using `Invoke-RemoteScript` you can use the following list of commands.
 
-
+* Get-ScriptSession
+* Receive-ScriptSession
+* Remove-ScriptSession
+* Start-ScriptSession
+* Stop-ScriptSession
+* Wait-ScriptSession
 
 **References:**
 * Michael's follow up post on [Remoting][2]
