@@ -14,6 +14,8 @@ The following guide should provide you with enough information to setup a develo
 
 The solution is upgraded to Visual Studio 2015.
 
+### Single Instance Option
+
 1. Meet the prerequisites found [here](installation.md)
 2. Install Sitecore 8+ to `C:\inetpub\wwwroot\Console`
 3. Fetch source code to installation path
@@ -47,3 +49,4 @@ The solution is upgraded to Visual Studio 2015.
 . C:\inetpub\wwwroot\Console\Setup-Module.ps1
 ```
 10. Navigate to http://console/sitecore/login and verify that SPE works as expected.
+
