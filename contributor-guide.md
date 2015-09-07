@@ -43,7 +43,10 @@ The solution is upgraded to Visual Studio 2015.
 #### Multiple Instance
 
 1. Meet the prerequisites found [here](installation.md)
-2. Install Sitecore 8+ to `C:\inetpub\wwwroot\Console`
+2. Install Sitecore 7+ to the following paths    
+ - `C:\inetpub\wwwroot\Sitecore8`
+ - `C:\inetpub\wwwroot\Sitecore75`
+ - `C:\inetpub\wwwroot\Sitecore7`
 3. Fetch source code to installation path
 ```
  cd "C:\inetpub\wwwroot\Console"
