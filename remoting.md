@@ -125,6 +125,12 @@ $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://r
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
 ```
 
+#### Advanced Script Sessions
+
+Inevitably you will need to have long running processes triggered remotely. In order to support this functionality without encountering a timeout using `Invoke-RemoteScript` you can use the following list of commands.
+
+
+
 **References:**
 * Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]
