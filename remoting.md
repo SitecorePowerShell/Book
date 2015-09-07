@@ -125,7 +125,7 @@ $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://r
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
 ```
 
-#### Web API Tutorial
+#### Script Sessions andWeb API Tutorial
 
 [![SPE Web API](http://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)](https://www.youtube.com/watch?v=SmZBGKOryzQ "Click for a quick demo")
 
