@@ -6,7 +6,7 @@ There are a number of use cases where you need to remotely run scripts within SP
 
 We have provided a handy way of executing scripts via web service using the Remoting Automation Service.
 
-##### Video Tutorial
+##### Remoting Module Setup
 
 [![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
 
@@ -124,6 +124,10 @@ Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
 ```
+
+#### Web API Tutorial
+
+[![SPE Web API](http://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)](https://www.youtube.com/watch?v=SmZBGKOryzQ "Click for a quick demo")
 
 #### Advanced Script Sessions
 
