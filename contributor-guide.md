@@ -46,3 +46,4 @@ The solution is upgraded to Visual Studio 2015.
 ```
 . C:\inetpub\wwwroot\Console\Setup-Module.ps1
 ```
+10. Navigate to http://console/sitecore/login and verify that SPE works as expected.
