@@ -72,7 +72,6 @@ The solution is upgraded to Visual Studio 2015.
 . C:\inetpub\wwwroot\Console\Setup-Folders.ps1
 ```
 8. Compile the solution in Visual Studio
- - Because SPE supports Sitecore 7+, you'll need to unload the `Cognfide.PowerShell.Sitecore7` project or setup the reference path for Sitecore 7.x libraries. We'll see that later on in this tutorial.
 9. Sync Sitecore items with the Windows PowerShell script as an Administrator
 ```
 . C:\inetpub\wwwroot\Console\Setup-Module.ps1
