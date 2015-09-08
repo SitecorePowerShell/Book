@@ -1,6 +1,6 @@
 # Contributor Guide
 
-The following guide should provide you with enough information to setup a development environment configured to contribute to SPE. We'll begin with a single installation of Sitecore 8+. Adam wrote an [article][1] (written March 2015) that goes into great detail about the installation steps. 
+The following guide should provide you with enough information to setup a development environment configured to contribute to SPE. We'll begin with a single installation of Sitecore 8+. Adam wrote an [article][1] (written March 2015) that goes into great detail about the installation steps. We've made some changes along the way and as you would expect it's made its way into this book.
 
 The solution is upgraded to Visual Studio 2015.
 
