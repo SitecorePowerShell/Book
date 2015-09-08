@@ -1,6 +1,6 @@
 # Contributor Guide
 
-The following guide should provide you with enough information to setup a development environment configured to contribute to SPE. We'll begin with a single installation of Sitecore 8+.
+The following guide should provide you with enough information to setup a development environment configured to contribute to SPE. We'll begin with a single installation of Sitecore 8+. Adam wrote an [article][1] (a little out of date) that goes into great detail about the installation steps. 
 
 The solution is upgraded to Visual Studio 2015.
 
@@ -77,3 +77,5 @@ The solution is upgraded to Visual Studio 2015.
 . C:\inetpub\wwwroot\Console\Setup-Module.ps1
 ```
 10. Navigate to each of your installation urls and verify that SPE works as expected.
+
+[1]: http://blog.najmanowicz.com/2015/03/03/set-up-sitecore-powershell-extensions-development-environment/ 
