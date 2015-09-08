@@ -67,7 +67,7 @@ The solution is upgraded to Visual Studio 2015.
  - Sitecore.Logging.dll
  - Sitecore.NVelocity.dll
  - Sitecore.Update.dll
-7. Run the Windows PowerShell script as an Administrator 
+7. Run the Windows PowerShell script as an Administrator. Modifications may be necessary.
 ```powershell
 . C:\inetpub\wwwroot\Console\Setup-Folders.ps1
 ```
