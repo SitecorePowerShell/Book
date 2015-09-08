@@ -46,7 +46,7 @@ The solution is upgraded to Visual Studio 2015.
 2. Install Sitecore 7+ to the following paths    
  - `C:\inetpub\wwwroot\Sitecore8`
  - `C:\inetpub\wwwroot\Sitecore75`
- - `C:\inetpub\wwwroot\Sitecore7`
+ - `C:\inetpub\wwwroot\Sitecore70`
 3. Fetch source code to installation path
 ```
  cd "C:\Projects\SitecorePowerShell\"
