@@ -57,7 +57,7 @@ The solution is upgraded to Visual Studio 2015.
  ```
 4. Copy `C:\Projects\SitecorePowerShell\deploy.targets.sample` to `C:\Projects\SitecorePowerShell\deploy.targets`
 5. Edit the paths in `deploy.targets` with the appropriate *SitecorePath* and *LibrariesPath*
-6. Copy Sitecore dependencies to `C:\Projects\SitecorePowerShell\Libraries` with a subfolder for each Sitecore version (i.e. \SC8, \SC75, \SC7). You'll want to add each folder as a reference path in Visual Studio.
+6. Copy Sitecore dependencies to `C:\Projects\SitecorePowerShell\Libraries` with a subfolder for each Sitecore version (i.e. \SC8, \SC75, \SC7). Use the reference path in Visual Studio to match the right assembly versions in `Cognifide.PowerShell.Sitecore7` and `Cognifide.PowerShell.Sitecore8`. Not doing so will result in error messages related to those projects.
  - Sitecore.Analytics.dll
  - Sitecore.Client.dll
  - Sitecore.ContentSearch.dll
