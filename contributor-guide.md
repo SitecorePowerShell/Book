@@ -67,12 +67,12 @@ The solution is upgraded to Visual Studio 2015.
  - Sitecore.Logging.dll
  - Sitecore.NVelocity.dll
  - Sitecore.Update.dll
-7. Run the Windows PowerShell script as an Administrator. Modifications to the script may be necessary.
+7. Run the Windows PowerShell script as an Administrator. Modifications to the script may be necessary to support your installation paths.
 ```powershell
 . C:\inetpub\wwwroot\Console\Setup-Folders.ps1
 ```
 8. Compile the solution in Visual Studio
-9. Sync Sitecore items with the Windows PowerShell script as an Administrator
+9. Sync Sitecore items with the Windows PowerShell script as an Administrator. Modifications to the script may be necessary to support your installation urls.
 ```
 . C:\inetpub\wwwroot\Console\Setup-Module.ps1
 ```
