@@ -22,9 +22,7 @@ Following the installation you'll find these new items added to the Sitecore men
 
 #### Compile Your Own Binaries
 
-You may also clone the project from [GitHub][5] and compile it. This allows you to access the latest functionality without waiting for a new release. See the following [article][6] for instructions on how to get up and running.
-
-We've also written a [contributor guide](contributor-guide.md) in this book. 
+You may also clone the project from [GitHub][5] and compile it. This allows you to access the latest functionality without waiting for a new release. See the following [contributor guide](contributor-guide.md) for instructions on how to get up and running. Additionally, Adam blogged about it early on in this [article][6].
 
 #### Troubleshooting
 
