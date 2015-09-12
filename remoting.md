@@ -174,7 +174,6 @@ while($keepRunning) {
         Start-Sleep -Milliseconds 500
     }
 }
-
 ```
 
 **References:**
