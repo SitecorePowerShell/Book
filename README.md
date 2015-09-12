@@ -15,7 +15,7 @@ Below are some of the things you get with SPE:
 * Data Importer
 * ~~Professional Chef~~
 
-**Endorsements:**
+#### Endorsements
 
 *"There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API"* - [Alistair Deneys][11] - Sitecore Symposium 2012
 
