@@ -178,9 +178,7 @@ while($keepRunning) {
 
 **Example:** The following remotely runs a smart publish.
 
-```powershell
 {% include 'https://htmlpreview.github.io/?https://gist.githubusercontent.com/michaellwest/dcd52a4ecf7bca0df7c5/raw/bf38d2171c74b93f042852497a6a794ce58afc6b' %}
-```
 
 **References:**
 * Michael's follow up post on [Remoting][2]
