@@ -125,6 +125,18 @@ $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://r
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
 ```
 
+**Example:** The following uploads a single file to the data folder on the server.
+
+```powershell
+Import-Module -Name SPE
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
+# Be aware that uploading content greater than 1 MB may take a while to upload.
+$data = [System.IO.File]::ReadAllText("C:\Temp\data.xml")
+Invoke-RemoteScript -Session $session -ScriptBlock {
+    [System.IO.File]::WriteAllText("$($SitecoreDataFolder)\data.xml", $using:data)
+}
+```
+
 #### Script Sessions and Web API Tutorial
 
 [![SPE Web API](http://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)](https://www.youtube.com/watch?v=SmZBGKOryzQ "Click for a quick demo")
