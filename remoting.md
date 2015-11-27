@@ -130,7 +130,7 @@ Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination
 ```powershell
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
-# Be aware that uploading content greater than 1 MB may take a while to upload.
+# Be aware that uploading content greater than 1 MB may take a while or even timeout.
 $data = [System.IO.File]::ReadAllText("C:\Temp\data.xml")
 Invoke-RemoteScript -Session $session -ScriptBlock {
     [System.IO.File]::WriteAllText("$($SitecoreDataFolder)\data.xml", $using:data)
