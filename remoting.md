@@ -91,9 +91,9 @@ $credential = Get-Credential
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore -Credential $credential
 Invoke-RemoteScript -Session $session -ScriptBlock { Get-User -id admin }
 
-Name                     Domain       IsAdministrator IsAuthenticated
-----                     ------       --------------- ---------------
-sitecore\admin           sitecore     True            False          
+# Name                     Domain       IsAdministrator IsAuthenticated
+# ----                     ------       --------------- ---------------
+# sitecore\admin           sitecore     True            False    
 ```
 
 **Example:** The following connects to several remote instances of Sitecore and returns the server name.
