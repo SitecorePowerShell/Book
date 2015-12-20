@@ -56,11 +56,11 @@ Get-Item -Path C:\image.png | Send-MediaItem -Session $session -Destination $lib
 $savePath = "C:\image-$([datetime]::Now.ToString("yyyyddMM-HHmmss")).png"
 Receive-MediaItem -Session $session -Path $libraryPath -Destination $savePath
 
-    Directory: C:\
-
-Mode                LastWriteTime     Length Name
-----                -------------     ------ ----
--a---         5/25/2015  11:23 AM          0 image-20152505-112302.png  
+#     Directory: C:\
+# 
+# Mode                LastWriteTime     Length Name
+# ----                -------------     ------ ----
+# -a---         5/25/2015  11:23 AM          0 image-20152505-112302.png  
 ```
 
 **Example:** The following downloads all the images in the media library under the specified directory.
