@@ -4,7 +4,9 @@ The reports which come out of the box provide a wide variety of information rega
 
 We've built quite a few reports, many similar to the [Advanced System Report][1] (ASR) module.
 
-#### Running a Report
+### Running a Report
+
+The custom reports can be found by navigating to *Sitecore -> Reporting Tools -> PowerShell Reports*.
 
 ![Reports](images/screenshots/reports.png)
 
