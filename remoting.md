@@ -2,15 +2,15 @@
 
 There are a number of use cases where you need to remotely run scripts within SPE. Here we will try to cover a few of those use cases.
 
-#### Remoting Automation Service
+### Remoting Automation Service
 
 We have provided a handy way of executing scripts via web service using the Remoting Automation Service.
 
-##### Remoting Module Setup
+#### Remoting Module Setup
 
 [![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
 
-##### Sitecore to Sitecore communication
+#### Sitecore to Sitecore communication
 
 **Example:** The following connects a local instance of SPE to a remote instance and executes the provided script.
 
@@ -37,7 +37,7 @@ sitecore\admin           sitecore     True            False
 4/26/2015 6:15:41 PM
 ```
 
-##### Windows PowerShell ISE to Sitecore communication
+#### Windows PowerShell ISE to Sitecore communication
 
 To setup this scenario you'll need to follow these steps:
 * Download the SPE Remoting package from the Sitecore Marketplace.
@@ -73,7 +73,7 @@ Invoke-RemoteScript -Session $session -ScriptBlock {
     } | Receive-MediaItem -Session $session -Destination C:\Temp\Images\
 ```
 
-##### Windows Authenticated Requests
+#### Windows Authenticated Requests
 
 If you have configured the services to run under *Windows Authentication* mode then you'll need to use the **Credential** parameter for the commands.
 
