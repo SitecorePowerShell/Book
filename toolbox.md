@@ -2,41 +2,41 @@
 
 The PowerShell Toolbox is quick way to access frequently used scripts.
 
-Navigate to Sitecore -> PowerShell Toolbox and after selecting you should see the configured scripts:
+Navigate to *Sitecore -> PowerShell Toolbox* and after selecting you should see the configured scripts:
 
 ![Toolbox](images/screenshots/toolbox-list.png)
 
-#### Available Tools
+### Available Tools
 
-##### Index Viewer
+#### Index Viewer
 
 This tool provides similar functionality to the [Index Viewer][1] module. Search and rebuild the index on-demand.
 
-##### Logged in Session Manager
+#### Logged in Session Manager
 
 View the list of user sessions and "kick" them out as needed.
 
-##### Rules based report
+#### Rules based report
 
 Generate a report using the Sitecore Rules Engine.
 
-##### PowerShell Background Session Manager
+#### PowerShell Background Session Manager
 
 View the list of SPE sessions and "kill" them as needed.
 
-##### Create Anti-Package
+#### Create Anti-Package
 
 This tool provides similar functionality to the [Sitecore Rocks][2] module.
 
-##### Re-create Site from Sitemap
+#### Re-create Site from Sitemap
 
 Simple tool for generating a site tree using an existing sitemap.
 
-##### Task Manager
+#### Task Manager
 
 View and manage the configured scheduled tasks.
 
-#### Create Tools for the Toolbox
+### Create Tools for the Toolbox
 
 To create your own Toolbox item take the following steps:
 1. Create the *Toolbox* folder under an SPE module. Use the context menu to simplify the process.
