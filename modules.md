@@ -4,8 +4,10 @@ Sitecore PowerShell Extensions provides a way to organize your scripts into *mod
 
 Some benefits to using modules:
 * You can enable or disable the module as needed. For this to take full affect the integration should be rebuilt in the ISE.
-* The out-of-the-box scripts are in their own module called *Platform*.
+* .
 * Adam's [post][1] on the module design goes in-depth to why we proposed this architectural change.
+
+**Note:** The *Platform* module is one you should avoid changing.
 
 Getting started with your own module is a short process.
 
