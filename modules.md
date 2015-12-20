@@ -3,10 +3,13 @@
 Sitecore PowerShell Extensions provides a way to organize your scripts into *modules*. 
 
 Some benefits to using modules:
-* You can enable or disable the module as needed. For this to take full affect the integration should be rebuilt in the ISE.
-* The out-of-the-box scripts are in their own module called *Platform*.
-* Adam's [post][1] on the module design goes in-depth to why we proposed this architectural change.
+* The integration points contained within each module can be enabled or disabled globally. For this to take full affect the integration should be rebuilt in the ISE.
+* Organization of custom scripts is a cinch.
+* More reasons can be found in Adam's [post][1].
 
+**Note:** The *Platform* module is one you should avoid changing.
+
+### Create a custom module
 Getting started with your own module is a short process.
 
 1. Navigate to the *Script Library* item and *Insert -> PowerShell Script Module*.
@@ -16,8 +19,9 @@ Getting started with your own module is a short process.
 ![Integration Points](images/screenshots/module-createlibraries.png)
 4. Select the appropriate integration points for your module.  
 ![Integration Point Libraries](images/screenshots/module-createtoolboxlibrary.png)
-5. Select the module and enable for use. This is where you would also open the ISE to rebuild integrations.  
+5. Select the module and enable for use.  
 ![Module Activation](images/screenshots/module-activationdisabled.png)
+6. Open the ISE, switch to the *Settings* tab, and rebuild integrations.
 
 
 [1]: http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/

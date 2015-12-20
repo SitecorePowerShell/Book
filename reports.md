@@ -4,7 +4,9 @@ The reports which come out of the box provide a wide variety of information rega
 
 We've built quite a few reports, many similar to the [Advanced System Report][1] (ASR) module.
 
-#### Running a Report
+### Running a Report
+
+The custom reports can be found by navigating to *Sitecore -> Reporting Tools -> PowerShell Reports*.
 
 ![Reports](images/screenshots/reports.png)
 
@@ -48,13 +50,13 @@ While SPE contains many reports, they don't match identical to ASR reports. We'v
 | Rules based report<sup>5</sup> | - |
 | Task Manager report<sup>5</sup> | - |
 
-**Report Location:** Check the reports in SPE under these sections to see the full list.
+Check the reports in SPE under these sections to see the full list.
 
-* Configuration Audit report <sup>1</sup>
-* Content Audit report <sup>2</sup>
-* Media Audit report <sup>3</sup>
-* Solution Audit report <sup>4</sup>
-* Toolbox <sup>5</sup>
+* <sup>1</sup> Configuration Audit report
+* <sup>2</sup> Content Audit report
+* <sup>3</sup> Media Audit report
+* <sup>4</sup> Solution Audit report
+* <sup>5</sup> Toolbox
 
 
 [1]: https://marketplace.sitecore.net/en/Modules/A/Advanced_System_Reporter.aspx

@@ -2,15 +2,15 @@
 
 There are a number of use cases where you need to remotely run scripts within SPE. Here we will try to cover a few of those use cases.
 
-#### Remoting Automation Service
+### Remoting Automation Service
 
 We have provided a handy way of executing scripts via web service using the Remoting Automation Service.
 
-##### Remoting Module Setup
+#### Remoting Module Setup
 
 [![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
 
-##### Sitecore to Sitecore communication
+#### Sitecore to Sitecore communication
 
 **Example:** The following connects a local instance of SPE to a remote instance and executes the provided script.
 
@@ -31,13 +31,13 @@ $args = @{
 
 Invoke-RemoteScript -ScriptBlock $script -Session $session -ArgumentList $args
 
-Name                     Domain       IsAdministrator IsAuthenticated
-----                     ------       --------------- ---------------
-sitecore\admin           sitecore     True            False          
-4/26/2015 6:15:41 PM
+# Name                     Domain       IsAdministrator IsAuthenticated
+# ----                     ------       --------------- ---------------
+# sitecore\admin           sitecore     True            False          
+# 4/26/2015 6:15:41 PM
 ```
 
-##### Windows PowerShell ISE to Sitecore communication
+#### Windows PowerShell ISE to Sitecore communication
 
 To setup this scenario you'll need to follow these steps:
 * Download the SPE Remoting package from the Sitecore Marketplace.
@@ -56,11 +56,11 @@ Get-Item -Path C:\image.png | Send-MediaItem -Session $session -Destination $lib
 $savePath = "C:\image-$([datetime]::Now.ToString("yyyyddMM-HHmmss")).png"
 Receive-MediaItem -Session $session -Path $libraryPath -Destination $savePath
 
-    Directory: C:\
-
-Mode                LastWriteTime     Length Name
-----                -------------     ------ ----
--a---         5/25/2015  11:23 AM          0 image-20152505-112302.png  
+#     Directory: C:\
+# 
+# Mode                LastWriteTime     Length Name
+# ----                -------------     ------ ----
+# -a---         5/25/2015  11:23 AM          0 image-20152505-112302.png  
 ```
 
 **Example:** The following downloads all the images in the media library under the specified directory.
@@ -73,7 +73,7 @@ Invoke-RemoteScript -Session $session -ScriptBlock {
     } | Receive-MediaItem -Session $session -Destination C:\Temp\Images\
 ```
 
-##### Windows Authenticated Requests
+#### Windows Authenticated Requests
 
 If you have configured the services to run under *Windows Authentication* mode then you'll need to use the **Credential** parameter for the commands.
 
@@ -91,9 +91,9 @@ $credential = Get-Credential
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore -Credential $credential
 Invoke-RemoteScript -Session $session -ScriptBlock { Get-User -id admin }
 
-Name                     Domain       IsAdministrator IsAuthenticated
-----                     ------       --------------- ---------------
-sitecore\admin           sitecore     True            False          
+# Name                     Domain       IsAdministrator IsAuthenticated
+# ----                     ------       --------------- ---------------
+# sitecore\admin           sitecore     True            False    
 ```
 
 **Example:** The following connects to several remote instances of Sitecore and returns the server name.
@@ -151,6 +151,8 @@ Inevitably you will need to have long running processes triggered remotely. In o
 * `Start-ScriptSession` - Executes a new script session.
 * `Stop-ScriptSession` - Terminates an existing script session.
 * `Wait-ScriptSession` - Waits for all the script sessions to complete before continuing.
+
+**Note:** These commands are not only used for remoting, we just thought it made sense to talk about them here.
  
 **Example:** The following remotely runs a `ScriptSession` and polls the server until completed.
 ```powershell
