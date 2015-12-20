@@ -52,11 +52,11 @@ While SPE contains many reports, they don't match identical to ASR reports. We'v
 
 **Report Location:** Check the reports in SPE under these sections to see the full list.
 
-* Configuration Audit report <sup>1</sup>
-* Content Audit report <sup>2</sup>
-* Media Audit report <sup>3</sup>
-* Solution Audit report <sup>4</sup>
-* Toolbox <sup>5</sup>
+* <sup>1</sup> Configuration Audit report
+* <sup>2</sup> Content Audit report
+* <sup>3</sup> Media Audit report
+* <sup>4</sup> Solution Audit report
+* <sup>5</sup> Toolbox
 
 
 [1]: https://marketplace.sitecore.net/en/Modules/A/Advanced_System_Reporter.aspx
