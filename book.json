@@ -1,7 +1,8 @@
 {
     "gitbook": ">=2.0.0",
     "plugins": [
-        "image-captions"
+        "image-captions",
+        "gist"
     ],
     "pluginsConfig": {
         "image-captions": {
