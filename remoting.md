@@ -151,6 +151,8 @@ Inevitably you will need to have long running processes triggered remotely. In o
 * `Start-ScriptSession` - Executes a new script session.
 * `Stop-ScriptSession` - Terminates an existing script session.
 * `Wait-ScriptSession` - Waits for all the script sessions to complete before continuing.
+
+**Note:** These commands are not only used for remoting, we just thought it made sense to talk about them here.
  
 **Example:** The following remotely runs a `ScriptSession` and polls the server until completed.
 ```powershell
