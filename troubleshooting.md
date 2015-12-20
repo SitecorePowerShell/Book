@@ -1,5 +1,9 @@
 # Troubleshooting
 
+### General
+
+We generally see issues occurring due to an incompatible version of Windows PowerShell. Be sure to install version 3 or later.
+
 ### Installation
 
 #### Hanging Installation Wizard
