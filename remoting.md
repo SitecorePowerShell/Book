@@ -31,10 +31,10 @@ $args = @{
 
 Invoke-RemoteScript -ScriptBlock $script -Session $session -ArgumentList $args
 
-Name                     Domain       IsAdministrator IsAuthenticated
-----                     ------       --------------- ---------------
-sitecore\admin           sitecore     True            False          
-4/26/2015 6:15:41 PM
+# Name                     Domain       IsAdministrator IsAuthenticated
+# ----                     ------       --------------- ---------------
+# sitecore\admin           sitecore     True            False          
+# 4/26/2015 6:15:41 PM
 ```
 
 #### Windows PowerShell ISE to Sitecore communication
