@@ -50,7 +50,7 @@ While SPE contains many reports, they don't match identical to ASR reports. We'v
 | Rules based report<sup>5</sup> | - |
 | Task Manager report<sup>5</sup> | - |
 
-**Report Location:** Check the reports in SPE under these sections to see the full list.
+Check the reports in SPE under these sections to see the full list.
 
 * <sup>1</sup> Configuration Audit report
 * <sup>2</sup> Content Audit report
