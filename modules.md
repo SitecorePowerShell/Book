@@ -4,8 +4,8 @@ Sitecore PowerShell Extensions provides a way to organize your scripts into *mod
 
 Some benefits to using modules:
 * The integration points contained within each module can be enabled or disabled globally. For this to take full affect the integration should be rebuilt in the ISE.
-* .
-* Adam's [post][1] on the module design goes in-depth to why we proposed this architectural change.
+* Organization of custom scripts is a cinch.
+* More reasons can be found in Adam's [post][1].
 
 **Note:** The *Platform* module is one you should avoid changing.
 
