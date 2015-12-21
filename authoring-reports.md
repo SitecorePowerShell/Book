@@ -15,7 +15,11 @@ First you will be prompted with a dialog to select the index to search.
 
 Next you will be prompted with a variety of buttons and knobs to narrow down the search results.
 
+![Filter report results](images/screenshots/toolbox-indexviewer-filterresults.png)
+
 Finally the report is shown. Each row has an option to show more field results.
+
+![Final results](images/screenshots/toolbox-indexviewer-results.png)
 
 **Examples:**
 * [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3]
