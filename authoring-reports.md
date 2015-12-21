@@ -25,6 +25,12 @@ The *Show Full Info* link will then returns the additional fields not shown in t
 
 ![Show Full Info](images/screenshots/toolbox-indexviewer-showinfo.png)
 
+The **Authorable Reports** module has a few points of interest.
+
+* The script library *Internal/List View/Ribbon/SearchResultItem* instructs the report to show the action scripts when the row contains an entry with the typename *SearchResultItem*.
+* The script library *Toolbox/Index Viewer* represents the shortcut.
+
+
 **Examples:**
 * [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3]
 
