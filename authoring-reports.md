@@ -21,6 +21,10 @@ Finally the report is shown. Each row has an option to show more field results.
 
 ![Final results](images/screenshots/toolbox-indexviewer-results.png)
 
+The *Show Full Info* link will then returns the additional fields not shown in the report.
+
+![Show Full Info](images/screenshots/toolbox-indexviewer-showinfo.png)
+
 **Examples:**
 * [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3]
 
