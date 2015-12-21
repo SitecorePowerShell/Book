@@ -2,15 +2,26 @@
 
 Building reports is a straightforward task. We've provided a variety of examples for you to model when designing your own. 
 
-#### Dynamic Reports
+### Dynamic Reports
 
 The **Authorable Reports** module includes reports such as *Index Viewer* and *Rules based report* that provide input dialogs to help make the reports dynamic. 
+
+#### Index Viewer
+The *Index Viewer* report provides a great example at how to build a generic report that queries against the Sitecore index. By navigating to *Sitecore -> Toolbox -> Index Viewer* you can conveniently launch the report.
+
+First you will be prompted with a dialog to select the index to search.
+
+![Choose report index](images/screenshots/toolbox-indexviewer-chooseindex.png)
+
+Next you will be prompted with a variety of buttons and knobs to narrow down the search results.
+
+Finally the report is shown. Each row has an option to show more field results.
 
 **Examples:**
 * [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3]
 
 
-#### Static Reports
+### Static Reports
 
 The **Content Reports** module includes other reports used for auditing. Below are some examples on how to create your own.
 
@@ -18,7 +29,7 @@ The **Content Reports** module includes other reports used for auditing. Below a
  * [Images with an empty alt field][1]
  * [Unused media items][2]
  
-#### Examples from the community!
+### Examples from the community!
 
 [Active Commerce][5] for Sitecore product has published reports on Github that you can checkout [here][4].
  
