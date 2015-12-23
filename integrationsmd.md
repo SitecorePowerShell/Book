@@ -6,11 +6,11 @@ The following list outlines the available libraries for *Integration Points*.
 
 * Content Editor
  * Context Menu
- * Gutters
+ * Gutters - Requires the library to be synced.
  * Insert Item
- * Ribbon
+ * Ribbon - Requires the library to be synced.
  * Warning
-* Control Panel
+* Control Panel - Requires the library to be synced.
 * Event Handlers
 * Functions
 * Internal
