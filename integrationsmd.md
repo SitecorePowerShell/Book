@@ -14,6 +14,8 @@ The following list outlines the available libraries for *Integration Points*.
 * Event Handlers
 * Functions
 * Internal
+ * ISE Plugins
+ * List View - Represents the ribbon buttons such as for **Actions** and **Exports**.
 * Page Editor (Experience Editor)
  * Notification
 * Pipelines
