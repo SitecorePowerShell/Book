@@ -9,7 +9,7 @@ The following list outlines the available libraries for *Integration Points*. Th
  * Gutters - Requires the library to be synced.
  * Insert Item
  * Ribbon - Requires the library to be synced.
- * Warning
+ * Warning - Appears as a warning message beneath the ribbon in the *Content Editor*.
 * Control Panel - Requires the library to be synced.
 * Event Handlers - Requires a patch file to enable the desired events.
 * Functions - Exposes scripts to the command *Import-Function*.
@@ -17,7 +17,7 @@ The following list outlines the available libraries for *Integration Points*. Th
  * ISE Plugins - Appears as a button in the ISE *Settings* tab.
  * List View - Represents the ribbon buttons such as for **Actions** and **Exports**.
 * Page Editor (Experience Editor)
- * Notification - Appears as a notification message beneath the ribbon in the Experience Editor.
+ * Notification - Appears as a notification message beneath the ribbon in the *Experience Editor*.
 * Pipelines
  * LoggedIn
  * LoggingIn
