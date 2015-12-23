@@ -24,5 +24,6 @@ The following list outlines the available libraries for *Integration Points*. Th
  * Logout
 * Reports - Appears as a shortcut under *Sitecore -> Reporting Tools -> PowerShell Reports*.
 * Toolbox - Appears as a shortcut under *Sitecore -> Toolbox*.
+* Tasks - Not a formal integration point, but a good place to add scripts used for Scheduled Tasks.
 * Web API - Exposes scripts through [SPE Remoting](remoting.md).
 
