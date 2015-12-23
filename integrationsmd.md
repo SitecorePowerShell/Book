@@ -17,6 +17,9 @@ The following list outlines the available libraries for *Integration Points*.
 * Page Editor (Experience Editor)
  * Notification
 * Pipelines
+ * LoggedIn
+ * LoggingIn
+ * Logout
 * Reports
 * Toolbox
 * Web API
