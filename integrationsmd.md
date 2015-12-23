@@ -2,7 +2,7 @@
 
 The SPE Modules support a wide variety of predefined script libraries to help with exposing scripts to the Sitecore interface.
 
-The following list outlines the available libraries for *Integration Points*.
+The following list outlines the available libraries for *Integration Points*. These may also be generated automatically when creating or updating modules.
 
 * Content Editor
  * Context Menu
@@ -11,18 +11,18 @@ The following list outlines the available libraries for *Integration Points*.
  * Ribbon - Requires the library to be synced.
  * Warning
 * Control Panel - Requires the library to be synced.
-* Event Handlers
-* Functions
+* Event Handlers - Requires a patch file to enable the desired events.
+* Functions - Exposes scripts to the command *Import-Function*.
 * Internal
- * ISE Plugins
+ * ISE Plugins - Appears as a button in the ISE *Settings* tab.
  * List View - Represents the ribbon buttons such as for **Actions** and **Exports**.
 * Page Editor (Experience Editor)
- * Notification
+ * Notification - Appears as a notification message beneath the ribbon in the Experience Editor.
 * Pipelines
  * LoggedIn
  * LoggingIn
  * Logout
-* Reports
-* Toolbox
+* Reports - Appears as a shortcut under *Sitecore -> Reporting Tools -> PowerShell Reports*.
+* Toolbox - Appears as a shortcut under *Sitecore -> Toolbox*.
 * Web API
 
