@@ -24,5 +24,5 @@ The following list outlines the available libraries for *Integration Points*. Th
  * Logout
 * Reports - Appears as a shortcut under *Sitecore -> Reporting Tools -> PowerShell Reports*.
 * Toolbox - Appears as a shortcut under *Sitecore -> Toolbox*.
-* Web API
+* Web API - Exposes scripts through [SPE Remoting](remoting.md).
 
