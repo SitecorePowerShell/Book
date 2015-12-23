@@ -11,6 +11,7 @@
    * [Item Languages](item-languages.md)
 * [Toolbox](toolbox.md)
 * [Modules](modules.md)
+   * [Integration Points](integrations.md) 
 * [Reports](reports.md)
    * [Authoring Reports](authoring-reports.md)
 * [Remoting](remoting.md)
