@@ -21,4 +21,4 @@
 * [Releases](releases.md)
 * [Troubleshooting](troubleshooting.md)
 * [Appendix](appendix.md)
-
+ {% include './appendix/commands-list.md' %}
