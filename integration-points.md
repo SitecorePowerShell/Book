@@ -24,9 +24,10 @@ The following list outlines the available libraries for *Integration Points* tha
  * Logout
 * **Reports** - Appears as a shortcut under *Sitecore -> Reporting Tools -> PowerShell Reports*.
 * **Toolbox** - Appears as a shortcut under *Sitecore -> Toolbox*. Visibility can be control using rules made available from within the *Interactive* field section.
-* **Tasks** - Not a formal integration point, but a good place to add scripts used for Scheduled Tasks. SPE includes a `PowerShellScriptCommand` found under */sitecore/system/Tasks/Commands/PowerShellScriptCommand* which is used to run scripts from within scheduled tasks.
+* **Tasks** - Not a formal integration point library, but a good place to add scripts used for Scheduled Tasks. SPE includes a `PowerShellScriptCommand` found under */sitecore/system/Tasks/Commands/PowerShellScriptCommand* which is used to run scripts from within scheduled tasks.
 * **Web API** - Exposes scripts through [SPE Remoting](remoting.md).
+* Workflows - Not a formal integration point library, but a good place to add scripts used for Workflow Action Scripts. Read more about how they work [here][1].
 
 ### Other Integrations
 
-
+[1]: http://blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/
