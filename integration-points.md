@@ -11,7 +11,7 @@ The following list outlines the available libraries for *Integration Points* tha
  * Ribbon - Requires the library to be synced. Visibility can be control using rules made available from within the *Interactive* field section.
  * Warning - Appears as a warning message beneath the ribbon in the *Content Editor*.
 * **Control Panel** - Requires the library to be synced.
-* **Event Handlers** - Requires a patch file to enable the desired events.
+* **Event Handlers** - Requires a patch file to enable the desired events. Read more about it [here][2].
 * **Functions** - Exposes scripts to the command *Import-Function*.
 * **Internal**
  * ISE Plugins - Appears as a button in the ISE *Settings* tab.
@@ -31,3 +31,4 @@ The following list outlines the available libraries for *Integration Points* tha
 ### Other Integrations
 
 [1]: http://blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/
+[2]: http://blog.najmanowicz.com/2013/05/27/react-to-sitecore-events-with-powershell-scripts/
