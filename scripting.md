@@ -42,7 +42,7 @@ Now let's review each of the different features; take note of the numbered label
  
 The *Open* dialog provides both a search and tree view of the scripts stored in the script libraries. 
 
-
+![Open Script Dialog](images/screenshots/ise-opendialog.png)
 
 ### Shortcuts
 Below are the shortcuts available in the console.
