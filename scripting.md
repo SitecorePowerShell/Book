@@ -6,9 +6,6 @@ The Integrated Scripting Environment (ISE) is a great way to group together comm
 Here's a quick look at the ISE:
 [![PowerShell ISE](images/screenshots/ise-empty.png)](http://youtu.be/RCDprfRsbSU "Click for a quick demo")
 
-Now let's review each of the different features; take note of the numbered labels:
-![ISE Home Tab](images/screenshots/ise-home.png)
-
 ![ISE Settings Tab](images/screenshots/ise-settings.png)
 
  1. **Write**:
