@@ -8,6 +8,8 @@ Here's a quick look at the ISE:
 
 ![ISE Settings Tab](images/screenshots/ise-settings.png)
 
+![ISE Plugins Tab](images/screenshots/ise-plugins.png)
+
  1. **Write**:
   * New - Creates a new script or module.
   * Open - Opens an existing script for the library.
