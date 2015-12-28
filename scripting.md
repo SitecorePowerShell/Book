@@ -40,7 +40,11 @@ Now let's review each of the different features; take note of the numbered label
  11. **Integration**:
   * Rebuild All - Rebuilds the gutter, ribbon, and control panel integration.
  
-#### Shortcuts
+The *Open* dialog provides both a search and tree view of the scripts stored in the script libraries. 
+
+
+
+### Shortcuts
 Below are the shortcuts available in the console.
 
 | Shortcut  | Usage |
