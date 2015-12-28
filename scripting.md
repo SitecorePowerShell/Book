@@ -18,11 +18,12 @@ Here's a quick look at the ISE:
   * Reload - Opens the original copy of the current script without saving any modifications.
  2. **Script**:
   * Execute - Runs the current script as a background job or in the http context.
+  * Selection - Runs the selected text of the current script.
   * Abort - Stops the execution of an executing script.
   * Runtime
  3. **Context**:
-  * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory).
-  * Session - Specifies the session to use when executing the script. Reused sessions live in the *HttpSession*.
+  * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory). An MRU and tree view are provided for choosing a path.
+  * Session - Specifies the session to use when executing the script. Reused sessions live in the *HttpSession*. Options include the session created for the ISE instance, One-Time session, or the Persistent Session ID configured on the script.
  4. **Script**:
   * This is where you type all the commands for the script.
  5. **Output**:
