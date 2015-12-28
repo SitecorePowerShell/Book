@@ -4,7 +4,7 @@ Once you move beyond running a single commands, you will begin to combine those 
 The Integrated Scripting Environment (ISE) is a great way to group together commands and save for later use. The ISE is a beefed up version of the Console.
 
 Here's a quick look at the ISE:
-[![PowerShell ISE](images/screenshots/ise-home.png)](http://youtu.be/RCDprfRsbSU "Click for a quick demo")
+[![PowerShell ISE](images/screenshots/ise-empty.png)](http://youtu.be/RCDprfRsbSU "Click for a quick demo")
 
 Now let's review each of the different features; take note of the numbered labels:
 ![ISE Home Tab](images/screenshots/ise-home.png)
