@@ -38,7 +38,7 @@ $props = @{
 Read-Variable @props
 ```
 
-| Button Name | Return Value |
+| **Button Name** | **Return Value** |
 | -- | -- |
 | OK | ok |
 | Cancel | cancel |
@@ -53,7 +53,7 @@ Read-Variable @props
 Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 ```
 
-| Button Name | Return Value |
+| **Button Name** | **Return Value** |
 | -- | -- |
 | OK | yes |
 | Cancel | no |
@@ -69,7 +69,7 @@ Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_
 
 **Note:** The hashtable keys should be incremented like *btn_0*, *btn_1*, and so on. The return value is the key name.
 
-| Button Name | Return Value |
+| **Button Name** | **Return Value** |
 | -- | -- |
 | < first button > | btn_0 |
 | < second button > | btn_1 |
@@ -103,7 +103,7 @@ Get-Item -Path "master:\media library\Files\readme" | Send-File
 Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
 ```
 
-| Button Name | Return Value |
+| **Button Name** | **Return Value** |
 | -- | -- |
 | OK | ok |
 | Cancel | cancel |
@@ -117,7 +117,7 @@ Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
 Show-Input "Please provide 5 characters at most" -MaxLength 5
 ```
 
-| Button Name | Return Value |
+| **Button Name** | **Return Value** |
 | -- | -- |
 | OK | < user input > |
 | Cancel | $null |
@@ -140,7 +140,7 @@ Show-ModalDialog -HandleParameters @{
 } -Control "Installer.Browse"
 ```
 
-| Button Name | Return Value |
+| **Button Name** | **Return Value** |
 | -- | -- |
 | OK | < selected file > |
 | Cancel | undetermined |
@@ -154,7 +154,7 @@ Show-ModalDialog -HandleParameters @{
 } -Control "FileBrowser" -Width 500
 ```
 
-| Button Name | Return Value |
+| **Button Name** | **Return Value** |
 | -- | -- |
 | OK | < selected file > |
 | Cancel | undetermined |
