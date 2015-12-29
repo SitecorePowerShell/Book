@@ -141,7 +141,7 @@ Invoke-RemoteScript -Session $session -ScriptBlock {
 
 [![SPE Web API](http://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)](https://www.youtube.com/watch?v=SmZBGKOryzQ "Click for a quick demo")
 
-#### Advanced Script Sessions
+### Advanced Script Sessions
 
 Inevitably you will need to have long running processes triggered remotely. In order to support this functionality without encountering a timeout using `Invoke-RemoteScript` you can use the following list of commands.
 
@@ -190,7 +190,7 @@ while($keepRunning) {
 }
 ```
 
-**References:**
+### References:
 * Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]
 
