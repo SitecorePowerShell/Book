@@ -10,34 +10,34 @@ Here's a quick look at the ISE:
 
 ![ISE Plugins Tab](images/screenshots/ise-plugins.png)
 
- 1. **Write**:
+### Ribbon Chunks
+* **Write**:
   * New - Creates a new script or module.
   * Open - Opens an existing script for the library.
   * Save - Saves the current script to the library.
   * Save As - Saves a copy of the current script to the library.
   * Reload - Opens the original copy of the current script without saving any modifications.
- 2. **Script**:
+* **Script**:
   * Execute - Runs the current script as a background job or in the http context.
   * Selection - Runs the selected text of the current script.
   * Abort - Stops the execution of an executing script.
   * Runtime
- 3. **Context**:
+* **Context**:
   * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory). An MRU and tree view are provided for choosing a path.
   * Session - Specifies the session to use when executing the script. Reused sessions live in the *HttpSession*. Options include the session created for the ISE instance, One-Time session, or the Persistent Session ID configured on the script.
- 4. **Script**:
+* **Script**:
   * This is where you type all the commands for the script.
- 5. **Output**:
+* **Output**:
   * This is where you see the output of your script.
- 6. The Home and Settings tabs.
- 7. **Tips**:
+* **Tips**:
   * This is where you find helpful shortcuts.
- 8. **Line** and **Column**:
+* **Line** and **Column**:
   * This indicates the current position of the cursor.
- 9. **Splitter**:
+* **Splitter**:
   * This is where you change the height of the output pane.
- 10. **Preferences**:
+* **Preferences**:
   * Settings - Specifies the console, ise, and results look and behave.
- 11. **Integration**:
+* **Integration**:
   * Rebuild All - Rebuilds the gutter, ribbon, and control panel integration.
  
 The *Open* dialog provides both a search and tree view of the scripts stored in the script libraries. 
