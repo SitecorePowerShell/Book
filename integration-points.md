@@ -2,7 +2,9 @@
 
 The SPE Modules support a wide variety of predefined script libraries to help with exposing scripts to the Sitecore interface.
 
-The following list outlines the available libraries for *Integration Points* that may be added to modules. These may also be generated automatically when creating or updating modules.
+The following list outlines the available libraries for *Integration Points* that may be added to modules. These may also be generated automatically when creating or updating modules. 
+
+**Note:** Be certain to enable the module when you need to use it.
 
 * **Content Editor**
  * Context Menu - Visibility can be control using rules made available from within the *Interactive* field section.
