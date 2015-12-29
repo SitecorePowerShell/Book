@@ -39,9 +39,9 @@ The *Open* dialog provides both a search and tree view of the scripts stored in 
 ![Open Script Dialog](images/screenshots/ise-opendialog.png)
 
 ### Shortcuts
-Below are the shortcuts available in the console.
+Below are the shortcuts available in the ISE.
 
-| Shortcut  | Usage |
+| **Shortcut**  | **Usage** |
 | --------  | ----- |
 | TAB       | Indent |
 | Ctrl-Space       | Autocomplete commands. Use the up or down direction keys to cycle through options.  |
