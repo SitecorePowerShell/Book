@@ -37,21 +37,6 @@ Here's a quick look at the ISE:
 #### Plugins Tab
 * **Platform:** Custom scripts added to the *ISE Plugins* integration point script library will appear here.
 
-* **Script**:
-  * This is where you type all the commands for the script.
-* **Output**:
-  * This is where you see the output of your script.
-* **Tips**:
-  * This is where you find helpful shortcuts.
-* **Line** and **Column**:
-  * This indicates the current position of the cursor.
-* **Splitter**:
-  * This is where you change the height of the output pane.
-* **Preferences**:
-  * Settings - Specifies the console, ise, and results look and behave.
-* **Integration**:
-  * Rebuild All - Rebuilds the gutter, ribbon, and control panel integration.
- 
 The *Open* dialog provides both a search and tree view of the scripts stored in the script libraries. 
 
 ![Open Script Dialog](images/screenshots/ise-opendialog.png)
