@@ -1,6 +1,6 @@
 # Console
 
-The SPE Console is a command line interface (CLI) designed for efficiency. The console provides a streamlined tool for working within Windows PowerShell and Sitecore.
+The SPE Console is a command line interface (CLI) designed for efficiency. The console provides a streamlined tool for working with Windows PowerShell and Sitecore.
 
 [![PowerShell Console](images/screenshots/cli-empty.png)](https://youtu.be/1TLYyzTw01w "Click for a quick demo")
 
@@ -23,7 +23,7 @@ The console prompt typically begins with ` PS master:\> `. The present working d
 ### Variables
 SPE provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* derive from the Web.config settings. Run the command ` Get-Variable ` to see the complete list.
 
-| Variable | Example |
+| **Variable** | **Example** |
 | -------- | ----------- |
 | AppPath  | C:\Inetpub\wwwroot\Console\Website\ |
 | Me        | sitecore\admin    |
@@ -43,7 +43,7 @@ SPE provides some convenient variables out of the box for use in running command
 ### Shortcuts
 Below are the shortcuts available in the console.
 
-| Shortcut  | Usage |
+| **Shortcut**  | **Usage** |
 | --------  | ----- |
 | TAB       | Autocomplete commands. Press tab again to cycle through commands.  |
 | Up Arrow/Ctrl-P   | Show previous command from history    |
