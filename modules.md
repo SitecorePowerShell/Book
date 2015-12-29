@@ -10,7 +10,7 @@ Some benefits to using modules:
 **Note:** The *Platform* module is one you should avoid changing.
 
 ### Create a custom module
-Getting started with your own module is a short process.
+Getting started with your own module is a short process and something you should do for all of your custom scripts.
 
 1. Navigate to the *Script Library* item and *Insert -> PowerShell Script Module*.
 ![New Module](images/screenshots/library-createnewmodule.png)
