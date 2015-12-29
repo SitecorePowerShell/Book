@@ -2,10 +2,6 @@
 
 The Web API integration point exposes scripts through a url.
 
-### Security
-
-The integration point can be completely disabled through configuration as described [here](security.md).
-
 The url will look something like the following:
 http://remotesitecore/-/script/v2/master/homeanddescendants?user=admin&password=b
 
@@ -20,3 +16,7 @@ Here's the url broken down:
 * **Query String Parameters** - Specifies the additional bits of data for use by the web service.
   * user and password - Authenticates the request and in most cases will be needed. If the script is published to the *web* database the credentials are not required.
   * scriptArguments - The PowerShell hashtable containing the query string parameters.
+  
+### Security
+
+The integration point can be completely disabled through configuration as described [here](security.md).
