@@ -171,5 +171,14 @@ Get-Item -Path master:\* | Show-ListView -Property Name, DisplayName, ProviderPa
 ![Show List View](images/screenshots/modaldialog-showlistview.png)
 
 ### Results
-Show-Result
 
+**Example:** The following displays a dialog with the all the information written to the ScriptSession output buffer.
+```powershell
+for($i = 0; $i -lt 10; $i++) {
+    Write-Verbose "Index = $($i)" -Verbose
+}
+
+Show-Result -Text
+```
+
+![Show Result Text](images/screenshots/modaldialog-showresulttext.png)
