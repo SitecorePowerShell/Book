@@ -161,6 +161,11 @@ Show-ModalDialog -HandleParameters @{
 
 ![Show File Browser](images/screenshots/modaldialog-simplefilebrowser.png)
 
+**Example:** The following displays a Sheer UI control without any additional parameters.
+```powershell
+Show-ModalDialog -Control "ControlPanel"
+```
+
 ### Data List
 
 **Example:** The following displays a list view dialog with the child items under the Sitecore tree.
