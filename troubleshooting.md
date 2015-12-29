@@ -35,6 +35,7 @@ Be sure the module is enabled and the integrations are rebuilt from within the I
 
 * Content Editor Gutter - Entries not listed.
 * Content Editor Ribbon - Buttons not visible or working.
+* Control Panel - Entries not listed.
 * Functions - Import-Function *name* parameter not populating with functions or can't be found after running the command.
 * Web API - Scripts not existing or can't be found.
 
