@@ -4,7 +4,7 @@ The SPE Console is a command line interface (CLI) designed for efficiency. The c
 
 [![PowerShell Console](images/screenshots/cli-empty.png)](https://youtu.be/1TLYyzTw01w "Click for a quick demo")
 
-#### Providers
+### Providers
 You can interact with the providers available in the standard Windows PowerShell Console. Below are some of the important providers.Run the command ` Get-PSProvider ` to see the complete list.
  * **FileSystem** - Supports interacting with files and folders.
  * **CmsItemProvider** - Supports interacting with the Sitecore content items.
@@ -20,7 +20,7 @@ The console prompt typically begins with ` PS master:\> `. The present working d
  ```
  **Note:** Include the backslash in the path (i.e. **C:\\**) to get the root of the drive when interacting with the *FileSystem* provider; the behavior seen is different than you might expeect because of *w3wp.exe*. See issue #[314][1].
 
-#### Variables
+### Variables
 SPE provides some convenient variables out of the box for use in running commands and scripts. The variables prefixed with *Sitecore* derive from the Web.config settings. Run the command ` Get-Variable ` to see the complete list.
 
 | Variable | Example |
@@ -40,7 +40,7 @@ SPE provides some convenient variables out of the box for use in running command
 
  **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
  
-#### Shortcuts
+### Shortcuts
 Below are the shortcuts available in the console.
 
 | Shortcut  | Usage |
@@ -60,5 +60,7 @@ Below are the shortcuts available in the console.
 | Ctrl-V            | Insert text from the clipboard    |
 | Ctrl-Alt-Shift +  | Increase the font size |
 | Ctrl-Alt-Shift -  | Decrease the font size |
+
+**Note:** The font family, font size, and other settings can be configured through the ISE.
 
 [1]: https://github.com/SitecorePowerShell/Console/issues/314
