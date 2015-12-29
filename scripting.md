@@ -34,6 +34,9 @@ Here's a quick look at the ISE:
 * **Integrations:**
   * Rebuild All - This is where you rebuild the integration points for Control Panel, Gutters, and Ribbons. 
 
+#### Plugins Tab
+* **Platform:** Custom scripts added to the *ISE Plugins* integration point script library will appear here.
+
 * **Script**:
   * This is where you type all the commands for the script.
 * **Output**:
