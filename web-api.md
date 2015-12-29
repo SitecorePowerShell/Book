@@ -19,4 +19,4 @@ Here's the url broken down:
   
 ### Security
 
-The integration point can be completely disabled through configuration as described [here](security.md).
+The integration point can be completely disabled through configuration as described [here](security.md) for Restfulv2.
