@@ -2,11 +2,11 @@
 
 The task scheduler is a great way to run scripts in a periodic fashion. You may find the need to automatically archive log files into a compressed file. Perhaps send an email with a generated report based on stale site content. 
 
-##### Video Tutorial
+### Video Tutorial
 
 [![Scheduled Task Editor](http://img.youtube.com/vi/Q6QKqRwrkuU/0.jpg)](https://youtu.be/Q6QKqRwrkuU "Click for a quick demo")
 
-#### Scheduled Task Command
+### Scheduled Task Command
 
 To help make the setup simple, we've provided a *Task Command*.
 
@@ -27,7 +27,7 @@ Below are some of the scripts found out-of-the-box with SPE.
 | System Maintenance | Archive Sitecore logs, Clean up deleted items older than 30 days |
 | User Session Management | Remove idle user sessions |
 
-#### Create and Manage Tasks
+### Create and Manage Tasks
 
 We've added a context menu item to provide you with a shortcut to the Task Scheduler Editor.
 
