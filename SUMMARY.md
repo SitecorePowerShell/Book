@@ -12,7 +12,7 @@
 * [Toolbox](toolbox.md)
 * [Modules](modules.md)
    * [Integration Points](integration-points.md)
-       * Web API
+       * [Web API](web-api.md)
 * [Reports](reports.md)
    * [Authoring Reports](authoring-reports.md)
 * [Remoting](remoting.md)
