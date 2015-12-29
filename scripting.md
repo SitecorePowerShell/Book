@@ -27,7 +27,7 @@ Let's have a quick look at the ISE:
 * **Preferences:**
   * Settings - This is where you configure the Console and ISE font family, font size, and other useful things.
 * **Integrations:**
-  * Rebuild All - This is where you rebuild the integration points for Control Panel, Gutters, and Ribbons. 
+  * Rebuild All - This is where you rebuild the integration points for Control Panel, Gutters, and Ribbons. Without running this you will not see those integrations appear (or disappear).
 
 ![ISE Plugins Tab](images/screenshots/ise-plugins.png)
 
