@@ -12,6 +12,7 @@
 * [Toolbox](toolbox.md)
 * [Modules](modules.md)
    * [Integration Points](integration-points.md)
+       * Web API
 * [Reports](reports.md)
    * [Authoring Reports](authoring-reports.md)
 * [Remoting](remoting.md)
@@ -21,4 +22,4 @@
 * [Releases](releases.md)
 * [Troubleshooting](troubleshooting.md)
 * [Appendix](appendix.md)
- {% include './appendix/commands-list.md' %}
+
