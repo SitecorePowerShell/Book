@@ -27,4 +27,10 @@ $paths | Get-ChildItem -Include $patterns -Recurse | Rename-Item -NewName { $PSI
 
 - [378](https://github.com/SitecorePowerShell/Console/issues/378) - Missing Home item (fixed in 3.2)
 
+### Modules
+
+#### Integration Point is not working
+
+Be sure the module is enabled and the integrations are rebuilt from within the ISE.
+
 [1]: http://blog.martinmiles.net/post/sitecore-8-re-indexing-errors-out-and-module-installation-never-ends-without-mongodb-running
