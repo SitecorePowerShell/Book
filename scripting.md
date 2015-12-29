@@ -25,7 +25,7 @@ Let's have a quick look at the ISE:
 
 #### Settings Tab
 * **Preferences:**
-  * Settings - This is where you configure the Console and ISE font family, font size, and other hopefully useful things.
+  * Settings - This is where you configure the Console and ISE font family, font size, and other useful things.
 * **Integrations:**
   * Rebuild All - This is where you rebuild the integration points for Control Panel, Gutters, and Ribbons. 
 
