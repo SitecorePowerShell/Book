@@ -31,6 +31,11 @@ $paths | Get-ChildItem -Include $patterns -Recurse | Rename-Item -NewName { $PSI
 
 #### Integration Point is not working
 
-Be sure the module is enabled and the integrations are rebuilt from within the ISE.
+Be sure the module is enabled and the integrations are rebuilt from within the ISE. The following are some of the integration issues you may experience:
+
+* Content Editor Gutter - Entries not listed.
+* Content Editor Ribbon - Buttons not visible or working.
+* Functions - Import-Function *name* parameter not populating with functions or can't be found after running the command.
+* Web API - Scripts not existing or can't be found.
 
 [1]: http://blog.martinmiles.net/post/sitecore-8-re-indexing-errors-out-and-module-installation-never-ends-without-mongodb-running
