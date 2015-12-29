@@ -1,10 +1,10 @@
 # Working with Sitecore items
 
-#### How do I manage my content through PowerShell?
+### How do I manage my content through PowerShell?
 
 The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using [Dynamic Parameters][1]. These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provided this table to help you discover the hidden gems within each command.
 
-| Parameter Name | Description | Copy-Item | Get-Item | Get-ChildItem | Move-Item | New-Item | Remove-Item |
+| **Parameter Name** | **Description** | **Copy-Item** | **Get-Item** | **Get-ChildItem** | **Move-Item** | **New-Item** | **Remove-Item** |
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | AmbiguousPaths | More than one item matches the criteria so show them all. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 | Database | The specified database will be used. Requires the ID to be set.  | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
@@ -27,7 +27,7 @@ Below we will show how to use each command with the Windows PowerShell syntax fo
 
 If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Initialize-Item` command.
 
-#### Get items by Path
+### Get items by Path
 
 **Example:** The following will retrieve the item based on the Sitecore path.
 
@@ -122,7 +122,7 @@ GetEngaged          pt-BR    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       Tena
 GetEngaged          pl-PL    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
 ```
 
-#### Getting items by Path with Sitecore query
+### Getting items by Path with Sitecore query
 
 It's not always most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items (e.g. a specific template). For this we’ve introduced support for the Sitecore query within our provider. 
 
@@ -159,7 +159,7 @@ Home         en-GB    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Hjem         da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
-####  Get items by Id
+###  Get items by Id
 
 **Example:** The following retrieves an item by id.
 
@@ -171,7 +171,7 @@ Name  Children Languages                Id                                     T
 Home  True     {en, de-DE, es-ES, pt... {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
 ```
 
-#### Get items by Uri
+### Get items by Uri
 
 The Uri encodes the language and version within the path.
 
@@ -189,7 +189,7 @@ In all the examples you'll notice we specified the database. Windows PowerShell 
 * **HKLM:** - The registry provider for HKEY_LOCAL_MACHINE.
 * **C:** - The filesystem provider for the C drive.
 
-#### Changing item properties
+### Changing item properties
 
 We often see the following two ways of accessing and changing fields used in scripts. One uses `Set-ItemProperty` and the other is more natural to a Sitecore developer.
 
@@ -277,7 +277,7 @@ Great! Looks like it worked.
 
 Those little improvements make your scripts much more succinct and understandable. Try it for yourself!
 
-#### When not to use the automated properties?
+### When not to use the automated properties?
 
 As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`. 
 
@@ -310,7 +310,7 @@ Some other classes you may want to use with the `New-UsingBlock` function:
 * `Sitecore.Data.DatabaseCacheDisabler`
 * `Sitecore.Data.Events.EventDisabler`
 
-#### Copy items to a new destination
+### Copy items to a new destination
 
 You will find yourself one day in need of copying items on a small to large scale. The `Copy-Item` command will likely meet the need.
 
@@ -322,7 +322,7 @@ Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "m
 
 **Note:** The item name will match just as you type it in the command. Lowercase name in the destination will result in an item with a lowercase name.
 
-#### Move items to a new destination
+### Move items to a new destination
 
 There is a always a better way to do something. Moving items en masse is certainly one that you don't want to do by hand. If the destination item exists the moved item will be added as a child. If the destination item does not exist the source item will be renamed when moved.
 
@@ -345,7 +345,7 @@ Sample Item 3                    False    {en}                     {F6F4F7B7-5E7
  
 ```
 
-#### Remove items permanently
+### Remove items permanently
 
 **Example:** The following removes the item permanently. Proceed with caution.
 
@@ -353,7 +353,7 @@ Sample Item 3                    False    {en}                     {F6F4F7B7-5E7
 Remove-Item -Path "master:\content\home\sample item\Sample Item 3" -Permanently
 ```
 
-#### References
+### References
 
 * [Working with Sitecore Items in PowerShell Extensions](http://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
  
