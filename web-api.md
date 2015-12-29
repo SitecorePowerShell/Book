@@ -20,3 +20,9 @@ Here's the url broken down:
 ### Security
 
 The integration point can be completely disabled through configuration as described [here](security.md) for Restfulv2.
+
+### References
+
+* Watch Adam present this and much more on Sitecore! Experienced [here][1].
+
+[1]: https://vimeo.com/134196432
