@@ -2,14 +2,8 @@
 
 The Integrated Scripting Environment (ISE) is a great way to group together commands and save for later use. Think of the ISE as a beefed up version of the Console.
 
-Here's a quick look at the ISE:
+Let's have a quick look at the ISE:
 [![PowerShell ISE](images/screenshots/ise-empty.png)](http://youtu.be/RCDprfRsbSU "Click for a quick demo")
-
-![ISE Settings Tab](images/screenshots/ise-settings.png)
-
-![ISE Plugins Tab](images/screenshots/ise-plugins.png)
-
-### Ribbon Chunks
 
 #### Home Tab
 * **Write:**
@@ -27,11 +21,15 @@ Here's a quick look at the ISE:
   * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory). An MRU and tree view are provided for choosing a path.
   * Session - Specifies the session to use when executing the script. Reused sessions live in the *HttpSession*. Options include the session created for the ISE instance, One-Time session, or the Persistent Session ID configured on the script.
 
+![ISE Settings Tab](images/screenshots/ise-settings.png)
+
 #### Settings Tab
 * **Preferences:**
   * Settings - This is where you configure the Console and ISE font family, font size, and other hopefully useful things.
 * **Integrations:**
   * Rebuild All - This is where you rebuild the integration points for Control Panel, Gutters, and Ribbons. 
+
+![ISE Plugins Tab](images/screenshots/ise-plugins.png)
 
 #### Plugins Tab
 * **Platform:** Custom scripts added to the *ISE Plugins* integration point script library will appear here.
