@@ -31,6 +31,8 @@ The following list outlines the available libraries for *Integration Points* tha
 
 ### Other Integrations
 
+* **Remoting** - Interact with SPE through the provided web services as described [here](remoting.md). A Windows PowerShell module is made available to encapsulate the web service calls into PowerShell commands.
+
 [1]: http://blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/
 [2]: http://blog.najmanowicz.com/2013/05/27/react-to-sitecore-events-with-powershell-scripts/
 [3]: http://blog.najmanowicz.com/2013/04/17/powershell-scripted-datasources-in-sitecore-part-1/
