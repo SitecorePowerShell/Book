@@ -18,6 +18,15 @@ When using the IIS identities such as *ApplicationPoolIdentity* and *NetworkServ
 
 The second policy relates to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be through the Sitecore API.
 
+Application Security
+
+| **Application** | **Security Roles** |
+| ----------- | -------------- |
+| PowerShell Console | sitecore\Sitecore Client Developing |
+| PowerShell ISE | sitecore\Sitecore Client Developing |
+| PowerShell ListView | sitecore\Sitecore Client Users |
+| PowerShell Runner | sitecore\Sitecore Client Users |
+
 ### Security Hardening
 
 The time will come when you need to lock down the SPE module. The following section outlines steps you can take to minimize the surface area for attack.
