@@ -27,8 +27,8 @@ Application Security
 | PowerShell ListView | Application | sitecore\Sitecore Client Users (read) |
 | PowerShell Runner | Application | sitecore\Sitecore Client Users (read) |
 | Edit Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) |
-| PowerShell Console | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) |
-| Context PowerShell Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) |
+| Console | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) |
+| Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) |
 
 ### Security Hardening
 
