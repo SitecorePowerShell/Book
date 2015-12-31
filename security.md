@@ -20,12 +20,15 @@ The second policy relates to the Sitecore user account. The code executed throug
 
 Application Security
 
-| **Application** | **Security Roles** |
-| ----------- | -------------- |
-| PowerShell Console | sitecore\Sitecore Client Developing |
-| PowerShell ISE | sitecore\Sitecore Client Developing |
-| PowerShell ListView | sitecore\Sitecore Client Users |
-| PowerShell Runner | sitecore\Sitecore Client Users |
+| **Feature** | **Integration** | **Security Roles** |
+| ----------- | ----------- | -------------- |
+| PowerShell Console | Application | sitecore\Sitecore Client Developing (read) |
+| PowerShell ISE | Application | sitecore\Sitecore Client Developing (read) |
+| PowerShell ListView | Application | sitecore\Sitecore Client Users (read) |
+| PowerShell Runner | Application | sitecore\Sitecore Client Users (read) |
+| Edit Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) |
+| PowerShell Console | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) |
+| Context PowerShell Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) |
 
 ### Security Hardening
 
