@@ -154,7 +154,7 @@ Inevitably you will need to have long running processes triggered remotely. In o
 
 **Note:** These commands are not only used for remoting, we just thought it made sense to talk about them here.
  
-**Example:** The following remotely runs a `ScriptSession` and polls the server until completed.
+**Example:** The following remotely runs the id of a `ScriptSession` and polls the server until completed.
 ```powershell
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore

@@ -6,22 +6,22 @@ The following list outlines the available libraries for *Integration Points* tha
 
 **Note:** Be certain to enable the module when you need to use it.
 
-* **Content Editor**
+* **[Content Editor](content-editor.md)**
  * Context Menu - Visibility can be control using rules made available from within the *Interactive* field section.
  * Gutters - Requires the library to be synced.
  * Insert Item - Visibility can be control using rules made available from within the *Interactive* field section.
  * Ribbon - Requires the library to be synced. Visibility can be control using rules made available from within the *Interactive* field section.
  * Warning - Appears as a warning message beneath the ribbon in the *Content Editor*.
-* **Data Sources** - Not a formal integration point library, but a good place to add scripts used for Data Source Scripts. Read more about how they work [here][3] and [here][4]. The *Source* field simply references the script like *script:/sitecore/system/Modules/PowerShell/Script Library/[MODULE NAME]/Data Sources/[SCRIPT NAME]*.
-* **Control Panel** - Requires the library to be synced.
-* **Event Handlers** - Requires a patch file to enable the desired events. Read more about it [here][2].
-* **Functions** - Exposes scripts to the command *Import-Function*.
+* **[Control Panel](control-panel.md)** - Requires the library to be synced.
+* **[Data Sources](date-sources.md)** - Not a formal integration point library, but a good place to add scripts used for Data Source Scripts. Read more about how they work [here][3] and [here][4]. The *Source* field simply references the script like *script:/sitecore/system/Modules/PowerShell/Script Library/[MODULE NAME]/Data Sources/[SCRIPT NAME]*.
+* **[Event Handlers](event-handlers.md)** - Requires a patch file to enable the desired events. Read more about it [here][2].
+* **[Functions](functions.md)** - Exposes scripts to the command *Import-Function*.
 * **Internal**
  * ISE Plugins - Appears as a button in the ISE *Settings* tab.
  * List View - Represents the ribbon buttons such as for **Actions** and **Exports**.
-* **Page Editor** (Experience Editor)
+* **[Page Editor](page-editor.md)** (Experience Editor)
  * Notification - Appears as a notification message beneath the ribbon in the *Experience Editor*.
-* **Pipelines**
+* **[Pipelines](pipelines.md)**
  * LoggedIn
  * LoggingIn
  * Logout
@@ -29,7 +29,7 @@ The following list outlines the available libraries for *Integration Points* tha
 * **[Toolbox](toolbox.md)** - Appears as a shortcut under *Sitecore -> Toolbox*. Visibility can be control using rules made available from within the *Interactive* field section.
 * **[Tasks](tasks.md)** - Not a formal integration point library, but a good place to add scripts used for Scheduled Tasks. SPE includes a `PowerShellScriptCommand` found under */sitecore/system/Tasks/Commands/PowerShellScriptCommand* which is used to run scripts from within scheduled tasks.
 * **[Web API](web-api.md)** - Exposes scripts than can be consumed through [SPE Remoting](remoting.md). The script can be executed by requesting a specific url.
-* **Workflows** - Not a formal integration point library, but a good place to add scripts used for Workflow Action Scripts. Read more about how they work [here][1].
+* **[Workflows](workflows.md)** - Not a formal integration point library, but a good place to add scripts used for Workflow Action Scripts. Read more about how they work [here][1].
 
 ### Other Integrations
 
