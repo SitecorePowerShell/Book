@@ -8,7 +8,7 @@ We have provided a handy way of executing scripts via web service using the Remo
 
 #### Remoting Module Setup
 
-[![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
+<a href="http://www.youtube.com/watch?v=fGvT8eDdWrg" rel="Click for a quick demo">![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)</a>
 
 #### Sitecore to Sitecore communication
 
