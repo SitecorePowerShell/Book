@@ -47,5 +47,5 @@ There are three conventions that we recommend you follow which are shown with an
 
 **Session Persistency**
 
-* **PersistentSessionId** (Persistent Session ID) : Context scripts using this ID will execute in a single session and be reused; leaving empty will cause the session to be discarded after execution.
+* **PersistentSessionId** (Persistent Session ID) : Context scripts using this ID will execute in a single session and be reused; leaving empty will cause the session to be discarded after execution. This value should be used for rules requesting the session ID.
 
