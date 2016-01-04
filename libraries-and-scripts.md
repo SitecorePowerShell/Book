@@ -33,6 +33,6 @@ The script items represent the code that will be executed.
 
 There are three conventions that we recommend you follow which are shown with an example below.
 
-* **Title Casing** - This should be used when the name will be exposed in places such as the *Context Menu* and *Reports* root directory.
+* **Title Casing** - This should be used when the name will be exposed in places such as the *Context Menu*, script library names, and *Reports* root directory.
 * **Sentence casing** - This should be used when the name is long and will not be visible to the user or is report with a very long name.
 * **Noun-Verb** - This should be used when the script is stored within the *Functions* script library and will be imported using the command *Import-Function*.
