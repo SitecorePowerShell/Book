@@ -12,7 +12,7 @@ You'll find that with the *Integration Points* some libraries should be created 
 
 #### Fields
 
-**Interactive:** The following fields support the two custom rules as well as a variety of out-of-the-box rules.
+**Interactive** : The following fields support the two custom rules as well as a variety of out-of-the-box rules.
 
 * **ShowRule** : Show if rules are met or not defined
  * **PowerShell**
@@ -36,3 +36,12 @@ There are three conventions that we recommend you follow which are shown with an
 * **Title Casing** - This should be used when the name will be exposed in places such as the *Context Menu*, script library names, and *Reports* root directory.
 * **Sentence casing** - This should be used when the name is long and will not be visible to the user or is a report with a very long name.
 * **Noun-Verb** - This should be used when the script is stored within the *Functions* script library and will be imported using the command *Import-Function*.
+
+#### Fields
+
+**Interactive** : Refer to the description shown for *PowerShell Script Library* fields.
+
+**Scripting**
+
+* **Script** : Script body
+ * This is a multi-line text than should be edited using the **PowerShell ISE** application. 
