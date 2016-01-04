@@ -19,7 +19,7 @@ The following list outlines the available libraries for *Integration Points* tha
 * **Internal**
  * ISE Plugins - Appears as a button in the ISE *Settings* tab.
  * List View - Represents the ribbon buttons such as for **Actions** and **Exports**.
-* **Page Editor** (Experience Editor)
+* **[Page Editor](page-editor.md)** (Experience Editor)
  * Notification - Appears as a notification message beneath the ribbon in the *Experience Editor*.
 * **[Pipelines](pipelines.md)**
  * LoggedIn
