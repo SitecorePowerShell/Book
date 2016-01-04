@@ -10,6 +10,7 @@
 * [Working with Items](working-with-items.md)
    * [Item Languages](item-languages.md)
 * [Modules](modules.md)
+   * [Libraries and Scripts](libraries-and-scripts.md) 
    * [Integration Points](integration-points.md)
       * [Content Editor](content-editor.md) 
       * [Control Panel](control-panel.md)
