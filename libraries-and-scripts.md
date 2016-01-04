@@ -14,7 +14,7 @@ You'll find that with the *Integration Points* some libraries should be created 
 
 **Interactive** : The following fields support the two custom rules as well as a variety of out-of-the-box rules.
 
-* **ShowRule** : Show if rules are met or not defined
+* **ShowRule** (Show if rules are met or not defined)
  * **PowerShell**
    * where *specific* persistent PowerShell session was already initiated
    * where *specific* persistent PowerShell session was already initiated and has the *specific* variable defined and not null
@@ -22,7 +22,7 @@ You'll find that with the *Integration Points* some libraries should be created 
  * **PowerShell ISE**
    * when *length* script length is *compares to* *number* characters long
    * when the edited script is *in a state*
-* **EnableRule** : Enable if rules are met or not defined
+* **EnableRule** (Enable if rules are met or not defined)
   * ***Same as above*** 
 
 ### PowerShell Script
@@ -43,5 +43,9 @@ There are three conventions that we recommend you follow which are shown with an
 
 **Scripting**
 
-* **Script** : Script body
- * This is a multi-line text than should be edited using the **PowerShell ISE** application. 
+* **Script** (Script body) : This is a multi-line text than should be edited using the **PowerShell ISE** application. 
+
+**Session Persistency**
+
+* **PersistentSessionId** (Persistent Session ID) : Context scripts using this ID will execute in a single session and be reused; leaving empty will cause the session to be discarded after execution.
+
