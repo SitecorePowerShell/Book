@@ -6,7 +6,7 @@ The following list outlines the available libraries for *Integration Points* tha
 
 **Note:** Be certain to enable the module when you need to use it.
 
-* **Content Editor**
+* **[Content Editor](content-editor.md)**
  * Context Menu - Visibility can be control using rules made available from within the *Interactive* field section.
  * Gutters - Requires the library to be synced.
  * Insert Item - Visibility can be control using rules made available from within the *Interactive* field section.
