@@ -10,18 +10,21 @@ The library items represent a collection of scripts, and may be structured with 
 
 You'll find that with the *Integration Points* some libraries should be created with specific names (i.e. Content Editor, Control Panel).
 
-#### Rules
+#### Fields
 
-The library item contains a field section called *Interactive* which provides the two available types of rule fields.
+**Interactive:** The following fields support the two custom rules as well as a variety of out-of-the-box rules.
 
-**Fields:** The following fields support the two custom rules as well as a variety of out-of-the-box rules.
-* Show if rules are met or not defined
- * **Rule:** PowerShell
+* **ShowRule** : Show if rules are met or not defined
+ * **PowerShell**
    * where *specific* persistent PowerShell session was already initiated
    * where *specific* persistent PowerShell session was already initiated and has the *specific* variable defined and not null
    * where exposed in a *specific* view
- * **Rule:** PowerShell ISE
+ * **PowerShell ISE**
    * when *length* script length is *compares to* *number* characters long
    * when the edited script is *in a state*
-* Enable if rules are met or not defined
+* **EnableRule** : Enable if rules are met or not defined
   * ***Same as above*** 
+
+### PowerShell Script
+
+The script items reprsent
