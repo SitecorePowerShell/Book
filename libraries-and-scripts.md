@@ -24,4 +24,4 @@ The library item contains a field section called *Interactive* which provides th
    * when *length* script length is *compares to* *number* characters long
    * when the edited script is *in a state*
 * Enable if rules are met or not defined
-  * *Same as above* 
+  * ***Same as above*** 
