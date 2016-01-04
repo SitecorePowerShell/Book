@@ -4,4 +4,24 @@ Modules may contain *PowerShell Script Library* items and *PowerShell Script* it
 
 ### PowerShell Script Library
 
-The library items represent a collection of scripts, and may be structured with one or more levels of libraries. You'll find that with the *Integration Points* some libraries should be created with specific names (i.e. Content Editor, Control Panel).
+The library items represent a collection of scripts, and may be structured with one or more levels of libraries. 
+
+#### Naming Convention 
+
+You'll find that with the *Integration Points* some libraries should be created with specific names (i.e. Content Editor, Control Panel).
+
+#### Rules
+
+The library item contains a field section called *Interactive* which provides the two available types of rule fields.
+
+**Fields:**
+* Show if rules are met or not defined
+ * **Rule:** PowerShell
+   * where *specific* persistent PowerShell session was already initiated
+   * where *specific* persistent PowerShell session was already initiated and has the *specific* variable defined and not null
+   * where exposed in a *specific* view
+ * **Rule:** PowerShell ISE
+   * when *length* script length is *compares to* *number* characters long
+   * when the edited script is *in a state*
+* Enable if rules are met or not defined
+  * *Same as above* 
