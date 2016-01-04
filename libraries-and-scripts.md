@@ -14,7 +14,7 @@ You'll find that with the *Integration Points* some libraries should be created 
 
 The library item contains a field section called *Interactive* which provides the two available types of rule fields.
 
-**Fields:**
+**Fields:** The following fields support the two custom rules as well as a variety of out-of-the-box rules.
 * Show if rules are met or not defined
  * **Rule:** PowerShell
    * where *specific* persistent PowerShell session was already initiated
