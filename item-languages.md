@@ -1,5 +1,7 @@
 # Item Languages
 
+The section on [working with items](working-with-items.md) provided a variety of examples in retrieving items based on their language. In this section will show how to manage items and their languages.
+
 ### Add Language Version
 
 **Example:** The following example queries all of the content items and adds a new language version of "en-ca", while overwriting any that exist.
