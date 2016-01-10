@@ -30,6 +30,12 @@ Get-ChildItem "master:\content\home" -Language "en" -Recurse |
     Format-Table Name, Language, Version -AutoSize
 ```
 
+**Example:** The following example adds a language version in Polish to the *Home* item and all its children. If the version exists nothing happens. No fields were harmed in the making of this version.
+
+```powershell
+Add-ItemLanguage -Path "master:\content\home" -TargetLanguage "pl-pl" -IfExist Skip -DoNotCopyFields -Recurse
+```
+
 ### Remove Language Version
 
 **Example:** The following example queries all of the content items and removes the language version of "fr-CA".
