@@ -1,6 +1,7 @@
 # Installation
 
-#### Prerequisites
+### Prerequisites
+
 * Windows 7+
 * Microsoft .NET Framework 4.5+ : [Download][2]  
 * Windows Management Framework 3+ : [Download][3]
@@ -9,7 +10,8 @@
 * PowerShell [Execution Policy][8] set to `RemoteSigned`
 
 
-#### Download the Module
+### Download the Module
+
 The SPE module installs like any other for Sitecore. 
 
 [Download][1] the module from the [Sitecore Marketplace][4] and install through the _Installation Wizard_.
@@ -27,11 +29,11 @@ Following the installation you'll find these new items added to the Sitecore men
 * Sitecore -> Development Tools -> [PowerShell ISE](scripting.md)
 * Sitecore -> Reporting Tools -> [PowerShell Reports](reports.md)
 
-#### Compile Your Own Binaries
+### Compile Your Own Binaries
 
 You may also clone the project from [GitHub][5] and compile it. This allows you to access the latest functionality without waiting for a new release. See the following [contributor guide](contributor-guide.md) for instructions on how to get up and running.
 
-#### Troubleshooting
+### Troubleshooting
 
 See the troubleshooting section [here](troubleshooting.md)
 
