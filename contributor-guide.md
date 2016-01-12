@@ -4,7 +4,7 @@ The following guide should provide you with enough information to setup a develo
 
 The solution requires Visual Studio 2015.
 
-#### Single Instance
+### Single Instance
 
 1. Meet the prerequisites found [here](installation.md)
 2. Install Sitecore 8+ to `C:\inetpub\wwwroot\Console`
@@ -40,7 +40,7 @@ The solution requires Visual Studio 2015.
 ```
 10. Navigate to http://console/sitecore/login and verify that SPE works as expected.
 
-#### Multiple Instance
+### Multiple Instance
 
 1. Meet the prerequisites found [here](installation.md)
 2. Install Sitecore 7+ to the following paths    
