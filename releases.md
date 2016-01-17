@@ -1,6 +1,6 @@
 # Releases
 
-Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace][1] or report issues on [Github][2].
+Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace][1] or report issues on [Github][2]. Past releases are availabile [here](past-releases.md).
 
 ## Version 3.3
 Yet another little-over-a-month update and in many aspects a major one!
