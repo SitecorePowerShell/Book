@@ -6,6 +6,7 @@
 * [Interfaces](interfaces.md)
    * [Command Line Console](console.md)
    * [Integrated Scripting Environment](scripting.md)
+   * [Interface Configuration](interface-configuration.md)
    * [Interactive Dialogs](interactive-dialogs.md)
 * [Working with Items](working-with-items.md)
    * [Item Languages](item-languages.md)
