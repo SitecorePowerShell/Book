@@ -12,8 +12,13 @@ Thank you for taking the time to check out the latest and greatest changes for S
 
 #### Enhancements
 
+- We went crazy on the styling of the console windows so now you can [565](https://github.com/SitecorePowerShell/Console/issues/565) configure the foreground and background colors. The `Show-Result` command also retains [566](https://github.com/SitecorePowerShell/Console/issues/566) the colors of the host session.
+
+
 #### Fixes
 
+- The SPE Remoting commands `Send-RemoteItem` and `Receive-RemoteItem` now use `Write-Error` when an error is encountered [564](https://github.com/SitecorePowerShell/Console/issues/564).
+- 
 ## Version 3.3
 Yet another little-over-a-month update and in many aspects a major one!
 
