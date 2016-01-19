@@ -28,6 +28,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - The export command in reports no longer require a temporary file [551](https://github.com/SitecorePowerShell/Console/issues/551). This should now add support in hosted environments such as Azure [549](https://github.com/SitecorePowerShell/Console/issues/549).
 - The `Show-ListView` command now enumerates collections [544](https://github.com/SitecorePowerShell/Console/issues/544) rather than printing the class name.
 - The `UseDefaultCredentials` parameter is now supported [531](https://github.com/SitecorePowerShell/Console/issues/531) when using the `New-ScriptSession` command in SPE Remoting.
+- The `Publish-Item` command will not publish to all targets by default [530](https://github.com/SitecorePowerShell/Console/issues/530) without requiring the target to be specified.
 
 #### Fixes
 
