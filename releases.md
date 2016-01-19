@@ -9,6 +9,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 #### Breaking Changes
 
 - The `Rebuild-SearchIndex` command now returns an existing job [558](https://github.com/SitecorePowerShell/Console/issues/558) for an index if currently rebuilding.
+- Request related variables such as `$HttpContext` are no longer added to the session [557](https://github.com/SitecorePowerShell/Console/issues/557) but can still be accessed through their static context properties.
 
 #### New Features
 
@@ -17,6 +18,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - We went crazy on the styling of the console windows so now you can [565](https://github.com/SitecorePowerShell/Console/issues/565) configure the foreground and background colors. The `Show-Result` command also retains [566](https://github.com/SitecorePowerShell/Console/issues/566) the colors of the host session.
 - Variables are now hidden from the autocomplete [560](https://github.com/SitecorePowerShell/Console/issues/560) unless the token begins with a `$`.
 - The `ScriptSession` now contains a property *LastErrors* [559](https://github.com/SitecorePowerShell/Console/issues/559) that contains the errors encountered in a script rather than cluttering the log.
+- The `Publish-Item` command suggests database names [553](https://github.com/SitecorePowerShell/Console/issues/553) and *filesystem* is no longer an option.
 
 #### Fixes
 
