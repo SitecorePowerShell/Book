@@ -8,6 +8,8 @@ Thank you for taking the time to check out the latest and greatest changes for S
 
 #### Breaking Changes
 
+- The `Rebuild-SearchIndex` command now returns an existing job [558](https://github.com/SitecorePowerShell/Console/issues/558) for an index if currently rebuilding.
+
 #### New Features
 
 #### Enhancements
