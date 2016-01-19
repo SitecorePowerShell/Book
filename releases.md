@@ -13,18 +13,22 @@ Thank you for taking the time to check out the latest and greatest changes for S
 
 #### New Features
 
+- A new Experience Button integration point was added [546](https://github.com/SitecorePowerShell/Console/issues/546).
+
 #### Enhancements
 
 - We went crazy on the styling of the console windows so now you can [565](https://github.com/SitecorePowerShell/Console/issues/565) configure the foreground and background colors. The `Show-Result` command also retains [566](https://github.com/SitecorePowerShell/Console/issues/566) the colors of the host session.
 - Variables are now hidden from the autocomplete [560](https://github.com/SitecorePowerShell/Console/issues/560) unless the token begins with a `$`.
 - The `ScriptSession` now contains a property *LastErrors* [559](https://github.com/SitecorePowerShell/Console/issues/559) that contains the errors encountered in a script rather than cluttering the log.
 - The `Publish-Item` command suggests database names [553](https://github.com/SitecorePowerShell/Console/issues/553) and *filesystem* is no longer an option.
-- The export command in reports no longer require a temporary file [551](https://github.com/SitecorePowerShell/Console/issues/551). This should now add support in hosted environments such as Azure.
+- The export command in reports no longer require a temporary file [551](https://github.com/SitecorePowerShell/Console/issues/551). This should now add support in hosted environments such as Azure [549](https://github.com/SitecorePowerShell/Console/issues/549).
+- The `Show-ListView` command now enumerates collections [544](https://github.com/SitecorePowerShell/Console/issues/544) rather than printing the class name.
 
 #### Fixes
 
 - The SPE Remoting commands `Send-RemoteItem` and `Receive-RemoteItem` now use `Write-Error` when an error is encountered [564](https://github.com/SitecorePowerShell/Console/issues/564).
 - The `Show-Result` command was not adhering to the font settings [552](https://github.com/SitecorePowerShell/Console/issues/552).
+- The `GetItemWorkflowEvent` command threw exceptions for missing optional parameters [545](https://github.com/SitecorePowerShell/Console/issues/545).
 
 ## Version 3.3
 Yet another little-over-a-month update and in many aspects a major one!
