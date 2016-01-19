@@ -32,7 +32,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - The SPE Remoting commands `Send-RemoteItem` and `Receive-RemoteItem` now use `Write-Error` when an error is encountered [564](https://github.com/SitecorePowerShell/Console/issues/564).
 - The `Show-Result` command was not adhering to the font settings [552](https://github.com/SitecorePowerShell/Console/issues/552).
 - The `GetItemWorkflowEvent` command threw exceptions for missing optional parameters [545](https://github.com/SitecorePowerShell/Console/issues/545).
-- Automatic properties were not updated [534](https://github.com/SitecorePowerShell/Console/issues/534) until restart.
+- Automatic properties no longer require a restart to update [534](https://github.com/SitecorePowerShell/Console/issues/534).
 
 ## Version 3.3
 Yet another little-over-a-month update and in many aspects a major one!
