@@ -23,6 +23,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 #### Fixes
 
 - The SPE Remoting commands `Send-RemoteItem` and `Receive-RemoteItem` now use `Write-Error` when an error is encountered [564](https://github.com/SitecorePowerShell/Console/issues/564).
+- The `Show-Result` command was not adhering to the font settings [552](https://github.com/SitecorePowerShell/Console/issues/552).
 
 ## Version 3.3
 Yet another little-over-a-month update and in many aspects a major one!
