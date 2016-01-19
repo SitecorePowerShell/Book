@@ -13,7 +13,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 #### Enhancements
 
 - We went crazy on the styling of the console windows so now you can [565](https://github.com/SitecorePowerShell/Console/issues/565) configure the foreground and background colors. The `Show-Result` command also retains [566](https://github.com/SitecorePowerShell/Console/issues/566) the colors of the host session.
-
+- Variables are now hidden from the autocomplete [560](https://github.com/SitecorePowerShell/Console/issues/560) unless the token begins with a `$`.
 
 #### Fixes
 
