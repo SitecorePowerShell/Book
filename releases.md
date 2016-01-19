@@ -18,6 +18,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - A new Experience Button integration point was added [546](https://github.com/SitecorePowerShell/Console/issues/546).
 - Method signature in the ISE received a face lift [541](https://github.com/SitecorePowerShell/Console/issues/541). Now you can see the argument data types!
 - Type names now autocomplete [540](https://github.com/SitecorePowerShell/Console/issues/540).
+- SPE Remoting now supports uploading large files [528](https://github.com/SitecorePowerShell/Console/issues/528).
 
 #### Enhancements
 
