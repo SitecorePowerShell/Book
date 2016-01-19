@@ -11,6 +11,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - The `Rebuild-SearchIndex` command now returns an existing job [558](https://github.com/SitecorePowerShell/Console/issues/558) for an index if currently rebuilding.
 - Request related variables such as `$HttpContext` are no longer added to the session [557](https://github.com/SitecorePowerShell/Console/issues/557) but can still be accessed through their static context properties.
 - The `Publish-Item` command now supports the additional publishing options [539](https://github.com/SitecorePowerShell/Console/issues/539) introduced in Sitecore 7.1. The default behavior was changed to synchronous and requires the `AsJob` parameter to run asynchronously.
+- The `Add-ItemLanguage` and `Remove-ItemLanguage` commands were renamed [532](https://github.com/SitecorePowerShell/Console/issues/532) to `Add-ItemVersion` and `Remove-ItemVersion` since item versions and languages are managed almost the same.
 
 #### New Features
 
