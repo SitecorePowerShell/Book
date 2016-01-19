@@ -30,6 +30,7 @@
 * [Remoting](remoting.md)
 * [Security](security.md)
 * [Releases](releases.md)
+   * [Past Releases](past-releases.md)
 * [Troubleshooting](troubleshooting.md)
 * [Appendix](appendix.md)
  {% include './appendix/commands-list.md' %}
