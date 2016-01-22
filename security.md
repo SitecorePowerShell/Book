@@ -27,14 +27,14 @@ The second policy relates to the Sitecore user account. The code executed throug
 | PowerShell ListView | sitecore\Sitecore Client Users (read) |
 | PowerShell Runner | sitecore\Sitecore Client Users (read) |
 
-**Note:** The security is set on the applications under `master:\content\Applications\PowerShell\` and validated *OnLoad*.
+**Note:** The security is set on the applications under `master:\content\Applications\PowerShell` and validated *OnLoad*.
 
 **Menu Item Security**
 
 | **Feature** | **Visibility** | **Command State** |
 | ----------- | ------------------ | ---------- |
 | Edit Script | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** when item template is *PowerShell Script* otherwise **Hidden** |
-| Console | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** until user is *non-admin* and not in **sitecore\Sitecore Client Developing** |
+| Console | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** until user is *non-admin* and not in *sitecore\Sitecore Client Developing* |
 | Script | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** |
 
 **Note:** See the *Interactive* section on *Script Library* and *Script* items for visibility and enabled rules.
