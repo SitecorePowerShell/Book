@@ -37,7 +37,7 @@ The second policy relates to the Sitecore user account. The code executed throug
 | Console | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** until user is *non-admin* and not in *sitecore\Sitecore Client Developing* |
 | Script | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** |
 
-**Note:** See the *Interactive* section on *PowerShell Script Library* and *PowerShell Script* items for visibility and enabled rules.
+**Note:** See the *Interactive* section on *PowerShell Script Library* and *PowerShell Script* items for visibility and enabled rules. To hide each feature you can change also the security settings for items under `/sitecore/content/Applications/Content Editor/Context Menues/Default/` item in the core database for the roles that should not see the menu.
 
 ### Security Hardening
 
