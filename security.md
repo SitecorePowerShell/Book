@@ -27,6 +27,8 @@ The second policy relates to the Sitecore user account. The code executed throug
 | PowerShell ListView | sitecore\Sitecore Client Users (read) |
 | PowerShell Runner | sitecore\Sitecore Client Users (read) |
 
+**Note:** The security is set on the applications under `master:\content\Applications\PowerShell\` and validated *OnLoad*.
+
 **Menu Item Security**
 
 | **Feature** | **Visibility** | **Command State** |
