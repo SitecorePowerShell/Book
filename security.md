@@ -27,7 +27,7 @@ Application Security
 | PowerShell ListView | Application | sitecore\Sitecore Client Users (read) | |
 | PowerShell Runner | Application | sitecore\Sitecore Client Users (read) | |
 | Edit Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** when item template is *PowerShell Script* otherwise **Hidden** |
-| Console | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | |
+| Console | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** until user is *non-admin* and not in **sitecore\Sitecore Client Developing** |
 | Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | |
 
 ### Security Hardening
