@@ -62,6 +62,26 @@ Look for the following section and enable/disable as needed.
 </sitecore>
 ```
 
+The preferred way to the override the settings is to use a configuration file.
+
+**Example:** The following enables the file and media downloads.
+```xml
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <powershell>
+      <services>
+        <fileDownload>
+          <patch:attribute name="enabled">true</patch:attribute>
+        </fileDownload>
+        <mediaDownload>
+          <patch:attribute name="enabled">true</patch:attribute>
+        </mediaDownload>
+      </services>
+    </powershell>
+  </sitecore>
+</configuration>
+```
+
 * **RESTful v1** - Used in early version of SPE. Disabled by default. Service associated with `RemoteScriptCall.ashx`.
 * **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
 * **Remoting** - Used when passing scripts to SPE for execution. Service associated with `RemoteAutomation.asmx`.
