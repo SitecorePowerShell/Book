@@ -18,17 +18,22 @@ When using the IIS identities such as *ApplicationPoolIdentity* and *NetworkServ
 
 The second policy relates to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be through the Sitecore API.
 
-Application Security
+**Application Security**
 
-| **Feature** | **Integration** | **Security Roles** | Visibility |
+| **Feature** | **Visibility** |
+| ----------- | ------------------ |
+| PowerShell Console | sitecore\Sitecore Client Developing (read) |
+| PowerShell ISE | sitecore\Sitecore Client Developing (read) |
+| PowerShell ListView | sitecore\Sitecore Client Users (read) |
+| PowerShell Runner | sitecore\Sitecore Client Users (read) |
+
+**Menu Item Security**
+
+| **Feature** | **Integration** | **Visibility** | **Command State** |
 | ----------- | --------------- | ------------------ | ---------- |
-| PowerShell Console | Application | sitecore\Sitecore Client Developing (read) | |
-| PowerShell ISE | Application | sitecore\Sitecore Client Developing (read) | |
-| PowerShell ListView | Application | sitecore\Sitecore Client Users (read) | |
-| PowerShell Runner | Application | sitecore\Sitecore Client Users (read) | |
 | Edit Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** when item template is *PowerShell Script* otherwise **Hidden** |
 | Console | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** until user is *non-admin* and not in **sitecore\Sitecore Client Developing** |
-| Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | |
+| Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** |
 
 ### Security Hardening
 
