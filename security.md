@@ -29,11 +29,11 @@ The second policy relates to the Sitecore user account. The code executed throug
 
 **Menu Item Security**
 
-| **Feature** | **Integration** | **Visibility** | **Command State** |
-| ----------- | --------------- | ------------------ | ---------- |
-| Edit Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** when item template is *PowerShell Script* otherwise **Hidden** |
-| Console | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** until user is *non-admin* and not in **sitecore\Sitecore Client Developing** |
-| Script | Context Menu | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** |
+| **Feature** | **Visibility** | **Command State** |
+| ----------- | ------------------ | ---------- |
+| Edit Script | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** when item template is *PowerShell Script* otherwise **Hidden** |
+| Console | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** until user is *non-admin* and not in **sitecore\Sitecore Client Developing** |
+| Script | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** |
 
 ### Security Hardening
 
