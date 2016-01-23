@@ -124,6 +124,7 @@ At this point my action will show on all reports what list Item objects. But now
 
 Now you can specify that you want the action to only appear when the report is named "ListChildren".
 
+![Add rules for report](images/screenshots/reports-script-rule.png)
 
 #### UI Elements
 
