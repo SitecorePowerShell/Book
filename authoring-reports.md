@@ -138,6 +138,8 @@ Get-ChildItem master:\ | Show-ListView -Property Name, ProviderPath
 
 The above action works just fine but will close the previous report and open a new report window in the Sitecore desktop. That's not a great user experience. What if you want to update the content of the report in place using the action? That's possible using the `Update-ListView` command. Consider the following script:
 
+![Updating report content](images/screenshots/reports-action-update-listview.png)
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
