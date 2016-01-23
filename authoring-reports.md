@@ -174,6 +174,20 @@ And you will see the following output:
 
 ![Show progress of long running actions](images/screenshots/reports-action-write-progress.png)
 
+##### Showing other PowerShell dialogs
+
+The action runs fully asynchronously so you’re free to show any of the power of the provided commands. This means that you can ask for additional input using the `Read-Variable` command or Show alert using the `Show-Alert` command or do just about anything possible otherwise from the context menu, ribbon or other interactive integration points.
+
+##### Passing additional data to actions
+
+The `Show-ListView` command has one more useful parameter named `-ActionData` which I mentioned above but is worth mentioning again. Anything passed using this parameter will be set as the `$actionData` variable – this means your report and actions can pass custom data in them it can be as simple as an object or as complex as a hashtable so there is really no hard limit on what can progress from a report to report. Any object that was passed to `Show-ListView` using the `-ActionData` parameter will be available to your action.
+
+##### Actions running in persistent sessions
+
+The persistent session ID will be respected and your script will run in that persistent session if it's already in memory or create a persistent session if it's not.
+
+Alternatively you can elect to simply freeze the session the initial script that generated report was running in and run actions in that same frozen session by using the `-ActionsInSession` parameter.
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
