@@ -42,7 +42,12 @@ The **Content Reports** module includes other reports used for auditing. Below a
 **Examples:**
  * [Images with an empty alt field][1]
  * [Unused media items][2]
- 
+
+### Interacting with Reports
+
+
+
+
 ### Examples from the community!
 
 [Active Commerce][5] for Sitecore product has published reports on Github that you can checkout [here][4].
