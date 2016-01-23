@@ -44,15 +44,7 @@ The **Content Reports** module includes other reports used for auditing. Below a
  * [Images with an empty alt field][1]
  * [Unused media items][2]
 
-### Interacting with Reports
-
-#### Exports
-
-#### Filter
-
-#### Paging
-
-#### Actions
+### Report Actions
 
 Actions are simply commands powered by scripts and with visibility dependent on certain conditions like the .Net class of the object that is displayed or perhaps other session settings.
 
@@ -141,6 +133,10 @@ Get-ChildItem master:\ | Show-ListView -Property Name, ProviderPath
 ```
 
 ![Now the action is unavailable](images/screenshots/reports-action-now-you-dont1.png)
+
+##### Updating report in place
+
+The above action works just fine but will close the previous report and open a new report window in the Sitecore desktop. That's not a great user experience. What if you want to update the content of the report in place using the action? That's possible using the `Update-ListView` command. Consider the following script:
 
 #### UI Elements
 
