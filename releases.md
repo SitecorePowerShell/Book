@@ -24,6 +24,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - Rebuilding the index for single items is now possible [523](https://github.com/SitecorePowerShell/Console/issues/523) with `Rebuild-SearchIndexItem` and removing with `Remove-SearchIndexItem`.
 - Added a report [513](https://github.com/SitecorePowerShell/Console/issues/513) for unpublished items in one or more targets.
 - Users can now peek the session variable values by way of a tooltip [495](https://github.com/SitecorePowerShell/Console/issues/495).
+- The ISE now shows when a script is modified or not yet saved [458](https://github.com/SitecorePowerShell/Console/issues/458).
 
 #### Enhancements
 
