@@ -44,7 +44,7 @@ The **Content Reports** module includes other reports used for auditing. Below a
 
 ### Report Actions
 
-Extracted from [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3] article written by Adam.
+Content extracted from [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3] article written by Adam.
 
 Actions are simply commands powered by scripts and with visibility dependent on certain conditions like the .Net class of the object that is displayed or perhaps other session settings.
 
