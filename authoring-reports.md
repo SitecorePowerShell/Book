@@ -32,6 +32,7 @@ The **Authorable Reports** module has a few points of interest.
 
 
 **Examples:**
+* [Creating Beautiful Sitecore Reports Easily with PowerShell Extensions][6]
 * [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3]
 
 
@@ -87,3 +88,4 @@ Get-ChildItem master:\ |
 [3]: http://blog.najmanowicz.com/2015/05/05/turn-your-sitecore-powershell-reports-into-applications-with-action-scripts/
 [4]: https://github.com/ActiveCommerce/activecommerce-powershell-extensions
 [5]: http://www.activecommerce.com/
+[6]: http://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/
