@@ -100,7 +100,9 @@ You can have multiple actions defined with dynamic visibility. The actions are g
 
 Rules add the full power of the Sitecore rules engine – similarly to what you can do on context menu items or ribbon actions in Content Editor. Some examples where this can be useful include only enabling or disabling the action for items located under a specific branch of the tree or if a [persistent session][7] exists.
 
-The following screenshot shows how to create an action that only appears in reports that list objects of type Item that are of template Schedule.
+The following screenshot shows how to create an action that only appears in reports that list objects of type `Item` that are of template `Schedule`.
+
+
 
 #### UI Elements
 
