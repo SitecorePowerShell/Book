@@ -18,7 +18,7 @@ Once the report completes, the results appear in a report window.
 
 ![Unused Media Items Output](images/screenshots/reports-output.png)
 
-### Reports in SPE similar to ASR
+### Reports in SPE like ASR
 
 While SPE contains many reports, they don't match identical to ASR reports. We've done our best to build those that seem most relevant or likely to be used. If you find a report in ASR that you would like to exist in SPE please submit a request.
 
