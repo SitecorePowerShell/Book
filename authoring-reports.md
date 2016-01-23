@@ -136,6 +136,10 @@ Get-ChildItem master:\ | Show-ListView -ViewName ListChildren -Property Name, Pr
 
 The action does not appear if no view name is provided to the `-ViewName` parameter. Running the script below will produce a report with the action not shown:
 
+```powershell
+Get-ChildItem master:\ | Show-ListView -Property Name, ProviderPath
+```
+
 ![Now the action is unavailable](images/screenshots/reports-action-now-you-dont1.png)
 
 #### UI Elements
