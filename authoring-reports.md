@@ -172,6 +172,8 @@ Write-Progress -Completed -Activity "Done."
 
 And you will see the following output:
 
+![Show progress of long running actions](images/screenshots/reports-action-write-progress.png)
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
