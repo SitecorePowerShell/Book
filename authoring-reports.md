@@ -104,6 +104,18 @@ The following screenshot shows how to create an action that only appears in repo
 
 ![Rules configuration for actions](images/screenshots/reports-schedule-action.png)
 
+For specific reports this global state might not always be enough. You can narrow down the rules further by using the report name. Name your report by providing an additional parameter to  `Show-ListView`.
+
+Consider the following script:
+```powershell
+Get-ChildItem master:\ | Show-ListView -ViewName ListChildren
+```
+The output of the report will be like any other unnamed report but adds support for additional rules. Let's say I want my action to open a new report that lists all the children of the selected items in the report "ListChildren". After running the action my script should display the new report with the children and close the "ListChildren" report. Not very useful but illustrates the point.
+
+![Action script](images/screenshots/reports-action-script1.png)
+
+Now I need to save my script in the proper Script Library in my enabled module:
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
