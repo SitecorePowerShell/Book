@@ -142,6 +142,36 @@ The above action works just fine but will close the previous report and open a n
 
 In this case we're not closing the existing report but rather updating the list in place, all you need to do is send the new data to the `Update-ListView` command.
 
+##### Showing user progress for long running scripts
+
+One last thing that you might wonder is if the Write-Progress command works as it does in case of ISE or the dialog that runs scripts from Content Editor context menu. Let’s copy the following script into your action:
+
+```powershell
+for($i = 0; $i -le 10; $i++){
+  Write-Progress -Activity "I need to do something important for 5 seconds" `
+    -Status "I'm quite on track..." `
+    -PercentComplete ($i*10) -SecondsRemaining (5-$i/2) `
+    -CurrentOperation "Trying to look busy.";
+  Start-Sleep -m 500
+}
+ 
+Write-Progress -Activity "Now I'm doing something else..." `
+    -Status "Should take me about 3 seconds but I'm not quite sure...";
+Start-Sleep -s 3;
+ 
+for($i = 0; $i -le 10; $i++){
+  Write-Progress -Activity "Ok let me revisit one more thing..." `
+    -Status "Just 5 more seconds" `
+    -PercentComplete ($i*10) -SecondsRemaining (5-$i/2) `
+    -CurrentOperation "Just making sure.";
+  Start-Sleep -m 500;
+}
+ 
+Write-Progress -Completed -Activity "Done."
+```
+
+And you will see the following output:
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
