@@ -116,6 +116,8 @@ The output of the report will be like any other unnamed report but adds support 
 
 Now I need to save my script in the proper Script Library in my enabled module:
 
+![Save action script](images/screenshots/reports-action-save.png)
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
