@@ -96,6 +96,12 @@ You can have multiple actions defined with dynamic visibility. The actions are g
 * The action script should be within the path `/Internal/List View/Ribbon/[Object type]`. The `[Object type]` is the name of the .Net class for which the action is valid. For example, if you want your action to be visible for `Sitecore.Data.Items.Item` then save the script at the path `/Internal/List View/Ribbon/Item`.
 * If the action script has no rules defined in the "Show if rules are met or not defined" field it will appear for all objects passed to `Show-ListView` that are of the type based on location. Rules will provide more granular control and allow for rule-based conditions that determine action visibility.
 
+##### Using rules to control action visibility
+
+Rules add the full power of the Sitecore rules engine – similarly to what you can do on context menu items or ribbon actions in Content Editor. Some examples where this can be useful include only enabling or disabling the action for items located under a specific branch of the tree or if a [persistent session][7] exists.
+
+The following screenshot shows how to create an action that only appears in reports that list objects of type Item that are of template Schedule.
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
@@ -131,3 +137,4 @@ Get-ChildItem master:\ |
 [4]: https://github.com/ActiveCommerce/activecommerce-powershell-extensions
 [5]: http://www.activecommerce.com/
 [6]: http://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/
+[7]: http://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/
