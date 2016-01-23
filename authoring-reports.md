@@ -122,6 +122,9 @@ At this point my action will show on all reports what list Item objects. But now
 
 ![Configure rules for report](images/screenshots/reports-script-runtime-settings.png)
 
+Now you can specify that you want the action to only appear when the report is named "ListChildren".
+
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
