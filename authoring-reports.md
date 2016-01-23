@@ -132,6 +132,12 @@ Confirm the save on all dialogs to persist your changes. Now our action appears 
 Get-ChildItem master:\ | Show-ListView -ViewName ListChildren -Property Name, ProviderPath
 ```
 
+![Now the List Children action is available](images/screenshots/reports-action-now-you-see-me1.png)
+
+The action does not appear if no view name is provided to the `-ViewName` parameter. Running the script below will produce a report with the action not shown:
+
+
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
