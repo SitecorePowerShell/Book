@@ -12,7 +12,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - Request related variables such as `$HttpContext` are no longer added to the session [557](https://github.com/SitecorePowerShell/Console/issues/557) but can still be accessed through their static context properties.
 - The `Publish-Item` command now supports the additional publishing options [539](https://github.com/SitecorePowerShell/Console/issues/539) introduced in Sitecore 7.1. The default behavior was changed to synchronous and requires the `AsJob` parameter to run asynchronously.
 - The `Add-ItemLanguage` and `Remove-ItemLanguage` commands were renamed [532](https://github.com/SitecorePowerShell/Console/issues/532) to `Add-ItemVersion` and `Remove-ItemVersion` since item versions and languages are managed almost the same.
-- The user management commands received an adjustment [520](https://github.com/SitecorePowerShell/Console/issues/520) in which `New-Role` no longer requires `-Passthru` to output the resulting account. Also, the `Remove-User` command now accepts the `User` object as input.
+- The user management commands received an adjustment [520](https://github.com/SitecorePowerShell/Console/issues/520) [498](https://github.com/SitecorePowerShell/Console/issues/498) [497](https://github.com/SitecorePowerShell/Console/issues/497) in which `New-Role` no longer requires `-Passthru` to output the resulting account. Also, the `Remove-User` command now accepts the `User` object as input.
 - User reported [511](https://github.com/SitecorePowerShell/Console/issues/511) that SPE conflicted with the **InSite Commerce** product due to the 2.x services location so we went ahead and broke compatibility.
 
 #### New Features
@@ -36,6 +36,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - The `Publish-Item` command will not publish to all targets by default [530](https://github.com/SitecorePowerShell/Console/issues/530) without requiring the target to be specified.
 - Some of the UI elements using `Show-ListView` can be hidden when using the *Hide* parameter [521](https://github.com/SitecorePowerShell/Console/issues/521).
 - Your favorite commands `Get-Item` and `Get-ChildItem` now have [519](https://github.com/SitecorePowerShell/Console/issues/519) tab completion on the `-Language` and `-Database` parameters.
+- SPE Remoting supports `$using:[variablename]` in the scriptblock [499](https://github.com/SitecorePowerShell/Console/issues/499).
 
 #### Fixes
 
