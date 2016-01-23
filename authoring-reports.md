@@ -102,7 +102,7 @@ Rules add the full power of the Sitecore rules engine – similarly to what you 
 
 The following screenshot shows how to create an action that only appears in reports that list objects of type `Item` that are of template `Schedule`.
 
-
+![Rules configuration for actions](images/screenshots/reports-schedule-action.png)
 
 #### UI Elements
 
