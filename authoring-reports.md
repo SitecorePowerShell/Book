@@ -60,6 +60,42 @@ Actions are simply commands powered by scripts and with visibility dependent on 
 
 You define an action as a script located in an SPE script library and appears in the Actions panel. In the simplest scenario the action would appear when the script library name matches the .Net class name of the items displayed. In the above scenario the actions are placed under `/Platform/Internal/List View/Ribbon/Item/` where *Platform* is the module and *Item* is a script library. Let's take a look at the script here `/Platform/Internal/List View/Ribbon/Item/Open`
 
+```powershell
+foreach($item in $selectedData){
+# Run Sheer application on Desktop
+Show-Application `
+    -Application "Content Editor" `
+    -Parameter @{id ="$($item.ID)"; fo="$($item.ID)"; 
+                 la="$($item.Language.Name)"; vs="$($item.Version.Number)";
+                 sc_content="$($item.Database.Name)"}
+}
+```
+
+The variable `$selectedData` is provided to the script automatically by SPE in context of the content of the results on `Show-ListView`.
+
+##### What input is passed to an action script?
+
+When your action script is executed the environment is initialized with a number of variables at your disposal as seen below:
+
+* `$selectedData` – the selected objects in the list view (the same will be passed to the `$resultSet` variable for compatibility with older scripts)
+* `$allData` – all objects passed to the list view using the `-Data` parameter.
+* `$filteredData` – all objects displayed after filtering is performed with the search criteria entered by the user in the ribbon.
+* `$exportData` – same as `$filteredData`, however in this case the objects will have additional properties to support easy display with properties processed as text.
+* `$actionData` – any object that was passed to `Show-ListView` using the `-ActionData` parameter. Useful when you need additional context that the `Show-ListView` command does not explicitly know about. It’s your custom data.
+* `$formatProperty` – the content of the `–Property` parameter when running the command.
+* `$title` – window title of the list view.
+* `$infoTitle` – info title of the list view.
+* `$infoDescription` – info title of the list view.
+
+Consequently you get the full state of the report the user sees in the UI and you can act upon it.
+
+##### How the report determines if your action is visible?
+You can have multiple actions defined with dynamic visibility. The actions are generally only relevant in the context of your report. This is done on two levels. The first level happens based on the location of the script and .Net object type you are displaying in the report. The second level is based on Sitecore rules. For the action to appear all of the following conditions must be met:
+
+* All scripts visible in the report should be located in an enabled module.
+* The action script should be within the path `/Internal/List View/Ribbon/[Object type]`. The `[Object type]` is the name of the .Net class for which the action is valid. For example, if you want your action to be visible for `Sitecore.Data.Items.Item` then save the script at the path `/Internal/List View/Ribbon/Item`.
+* If the action script has no rules defined in the "Show if rules are met or not defined" field it will appear for all objects passed to `Show-ListView` that are of the type based on location. Rules will provide more granular control and allow for rule-based conditions that determine action visibility.
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
