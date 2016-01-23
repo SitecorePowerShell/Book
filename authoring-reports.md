@@ -140,6 +140,8 @@ The above action works just fine but will close the previous report and open a n
 
 ![Updating report content](images/screenshots/reports-action-update-listview.png)
 
+In this case we're not closing the existing report but rather updating the list in place, all you need to do is send the new data to the `Update-ListView` command.
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
