@@ -33,8 +33,6 @@ The **Authorable Reports** module has a few points of interest.
 
 **Examples:**
 * [Creating Beautiful Sitecore Reports Easily with PowerShell Extensions][6]
-* [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3]
-
 
 ### Static Reports
 
@@ -45,6 +43,8 @@ The **Content Reports** module includes other reports used for auditing. Below a
  * [Unused media items][2]
 
 ### Report Actions
+
+Extracted from [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3] article written by Adam.
 
 Actions are simply commands powered by scripts and with visibility dependent on certain conditions like the .Net class of the object that is displayed or perhaps other session settings.
 
