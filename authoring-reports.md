@@ -56,7 +56,7 @@ The **Content Reports** module includes other reports used for auditing. Below a
 
 Actions are simply commands powered by scripts and with visibility dependent on certain conditions like the .Net class of the object that is displayed or perhaps other session settings.
 
-
+![Actions seen for scheduled task items](images/screenshots/reports-action-scripts.png)
 
 #### UI Elements
 
