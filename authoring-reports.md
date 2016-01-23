@@ -45,8 +45,36 @@ The **Content Reports** module includes other reports used for auditing. Below a
 
 ### Interacting with Reports
 
+#### Exports
 
+#### Filter
 
+#### Paging
+
+#### Actions
+
+#### UI Elements
+
+The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
+
+Add parameter `-Hide` with one or more of the following options:
+* `AllExport` - hides all export scripts (left-most ribbon panel)
+* `NonSpecificExport` - hides export filters that are not specific to this view as specified by `-ViewName` (left-most ribbon panel)
+* `Filter` - hides filter panel
+* `PagingWhenNotNeeded` - hides paging when list is shorter than the page specified
+* `AllActions` - hides all actions (right-most ribbon panel)
+* `NonSpecificActions` - hides actions that are not specific to this view as specified by `-ViewName`  (right-most ribbon panel)
+* `StatusBar` - hides status bar.
+
+**Example:** The following example all of the UI elements in the report.
+```powershell
+Get-ChildItem master:\ | 
+    Show-ListView `
+        -Hide AllActions, AllExport, Filter, PagingWhenNotNeeded, StatusBar `
+        -Property Name, DisplayName, ProviderPath, __Updated, "__Updated By"
+```
+
+![Report with all UI elements hidden](https://cloud.githubusercontent.com/assets/1209953/11334655/bfede644-91d6-11e5-8473-6f94be74b3e5.png)
 
 ### Examples from the community!
 
