@@ -126,6 +126,12 @@ Now you can specify that you want the action to only appear when the report is n
 
 ![Add rules for report](images/screenshots/reports-script-rule.png)
 
+Confirm the save on all dialogs to persist your changes. Now our action appears when we run this script in ISE.
+
+```powershell
+Get-ChildItem master:\ | Show-ListView -ViewName ListChildren -Property Name, ProviderPath
+```
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
