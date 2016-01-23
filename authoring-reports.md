@@ -54,6 +54,10 @@ The **Content Reports** module includes other reports used for auditing. Below a
 
 #### Actions
 
+Actions are simply commands powered by scripts and with visibility dependent on certain conditions like the .Net class of the object that is displayed or perhaps other session settings.
+
+
+
 #### UI Elements
 
 The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
