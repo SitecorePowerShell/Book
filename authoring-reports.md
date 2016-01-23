@@ -58,7 +58,7 @@ Actions are simply commands powered by scripts and with visibility dependent on 
 
 ![Actions seen for scheduled task items](images/screenshots/reports-action-scripts.png)
 
-You define an action as a script located in an SPE script library and appears in the Actions panel. In the simplest scenario the action would appear when the script library name matches the .Net class name of the items displayed. In the above scenario the actions are placed under `/Platform/Internal/List View/Ribbon/Item/` where *Platform* is the module and *Item* is a script library. Let’s take a look at the script here `/Platform/Internal/List View/Ribbon/Item/Open`
+You define an action as a script located in an SPE script library and appears in the Actions panel. In the simplest scenario the action would appear when the script library name matches the .Net class name of the items displayed. In the above scenario the actions are placed under `/Platform/Internal/List View/Ribbon/Item/` where *Platform* is the module and *Item* is a script library. Let's take a look at the script here `/Platform/Internal/List View/Ribbon/Item/Open`
 
 #### UI Elements
 
