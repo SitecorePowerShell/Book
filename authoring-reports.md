@@ -120,7 +120,7 @@ Now I need to save my script in the proper Script Library in my enabled module:
 
 At this point my action will show on all reports what list Item objects. But now that my script is saved I can modify its rules to narrow it down only to Show for reports named "ListChildren". For this I can click the **Runtime** button in the ISE ribbon and edit the *Show if rules are met or not defined* field.
 
-![Configure rules for report](images/screenshots/reports-script-runtime-settings.png)
+![Open rules editor for report](images/screenshots/reports-script-runtime-settings.png)
 
 Now you can specify that you want the action to only appear when the report is named "ListChildren".
 
