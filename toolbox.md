@@ -4,7 +4,7 @@ The PowerShell Toolbox is quick way to access frequently used scripts.
 
 Navigate to *Sitecore -> PowerShell Toolbox* and after selecting you should see the configured scripts:
 
-![Toolbox](images/screenshots/toolbox-list.png)
+![Toolbox](images/screenshots/toolbox/toolbox-list.png)
 
 ### Available Tools
 
