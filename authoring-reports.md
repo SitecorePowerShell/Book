@@ -23,7 +23,7 @@ Finally the report is shown. Each row has an option to show more field results.
 
 The *Show Full Info* link will then returns the additional fields not shown in the report.
 
-![Show Full Info](images/screenshots/toolbox-indexviewer-showinfo.png)
+![Show Full Info](images/screenshots/authoring-reports/toolbox-indexviewer-showinfo.png)
 
 The **Authorable Reports** module has a few points of interest.
 
