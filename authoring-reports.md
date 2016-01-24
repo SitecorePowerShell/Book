@@ -48,7 +48,7 @@ Content extracted from [Turn Your Sitecore Powershell Reports into Applications 
 
 Actions are simply commands powered by scripts and with visibility dependent on certain conditions like the .Net class of the object that is displayed or perhaps other session settings.
 
-![Actions seen for scheduled task items](images/screenshots/reports-action-scripts.png)
+![Actions seen for scheduled task items](images/screenshots/authoring-reports/reports-action-scripts.png)
 
 You define an action as a script located in an SPE script library and appears in the Actions panel. In the simplest scenario the action would appear when the script library name matches the .Net class name of the items displayed. In the above scenario the actions are placed under `/Platform/Internal/List View/Ribbon/Item/` where *Platform* is the module and *Item* is a script library. Let's take a look at the script here `/Platform/Internal/List View/Ribbon/Item/Open`
 
