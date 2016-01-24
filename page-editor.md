@@ -2,7 +2,9 @@
 
 ### Notification
 
-The *Notification* integration adds a notification to the Page Editor.
+The *Notification* integration adds a notification to the Page Editor. The script is executed every time the page loads.
+
+![A Notification for the current date](images/screenshots/page editor/notification-information.png)
 
 ### Experience Button
 
