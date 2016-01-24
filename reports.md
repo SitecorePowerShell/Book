@@ -8,7 +8,7 @@ We've built quite a few reports, many similar to the [Advanced System Report][1]
 
 The custom reports can be found by navigating to *Sitecore -> Reporting Tools -> PowerShell Reports*.
 
-![Reports](images/screenshots/reports.png)
+![Reports](images/screenshots/reports/reports.png)
 
 As an example, let's run the Unused media items report.
 
