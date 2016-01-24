@@ -21,7 +21,7 @@ Let's have a quick look at the ISE:
   * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory). An MRU and tree view are provided for choosing a path.
   * Session - Specifies the session to use when executing the script. Reused sessions live in the *HttpSession*. Options include the session created for the ISE instance, One-Time session, or the Persistent Session ID configured on the script.
 
-![ISE Settings Tab](images/screenshots/ise-settings.png)
+![ISE Settings Tab](images/screenshots/scripting/ise-settings.png)
 
 #### Settings Tab
 * **Preferences:**
@@ -29,7 +29,7 @@ Let's have a quick look at the ISE:
 * **Integration:**
   * Rebuild All - This is where you rebuild the integration points for Control Panel, Gutters, and Ribbons. Without running this you will not see those integrations appear (or disappear).
 
-![ISE Plugins Tab](images/screenshots/ise-plugins.png)
+![ISE Plugins Tab](images/screenshots/scripting/ise-plugins.png)
 
 #### Plugins Tab
 * **Platform:** Custom scripts added to the *ISE Plugins* integration point script library will appear here.
