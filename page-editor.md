@@ -4,7 +4,7 @@
 
 The *Notification* integration adds a notification to the Page Editor. The script is executed every time the page loads.
 
-![A Notification for the current date](images/screenshots/page editor/notification-information.png)
+![A Notification for the current date](images/screenshots/page-editor/notification-information.png)
 
 ### Experience Button
 
@@ -15,4 +15,4 @@ The *Experience Button* integration adds a button to the Page Editor. Rules can 
 3. Change the icon of the item to match the script purpose.
 4. Configure any rules as needed.
 
-![An Experience Button for sending emails](images/screenshots/page editor/experience-button-with-tooltip.png)
+![An Experience Button for sending emails](images/screenshots/page-editor/experience-button-with-tooltip.png)
