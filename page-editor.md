@@ -13,3 +13,4 @@ The *Experience Button* integration adds a button to the Page Editor and is awar
 3. Change the icon of the item to match the script purpose.
 4. Configure the rules to control visibility and enablement.
 
+![An Experience Button for sending emails](images/screenshots/page editor/experience-button-with-tooltip.png)
