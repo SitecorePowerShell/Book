@@ -12,11 +12,11 @@ The custom reports can be found by navigating to *Sitecore -> Reporting Tools ->
 
 As an example, let's run the Unused media items report.
 
-![Unused Media Items](images/screenshots/reports-unusedmedia.png)
+![Unused Media Items](images/screenshots/reports/reports-unusedmedia.png)
 
 Once the report completes, the results appear in a report window.
 
-![Unused Media Items Output](images/screenshots/reports-output.png)
+![Unused Media Items Output](images/screenshots/reports/reports-output.png)
 
 ### Reports in SPE like ASR
 
