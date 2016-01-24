@@ -1,10 +1,12 @@
 # Page Editor
 
-### Notifications
+### Notification
 
-### Experience Buttons
+The *Notification* integration adds a notification to the Page Editor.
 
-The *Experience Buttons* integration adds a button to the Page Editor and is aware of the interactive rules.
+### Experience Button
+
+The *Experience Button* integration adds a button to the Page Editor and is aware of the interactive rules. The script is only executed when the button is clicked.
 
 1. Begin by adding a new script to the *Experience Button* library. The name of the script will appear in the tooltip.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
