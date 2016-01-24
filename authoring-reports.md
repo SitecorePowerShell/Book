@@ -94,7 +94,7 @@ Rules add the full power of the Sitecore rules engine – similarly to what you 
 
 The following screenshot shows how to create an action that only appears in reports that list objects of type `Item` that are of template `Schedule`.
 
-![Rules configuration for actions](images/screenshots/reports-schedule-action.png)
+![Rules configuration for actions](images/screenshots/authoring-reports/reports-schedule-action.png)
 
 For specific reports this global state might not always be enough. You can narrow down the rules further by using the report name. Name your report by providing an additional parameter to  `Show-ListView`.
 
@@ -104,19 +104,19 @@ Get-ChildItem master:\ | Show-ListView -ViewName ListChildren
 ```
 The output of the report will be like any other unnamed report but adds support for additional rules. Let's say I want my action to open a new report that lists all the children of the selected items in the report "ListChildren". After running the action my script should display the new report with the children and close the "ListChildren" report. Not very useful but illustrates the point.
 
-![Action script](images/screenshots/reports-action-script1.png)
+![Action script](images/screenshots/authoring-reports/reports-action-script1.png)
 
 Now I need to save my script in the proper Script Library in my enabled module:
 
-![Save action script](images/screenshots/reports-action-save.png)
+![Save action script](images/screenshots/authoring-reports/reports-action-save.png)
 
 At this point my action will show on all reports what list Item objects. But now that my script is saved I can modify its rules to narrow it down only to Show for reports named "ListChildren". For this I can click the **Runtime** button in the ISE ribbon and edit the *Show if rules are met or not defined* field.
 
-![Open rules editor for report](images/screenshots/reports-script-runtime-settings.png)
+![Open rules editor for report](images/screenshots/authoring-reports/reports-script-runtime-settings.png)
 
 Now you can specify that you want the action to only appear when the report is named "ListChildren".
 
-![Add rules for report](images/screenshots/reports-script-rule.png)
+![Add rules for report](images/screenshots/authoring-reports/reports-script-rule.png)
 
 Confirm the save on all dialogs to persist your changes. Now our action appears when we run this script in ISE.
 
@@ -124,7 +124,7 @@ Confirm the save on all dialogs to persist your changes. Now our action appears 
 Get-ChildItem master:\ | Show-ListView -ViewName ListChildren -Property Name, ProviderPath
 ```
 
-![Now the List Children action is available](images/screenshots/reports-action-now-you-see-me1.png)
+![Now the List Children action is available](images/screenshots/authoring-reports/reports-action-now-you-see-me1.png)
 
 The action does not appear if no view name is provided to the `-ViewName` parameter. Running the script below will produce a report with the action not shown:
 
@@ -132,13 +132,13 @@ The action does not appear if no view name is provided to the `-ViewName` parame
 Get-ChildItem master:\ | Show-ListView -Property Name, ProviderPath
 ```
 
-![Now the action is unavailable](images/screenshots/reports-action-now-you-dont1.png)
+![Now the action is unavailable](images/screenshots/authoring-reports/reports-action-now-you-dont1.png)
 
 ##### Updating report in place
 
 The above action works just fine but will close the previous report and open a new report window in the Sitecore desktop. That's not a great user experience. What if you want to update the content of the report in place using the action? That's possible using the `Update-ListView` command. Consider the following script:
 
-![Updating report content](images/screenshots/reports-action-update-listview.png)
+![Updating report content](images/screenshots/authoring-reports/reports-action-update-listview.png)
 
 In this case we're not closing the existing report but rather updating the list in place, all you need to do is send the new data to the `Update-ListView` command.
 
@@ -172,7 +172,7 @@ Write-Progress -Completed -Activity "Done."
 
 And you will see the following output:
 
-![Show progress of long running actions](images/screenshots/reports-action-write-progress.png)
+![Show progress of long running actions](images/screenshots/authoring-reports/reports-action-write-progress.png)
 
 ##### Showing other PowerShell dialogs
 
