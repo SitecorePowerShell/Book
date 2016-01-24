@@ -11,15 +11,15 @@ The *Index Viewer* report provides a great example at how to build a generic rep
 
 First you will be prompted with a dialog to select the index to search.
 
-![Choose report index](images/screenshots/toolbox-indexviewer-chooseindex.png)
+![Choose report index](images/screenshots/authoring-reports/toolbox-indexviewer-chooseindex.png)
 
 Next you will be prompted with a variety of buttons and knobs to narrow down the search results.
 
-![Filter report results](images/screenshots/toolbox-indexviewer-filterresults.png)
+![Filter report results](images/screenshots/authoring-reports/toolbox-indexviewer-filterresults.png)
 
 Finally the report is shown. Each row has an option to show more field results.
 
-![Final results](images/screenshots/toolbox-indexviewer-results.png)
+![Final results](images/screenshots/authoring-reports/toolbox-indexviewer-results.png)
 
 The *Show Full Info* link will then returns the additional fields not shown in the report.
 
