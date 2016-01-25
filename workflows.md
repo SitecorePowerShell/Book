@@ -9,7 +9,7 @@ The *Workflows* integration allows for scripts to run like workflow commands. Ru
 5. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 6. Change the icon of the item to match the script purpose.
 
-See how Adam integrated [Workflow actions][2] if you are really curious to know more.
+See how Adam integrated [workflow actions][2] if you are really curious to know more.
 
 ### References
 
