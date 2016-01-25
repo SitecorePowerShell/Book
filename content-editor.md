@@ -8,7 +8,9 @@ The *Context Menu* integration allows for options in the context menu. Rules can
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 3. Change the icon of the item to match the script purpose.
 4. Configure any rules as needed.
-5. 
+
+See how Adam added [context menu PowerShell scripts][2].
+
 ### Gutter
 
 The *Gutter* integration allows for full flexibility of adding a gutter element.
@@ -37,3 +39,4 @@ See the birth of [extending the Sitecore ribbon with powershell scripts][1] by A
 ### Warning
 
 [1]: http://blog.najmanowicz.com/2011/11/24/extending-sitecore-ribbon-with-powershell-scripts/
+[2]: http://blog.najmanowicz.com/2011/11/22/context-powershell-scripts-for-sitecore/
