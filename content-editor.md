@@ -33,5 +33,7 @@ The *Insert Item* integration allows for insert options in the context menu. Rul
 
 ### Ribbon
 
-
+See the birth of [extending the Sitecore ribbon with powershell scripts][1] by Adam.
 ### Warning
+
+[1]: http://blog.najmanowicz.com/2011/11/24/extending-sitecore-ribbon-with-powershell-scripts/
