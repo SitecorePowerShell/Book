@@ -15,9 +15,6 @@ The *Gutter* integration allows for full flexibility of adding a gutter element.
   * Integration chunk
   * Sync Library with Content Editor Gutter command
 
-
-
-
 ### Insert Item
 
 ### Ribbon
