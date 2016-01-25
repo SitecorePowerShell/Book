@@ -1,7 +1,7 @@
 # Workflows
 
 
-See how Adam integrated [Workflow actions][2] if you are really curious.
+See how Adam integrated [Workflow actions][2] if you are really curious to know more.
 
 ### References
 
