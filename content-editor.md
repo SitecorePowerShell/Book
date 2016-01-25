@@ -2,6 +2,13 @@
 
 ### Context Menu
 
+The *Context Menu* integration allows for options in the context menu. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
+
+1. Begin by adding a new script to the *Context Menu* library. The name of the script will appear in the context menu.
+2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
+3. Change the icon of the item to match the script purpose.
+4. Configure any rules as needed.
+5. 
 ### Gutter
 
 The *Gutter* integration allows for full flexibility of adding a gutter element.
