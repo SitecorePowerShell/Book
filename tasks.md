@@ -46,3 +46,7 @@ The scheduled task is capable of running 1-to-many scripts. Choose all that appl
 The task schedule has an intuitive dialog for working with and changing the frequency. 
 
 ![Dialog to Edit Task Schedule](images/screenshots/task-edittaskschedule.png)
+
+See how Adam added [powershell driven Sitecore scheduled tasks][1].
+
+[1]: http://blog.najmanowicz.com/2011/11/29/powershell-driven-sitecore-scheduled-tasks/
