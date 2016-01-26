@@ -4,7 +4,7 @@ Managing users and roles is a big topic and this section won't cover everything.
 
 ### Users
 
-**Example:** The follow queries all the user accounts for the default provider and filters those over the age of 18. The *Age* property is custom on the *Profile*. We then export to CSV.
+**Example:** The follow queries all the user accounts for the default provider and filters those over the age of 18. The *age* property is custom on the *Profile*. We then export to CSV.
 
 ```powershell
 $users = Get-User -Filter * | Where-Object { $_.Profile.GetCustomProperty("age") -gt 18 } 
