@@ -4,6 +4,15 @@ Managing users and roles is a big topic and this section won't cover everything.
 
 ### Users
 
+**Example:** The following generates a batch of test users in the default domain with the out-of-the-box user profile.
+
+```powershell
+foreach($num in 0..1) {
+    $key = -join ((65..90) + (97..122) | Get-Random -Count 7 | % {[char]$_})  
+    New-User -Identity "TestUser$($key)" -Enabled -Password "b" -ProfileItemId "{AE4C4969-5B7E-4B4E-9042-B2D8701CE214}" | Out-Null
+}
+```
+
 **Example:** The follow queries all the user accounts for the default provider and filters those over the age of 18. The *age* property is custom on the *Profile*. We then export to CSV.
 
 ```powershell
