@@ -23,7 +23,7 @@ $property = @(
     @{Name="Age";Expression={ $PSItem.Profile.GetCustomProperty("age") }}
 )
 $users | Select-Object -Property $property | 
-  Export-CSV -Path c:\temp\users-over-eighteen.csv -NoTypeInformation
+  Export-CSV -Path "C:\temp\users-over-eighteen.csv" -NoTypeInformation
 ```
 
 ### References
