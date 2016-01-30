@@ -4,6 +4,10 @@ Managing users and roles is a big topic and this section won't cover everything.
 
 ### Users
 
+Managing users should be a pretty straight forward task. While the User Manager is handy, you'll likely find yourself wanting to making bulk changes. The following examples should give you a few ideas about how to manage user accounts.
+
+#### Query users and updated properties
+
 **Example:** The following generates a batch of test users in the default domain with the out-of-the-box user profile template. The users are then queried matching on the name.
 
 ```powershell
