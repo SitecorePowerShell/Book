@@ -4,7 +4,7 @@ Managing users and roles is a big topic and this section won't cover everything.
 
 ### Users
 
-**Example:** The following generates a batch of test users in the default domain with the out-of-the-box user profile. The users are then queried matching on the name.
+**Example:** The following generates a batch of test users in the default domain with the out-of-the-box user profile template. The users are then queried matching on the name.
 
 ```powershell
 foreach($num in 0..10) {
@@ -13,6 +13,15 @@ foreach($num in 0..10) {
 }
 
 Get-User -Filter "sitecore\TestUser*"
+```
+
+In case you forgot to set the user profile, we have a way to update user accounts.
+
+**Example:** The following queries a user and sets the profile template. Note that changing the profile template requires the user to be authenticated.
+
+```powershell
+Get-User -Id "michael" -Authenticated | 
+    Set-User -ProfileItemId "{AE4C4969-5B7E-4B4E-9042-B2D8701CE214}"
 ```
 
 **Example:** The follow queries all the user accounts for the default provider and filters those over the age of 18. The *age* property is custom on the *Profile*. We then export to CSV.
