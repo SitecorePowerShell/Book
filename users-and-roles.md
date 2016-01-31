@@ -6,7 +6,7 @@ Managing users and roles is a big topic and this section won't cover everything.
 
 Managing users should be a pretty straight forward task. While the User Manager is handy, you'll likely find yourself wanting to making bulk changes. The following examples should give you a few ideas about how to manage user accounts.
 
-#### Query users and updated properties
+#### Query users and update properties
 
 **Example:** The following generates a batch of test users in the default domain with the out-of-the-box user profile template. The users are then queried matching on the name.
 
@@ -40,6 +40,12 @@ $property = @(
 $users | Select-Object -Property $property | 
   Export-CSV -Path "C:\temp\users-over-eighteen.csv" -NoTypeInformation
 ```
+
+##### Active Directory 
+
+When using the Active Directory module you may need to increase the setting `LDAP.SizeLimit` if you wish to return all Active Directory accounts. 
+
+When using `Set-User` to update AD accounts you'll likely receive an access denied message which is due to the fact that the account querying users does not have write access to profile properties.
 
 ### References
 
