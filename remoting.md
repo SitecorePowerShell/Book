@@ -8,7 +8,15 @@ We have provided a handy way of executing scripts via web service using the Remo
 
 #### Remoting Module Setup
 
+The setup of the module only requires a few steps:
+1. In the Sitecore instance install the Sitecore module package.
+2. On the local desktop or server install the SPE Remoting module.
+ * After downloading you may need to *unblock* the file by right-clicking the zip and unblocking.
+ * Ensure that you have run `Set-ExecutionPolicy RemoteSigned` in order for the SPE Remoting module will run. This typically requires elevated privileges.
+
 [![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
+
+The remoting services use a combiniation of a SOAP service (ASMX) and HttpHandler. 
 
 #### Sitecore to Sitecore communication
 
