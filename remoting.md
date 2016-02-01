@@ -16,7 +16,7 @@ The setup of the module only requires a few steps:
 
 [![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
 
-The remoting services use a combiniation of a SOAP service (ASMX) and HttpHandler. 
+The remoting services use a combiniation of a SOAP service (ASMX) and HttpHandler. Some features are disabled by default and should be configured as needed as can be seen in the [security section here](security.md). The SOAP service may require additional Windows authentication using the `-Credential` parameter.
 
 #### Sitecore to Sitecore communication
 
