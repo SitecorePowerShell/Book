@@ -166,36 +166,13 @@ Inevitably you will need to have long running processes triggered remotely. In o
 ```powershell
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
-
-$job = Invoke-RemoteScript -Session $session -ScriptBlock {
-    Start-ScriptSession -ScriptBlock {
-        # Replace the contents of this scriptblock with your installation steps. 
-        # I just put $true there so something would come back.
-        Start-Sleep -Seconds 10
-        [PSCustomObject]@{"IsComplete"=$true}
-    }
-}
-
-$keepRunning = $true
-while($keepRunning) {
-    $done = Invoke-RemoteScript -Session $session -ScriptBlock {
-        $scriptSession = Get-ScriptSession -Id $params.JobId
-        $scriptSession.State -ne "Busy"
-    } -Arguments @{"JobId" = $job.ID} 
-
-    if($done) {
-        $keepRunning = $false
-
-        Invoke-RemoteScript -Session $session -ScriptBlock {
-            $scriptSession = Get-ScriptSession -Id $params.JobId
-            if($scriptSession.State -ne "Busy") {
-                $scriptSession | Receive-ScriptSession
+$jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
+        "master", "web" | Get-Database | 
+            ForEach-Object { 
+                [Sitecore.Globals]::LinkDatabase.Rebuild($_)
             }
-        } -Arguments @{"JobId" = $job.ID}    
-    } else {
-        Start-Sleep -Milliseconds 500
-    }
-}
+} -AsJob
+Wait-RemoteScriptSession -Session $session -Id $jobId -Delay 5 -Verbose
 ```
 
 ### References:
