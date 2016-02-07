@@ -47,6 +47,8 @@ Some names we've used include:
 * User Interaction
 * **Web API**
 
+Many of the of the libraries are integration points for the module.
+
 #### Fields
 
 **Interactive** : The following fields support the two custom rules as well as a variety of out-of-the-box rules.
