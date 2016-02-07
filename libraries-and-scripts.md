@@ -8,7 +8,25 @@ The library items represent a collection of scripts, and may be structured with 
 
 #### Naming Convention 
 
-You'll find that with the *Integration Points* some libraries should be created with specific names (i.e. Content Editor, Control Panel).
+You'll find that with the *Integration Points* some libraries should be created with specific names (i.e. Content Editor, Control Panel). 
+
+As a best practice we recommend that the *Function* library  consist of reusable functions while other libraries contain the solution specific scripts. 
+
+**Example:** The following demonstrates the use of the *Function* script library containing *Get-DateMessage*.
+
+```powershell
+# /sitecore/system/modules/powershell/script library/spe rocks/functions/get-datemessage
+function Get-DateMessage {
+  "The current date and time is: $(Get-Date)"
+}
+```
+
+```powershell
+# /sitecore/system/modules/powershell/script library/spe rocks/alerts/show-datemessage
+Import-Function -Name Get-DateMessage
+
+Show-Alert (Get-DateMessage)
+```
 
 #### Fields
 
