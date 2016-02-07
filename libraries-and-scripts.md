@@ -28,6 +28,25 @@ Import-Function -Name Get-DateMessage
 Show-Alert (Get-DateMessage)
 ```
 
+Some names we've used in the module include:
+* Beginner Tutorials
+* **Content Editor**
+* Content Maintenance
+* Content Interrogation
+* Development
+* **Event Handlers**
+* **Functions**
+* **Internal**
+* **Page Editor**
+* **Pipelines**
+* Profile and Security
+* **Reports**
+* Script Testing
+* **Tasks**
+* **Toolbox**
+* User Interaction
+* **Web API**
+
 #### Fields
 
 **Interactive** : The following fields support the two custom rules as well as a variety of out-of-the-box rules.
