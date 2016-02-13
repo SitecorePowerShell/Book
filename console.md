@@ -26,7 +26,7 @@ SPE provides some convenient variables out of the box for use in running command
 | **Variable** | **Example** |
 | -------- | ----------- |
 | AppPath  | C:\Inetpub\wwwroot\Console\Website\ |
-| HostSettings | ... <br/> FontSize : 12 <br/> FontFamily : Source Code Pro <br/> ... |
+| HostSettings | ... <br/> FontSize : 12 <br/> FontFamily : Wingdings <br/> ... |
 | Me        | sitecore\admin    |
 | PWD       | master:\     |
 | ScriptSession | ... <br/> ID : e9fedd64-cad0-4c43-b950-9cd361b151fd <br/> ... |
