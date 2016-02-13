@@ -175,6 +175,28 @@ $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
 Wait-RemoteScriptSession -Session $session -Id $jobId -Delay 5 -Verbose
 ```
 
+**Example:** The following remotely runs a script and checks for any output errors.
+```powershell
+$identity = "admin"
+$date = [datetime]::Now
+$jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
+    [Sitecore.Security.Accounts.User]$user = Get-User -Identity $using:identity
+    $user.Name
+    $using:date
+} -AsJob
+# This delay could actually be that you got up to get some coffee or tea.
+Start-Sleep -Seconds 2
+
+Invoke-RemoteScript -Session $session -ScriptBlock {
+    $ss = Get-ScriptSession -Id $using:JobId
+    $ss | Receive-ScriptSession
+
+    if($ss.LastErrors) {
+        $ss.LastErrors
+    }
+}
+```
+
 ### References:
 * Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]
