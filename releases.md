@@ -43,6 +43,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - Some of the UI elements using `Show-ListView` can be hidden when using the *Hide* parameter [521](https://github.com/SitecorePowerShell/Console/issues/521).
 - Your favorite commands `Get-Item` and `Get-ChildItem` now have [519](https://github.com/SitecorePowerShell/Console/issues/519) tab completion on the `-Language` and `-Database` parameters.
 - SPE Remoting supports `$using:[variablename]` in the scriptblock [499](https://github.com/SitecorePowerShell/Console/issues/499).
+- Changed the behavior of `Add-ItemLanguage` so that it outputs the existing latest version if it exists [578](https://github.com/SitecorePowerShell/Console/issues/578).
 
 #### Fixes
 
