@@ -53,6 +53,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - The `GetItemWorkflowEvent` command threw exceptions for missing optional parameters [545](https://github.com/SitecorePowerShell/Console/issues/545).
 - Automatic properties no longer require a restart to update [534](https://github.com/SitecorePowerShell/Console/issues/534).
 - Creating new branch items now respects [577](https://github.com/SitecorePowerShell/Console/issues/577) the specified language.
+- Adam was going crazy trying to resolve an issue [579](https://github.com/SitecorePowerShell/Console/issues/579) where `Set-Layout` wasn't working. We think he's better now and the doctor released him from the clinic.
 
 
 [1]: https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx
