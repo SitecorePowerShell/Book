@@ -39,7 +39,7 @@ SPE provides some convenient variables out of the box for use in running command
 | SitecoreSerializationFolder   | C:\Inetpub\wwwroot\Console\Data\/serialization  |
 | SitecoreTempFolder    | /temp  |
 
- **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed.
+ **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed. You'll also need to be careful not to overwrite the built-in variables.
  
 ### Shortcuts
 Below are the shortcuts available in the console.
