@@ -193,6 +193,15 @@ Invoke-RemoteScript -Session $session -ScriptBlock {
 }
 ```
 
+**Example:** The following redirects messages from `Write-Verbose` to the remote session. The data returned will be both `System.String` and `Deserialized.System.Management.Automation.VerboseRecord` so be sure to filter it out when needed. More information about the redirection `4>&1` can be read [here][4].
+```powershell
+Invoke-RemoteScript -ScriptBlock {
+    Write-Verbose "Hello from the other side" -Verbose 4>&1
+    "data"    
+    Write-Verbose "Goodbye from the other side" -Verbose 4>&1
+} -Session $session
+```
+
 ### References:
 * Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]
@@ -200,3 +209,4 @@ Invoke-RemoteScript -Session $session -ScriptBlock {
 [1]: http://blog.najmanowicz.com/2014/10/10/sitecore-powershell-extensions-remoting/
 [2]: http://michaellwest.blogspot.com/2015/07/sitecore-powershell-extensions-remoting.html
 [3]: https://msdn.microsoft.com/en-us/library/dd878350(v=vs.85).aspx
+[4]: https://blogs.technet.microsoft.com/heyscriptingguy/2014/03/30/understanding-streams-redirection-and-write-host-in-powershell/
