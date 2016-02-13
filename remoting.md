@@ -175,7 +175,7 @@ $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
 Wait-RemoteScriptSession -Session $session -Id $jobId -Delay 5 -Verbose
 ```
 
-**Example:** The following remotely runs a script and checks for any output errors.
+**Example:** The following remotely runs a script and checks for any output errors. The *LastErrors* parameter is available for `ScriptSession` objects.
 ```powershell
 $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
     Get-Session -ParameterDoesNotExist "SomeData"
