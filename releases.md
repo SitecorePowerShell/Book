@@ -6,7 +6,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 
 A lot of hard work went into this release. Wasn't released as soon as we hoped, but we are certain many of you will be pleased with the results. Happy coding!
 
-[Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.0) - 60+ issues.
+[Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.0) - 70+ issues.
 
 ### Summary of important changes
 
