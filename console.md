@@ -28,6 +28,7 @@ SPE provides some convenient variables out of the box for use in running command
 | AppPath  | C:\Inetpub\wwwroot\Console\Website\ |
 | Me        | sitecore\admin    |
 | PWD       | master:\     |
+| ScriptSession | ... <br/> ID : e9fedd64-cad0-4c43-b950-9cd361b151fd <br/> ... |
 | SitecoreDataFolder    | C:\Inetpub\wwwroot\Console\Data\    |
 | SitecoreDebugFolder   | C:\Inetpub\wwwroot\Console\Data\/debug  |
 | SitecoreIndexFolder   | C:\Inetpub\wwwroot\Console\Data\/indexes  |
