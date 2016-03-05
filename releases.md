@@ -56,6 +56,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - Creating new branch items now respects [577](https://github.com/SitecorePowerShell/Console/issues/577) the specified language.
 - Adam was going crazy trying to resolve an issue [579](https://github.com/SitecorePowerShell/Console/issues/579) where `Set-Layout` wasn't working. We think he's better now and the doctor released him from the clinic.
 - - Through SPE Remoting you are now able to cleanup background `ScriptSessions` through the use of `Stop-ScriptSession` [594](https://github.com/SitecorePowerShell/Console/issues/594) [593](https://github.com/SitecorePowerShell/Console/issues/593).
+- Users with more restricted access caused an issue with function caching [592](https://github.com/SitecorePowerShell/Console/issues/592).
 
 
 [1]: https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx
