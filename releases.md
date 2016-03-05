@@ -51,6 +51,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - `ScriptSession` can now load type info without the need for `Set-ExecutionPolicy` changes [590](https://github.com/SitecorePowerShell/Console/issues/590).
 - The Live Autocomplete feature when typing was so powershell we decided to allow you to enable or disable [584](https://github.com/SitecorePowerShell/Console/issues/584).
 - Save time with `Get-ChildItem` by using the `-WithParent` parameter [580](https://github.com/SitecorePowerShell/Console/issues/580).
+- Specifying the `ProfileItemId` when using `New-User` is now possible through [573](https://github.com/SitecorePowerShell/Console/issues/573).
 
 #### Fixes
 
