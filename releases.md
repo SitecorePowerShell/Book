@@ -47,6 +47,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - SPE Remoting supports `$using:[variablename]` in the scriptblock [499](https://github.com/SitecorePowerShell/Console/issues/499).
 - Changed the behavior of `Add-ItemLanguage` so that it outputs the existing latest version if it exists [578](https://github.com/SitecorePowerShell/Console/issues/578).
 - Sometimes you need to grant Acls for System Roles like *Everyone* and *Creator-Owner* so we've updated  [596](https://github.com/SitecorePowerShell/Console/issues/596) [595](https://github.com/SitecorePowerShell/Console/issues/595) our security commands like `Get-Role` and `New-ItemAcl` to support that scenario.
+- `ScriptSession` can now load type info without the need for `Set-ExecutionPolicy` changes [590](https://github.com/SitecorePowerShell/Console/issues/590).
 
 #### Fixes
 
