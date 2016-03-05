@@ -30,7 +30,6 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - Added a report [513](https://github.com/SitecorePowerShell/Console/issues/513) for unpublished items in one or more targets.
 - Users can now peek the session variable values by way of a tooltip [495](https://github.com/SitecorePowerShell/Console/issues/495).
 - The ISE now shows when a script is modified or not yet saved [458](https://github.com/SitecorePowerShell/Console/issues/458).
-- Through SPE Remoting you are now able to cleanup background `ScriptSessions` through the use of `Stop-ScriptSession` [594](https://github.com/SitecorePowerShell/Console/issues/594) [593](https://github.com/SitecorePowerShell/Console/issues/593).
 
 #### Enhancements
 
@@ -56,6 +55,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - Automatic properties no longer require a restart to update [534](https://github.com/SitecorePowerShell/Console/issues/534).
 - Creating new branch items now respects [577](https://github.com/SitecorePowerShell/Console/issues/577) the specified language.
 - Adam was going crazy trying to resolve an issue [579](https://github.com/SitecorePowerShell/Console/issues/579) where `Set-Layout` wasn't working. We think he's better now and the doctor released him from the clinic.
+- - Through SPE Remoting you are now able to cleanup background `ScriptSessions` through the use of `Stop-ScriptSession` [594](https://github.com/SitecorePowerShell/Console/issues/594) [593](https://github.com/SitecorePowerShell/Console/issues/593).
 
 
 [1]: https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx
