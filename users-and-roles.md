@@ -41,6 +41,14 @@ $users | Select-Object -Property $property |
   Export-CSV -Path "C:\temp\users-over-eighteen.csv" -NoTypeInformation
 ```
 
+### Roles
+
+**Example:** The following queries roles using the specified identity.
+```powershell
+# Identity can be "[domain]\[name]", "Creator-Owner", and "\Everyone"
+Get-Role -Identity "default\Everyone"
+```
+
 ##### Active Directory 
 
 When using the [Active Directory module][2] you may need to increase the setting `LDAP.SizeLimit` if you wish to return all Active Directory accounts. 
