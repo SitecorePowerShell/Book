@@ -52,6 +52,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - The Live Autocomplete feature when typing was so powershell we decided to allow you to enable or disable [584](https://github.com/SitecorePowerShell/Console/issues/584).
 - Save time with `Get-ChildItem` by using the `-WithParent` parameter [580](https://github.com/SitecorePowerShell/Console/issues/580).
 - Specifying the `ProfileItemId` when using `New-User` is now possible through [573](https://github.com/SitecorePowerShell/Console/issues/573).
+- Downloading a file is a little more secure as the download form displayed by `Send-File` hides the file path by default. You can however still show it with `-ShowFullPath` switch [568](https://github.com/SitecorePowerShell/Console/issues/568).
 
 #### Fixes
 
