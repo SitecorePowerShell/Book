@@ -43,7 +43,7 @@ $users | Select-Object -Property $property |
 
 ##### Active Directory 
 
-When using the Active Directory module you may need to increase the setting `LDAP.SizeLimit` if you wish to return all Active Directory accounts. 
+When using the [Active Directory module][2] you may need to increase the setting `LDAP.SizeLimit` if you wish to return all Active Directory accounts. 
 
 When using `Set-User` to update AD accounts you'll likely receive an access denied message which is due to the fact that the account querying users does not have write access to profile properties.
 
@@ -52,3 +52,4 @@ When using `Set-User` to update AD accounts you'll likely receive an access deni
 * [Using Get-User command to query over 200k users][1]
 
 [1]: http://stackoverflow.com/questions/34982451/sitecore-powershell-get-user-command/34994302#34994302
+[2]: https://dev.sitecore.net/Downloads/Active_Directory/
