@@ -30,7 +30,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - Added a report [513](https://github.com/SitecorePowerShell/Console/issues/513) for unpublished items in one or more targets.
 - Users can now peek the session variable values by way of a tooltip [495](https://github.com/SitecorePowerShell/Console/issues/495).
 - The ISE now shows when a script is modified or not yet saved [458](https://github.com/SitecorePowerShell/Console/issues/458).
-- Through SPE Remoting you are now able to cleanup background `ScriptSessions` through the use of `Stop-ScriptSession` [594](https://github.com/SitecorePowerShell/Console/issues/594).
+- Through SPE Remoting you are now able to cleanup background `ScriptSessions` through the use of `Stop-ScriptSession` [594](https://github.com/SitecorePowerShell/Console/issues/594) [593](https://github.com/SitecorePowerShell/Console/issues/593).
 
 #### Enhancements
 
