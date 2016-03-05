@@ -38,7 +38,8 @@ SPE provides some convenient variables out of the box for use in running command
 | SitecoreLogFolder     | C:\Inetpub\wwwroot\Console\Data\/logs  |
 | SitecoreMediaFolder   | C:\Inetpub\wwwroot\Console\Website\upload  |
 | SitecorePackageFolder | C:\Inetpub\wwwroot\Console\Data\/packages  |
-| SitecoreScriptRoot | master:\system\Modules\PowerShell\Script Library\Task Management\Toolbox\Task Manager |
+| SitecoreScriptRoot | master:\system\Modules\PowerShell\Script Library\Task Management\Toolbox |
+| SitecoreCommandPath | master:\system\Modules\PowerShell\Script Library\Task Management\Toolbox\Task Manager |
 | SitecoreSerializationFolder   | C:\Inetpub\wwwroot\Console\Data\/serialization  |
 | SitecoreTempFolder    | /temp  |
 | SitecoreVersion | 8.1 |
