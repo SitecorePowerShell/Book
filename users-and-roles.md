@@ -57,6 +57,13 @@ Get-Role -Identity "default\Everyone"
 
 ### Item Access Control Lists (ACL)
 
+The ACL commands provide an automated way of granting privileges to items.
+
+**Example:** The following creates a new ACL and assigns to an item.
+```powershell
+$aclForEveryone = New-ItemAcl -Identity "\Everyone" -PropagationType Any -SecurityPermission DenyInheritance -AccessRight *
+Get-Item -Path "master:\content\home" | Add-ItemAcl -AccessRules $aclForEveryone -PassThru
+```
 
 ### References
 
