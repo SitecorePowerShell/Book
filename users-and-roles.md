@@ -41,6 +41,12 @@ $users | Select-Object -Property $property |
   Export-CSV -Path "C:\temp\users-over-eighteen.csv" -NoTypeInformation
 ```
 
+##### Active Directory 
+
+When using the [Active Directory module][2] you may need to increase the setting `LDAP.SizeLimit` if you wish to return all Active Directory accounts. 
+
+When using `Set-User` to update AD accounts you'll likely receive an access denied message which is due to the fact that the account querying users does not have write access to profile properties.
+
 ### Roles
 
 **Example:** The following queries roles using the specified identity.
@@ -49,11 +55,8 @@ $users | Select-Object -Property $property |
 Get-Role -Identity "default\Everyone"
 ```
 
-##### Active Directory 
+### Item Access Control Lists (ACL)
 
-When using the [Active Directory module][2] you may need to increase the setting `LDAP.SizeLimit` if you wish to return all Active Directory accounts. 
-
-When using `Set-User` to update AD accounts you'll likely receive an access denied message which is due to the fact that the account querying users does not have write access to profile properties.
 
 ### References
 
