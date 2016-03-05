@@ -19,6 +19,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - The user management commands received an adjustment [520](https://github.com/SitecorePowerShell/Console/issues/520) [498](https://github.com/SitecorePowerShell/Console/issues/498) [497](https://github.com/SitecorePowerShell/Console/issues/497) in which `New-Role` no longer requires `-Passthru` to output the resulting account. Also, the `Remove-User` command now accepts the `User` object as input.
 - User reported [511](https://github.com/SitecorePowerShell/Console/issues/511) that SPE conflicted with the **InSite Commerce** product due to the 2.x services location so we went ahead and broke compatibility.
 - Some users have encountered items with multiple fields of the same name [575](https://github.com/SitecorePowerShell/Console/issues/575) so we changed the behavior by prefixing the name with and underscore recurrently to disambiguate them.
+- Stop using `$PSScriptRoot` and `$PSCommandPath` and start using `$SitecoreScriptRoot` and `$SitecoreCommandPath` [588](https://github.com/SitecorePowerShell/Console/issues/588).
 
 #### New Features
 
