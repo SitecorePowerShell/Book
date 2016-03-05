@@ -49,6 +49,7 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 - Changed the behavior of `Add-ItemLanguage` so that it outputs the existing latest version if it exists [578](https://github.com/SitecorePowerShell/Console/issues/578).
 - Sometimes you need to grant Acls for System Roles like *Everyone* and *Creator-Owner* so we've updated  [596](https://github.com/SitecorePowerShell/Console/issues/596) [595](https://github.com/SitecorePowerShell/Console/issues/595) our security commands like `Get-Role` and `New-ItemAcl` to support that scenario.
 - `ScriptSession` can now load type info without the need for `Set-ExecutionPolicy` changes [590](https://github.com/SitecorePowerShell/Console/issues/590).
+- The Live Autocomplete feature when typing was so powershell we decided to allow you to enable or disable [584](https://github.com/SitecorePowerShell/Console/issues/584).
 
 #### Fixes
 
