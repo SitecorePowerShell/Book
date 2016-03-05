@@ -2,6 +2,11 @@
 
 Managing users and roles is a big topic and this section won't cover everything. We aim to show you different problems that have come up and how we solved them.
 
+**Example:** The following command returns the security commands available.
+```powershell
+Get-Command -Noun Role*,User,ItemAcl* | Sort-Object -Property Noun,Verb
+```
+
 ### Users
 
 Managing users should be a pretty straight forward task. While the User Manager is handy, you'll likely find yourself wanting to making bulk changes. The following examples should give you a few ideas about how to manage user accounts.
