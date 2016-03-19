@@ -64,7 +64,7 @@ Look for the following section and enable/disable as needed.
 </sitecore>
 ```
 
-The preferred way to the override the settings is to use a configuration file.
+The preferred way to override the settings is to use a configuration file.
 
 **Example:** The following enables the file and media downloads.
 ```xml
