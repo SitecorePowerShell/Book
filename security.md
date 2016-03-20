@@ -84,21 +84,6 @@ The preferred way to override the settings is to use a configuration file.
 </configuration>
 ```
 
-**Example:** The following changes the database settings from master to web for use in Content Delivery.
-```xml
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
-  <sitecore>
-    <powershell>
-      <workingDatabase>
-        <scriptLibrary>web</scriptLibrary>
-        <settings>web</settings>
-        <rules>web</rules>
-      </workingDatabase>
-    </powershell>
-  </sitecore>
-</configuration>
-```
-
 * **RESTful v1** - Used in early version of SPE. Disabled by default. Service associated with `RemoteScriptCall.ashx`.
 * **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
 * **Remoting** - Used when passing scripts to SPE for execution. Service associated with `RemoteAutomation.asmx`.
