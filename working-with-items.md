@@ -21,7 +21,7 @@ The following commands provide you with the core methods needed to manage your c
 | Uri | Matches the item by ItemUri. | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
 | Version | Specifies the version to include. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 
-**Legend:** "&#8211;" - not supported; "&#x2713;" - supported.
+**Legend:** "&#8211;" - not applicable; "&#x2713;" - available.
 
 Below we will show how to use each command with the Windows PowerShell syntax followed by some examples of the common C# equivalent.
 
