@@ -202,6 +202,19 @@ Invoke-RemoteScript -ScriptBlock {
 } -Session $session
 ```
 
+**Example:** The following improves upon the previous example.
+```powershell
+Invoke-RemoteScript -ScriptBlock {
+    function Write-Verbose {
+        param([string]$Message)
+        Microsoft.PowerShell.Utility\Write-Verbose -Message $Message -Verbose 4>&1
+    }
+    
+    Write-Verbose "Hello from the other side"
+    "data"    
+    Write-Verbose "Goodbye from the other side"
+} -Session $session
+```
 ### References:
 * Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]
