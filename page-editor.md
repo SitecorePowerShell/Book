@@ -6,6 +6,18 @@ The *Notification* integration adds a notification to the Page Editor. The scrip
 
 ![A Notification for the current date](images/screenshots/page-editor/notification-information.png)
 
+**Example:** The following adds an information notification to the page for Sitecore 8 and a warning for Sitecore 7.
+```powershell
+$title = "Thank you for using SPE!"
+$text = "Today is $([datetime]::Now.ToLongDateString())"
+$icon = @{$true="Office/32x32/information.png";$false="Applications/16x16/warning.png"}[$SitecoreVersion.Major -gt 7]
+
+$notification = New-Object -TypeName Sitecore.Pipelines.GetPageEditorNotifications.PageEditorNotification -ArgumentList $text, "Info"
+
+$notification.Icon = $icon
+$pipelineArgs.Notifications.Add($notification)
+```
+
 ### Experience Button
 
 The *Experience Button* integration adds a button to the Page Editor. Rules can be used to control visiblity and enablement. The script is only executed when the button is clicked.
