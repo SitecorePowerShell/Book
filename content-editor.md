@@ -39,9 +39,9 @@ The *Ribbon* integration allows for commands in the ribbon. Rules can be used to
 
 1. Begin by adding a new script library to the *Ribbon* library. The name of the script library will appear in the ribbon as the chunk.
 2. Add a new script to the chunk script library. The name of the script will appear in the ribbon chunk as a command.
-2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
-3. Change the icon of the item to match the script purpose.
-4. Configure any rules as needed.
+4. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
+4. Change the icon of the item to match the script purpose.
+5. Configure any rules as needed.
 
 See the birth of [extending the Sitecore ribbon with powershell scripts][1] by Adam.
 
@@ -51,8 +51,7 @@ Check out an example of the [5 steps to extending the Sitecore ribbon][3] in the
 
 The *Warning* integration allows for notifications and commands in the Content Editor. Rules can be used to control visiblity and enablement. The scripts are only executed when the rule is met and the command is clicked.
 
-1. Begin by adding a new script library to the *Ribbon* library. The name of the script library will appear in the ribbon as the chunk.
-2. Add a new script to the chunk script library. The name of the script will appear in the ribbon chunk as a command.
+1. Begin by adding a new script library to the *Warning* library.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 3. Change the icon of the item to match the script purpose.
 4. Configure any rules as needed.
