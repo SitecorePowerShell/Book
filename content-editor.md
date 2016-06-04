@@ -37,7 +37,8 @@ The *Insert Item* integration allows for insert options in the context menu. Rul
 
 The *Ribbon* integration allows for commands in the ribbon. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
 
-1. Begin by adding a new script to the *Insert Item* library. The name of the script will appear in the context menu.
+1. Begin by adding a new script library to the *Ribbon* library. The name of the script library will appear in the ribbon as the chunk.
+2. Add a new script to the chunk script library. The name of the script will appear in the ribbon chunk as a command.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 3. Change the icon of the item to match the script purpose.
 4. Configure any rules as needed.
