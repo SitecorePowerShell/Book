@@ -53,7 +53,8 @@ The *Warning* integration allows for notifications and commands in the Content E
 
 1. Begin by adding a new script library to the *Warning* library.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
-3. Change the icon of the item to match the script purpose.
+3. The warning notification title, text and icon should be configured in the script.
+ - Include options to the warning by adding one or more secondary scripts to the script library. 
 4. Configure any rules as needed.
 
 [1]: http://blog.najmanowicz.com/2011/11/24/extending-sitecore-ribbon-with-powershell-scripts/
