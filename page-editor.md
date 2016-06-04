@@ -38,3 +38,6 @@ if($response) {
 Close-Window
 ```
 
+![Message Input](images/screenshots/page-editor/message-input-with-ok-cancel.png)
+
+![Email Response](images/screenshots/page-editor/papercut-email-response.png)
