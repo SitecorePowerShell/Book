@@ -9,6 +9,13 @@ The *Context Menu* integration allows for options in the context menu. Rules can
 3. Change the icon of the item to match the script purpose.
 4. Configure any rules as needed.
 
+**Note:** Examples included in the following modules
+* Authoring Instrumentation
+* Copy Renderings
+* Index On Demand
+* Media Library Maintenance
+* Package Generator
+* Task Management
 See how Adam added [context menu PowerShell scripts][2].
 
 ### Gutter
