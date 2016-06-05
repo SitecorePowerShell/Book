@@ -58,5 +58,7 @@ Check the reports in SPE under these sections to see the full list.
 * <sup>4</sup> Solution Audit report
 * <sup>5</sup> Toolbox
 
+**Note:** Examples included are in the following modules
+* Content Reports
 
 [1]: https://marketplace.sitecore.net/en/Modules/A/Advanced_System_Reporter.aspx
