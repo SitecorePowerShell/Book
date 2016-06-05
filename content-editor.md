@@ -57,6 +57,8 @@ The *Warning* integration allows for notifications and commands in the Content E
  - Include options to the warning by adding one or more secondary scripts to the script library. 
 4. Configure any rules as needed.
 
+![License Expiration Warning](images/screenshots/content-editor/warning-notification-for-licensing.png)
+
 Alan provided a nice example [here][4] on setting up the warning with commands.
 
 [1]: http://blog.najmanowicz.com/2011/11/24/extending-sitecore-ribbon-with-powershell-scripts/
