@@ -47,6 +47,11 @@ The task schedule has an intuitive dialog for working with and changing the freq
 
 ![Dialog to Edit Task Schedule](images/screenshots/task-edittaskschedule.png)
 
+**Note:** Examples included are in the following modules
+* License Expiration
+* Media Library Maintenance
+* System Maintenance
+
 See how Adam added [powershell driven Sitecore scheduled tasks][1].
 
 [1]: http://blog.najmanowicz.com/2011/11/29/powershell-driven-sitecore-scheduled-tasks/
