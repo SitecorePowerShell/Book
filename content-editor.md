@@ -24,7 +24,7 @@ See how Adam added [context menu PowerShell scripts][2].
 
 The *Gutter* integration allows for full flexibility of adding a gutter element.
 
-1. Begin by adding a new script to the *Gutter* library.
+1. Begin by adding a new script to the *Gutters* library.
 2. Edit the script to create a new instance of `Sitecore.Shell.Applications.ContentEditor.Gutters.GutterIconDescriptor` if the right conditions are met. 
   * Set the **Icon**, **Tooltip**, and **Click** properties.
   * Return the gutter object
