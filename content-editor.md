@@ -49,6 +49,7 @@ The *Insert Item* integration allows for insert options in the context menu. Rul
 
 **Note:** Examples included in the following modules
 * Task Management
+
 ![Insert Scheduled Task](images/screenshots/content-editor/insert-item-powershell-task.png)
 * Platform
 
