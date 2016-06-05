@@ -47,6 +47,10 @@ The *Insert Item* integration allows for insert options in the context menu. Rul
 3. Change the icon of the item to match the script purpose.
 4. Configure any rules as needed.
 
+**Note:** Examples included in the following modules
+* Task Management
+* Platform
+
 ### Ribbon
 
 The *Ribbon* integration allows for commands in the ribbon. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
