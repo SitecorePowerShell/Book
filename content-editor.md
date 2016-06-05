@@ -16,6 +16,7 @@ The *Context Menu* integration allows for options in the context menu. Rules can
 * Media Library Maintenance
 * Package Generator
 * Task Management
+
 See how Adam added [context menu PowerShell scripts][2].
 
 ### Gutter
