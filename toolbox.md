@@ -6,6 +6,13 @@ Navigate to *Sitecore -> PowerShell Toolbox* and after selecting you should see 
 
 ![Toolbox](images/screenshots/toolbox/toolbox-list.png)
 
+**Note:** Examples included in the following modules
+* Authorable Reports
+* Logged in Session Manager
+* Package Generator
+* Task Management
+* Platform
+
 ### Available Tools
 
 #### Index Viewer
