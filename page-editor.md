@@ -18,6 +18,9 @@ $notification.Icon = $icon
 $pipelineArgs.Notifications.Add($notification)
 ```
 
+**Note:** Examples included in the following modules
+* License Expiration
+
 ### Experience Button
 
 The *Experience Button* integration adds a button to the Page Editor. Rules can be used to control visiblity and enablement. The script is only executed when the button is clicked.
