@@ -36,6 +36,8 @@ The *Gutter* integration allows for full flexibility of adding a gutter element.
 **Note:** Examples included in the following modules
 * Publishing Status Gutter
 
+![Publishing Status](images/screenshots/content-editor/gutter-publishing-status.png)
+
 ### Insert Item
 
 The *Insert Item* integration allows for insert options in the context menu. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
