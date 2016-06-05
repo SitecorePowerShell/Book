@@ -15,7 +15,8 @@ The *Context Menu* integration allows for options in the context menu. Rules can
 * Index On Demand
 * Media Library Maintenance
 * Package Generator
-![Package Generator](images/screenshots/content-editor/context-menu-package-generator.png)
+ 
+ ![Package Generator](images/screenshots/content-editor/context-menu-package-generator.png)
 * Task Management
 
 See how Adam added [context menu PowerShell scripts][2].
@@ -36,7 +37,7 @@ The *Gutter* integration allows for full flexibility of adding a gutter element.
 **Note:** Examples included in the following modules
 * Publishing Status Gutter
 
-![Publishing Status](images/screenshots/content-editor/gutter-publishing-status.png)
+ ![Publishing Status](images/screenshots/content-editor/gutter-publishing-status.png)
 
 ### Insert Item
 
@@ -50,7 +51,7 @@ The *Insert Item* integration allows for insert options in the context menu. Rul
 **Note:** Examples included in the following modules
 * Task Management
 
-![Insert Scheduled Task](images/screenshots/content-editor/insert-item-powershell-task.png)
+  ![Insert Scheduled Task](images/screenshots/content-editor/insert-item-powershell-task.png)
 * Platform
 
 ### Ribbon
