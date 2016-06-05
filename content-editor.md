@@ -57,7 +57,7 @@ The *Warning* integration allows for notifications and commands in the Content E
  - Include options to the warning by adding one or more secondary scripts to the script library. 
 4. Configure any rules as needed.
 
-**Note:** Examples included in the following modules:
+**Note:** Examples included in the following modules
 * License Expiration - disabled by default
 ![License Expiration Warning](images/screenshots/content-editor/warning-notification-for-licensing.png)
 
