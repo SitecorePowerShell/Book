@@ -16,7 +16,10 @@ Here's the url broken down:
 * **Query String Parameters** - Specifies the additional bits of data for use by the web service.
   * user and password - Authenticates the request and in most cases will be needed. If the script is published to the *web* database the credentials are not required.
   * scriptArguments - The PowerShell hashtable containing the query string parameters.
-  
+
+**Note:** Examples included in the following modules
+* Getting Started
+
 ### Security
 
 The integration point can be completely disabled through configuration as described [here](security.md) for Restfulv2.
