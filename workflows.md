@@ -9,7 +9,7 @@ The *Workflows* integration allows for scripts to run like workflow commands. Ru
 5. Edit the script in your *Workflows* library to perform the appropriate actions. The script can run in the background and show dialogs.
 6. Change the icon of the workflow action item to match the script purpose.
 
-**Example:** The following requests input from the user,then writes to the workflow history.
+**Example:** The following requests input from the user then writes to the workflow history.
 ```powershell
 $item = Get-Item -Path .
 $comment = Show-Input -Prompt "Enter a comment:"
