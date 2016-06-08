@@ -39,6 +39,7 @@ $args = @{
 
 Invoke-RemoteScript -ScriptBlock $script -Session $session -ArgumentList $args
 Stop-ScriptSession -Session $session
+
 # Name                     Domain       IsAdministrator IsAuthenticated
 # ----                     ------       --------------- ---------------
 # sitecore\admin           sitecore     True            False          
@@ -63,6 +64,7 @@ Get-Item -Path C:\image.png | Send-MediaItem -Session $session -Destination $lib
 
 $savePath = "C:\image-$([datetime]::Now.ToString("yyyyddMM-HHmmss")).png"
 Receive-MediaItem -Session $session -Path $libraryPath -Destination $savePath
+Stop-ScriptSession -Session $session
 
 #     Directory: C:\
 # 
@@ -79,6 +81,7 @@ $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://r
 Invoke-RemoteScript -Session $session -ScriptBlock { 
         Get-ChildItem -Path "master:/sitecore/media library/Images/Icons/" | Select-Object -Expand ItemPath 
     } | Receive-MediaItem -Session $session -Destination C:\Temp\Images\
+Stop-ScriptSession -Session $session
 ```
 
 #### Windows Authenticated Requests
@@ -99,6 +102,7 @@ $credential = Get-Credential
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore -Credential $credential
 Invoke-RemoteScript -Session $session -ScriptBlock { Get-User -id admin }
 Stop-ScriptSession -Session $session
+
 # Name                     Domain       IsAdministrator IsAuthenticated
 # ----                     ------       --------------- ---------------
 # sitecore\admin           sitecore     True            False    
@@ -123,6 +127,7 @@ We have provided a service for downloading all files and media items from the se
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
 Receive-RemoteItem -Session $session -Path "default.js" -RootPath App -Destination "C:\Files\"
+Stop-ScriptSession -Session $session
 ```
 
 **Example:** The following downloads a single media item from the library.
@@ -131,6 +136,7 @@ Receive-RemoteItem -Session $session -Path "default.js" -RootPath App -Destinati
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
+Stop-ScriptSession -Session $session
 ```
 
 **Example:** The following uploads a single file to the data folder on the server.
@@ -143,6 +149,7 @@ $data = [System.IO.File]::ReadAllText("C:\Temp\data.xml")
 Invoke-RemoteScript -Session $session -ScriptBlock {
     [System.IO.File]::WriteAllText("$($SitecoreDataFolder)\data.xml", $using:data)
 }
+Stop-ScriptSession -Session $session
 ```
 
 #### Script Sessions and Web API Tutorial
@@ -173,6 +180,7 @@ $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
             }
 } -AsJob
 Wait-RemoteScriptSession -Session $session -Id $jobId -Delay 5 -Verbose
+Stop-ScriptSession -Session $session
 ```
 
 **Example:** The following remotely runs a script and checks for any output errors. The *LastErrors* parameter is available for `ScriptSession` objects.
