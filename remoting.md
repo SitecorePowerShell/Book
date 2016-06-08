@@ -98,7 +98,7 @@ Import-Module -Name SPE
 $credential = Get-Credential
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore -Credential $credential
 Invoke-RemoteScript -Session $session -ScriptBlock { Get-User -id admin }
-
+Stop-ScriptSession -Session $session
 # Name                     Domain       IsAdministrator IsAuthenticated
 # ----                     ------       --------------- ---------------
 # sitecore\admin           sitecore     True            False    
