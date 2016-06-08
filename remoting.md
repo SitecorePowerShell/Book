@@ -38,7 +38,7 @@ $args = @{
 }
 
 Invoke-RemoteScript -ScriptBlock $script -Session $session -ArgumentList $args
-
+Stop-ScriptSession -Session $session
 # Name                     Domain       IsAdministrator IsAuthenticated
 # ----                     ------       --------------- ---------------
 # sitecore\admin           sitecore     True            False          
