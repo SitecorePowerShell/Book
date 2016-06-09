@@ -34,4 +34,5 @@
    * [Past Releases](past-releases.md)
 * [Troubleshooting](troubleshooting.md)
 * [Appendix](appendix.md)
+ * [Add-ItemAcl](appendix/commands/Add-ItemAcl.md) 
 {% include './appendix/commands-list.md' %}
