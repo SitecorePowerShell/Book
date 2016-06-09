@@ -8,6 +8,7 @@ The *Workflows* integration allows for scripts to run like workflow commands. Ru
 4. Configure the rules on the workflow action item to specify when to execute. Leave the rule alone if you wish for it to execute any time the command is activated.
 5. Edit the script in your *Workflows* library to perform the appropriate actions. The script can run in the background and show dialogs.
 6. Change the icon of the workflow action item to match the script purpose.
+7. Celebrate your success with the team!
 
 **Example:** The following requests input from the user then writes to the workflow history.
 ```powershell
