@@ -34,7 +34,6 @@
    * [Past Releases](past-releases.md)
 * [Troubleshooting](troubleshooting.md)
 * [Appendix](appendix.md)
-   * Security 
      * [Add-ItemAcl](appendix/commands/Add-ItemAcl.md)
      * [Clear-ItemAcl](appendix/commands/Clear-ItemAcl.md)
      * [Get-ItemAcl](appendix/commands/Get-ItemAcl.md)
