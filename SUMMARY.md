@@ -53,5 +53,5 @@
      * [Import-Role](appendix/commands/Import-Role.md)
      * [Import-User](appendix/commands/Import-User.md)
      * [New-Domain](appendix/commands/New-Domain.md)
-   * [Language]
+   * [Language](appendix/security.md)
      * [Add-ItemLanguage](appendix/commands/Add-ItemLanguage.md)
