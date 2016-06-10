@@ -45,6 +45,7 @@
      * [Get-Cache](appendix/commands/Get-Cache.md)
      * [Get-Database](appendix/commands/Get-Database.md)
      * [Get-ItemClone](appendix/commands/Get-ItemClone.md)
+     * [Get-ItemField](appendix/commands/Get-ItemField.md)
    * [Packaging](appendix/packaging.md)
      * [Export-Package](appendix/commands/Export-Package.md) 
      * [Export-UpdatePackage](appendix/commands/Export-UpdatePackage.md) 
