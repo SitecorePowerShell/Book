@@ -322,6 +322,12 @@ Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "m
 
 **Note:** The item name will match just as you type it in the command. Lowercase name in the destination will result in an item with a lowercase name.
 
+**Example:** The following transfers the item to the specified path with the same ID.
+
+```powershell
+Copy-Item master:\content\Home web:\content\home -TransferOptions 0
+```
+
 ### Move items to a new destination
 
 There is a always a better way to do something. Moving items en masse is certainly one that you don't want to do by hand. If the destination item exists the moved item will be added as a child. If the destination item does not exist the source item will be renamed when moved.
