@@ -19,7 +19,8 @@ Below are some of the things you get with SPE:
 #### Community Add-on Modules
 
 The following are Sitecore modules that enhance the SPE experience.
-* [SPE Image Importer][16]
+* [SPE Image Importer][16] : [Himadri Chakrabarti][18]
+* [Multi-Item Publish][17] : [Richard Seal][19]
 
 #### Endorsements
 
@@ -70,3 +71,6 @@ Questions, comments, and feature requests should be submitted on [GitHub][6].
 [14]: https://twitter.com/techphoria414
 [15]: https://twitter.com/techphoria414/status/632033887632289792
 [16]: https://marketplace.sitecore.net/en/Modules/S/SPE_Image_Uploader_Module10.aspx
+[17]: http://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/
+[18]: https://twitter.com/himadric
+[19]: https://twitter.com/rich_seal
