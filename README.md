@@ -21,6 +21,7 @@ Below are some of the things you get with SPE:
 The following are Sitecore modules that enhance the SPE experience.
 * [SPE Image Importer][16] : [Himadri Chakrabarti][18]
 * [Multi-Item Publish][17] : [Richard Seal][19]
+* [ActiveCommerce PowerShell Extensions][20] : [Nick Wesselman][14]
 
 #### Endorsements
 
@@ -74,3 +75,4 @@ Questions, comments, and feature requests should be submitted on [GitHub][6].
 [17]: http://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/
 [18]: https://twitter.com/himadric
 [19]: https://twitter.com/rich_seal
+[20]: https://github.com/ActiveCommerce/activecommerce-powershell-extensions
