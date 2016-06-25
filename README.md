@@ -24,6 +24,20 @@ The following are some helpful modules distributed with SPE.
 * Content Reports
 * Copy Renderings
 * Enforce user password expiration
+* Example Event Handlers
+* Getting Started
+* Index On Demand
+* License Expiration
+* Logged in Session Manager
+* Media Library Maintenance
+* Package Generator
+* Publishing Status Gutter
+* Random desktop background
+* System Maintenance
+* Task Management
+* Unlock user items on logout
+* User Session Management
+
 #### Community Add-ons
 
 The following are Sitecore modules that enhance the SPE experience.
