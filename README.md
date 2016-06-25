@@ -5,6 +5,7 @@ The [Sitecore PowerShell Extensions][1] (SPE) module is a Sitecore development a
 
 The module provides a command line (CLI) and scripting environment (ISE) for automating tasks. SPE works with the Sitecore process, capable of making native calls to the Sitecore API and manipulating files. Running commands and writing scripts follow the standard and well-known Windows PowerShell syntax. Windows PowerShell is a common tool used in IT for desktop and server management, so we decided to stick with that as a framework to build upon.
 
+#### OOTB Tools
 Below are some of the things you get with SPE:
 * [Index Viewer](toolbox.md)
 * [Scheduled Task Manager](toolbox.md)
@@ -14,6 +15,11 @@ Below are some of the things you get with SPE:
 * [Bulk Rename/Remove/Create Tool](working-with-items.md)
 * Data Importer
 * ~~Professional Chef~~
+
+#### Community Add-on Modules
+
+The following are Sitecore modules that enhance the SPE experience.
+* [SPE Image Importer][16]
 
 #### Endorsements
 
@@ -63,3 +69,4 @@ Questions, comments, and feature requests should be submitted on [GitHub][6].
 [13]: https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b
 [14]: https://twitter.com/techphoria414
 [15]: https://twitter.com/techphoria414/status/632033887632289792
+[16]: https://marketplace.sitecore.net/en/Modules/S/SPE_Image_Uploader_Module10.aspx
