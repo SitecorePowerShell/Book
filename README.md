@@ -5,7 +5,6 @@ The [Sitecore PowerShell Extensions][1] (SPE) module is a Sitecore development a
 
 The module provides a command line (CLI) and scripting environment (ISE) for automating tasks. SPE works with the Sitecore process, capable of making native calls to the Sitecore API and manipulating files. Running commands and writing scripts follow the standard and well-known Windows PowerShell syntax. Windows PowerShell is a common tool used in IT for desktop and server management, so we decided to stick with that as a framework to build upon.
 
-#### OOTB Add-ons
 Below are some of the things you get with SPE:
 * [Index Viewer](toolbox.md)
 * [Scheduled Task Manager](toolbox.md)
@@ -16,6 +15,15 @@ Below are some of the things you get with SPE:
 * Data Importer
 * ~~Professional Chef~~
 
+#### OOTB Add-ons
+
+The following are some helpful modules distributed with SPE.
+* Authorable Reports
+* Authoring Instrumentation
+* Automatically show quick info section
+* Content Reports
+* Copy Renderings
+* Enforce user password expiration
 #### Community Add-ons
 
 The following are Sitecore modules that enhance the SPE experience.
