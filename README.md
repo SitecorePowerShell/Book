@@ -16,7 +16,7 @@ Below are some of the things you get with SPE:
 * Data Importer
 * ~~Professional Chef~~
 
-#### Community Add-on Modules
+#### Community Add-ons
 
 The following are Sitecore modules that enhance the SPE experience.
 * [SPE Image Importer][16] : [Himadri Chakrabarti][18]
