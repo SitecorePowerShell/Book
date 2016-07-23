@@ -9,6 +9,10 @@ foreach($x in $htmlDocument.DocumentNode.SelectNodes("//li")) {
 }
 ```
 
+**Gist:** Template Complexity Analysis
+
+{% gist id="https://gist.github.com/AdamNaj/035366c698ef98e1b00a574eb085e790" %}{% endgist %}
+
 Not seeing what you are looking for? You can always check out some Github Gists that [Adam][1] and [Michael][2] have shared.
 
 [1]: https://gist.github.com/adamnaj
