@@ -73,7 +73,7 @@ We also maintain a comprehensive list of links to [blogs and videos][2] to help 
 
 See the [Troubleshooting](troubleshooting.md) section for some common fixes.
 
-Questions, comments, and feature requests should be submitted on [GitHub][6]. You may also check out the [SPE Slack channel][21] for more interactive support.
+Questions, comments, and feature requests should be submitted on [GitHub][6]. You may also check out the [SPE Slack channel][21] for more interactive support. Not on Slack yet? Contact us on Twitter and we'll send you an invite.
 
 **Disclaimer:** With great powers comes great responsibility – this tool can do a lot of good but also bring harm to a lot of content in a very short time – backup your system before running a script that modifies your content and never run any untested scripts in a production environment! We will not be held responsible for any use of it. Test your scripts on your development server first! Test on an exact copy of production before running scripts on production content.
 
