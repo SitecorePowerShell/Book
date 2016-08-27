@@ -199,12 +199,13 @@ We often see the following two ways of accessing and changing fields used in scr
 PS master:\> Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
 ```
 
-**Example:** The following sets the title property using `.Editing.BeginEdit` and `.Editing.EndEdit` methods.
+**Example:** The following sets the title and clears the branch id using `.Editing.BeginEdit` and `.Editing.EndEdit` methods.
 
 ```powershell
 $item = Get-Item master:/content/home
 $item.Editing.BeginEdit()
 $item["Title"] = "New Title"
+$item.BranchId = [Guid]::Empty # or a new value if changing it
 $item.Editing.EndEdit()
 ```
 **Note:** The above example may also be written in the ISE where no console prompt is visible.
