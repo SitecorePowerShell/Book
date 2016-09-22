@@ -72,6 +72,7 @@
         * [Receive-File](appendix/commands/Receive-File.md)
         * [Remove-Rendering](appendix/commands/Remove-Rendering.md)
         * [Reset-ItemField](appendix/commands/Reset-ItemField.md)
+        * [Remove-ItemVersion](appendix/commands/Remove-ItemVersion.md) 
         * [Reset-Layout](appendix/commands/Reset-Layout.md)
         * [Restart-Application](appendix/commands/Restart-Application.md)
         * [Send-File](appendix/commands/Send-File.md)
