@@ -51,6 +51,7 @@
         * [Get-ItemReference](appendix/commands/Get-ItemReference.md)
         * [Get-ItemReferrer](appendix/commands/Get-ItemReferrer.md)
         * [Get-ItemTemplate](appendix/commands/Get-ItemTemplate.md)
+        * [Add-ItemVersion](appendix/commands/Add-ItemVersion.md)
         * [Get-ItemWorkflowEvent](appendix/commands/Get-ItemWorkflowEvent.md)
         * [Get-Layout](appendix/commands/Get-Layout.md)
         * [Get-LayoutDevice](appendix/commands/Get-LayoutDevice.md)
