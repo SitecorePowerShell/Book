@@ -70,6 +70,7 @@
         * [Publish-Item](appendix/commands/Publish-Item.md)
         * [Read-Variable](appendix/commands/Read-Variable.md)
         * [Receive-File](appendix/commands/Receive-File.md)
+        * [Remove-BaseTemplate](appendix/commands/Remove-BaseTemplate.md)
         * [Remove-Rendering](appendix/commands/Remove-Rendering.md)
         * [Reset-ItemField](appendix/commands/Reset-ItemField.md)
         * [Remove-ItemVersion](appendix/commands/Remove-ItemVersion.md) 
