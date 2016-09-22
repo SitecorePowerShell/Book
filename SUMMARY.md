@@ -67,6 +67,7 @@
         * [New-ItemClone](appendix/commands/New-ItemClone.md)
         * [New-ItemWorkflowEvent](appendix/commands/New-ItemWorkflowEvent.md)
         * [New-Rendering](appendix/commands/New-Rendering.md)
+        * [New-UsingBlock](appendix/commands/New-UsingBlock.md)
         * [Out-Download](appendix/commands/Out-Download.md)
         * [Publish-Item](appendix/commands/Publish-Item.md)
         * [Read-Variable](appendix/commands/Read-Variable.md)
