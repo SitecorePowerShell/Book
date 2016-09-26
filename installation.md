@@ -5,7 +5,7 @@
 * Windows 7+
 * Microsoft .NET Framework 4.5+ : [Download][2]  
 * Windows Management Framework 3+ : [Download][3]
- * The link provided will get you up to PowerShell 4
+ * The link provided will get you up to PowerShell 5
  * [Detecting your PowerShell version][7]
 * PowerShell [Execution Policy][8] set to `RemoteSigned`
 
