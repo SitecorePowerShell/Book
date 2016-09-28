@@ -2,7 +2,7 @@
 
 In this section we'll show how to manage item renderings.
 
-**Example:** The following demonstrates the use of `Get-Rendering` and `Set-Rendering` for updating values on the standard values of a template.
+**Example:** The following demonstrates the use of `Get-Rendering` and `Set-Rendering` for updating values on templates.
 
 ```powershell
 $rendering = Get-Item "master:\sitecore\layout\Sublayouts\Sample Sublayout"
