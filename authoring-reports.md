@@ -1,13 +1,16 @@
 # Authoring Reports
 
-Building reports is a straightforward task. We've provided a variety of examples for you to model when designing your own. 
+Building reports is a straightforward task. We've provided a variety of examples for you to model when designing your own.
 
 ### Dynamic Reports
 
-The **Authorable Reports** module includes reports such as *Index Viewer* and *Rules based report* that provide input dialogs to help make the reports dynamic. 
+The **Authorable Reports** module includes reports such as _Index Viewer_ and _Rules based report_ that provide input dialogs to help make the reports dynamic. 
+
+**Note:** The **Index Viewer** and **Rules Based Report** are bundled as separate a package on the Sitecore Marketplace.
 
 #### Index Viewer
-The *Index Viewer* report provides a great example at how to build a generic report that queries against the Sitecore index. By navigating to *Sitecore -> Toolbox -> Index Viewer* you can conveniently launch the report.
+
+The _Index Viewer_ report provides a great example at how to build a generic report that queries against the Sitecore index. By navigating to _Sitecore -&gt; Toolbox -&gt; Index Viewer_ you can conveniently launch the report.
 
 First you will be prompted with a dialog to select the index to search.
 
@@ -21,36 +24,37 @@ Finally the report is shown. Each row has an option to show more field results.
 
 ![Final results](images/screenshots/authoring-reports/toolbox-indexviewer-results.png)
 
-The *Show Full Info* link will then returns the additional fields not shown in the report.
+The _Show Full Info_ link will then returns the additional fields not shown in the report.
 
 ![Show Full Info](images/screenshots/authoring-reports/toolbox-indexviewer-showinfo.png)
 
 The **Authorable Reports** module has a few points of interest.
 
-* The script library *Internal/List View/Ribbon/SearchResultItem* instructs the report to show the action scripts when the row contains an entry with the typename *SearchResultItem*.
-* The script library *Toolbox/Index Viewer* represents the shortcut.
-
+* The script library _Internal\/List View\/Ribbon\/SearchResultItem_ instructs the report to show the action scripts when the row contains an entry with the typename _SearchResultItem_.
+* The script library _Toolbox\/Index Viewer_ represents the shortcut.
 
 **Examples:**
-* [Creating Beautiful Sitecore Reports Easily with PowerShell Extensions][6]
+
+* [Creating Beautiful Sitecore Reports Easily with PowerShell Extensions](http://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/)
 
 ### Static Reports
 
 The **Content Reports** module includes other reports used for auditing. Below are some examples on how to create your own.
 
 **Examples:**
- * [Images with an empty alt field][1]
- * [Unused media items][2]
+
+* [Images with an empty alt field](http://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions)
+* [Unused media items](http://michaellwest.blogspot.com/2014/04/reports-with-sitecore-powershell.html)
 
 ### Report Actions
 
-Content extracted from [Turn Your Sitecore Powershell Reports into Applications with Action Scripts][3] article written by Adam.
+Content extracted from [Turn Your Sitecore Powershell Reports into Applications with Action Scripts](http://blog.najmanowicz.com/2015/05/05/turn-your-sitecore-powershell-reports-into-applications-with-action-scripts/) article written by Adam.
 
 Actions are simply commands powered by scripts and with visibility dependent on certain conditions like the .Net class of the object that is displayed or perhaps other session settings.
 
 ![Actions seen for scheduled task items](images/screenshots/authoring-reports/reports-action-scripts.png)
 
-You define an action as a script located in an SPE script library and appears in the Actions panel. In the simplest scenario the action would appear when the script library name matches the .Net class name of the items displayed. In the above scenario the actions are placed under `/Platform/Internal/List View/Ribbon/Item/` where *Platform* is the module and *Item* is a script library. Let's take a look at the script here `/Platform/Internal/List View/Ribbon/Item/Open`
+You define an action as a script located in an SPE script library and appears in the Actions panel. In the simplest scenario the action would appear when the script library name matches the .Net class name of the items displayed. In the above scenario the actions are placed under `/Platform/Internal/List View/Ribbon/Item/` where _Platform_ is the module and _Item_ is a script library. Let's take a look at the script here `/Platform/Internal/List View/Ribbon/Item/Open`
 
 ```powershell
 foreach($item in $selectedData){
@@ -69,7 +73,7 @@ The variable `$selectedData` is provided to the script automatically by SPE in c
 
 When your action script is executed the environment is initialized with a number of variables at your disposal as seen below:
 
-* `$selectedData` – the selected objects in the list view (the same will be passed to the `$resultSet` variable for compatibility with older scripts)
+* `$selectedData` – the selected objects in the list view \(the same will be passed to the `$resultSet` variable for compatibility with older scripts\)
 * `$allData` – all objects passed to the list view using the `-Data` parameter.
 * `$filteredData` – all objects displayed after filtering is performed with the search criteria entered by the user in the ribbon.
 * `$exportData` – same as `$filteredData`, however in this case the objects will have additional properties to support easy display with properties processed as text.
@@ -82,6 +86,7 @@ When your action script is executed the environment is initialized with a number
 Consequently you get the full state of the report the user sees in the UI and you can act upon it.
 
 ##### How the report determines if your action is visible?
+
 You can have multiple actions defined with dynamic visibility. The actions are generally only relevant in the context of your report. This is done on two levels. The first level happens based on the location of the script and .Net object type you are displaying in the report. The second level is based on Sitecore rules. For the action to appear all of the following conditions must be met:
 
 * All scripts visible in the report should be located in an enabled module.
@@ -90,7 +95,7 @@ You can have multiple actions defined with dynamic visibility. The actions are g
 
 ##### Using rules to control action visibility
 
-Rules add the full power of the Sitecore rules engine – similarly to what you can do on context menu items or ribbon actions in Content Editor. Some examples where this can be useful include only enabling or disabling the action for items located under a specific branch of the tree or if a [persistent session][7] exists.
+Rules add the full power of the Sitecore rules engine – similarly to what you can do on context menu items or ribbon actions in Content Editor. Some examples where this can be useful include only enabling or disabling the action for items located under a specific branch of the tree or if a [persistent session](http://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/) exists.
 
 The following screenshot shows how to create an action that only appears in reports that list objects of type `Item` that are of template `Schedule`.
 
@@ -99,9 +104,11 @@ The following screenshot shows how to create an action that only appears in repo
 For specific reports this global state might not always be enough. You can narrow down the rules further by using the report name. Name your report by providing an additional parameter to  `Show-ListView`.
 
 Consider the following script:
+
 ```powershell
 Get-ChildItem master:\ | Show-ListView -ViewName ListChildren
 ```
+
 The output of the report will be like any other unnamed report but adds support for additional rules. Let's say I want my action to open a new report that lists all the children of the selected items in the report "ListChildren". After running the action my script should display the new report with the children and close the "ListChildren" report. Not very useful but illustrates the point.
 
 ![Action script](images/screenshots/authoring-reports/reports-action-script1.png)
@@ -110,7 +117,7 @@ Now I need to save my script in the proper Script Library in my enabled module:
 
 ![Save action script](images/screenshots/authoring-reports/reports-action-save.png)
 
-At this point my action will show on all reports what list Item objects. But now that my script is saved I can modify its rules to narrow it down only to Show for reports named "ListChildren". For this I can click the **Runtime** button in the ISE ribbon and edit the *Show if rules are met or not defined* field.
+At this point my action will show on all reports what list Item objects. But now that my script is saved I can modify its rules to narrow it down only to Show for reports named "ListChildren". For this I can click the **Runtime** button in the ISE ribbon and edit the _Show if rules are met or not defined_ field.
 
 ![Open rules editor for report](images/screenshots/authoring-reports/reports-script-runtime-settings.png)
 
@@ -154,11 +161,11 @@ for($i = 0; $i -le 10; $i++){
     -CurrentOperation "Trying to look busy.";
   Start-Sleep -m 500
 }
- 
+
 Write-Progress -Activity "Now I'm doing something else..." `
     -Status "Should take me about 3 seconds but I'm not quite sure...";
 Start-Sleep -s 3;
- 
+
 for($i = 0; $i -le 10; $i++){
   Write-Progress -Activity "Ok let me revisit one more thing..." `
     -Status "Just 5 more seconds" `
@@ -166,7 +173,7 @@ for($i = 0; $i -le 10; $i++){
     -CurrentOperation "Just making sure.";
   Start-Sleep -m 500;
 }
- 
+
 Write-Progress -Completed -Activity "Done."
 ```
 
@@ -190,18 +197,20 @@ Alternatively you can elect to simply freeze the session the initial script that
 
 #### UI Elements
 
-The `Show-ListView` command provides the *Hide* parameter to control visibility of the UI elements.
+The `Show-ListView` command provides the _Hide_ parameter to control visibility of the UI elements.
 
 Add parameter `-Hide` with one or more of the following options:
-* `AllExport` - hides all export scripts (left-most ribbon panel)
-* `NonSpecificExport` - hides export filters that are not specific to this view as specified by `-ViewName` (left-most ribbon panel)
+
+* `AllExport` - hides all export scripts \(left-most ribbon panel\)
+* `NonSpecificExport` - hides export filters that are not specific to this view as specified by `-ViewName` \(left-most ribbon panel\)
 * `Filter` - hides filter panel
 * `PagingWhenNotNeeded` - hides paging when list is shorter than the page specified
-* `AllActions` - hides all actions (right-most ribbon panel)
-* `NonSpecificActions` - hides actions that are not specific to this view as specified by `-ViewName`  (right-most ribbon panel)
+* `AllActions` - hides all actions \(right-most ribbon panel\)
+* `NonSpecificActions` - hides actions that are not specific to this view as specified by `-ViewName`  \(right-most ribbon panel\)
 * `StatusBar` - hides status bar.
 
 **Example:** The following example all of the UI elements in the report.
+
 ```powershell
 Get-ChildItem master:\ | 
     Show-ListView `
@@ -213,14 +222,5 @@ Get-ChildItem master:\ |
 
 ### Examples from the community!
 
-[Active Commerce][5] for Sitecore product has published reports on Github that you can checkout [here][4].
- 
+[Active Commerce](http://www.activecommerce.com/) for Sitecore product has published reports on Github that you can checkout [here](https://github.com/ActiveCommerce/activecommerce-powershell-extensions).
 
-
-[1]: http://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions
-[2]: http://michaellwest.blogspot.com/2014/04/reports-with-sitecore-powershell.html
-[3]: http://blog.najmanowicz.com/2015/05/05/turn-your-sitecore-powershell-reports-into-applications-with-action-scripts/
-[4]: https://github.com/ActiveCommerce/activecommerce-powershell-extensions
-[5]: http://www.activecommerce.com/
-[6]: http://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/
-[7]: http://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/
