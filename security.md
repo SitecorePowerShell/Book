@@ -1,6 +1,6 @@
 # Security
 
-No documentation is complete without a section regarding security. Below are some things to consider while using the application.
+You need to be mindful that Sitecore PowerShell Extensions is a very sharp tool and while it can be leveraged to do great things, it can also be a vector of dangerous attacks if not secured properly. This is why we recommend that you do not install it on Content Delivery instances or if possible avoid deploying it on all servers that face Internet altogether.
 
 ### Security Policies
 
@@ -12,11 +12,11 @@ There are two main security policies to consider when using the SPE module:
 
 The first policy relates to the Application Pool service account running in IIS. The Windows PowerShell runspace will have access to the local system via providers (i.e. FileSystem, Registry), and be managed through the Console or ISE. If the service account is capable of removing files from the root directory, then SPE can accomplish the same.
 
-When using the IIS identities such as *ApplicationPoolIdentity* and *NetworkService* the scripts will not have access to directories outside of the application such as the drive root. You may also notice that the *$HOME* variable is empty; this is because only named service accounts have profiles.
+When using the IIS identities such as *ApplicationPoolIdentity* and *NetworkService* the scripts will not have access to directories outside of the application such as the drive root, but you should perform a due dilligence to make sure this is the case! You may also notice that the *$HOME* variable is empty; this is because only named service accounts have profiles.
 
 #### Sitecore User Account
 
-The second policy relates to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be through the Sitecore API.
+The second policy relates to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be done through the Sitecore API as PowerShell scripts can call the APIs that disable the Sitecore security.
 
 **Application Security**
 
@@ -53,8 +53,8 @@ Look for the following section and enable/disable as needed.
 <sitecore>
     <services>
         <restfulv1 enabled="false" />
-        <restfulv2 enabled="true" />
-        <remoting enabled="true" />
+        <restfulv2 enabled="false" />
+        <remoting enabled="false" />
         <fileDownload enabled="false" />
         <fileUpload enabled="false" />
         <mediaDownload enabled="false" />
@@ -93,7 +93,7 @@ The preferred way to override the settings is to use a configuration file.
 * **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Service associated with `RemoteScriptCall.ashx`.
 * **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
 
-#### Restrict Users and Roles
+#### Restricting Users and Roles using web.config (IIS level security)
 
 Deny access to the web services for unauthenticated users and roles using the `<deny>` element as described [here][1] in `sitecore modules\PowerShell\Services\web.config`.
 
@@ -113,7 +113,7 @@ If you disable *Anonymous Authentication* and enable *Windows Authentication* in
 
 #### Minimal Web Service Configuration
 
-The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as the Content Delivery.
+The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as servers built within a Continuous Integration environment that need remoting enabled. The remoting however is not enabled by default. If you need this functionality, you should enable it separately in an include config file.
 
 **Required:**
 * `App_Config\Include\Cognifide.PowerShell.config`
