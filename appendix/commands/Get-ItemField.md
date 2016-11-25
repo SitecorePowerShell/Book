@@ -15,7 +15,7 @@ Get-ItemField [-Language &lt;String[]&gt;] [-Item] &lt;Item&gt; [-IncludeStandar
  
 Retrieves item fields as either names or fields or template fields. 
  
-© 2010-2015 Adam Najmanowicz - Cognifide Limited, Michael West. All rights reserved. Sitecore PowerShell Extensions 
+© 2010-2016 Adam Najmanowicz - Cognifide Limited, Michael West. All rights reserved. Sitecore PowerShell Extensions 
  
 ## Parameters 
  
@@ -304,9 +304,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
  
 The output type is the type of the objects that the cmdlet emits. 
  
-* Sitecore.Data.Items.Item
-Sitecore.Data.Templates.TemplateField
-Sitecore.Data.Fields.Field 
+* Sitecore.Data.Items.Item* Sitecore.Data.Templates.TemplateField* Sitecore.Data.Fields.Field 
  
 ## Notes 
  
@@ -348,9 +346,10 @@ __Insert Rules                      Insert Rules                       Insert Op
 __Short description                 Short description                  Help
 __Created by                        Created by                         Statistics
 __Presets                           Presets                            Layout
-Text                                Text                               Data               The text is the main content of the document.
+Text                                Text                               Data               The text is the main content of the document. 
+ 
 ``` 
  
 ## Related Topics 
  
-* Get-ItemTemplate* Reset-ItemField* <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+* [Get-ItemTemplate](/appendix/commands/Get-ItemTemplate.md)* [Reset-ItemField](/appendix/commands/Reset-ItemField.md)* <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
