@@ -147,6 +147,7 @@ The following files are the bare minimum required to support SPE web services. T
 * `bin\Cognifide.PowerShell.VersionSpecific.dll`
 * `sitecore modules\PowerShell\Services\web.config`
 * `sitecore modules\PowerShell\Services\RemoteAutomation.asmx`
+* `sitecore modules\PowerShell\Services\RemoteScriptCall.ashx`
 
 You will also need to patch the configuration with the following:
 
