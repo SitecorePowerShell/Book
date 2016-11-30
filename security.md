@@ -119,20 +119,21 @@ The preferred way to override the settings is through the use of a configuration
 
 #### Restricting Users and Roles (Sitecore level security)
 
-When using SPE 4.2+ you are now required to grant the user account used in SPE Remoting to the configured role.
+When using SPE 4.2+ you are now required to grant the user account used in SPE Remoting to the configured role. The `Cognifide.PowerShell.config` comes with a predefined list of permissions but we highly encourage you to adjust to meet your security requirements.
 
-**Example:** The following configuration defines the roles that have access to use SPE Remoting.
+**Example:** The following configuration defines the roles that have access to use SPE Remoting. Any role previously defined in the `<authorization/>` section is removed and my custom roles are then added.
 
 ```xml
 <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>
       <services>
-        <remoting enabled="false">
+        <remoting>
+          <authorization>
+            <patch:delete />
+          </authorization>
           <authorization>
             <add Permission="Allow" IdentityType="Role" Identity="sitecore\PowerShell Extensions Remoting" />
-            <!-- example to disable specific user from an endpoint: -->
-            <!--add Permission="Deny" IdentityType="User" Identity="sitecore\admin" /-->
           </authorization>
         </remoting>
       </services>
