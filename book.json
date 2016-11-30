@@ -2,11 +2,16 @@
     "gitbook": ">=2.0.0",
     "plugins": [
         "image-captions",
-        "gist"
+        "gist",
+        "versions"
     ],
     "pluginsConfig": {
         "image-captions": {
             "caption": "Figure - _CAPTION_"
+        },
+        "versions": {
+            "type": "tags",
+            "includeFilepath": false
         }
     }
 }
