@@ -20,7 +20,7 @@ When using the IIS identities such as _ApplicationPoolIdentity_ and _NetworkServ
 The second policy relates to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be done through the Sitecore API as PowerShell scripts can call the APIs that disable the Sitecore security.
 
 **Application Security**
-The following settings are applied under `core:\content\Applications\PowerShell`.
+The following settings are configured under `core:\content\Applications\PowerShell`.
 
 | **Feature** | **Visibility** |
 | --- | --- |
@@ -32,6 +32,7 @@ The following settings are applied under `core:\content\Applications\PowerShell`
 **Note:** The security is validated _OnLoad_.
 
 **Menu Item Security**
+The following settings are configured under `core:\content\Applications\Content Editor\Context Menues\Default\`.
 
 | **Feature** | **Visibility** | **Command State** |
 | --- | --- | --- |
@@ -39,7 +40,7 @@ The following settings are applied under `core:\content\Applications\PowerShell`
 | Console | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** until user is _non-admin_ and not in _sitecore\Sitecore Client Developing_ |
 | Script | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** |
 
-**Note:** See the _Interactive_ section on _PowerShell Script Library_ and _PowerShell Script_ items for visibility and enabled rules. To hide each feature you can change also the security settings for items under `core:\content\Applications\Content Editor\Context Menues\Default\` item for the roles that should not see the menu.
+**Note:** See the _Interactive_ section on _PowerShell Script Library_ and _PowerShell Script_ items for visibility and enabled rules. To hide each feature you can change also the security settings for the roles that should not see the menu.
 
 ### Security Hardening
 
