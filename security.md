@@ -23,8 +23,8 @@ The second policy relates to the Sitecore user account. The code executed throug
 
 | **Feature** | **Visibility** |
 | --- | --- |
-| PowerShell Console | sitecore\Sitecore Client Developing \(read\) |
-| PowerShell ISE | sitecore\Sitecore Client Developing \(read\) |
+| PowerShell Console | sitecore\Developer \(read\) |
+| PowerShell ISE | sitecore\Developer \(read\) |
 | PowerShell ListView | sitecore\Sitecore Client Users \(read\) |
 | PowerShell Runner | sitecore\Sitecore Client Users \(read\) |
 
