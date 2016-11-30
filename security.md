@@ -192,5 +192,5 @@ You will also need to patch the configuration with the following:
 </configuration>
 ```
 
-For your convenience we've included a package bundled with all of the above called _SPE Minimal-3.x for Sitecore x.zip_. Any of the disabled configuration files should be enabled following extraction.
+For your convenience we've included a package bundled with all of the above called _SPE Minimal-4.x for Sitecore x.zip_. Any of the disabled configuration files should be enabled following extraction.
 
