@@ -97,7 +97,9 @@ The preferred way to override the settings is to use a configuration file.
 * **File Upload** - Used when the url contains all the information needed to upload a file to the server. Service associated with `RemoteScriptCall.ashx`.
 * **Media Download** - Used when the url contains all the information needed to download a media item from the server. Service associated with `RemoteScriptCall.ashx`.
 * **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Service associated with `RemoteScriptCall.ashx`.
+* **Handle Download** - Used when a file is downloaded through the Sitecore interface. Service associated with `RemoteScriptCall.ashx`.
 * **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
+* **Execution** - Used when SPE checks if the user has access to run the application.
 
 #### Restricting Users and Roles using web.config \(IIS level security\)
 
