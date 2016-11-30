@@ -48,7 +48,7 @@ The time will come when you need to lock down the SPE module. The following sect
 
 #### Disable Web Services
 
-You can disable the web services by overriding the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
+You can disable the web services by overriding the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`. If using SPE 4.2+ the services should all be disabled by default; explicitely enabling the services is a new requirement.
 
 Look for the following section and enable\/disable as needed.
 
@@ -69,7 +69,7 @@ Look for the following section and enable\/disable as needed.
 </sitecore>
 ```
 
-The preferred way to override the settings is to use a configuration file.
+The preferred way to override the settings is through the use of a configuration file.
 
 **Example:** The following enables the file and media downloads.
 
@@ -84,6 +84,22 @@ The preferred way to override the settings is to use a configuration file.
         <mediaDownload>
           <patch:attribute name="enabled">true</patch:attribute>
         </mediaDownload>
+      </services>
+    </powershell>
+  </sitecore>
+</configuration>
+```
+
+**Example:** The following enables the SPE Remoting service.
+
+```xml
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <powershell>
+      <services>
+        <remoting>
+          <patch:attribute name="enabled">true</patch:attribute>
+        </remoting>
       </services>
     </powershell>
   </sitecore>
