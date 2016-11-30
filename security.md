@@ -121,7 +121,7 @@ The preferred way to override the settings is through the use of a configuration
 
 When using SPE 4.2+ you are now required to grant the user account used in SPE Remoting to the configured role. The `Cognifide.PowerShell.config` comes with a predefined list of permissions but we highly encourage you to adjust to meet your security requirements.
 
-**Example:** The following configuration defines the roles that have access to use SPE Remoting. Any role previously defined in the `<authorization/>` section is removed and my custom roles are then added.
+**Example:** The following configuration defines the roles that have access to use SPE Remoting. Any role previously defined in the `<authorization/>` section is removed and custom roles are then added.
 
 ```xml
 <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
