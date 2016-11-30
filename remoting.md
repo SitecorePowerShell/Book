@@ -13,6 +13,8 @@ The setup of the module only requires a few steps:
 2. On the local desktop or server install the SPE Remoting module.
  * After downloading you may need to *unblock* the file by right-clicking the zip and unblocking.
  * Ensure that you have run `Set-ExecutionPolicy RemoteSigned` in order for the SPE Remoting module will run. This typically requires elevated privileges.
+3. Enable the *remoting* service through a configuration patch. See the [Security](/security.md) page for more details.
+4. Grant the *remoting* service user account through a configuration patch and granting acess to the appropriate role. See the [Security](/security.md) page for more details.
 
 [![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
 
