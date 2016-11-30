@@ -62,7 +62,9 @@ Look for the following section and enable\/disable as needed.
         <fileUpload enabled="false" />
         <mediaDownload enabled="false" />
         <mediaUpload enabled="false" />
+        <handleDownload enabled="true" />
         <client enabled="true" />
+        <execution enabled="true" />
     </services>
 </sitecore>
 ```
