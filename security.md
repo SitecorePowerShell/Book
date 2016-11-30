@@ -117,6 +117,30 @@ The preferred way to override the settings is through the use of a configuration
 * **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
 * **Execution** - Used when SPE checks if the user has access to run the application.
 
+#### Restricting Users and Roles (Sitecore level security)
+
+When using SPE 4.2+ you are now required to grant the user account used in SPE Remoting to the configured role.
+
+**Example:** The following configuration defines the roles that have access to use SPE Remoting.
+
+```xml
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <powershell>
+      <services>
+        <remoting enabled="false">
+          <authorization>
+            <add Permission="Allow" IdentityType="Role" Identity="sitecore\PowerShell Extensions Remoting" />
+            <!-- example to disable specific user from an endpoint: -->
+            <!--add Permission="Deny" IdentityType="User" Identity="sitecore\admin" /-->
+          </authorization>
+        </remoting>
+      </services>
+    </powershell>
+  </sitecore>
+</configuration>
+```
+
 #### Restricting Users and Roles using web.config \(IIS level security\)
 
 Deny access to the web services for unauthenticated users and roles using the `<deny>` element as described [here](https://msdn.microsoft.com/en-us/library/8aeskccd%28v=vs.71%29.aspx) in `sitecore modules\PowerShell\Services\web.config`.
