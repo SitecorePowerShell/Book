@@ -1,6 +1,55 @@
 # Releases
 
-Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace][1] or report issues on [Github][2]. Past releases are availabile [here](past-releases.md).
+Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace][1] or report issues on [Github][2].
+
+## Version 4.2
+
+This release major focus was security and making your scripting testable and better functional for users in different roles and languages. We've also improved cmdlets for working with templates and as always improved our remoting module to make it even more functional in your CI scenarios.
+
+[Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.2) - 38 issues.
+
+### Summary of important changes
+
+#### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?utf8=%E2%9C%93&q=is%3Aissue%20label%3Aimpact-breaking-change%20is%3Acosed%20milestone%3A%224.2%22)
+
+- You might want to check how your scripts behave for users in other languages as we're now setting the context language on the Job, which e.g. impacts how items are retrieved. [694]
+- All remotely accessible services are now disabled by default [716](https://github.com/SitecorePowerShell/Console/issues/716) so you need to provide a patch config file if you want to use SPE in your CI environment out-of-the-box.
+
+#### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?utf8=%E2%9C%93&q=is%3Aissue%20label%3A-release-highlight%20is%3Acosed%20milestone%3A%224.2%22%20)
+
+- `Read-Variable` cmdlet now supports validation on field and form level [728](https://github.com/SitecorePowerShell/Console/issues/728).
+- ISE now allows you to emulate script execution in context of any user or language [726](https://github.com/SitecorePowerShell/Console/issues/726).
+- Added `Update-ItemReferrer` cmdlet that allows you to re-link an item to another item or delete references to an item before e.g. deleting it. [726](https://github.com/SitecorePowerShell/Console/issues/726).
+- Introduced Role/User based restriction for user access to endpoints. [715](https://github.com/SitecorePowerShell/Console/issues/715)
+
+#### Enhancements
+- Full list of improvements can be found [here](https://github.com/SitecorePowerShell/Console/issues?utf8=%E2%9C%93&q=is%3Aissue%20label%3Aimprovement%20is%3Acosed%20milestone%3A%224.2%22%20)
+
+#### Fixes
+- Full list of bugs fixed can be found [here](https://github.com/SitecorePowerShell/Console/issues?utf8=%E2%9C%93&q=is%3Aissue%20label%3Abug%20is%3Acosed%20milestone%3A%224.2%22%20)
+
+## Version 4.1
+
+Another solid release. Yet again a fairly long wait but we;ve fixed a ton of bugs and did some solid improvements. Happy scripting!
+
+[Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.1) - over 60 issues.
+
+### Summary of important changes
+
+#### Breaking Changes
+
+- Get-RoleMember should return Role and User rather than AccountList [637](https://github.com/SitecorePowerShell/Console/issues/637).
+- Publish-Item publishing behaviour was tuned to handle typical scenarios better  [620](https://github.com/SitecorePowerShell/Console/issues/620).
+
+#### New Features
+- Support for Sitecore 8.2
+
+#### Enhancements
+- ...
+
+#### Fixes
+
+- ...
 
 ## Version 4.0
 
