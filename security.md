@@ -120,7 +120,7 @@ The preferred way to override the settings is through the use of a configuration
 
 #### Restricting Users and Roles (Sitecore level security)
 
-When using SPE 4.2+ you are now required to grant the user account used in SPE Remoting to the configured role. The `Cognifide.PowerShell.config` comes with a predefined list of permissions but we highly encourage you to adjust to meet your security requirements.
+You are required to explicitly grant the SPE Remoting session user account to a predefined role found in the configuration `Cognifide.PowerShell.config`. There is a generic list of permissions configured by default but we highly encourage you to adjust to meet your security requirements.
 
 **Example:** The following configuration defines the roles that have access to use SPE Remoting. Any role previously defined in the `<authorization/>` section is removed and custom roles are then added.
 
