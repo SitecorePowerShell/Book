@@ -22,7 +22,7 @@ The second policy relates to the Sitecore user account. The code executed throug
 **Application Security**
 The following settings are configured under `core:\content\Applications\PowerShell`.
 
-| **Feature** | **Visibility** |
+| **Feature**| **Visibility** |
 | --- | --- |
 | PowerShell Console | sitecore\Developer \(read\) |
 | PowerShell ISE | sitecore\Developer \(read\) |
@@ -36,9 +36,9 @@ The following settings are configured under `core:\content\Applications\Content 
 
 | **Feature** | **Visibility** | **Command State** |
 | --- | --- | --- |
-| Edit Script | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden** |
-| Console | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** until user is _non-admin_ and not in _sitecore\Sitecore Client Developing_ |
-| Script | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** |
+| Edit Script | sitecore\Developer (read) | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden** |
+| Console | sitecore\Developer (read) | **Enabled** until user is _non-admin_ and not in _sitecore\Sitecore Client Developing_ |
+| Script | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** |
 
 **Note:** See the _Interactive_ section on _PowerShell Script Library_ and _PowerShell Script_ items for visibility and enabled rules. To hide each feature you can change also the security settings for the roles that should not see the menu.
 
@@ -48,7 +48,7 @@ The time will come when you need to lock down the SPE module. The following sect
 
 #### Disable Web Services
 
-You can disable the web services by overriding the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`. If using SPE 4.2+ the services should all be disabled by default; explicitely enabling the services is a new requirement.
+The web services are disabled by default. You can override by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
 
 Look for the following section and enable\/disable as needed.
 
@@ -69,7 +69,7 @@ Look for the following section and enable\/disable as needed.
 </sitecore>
 ```
 
-The preferred way to override the settings is through the use of a configuration file.
+The preferred way to override the settings is through the use of a configuration patch file.
 
 **Example:** The following enables the file and media downloads.
 
@@ -90,7 +90,7 @@ The preferred way to override the settings is through the use of a configuration
 </configuration>
 ```
 
-**Example:** The following enables the SPE Remoting service.
+**Example:** The following enables the SPE Remoting service and requires a secure connection using HTTPS.
 
 ```xml
 <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
@@ -98,6 +98,7 @@ The preferred way to override the settings is through the use of a configuration
     <powershell>
       <services>
         <remoting>
+          <patch:attribute name="requireSecureConnection">true</patch:attribute>
           <patch:attribute name="enabled">true</patch:attribute>
         </remoting>
       </services>
