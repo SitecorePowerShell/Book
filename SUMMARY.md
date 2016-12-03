@@ -32,7 +32,6 @@
 * [Security](security.md)
     * [Users and Roles](users-and-roles.md)
 * [Releases](releases.md)
-    * [Past Releases](past-releases.md)
 * [Troubleshooting](troubleshooting.md)
 * [Code Snippets](code-snippets.md)
 * [Appendix](appendix.md)
@@ -168,3 +167,4 @@
         * [Receive-ScriptSession](appendix/commands/Receive-ScriptSession.md)
         * [Remove-Session](appendix/commands/Remove-Session.md)
         * [Start-ScriptSession](appendix/commands/Start-ScriptSession.md)
+
