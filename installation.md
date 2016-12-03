@@ -16,13 +16,6 @@ The SPE module installs like any other for Sitecore.
 
 [Download][1] the module from the [Sitecore Marketplace][4] and install through the _Installation Wizard_.
 
-**Note: ** When upgrading from a v2.x you may find it necessary to remove some old Sheer controls. One quick fix is to run the following command in the Console after installation (since the ISE will not work properly).
-
-```powershell
-PS master:\> cd c:\
-PS C:\> Remove-Item -Path "$($AppPath)sitecore\shell\Applications\PowerShell" -Recurse
-```
-
 Following the installation you'll find these new items added to the Sitecore menu:
 * Sitecore -> [PowerShell Console](console.md)
 * Sitecore -> [PowerShell Toolbox](toolbox.md)
