@@ -18,11 +18,11 @@ The setup of the module only requires a few steps:
 
 [![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](http://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
 
-The remoting services use a combiniation of a SOAP service (ASMX) and HttpHandler. Some features are disabled by default and should be configured as needed as can be seen in the [security section here](security.md). The SOAP service may require additional Windows authentication using the `-Credential` parameter which is common when logged into a Windows Active Directory domain.
+The remoting services use a combination of a SOAP service (ASMX) and HttpHandler (ASHX). Remoting features are disabled by default and should be configured as needed as can be seen in the [security section here](security.md). The SOAP service may require additional Windows authentication using the `-Credential` parameter which is common when logged into a Windows Active Directory domain.
 
 #### Windows Authenticated Requests
 
-If you have configured the services to run under *Windows Authentication* mode then you'll need to use the **Credential** parameter for the commands.
+If you have configured the web services to run under *Windows Authentication* mode in IIS then you'll need to use the **Credential** parameter for the commands.
 
 You'll definitely know you need it when you receive an error like the following:
 
@@ -35,7 +35,7 @@ New-WebServiceProxy : The request failed with HTTP status 401: Unauthorized.
 ```powershell
 Import-Module -Name SPE
 $credential = Get-Credential
-$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore -Credential $credential
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore -Credential $credential
 Invoke-RemoteScript -Session $session -ScriptBlock { Get-User -id admin }
 Stop-ScriptSession -Session $session
 
@@ -48,7 +48,7 @@ Stop-ScriptSession -Session $session
 
 ```powershell
 # If you need to connect to more than one instance of Sitecore add it to the list.
-$instanceUrls = @("http://remotesitecore","http://remotesitecore2")
+$instanceUrls = @("https://remotesitecore","https://remotesitecore2")
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri $instanceUrls
 Invoke-RemoteScript -Session $session -ScriptBlock { $env:computername }
 ```
@@ -61,7 +61,7 @@ We have provided a service for downloading all files and media items from the se
 
 ```powershell
 Import-Module -Name SPE
-$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
 Receive-RemoteItem -Session $session -Path "default.js" -RootPath App -Destination "C:\Files\"
 Stop-ScriptSession -Session $session
 ```
@@ -70,21 +70,8 @@ Stop-ScriptSession -Session $session
 
 ```powershell
 Import-Module -Name SPE
-$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
-Stop-ScriptSession -Session $session
-```
-
-**Example:** The following uploads a single file to the data folder on the server.
-
-```powershell
-Import-Module -Name SPE
-$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
-# Be aware that uploading content greater than 1 MB may take a while or even timeout.
-$data = [System.IO.File]::ReadAllText("C:\Temp\data.xml")
-Invoke-RemoteScript -Session $session -ScriptBlock {
-    [System.IO.File]::WriteAllText("$($SitecoreDataFolder)\data.xml", $using:data)
-}
 Stop-ScriptSession -Session $session
 ```
 
@@ -108,7 +95,7 @@ Inevitably you will need to have long running processes triggered remotely. In o
 **Example:** The following remotely runs the id of a `ScriptSession` and polls the server until completed.
 ```powershell
 Import-Module -Name SPE
-$session = New-ScriptSession -Username admin -Password b -ConnectionUri http://remotesitecore
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
 $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
         "master", "web" | Get-Database | 
             ForEach-Object { 
