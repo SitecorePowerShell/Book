@@ -27,22 +27,22 @@ SPE provides some convenient variables out of the box for use in running command
 | -------- | ----------- |
 | AppPath  | C:\Inetpub\wwwroot\Console\Website\ |
 | HostSettings | ... <br/> FontSize : 12 <br/> FontFamily : Wingdings <br/> ... |
-| Me        | sitecore\admin    |
+| me        | sitecore\admin    |
 | PWD       | master:\     |
 | ScriptSession | ... <br/> ID : e9fedd64-cad0-4c43-b950-9cd361b151fd <br/> ... |
-| SitecoreAuthority | http://console |
-| SitecoreDataFolder    | C:\Inetpub\wwwroot\Console\Data\    |
-| SitecoreDebugFolder   | C:\Inetpub\wwwroot\Console\Data\/debug  |
-| SitecoreIndexFolder   | C:\Inetpub\wwwroot\Console\Data\/indexes  |
+| SitecoreAuthority | https://console |
+| SitecoreDataFolder    | C:\Inetpub\wwwroot\Console\Data    |
+| SitecoreDebugFolder   | C:\Inetpub\wwwroot\Console\Data\debug  |
+| SitecoreIndexFolder   | C:\Inetpub\wwwroot\Console\Data\indexes  |
 | SitecoreLayoutFolder  | C:\Inetpub\wwwroot\Console\Website\layouts  |
-| SitecoreLogFolder     | C:\Inetpub\wwwroot\Console\Data\/logs  |
+| SitecoreLogFolder     | C:\Inetpub\wwwroot\Console\Data\logs  |
 | SitecoreMediaFolder   | C:\Inetpub\wwwroot\Console\Website\upload  |
-| SitecorePackageFolder | C:\Inetpub\wwwroot\Console\Data\/packages  |
+| SitecorePackageFolder | C:\Inetpub\wwwroot\Console\Data\packages  |
 | SitecoreScriptRoot | master:\system\Modules\PowerShell\Script Library\Task Management\Toolbox |
 | SitecoreCommandPath | master:\system\Modules\PowerShell\Script Library\Task Management\Toolbox\Task Manager |
-| SitecoreSerializationFolder   | C:\Inetpub\wwwroot\Console\Data\/serialization  |
-| SitecoreTempFolder    | /temp  |
-| SitecoreVersion | 8.1 |
+| SitecoreSerializationFolder   | C:\Inetpub\wwwroot\Console\Data\serialization  |
+| SitecoreTempFolder    | C:\Inetpub\wwwroot\Console\Website\temp  |
+| SitecoreVersion | 8.2.160729 |
 
  **Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed. You'll also need to be careful not to overwrite the built-in variables.
  
