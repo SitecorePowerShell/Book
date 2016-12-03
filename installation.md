@@ -3,7 +3,7 @@
 ### Prerequisites
 
 * Windows 7+
-* Microsoft .NET Framework 4.5+ : [Download][2]  
+* Microsoft .NET Framework 4.5.2+ : [Download][2]  
 * Windows Management Framework 3+ : [Download][3]
  * The link provided will get you up to PowerShell 5
  * [Detecting your PowerShell version][7]
