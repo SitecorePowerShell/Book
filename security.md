@@ -2,20 +2,20 @@
 
 You need to be mindful that Sitecore PowerShell Extensions is a very sharp tool and while it can be leveraged to do great things, it can also be a vector of dangerous attacks if not secured properly. This is why we recommend that you do not install it on Content Delivery instances or if possible avoid deploying it on all servers that face Internet altogether. 
 
-### Security Policies
+## Security Policies
 
 There are two main security policies to consider when using the SPE module:
 
 * Application Pool service account
 * Sitecore user account
 
-#### Application Pool Service Account
+### Application Pool Service Account
 
 The first policy relates to the Application Pool service account running in IIS. The Windows PowerShell runspace will have access to the local system via providers \(i.e. FileSystem, Registry\), and be managed through the Console or ISE. If the service account is capable of removing files from the root directory, then SPE can accomplish the same.
 
 When using the IIS identities such as _ApplicationPoolIdentity_ and _NetworkService_ the scripts will not have access to directories outside of the application such as the drive root, but you should perform a due dilligence to make sure this is the case! You may also notice that the _$HOME_ variable is empty; this is because only named service accounts have profiles.
 
-#### Sitecore User Account
+### Sitecore User Account
 
 The second policy relates to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be done through the Sitecore API as PowerShell scripts can call the APIs that disable the Sitecore security.
 
@@ -42,11 +42,11 @@ The following settings are configured under `core:\content\Applications\Content 
 
 **Note:** See the _Interactive_ section on _PowerShell Script Library_ and _PowerShell Script_ items for visibility and enabled rules. To hide each feature you can change also the security settings for the roles that should not see the menu.
 
-### Security Hardening
+## Security Hardening
 
 The time will come when you need to lock down the SPE module. The following section outlines steps you can take to minimize the surface area for attack. The following topics describe how to enable services and grant access to the various parts of the module.
 
-#### Configure Web Services
+### Configure Web Services
 
 The web services providing external access to Sitecore are disabled by default. You can override by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
 
@@ -69,7 +69,7 @@ Look for the following section and enable as needed.
 </sitecore>
 ```
 
-##### Service Descriptions
+#### Service Descriptions
 
 * **Remoting** - Used when passing scripts to SPE for execution. Enable when using the **SPE Remoting** module. Service associated with `RemoteAutomation.asmx`.
 * **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
@@ -120,7 +120,9 @@ The preferred way to override the settings is through the use of a configuration
 </configuration>
 ```
 
-#### Restricting Users and Roles (Sitecore level security)
+### Restrict Users and Roles
+
+#### Sitecore level security
 
 You are required to explicitly grant the SPE Remoting session user account to a predefined role found in the configuration `Cognifide.PowerShell.config`. There is a generic list of permissions configured by default but we highly encourage you to adjust to meet your security requirements.
 
@@ -145,7 +147,7 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 </configuration>
 ```
 
-#### Restricting Users and Roles using web.config \(IIS level security\)
+#### IIS level security
 
 Deny access to the web services for unauthenticated users and roles using the `<deny>` element as described [here](https://msdn.microsoft.com/en-us/library/8aeskccd%28v=vs.71%29.aspx) in `sitecore modules\PowerShell\Services\web.config`.
 
@@ -163,7 +165,7 @@ Deny access to the web services for unauthenticated users and roles using the `<
 
 If you disable _Anonymous Authentication_ and enable _Windows Authentication_ in IIS, such as the directory `sitecore modules\PowerShell\Services\` you'll need to use the **Credential** parameter for any command that interacts with the services. See the Remoting section for examples.
 
-#### Minimal Web Service Configuration
+### Minimal Web Service Configuration
 
 The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as servers built within a Continuous Integration environment that need remoting enabled. The remoting however is not enabled by default. If you need this functionality, you should enable it separately in an include config file.
 
