@@ -73,7 +73,7 @@ The object which expires after a predetermined time. These can be unique to each
 | expiration | timespan used to determine the elevated session lifetime (hh:mm:ss) |
 | elevationAction | action to perform when session elevation is triggered (allow, block, password) |
 
-* **Allow** - Always allow the session to run elevated without prompting the user for permission.
+* **Allow** - Always allow the session to run elevated without prompting the user for permission. This should never be used outside of a developer's machine.
 * **Block** - Always block the session from running elevated without prompting the user for permission.
 * **Password** - Prompt the user for a password before running the session elevated, unless an unexpired session is active.
 
