@@ -44,7 +44,18 @@ The following settings are configured under `core:\content\Applications\Content 
 
 ## Security Hardening
 
-The time will come when you need to lock down the SPE module. The following section outlines steps you can take to minimize the surface area for attack. The following topics describe how to enable services and grant access to the various parts of the module.
+The following section outlines steps you can take to minimize the surface area for attack. The following topics describe how to manage security for interfaces and services to the various parts of the module.
+
+### Session Elevation
+
+The various [interfaces](/interfaces.md) bundled with the module provide convenient ways to interact with the Sitecore API. The module provides a **User Account Control** feature akin to that of Microsoft Windows.
+
+#### User Account Control
+
+Let's have a look at the configurable features which make up the UAC.
+
+* **Gate** - The way in which scripts make their way into Sitecore through built-in interfaces. Includes the [Console](/console.md), [ISE](/scripting.md), and Content Editor via _Item Saving_.
+* **Token** - The object which expires after a predetermined time. These can be unique to each gate or shared.
 
 ### Configure Web Services
 
