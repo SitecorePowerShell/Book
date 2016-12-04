@@ -163,7 +163,7 @@ Deny access to the web services for unauthenticated users and roles using the `<
 </configuration>
 ```
 
-If you disable _Anonymous Authentication_ and enable _Windows Authentication_ in IIS, such as the directory `sitecore modules\PowerShell\Services\` you'll need to use the **Credential** parameter for any command that interacts with the services. See the Remoting section for examples.
+If you disable _Anonymous Authentication_ and enable _Windows Authentication_ in IIS, such as the directory `sitecore modules\PowerShell\Services\` you'll need to use the **Credential** parameter for any command that interacts with the services. See the [Remoting](/remoting.md "Remoting") section for examples.
 
 ### Minimal Web Service Configuration
 
