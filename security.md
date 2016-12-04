@@ -54,8 +54,28 @@ The various [interfaces](/interfaces.md) bundled with the module provide conveni
 
 Let's have a look at the configurable features which make up the UAC.
 
-* **Gate** - The way in which scripts make their way into Sitecore through built-in interfaces. Includes the [Console](/console.md), [ISE](/scripting.md), and Content Editor via _Item Saving_.
-* **Token** - The object which expires after a predetermined time. These can be unique to each gate or shared.
+**Gate**
+
+The way in which scripts make their way into Sitecore through built-in interfaces. Includes the [Console](/console.md), [ISE](/scripting.md), and Content Editor via _Item Saving_.
+
+| Attribute | Description |
+| --- | --- |
+| name | built-in name for the gate |
+| token | name of the token to use for the elevated session | 
+
+**Token**
+
+The object which expires after a predetermined time. These can be unique to each gate or shared.
+
+| Attribute | Description |
+| --- | --- |
+| name | unique string used for the gate *token* attribute |
+| expiration | timespan used to determine the elevated session lifetime (hh:mm:ss) |
+| elevationAction | action to perform when session elevation is triggered (allow, block, password) |
+
+* **Allow** - Always allow the session to run elevated without prompting the user for permission.
+* **Block** - Always block the session from running elevated without prompting the user for permission.
+* **Password** - Prompt the user for a password before running the session elevated, unless an unexpired session is active.
 
 ### Configure Web Services
 
