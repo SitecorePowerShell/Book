@@ -44,13 +44,13 @@ The following settings are configured under `core:\content\Applications\Content 
 
 ### Security Hardening
 
-The time will come when you need to lock down the SPE module. The following section outlines steps you can take to minimize the surface area for attack.
+The time will come when you need to lock down the SPE module. The following section outlines steps you can take to minimize the surface area for attack. The following topics describe how to enable services and grant access to the various parts of the module.
 
-#### Disable Web Services
+#### Configure Web Services
 
-The web services are disabled by default. You can override by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
+The web services providing external access to Sitecore are disabled by default. You can override by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
 
-Look for the following section and enable\/disable as needed.
+Look for the following section and enable as needed.
 
 ```xml
 <sitecore>
@@ -68,6 +68,19 @@ Look for the following section and enable\/disable as needed.
     </services>
 </sitecore>
 ```
+
+##### Service Descriptions
+
+* **Remoting** - Used when passing scripts to SPE for execution. Enable when using the **SPE Remoting** module. Service associated with `RemoteAutomation.asmx`.
+* **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
+* **File Download** - Used when the url contains all the information needed to download a file from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+* **File Upload** - Used when the url contains all the information needed to upload a file to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+* **Media Download** - Used when the url contains all the information needed to download a media item from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+* **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+* **Handle Download** - Used when a file is downloaded through the Sitecore interface. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+* **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
+* **Execution** - Used when SPE checks if the user has access to run the application.
+* **RESTful v1** - Used in early version of SPE. Avoid using this if possible. Service associated with `RemoteScriptCall.ashx`.
 
 The preferred way to override the settings is through the use of a configuration patch file.
 
@@ -106,17 +119,6 @@ The preferred way to override the settings is through the use of a configuration
   </sitecore>
 </configuration>
 ```
-
-* **RESTful v1** - Used in early version of SPE. Disabled by default. Service associated with `RemoteScriptCall.ashx`.
-* **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
-* **Remoting** - Used when passing scripts to SPE for execution. Service associated with `RemoteAutomation.asmx`.
-* **File Download** - Used when the url contains all the information needed to download a file from the server. Service associated with `RemoteScriptCall.ashx`.
-* **File Upload** - Used when the url contains all the information needed to upload a file to the server. Service associated with `RemoteScriptCall.ashx`.
-* **Media Download** - Used when the url contains all the information needed to download a media item from the server. Service associated with `RemoteScriptCall.ashx`.
-* **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Service associated with `RemoteScriptCall.ashx`.
-* **Handle Download** - Used when a file is downloaded through the Sitecore interface. Service associated with `RemoteScriptCall.ashx`.
-* **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
-* **Execution** - Used when SPE checks if the user has access to run the application.
 
 #### Restricting Users and Roles (Sitecore level security)
 
