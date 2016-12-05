@@ -77,6 +77,28 @@ The object which expires after a predetermined time. These can be unique to each
 * **Block** - Always block the session from running elevated without prompting the user for permission.
 * **Password** - Prompt the user for a password before running the session elevated, unless an unexpired session is active.
 
+**Example:** The following extends the token expiration to 10 minutes.
+
+```xml
+<sitecore>
+  <powershell>
+    <userAccountControl>
+      <tokens>
+        <token name="Console">
+          <patch:attribute name="expiration">00:10:00</patch:attribute>
+        </token>
+        <token name="ISE">
+          <patch:attribute name="expiration">00:10:00</patch:attribute>
+        </token>
+        <token name="ItemSave">
+          <patch:attribute name="expiration">00:10:00</patch:attribute>
+        </token>
+      </tokens>
+    </userAccountControl>
+  </powershell>
+</sitecore>
+```
+
 ### Configure Web Services
 
 The web services providing external access to Sitecore are disabled by default. You can override by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
@@ -85,18 +107,20 @@ Look for the following section and enable as needed.
 
 ```xml
 <sitecore>
+  <powershell>
     <services>
-        <restfulv1 enabled="false" />
-        <restfulv2 enabled="false" />
-        <remoting enabled="false" />
-        <fileDownload enabled="false" />
-        <fileUpload enabled="false" />
-        <mediaDownload enabled="false" />
-        <mediaUpload enabled="false" />
-        <handleDownload enabled="true" />
-        <client enabled="true" />
-        <execution enabled="true" />
+      <restfulv1 enabled="false" />
+      <restfulv2 enabled="false" />
+      <remoting enabled="false" />
+      <fileDownload enabled="false" />
+      <fileUpload enabled="false" />
+      <mediaDownload enabled="false" />
+      <mediaUpload enabled="false" />
+      <handleDownload enabled="true" />
+      <client enabled="true" />
+      <execution enabled="true" />
     </services>
+  </powershell>
 </sitecore>
 ```
 
