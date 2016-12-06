@@ -19,4 +19,4 @@ Write-Warning " Write-Warning "
 Show-Result -Text -Width 500 -Height 300
 ```
 
-![Host output using Show-Result](https://cloud.githubusercontent.com/assets/1209953/12344464/a0b0c3ba-bb3d-11e5-82a7-449644e00602.png)
+![Host output using Show-Result](images/screenshots/modaldialog-showresultcolors.png)
