@@ -99,13 +99,13 @@ The object which expires after a predetermined time. These can be unique to each
 </sitecore>
 ```
 
-The following Content Editor Warning is displayed a PowerShell Module, Script Library, and Script is selected.
-
-![Elevate session](/images/screenshots/uac/security-elevatedsessionstate-contenteditor.png)
-
-The following prompt appears when the `elevationAction` is configured to **Password** and no available session currently elevated.
+Gates with **Password** protection enabled prompt the user when no elevated session is available.
 
 ![Elevate Session State](/images/screenshots/uac/security-elevatedsessionstate-password.png)
+
+A Content Editor Warning is displayed when a PowerShell Module, Script Library, and Script is selected.
+
+![Elevate session](/images/screenshots/uac/security-elevatedsessionstate-contenteditor.png)
 
 The following warning is rendered in the ISE while the session state is elevated.
 
