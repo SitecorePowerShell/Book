@@ -13,9 +13,9 @@ $Host.PrivateData.WarningForegroundColor = 'Magenta'
 $Host.PrivateData.WarningBackgroundColor = "Green"
 $Host.PrivateData.VerboseForegroundColor = 'Green'
 $Host.PrivateData.VerboseBackgroundColor = "Red"
-Write-Host    "                    Write-Host                  "
-Write-Verbose "                    Write-Verbose               " -Verbose
-Write-Warning "                    Write-Warning                 "
+Write-Host " Write-Host "
+Write-Verbose " Write-Verbose " -Verbose
+Write-Warning " Write-Warning "
 Show-Result -Text -Width 500 -Height 300
 ```
 
