@@ -107,6 +107,10 @@ A Content Editor Warning is displayed when a PowerShell Module, Script Library, 
 
 ![Elevate session](/images/screenshots/uac/security-elevatedsessionstate-contenteditor.png)
 
+The "Drop session" option appears after credentials are verified. All scripts can be edited while the session is elevated.
+
+![Drop session](/images/screenshots/uac/security-elevatedsessionstate-dropcontenteditor.png)
+
 The following warning is rendered in the ISE while the session state is elevated. Click "Drop elevated session state" if you do not want to wait for the elevated session to timeout.
 
 ![Drop elevated session state](/images/screenshots/uac/security-elevatedsessionstate-dropise.png)
