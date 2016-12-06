@@ -107,7 +107,7 @@ A Content Editor Warning is displayed when a PowerShell Module, Script Library, 
 
 ![Elevate session](/images/screenshots/uac/security-elevatedsessionstate-contenteditor.png)
 
-The following warning is rendered in the ISE while the session state is elevated.
+The following warning is rendered in the ISE while the session state is elevated. Click "Drop elevated session state" if you do not want to wait for the elevated session to timeout.
 
 ![Drop elevated session state](/images/screenshots/uac/security-elevatedsessionstate-dropise.png)
 
