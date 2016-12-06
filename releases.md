@@ -26,6 +26,8 @@ Security, Security, security! This release major focus was security.
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.3)
 #### [All Fixes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Abug+is%3Aclosed+milestone%3A4.3)
 
+***
+
 ## Version 4.2
 
 This release major focus was security and making your scripting testable and better functional for users in different roles and languages. We've also improved cmdlets for working with templates and as always improved our remoting module to make it even more functional in your CI scenarios.
@@ -52,6 +54,8 @@ This release major focus was security and making your scripting testable and bet
 #### Fixes
 - Full list of bugs fixed can be found [here](https://github.com/SitecorePowerShell/Console/issues?utf8=%E2%9C%93&q=is%3Aissue%20label%3Abug%20is%3Acosed%20milestone%3A%224.2%22%20)
 
+***
+
 ## Version 4.1
 
 Another solid release. Yet again a fairly long wait but we;ve fixed a ton of bugs and did some solid improvements. Happy scripting!
@@ -74,6 +78,8 @@ Another solid release. Yet again a fairly long wait but we;ve fixed a ton of bug
 #### Fixes
 
 - ...
+
+***
 
 ## Version 4.0
 
