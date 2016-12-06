@@ -16,11 +16,14 @@ The following figure shows the ISE when the User Account Controls (UAC) are disa
 * **Script Execution:**
   * Execute - Runs the current script as a background job or in the http context.
   * Selection - Runs the selected text of the current script.
+  * Debug - Runs the current script with the debugging mode enabled.
   * Abort - Stops the execution of an executing script.
-  * Runtime
 * **Context:**
   * Context - Specifies the current item in the script. Often denoted as a *.* (dot) or *$pwd* (present working directory). An MRU and tree view are provided for choosing a path.
   * Session - Specifies the session to use when executing the script. Reused sessions live in the *HttpSession*. Options include the session created for the ISE instance, One-Time session, or the Persistent Session ID configured on the script.
+* **UI Context:**
+  * Language - Specifies the context language to use when executing the script.
+  * User - Specifies the context user to impersonate when executing the script. This can be used to emulate `UserSwitcher` code.
 
 ![ISE Settings Tab](images/screenshots/scripting/ise-settings.png)
 
