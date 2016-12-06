@@ -103,6 +103,10 @@ The following prompt appears when the `elevationAction` is configured to **Passw
 
 ![Elevate Session State](/images/screenshots/uac/security-elevatedsessionstate-password.png)
 
+The following warning is rendered in the ISE while the session state is elevated.
+
+![Drop elevated session state](/images/screenshots/uac/security-elevatedsessionstate-dropise.png)
+
 ### Configure Web Services
 
 The web services providing external access to Sitecore are disabled by default. You can override by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
