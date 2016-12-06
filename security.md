@@ -103,7 +103,7 @@ Gates with **Password** protection enabled prompt the user when no elevated sess
 
 ![Elevate Session State](/images/screenshots/uac/security-elevatedsessionstate-password.png)
 
-A Content Editor Warning is displayed when a PowerShell Module, Script Library, and Script is selected.
+A Content Editor Warning is displayed when a PowerShell Module, Script Library, and Script is selected. Click "Elevate session" to show the hidden fields and enable the management of the item.
 
 ![Elevate session](/images/screenshots/uac/security-elevatedsessionstate-contenteditor.png)
 
