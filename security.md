@@ -103,6 +103,7 @@ Gates with **Password** protection enabled prompt the user when no elevated sess
 
 ![Elevate Session State](/images/screenshots/uac/security-elevatedsessionstate-password.png)
 
+##### Content Editor
 A Content Editor Warning is displayed when a PowerShell Module, Script Library, and Script is selected. Click "Elevate session" to show the hidden fields and enable the management of the item.
 
 ![Elevate session](/images/screenshots/uac/security-elevatedsessionstate-contenteditor.png)
@@ -110,6 +111,8 @@ A Content Editor Warning is displayed when a PowerShell Module, Script Library, 
 The "Drop session" option appears after credentials are verified. All scripts can be edited while the session is elevated.
 
 ![Drop session](/images/screenshots/uac/security-elevatedsessionstate-dropcontenteditor.png)
+
+##### ISE
 
 The following warning is rendered in the ISE while the session state is elevated. Click "Drop elevated session state" if you do not want to wait for the elevated session to timeout.
 
