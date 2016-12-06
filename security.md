@@ -114,6 +114,10 @@ The "Drop session" option appears after credentials are verified. All scripts ca
 
 ##### ISE
 
+A warning is presented in the ISE when no elevated session state is available.
+
+![Elevated session state required](/images/screenshots/uac/security-elevatedsessionstate-ise.png)
+
 The following warning is rendered in the ISE while the session state is elevated. Click "Drop elevated session state" if you do not want to wait for the elevated session to timeout.
 
 ![Drop elevated session state](/images/screenshots/uac/security-elevatedsessionstate-dropise.png)
