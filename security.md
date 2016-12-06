@@ -99,6 +99,10 @@ The object which expires after a predetermined time. These can be unique to each
 </sitecore>
 ```
 
+The following prompt appears when the `elevationAction` is configured to **Password** and no available session currently elevated.
+
+![Elevate Session State](/images/screenshots/uac/security-elevatedsessionstate-password.png)
+
 ### Configure Web Services
 
 The web services providing external access to Sitecore are disabled by default. You can override by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
