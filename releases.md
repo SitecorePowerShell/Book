@@ -2,6 +2,30 @@
 
 Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace][1] or report issues on [Github][2].
 
+## Version 4.3
+
+Security, Security, security! This release major focus was security.
+
+- [Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.3)
+- [Release highlights](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.3)
+
+### Summary of important changes
+
+#### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.3+is%3Aissue%20label%3Aimpact-breaking-change)
+- Removed the lingering nVelocity template presentation
+- ISE and Console now require scripters to be in `Sitecore\Developer` role
+
+#### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.3)
+- All arbitrary script executions, saves, and session elevation events are now logged in the SPE Sitecore logs[763](https://github.com/SitecorePowerShell/Console/issues/763) 
+- Added ability to specify that an endpoint can only be accessed over a secure connection [759](https://github.com/SitecorePowerShell/Console/issues/759)
+- Executing scripts through Integration points now verify the item templates so no unprotected scripts can be executed. [757](https://github.com/SitecorePowerShell/Console/issues/757)
+- Saving a script in library requires additional authentication (Session elevation) [756](https://github.com/SitecorePowerShell/Console/issues/756)
+- Executing a script in ISE or Console now require additional authentication. [755](https://github.com/SitecorePowerShell/Console/issues/756)
+- Send-File cmdlet dialog no longer uses URL parameters for paths.[744](https://github.com/SitecorePowerShell/Console/issues/744)
+
+#### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.3)
+#### [All Fixes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Abug+is%3Aclosed+milestone%3A4.3)
+
 ## Version 4.2
 
 This release major focus was security and making your scripting testable and better functional for users in different roles and languages. We've also improved cmdlets for working with templates and as always improved our remoting module to make it even more functional in your CI scenarios.
