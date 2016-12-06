@@ -1,6 +1,6 @@
 # Scripting
 
-The Integrated Scripting Environment (ISE) is a great way to group together commands and save for later use. Think of the ISE as a beefed up version of the Console.
+The Integrated Scripting Environment (ISE) is a great way to group together commands and save for later use. Think of the ISE as a beefed up version of the Console. The default configuration for SPE requires the ISE to be in an [Elevated Session State](/security.md) before executing scripts.
 
 Let's have a quick look at the ISE:
 [![PowerShell ISE](images/screenshots/ise-empty.png)](http://youtu.be/RCDprfRsbSU "Click for a quick demo")
