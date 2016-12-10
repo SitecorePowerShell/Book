@@ -51,6 +51,7 @@ Stop-ScriptSession -Session $session
 $instanceUrls = @("https://remotesitecore","https://remotesitecore2")
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri $instanceUrls
 Invoke-RemoteScript -Session $session -ScriptBlock { $env:computername }
+Stop-ScriptSession -Session $session
 ```
 
 #### File and Media Service
