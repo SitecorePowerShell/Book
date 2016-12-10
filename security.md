@@ -1,6 +1,6 @@
 # Security
 
-You need to be mindful that Sitecore PowerShell Extensions is a very sharp tool and while it can be leveraged to do great things, it can also be a vector of dangerous attacks if not secured properly. This is why we recommend that you do not install it on Content Delivery instances or if possible avoid deploying it on all servers that face Internet altogether. 
+You need to be mindful that Sitecore PowerShell Extensions is a very sharp tool and while it can be leveraged to do great things, it can also be a vector of dangerous attacks if not secured properly. This is why we recommend that you **do not install** it on Content Delivery instances and if possible avoid deploying it on servers that face Internet altogether. 
 
 ## Security Policies
 
