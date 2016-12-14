@@ -9,6 +9,23 @@ foreach($x in $htmlDocument.DocumentNode.SelectNodes("//li")) {
 }
 ```
 
+**Example:** The following prints the workflow history of the home item.
+
+```powershell
+$item = Get-Item -Path "master:" -Id "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+
+$db = Get-Database -Name "master"
+$workflowProvider = $db.WorkflowProvider
+
+foreach($version in $item.Versions.GetVersions()) {
+    $workflowEvents = $workflowProvider.HistoryStore.GetHistory($version)
+    foreach($workflowEvent in $workflowEvents) {
+        "[$($workflowEvent.Date)] ($($workflowEvent.User)) $(($workflowEvent.Text -replace '(\r|\n)',''))"
+    }
+}
+```
+
+
 **Gist:** Template Complexity Analysis
 
 {% gist id="https://gist.github.com/AdamNaj/035366c698ef98e1b00a574eb085e790" %}{% endgist %}
