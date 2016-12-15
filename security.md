@@ -161,7 +161,7 @@ Look for the following section and enable as needed.
 * **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
  * Required for the following features: PowerShell [Console](/console.md), PowerShell [ISE](/scripting.md), 
 * **Execution** - Used when SPE checks if the user has access to run the application.
- * Required for the following features: Download File dialog, PowerShell Script Runner, [Content Editor](/content-editor.md) (Context Menu, Insert Options, Ribbon). 
+ * Required for the following features: [Download File](/interactive-dialogs.md) dialog, PowerShell Script Runner, [Content Editor](/content-editor.md) (Context Menu, Insert Options, Ribbon). 
 * **RESTful v1** - Used in early version of SPE. Avoid using this if possible. Service associated with `RemoteScriptCall.ashx`.
 
 The preferred way to override the settings is through the use of a configuration patch file.
