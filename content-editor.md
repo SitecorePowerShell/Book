@@ -80,6 +80,7 @@ The *Warning* integration allows for notifications and commands in the Content E
 
 **Note:** Examples included in the following modules
 * License Expiration - disabled by default
+
 ![License Expiration Warning](images/screenshots/content-editor/warning-notification-for-licensing.png)
 
 Alan provided a nice example [here][4] on setting up the warning with commands.
