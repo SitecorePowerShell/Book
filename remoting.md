@@ -147,6 +147,7 @@ Invoke-RemoteScript -ScriptBlock {
     Write-Verbose "Goodbye from the other side"
 } -Session $session
 ```
+
 ### References:
 * Michael's follow up post on [Remoting][2]
 * Adam's initial post on [Remoting][1]
