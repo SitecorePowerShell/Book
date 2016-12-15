@@ -158,6 +158,7 @@ Look for the following section and enable as needed.
 * **Handle Download** - Used when a file is downloaded through the Sitecore interface. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
 * **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
 * **Execution** - Used when SPE checks if the user has access to run the application.
+ * Required for the following integration points: Download File dialog, PowerShell Script Runner, Content Editor (Context Menu, Insert Options, Ribbon). 
 * **RESTful v1** - Used in early version of SPE. Avoid using this if possible. Service associated with `RemoteScriptCall.ashx`.
 
 The preferred way to override the settings is through the use of a configuration patch file.
