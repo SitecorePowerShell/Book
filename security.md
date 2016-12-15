@@ -156,10 +156,11 @@ Look for the following section and enable as needed.
 * **Media Download** - Used when the url contains all the information needed to download a media item from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
 * **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
 * **Handle Download** - Used when a file is downloaded through the Sitecore interface. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
- * Required for the following integration points: `Out-Download` command.
+ * Required for the following features: `Out-Download` command.
 * **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
+ * Required for the following features: Console, ISE, 
 * **Execution** - Used when SPE checks if the user has access to run the application.
- * Required for the following integration points: Download File dialog, PowerShell Script Runner, Content Editor (Context Menu, Insert Options, Ribbon). 
+ * Required for the following features: Download File dialog, PowerShell Script Runner, Content Editor (Context Menu, Insert Options, Ribbon). 
 * **RESTful v1** - Used in early version of SPE. Avoid using this if possible. Service associated with `RemoteScriptCall.ashx`.
 
 The preferred way to override the settings is through the use of a configuration patch file.
