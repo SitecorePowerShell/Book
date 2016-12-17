@@ -131,6 +131,8 @@ Get-Item -Path "master:\media library\Files\readme" | Send-File
 
 ### Field Editor
 
+The *Field Editor* dialog offers a convenient way to present the user with fields to edit.
+
 **Example:** The following displays a field editor dialog.
 ```powershell
 Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
