@@ -29,7 +29,22 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 
 ![Show Confirm](images/screenshots/modaldialog-showconfirm.png)
 
-### Advanced Dialogs
+### User Input
+
+**Example:** The following displays an input dialog for text.
+```powershell
+Show-Input "Please provide 5 characters at most" -MaxLength 5
+```
+
+| **Button Name** | **Return Value** |
+| -- | -- |
+| OK | < user input > |
+| Cancel | $null |
+
+
+![Show Input](images/screenshots/modaldialog-showinput.png)
+
+## Advanced Dialogs
 
 ### Variable Settings
 
@@ -113,21 +128,6 @@ Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
 | Cancel | cancel |
 
 ![Show Field Editor](images/screenshots/modaldialog-showfieldeditor.png)
-
-### User Input
-
-**Example:** The following displays an input dialog for text.
-```powershell
-Show-Input "Please provide 5 characters at most" -MaxLength 5
-```
-
-| **Button Name** | **Return Value** |
-| -- | -- |
-| OK | < user input > |
-| Cancel | $null |
-
-
-![Show Input](images/screenshots/modaldialog-showinput.png)
 
 ### File Browser
 
