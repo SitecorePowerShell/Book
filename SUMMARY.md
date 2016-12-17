@@ -5,7 +5,7 @@
     * [Contributor Guide](contributor-guide.md)
 * [Interfaces](interfaces.md)
     * [Console](console.md)
-    * [Integrated Scripting Environment](scripting.md)
+    * [Scripting](scripting.md)
     * [Interface Configuration](interface-configuration.md)
     * [Interactive Dialogs](interactive-dialogs.md)
 * [Working with Items](working-with-items.md)
