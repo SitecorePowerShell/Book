@@ -4,7 +4,7 @@
 * [Installation](installation.md)
     * [Contributor Guide](contributor-guide.md)
 * [Interfaces](interfaces.md)
-    * [Command Line Console](console.md)
+    * [Console](console.md)
     * [Integrated Scripting Environment](scripting.md)
     * [Interface Configuration](interface-configuration.md)
     * [Interactive Dialogs](interactive-dialogs.md)
