@@ -190,6 +190,8 @@ Show-ModalDialog -Control "ControlPanel"
 
 ### Data List
 
+The "Data List" is essentially a report viewer which supports custom actions, exporting, and filtering.
+
 **Example:** The following displays a list view dialog with the child items under the Sitecore tree.
 ```powershell
 Get-Item -Path master:\* | Show-ListView -Property Name, DisplayName, ProviderPath, TemplateName, Language
