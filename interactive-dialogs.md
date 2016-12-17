@@ -2,6 +2,8 @@
 
 We've provided a few commands to interact with the user through dialogs.
 
+## Simple Dialogs
+
 ### Alert
 
 **Example:** The following display a modal dialog.
@@ -12,6 +14,22 @@ Show-Alert -Title "SPE is great!"
 No return value.
 
 ![Show Alert](images/screenshots/modaldialog-showalert.png)
+
+### Confirmation
+
+**Example:** The following displays a modal dialog with an OK or Cancel confirmation.
+```powershell
+Show-Confirm -Title "Click OK to acknowledge SPE is great!"
+```
+
+| **Button Name** | **Return Value** |
+| -- | -- |
+| OK | yes |
+| Cancel | no |
+
+![Show Confirm](images/screenshots/modaldialog-showconfirm.png)
+
+### Advanced Dialogs
 
 ### Variable Settings
 
@@ -45,20 +63,6 @@ Read-Variable @props
 | < variables > | < selection > |
 
 ![Read Variable](images/screenshots/modaldialog-readvariable.png)
-
-### Confirmation
-
-**Example:** The following displays a modal dialog with an OK or Cancel confirmation.
-```powershell
-Show-Confirm -Title "Click OK to acknowledge SPE is great!"
-```
-
-| **Button Name** | **Return Value** |
-| -- | -- |
-| OK | yes |
-| Cancel | no |
-
-![Show Confirm](images/screenshots/modaldialog-showconfirm.png)
 
 ### Confirmation Choice
 
