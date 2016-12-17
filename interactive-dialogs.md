@@ -108,6 +108,8 @@ Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_
 
 ### Upload
 
+The *Upload* dialog provides a way to upload files from a local filesystem to the media library or server filesystem.
+
 **Example:** The following displays an advanced upload dialog.
 ```powershell
 Receive-File (Get-Item "master:\media library\Files") -AdvancedDialog
@@ -117,6 +119,8 @@ No return value.
 ![Receive File](images/screenshots/modaldialog-receivefileadvanced.png)
 
 ### Download
+
+The *Download* dialog provides a way to download files from the server to a local filesystem.
 
 **Example:** The following displays a download dialog.
 ```powershell
