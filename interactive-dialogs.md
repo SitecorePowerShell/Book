@@ -54,6 +54,8 @@ Show-Input "Please provide 5 characters at most" -MaxLength 5
 
 ### Variable Settings
 
+The `Read-Variable` command provides a way to prompt the user for information and then generate variables with those values.
+
 **Example:** The following displays a dialog with a dropdown.
 
 **Note:** The name *selectedOption* will result in a variable that contains the selected option.
