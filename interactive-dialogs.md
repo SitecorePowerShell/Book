@@ -199,6 +199,8 @@ Get-Item -Path master:\* | Show-ListView -Property Name, DisplayName, ProviderPa
 
 ### Results
 
+The *Results* dialog resembles the Console but does not provide a prompt to the user. This is useful for when logging messages.
+
 **Example:** The following displays a dialog with the all the information written to the ScriptSession output buffer.
 ```powershell
 for($i = 0; $i -lt 10; $i++) {
