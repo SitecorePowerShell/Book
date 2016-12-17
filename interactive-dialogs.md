@@ -21,6 +21,8 @@ No return value.
 
 ### Confirmation
 
+The *Confirmation* dialog is a way to verify with the user before proceeding.
+
 **Example:** The following displays a modal dialog with an OK or Cancel confirmation.
 ```powershell
 Show-Confirm -Title "Click OK to acknowledge SPE is great!"
