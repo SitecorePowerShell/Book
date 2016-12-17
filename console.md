@@ -7,7 +7,7 @@ The following figure shows the Console when the User Account Controls (UAC) are 
 [![PowerShell Console](images/screenshots/cli-empty.png)](https://youtu.be/1TLYyzTw01w "Click for a quick demo")
 
 ### Providers
-You can interact with the providers available in the standard Windows PowerShell Console. Below are some of the important providers.Run the command ` Get-PSProvider ` to see the complete list.
+You can interact with the providers available in the standard Windows PowerShell Console. Below are some of the important providers. Run the command ` Get-PSProvider ` to see the complete list.
  * **FileSystem** - Supports interacting with files and folders.
  * **CmsItemProvider** - Supports interacting with the Sitecore content items.
 
