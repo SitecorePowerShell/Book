@@ -147,6 +147,8 @@ Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
 
 ### File Browser
 
+The *File Browser* is an obvious choice when you need to upload, download, or delete files.
+
 **Example:** The following displays a file browser dialog for installation packages.
 ```powershell
 Show-ModalDialog -HandleParameters @{
