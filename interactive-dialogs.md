@@ -4,6 +4,8 @@ We've provided a few commands to interact with the user through dialogs.
 
 ## Simple Dialogs
 
+Simple in the sense that the dialogs present the user with a short message and one or two buttons.
+
 ### Alert
 
 The *Alert* dialog is a way to notify the user of important information with an "OK" button.
