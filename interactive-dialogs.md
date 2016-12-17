@@ -6,6 +6,8 @@ We've provided a few commands to interact with the user through dialogs.
 
 ### Alert
 
+The *Alert* dialog is a way to notify the user of important information with an "OK" button.
+
 **Example:** The following display a modal dialog.
 ```powershell
 Show-Alert -Title "SPE is great!"
