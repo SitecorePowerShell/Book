@@ -89,6 +89,8 @@ Read-Variable @props
 
 ### Confirmation Choice
 
+The *Confirmation Choice* dialog allows for multiple combinations like that seen with a "Yes, Yes to all, No, No to all" scenario.
+
 **Example:** The following displays a modal dialog with choices.
 ```powershell
 Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_0)"; btn_1="No (returns btn_1)"; btn_2="returns btn_2"; te="Have you downloaded SPE?"; cp="Important Questions"} -Height 120 -Width 400
