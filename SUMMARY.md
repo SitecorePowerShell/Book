@@ -132,7 +132,6 @@
         * [Export-User](appendix/commands/Export-User.md)
         * [Get-Domain](appendix/commands/Get-Domain.md)
         * [Get-ItemAcl](appendix/commands/Get-ItemAcl.md)
-        * [Get-Domain](appendix/commands/Get-Domain.md)
         * [Get-Role](appendix/commands/Get-Role.md)
         * [Get-RoleMember](appendix/commands/Get-RoleMember.md)
         * [Get-User](appendix/commands/Get-User.md)
