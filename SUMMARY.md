@@ -157,10 +157,10 @@
     * [Session](appendix/session.md)
         * [Get-ScriptSession](appendix/commands/Get-ScriptSession.md)
         * [Get-Session](appendix/commands/Get-Session.md)
-        * [Remove-ScriptSession](appendix/commands/Remove-ScriptSession.md)
-        * [Stop-ScriptSession](appendix/commands/Stop-ScriptSession.md)
-        * [Wait-ScriptSession](appendix/commands/Wait-ScriptSession.md)
         * [Receive-ScriptSession](appendix/commands/Receive-ScriptSession.md)
+        * [Remove-ScriptSession](appendix/commands/Remove-ScriptSession.md)
         * [Remove-Session](appendix/commands/Remove-Session.md)
         * [Start-ScriptSession](appendix/commands/Start-ScriptSession.md)
+        * [Stop-ScriptSession](appendix/commands/Stop-ScriptSession.md)
+        * [Wait-ScriptSession](appendix/commands/Wait-ScriptSession.md)
 
