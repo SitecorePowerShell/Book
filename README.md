@@ -14,7 +14,7 @@ Below are some of the things you get with SPE:
 * Data Importer
 * ~~Professional Chef~~
 
-#### OOTB Add-ons
+#### Bundled Tools
 
 The following are some helpful modules distributed with SPE.
 
