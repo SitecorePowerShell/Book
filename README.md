@@ -17,25 +17,32 @@ Below are some of the things you get with SPE:
 #### OOTB Add-ons
 
 The following are some helpful modules distributed with SPE.
-* Authorable Reports
-* Authoring Instrumentation
-* Automatically show quick info section
-* Content Reports
-* Copy Renderings
-* Enforce user password expiration
-* Example Event Handlers
-* Getting Started
-* Index On Demand
-* License Expiration
-* Logged in Session Manager
-* Media Library Maintenance
-* Package Generator
-* Publishing Status Gutter
-* Random desktop background
-* System Maintenance
-* Task Management
-* Unlock user items on logout
-* User Session Management
+
+* **Bundle**
+ * Authoring Instrumentation
+ * Copy Renderings
+ * Package Generator
+ * Publishing Status Gutter
+* **Core**
+ * Platform
+* **Maintenance**
+ * Index On Demand
+ * Media Library Maintenance
+ * System Maintenance
+ * Task Management
+ * User Management
+ * User Session Management
+* **Reporting**
+ * Authorable Reports - reports based on the Sitecore Rules Engine.
+ * Content Reports - variety of reports to help audit the Sitecore solution.
+* **Samples**
+ * Automatically show quick info section
+ * Enforce user password expiration
+ * Example Event Handlers
+ * Getting Started
+ * License Expiration
+ * Random desktop background
+ * Unlock user items on logout
 
 #### Community Add-ons
 
