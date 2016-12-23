@@ -50,7 +50,7 @@ $users | Select-Object -Property $property |
 
 When using the [Active Directory module][2] you may need to increase the setting `LDAP.SizeLimit` if you wish to return all Active Directory accounts. 
 
-When using `Set-User` to update AD accounts you'll likely receive an access denied message which is due to the fact that the account querying users does not have write access to profile properties.
+Using `Set-User` to update AD accounts may result in an "Access denied message"; this is due to the fact that the account querying user does not have write access to profile properties or the profile provider is not configured properly.
 
 ### Roles
 
