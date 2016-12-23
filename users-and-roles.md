@@ -24,7 +24,7 @@ foreach($num in 0..10) {
 Get-User -Filter "sitecore\TestUser*"
 ```
 
-In case you forgot to set the user profile, we have a way to update user accounts.
+In case you forgot to set the user profile for accounts, we have a way to set the profile id.
 
 **Example:** The following queries a user and sets the profile template. Note that changing the profile template requires the user to be authenticated.
 
