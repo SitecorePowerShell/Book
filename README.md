@@ -57,7 +57,7 @@ The following are Sitecore modules that enhance the SPE experience.
 
 Recommended by [John West][12] to use as a tool for [maximizing Sitecore developer productivity][10].
 
-_**"Get a job done with a one liner!"**_
+*"Get a job done with a one liner!
 Just provisioned a new language for the whole content tree with a one-liner. Whaaaat?
 Have to include it as a default install for all sandboxes now."* - [Alex Shyba][1]'s comment on Marketplace
 
