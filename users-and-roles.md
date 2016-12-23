@@ -24,7 +24,7 @@ foreach($num in 0..10) {
 Get-User -Filter "sitecore\TestUser*"
 ```
 
-In case you forgot to set the user profile for accounts, we have a way to set the profile id.
+In case you forgot to set the user profile for accounts, we have a solution for that.
 
 **Example:** The following queries a user and sets the profile template. Note that changing the profile template requires the user to be authenticated.
 
@@ -33,7 +33,7 @@ Get-User -Id "michael" -Authenticated |
     Set-User -ProfileItemId "{AE4C4969-5B7E-4B4E-9042-B2D8701CE214}"
 ```
 
-**Example:** The follow queries all the user accounts for the default provider and filters those over the age of 18. The *age* property is custom on the *Profile*. We then export to CSV.
+**Example:** The follow queries all the user accounts for the default provider and filters those over the age of 18. The *age* property is custom on the *Profile*. Finally, export to CSV.
 
 ```powershell
 $users = Get-User -Filter * | Where-Object { $_.Profile.GetCustomProperty("age") -gt 18 } 
