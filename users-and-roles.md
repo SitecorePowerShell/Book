@@ -9,11 +9,11 @@ Get-Command -Noun Role*,User,ItemAcl* | Sort-Object -Property Noun,Verb
 
 ### Users
 
-Managing users should be a pretty straight forward task. While the User Manager is handy, you'll likely find yourself wanting to making bulk changes. The following examples should give you a few ideas about how to manage user accounts.
+Managing users should be a pretty straight forward task. While the User Manager provided by Sitecore is handy, you'll likely find yourself wanting to make bulk changes. The following examples should give you a few ideas about how to manage user accounts.
 
 #### Query users and update properties
 
-**Example:** The following generates a batch of test users in the default domain with the out-of-the-box user profile template. The users are then queried matching on the name.
+**Example:** The following generates a batch of test users in the default domain with the out-of-the-box user profile template. The users are then queried filtering on the name.
 
 ```powershell
 foreach($num in 0..10) {
