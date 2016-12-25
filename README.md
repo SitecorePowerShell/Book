@@ -1,7 +1,4 @@
-![](images/logos/logo-45x45.jpg) Sitecore PowerShell Extensions
-=======
-
-# Sitecore PowerShell Extensions: a CLI and scripting tool
+# ![](images/logos/logo-45x45.jpg) Sitecore PowerShell Extensions: a CLI and scripting tool
 
 ![Sitecore PowerShell Extensions](/images/screenshots/cover/readme-console-ise.png)
 
