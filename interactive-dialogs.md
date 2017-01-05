@@ -92,13 +92,24 @@ Read-Variable @props
 | Key | Type | Description | Example |
 | -- | -- | -- | -- |
 | Name | <string> | Variable name | isSilent |
-| Value | <bool>\|<string>\|<int>\|<float>\|<datetime> | Default value | $true |
+| Value | <bool>\|<string>\|<int>\|<float>\|<datetime>\|<Item> | Default value | $true |
 | Title | <string> | Header or Label | "Proceed Silently |
 | Tooltip (optional) | <string> | Short description or tooltip | "Check to run quietly |
 | Tab (optional) | <string> | Tab title | "Simple" |
 | Placeholder (optional) | <string> | Textbox placeholder | "Search text..." |
 | Lines (optional) | <int> | Line count | 3 |
 | Editor (optional) | <string> | Control type | "date time" |
+| Domain (optional) | <string> | Domain name for security editor | "sitecore" |
+
+**Editor Types**
+* date
+* date time
+* treelist
+* multilist
+* droplist
+* user multiple
+* role multiple
+* user role multiple
 
 
 ### Confirmation Choice
