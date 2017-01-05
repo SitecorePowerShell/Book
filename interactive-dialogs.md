@@ -100,7 +100,7 @@ Read-Variable @props
 | Lines (optional) | <int> | Line count | 3 |
 | Editor (optional) | <string> | Control type | "date time" |
 | Domain (optional) | <string> | Domain name for security editor | "sitecore" |
-| Options (optional) | <string>\|<OrderedDictionary>\|<Hashtable> | |
+| Options (optional) | <string>\|<OrderedDictionary>\|<Hashtable> | Data for checklist or dropdown | @{"Monday"=1;"Tuesday"=2} |
 
 **Editor Types**
 * bool
