@@ -94,9 +94,9 @@ Read-Variable @props
 | Name | <string> | Variable name | isSilent |
 | Value | <string> | Default value | $true |
 | Title | <string> | Header or Label | "Proceed Silently |
-| Tooltip | <string> | Short description or tooltip | "Check to run quietly |
+| Tooltip (optional) | <string> | Short description or tooltip | "Check to run quietly |
 | Tab (optional) | <string> | Tab title | "Simple" |
-| Placeholder | <string> | Textbox placeholder | "Search text..." |
+| Placeholder (optional) | <string> | Textbox placeholder | "Search text..." |
 
 
 ### Confirmation Choice
