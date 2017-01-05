@@ -104,6 +104,7 @@ Read-Variable @props
 
 **Editor Types**
 * bool
+* check
 * date
 * date time
 * droplist
@@ -113,6 +114,7 @@ Read-Variable @props
 * multiple user
 * multiple user role
 * multiple role
+* radio
 * rule
 * treelist
 * time
