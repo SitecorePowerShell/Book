@@ -87,6 +87,18 @@ Read-Variable @props
 
 ![Read Variable](images/screenshots/modaldialog-readvariable.png)
 
+**Supported Parameter Values**
+
+| Key | Type | Description | Example |
+| -- | -- | -- | -- |
+| Name | <string> | Variable name | isSilent |
+| Value | <string> | Default value | $true |
+| Title | <string> | Header or Label | "Proceed Silently |
+| Tooltip | <string> | Short description or tooltip | "Check to run quietly |
+| Tab (optional) | <string> | Tab title | "Simple" |
+| Placeholder | <string> | Textbox placeholder | "Search text..." |
+
+
 ### Confirmation Choice
 
 The *Confirmation Choice* dialog allows for multiple combinations like that seen with a "Yes, Yes to all, No, No to all" scenario.
