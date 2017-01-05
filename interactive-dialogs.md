@@ -100,16 +100,22 @@ Read-Variable @props
 | Lines (optional) | <int> | Line count | 3 |
 | Editor (optional) | <string> | Control type | "date time" |
 | Domain (optional) | <string> | Domain name for security editor | "sitecore" |
+| Options (optional) | | |
 
 **Editor Types**
+* bool
 * date
 * date time
-* treelist
-* multilist
 * droplist
-* user multiple
-* role multiple
-* user role multiple
+* droptree
+* info
+* multilist
+* multiple user
+* multiple user role
+* multiple role
+* rule
+* treelist
+* time
 
 
 ### Confirmation Choice
