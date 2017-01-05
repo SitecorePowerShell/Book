@@ -100,7 +100,7 @@ Read-Variable @props
 | Lines (optional) | <int> | Line count | 3 |
 | Editor (optional) | <string> | Control type | "date time" |
 | Domain (optional) | <string> | Domain name for security editor | "sitecore" |
-| Options (optional) | | |
+| Options (optional) | <string>\|<OrderedDictionary>\|<Hashtable> | |
 
 **Editor Types**
 * bool
