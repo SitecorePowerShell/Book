@@ -28,6 +28,7 @@ The solution requires Visual Studio 2015.
  - Sitecore.Logging.dll
  - Sitecore.NVelocity.dll
  - Sitecore.Update.dll
+ - Sitecore.Zip.dll
 7. Run the Windows PowerShell script as an Administrator 
 ```powershell
 . C:\inetpub\wwwroot\Console\Setup-Folders.ps1
