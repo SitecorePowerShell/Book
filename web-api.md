@@ -3,7 +3,7 @@
 The Web API integration point exposes scripts through a url.
 
 The url will look something like the following:
-http://remotesitecore/-/script/v2/master/homeanddescendants?user=admin&password=b
+http://remotesitecore/-/script/v2/master/homeanddescendants?user=sitecore\admin&password=b
 
 Here's the url broken down:
 
