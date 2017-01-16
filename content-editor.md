@@ -64,6 +64,14 @@ The *Ribbon* integration allows for commands in the ribbon. Rules can be used to
 4. Change the icon of the item to match the script purpose.
 5. Configure any rules as needed.
 
+**Example:** The following script gets the selected Context Menu item and displays an alert using the item name.
+
+```powershell
+# Use the notation "." to get the current directory/item.
+$item = Get-Item -Path .
+Show-Alert -Title $item.Name
+```
+
 See the birth of [extending the Sitecore ribbon with powershell scripts][1] by Adam.
 
 Check out an example of the [5 steps to extending the Sitecore ribbon][3] in the wild by Toby.
