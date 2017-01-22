@@ -1,4 +1,4 @@
-**Example:** The following demonstrates the use of the HtmlAgilityPack for parsing html.
+**Example:** The following demonstrates the use of the **HtmlAgilityPack** for parsing html.
 
 ```powershell
 $html = "<ul><li>foo</li><li>bar</li></ul>"
@@ -25,6 +25,16 @@ foreach($version in $item.Versions.GetVersions()) {
 }
 ```
 
+**Example:** The following logs messages to the browser console and then alerts the user with a message.
+
+```powershell
+1..5 | ForEach-Object { 
+    Start-Sleep -Seconds 1
+    Invoke-JavaScript -Script "console.log('Hello World! Call #$($_) from PowerShell...');" 
+}
+
+Invoke-JavaScript -Script "alert('hello from powershell');"
+```
 
 **Gist:** Template Complexity Analysis
 
