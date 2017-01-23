@@ -35,6 +35,7 @@ foreach($version in $item.Versions.GetVersions()) {
 
 Invoke-JavaScript -Script "alert('hello from powershell');"
 ```
+![Invoke JavaScript](images/screenshots/code-snippets/interact-with-browser-using-js.gif)
 
 **Gist:** Template Complexity Analysis
 
