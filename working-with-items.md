@@ -189,6 +189,48 @@ In all the examples you'll notice we specified the database. Windows PowerShell 
 * **HKLM:** - The registry provider for HKEY_LOCAL_MACHINE.
 * **C:** - The filesystem provider for the C drive.
 
+### Get items and select properties
+The following examples make use of custom *PropertySet*s for the command `Select-Object`.
+
+```powershell
+PS master:\>Get-Item -Path "master:\content\home" | Select PSSecurity
+ 
+Name ID                                     __Owner        __Security
+---- --                                     -------        ----------
+Home {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} sitecore\admin au|sitecore\michael|pe|+item:read|
+```
+
+```powershell
+PS master:\>Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select PSTemplate
+ 
+Name    ID                                     BaseTemplate
+----    --                                     ------------
+kitten1 {E58FA823-3CAF-43A1-A5ED-FBE24D3C21B4} {Image, File, Standard template, Media classification...}
+```
+
+```powershell
+PS master:\>Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select PSImage
+ 
+Name      : kitten1
+ID        : {E58FA823-3CAF-43A1-A5ED-FBE24D3C21B4}
+Alt       : Yay
+Width     : 225
+Height    : 225
+Extension : jpg
+Size      : 6593
+```
+
+```powershell
+PS master:\>Get-Item -Path "/sitecore/system/Tasks/Schedules/Content Testing/Calculate Statistical Relevancy" | Select PSSchedule 
+ 
+Name     : Calculate Statistical Relevancy
+ID       : {C7533E65-A1D6-4F99-9F12-0AB157299D80}
+Schedule : 1900101|19000101|127|1.00:00
+Last run : 1/1/0001 12:00:00 AM
+Command  : {6A79C206-0CD2-4DDD-9DFF-5BF21E002931}
+Items    :
+```
+
 ---
 
 ### Changing item properties
