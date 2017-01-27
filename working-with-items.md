@@ -1,6 +1,6 @@
 # Working with Sitecore items
 
-### How do I manage my content through PowerShell?
+## How do I manage my content through PowerShell?
 
 The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using [Dynamic Parameters][1]. These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provided this table to help you discover the hidden gems within each command.
 
@@ -189,6 +189,8 @@ In all the examples you'll notice we specified the database. Windows PowerShell 
 * **HKLM:** - The registry provider for HKEY_LOCAL_MACHINE.
 * **C:** - The filesystem provider for the C drive.
 
+---
+
 ### Changing item properties
 
 We often see the following two ways of accessing and changing fields used in scripts. One uses `Set-ItemProperty` and the other is more natural to a Sitecore developer.
@@ -278,7 +280,7 @@ Great! Looks like it worked.
 
 Those little improvements make your scripts much more succinct and understandable. Try it for yourself!
 
-### When not to use the automated properties?
+#### When not to use the automated properties?
 
 As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time  which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`. 
 
@@ -311,6 +313,8 @@ Some other classes you may want to use with the `New-UsingBlock` function:
 * `Sitecore.Data.DatabaseCacheDisabler`
 * `Sitecore.Data.Events.EventDisabler`
 
+---
+
 ### Copy items to a new destination
 
 You will find yourself one day in need of copying items on a small to large scale. The `Copy-Item` command will likely meet the need.
@@ -329,6 +333,8 @@ Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "m
 Copy-Item master:\content\Home web:\content\home -TransferOptions 0
 ```
 
+---
+
 ### Move items to a new destination
 
 There is a always a better way to do something. Moving items en masse is certainly one that you don't want to do by hand. If the destination item exists the moved item will be added as a child. If the destination item does not exist the source item will be renamed when moved.
@@ -339,7 +345,9 @@ There is a always a better way to do something. Moving items en masse is certain
 Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "master:\content\home\sample item 2\"
 ```
 
-#### Create new items
+---
+
+### Create new items
 
 **Example:** The following creates a new item with the specified template.
 
@@ -351,6 +359,8 @@ Name                             Children Languages                Id           
 Sample Item 3                    False    {en}                     {F6F4F7B7-5E72-4C16-9294-218D80ED89E8} Sample Item
  
 ```
+
+---
 
 ### Remove items permanently
 
