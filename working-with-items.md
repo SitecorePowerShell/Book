@@ -192,6 +192,8 @@ In all the examples you'll notice we specified the database. Windows PowerShell 
 ### Get items and select properties
 The following examples make use of custom *PropertySet*s for the command `Select-Object`.
 
+**Example:** The following uses the **PSSecurity** *PropertySet*. 
+
 ```powershell
 PS master:\>Get-Item -Path "master:\content\home" | Select PSSecurity
  
@@ -200,6 +202,8 @@ Name ID                                     __Owner        __Security
 Home {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} sitecore\admin au|sitecore\michael|pe|+item:read|
 ```
 
+**Example:** The following uses the **PSTemplate** *PropertySet*. 
+
 ```powershell
 PS master:\>Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select PSTemplate
  
@@ -207,6 +211,8 @@ Name    ID                                     BaseTemplate
 ----    --                                     ------------
 kitten1 {E58FA823-3CAF-43A1-A5ED-FBE24D3C21B4} {Image, File, Standard template, Media classification...}
 ```
+
+**Example:** The following uses the **PSImage** *PropertySet*. 
 
 ```powershell
 PS master:\>Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select PSImage
@@ -219,6 +225,8 @@ Height    : 225
 Extension : jpg
 Size      : 6593
 ```
+
+**Example:** The following uses the **PSSchedule** *PropertySet*. 
 
 ```powershell
 PS master:\>Get-Item -Path "/sitecore/system/Tasks/Schedules/Content Testing/Calculate Statistical Relevancy" | Select PSSchedule 
