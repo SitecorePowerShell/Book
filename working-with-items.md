@@ -239,6 +239,16 @@ Command  : {6A79C206-0CD2-4DDD-9DFF-5BF21E002931}
 Items    :
 ```
 
+### Get item properties with field type
+
+**Example:** The following accesses the *Image* field casted to the type `Sitecore.Data.Fields.ImageField`.
+```powershell
+$item = Get-Item "master:\content\home"
+$item._.Image.Alt
+```
+
+**Note:** You can use `._` and `.PSFields` to gain access to the typed field.
+
 ---
 
 ### Changing item properties
