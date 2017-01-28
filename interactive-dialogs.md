@@ -91,7 +91,7 @@ Read-Variable @props
 
 | Key | Type | Description | Example |
 | -- | -- | -- | -- |
-| Name | <string> | Variable name | isSilent |
+| Name | string | Variable name | isSilent |
 | Value | bool string int float datetime Item | Default value | $true |
 | Title | <string> | Header or Label | "Proceed Silently |
 | Tooltip (optional) | <string> | Short description or tooltip | "Check to run quietly |
