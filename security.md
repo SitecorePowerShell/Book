@@ -28,6 +28,7 @@ The following settings are configured under `core:\content\Applications\PowerShe
 | PowerShell ISE | sitecore\Developer \(read\) |
 | PowerShell ListView | sitecore\Sitecore Client Users \(read\) |
 | PowerShell Runner | sitecore\Sitecore Client Users \(read\) |
+| PowerShell Reports | No default settings. See [here](/reports.md) for instructions. |
 
 **Note:** The security is validated _OnLoad_.
 
