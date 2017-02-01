@@ -70,8 +70,10 @@ Here is what users may see in the event they do not have the appropriate access.
 ![Reports without Access](images/screenshots/reports/reports-menuwithoutaccess.png)
 
 1. Navigate to the item `/sitecore/content/Documents and settings/All users/Start menu/Right/Reporting Tools/PowerShell Reports`
+
 2. Grant access to `sitecore\Sitecore Client Authoring`
 ![Report Viewer Access](images/screenshots/reports/reports-vieweraccess.png)
+
 3. Verify the reports are now visible to the Authoring users.
 ![Reports with Access](images/screenshots/reports/reports-menuwithaccess.png)
 
