@@ -66,6 +66,7 @@ Check the reports in SPE under these sections to see the full list.
 You may wish to expose the reports to users such as Content Authors. Here are the steps required to grant access to users in the `sitecore\Sitecore Client Authoring` role.
 
 1. Navigate to the item `/sitecore/content/Documents and settings/All users/Start menu/Right/Reporting Tools/PowerShell Reports`
+![Report Viewer Access](images/screenshots/reports/reports-vieweraccess.png)
 2. Grant access to `sitecore\Sitecore Client Authoring`
 3. Verify the reports are now visible to the Authoring users.
 
