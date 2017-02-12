@@ -35,5 +35,4 @@
 * [Releases](releases.md)
 * [Troubleshooting](troubleshooting.md)
 * [Code Snippets](code-snippets.md)
-* Disclaimer
 
