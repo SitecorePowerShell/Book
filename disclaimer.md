@@ -1,0 +1,5 @@
+All code examples shown in this book have been tested by the author and every effort has been made to ensure that they are error free, but since every environment is different, they should not be run in your production environment without thoroughly testing them first. It is recommended that you use a lab environment for working through the code examples shown throughout this book.
+
+The disclaimer below is provided simply because someone somewhere will not follow this recommendation and in the event that they do experience problems or a RGE (resume generating event), they have no one to blame but themselves.
+
+All data and information provided in this book is for informational purposes only. Adam Najmanowicz, Michael West, and the SPE Team make no representations as to accuracy, completeness, currentness, suitability, or validity of any information in this book and will not be liable for any errors, omissions, or delays in this information or any losses, injuries, or damages arising from its display or use. All information is provided on an as-is basis.
