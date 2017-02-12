@@ -1,3 +1,5 @@
+# Disclaimer
+
 The code examples found in this book may not be tested thoroughly enough for a production environment but are provided to demonstrate out a solution to a problem may be approached. Since every environment is different, they should not be run in your production environment without thoroughly testing them first. We recommended that you use a lab environment such as Development/Staging instances of Sitecore for working through the code and configuration examples.
 
 The disclaimer below is provided because someone somewhere will inevitably not follow this recommendation and in the event that they do hose their Sitecore environment, they have no one to blame but themselves.
