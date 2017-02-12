@@ -1,4 +1,4 @@
-All code examples shown in this book have been tested by the authors and every effort has been made to ensure that they are error free, but since every environment is different, they should not be run in your production environment without thoroughly testing them first. It is recommended that you use a lab environment for working through the code and configuration examples shown throughout this book.
+The code examples found in this book or referenced externally may not be tested thoroughly enough for a production environment. Since every environment is different, they should not be run in your production environment without thoroughly testing them first. We recommended that you use a lab environment such as Development/Staging instances of Sitecore for working through the code and configuration examples shown throughout this book.
 
 The disclaimer below is provided simply because someone somewhere will not follow this recommendation and in the event that they do experience problems or a RGE (resume generating event), they have no one to blame but themselves.
 
