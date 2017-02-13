@@ -21,7 +21,7 @@ This release major focus was stability and overcoming any problems that were rep
 - A new command `Invoke-JavaScript` was added to enable scripts to interact with the browser. [[803](https://github.com/SitecorePowerShell/Console/issues/803)]
 - `Update-ListView` command learned to update the banner text in the report viewer. [[789](https://github.com/SitecorePowerShell/Console/issues/789)]
 - `Copy-Item` command learned to move blob data between databases. [[782](https://github.com/SitecorePowerShell/Console/issues/782)]
-- PowerShell previously included the `-Depth` parameter to limit the recursive nature of the command. The SPE provider is now able to work that magic. [[769](https://github.com/SitecorePowerShell/Console/issues/769)]
+- PowerShell previously included the `-Depth` parameter to limit the recursive nature of the command. The CMS provider is now able to work that magic. [[769](https://github.com/SitecorePowerShell/Console/issues/769)]
 
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.4)
 
