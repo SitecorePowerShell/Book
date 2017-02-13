@@ -17,7 +17,7 @@ This release major focus was stability and overcoming any problems that were rep
 
 #### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.4)
 
-- It's now possible to access custom fields on items using the syntax using `._` and `.PSFields`. [[810](https://github.com/SitecorePowerShell/Console/issues/810)]
+- It's now possible to access custom fields on items using the syntax using `._` and `.PSFields`. The properties are returned using the appropriate field type. [[810](https://github.com/SitecorePowerShell/Console/issues/810)]
 
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.4)
 
