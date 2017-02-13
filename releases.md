@@ -19,6 +19,7 @@ This release major focus was stability and overcoming any problems that were rep
 
 - It's now possible to access custom fields on items using the syntax using `._` and `.PSFields`. The properties are returned using the appropriate field type such as `ImageField`. [[810](https://github.com/SitecorePowerShell/Console/issues/810)]
 - A new command `Invoke-JavaScript` was added to enable scripts to interact with the browser. [[803](https://github.com/SitecorePowerShell/Console/issues/803)]
+- The `Update-ListView` command learned to update the banner text in the report viewer. [[789](https://github.com/SitecorePowerShell/Console/issues/789)]
 
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.4)
 
