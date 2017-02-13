@@ -7,6 +7,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - [Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.4)
 - [Release highlights](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.4)
 
+***
 
 ## Version 4.3
 
