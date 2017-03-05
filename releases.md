@@ -22,6 +22,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 
 - The Toolbox item **Background Session Manager** and ISE command **Rebuild Integration Points** are now hidden for users not in the developers group. [[850](https://github.com/SitecorePowerShell/Console/issues/850)]
 - The ISE command **Rebuild Integration Points** is now available as a Toolbox item. [[849](https://github.com/SitecorePowerShell/Console/issues/849)]
+- A new report added for custom template usage count. [[818](https://github.com/SitecorePowerShell/Console/issues/818)]
 
 #### [All Fixes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Abug+is%3Aclosed+milestone%3A4.4.2)
 
