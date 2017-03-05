@@ -101,6 +101,7 @@ Read-Variable @props
 | Editor (optional) | string | Control type | "date time" |
 | Domain (optional) | string | Domain name for security editor | "sitecore" |
 | Options (optional) | string OrderedDictionary Hashtable | Data for checklist or dropdown | @{"Monday"=1;"Tuesday"=2} |
+| Columns | int string | Number between 1 and 12 | 6 first |
 
 **Editor Types**
 * bool
