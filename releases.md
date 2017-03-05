@@ -2,6 +2,28 @@
 
 Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace][1] or report issues on [Github][2].
 
+## Version 4.4.2
+
+- [Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.4.2)
+- [Release highlights](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.4.2)
+
+### Summary of important changes
+
+#### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.4.2+is%3Aissue%20label%3Aimpact-breaking-change)
+- no breaking changes
+
+#### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.4.2)
+
+
+#### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.4.2)
+
+- The Toolbox item **Background Session Manager** and ISE command **Rebuild Integration Points** are now hidden for users not in the developers group. [[850](https://github.com/SitecorePowerShell/Console/issues/850)]
+
+
+#### [All Fixes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Abug+is%3Aclosed+milestone%3A4.4.2)
+
+***
+
 ## Version 4.4
 
 Improvements for SXA 1.3, security feature updates and remoting fixes!
