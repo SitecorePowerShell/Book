@@ -14,15 +14,12 @@ Thank you for taking the time to check out the latest and greatest changes for S
 
 #### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.4.2)
 
+- SPE learned how to merge Shared and Final layouts using `Merge-Layout`. [[669](https://github.com/SitecorePowerShell/Console/issues/669)]
 
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.4.2)
 
 - The Toolbox item **Background Session Manager** and ISE command **Rebuild Integration Points** are now hidden for users not in the developers group. [[850](https://github.com/SitecorePowerShell/Console/issues/850)]
 - The ISE command **Rebuild Integration Points** is now available as a Toolbox item. [[849](https://github.com/SitecorePowerShell/Console/issues/849)]
-
-
-
-
 
 #### [All Fixes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Abug+is%3Aclosed+milestone%3A4.4.2)
 
