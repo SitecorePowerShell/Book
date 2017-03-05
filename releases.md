@@ -16,6 +16,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 
 - SPE learned how to merge Shared and Final layouts using `Merge-Layout`. [[669](https://github.com/SitecorePowerShell/Console/issues/669)]
 - SPE learned how to copy fields when using `Set-ItemTemplate`. [[847](https://github.com/SitecorePowerShell/Console/issues/847)]
+- The `User` and `Role` objects now contain a properties for membership. Use either `Roles`, `Users`, or `MemberOf`. [[842](https://github.com/SitecorePowerShell/Console/issues/842)]
 
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.4.2)
 
