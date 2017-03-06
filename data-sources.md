@@ -31,6 +31,12 @@ Below are field types you may wish to use a script:
 
 
 1. Begin by adding a new script library called *Data Sources* followed by adding a script. You can call it something like *Get-GlobalOption*.
+2. Add the path to your script in the *Source* field on the data template. The path should be prefixed with `script:`.
+```
+script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Get-GlobalOption
+```
+
+
 
 ### References
 
