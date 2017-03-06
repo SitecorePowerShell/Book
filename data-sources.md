@@ -15,6 +15,8 @@ based on where in the tree an item exist (some of it can be done with use of a â
 
 Something that would be beyond the reach of a regular Sitecore query and potentially something that you would really need to deliver code source for. But maybe youâ€™re not in a position to deploy that on your environment?
 
+1. Begin by adding a new script library called *Data Sources* followed by adding a script. You can call it something like *Get Tenant Roots*.
+
 ### References
 
 * PowerShell Scripted Data Sources [part 1][1] and [part 2][2]
