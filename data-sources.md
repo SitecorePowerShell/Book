@@ -37,7 +37,7 @@ script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Ge
 ```
 3. Enjoy the results.
 
-![](/assets/SNAG-0151.png)
+![](/images/screenshots/data-sources/droplist.png)
 
 ### References
 
