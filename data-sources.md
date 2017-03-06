@@ -15,6 +15,20 @@ based on where in the tree an item exist (some of it can be done with use of a â
 
 Something that would be beyond the reach of a regular Sitecore query and potentially something that you would really need to deliver code source for. But maybe youâ€™re not in a position to deploy that on your environment?
 
+### Field Data Source
+
+Field Data Source provides a great opportunity for a script. 
+
+Below are field types you may wish to use a script:
+
+- Checklist
+- Droplist
+- Grouped Droplink
+- Grouped Droplist
+- Multilist
+- Name Lookup Value List
+- Droplink
+
 1. Begin by adding a new script library called *Data Sources* followed by adding a script. You can call it something like *Get Tenant Roots*.
 
 ### References
