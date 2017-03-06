@@ -40,6 +40,10 @@ script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Ge
 
 ![](/images/screenshots/data-sources/droplist.png)
 
+Rendering Data Source
+
+//TODO
+
 ### References
 
 * PowerShell Scripted Data Sources [part 1][1] and [part 2][2]
