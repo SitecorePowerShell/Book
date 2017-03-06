@@ -35,6 +35,7 @@ Below are field types you may wish to use a script:
 ```
 script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Get-GlobalOption
 ```
+3. Enjoy the results.
 
 
 
