@@ -30,7 +30,7 @@ Below are field types you may wish to use a script:
 - Droplink
 
 
-1. Begin by adding a new script library called *Data Sources* followed by adding a script. You can call it something like *Get Tenant Roots*.
+1. Begin by adding a new script library called *Data Sources* followed by adding a script. You can call it something like *Get-GlobalOption*.
 
 ### References
 
