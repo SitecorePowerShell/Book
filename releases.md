@@ -19,7 +19,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 - The `User` and `Role` objects now contain a properties for membership. Use either `Roles`, `Users`, or `MemberOf`. [[842](https://github.com/SitecorePowerShell/Console/issues/842)]
 - Scripted datasources now work with multiple roots. [[845](https://github.com/SitecorePowerShell/Console/issues/845)]
 
-#### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.4.2)
+#### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.5)
 
 - The Toolbox item **Background Session Manager** and ISE command **Rebuild Integration Points** are now hidden for users not in the developers group. [[850](https://github.com/SitecorePowerShell/Console/issues/850)]
 - The ISE command **Rebuild Integration Points** is now available as a Toolbox item. [[849](https://github.com/SitecorePowerShell/Console/issues/849)]
