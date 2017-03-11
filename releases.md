@@ -9,7 +9,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 
 ### Summary of important changes
 
-#### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.4.2+is%3Aissue%20label%3Aimpact-breaking-change)
+#### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.5+is%3Aissue%20label%3Aimpact-breaking-change)
 - no breaking changes
 
 #### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.5)
