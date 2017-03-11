@@ -12,7 +12,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 #### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.4.2+is%3Aissue%20label%3Aimpact-breaking-change)
 - no breaking changes
 
-#### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.4.2)
+#### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.5)
 
 - SPE learned how to merge Shared and Final layouts using `Merge-Layout`. [[669](https://github.com/SitecorePowerShell/Console/issues/669)]
 - SPE learned how to copy fields when using `Set-ItemTemplate`. [[847](https://github.com/SitecorePowerShell/Console/issues/847)]
