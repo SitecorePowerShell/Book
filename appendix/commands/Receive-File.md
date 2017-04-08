@@ -490,7 +490,7 @@ A new file is created with a non-conflicting name and the path to it is returned
  
 ```powershell   
  
-PS master:\> Receive-File -Folder "C:\temp\upload"
+PS master:\> Receive-File -Path "C:\temp\upload"
 C:\temp\upload\text_029.txt 
  
 ``` 
@@ -537,4 +537,7 @@ text False    {en, da}  {307BCF7D-27FD-46FC-BE83-D9ED640CB09F} File
  
 ## Related Topics 
  
-* [Send-File](/appendix/commands/Send-File.md)* [Out-Download](/appendix/commands/Out-Download.md)* <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
+
+* [Send-File](/appendix/commands/Send-File.md)
+* [Out-Download](/appendix/commands/Out-Download.md)
+* <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
