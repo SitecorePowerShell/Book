@@ -282,3 +282,6 @@ You will also need to patch the configuration with the following:
 
 For your convenience we've included a package bundled with all of the above called _SPE Minimal-4.x for Sitecore x.zip_. Any of the disabled configuration files should be enabled following extraction.
 
+### References
+
+* [Shields Down Example](https://alan-null.github.io/2017/01/spe-dev-config)
