@@ -87,6 +87,7 @@ The object which expires after a predetermined time. These can be unique to each
       <tokens>
         <token name="Console">
           <patch:attribute name="expiration">00:10:00</patch:attribute>
+          <patch:attribute name="elevationAction">Block</patch:attribute>
         </token>
         <token name="ISE">
           <patch:attribute name="expiration">00:10:00</patch:attribute>
