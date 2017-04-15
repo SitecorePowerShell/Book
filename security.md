@@ -78,7 +78,7 @@ The object which expires after a predetermined time. These can be unique to each
 * **Block** - Always block the session from running elevated without prompting the user for permission.
 * **Password** - Prompt the user for a password before running the session elevated, unless an unexpired session is active.
 
-**Example:** The following extends the token expiration to 10 minutes.
+**Example:** The following extends the token expiration to 10 minutes and blocks the use of the Console.
 
 ```xml
 <sitecore>
