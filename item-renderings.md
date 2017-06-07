@@ -22,5 +22,6 @@ foreach($item in $items) {
 **Example:** The following demonstrates how to report on pages referencing the specified rendering.
 
 ```
-Get-Item '/sitecore/layout/Renderings/Feature/Experience Accelerator/Page Content/Page Content' | Get-ItemReferrer | Where-Object { $_.ContentPath.StartsWith("/Demo/usa/Home") } | Show-ListView
+Get-Item 'master:\layout\Renderings\Feature\Experience Accelerator\Page Content\Page Content' | 
+    Get-ItemReferrer | Where-Object { $_.ContentPath.StartsWith("/Demo/usa/Home") } | Show-ListView
 ``` 
