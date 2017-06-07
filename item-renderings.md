@@ -34,3 +34,13 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
     Select-Object -Property Name, Cacheable, ClearOnIndexUpdate, VaryBy* | 
     Sort-Object -Property Name | Show-ListView
 ```
+
+**Example:** The following demonstrates how to disable global caching on all renderings.
+
+```powershell
+Get-ChildItem -Path "master:\layout\Renderings" -Recurse | 
+    Where-Object { $_.Cacheable -eq "1" } | 
+    ForEach-Object { $rendering = $_ } { $rendering.Cacheable = $null } { Write-Verbose "Disabled global caching on $($rendering.Name)" }
+```
+
+
