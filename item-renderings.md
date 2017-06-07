@@ -38,9 +38,12 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
 **Example:** The following demonstrates how to disable global caching on all renderings.
 
 ```powershell
+$VerbosePreference = "Continue"
 Get-ChildItem -Path "master:\layout\Renderings" -Recurse | 
     Where-Object { $_.Cacheable -eq "1" } | 
     ForEach-Object { Write-Verbose "Disabled global caching on $($_.Name)"; $_.Cacheable = "0" }
+
+# VERBOSE: Disabled global caching on Navigation
 ```
 
 
