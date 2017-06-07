@@ -21,14 +21,14 @@ foreach($item in $items) {
 
 **Example:** The following demonstrates how to report on pages referencing the specified rendering.
 
-```
+```powershell
 Get-Item "master:\layout\Renderings\Feature\Experience Accelerator\Page Content\Page Content" | 
     Get-ItemReferrer | Where-Object { $_.ContentPath.StartsWith("/Demo/usa/Home") } | Show-ListView
 ```
 
 **Example:** The following demonstrates how to report on which renderings are globally set to "Cacheable".
 
-```
+```powershell
 Get-ChildItem -Path "master:\layout\Renderings" -Recurse | 
     Where-Object { $_.Cacheable -eq "1" } | 
     Select-Object -Property Name, Cacheable, ClearOnIndexUpdate, VaryBy* | 
