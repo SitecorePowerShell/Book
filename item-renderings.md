@@ -40,7 +40,7 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
 ```powershell
 Get-ChildItem -Path "master:\layout\Renderings" -Recurse | 
     Where-Object { $_.Cacheable -eq "1" } | 
-    ForEach-Object { $rendering = $_ } { $rendering.Cacheable = $null } { Write-Verbose "Disabled global caching on $($rendering.Name)" }
+    ForEach-Object { Write-Verbose "Disabled global caching on $($_.Name)"; $_.Cacheable = "0" }
 ```
 
 
