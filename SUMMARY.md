@@ -64,6 +64,7 @@
         * [Get-TaskSchedule](appendix/commands/Get-TaskSchedule.md)
         * [Get-UserAgent](appendix/commands/Get-UserAgent.md)
         * [Import-Function](appendix/commands/Import-Function.md)
+        * [Invoke-JavaScript](appendix/commands/Invoke-JavaScript.md)
         * [Invoke-Script](appendix/commands/Invoke-Script.md)
         * [Invoke-ShellCommand](appendix/commands/Invoke-ShellCommand.md)
         * [Invoke-Workflow](appendix/commands/Invoke-Workflow.md)
