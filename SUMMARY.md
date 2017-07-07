@@ -122,6 +122,7 @@
         * [Initialize-Item](appendix/commands/Initialize-Item.md)
         * [Initialize-SearchIndex](appendix/commands/Initialize-SearchIndex.md)
         * [Initialize-SearchIndexItem](appendix/commands/Initialize-SearchIndexItem.md)
+        * [Remove-SearchIndexItem](appendix/commands/Remove-SearchIndexItem.md)
         * [Resume-SearchIndex](appendix/commands/Resume-SearchIndex.md)
         * [Stop-SearchIndex](appendix/commands/Stop-SearchIndex.md)
         * [Suspend-SearchIndex](appendix/commands/Suspend-SearchIndex.md)
