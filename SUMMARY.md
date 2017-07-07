@@ -68,6 +68,7 @@
         * [Invoke-Script](appendix/commands/Invoke-Script.md)
         * [Invoke-ShellCommand](appendix/commands/Invoke-ShellCommand.md)
         * [Invoke-Workflow](appendix/commands/Invoke-Workflow.md)
+        * [Merge-Layout](appendix/commands/Merge-Layout.md)
         * [New-ItemClone](appendix/commands/New-ItemClone.md)
         * [New-ItemWorkflowEvent](appendix/commands/New-ItemWorkflowEvent.md)
         * [New-Rendering](appendix/commands/New-Rendering.md)
