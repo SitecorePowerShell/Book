@@ -99,6 +99,7 @@
         * [Show-Result](appendix/commands/Show-Result.md)
         * [Show-YesNoCancel](appendix/commands/Show-YesNoCancel.md)
         * [Start-TaskSchedule](appendix/commands/Start-TaskSchedule.md)
+        * [Test-BaseTemplate](appendix/commands/Test-BaseTemplate.md)
         * [Test-Rule](appendix/commands/Test-Rule.md)
         * [Update-ListView](appendix/commands/Update-ListView.md)
         * [Write-Log](appendix/commands/Write-Log.md)
