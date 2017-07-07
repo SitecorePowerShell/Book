@@ -49,6 +49,7 @@
         * [Get-Cache](appendix/commands/Get-Cache.md)
         * [Get-Database](appendix/commands/Get-Database.md)
         * [Get-ItemClone](appendix/commands/Get-ItemClone.md)
+        * [Get-ItemCloneNotification](appendix/commands/Get-ItemCloneNotification.md)
         * [Get-ItemField](appendix/commands/Get-ItemField.md)
         * [Get-ItemReference](appendix/commands/Get-ItemReference.md)
         * [Get-ItemReferrer](appendix/commands/Get-ItemReferrer.md)
