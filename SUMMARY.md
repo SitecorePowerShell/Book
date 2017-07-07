@@ -77,6 +77,7 @@
         * [Publish-Item](appendix/commands/Publish-Item.md)
         * [Read-Variable](appendix/commands/Read-Variable.md)
         * [Receive-File](appendix/commands/Receive-File.md)
+        * [Receive-ItemCloneNotification](appendix/commands/Receive-ItemCloneNotification.md)
         * [Remove-BaseTemplate](appendix/commands/Remove-BaseTemplate.md)
         * [Remove-ItemVersion](appendix/commands/Remove-ItemVersion.md)
         * [Remove-Rendering](appendix/commands/Remove-Rendering.md)
