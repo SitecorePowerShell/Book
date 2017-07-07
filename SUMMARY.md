@@ -38,6 +38,7 @@
 * [Appendix](appendix.md)
     * [Common](appendix/common.md)
         * [Add-BaseTemplate](appendix/commands/Add-BaseTemplate.md)
+        * [Add-ItemLanguage](appendix/commands/Add-ItemLanguage.md)
         * [Add-ItemVersion](appendix/commands/Add-ItemVersion.md)
         * [Add-Rendering](appendix/commands/Add-Rendering.md)
         * [Close-Window](appendix/commands/Close-Window.md)
