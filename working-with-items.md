@@ -10,6 +10,7 @@ The following commands provide you with the core methods needed to manage your c
 | Database | The specified database will be used. Requires the ID to be set.  | &#8211; | &#x2713; | &#8211; | &#8211; | &#8211; | &#8211; |
 | DestinationItem | Parent item to receive the copied item. | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#8211; |
 | FailSilently | Unauthorized access errors will be suppressed | &#x2713; | &#8211; | &#8211; | &#x2713; | &#8211; | &#x2713; |
+| ForceId | Forces the new item to use a specified GUID | &#8211; | &#8211; | &#8211; | &#8211; | &#x2713; | &#8211; |
 | ID | Matches the item by ID. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#8211; | &#8211; |
 | Item | Instance item. | &#x2713; | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; |
 | Language | Specifies the languages to include. | &#8211; | &#x2713; | &#x2713; | &#8211; | &#x2713; | &#8211; |
