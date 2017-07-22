@@ -421,7 +421,7 @@ Sample Item 3                    False    {en}                     {F6F4F7B7-5E7
  
 ```
 
-**Example:** The following creates a new item with the specified template and id.
+**Example:** The following creates a new item with the specified template id and id.
 
 ```powershell
 New-Item -Path "master:\content\home\sample item\Sample Item 4" -ItemType "{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}" -ForceId "{9459ADDD-4471-4ED3-A041-D33E559BD321}"
