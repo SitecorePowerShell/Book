@@ -19,13 +19,13 @@ The solution requires Visual Studio 2015 or later.
 4. Copy `C:\Source\Console\deploy.user.json.sample` to `C:\Source\Console\deploy.user.json`
 5. Edit the sites definition in `deploy.user.json` to target your Sitecore installation folder
 6. Compile the solution in Visual Studio
+
    * Because SPE supports Sitecore 7+, you'll need to unload the `Cognfide.PowerShell.Sitecore7` project to build at this stage. To setup support for Sitecore 7, follow the next section in this tutorial.
    * When you compile the solution, SPE will be automatically deployed to the installation path you set in `deploy.user.json`
 
-   > SPE uses Unicorn for serializing Sitecore items to the source folder, and for syncing items from disk into Sitecore. For more information on Unicorn, see https://github.com/kamsar/Unicorn
 7. Login to Sitecore and then navigate to `/Unicorn.aspx`. Use Unicorn to sync all projects into Sitecore.
 
-> SPE uses Unicorn for serializing Sitecore items to the source folder, and for syncing items from disk into Sitecore. For more information on Unicorn, see https://github.com/kamsar/Unicorn
+> SPE uses Unicorn for serializing Sitecore items to the source folder, and for syncing items from disk into Sitecore. For more information on Unicorn, see [https://github.com/kamsar/Unicorn](https://github.com/kamsar/Unicorn)
 
 You can now use SPE in your Sitecore installation!
 
