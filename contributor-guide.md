@@ -4,6 +4,8 @@ The following guide should provide you with enough information to setup a develo
 
 The solution requires Visual Studio 2015 or later.
 
+> This guide assumes a source root location of "C:\Source" and a site root location of "C:\inetput\wwwroot". These are not prerequisites of the project, and you can use whatever folder locations suit you.
+
 ### Single Instance for Sitecore 8
 
 1. Meet the prerequisites found [here](installation.md)
@@ -19,24 +21,23 @@ The solution requires Visual Studio 2015 or later.
 4. Copy `C:\Source\Console\deploy.user.json.sample` to `C:\Source\Console\deploy.user.json`. This will be a file just for your local environment and will be ignored by git.
 5. Edit the sites definition in `deploy.user.json` to target your Sitecore installation folder. Make sure the `version` property is `8`. Remove any other sites in the file that do not apply.
 
-> The `deploy.user.json` file supports deploying SPE to multiple Sitecore installations. For now, we are just deploying to a single instance, but later on in the tutorial we will cover multiple instances. 
+   > The `deploy.user.json` file supports deploying SPE to multiple Sitecore installations. For now, we are just deploying to a single instance, but later on in the tutorial we will cover multiple instances. 
 
-5. Copy `C:\Source\Console\UserConfiguration\App_Config\Include\z.Cognifide.PowerShell.Development.User.config.sample` to a file of the same name, without the `.sample` suffix. This file can be edited to add any SPE-specific configuration that you want in your sites, but don't wish to commit back into the repo.
+6. Copy `C:\Source\Console\UserConfiguration\App_Config\Include\z.Cognifide.PowerShell.Development.User.config.sample` to a file of the same name, without the `.sample` suffix. This file can be edited to add any SPE-specific configuration that you want in your sites, but don't wish to commit back into the repo.
 
-> You may notice there is a %%sourceFolder%% value in this configuration file. This is a special string that gets replaced as part of the SPE deployment with your source folder location. You don't need to update this manually.
+   > You may notice there is a %%sourceFolder%% value in this configuration file. This is a special string that gets replaced as part of the SPE deployment with your source folder location. You don't need to update this manually.
 
-6. Compile the solution in Visual Studio
+7. Open the solution in Visual Studio. Unload the `Cognfide.PowerShell.Sitecore7` for now, as it won't build. Details of how to setup Sitecore 7 support is provided later on in this tutorial.
+8. Compile the solution. Whenever you compile the solution, SPE will be automatically deployed to the site installation paths you have set in `deploy.user.json`
 
-   * Because SPE supports Sitecore 7+, you'll need to unload the `Cognfide.PowerShell.Sitecore7` project to build at this stage. Details of how to setup Sitecore 7 support is provided later on in this tutorial.
-
-> Whenever you compile the solution, SPE will be automatically deployed to the site installation paths you have set in `deploy.user.json`
-
-7. Login to Sitecore
-8. Navigate to `/Unicorn.aspx`. Use Unicorn to sync all projects into Sitecore.
+9. Login to Sitecore
+10. Navigate to `/Unicorn.aspx`. Use Unicorn to sync all projects into Sitecore.
    
-> SPE uses Unicorn for serializing Sitecore items to the source folder, and for syncing items from disk into Sitecore. For more information on Unicorn, see [https://github.com/kamsar/Unicorn](https://github.com/kamsar/Unicorn)
+   > SPE uses Unicorn for serializing Sitecore items to the source folder, and for syncing items from disk into Sitecore. For more information on Unicorn, see [https://github.com/kamsar/Unicorn](https://github.com/kamsar/Unicorn)
 
-9. You can now use SPE in your Sitecore installation!
+11. SPE is now installed in Sitecore and you're ready for developing!
+
+Any changes you make going foward just require a build of the solution. Remember that when pulling down updates to the source, you should execute a Unicorn sync to ensure your items are up to date.
 
 ### Multiple Instances, and Sitecore 7 support
 
@@ -56,7 +57,7 @@ The SPE deployment process supports multiple sites and multiple versions of Site
    * Sitecore.NVelocity.dll
    * Sitecore.Update.dll
 5. Make sure the `Cognfide.PowerShell.Sitecore7` project is loaded in the Visual Studio solution
-6. Follow steps 6 onward from the **Single Instance** guide above to deploy to your Sitecore 7 installation and sync the SPE items into Sitecore.
+6. Follow steps 7 onward from the **Single Instance** guide above to deploy to your Sitecore 7 installation and sync the SPE items into Sitecore.
 
 > SPE can be deployed to as many Sitecore sites as you like. Each time you first deploy to a new installation, make sure you use Unicorn to sync the latest state of items into Sitecore.
 
