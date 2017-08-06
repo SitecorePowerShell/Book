@@ -60,6 +60,10 @@ The SPE deployment process supports multiple sites and multiple versions of Site
 
 > SPE can be deployed to as many Sitecore sites as you like. Each time you first deploy to a new installation, make sure you use Unicorn to sync the latest state of items into Sitecore.
 
+### Optional: PowerShell Remoting Module support
+
+To add the SPE PowerShell Remoting Module scripts into your machine's PowerShell Module path, execute the `.\Setup_Module.ps1` script from the source folder. This will add the `\Modules` folder from source into your `PSModulePath` environment variable. Once this is done, you can use `Import-Module SPE` on your development machine to run the remoting scripts.
+
 ### Optional: Junction Support
 
 As part of the SPE deployment process, all of the relevant binary, configuration and sitecore module files are copied over from the projects within the solution. This means that any changes to static files such as JS / CSS files require a full build for these to be deployed to the site. As the build triggers an application pool recycle of your site, this can be a little slow for quick changes.
