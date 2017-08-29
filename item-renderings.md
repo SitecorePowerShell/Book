@@ -46,4 +46,10 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
 # VERBOSE: Disabled global caching on Navigation
 ```
 
+**Example:** The following copies or moves renderings from one device to another (within Shared layout).
+
+{% gist id="https://gist.github.com/AdamNaj/8680921177c338e210f90bd538a7c917" %}{% endgist %}
+
+
+
 
