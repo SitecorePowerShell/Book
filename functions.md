@@ -16,4 +16,4 @@ The *Functions* integration allows for scripts to be discoverable through autoco
 
 Here's a short video on authoring custom functions.
 
-[![Creating Functions](https://img.youtue.com/vi/bn4LSDF8p4g/0.jpg)](https://www.youtube.com/watch?v=bn4LSDF8p4g "Click for a quick demo")
+[![Creating Functions](https://img.youtube.com/vi/bn4LSDF8p4g/0.jpg)](https://www.youtube.com/watch?v=bn4LSDF8p4g "Click for a quick demo")
