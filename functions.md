@@ -11,3 +11,5 @@ The *Functions* integration allows for scripts to be discoverable through autoco
 **Note:** It's best practice to create function scripts that follow the `Verb-Noun` pattern as outlined by Microsoft.
 
 ![Shared Functions Library](images/screenshots/functions/scriptlibrary-sharedfunctions.png)
+
+![Autocomplete in ISE](images/screenshots/functions/script-importfunction.png)
