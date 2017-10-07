@@ -13,3 +13,7 @@ The *Functions* integration allows for scripts to be discoverable through autoco
 ![Shared Functions Library](images/screenshots/functions/scriptlibrary-sharedfunctions.png)
 
 ![Autocomplete in ISE](images/screenshots/functions/script-importfunction.png)
+
+Here's a short video on how authoring custom functions.
+
+![Creating Functions](https://youtu.be/bn4LSDF8p4g)
