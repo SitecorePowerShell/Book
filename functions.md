@@ -8,3 +8,4 @@ The *Functions* integration allows for scripts to be discoverable through autoco
 
 ![Module Creation](images/screenshots/functions/module-sharedfunctions.png)
 
+![Shared Functions Library](images/screenshots/functions/scriptlibrary-sharedfunctions.png)
