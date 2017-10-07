@@ -6,5 +6,5 @@ The *Functions* integration allows for scripts to be discoverable through autoco
 2. Add a script to the "Functions" script library with a name that represents the purpose.
 3. Use the command `Import-Function` to discover the available functions.
 
-
+![Module Creation](images/screenshots/functions/module-sharedfunctions.png)
 
