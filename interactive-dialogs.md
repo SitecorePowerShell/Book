@@ -1,4 +1,4 @@
-# Interactive Dialogs
+![](/assets/modaldialog-showinput-errortext.png)# Interactive Dialogs
 
 We've provided a few commands to interact with the user through dialogs.
 
