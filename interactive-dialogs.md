@@ -50,6 +50,14 @@ Show-Input "Please provide 5 characters at most" -MaxLength 5
 
 ![Show Input](images/screenshots/modaldialog-showinput.png)
 
+**Example:** The following displays an input dialog with a error validation message.
+
+```powershell
+Show-Input -Prompt "Enter a new name for the item:" -Validation [Sitecore.Configuration.Settings]::ItemNameValidation -ErrorMessage "'`$Input' is not a valid name." -MaxLength ([Sitecore.Configuration.Settings]::MaxItemNameLength)
+```
+
+
+
 ## Advanced Dialogs
 
 ### Variable Settings
