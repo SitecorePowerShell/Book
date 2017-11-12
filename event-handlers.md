@@ -26,3 +26,4 @@ An event configuration patch may look like the following:
 </configuration>
 ```
 
+![Item Added Event Handler](images/screenshots/event-handlers/event-itemadded.png)
