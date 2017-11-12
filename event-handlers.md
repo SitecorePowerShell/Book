@@ -11,4 +11,18 @@ Steps required to activate this integration include the following:
  ### Enable Configuration
  
  While SPE comes with an example configuration, which is disabled by default, it contains several events that may not meet your requirements. 
+ 
+An event configuration patch may look like the following:
+
+```powershell
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <events>
+      <event name="item:added">
+        <handler type="Cognifide.PowerShell.Integrations.Tasks.ScriptedItemEventHandler, Cognifide.PowerShell" method="OnEvent" />
+      </event>
+    </events>
+  </sitecore>
+</configuration>
+```
 
