@@ -26,6 +26,8 @@ An event configuration patch may look like the following:
 </configuration>
 ```
 
+### Add Event Script
+
 To mimic the event *item:added* you should create nested script libraries such as *Event Handlers -> Item -> Added* followed by a script.
 
 ![Item Added Event Handler](images/screenshots/event-handlers/event-itemadded.png)
