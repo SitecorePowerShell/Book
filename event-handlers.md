@@ -8,5 +8,7 @@ Steps required to activate this integration include the following:
  3. Add a new script to the appropriate event library.
  4. Profit.
  
+ ### Enable Configuration
  
+ While SPE comes with an example configuration, which is disabled by default, it contains several events that may not meet your requirements. 
 
