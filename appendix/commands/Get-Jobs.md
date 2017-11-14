@@ -1,4 +1,4 @@
-# Get-TaskSchedule 
+# Get-Jobs
  
 Returns list of the current sitecore jobs 
 
