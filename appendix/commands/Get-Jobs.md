@@ -103,7 +103,7 @@ PS master:\> get-Jobs | Show-ListView -Property "Category", "IsDone", "Name", "Q
 	@{Label="Status Message"; Expression={$_.Status.Messages} }
 ``` 
 
-![Example 3](images/screenshots/get-jobs-listview.png) 
+![Example 3](../../images/screenshots/get-jobs-listview.png) 
 
  
 ## Related Topics 
