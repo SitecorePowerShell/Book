@@ -117,6 +117,7 @@
         * [New-ExplicitItemSource](appendix/commands/New-ExplicitItemSource.md)
         * [New-FileSource](appendix/commands/New-FileSource.md)
         * [New-ItemSource](appendix/commands/New-ItemSource.md)
+        * [New-SecuritySource](appendix/commands/New-SecuritySource.md)
         * [Import-Item](appendix/commands/Import-Item.md)
     * [Indexing](appendix/indexing.md)
         * [Find-Item](appendix/commands/Find-Item.md)
