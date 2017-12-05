@@ -145,6 +145,8 @@
         * [Get-User](appendix/commands/Get-User.md)
         * [Import-Role](appendix/commands/Import-Role.md)
         * [Import-User](appendix/commands/Import-User.md)
+        * [Login-User](appendix/commands/Login-User.md)
+        * [Logout-User](appendix/commands/Logout-User.md)
         * [New-Domain](appendix/commands/New-Domain.md)
         * [New-ItemAcl](appendix/commands/New-ItemAcl.md)
         * [New-Role](appendix/commands/New-Role.md)
