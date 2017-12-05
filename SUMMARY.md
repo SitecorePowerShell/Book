@@ -102,6 +102,7 @@
         * [Start-TaskSchedule](appendix/commands/Start-TaskSchedule.md)
         * [Test-BaseTemplate](appendix/commands/Test-BaseTemplate.md)
         * [Test-Rule](appendix/commands/Test-Rule.md)
+        * [Update-ItemReferrer](appendix/commands/Update-ItemReferrer.md)
         * [Update-ListView](appendix/commands/Update-ListView.md)
         * [Write-Log](appendix/commands/Write-Log.md)
     * [Packaging](appendix/packaging.md)
