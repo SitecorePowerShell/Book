@@ -119,6 +119,7 @@
         * [New-ItemSource](appendix/commands/New-ItemSource.md)
         * [New-SecuritySource](appendix/commands/New-SecuritySource.md)
         * [Import-Item](appendix/commands/Import-Item.md)
+        * [New-Package](appendix/commands/New-Package.md)
     * [Indexing](appendix/indexing.md)
         * [Find-Item](appendix/commands/Find-Item.md)
         * [Get-SearchIndex](appendix/commands/Get-SearchIndex.md)
