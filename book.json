@@ -3,7 +3,8 @@
     "plugins": [
         "image-captions",
         "gist",
-        "versions"
+        "versions",
+        "anchors"
     ],
     "pluginsConfig": {
         "image-captions": {
