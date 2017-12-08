@@ -4,9 +4,10 @@ The Integrated Scripting Environment (ISE) is a great way to group together comm
 
 The following figure shows the ISE when the User Account Controls (UAC) are disabled. While this is a common configuration for developers, we highly encourage you to ensure UAC is enabled in higher environments.
 
+#### Home Tab
+
 [![PowerShell ISE](images/screenshots/ise-empty.png)](http://youtu.be/RCDprfRsbSU "Click for a quick demo")
 
-#### Home Tab
 * **Write:**
   * New - Creates a new script or module.
   * Open - Opens an existing script for the library.
@@ -25,17 +26,19 @@ The following figure shows the ISE when the User Account Controls (UAC) are disa
   * Language - Specifies the context language to use when executing the script.
   * User - Specifies the context user to impersonate when executing the script. This can be used to emulate `UserSwitcher` code.
 
+#### Settings Tab
+
 ![ISE Settings Tab](images/screenshots/scripting/ise-settings.png)
 
-#### Settings Tab
 * **Preferences:**
   * Settings - This is where you configure the Console and ISE font family, font size, and other useful things.
 * **Integration:**
   * Rebuild All - This is where you rebuild the integration points for Control Panel, Gutters, and Ribbons. Without running this you will not see those integrations appear (or disappear).
 
+#### Plugins Tab
+
 ![ISE Plugins Tab](images/screenshots/scripting/ise-plugins.png)
 
-#### Plugins Tab
 * **Platform:** Custom scripts added to the *ISE Plugins* integration point script library will appear here.
 
 The *Open* dialog provides both a search and tree view of the scripts stored in the script libraries. 
