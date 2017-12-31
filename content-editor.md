@@ -65,6 +65,8 @@ The *Ribbon* integration allows for commands in the ribbon. Rules can be used to
 4. Change the icon of the item to match the script purpose.
 5. Configure any rules as needed.
 
+
+
 **Example:** The following script gets the selected Context Menu item and displays an alert using the item name.
 
 ```powershell
