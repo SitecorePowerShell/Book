@@ -1,5 +1,3 @@
-![](images/screenshots/content-editor/ribbon-script-structure.png)# Content Editor
-
 ### Context Menu
 
 The *Context Menu* integration allows for options in the context menu. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
@@ -65,7 +63,7 @@ The *Ribbon* integration allows for commands in the ribbon. Rules can be used to
 4. Change the icon of the item to match the script purpose.
 5. Configure any rules as needed.
 
-
+![Ribbon Script Library Structure](images/screenshots/content-editor/ribbon-script-structure.png)# Content Editor
 
 **Example:** The following script gets the selected Context Menu item and displays an alert using the item name.
 
