@@ -1,4 +1,4 @@
-# Content Editor
+![](images/screenshots/content-editor/ribbon-script-structure.png)# Content Editor
 
 ### Context Menu
 
