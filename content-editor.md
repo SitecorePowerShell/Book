@@ -58,7 +58,8 @@ The *Insert Item* integration allows for insert options in the context menu. Rul
 
 The *Ribbon* integration allows for commands in the ribbon. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
 
-1. Begin by adding a new child script library to the *Ribbon* library. The name of the script library specifies the parent ribbon tab. Choose a name such as *Home* or *Developer*.
+1. Begin by adding a new child script library to the *Ribbon* library; we'll refer to this library as the **Tab** library. Choose a name such as *Home* or *Developer*.
+2. Add a child script library to the **Tab** library; we'll call this the **Chunk** library. Choose a name such as *Edit* or *Tools*. 
 2. Add a new script to the chunk script library. The name of the script will appear in the ribbon chunk as a command.
 4. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 4. Change the icon of the item to match the script purpose.
