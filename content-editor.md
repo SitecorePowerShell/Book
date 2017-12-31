@@ -60,7 +60,7 @@ The *Ribbon* integration allows for commands in the ribbon. Rules can be used to
 
 1. Begin by adding a new child script library to the *Ribbon* library; we'll refer to this library as the **Tab** library. Choose a name such as *Home* or *Developer*.
 2. Add a child script library to the **Tab** library; we'll call this the **Chunk** library. Choose a name such as *Edit* or *Tools*. 
-3. Add a new script to the **Chunk** script library; we'll refer to this library as the **Command* library. The name of the script will appear in the ribbon chunk as a command.
+3. Add a new script to the **Chunk** script library; we'll refer to this library as the **Command** library. The name of the script will appear in the ribbon chunk as a command.
 4. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 4. Change the icon of the item to match the script purpose.
 5. Configure any rules as needed.
