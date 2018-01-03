@@ -135,7 +135,6 @@
         * [Add-ItemAcl](appendix/commands/Add-ItemAcl.md)
         * [Add-RoleMember](appendix/commands/Add-RoleMember.md)
         * [Clear-ItemAcl](appendix/commands/Clear-ItemAcl.md)
-        * [Clear-ItemAcl](appendix/commands/Clear-ItemAcl.md)
         * [Disable-User](appendix/commands/Disable-User.md)
         * [Enable-User](appendix/commands/Enable-User.md)
         * [Export-Role](appendix/commands/Export-Role.md)
