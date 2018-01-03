@@ -42,7 +42,7 @@ While SPE contains many reports, they don't match identical to ASR reports. We'v
 | Media items last updated before date<sup>3</sup> | Not recently modified |
 | Media items not used by content items<sup>3</sup> | Orphaned media assets report |
 | | Owned items |
-| | Recent Workflow History |
+| Recent workflow history<sup>2</sup> | Recent Workflow History |
 | Media items last updated after date<sup>3</sup> | Recently Modified |
 | | Regex Item Searcher |
 | | Renderings |
