@@ -38,6 +38,7 @@ You'll have to forgive me, I got lazy when this release came out and forgot to u
 
 - Perform operations after the Script Runner closes, such as opening an item with issue [903](https://github.com/SitecorePowerShell/Console/issues/903).
 - Send streams of data through the Web API with issue [899](https://github.com/SitecorePowerShell/Console/issues/899).
+- Run scripts as a post step to installation of packages with issue [866](https://github.com/SitecorePowerShell/Console/issues/866).
 
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.6)
 
