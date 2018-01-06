@@ -17,7 +17,7 @@ Set of instructions for the user.
 $source = Get-Item 'master:\templates\Feature\Forms' | New-ItemSource -Name 'Forms Feature' -InstallMode Overwrite $package.Sources.Add($source)
 $package.Sources.Add($source)
 
-# Files
+# Files using New-FileSource and New-ExplicitFileSource
 $source = Get-Item "$AppPath\App_Config\Include\Cognifide.PowerShell.config" | New-ExplicitFileSource -Name "Configuration File"
 $package.Sources.Add($source);
 
