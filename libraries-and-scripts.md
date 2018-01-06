@@ -28,7 +28,7 @@ Import-Function -Name Get-DateMessage
 Show-Alert (Get-DateMessage)
 ```
 
-Some names we've used include:
+Some names we've used included:
 * Beginner Tutorials
 * **Content Editor**
 * Content Maintenance
