@@ -29,7 +29,7 @@
     * [Toolbox](toolbox.md)
     * [Web API](web-api.md)
     * [Workflows](workflows.md)
-  * Packaging
+  * [Packaging](packaging.md)
 * [Remoting](remoting.md)
 * [Security](security.md)
   * [Users and Roles](users-and-roles.md)
