@@ -36,7 +36,8 @@ You'll have to forgive me, I got lazy when this release came out and forgot to u
 
 #### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.6)
 
-- Various improvements to the Web API. This enables the SXA Creative Exchange do what it's gotta do.
+- Perform operations after the Script Runner closes, such as opening an item with issue [903](https://github.com/SitecorePowerShell/Console/issues/903).
+- Send streams of data through the Web API with issue [899](https://github.com/SitecorePowerShell/Console/issues/899).
 
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.6)
 
