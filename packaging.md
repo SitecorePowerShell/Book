@@ -7,12 +7,12 @@ Ever wanted to package up items and files without opening the Sitecore Package D
 **Example:** The following example demonstrates how to generate a package.
 
 ```powershell
-$package = New-Package "Package of Stuff";
-$package.Sources.Clear();
+$package = New-Package "Package-of-Stuff"
+$package.Sources.Clear()
 
-$package.Metadata.Author = "Michael West";
-$package.Metadata.Publisher = "Team Awesome";
-$package.Metadata.Version = "1.0";
+$package.Metadata.Author = "Michael West"
+$package.Metadata.Publisher = "Team Awesome"
+$package.Metadata.Version = "1.0"
 $package.Metadata.Readme = @"
 Set of instructions for the user.
 "@
@@ -33,3 +33,21 @@ Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Versi
 ```
 
 ### Post Step
+
+**Example:** The following adds a Post Step and custom attributes.
+
+```powershell
+$package = New-Package "Package-of-Stuff"
+$package.Sources.Clear()
+
+$package.Metadata.Author = "Michael West"
+$package.Metadata.Publisher = "Team Awesome"
+$package.Metadata.Version = "1.0"
+$package.Metadata.Readme = @"
+Set of instructions for the user.
+"@
+$package.Metadata.PostStep = "Some.Library.Class,Some.Library"
+$package.Metadata.Attributes = "scriptId={9b9a3906-1979-11e7-8c9d-177c30471cec}|width=50|height=200"
+
+Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Version).xml"
+```
