@@ -15,6 +15,8 @@ This release has a major focus on stability and overcoming any problems that wer
 
 #### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.7)
 
+- The Packing Manager received a nice facelift as part of issue [923](https://github.com/SitecorePowerShell/Console/issues/923). Better icons and more options.
+
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.7)
 
 #### [All Fixes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Abug+is%3Aclosed+milestone%3A4.7)
