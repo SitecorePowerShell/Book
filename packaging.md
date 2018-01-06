@@ -2,6 +2,8 @@
 
 Ever wanted to package up items and files without opening the Sitecore Package Designer each time? There are a number of commands available for generating packages.
 
+### Package Creation
+
 **Example:** The following example demonstrates how to generate a package.
 
 ```powershell
@@ -29,3 +31,5 @@ Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Ver
 Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Version).zip" -Zip
 Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Version).zip"
 ```
+
+### Post Step
