@@ -36,6 +36,8 @@ You'll have to forgive me, I got lazy when this release came out and forgot to u
 
 #### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.6)
 
+- Various improvements to the Web API. This enables the SXA Creative Exchange do what it's gotta do.
+
 #### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.6)
 
 #### [All Fixes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Abug+is%3Aclosed+milestone%3A4.6)
