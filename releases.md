@@ -2,6 +2,27 @@
 
 Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace][1] or report issues on [Github][2].
 
+## Version 4.7
+
+You'll have to forgive me, I got lazy when this release came out and forgot to update the book.
+
+- [Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.7)
+- [Release highlights](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.7)
+
+### Summary of important changes
+
+#### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.7+is%3Aissue%20label%3Aimpact-breaking-change)
+
+#### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.7)
+
+#### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A4.7)
+
+#### [All Fixes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Abug+is%3Aclosed+milestone%3A4.7)
+
+***
+
+
+
 ## Version 4.6
 
 You'll have to forgive me, I got lazy when this release came out and forgot to update the book.
