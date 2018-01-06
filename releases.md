@@ -21,11 +21,9 @@ You'll have to forgive me, I got lazy when this release came out and forgot to u
 
 ***
 
-
-
 ## Version 4.6
 
-You'll have to forgive me, I got lazy when this release came out and forgot to update the book.
+You'll have to forgive me, I got lazy when this release came out and forgot to update the book. This release major focus was stability and overcoming any problems that were reported by our users.
 
 - [Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.6)
 - [Release highlights](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.6)
