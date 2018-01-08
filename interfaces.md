@@ -31,6 +31,7 @@ SPE provides some convenient variables out of the box for use in running command
 | HostSettings | ... <br/> FontSize : 12 <br/> FontFamily : Wingdings <br/> ... |
 | me        | sitecore\admin    |
 | PWD       | master:\     |
+| PSScript | `$PSScript.Appearance.Icon # Returns the icon of the executing script` |
 | ScriptSession | ... <br/> ID : e9fedd64-cad0-4c43-b950-9cd361b151fd <br/> ... |
 | SitecoreAuthority | https://console |
 | SitecoreContextItem | `$SitecoreContextItem.Language.Name # Returns the language name` |
