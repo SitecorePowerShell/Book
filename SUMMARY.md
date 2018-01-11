@@ -9,6 +9,7 @@
   * [Scripting](scripting.md)
   * [Interface Configuration](interface-configuration.md)
   * [Interactive Dialogs](interactive-dialogs.md)
+  * [Variables](variables.md)
 * [Working with Items](working-with-items.md)
   * [Item Languages](item-languages.md)
   * [Item Renderings](item-renderings.md)
