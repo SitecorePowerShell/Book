@@ -5,7 +5,7 @@ $rootItem = Get-Item -Path "master:\content\home"
 $sourceTemplate = Get-Item -Path "master:\SOURCE-TEMPLATE-ID"
 $targetTemplate = Get-Item -Path "master:\TARGET-TEMPLATE-ID"
  
-Get-ChildItem $rootItem.FullPath -Recurse | 
+Get-ChildItem $rootItem.ProviderPath -Recurse | 
     Where-Object { $_.TemplateName -eq $sourceTemplate.Name } | 
     ForEach-Object {  
         Set-ItemTemplate -Item $PSItem -TemplateItem $targetTemplate -FieldsToCopy @{ MainImage = "PrimaryImage" }
