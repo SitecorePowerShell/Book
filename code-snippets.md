@@ -1,3 +1,5 @@
+### Parse Html
+
 **Example:** The following demonstrates the use of the **HtmlAgilityPack** for parsing html.
 
 ```powershell
@@ -9,6 +11,7 @@ foreach($x in $htmlDocument.DocumentNode.SelectNodes("//li")) {
 }
 ```
 
+### Workflow History
 **Example:** The following prints the workflow history of the home item.
 
 ```powershell
@@ -24,6 +27,8 @@ foreach($version in $item.Versions.GetVersions()) {
     }
 }
 ```
+
+### Run JavaScript
 
 **Example:** The following logs messages to the browser console and then alerts the user with a message.
 
