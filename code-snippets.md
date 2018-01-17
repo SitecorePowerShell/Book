@@ -2,13 +2,13 @@
 
 ```powershell
 $rootItem = Get-Item -Path "master:\content\home"
-$sourceTemplate = Get-Item -Path "Source-Template-Path-Or-Guid-Here"
-$targetTemplate = Get-Item -Path "Target-Template-Path-Or-Guid-Here"
+$sourceTemplate = Get-Item -Path "master:\SOURCE-TEMPLATE-ID"
+$targetTemplate = Get-Item -Path "master:\TARGET-TEMPLATE-ID"
  
 Get-ChildItem $rootItem.FullPath -Recurse | 
     Where-Object { $_.TemplateName -eq $sourceTemplate.Name } | 
     ForEach-Object {  
-        Set-ItemTemplate -Item $_ -TemplateItem $targetTemplate -FieldsToCopy @{ MainImage = "PrimaryImage" }
+        Set-ItemTemplate -Item $PSItem -TemplateItem $targetTemplate -FieldsToCopy @{ MainImage = "PrimaryImage" }
 }
 ```
 
