@@ -1,3 +1,16 @@
+### Change Template
+
+```powershell
+$rootItem = Get-Item master:/content;
+$sourceTemplate = Get-Item "Source-Template-Path-Or-Guid-Here";
+$targetTemplate = Get-Item "Target-Template-Path-Or-Guid-Here";
+ 
+Get-ChildItem $rootItem.FullPath -Recurse | Where-Object { $_.TemplateName -eq $sourceTemplate.Name } | ForEach-Object {  
+    Set-ItemTemplate -Item $_ -TemplateItem $targetTemplate `
+        -FieldsToCopy @{ MainImage = "PrimaryImage" }
+}
+```
+
 ### Parse Html
 
 **Example:** The following demonstrates the use of the **HtmlAgilityPack** for parsing html.
