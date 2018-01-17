@@ -1,13 +1,14 @@
 ### Change Template
 
 ```powershell
-$rootItem = Get-Item master:/content;
-$sourceTemplate = Get-Item "Source-Template-Path-Or-Guid-Here";
-$targetTemplate = Get-Item "Target-Template-Path-Or-Guid-Here";
+$rootItem = Get-Item -Path "master:\content\home"
+$sourceTemplate = Get-Item -Path "Source-Template-Path-Or-Guid-Here"
+$targetTemplate = Get-Item -Path "Target-Template-Path-Or-Guid-Here"
  
-Get-ChildItem $rootItem.FullPath -Recurse | Where-Object { $_.TemplateName -eq $sourceTemplate.Name } | ForEach-Object {  
-    Set-ItemTemplate -Item $_ -TemplateItem $targetTemplate `
-        -FieldsToCopy @{ MainImage = "PrimaryImage" }
+Get-ChildItem $rootItem.FullPath -Recurse | 
+    Where-Object { $_.TemplateName -eq $sourceTemplate.Name } | 
+    ForEach-Object {  
+        Set-ItemTemplate -Item $_ -TemplateItem $targetTemplate -FieldsToCopy @{ MainImage = "PrimaryImage" }
 }
 ```
 
