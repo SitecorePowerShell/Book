@@ -1,15 +1,16 @@
 ### Change Template
 
 ```powershell
-$rootItem = Get-Item -Path "master:\content\home"
-$sourceTemplate = Get-Item -Path "master:\SOURCE-TEMPLATE-ID"
-$targetTemplate = Get-Item -Path "master:\TARGET-TEMPLATE-ID"
- 
-Get-ChildItem $rootItem.ProviderPath -Recurse | 
-    Where-Object { $_.TemplateName -eq $sourceTemplate.Name } | 
-    ForEach-Object {  
-        Set-ItemTemplate -Item $PSItem -TemplateItem $targetTemplate -FieldsToCopy @{ MainImage = "PrimaryImage" }
-}
+# Sample Item
+$sourceTemplate = Get-Item -Path "master:\{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}"
+# Sample Content
+$targetTemplate = Get-Item -Path "master:\{93A8866B-972F-4FBF-8FD9-D6004B18C0AF}"
+
+# Use Get-ItemReferrer to find all items referencing the template, rather than scanning the content tree.
+$sourceTemplate | Get-ItemReferrer | Where-Object { $PSItem.Paths.IsContentItem } |
+    ForEach-Object {
+        Set-ItemTemplate -Item $PSItem -TemplateItem $targetTemplate
+    }
 ```
 
 ### Parse Html
