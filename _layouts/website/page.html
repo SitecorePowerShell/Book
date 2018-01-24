@@ -1,0 +1,7 @@
+
+{% extends template.self %}
+
+{% block head %}
+    {{ super() }}
+    Last modification: {{ file.mtime }}
+{% endblock %}
