@@ -252,7 +252,7 @@ If you disable _Anonymous Authentication_ and enable _Windows Authentication_ in
 
 ### Minimal Web Service Configuration
 
-The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as servers built within a Continuous Integration environment that need remoting enabled. Remoting is disabled by default. If you need this functionality, enable it separately using a config patch file.
+The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as servers built within a Continuous Integration environment that need remoting enabled. Remoting is **disabled** by default. If you need this functionality, enable it separately using a config patch file.
 
 **Required:**
 
