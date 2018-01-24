@@ -2,6 +2,5 @@
 {% extends template.self %}
 
 {% block head %}
-    {{ super() }}
-    Last modification: {{ file.mtime }}
+    {% block description %}Last modification: {{ file.mtime }}{% endblock %}
 {% endblock %}
