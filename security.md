@@ -1,6 +1,6 @@
 # Security
 
-You need to be mindful that Sitecore PowerShell Extensions is a very sharp tool and while it can be leveraged to do great things, it can also be a vector of dangerous attacks if not secured properly. This is why we recommend that you **do not install** it on Content Delivery instances and if possible avoid deploying it on servers that face Internet altogether. 
+You need to be mindful that Sitecore PowerShell Extensions is a very sharp tool and while it can be leveraged to do great things, it can also be a vector of dangerous attacks if not secured properly. This is why we recommend that you **do not install** it on Content Delivery instances and if possible avoid deploying it on servers that face Internet altogether.
 
 ## Security Policies
 
@@ -19,10 +19,10 @@ When using the IIS identities such as _ApplicationPoolIdentity_ and _NetworkServ
 
 The second policy relates to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be done through the Sitecore API as PowerShell scripts can call the APIs that disable the Sitecore security.
 
-**Application Security**
+**Application Security**  
 The following settings are configured under `core:\content\Applications\PowerShell`.
 
-| **Feature**| **Visibility** |
+| **Feature** | **Visibility** |
 | --- | --- |
 | PowerShell Console | sitecore\Developer \(read\) |
 | PowerShell ISE | sitecore\Developer \(read\) |
@@ -32,14 +32,14 @@ The following settings are configured under `core:\content\Applications\PowerShe
 
 **Note:** The security is validated _OnLoad_.
 
-**Menu Item Security**
+**Menu Item Security**  
 The following settings are configured under `core:\content\Applications\Content Editor\Context Menues\Default\`.
 
 | **Feature** | **Visibility** | **Command State** |
 | --- | --- | --- |
-| Edit Script | sitecore\Developer (read) | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden** |
-| Console | sitecore\Developer (read) | **Enabled** until user is _non-admin_ and not in _sitecore\Sitecore Client Developing_ |
-| Script | sitecore\Sitecore Limited Content Editor (deny read) | **Enabled** |
+| Edit Script | sitecore\Developer \(read\) | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden** |
+| Console | sitecore\Developer \(read\) | **Enabled** until user is _non-admin_ and not in _sitecore\Sitecore Client Developing_ |
+| Script | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** |
 
 **Note:** See the _Interactive_ section on _PowerShell Script Library_ and _PowerShell Script_ items for visibility and enabled rules. To hide each feature you can change also the security settings for the roles that should not see the menu.
 
@@ -62,7 +62,7 @@ The way in which scripts make their way into Sitecore through built-in interface
 | Attribute | Description |
 | --- | --- |
 | name | built-in name for the gate |
-| token | name of the token to use for the elevated session | 
+| token | name of the token to use for the elevated session |
 
 **Token**
 
@@ -70,9 +70,9 @@ The object which expires after a predetermined time. These can be unique to each
 
 | Attribute | Description |
 | --- | --- |
-| name | unique string used for the gate *token* attribute |
-| expiration | timespan used to determine the elevated session lifetime (hh:mm:ss) |
-| elevationAction | action to perform when session elevation is triggered (allow, block, password) |
+| name | unique string used for the gate _token_ attribute |
+| expiration | timespan used to determine the elevated session lifetime \(hh:mm:ss\) |
+| elevationAction | action to perform when session elevation is triggered \(allow, block, password\) |
 
 * **Allow** - Always allow the session to run elevated without prompting the user for permission. This should never be used outside of a developer's machine.
 * **Block** - Always block the session from running elevated without prompting the user for permission.
@@ -106,6 +106,7 @@ Gates with **Password** protection enabled prompt the user when no elevated sess
 ![Elevate Session State](/images/screenshots/uac/security-elevatedsessionstate-password.png)
 
 ##### Content Editor
+
 A Content Editor Warning is displayed when a PowerShell Module, Script Library, and Script is selected. Click "Elevate session" to show the hidden fields and enable the management of the item.
 
 ![Elevate session](/images/screenshots/uac/security-elevatedsessionstate-contenteditor.png)
@@ -153,17 +154,17 @@ Look for the following section and enable as needed.
 
 * **Remoting** - Used when passing scripts to SPE for execution. Enable when using the **SPE Remoting** module. Service associated with `RemoteAutomation.asmx`.
 * **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
- * Required for the following features: PowerShell [Web API](/web-api.md).
+  * Required for the following features: PowerShell [Web API](/web-api.md).
 * **File Download** - Used when the url contains all the information needed to download a file from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
 * **File Upload** - Used when the url contains all the information needed to upload a file to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
 * **Media Download** - Used when the url contains all the information needed to download a media item from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
 * **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
 * **Handle Download** - Used when a file is downloaded through the Sitecore interface. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
- * Required for the following features: [Out-Download](/appendix/commands/Out-Download.md) command.
+  * Required for the following features: [Out-Download](/appendix/commands/Out-Download.md) command.
 * **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
- * Required for the following features: PowerShell [Console](/console.md), PowerShell [ISE](/scripting.md), 
+  * Required for the following features: PowerShell [Console](/console.md), PowerShell [ISE](/scripting.md), 
 * **Execution** - Used when SPE checks if the user has access to run the application.
- * Required for the following features: [Download File](/interactive-dialogs.md) dialog, PowerShell Script Runner, [Content Editor](/content-editor.md) (Context Menu, Insert Options, Ribbon). 
+  * Required for the following features: [Download File](/interactive-dialogs.md) dialog, PowerShell Script Runner, [Content Editor](/content-editor.md) \(Context Menu, Insert Options, Ribbon\). 
 * **RESTful v1** - Used in early version of SPE. Avoid using this if possible. Service associated with `RemoteScriptCall.ashx`.
 
 The preferred way to override the settings is through the use of a configuration patch file.
@@ -251,7 +252,7 @@ If you disable _Anonymous Authentication_ and enable _Windows Authentication_ in
 
 ### Minimal Web Service Configuration
 
-The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as servers built within a Continuous Integration environment that need remoting enabled. Remoting is not disabled by default. If you need this functionality, enable it separately using a config patch file.
+The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as servers built within a Continuous Integration environment that need remoting enabled. Remoting is disabled by default. If you need this functionality, enable it separately using a config patch file.
 
 **Required:**
 
@@ -286,3 +287,6 @@ For your convenience we've included a package bundled with all of the above call
 ### References
 
 * [Shields Down Example](https://alan-null.github.io/2017/01/spe-dev-config)
+
+
+
