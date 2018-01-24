@@ -13,6 +13,33 @@ $sourceTemplate | Get-ItemReferrer | Where-Object { $PSItem.Paths.IsContentItem 
     }
 ```
 
+### Edit MultilistField
+
+**Example:** The following demonstrates how to set a field to a known list of Ids. The Id is already converted to a GUID string.
+
+```powershell
+# Hardcoded list of Ids.
+$item.Editing.BeginEdit()
+$item["Allowed Controls"] = "{guid1}|{guid2}|{guid3}"
+$item.Editing.EndEdit()
+
+# Array of Ids.
+$ids = [System.String]::Join("|", $array)
+$item.Editing.BeginEdit()
+$item["Allowed Controls"] = $ids
+$item.Editing.EndEdit()
+```
+
+**Example:** The following replaces an instance of an Id with an alternate Id. The Id is already converted to a GUID string.
+
+```powershell
+[Sitecore.Data.Fields.MultilistField]$field = $item.Fields["Allowed Controls"]
+
+$item.Editing.BeginEdit()
+$field.Replace("{493B3A83-0FA7-4484-8FC9-4680991CF742}","{493B3A83-0FA7-4484-8FC9-4680991CF743}")
+$item.Editing.EndEdit()
+```
+
 ### Parse Html
 
 **Example:** The following demonstrates the use of the **HtmlAgilityPack** for parsing html.
