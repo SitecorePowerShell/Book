@@ -5,7 +5,7 @@
         "gist",
         "versions",
         "anchors",
-        "gitbook-plugin-last-modified"
+        "last-modified"
     ],
     "pluginsConfig": {
         "image-captions": {
