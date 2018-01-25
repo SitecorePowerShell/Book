@@ -4,8 +4,7 @@
         "image-captions",
         "gist",
         "versions",
-        "anchors",
-        "book-plugins@git+https://github.com/SitecorePowerShell/book-plugins.git#1.0.0"
+        "anchors"
     ],
     "pluginsConfig": {
         "image-captions": {
