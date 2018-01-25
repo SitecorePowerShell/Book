@@ -6,3 +6,7 @@ figure {
 figure img {
     width: 100%;
 }
+
+.page-inner {
+    max-width: 1200px;
+}
