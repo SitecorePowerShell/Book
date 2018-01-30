@@ -4,8 +4,7 @@
         "image-captions",
         "gist",
         "versions",
-        "anchors",
-        "last-modified@git+https://github.com/SitecorePowerShell/gitbook-plugin-last-modified.git"
+        "anchors"
     ],
     "pluginsConfig": {
         "image-captions": {
