@@ -33,6 +33,8 @@ Below are the shortcuts available in the console.
 | Ctrl+V            | Insert text from the clipboard    |
 | Ctrl+Alt+Shift +  | Increase the font size |
 | Ctrl+Alt+Shift -  | Decrease the font size |
+| PageUp |  Scroll console up |
+| PageDown | Scroll console down |
 
 **Note:** The font family, font size, and other settings can be configured through the ISE.
 
