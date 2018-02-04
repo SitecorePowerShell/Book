@@ -27,7 +27,7 @@ Below are the shortcuts available in the console.
 | Ctrl+E/End        | Move cursor to the end of the line    |
 | Ctrl+K/Alt+D     | Remove the text after the cursor  |
 | Ctrl+H | Remove character before the cursor |
-| Ctrl+D/Delete | Remove character after the cursor |
+| Ctrl+D/Delete | Remove character selected by the cursor |
 | Ctrl+U            | Remove the text before the cursor |
 | Ctrl+V            | Insert text from the clipboard    |
 | Ctrl+Alt+Shift +  | Increase the font size |
