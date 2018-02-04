@@ -12,8 +12,9 @@ Below are the shortcuts available in the console.
 
 | **Shortcut**  | **Usage** |
 | --------  | ----- |
-| TAB       | Autocomplete commands. Press tab again to cycle through commands.  |
-| Shift+TAB | Reverse cycle through Autocomplete commands. |
+| Enter | Submits line for execution. |
+| Tab       | Autocomplete commands. Press tab again to cycle through commands.  |
+| Shift+Tab | Reverse cycle through Autocomplete commands. |
 | Up Arrow/Ctrl+P   | Show previous command from history    |
 | Down Arrow/Ctrl+N | Show next command from history        |
 | Delete/backspace  | Remove one character from right/left to the cursor    |
