@@ -30,7 +30,7 @@ Below are the shortcuts available in the console.
 | Ctrl+D/Delete | Remove character selected by the cursor |
 | Ctrl+C/Escape | Remove all text in the line |
 | Ctrl+U            | Remove the text before the cursor |
-| Ctrl+V            | Insert text from the clipboard    |
+| Ctrl+V/Shift+Insert            | Insert text from the clipboard    |
 | Ctrl+Alt+Shift +  | Increase the font size |
 | Ctrl+Alt+Shift -  | Decrease the font size |
 | PageUp |  Scroll console up |
