@@ -16,8 +16,8 @@ Below are the shortcuts available in the console.
 | Tab       | Autocomplete commands. Press tab again to cycle through commands.  |
 | Shift+Tab | Reverse cycle through Autocomplete commands. |
 | Shift+Enter | Inserts new line. Works when the backtick is used. |
-| Up Arrow/Ctrl+P   | Show previous command from history    |
-| Down Arrow/Ctrl+N | Show next command from history        |
+| ArrowUp/Ctrl+P   | Show previous command from history    |
+| ArrowDown/Ctrl+N | Show next command from history        |
 | Delete/backspace  | Remove one character from right/left to the cursor    |
 | Left Arrow/Ctrl+B | Move cursor to the left   |
 | Right Arrow/Ctrl+F    | Move cursor to the right  |
