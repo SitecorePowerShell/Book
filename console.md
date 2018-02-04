@@ -28,7 +28,7 @@ Below are the shortcuts available in the console.
 | Ctrl+K/Alt+D     | Remove the text after the cursor  |
 | Ctrl+H | Remove character before the cursor |
 | Ctrl+D/Delete | Remove character selected by the cursor |
-| Escape | Remove all text in the line |
+| Ctrl+C/Escape | Remove all text in the line |
 | Ctrl+U            | Remove the text before the cursor |
 | Ctrl+V            | Insert text from the clipboard    |
 | Ctrl+Alt+Shift +  | Increase the font size |
