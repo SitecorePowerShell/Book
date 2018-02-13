@@ -2,7 +2,7 @@
 
 ## How do I manage my content through PowerShell?
 
-The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using [Dynamic Parameters][1]. These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provided this table to help you discover the hidden gems within each command.
+The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using [Dynamic Parameters]([https://technet.microsoft.com/en-us/library/dd878299\ "v=vs.85\\).aspx\]\(https://technet.microsoft.com/en-us/library/dd878299%28v=vs.85%29.aspx"). These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provided this table to help you discover the hidden gems within each command.
 
 | **Parameter Name** | **Description** | **Copy-Item** | **Get-Item** | **Get-ChildItem** | **Move-Item** | **New-Item** | **Remove-Item** |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -127,6 +127,10 @@ GetEngaged          pl-PL    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       Tena
 
 It's not always most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items \(e.g. a specific template\). For this we’ve introduced support for the Sitecore query within our provider.
 
+> Important to note that the query format sometimes requires the use of a `#` before and after paths when they contain reserved keywords or spaces.
+>
+> Workaround found [here on Sitecore Stack Exchange](https://sitecore.stackexchange.com/questions/10127/how-to-escape-a-query-in-sitecore-powershell).
+
 **Example:** The following retrieves all items beneath the path _/sitecore/content/_ with the template of _Sample Item_.
 
 ```powershell
@@ -193,7 +197,7 @@ In all the examples you'll notice we specified the database. Windows PowerShell 
 
 ### Get items and select properties
 
-The following examples make use of custom _PropertySet_s for the command `Select-Object`.
+The following examples make use of custom \_PropertySet\_s for the command `Select-Object`.
 
 **Example:** The following uses the **PSSecurity** _PropertySet_.
 
@@ -457,5 +461,5 @@ Remove-Item -Path "master:\content\home\sample item\Sample Item 3" -Permanently
 
 * [Working with Sitecore Items in PowerShell Extensions](http://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
 
-[1]: [https://technet.microsoft.com/en-us/library/dd878299\(v=vs.85\).aspx](https://technet.microsoft.com/en-us/library/dd878299%28v=vs.85%29.aspx)
+
 
