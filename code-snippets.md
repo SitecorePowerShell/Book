@@ -40,6 +40,28 @@ $field.Replace("{493B3A83-0FA7-4484-8FC9-4680991CF742}","{493B3A83-0FA7-4484-8FC
 $item.Editing.EndEdit()
 ```
 
+**Example:** The following appends a an `ID` to a set of items in all languages. It verifies that the field *Keywords* exists.
+
+```powershell
+$items = Get-ChildItem -Path "master:\sitecore\content\home" -Recurse -Language *
+foreach($item in $items) {
+    if ($item.Keywords -and $item.Keywords.Length -gt 0) {
+        $item.Keywords = $item.Keywords + "|{guid}"
+    } else {
+        $item.Keywords = "{guid}"
+    }
+}
+```
+
+**Example:** The following example gets all of the items of a `MultilistField` and append a specific `ID`, ensuring that it's delimited with the `|` character.
+
+```powershell
+$items = Get-ChildItem -Path "master:\sitecore\content\home" -Recurse -Language *
+foreach($item in $items) {
+    $item.Keywords = (@() + $item.Keywords.GetItems().ID + "{6D1EACDD-0DE7-4F3D-B55A-2CAE8EBFF3D0}" | Select-Object -Unique) -join "|"
+}
+```
+
 ### Parse Html
 
 **Example:** The following demonstrates the use of the **HtmlAgilityPack** for parsing html.
