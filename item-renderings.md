@@ -46,6 +46,45 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
 # VERBOSE: Disabled global caching on Navigation
 ```
 
+**Example:** The following moves renderings from one placeholder to another. [See this article for more details](https://www.kasaku.co.uk/2018/02/28/updating-rendering-placeholders/).
+
+```powershell
+$placeholderMappings = @(
+ @("/old-placeholder","/new-placeholder"),
+ @("/another-old-placeholder","/new-placeholder")
+)
+$rootItem = Get-Item -Path master:/sitecore/content/Home
+$defaultLayout = Get-LayoutDevice "Default"
+# Toggle for whether to update Shared or Final Layout
+$useFinalLayout = $True
+# If set to true, the script will only list the renderings that need fixing, rather than fixing them.
+$reportOnly = $False
+foreach ( $item in Get-ChildItem -Item $rootItem -Recurse )
+{
+    # Only interested in items that have a layout
+    if (Get-Layout $item)
+    {
+        foreach( $mapping in $placeholderMappings )
+        {
+            # Get renderings in this item that have renderings in the placeholder we want to update 
+            $renderings =  Get-Rendering -Item $item -Placeholder ($mapping[0] + '/*') -Device $defaultLayout -FinalLayout:$useFinalLayout
+            
+            foreach ( $rendering in $renderings )
+            {
+                # Only update the rendering if we're not in "Report Only" mode
+                if (!$reportOnly)
+                {
+                   # Update the placeholder in the rendering and set it back in the item
+                   $rendering.Placeholder = $rendering.Placeholder -replace $mapping[0], $mapping[1]
+                   Set-Rendering -Item $item -Instance $rendering -FinalLayout:$useFinalLayout
+                }
+                Write-Host "$($item.FullPath) - Rendering $($rendering.UniqueID) - Placeholder: $($mapping[0]) --> $($mapping[1])"
+            }
+        }
+    }
+}
+```
+
 **Example:** The following copies or moves renderings from one device to another (within Shared layout).
 
 {% gist id="https://gist.github.com/AdamNaj/8680921177c338e210f90bd538a7c917" %}{% endgist %}
