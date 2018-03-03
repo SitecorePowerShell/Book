@@ -11,12 +11,12 @@ Use the following in your scripts to get access to the arguments passed to the p
 **Note:** Examples included in the following modules
 * Automatically show quick info section
 
-### Logging in Pipeline
+### Logging In
 
 **Note:** Examples included in the following modules
 * Enforce user password expiration
 
-### Logout Pipeline
+### Logout
 
 **Note:** Examples included in the following modules
 * Unlock user items on logout
