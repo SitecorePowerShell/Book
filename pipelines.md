@@ -3,7 +3,7 @@
 Use the following in your scripts to get access to the arguments passed to the processor.
 
 ```powershell
- $pipelineArgs = Get-Variable -Name pipelineArgs -ValueOnly 
+ $pipelineArgs = Get-Variable -Name pipelineArgs -ValueOnly
  ```
 
 ### Logged In
@@ -15,6 +15,13 @@ Use the following in your scripts to get access to the arguments passed to the p
 
 **Note:** Examples included in the following modules
 * Enforce user password expiration
+
+```powershell
+$pipelineArgs.Username
+$pipelineArgs.Password
+$pipelineArgs.Success
+$pipelineArgs.StartUrl
+```
 
 ### Logout
 
