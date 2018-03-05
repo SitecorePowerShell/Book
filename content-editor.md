@@ -37,6 +37,8 @@ The *Gutter* integration allows for full flexibility of adding a gutter element.
 
  ![Publishing Status](images/screenshots/content-editor/gutter-publishing-status.png)
 
+---
+
 ### Insert Item
 
 The *Insert Item* integration allows for insert options in the context menu. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
@@ -51,6 +53,8 @@ The *Insert Item* integration allows for insert options in the context menu. Rul
 
   ![Insert Scheduled Task](images/screenshots/content-editor/insert-item-powershell-task.png)
 * Platform
+
+---
 
 ### Ribbon
 
@@ -73,9 +77,19 @@ $item = Get-Item -Path .
 Show-Alert -Title $item.Name
 ```
 
+**Button Size:**
+
+There is a way to generate small buttons and combo buttons. You simply need to prefix the script name and SPE will generate accordingly.
+
+* `Small$[SCRIPT_NAME]`
+* `Combo$[SCRIPT_NAME]`
+* `SmallCombo$[SCRIPT_NAME]`
+
 See the birth of [extending the Sitecore ribbon with powershell scripts][1] by Adam.
 
 Check out an example of the [5 steps to extending the Sitecore ribbon][3] in the wild by Toby.
+
+---
 
 ### Warning
 
