@@ -87,6 +87,9 @@ There is a way to generate small buttons and combo buttons. You simply need to p
 
 ![Small and Combo Buttons](/images/screenshots/content-editor/ribbon-script-button-size.png)
 
+![Buttons in the Ribbon](/images/screenshots/content-editor/ribbon-script-button-size2.png)
+
+
 See the birth of [extending the Sitecore ribbon with powershell scripts][1] by Adam.
 
 Check out an example of the [5 steps to extending the Sitecore ribbon][3] in the wild by Toby.
