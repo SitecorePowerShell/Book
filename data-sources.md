@@ -41,7 +41,7 @@ script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Ge
 ```
 3. Enjoy the results.
 
-![](/images/screenshots/data-sources/droplist.png)
+![Droplink query](/images/screenshots/data-sources/droplist.png)
 
 ### Rendering Data Source
 
