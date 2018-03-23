@@ -40,7 +40,7 @@ script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Ge
 
 ![](/images/screenshots/data-sources/droplist.png)
 
-Rendering Data Source
+### Rendering Data Source
 
 //TODO
 
@@ -50,3 +50,4 @@ Rendering Data Source
 
 [1]: http://blog.najmanowicz.com/2013/04/17/powershell-scripted-datasources-in-sitecore-part-1/
 [2]: http://blog.najmanowicz.com/2013/05/06/powershell-scripted-data-sources-in-sitecore-part-2/
+[3]: https://www.sitecorespark.com/blog/2018/3/using-sitecore-powershell-scripts-for-datasources
