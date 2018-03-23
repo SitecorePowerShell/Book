@@ -31,7 +31,6 @@ Below are field types you may wish to use a script:
 
 
 1. Begin by adding a new script library called *Data Sources* followed by adding a script. You can call it something like *Get-GlobalOption*.
- 
 ```powershell
 # The script must return an item. This is useful for populating a Droplink.
 Get-Childitem "master:" -ID "{EC4CB37D-90FF-4B0C-BEC5-0A3E73A37F27}"
