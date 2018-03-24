@@ -43,7 +43,11 @@ script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Ge
 
 ![Droplink query](/images/screenshots/data-sources/droplist.png)
 
-### Rendering Data Source
+### Rendering Data Source Roots
+
+//TODO
+
+### Rendering Data Source Items
 
 //TODO
 
