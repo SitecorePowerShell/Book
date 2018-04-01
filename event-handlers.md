@@ -6,7 +6,7 @@ Steps required to activate this integration include the following:
  1. Enable the *Cognifide.PowerShell.Events.config* or apply your own patch the required events enabled.
  2. Add a new integration point library to your a new or existing module.
  3. Add a new script to the appropriate event library.
- 4. Configure an Enable Rule if needed.
+ 4. Configure an **Enable Rule** if needed.
  5. Profit.
  
  ### Enable Configuration
