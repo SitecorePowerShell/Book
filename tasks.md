@@ -41,6 +41,8 @@ Run or edit the scheduled task:
 
 The scheduled task is capable of running 1-to-many scripts. Choose all that apply for the selected task.
 
+**Note:** Make use of the **Enable Rule** to take advantage of the rules engine.
+
 ![Dialog to Select Task Scripts](images/screenshots/task-createtaskwithscripts.png)
 
 The task schedule has an intuitive dialog for working with and changing the frequency. 
