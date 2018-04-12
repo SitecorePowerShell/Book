@@ -1,15 +1,15 @@
-# Get-Jobs
+# Get-SitecoreJob
  
 Returns list of the current sitecore jobs 
 
 ## Syntax 
  
-Get-Jobs
+Get-SitecoreJob
 
  
 ## Detailed Description 
  
-The Get-Jobs command returns the list of the currently running jobs of Sitecore.
+The Get-SitecoreJob command returns the list of the currently running jobs of Sitecore.
  
 © 2010-2017 Implemented by Vangasewinkel Benjamin using the Adam Najmanowicz, Michael West Sitecore PowerShell Extensions. All rights reserved. 
  
@@ -34,7 +34,7 @@ Help Author: Vangansewinkel Benjamin
  
 ```powershell   
  
-PS master:\> Get-Jobs
+PS master:\> Get-SitecoreJob
 
 Category     : PowerShell
 Handle       : b62d9129-298a-4630-bb37-d725e5ce3bbf;DCI5CG6011F3Y-sc81u3contact
@@ -73,7 +73,7 @@ MessageQueue : Sitecore.Jobs.AsyncUI.MessageQueue
  
 ```powershell   
  
-PS master:\> $jobs = Get-Jobs
+PS master:\> $jobs = Get-SitecoreJob
 PS master:\> $jobs[0].Status
 
 Category     : PowerShell
@@ -94,7 +94,7 @@ MessageQueue : Sitecore.Jobs.AsyncUI.MessageQueue
  
 ```powershell   
  
-PS master:\> get-Jobs | Show-ListView -Property "Category", "IsDone", "Name", "QueueTime", `
+PS master:\> Get-SitecoreJob | Show-ListView -Property "Category", "IsDone", "Name", "QueueTime", `
 	@{Label="Status Expiry"; Expression={$_.Status.Expiry} },
 	@{Label="Status Failed"; Expression={$_.Status.Failed} },
 	@{Label="Status State"; Expression={$_.Status.State} },
@@ -103,7 +103,7 @@ PS master:\> get-Jobs | Show-ListView -Property "Category", "IsDone", "Name", "Q
 	@{Label="Status Message"; Expression={$_.Status.Messages} }
 ``` 
 
-![Example 3](../../images/screenshots/get-jobs-listview.png) 
+![Example 3](../../images/screenshots/get-sitecorejobs-listview.png) 
 
  
 ## Related Topics 
