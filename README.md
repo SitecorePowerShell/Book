@@ -1,6 +1,6 @@
-# ![](images/logos/logo-45x45.jpg) Sitecore PowerShell Extensions: a command line and scripting tool
+# Introduction
 
-![Sitecore PowerShell Extensions](/images/screenshots/cover/readme-console-ise.png)
+![Sitecore PowerShell Extensions](.gitbook/assets/readme-console-ise.png)
 
 The [Sitecore PowerShell Extensions](https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx) \(SPE\) module is a Sitecore development accelerator which can drastically increase your productivity and curtail the amount of time it takes to deliver a Sitecore solution.
 
@@ -8,15 +8,15 @@ The module provides a command line \(CLI\) and scripting environment \(ISE\) for
 
 Below are some of the things you get with SPE:
 
-* [Index Viewer](toolbox.md)
-* [Scheduled Task Manager](toolbox.md)
-* [Report Runner](reports.md)
-* [User Session Manager](toolbox.md)
-* [Bulk Rename/Remove/Create Tool](working-with-items.md)
+* [Index Viewer](modules/integration-points/toolbox.md)
+* [Scheduled Task Manager](modules/integration-points/toolbox.md)
+* [Report Runner](modules/integration-points/reports/)
+* [User Session Manager](modules/integration-points/toolbox.md)
+* [Bulk Rename/Remove/Create Tool](working-with-items/)
 * Data Importer
 * ~~Professional Chef~~
 
-#### Bundled Tools
+## Bundled Tools
 
 The following are some helpful modules distributed with SPE.
 
@@ -46,7 +46,7 @@ The following are some helpful modules distributed with SPE.
   * Random desktop background
   * Unlock user items on logout
 
-#### Community Add-ons
+## Community Add-ons
 
 The following are Sitecore modules that enhance the SPE experience.
 
@@ -54,7 +54,7 @@ The following are Sitecore modules that enhance the SPE experience.
 * [Multi-Item Publish](http://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/) : [Richard Seal](https://twitter.com/rich_seal)
 * [ActiveCommerce PowerShell Extensions](https://github.com/ActiveCommerce/activecommerce-powershell-extensions) : [Nick Wesselman](https://twitter.com/techphoria414)
 
-#### Endorsements
+## Endorsements
 
 _"There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API"_ - [Alistair Deneys](https://twitter.com/adeneys) - Sitecore Symposium 2012
 
@@ -66,20 +66,20 @@ Have to include it as a default install for all sandboxes now."_ - [Alex Shyba](
 
 _"Thank you for the GitBook. Invaluable Reference."_ - [Nick Wesselman](https://twitter.com/techphoria414)'s [tweet](https://twitter.com/techphoria414/status/632033887632289792)
 
-#### Training Material
+## Training Material
 
-The following book should provide you with enough information to use and be  productive with SPE. Don't worry, you will be able to use it without having to write any code.
+The following book should provide you with enough information to use and be productive with SPE. Don't worry, you will be able to use it without having to write any code.
 
 We have a video series available to help walk you through the module [here](https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b).
 
 We also maintain a comprehensive list of links to [blogs and videos](http://blog.najmanowicz.com/sitecore-powershell-console/) to help you on your journey to SPE awesomeness. Happy coding!
 
-#### Development Team
+## Development Team
 
 * [Adam Najmanowicz](http://blog.najmanowicz.com/) \| [@adamnaj](https://twitter.com/adamnaj)
 * [Michael West](http://michaellwest.blogspot.com/) \| [@michaelwest101](https://twitter.com/MichaelWest101)
 
-#### Help and Support
+## Help and Support
 
 See the [Troubleshooting](troubleshooting.md) section for some common fixes.
 
