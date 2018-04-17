@@ -257,6 +257,33 @@ $item._.Image.Alt
 
 **Note:** You can use `._` and `.PSFields` to gain access to the typed field.
 
+**Example:** The following accesses the _Link_ field casted to the type `Sitecore.Data.Fields.LinkField`. From there you can see all of the available properties.
+
+```text
+PS master:\> $currentItem = Get-Item 'master:\content\home\sample-item'
+PS master:\> $currentItem.PSFields."LinkFieldName"
+
+Anchor       :
+Class        :
+InternalPath : /sitecore/content/home/sample-item/
+IsInternal   : True
+IsMediaLink  : False
+LinkType     : internal
+MediaPath    :
+QueryString  :
+Target       :
+TargetID     : {263293D3-B1B3-4C2C-9A75-6BD418F376BC}
+TargetItem   : Sitecore.Data.Items.Item
+Text         : CLICK HERE
+Title        :
+Url          :
+Root         : link
+Xml          : #document
+InnerField   : <link linktype="internal" text="CLICK HERE" querystring="" target="" id="{263293D3-B1B3-4C2C-9A75-6BD418F376BC}" />
+Value        : <link linktype="internal" text="CLICK HERE" querystring="" target="" id="{263293D3-B1B3-4C2C-9A75-6BD418F376BC}" />
+
+```
+
 ### Changing item properties
 
 We often see the following two ways of accessing and changing fields used in scripts. One uses `Set-ItemProperty` and the other is more natural to a Sitecore developer.
