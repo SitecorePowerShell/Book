@@ -22,7 +22,7 @@ Here's the url broken down:
 
 ## Security
 
-The integration point can be completely disabled through configuration as described [here](../../security/) for Restfulv2.
+The integration point is disabled by default and can be enabled through configuration as described [here](../../security/). See **Restfulv2**.
 
 ## References
 
