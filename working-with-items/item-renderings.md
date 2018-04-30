@@ -85,5 +85,9 @@ foreach ( $item in Get-ChildItem -Item $rootItem -Recurse )
 }
 ```
 
-**Example:** The following copies or moves renderings from one device to another \(within Shared layout\).
+**Example:** The following removes a datasource from a rendering on the FinalLayout.
+
+```powershell
+Get-Rendering -Item $item -PlaceHolder "main" | Foreach-Object { Set-Rendering -Item $item -Instance $_ -DataSource $null -FinalLayout }
+```
 
