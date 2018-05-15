@@ -110,13 +110,24 @@ Invoke-JavaScript -Script "alert('hello from powershell');"
 
 ![Invoke JavaScript](.gitbook/assets/interact-with-browser-using-js.gif)
 
-**Gist:** Template Complexity Analysis
+**Example:** [Remote Package Installation](https://gist.github.com/michaellwest/14e9ef98f9e8b450c1b39813d13cbc50)
 
-{% gist id="https://gist.github.com/AdamNaj/035366c698ef98e1b00a574eb085e790" %}{% endgist %} 
+```powershell
+Import-Module -Name SPE -Force
 
-**Gist:** Remote Package Installation
+$packageName = "$($SitecorePackageFolder)\[PACKAGE].zip"
 
-{% gist id="https://gist.github.com/michaellwest/14e9ef98f9e8b450c1b39813d13cbc50" %}{% endgist %} 
+$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "http://remotesitecore"
+Test-RemoteConnection -Session $session -Quiet
+$jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
+    [Sitecore.Configuration.Settings+Indexing]::Enabled = $false
+    Get-SearchIndex | ForEach-Object { Stop-SearchIndex -Name $_.Name }
+    Import-Package -Path "$($SitecorePackageFolder)\$($using:packageName)" -InstallMode Merge -MergeMode Merge
+    [Sitecore.Configuration.Settings+Indexing]::Enabled = $true
+} -AsJob
+Wait-RemoteScriptSession -Session $session -Id $jobId -Delay 5 -Verbose
+Stop-ScriptSession -Session $session
+```
 
 Not seeing what you are looking for? You can always check out some Github Gists that [Adam](https://gist.github.com/adamnaj) and [Michael](https://gist.github.com/michaellwest) have shared.
 
