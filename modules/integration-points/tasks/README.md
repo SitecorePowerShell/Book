@@ -4,7 +4,7 @@ The task scheduler is a great way to run scripts in a periodic fashion. You may 
 
 ## Video Tutorial
 
-![Scheduled Task Editor](http://img.youtube.com/vi/Q6QKqRwrkuU/0.jpg)
+![Scheduled Task Editor](https://img.youtube.com/vi/Q6QKqRwrkuU/0.jpg)
 
 ## Scheduled Task Command
 
@@ -55,7 +55,7 @@ The task schedule has an intuitive dialog for working with and changing the freq
 * Media Library Maintenance
 * System Maintenance
 
-See how Adam added \[powershell driven Sitecore scheduled tasks\]\[1\].
+See how Adam added [powershell driven Sitecore scheduled tasks][1].
 
-\[1\]: [http://blog.najmanowicz.com/2011/11/29/powershell-driven-sitecore-scheduled-tasks/](http://blog.najmanowicz.com/2011/11/29/powershell-driven-sitecore-scheduled-tasks/)
+[1]: [https://blog.najmanowicz.com/2011/11/29/powershell-driven-sitecore-scheduled-tasks/](https://blog.najmanowicz.com/2011/11/29/powershell-driven-sitecore-scheduled-tasks/)
 

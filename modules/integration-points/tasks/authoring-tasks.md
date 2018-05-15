@@ -10,5 +10,5 @@ The module provides the ability to create, edit, and run scheduled tasks.
 
 ## References
 
-* [Custom Scheduled Task by Mike Reynolds](http://sitecorejunkie.com/2014/05/31/execute-powershell-scripts-in-scheduled-tasks-using-sitecore-powershell-extensions/)
+* [Custom Scheduled Task by Mike Reynolds](https://sitecorejunkie.com/2014/05/31/execute-powershell-scripts-in-scheduled-tasks-using-sitecore-powershell-extensions/)
 

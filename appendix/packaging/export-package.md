@@ -124,6 +124,6 @@ $package.Sources.Add($source);
 * [New-ItemSource](new-itemsource.md)
 * [New-Package](new-package.md)
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
-* [http://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/](http://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/) 
+* [https://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/](https://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/) 
 * [https://gist.github.com/AdamNaj/f4251cb2645a1bfcddae](https://gist.github.com/AdamNaj/f4251cb2645a1bfcddae) 
 

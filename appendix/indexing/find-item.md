@@ -58,7 +58,7 @@ Find-Item -Index sitecore\_master\_index `-Criteria @{Filter = "StartsWith"; Fie
 
 Works on Sitecore 7.5 and later versions only.
 
-Filtering Criteria using Dynamic Linq syntax: [http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
+Filtering Criteria using Dynamic Linq syntax: [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ Filtering Criteria using Dynamic Linq syntax: [http://weblogs.asp.net/scottgu/dy
 
 Works on Sitecore 7.5 and later versions only.
 
-An Array of objects for Dynamic Linq "-Where" parameter as explained in: [http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
+An Array of objects for Dynamic Linq "-Where" parameter as explained in: [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ An Array of objects for Dynamic Linq "-Where" parameter as explained in: [http:/
 
 Works on Sitecore 7.5 and later versions only.
 
-Field by which the search results sorting should be performed. Dynamic Linq ordering syntax used. [http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
+Field by which the search results sorting should be performed. Dynamic Linq ordering syntax used. [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -192,6 +192,6 @@ Find-Item `
 * Get-Item
 * Get-ChildItem
 * [https://gist.github.com/AdamNaj/273458beb3f2b179a0b6](https://gist.github.com/AdamNaj/273458beb3f2b179a0b6) 
-* [http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](http://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library) 
+* [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library) 
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 

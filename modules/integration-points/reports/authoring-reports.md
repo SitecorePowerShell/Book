@@ -35,7 +35,7 @@ The **Authorable Reports** module has a few points of interest.
 
 **Examples:**
 
-* [Creating Beautiful Sitecore Reports Easily with PowerShell Extensions](http://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/)
+* [Creating Beautiful Sitecore Reports Easily with PowerShell Extensions](https://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/)
 
 ## Static Reports
 
@@ -43,12 +43,12 @@ The **Content Reports** module includes other reports used for auditing. Below a
 
 **Examples:**
 
-* [Images with an empty alt field](http://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions)
-* [Unused media items](http://michaellwest.blogspot.com/2014/04/reports-with-sitecore-powershell.html)
+* [Images with an empty alt field](https://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions)
+* [Unused media items](https://michaellwest.blogspot.com/2014/04/reports-with-sitecore-powershell.html)
 
 ## Report Actions
 
-Content extracted from [Turn Your Sitecore Powershell Reports into Applications with Action Scripts](http://blog.najmanowicz.com/2015/05/05/turn-your-sitecore-powershell-reports-into-applications-with-action-scripts/) article written by Adam.
+Content extracted from [Turn Your Sitecore Powershell Reports into Applications with Action Scripts](https://blog.najmanowicz.com/2015/05/05/turn-your-sitecore-powershell-reports-into-applications-with-action-scripts/) article written by Adam.
 
 Actions are simply commands powered by scripts and with visibility dependent on certain conditions like the .Net class of the object that is displayed or perhaps other session settings.
 
@@ -95,7 +95,7 @@ You can have multiple actions defined with dynamic visibility. The actions are g
 
 #### Using rules to control action visibility
 
-Rules add the full power of the Sitecore rules engine – similarly to what you can do on context menu items or ribbon actions in Content Editor. Some examples where this can be useful include only enabling or disabling the action for items located under a specific branch of the tree or if a [persistent session](http://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/) exists.
+Rules add the full power of the Sitecore rules engine – similarly to what you can do on context menu items or ribbon actions in Content Editor. Some examples where this can be useful include only enabling or disabling the action for items located under a specific branch of the tree or if a [persistent session](https://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/) exists.
 
 The following screenshot shows how to create an action that only appears in reports that list objects of type `Item` that are of template `Schedule`.
 
@@ -222,5 +222,5 @@ Get-ChildItem master:\ |
 
 ## Examples from the community!
 
-[Active Commerce](http://www.activecommerce.com/) for Sitecore product has published reports on Github that you can checkout [here](https://github.com/ActiveCommerce/activecommerce-powershell-extensions).
+[Active Commerce](https://www.activecommerce.com/) for Sitecore product has published reports on Github that you can checkout [here](https://github.com/ActiveCommerce/activecommerce-powershell-extensions).
 

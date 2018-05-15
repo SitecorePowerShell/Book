@@ -75,6 +75,6 @@ Get-Item -Path "master:\content\home" | Add-ItemAcl -AccessRules $aclForEveryone
 
 ## References
 
-* [Using Get-User command to query over 200k users](http://stackoverflow.com/questions/34982451/sitecore-powershell-get-user-command/34994302#34994302)
-* [Explore Sitecore Users Properties](http://lets-share.senktas.net/2017/02/explore-sitecore-users.html)
+* [Using Get-User command to query over 200k users](https://stackoverflow.com/questions/34982451/sitecore-powershell-get-user-command/34994302#34994302)
+* [Explore Sitecore Users Properties](https://lets-share.senktas.net/2017/02/explore-sitecore-users.html)
 

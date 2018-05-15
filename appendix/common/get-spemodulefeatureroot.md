@@ -108,6 +108,6 @@ Get-SpeModuleFeatureRoot -Module $module -Feature listViewExport -ReturnPath
 ## Related Topics
 
 * [Get-SpeModule](get-spemodule.md)
-* [http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/](http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/) 
+* [https://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/](https://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/) 
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 

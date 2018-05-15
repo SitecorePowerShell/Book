@@ -15,7 +15,7 @@ The setup of the module only requires a few steps: 1. In the Sitecore instance i
   1. Enable the _remoting_ service through a configuration patch. See the [Security](security/) page for more details.
   2. Grant the _remoting_ service user account through a configuration patch and granting acess to the appropriate role. See the [Security](security/) page for more details.
 
-![SPE Remoting Module](http://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)
+![SPE Remoting Module](https://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)
 
 The remoting services use a combination of a SOAP service \(ASMX\) and HttpHandler \(ASHX\). Remoting features are disabled by default and should be configured as needed as can be seen in the [security section here](security/). The SOAP service may require additional Windows authentication using the `-Credential` parameter which is common when logged into a Windows Active Directory domain.
 
@@ -77,7 +77,7 @@ Stop-ScriptSession -Session $session
 
 ### Script Sessions and Web API Tutorial
 
-![SPE Web API](http://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)
+![SPE Web API](https://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)
 
 ## Advanced Script Sessions
 
@@ -126,7 +126,7 @@ Invoke-RemoteScript -Session $session -ScriptBlock {
 }
 ```
 
-**Example:** The following redirects messages from `Write-Verbose` to the remote session. The data returned will be both `System.String` and `Deserialized.System.Management.Automation.VerboseRecord` so be sure to filter it out when needed. More information about the redirection `4>&1` can be read \[here\]\[4\].
+**Example:** The following redirects messages from `Write-Verbose` to the remote session. The data returned will be both `System.String` and `Deserialized.System.Management.Automation.VerboseRecord` so be sure to filter it out when needed. More information about the redirection `4>&1` can be read [here][4].
 
 ```text
 Invoke-RemoteScript -ScriptBlock {
@@ -153,8 +153,8 @@ Invoke-RemoteScript -ScriptBlock {
 
 ## References:
 
-* Michael's follow up post on [Remoting](http://michaellwest.blogspot.com/2015/07/sitecore-powershell-extensions-remoting.html)
-* Adam's initial post on [Remoting](http://blog.najmanowicz.com/2014/10/10/sitecore-powershell-extensions-remoting/)
+* Michael's follow up post on [Remoting](https://michaellwest.blogspot.com/2015/07/sitecore-powershell-extensions-remoting.html)
+* Adam's initial post on [Remoting](https://blog.najmanowicz.com/2014/10/10/sitecore-powershell-extensions-remoting/)
 
-\[4\]: [https://blogs.technet.microsoft.com/heyscriptingguy/2014/03/30/understanding-streams-redirection-and-write-host-in-powershell/](https://blogs.technet.microsoft.com/heyscriptingguy/2014/03/30/understanding-streams-redirection-and-write-host-in-powershell/)
+[4]: [https://blogs.technet.microsoft.com/heyscriptingguy/2014/03/30/understanding-streams-redirection-and-write-host-in-powershell/](https://blogs.technet.microsoft.com/heyscriptingguy/2014/03/30/understanding-streams-redirection-and-write-host-in-powershell/)
 

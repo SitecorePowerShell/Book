@@ -124,5 +124,5 @@ Console      $scriptSession$|zwlyrcmmzwisv22djsv0ej2a|8d5c3e63-3fed-0532-e7c5-76
 * [Stop-ScriptSession](stop-scriptsession.md)
 * [Wait-ScriptSession](wait-scriptsession.md)
 * [https://git.io/spe](https://git.io/spe) 
-* [http://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/](http://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/) 
+* [https://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/](https://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/) 
 

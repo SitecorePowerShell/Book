@@ -61,7 +61,7 @@ Supported parameters:
 On top of the ignored fields in the `-IgnoredFields` the following fields are ignored as configured within the `Cognifide.PowerShell.config` file:
 
 ```markup
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>
       <translation>
@@ -84,5 +84,5 @@ On top of the ignored fields in the `-IgnoredFields` the following fields are ig
 ### References
 
 * [Issue 184](https://github.com/SitecorePowerShell/Console/issues/184)
-* [Remove All Content items in French](http://stackoverflow.com/questions/29928540/powershell-script-to-remove-all-content-items-for-french-version-in-sitecore)
+* [Remove All Content items in French](https://stackoverflow.com/questions/29928540/powershell-script-to-remove-all-content-items-for-french-version-in-sitecore)
 

@@ -129,6 +129,6 @@ PS master:\> Get-item "master:\system\Modules\PowerShell\Script Library\Copy Ren
 ## Related Topics
 
 * [Get-SpeModuleFeatureRoot](get-spemodulefeatureroot.md)
-* [http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/](http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/) 
+* [https://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/](https://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/) 
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 

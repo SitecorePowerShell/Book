@@ -105,7 +105,7 @@ Export-UpdatePackage -Path C:\temp\SerializationDiff.update -CommandList $diff -
 
 * [Get-UpdatePackageDiff](get-updatepackagediff.md)
 * [Install-UpdatePackage](install-updatepackage.md)
-* [http://sitecoresnippets.blogspot.com/2012/10/sitecore-courier-effortless-packaging.html](http://sitecoresnippets.blogspot.com/2012/10/sitecore-courier-effortless-packaging.html) 
+* [https://sitecoresnippets.blogspot.com/2012/10/sitecore-courier-effortless-packaging.html](https://sitecoresnippets.blogspot.com/2012/10/sitecore-courier-effortless-packaging.html) 
 * [https://github.com/adoprog/Sitecore-Courier](https://github.com/adoprog/Sitecore-Courier) 
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 

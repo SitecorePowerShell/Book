@@ -85,5 +85,5 @@ PS master:\> Get-User -Filter * | Disable-User
 
 ## Related Topics
 
-* [http://michaellwest.blogspot.com](http://michaellwest.blogspot.com) 
+* [https://michaellwest.blogspot.com](https://michaellwest.blogspot.com) 
 

@@ -18,7 +18,7 @@ Navigate to _Sitecore -&gt; PowerShell Toolbox_ and after selecting you should s
 
 ### Index Viewer
 
-This tool provides similar functionality to the [Index Viewer](http://marketplace.sitecore.net/en/Modules/I/Index_Viewer.aspx) module. Search and rebuild the index on-demand.
+This tool provides similar functionality to the [Index Viewer](https://marketplace.sitecore.net/en/Modules/I/Index_Viewer.aspx) module. Search and rebuild the index on-demand.
 
 ### Logged in Session Manager
 
@@ -34,7 +34,7 @@ View the list of SPE sessions and "kill" them as needed.
 
 ### Create Anti-Package
 
-This tool provides similar functionality to the \[Sitecore Rocks\]\[2\] module.
+This tool provides similar functionality to the [Sitecore Rocks][2] module.
 
 ### Re-create Site from Sitemap
 
@@ -74,5 +74,5 @@ To create your own Toolbox item take the following steps: 1. Create the _Toolbox
 
      ![Toolbox Item](../../.gitbook/assets/toolbox-newitem.png)
 
-\[2\]: [https://marketplace.sitecore.net/en/Modules/S/Sitecore\_Rocks.aspx](https://marketplace.sitecore.net/en/Modules/S/Sitecore_Rocks.aspx)
+[2]: [https://marketplace.sitecore.net/en/Modules/S/Sitecore\_Rocks.aspx](https://marketplace.sitecore.net/en/Modules/S/Sitecore_Rocks.aspx)
 

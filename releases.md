@@ -1,6 +1,6 @@
 # Releases
 
-Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx) or report issues on \[Github\]\[2\].
+Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx) or report issues on [Github][2].
 
 ## Version 4.7
 
@@ -238,5 +238,5 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 * * Through SPE Remoting you are now able to cleanup background `ScriptSessions` through the use of `Stop-ScriptSession` [594](https://github.com/SitecorePowerShell/Console/issues/594) [593](https://github.com/SitecorePowerShell/Console/issues/593).
 * Users with more restricted access caused an issue with function caching [592](https://github.com/SitecorePowerShell/Console/issues/592).
 
-\[2\]: [https://git.io/spe](https://git.io/spe)
+[2]: [https://git.io/spe](https://git.io/spe)
 

@@ -59,8 +59,8 @@ Below are field types you may wish to use a script:
 
 ## References
 
-* PowerShell Scripted Data Sources [part 1](http://blog.najmanowicz.com/2013/04/17/powershell-scripted-datasources-in-sitecore-part-1/) and [part 2](http://blog.najmanowicz.com/2013/05/06/powershell-scripted-data-sources-in-sitecore-part-2/)
-* Sitecore Spark \[article\]\[3\] on using scripted datasources
+* PowerShell Scripted Data Sources [part 1](https://blog.najmanowicz.com/2013/04/17/powershell-scripted-datasources-in-sitecore-part-1/) and [part 2](https://blog.najmanowicz.com/2013/05/06/powershell-scripted-data-sources-in-sitecore-part-2/)
+* Sitecore Spark [article][3] on using scripted datasources
 
-\[3\]: [https://www.sitecorespark.com/blog/2018/3/using-sitecore-powershell-scripts-for-datasources](https://www.sitecorespark.com/blog/2018/3/using-sitecore-powershell-scripts-for-datasources)
+[3]: [https://www.sitecorespark.com/blog/2018/3/using-sitecore-powershell-scripts-for-datasources](https://www.sitecorespark.com/blog/2018/3/using-sitecore-powershell-scripts-for-datasources)
 

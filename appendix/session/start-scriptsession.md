@@ -225,6 +225,6 @@ Start-ScriptSession -ScriptBlock { cd master:\; Start-Sleep -Seconds 4 } -Id "Ba
 * [Remove-ScriptSession](remove-scriptsession.md)
 * [Stop-ScriptSession](stop-scriptsession.md)
 * [Wait-ScriptSession](wait-scriptsession.md)
-* [http://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/](http://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/) 
+* [https://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/](https://blog.najmanowicz.com/2014/10/26/sitecore-powershell-extensions-persistent-sessions/) 
 * [https://git.io/spe](https://git.io/spe) 
 

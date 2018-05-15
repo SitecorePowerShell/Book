@@ -172,7 +172,7 @@ The preferred way to override the settings is through the use of a configuration
 **Example:** The following enables the file and media downloads.
 
 ```markup
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>
       <services>
@@ -191,7 +191,7 @@ The preferred way to override the settings is through the use of a configuration
 **Example:** The following enables the SPE Remoting service and requires a secure connection using HTTPS.
 
 ```markup
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>
       <services>
@@ -214,7 +214,7 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 **Example:** The following configuration defines the roles that have access to use SPE Remoting. Any role previously defined in the `<authorization/>` section is removed and custom roles are then added.
 
 ```markup
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>
       <services>
@@ -267,7 +267,7 @@ The following files are the bare minimum required to support SPE web services. T
 You will also need to patch the configuration with the following:
 
 ```markup
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
     <sitecore>
         <controlSources>
             <source mode="on" namespace="Cognifide.PowerShell.Client.Controls" assembly="Cognifide.PowerShell">

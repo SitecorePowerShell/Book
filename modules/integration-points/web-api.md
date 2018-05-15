@@ -2,7 +2,7 @@
 
 The **Web API** integration point exposes scripts through a url. This can be especially helpful when a script needs to be executed on the server but without knowledge of the script contents.
 
-The url will look something like the following: [http://remotesitecore/-/script/v2/master/homeanddescendants?user=sitecore\admin&password=b](http://remotesitecore/-/script/v2/master/homeanddescendants?user=sitecore\admin&password=b)
+The url will look something like the following: [https://remotesitecore/-/script/v2/master/homeanddescendants?user=sitecore\admin&password=b](https://remotesitecore/-/script/v2/master/homeanddescendants?user=sitecore\admin&password=b)
 
 Here's the url broken down:
 

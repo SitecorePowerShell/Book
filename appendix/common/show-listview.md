@@ -248,8 +248,8 @@ PS master:\> Get-ItemReferrer -path 'master:\templates\Sample\Sample Item' |
 * [Show-ModalDialog](show-modaldialog.md)
 * [Show-Result](show-result.md)
 * [Show-YesNoCancel](show-yesnocancel.md)
-* [http://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/](http://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/) 
-* [http://michaellwest.blogspot.com/2014/04/reports-with-sitecore-powershell.html](http://michaellwest.blogspot.com/2014/04/reports-with-sitecore-powershell.html) 
-* [http://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions/](http://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions/) 
+* [https://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/](https://blog.najmanowicz.com/2014/10/25/creating-beautiful-sitecore-reports-easily-with-powershell-extensions/) 
+* [https://michaellwest.blogspot.com/2014/04/reports-with-sitecore-powershell.html](https://michaellwest.blogspot.com/2014/04/reports-with-sitecore-powershell.html) 
+* [https://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions/](https://sitecorejunkie.com/2014/05/28/create-a-custom-report-in-sitecore-powershell-extensions/) 
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 

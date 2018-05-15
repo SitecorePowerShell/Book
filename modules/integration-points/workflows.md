@@ -25,7 +25,7 @@ See how Adam integrated [workflow actions][2] if you are really curious to know 
 
 ## References
 
-* [Fixing problematic content or Workflow state](http://www.cognifide.com/blogs/sitecore/feel-the-power-in-powershell/)
+* [Fixing problematic content or Workflow state](https://www.cognifide.com/blogs/sitecore/feel-the-power-in-powershell/)
 
-[2]: [http://blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/](http://blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/)
+[2]: [https://blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/](https://blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/)
 

@@ -6,7 +6,7 @@ Some benefits to using modules:
 
 * The integration points contained within each module can be enabled or disabled globally. For this to take full affect the integration should be rebuilt in the ISE.
 * Organization of custom scripts is a cinch.
-* More reasons can be found in Adam's \[post\]\[1\].
+* More reasons can be found in Adam's [post][1].
 
 **Note:** The _Platform_ module is one you should avoid changing.
 
@@ -33,5 +33,5 @@ Getting started with your own module is a short process and something you should
 
 6. Open the ISE, switch to the _Settings_ tab, and rebuild integrations.
 
-\[1\]: [http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/](http://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/)
+[1]: [https://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/](https://blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/)
 

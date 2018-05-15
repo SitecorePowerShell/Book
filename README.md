@@ -51,14 +51,14 @@ The following are some helpful modules distributed with SPE.
 The following are Sitecore modules that enhance the SPE experience.
 
 * [SPE Image Importer](https://marketplace.sitecore.net/en/Modules/S/SPE_Image_Uploader_Module10.aspx) : [Himadri Chakrabarti](https://twitter.com/himadric)
-* [Multi-Item Publish](http://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/) : [Richard Seal](https://twitter.com/rich_seal)
+* [Multi-Item Publish](https://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/) : [Richard Seal](https://twitter.com/rich_seal)
 * [ActiveCommerce PowerShell Extensions](https://github.com/ActiveCommerce/activecommerce-powershell-extensions) : [Nick Wesselman](https://twitter.com/techphoria414)
 
 ## Endorsements
 
 _"There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API"_ - [Alistair Deneys](https://twitter.com/adeneys) - Sitecore Symposium 2012
 
-Recommended by [John West](https://twitter.com/sitecorejohn) to use as a tool for [maximizing Sitecore developer productivity](http://www.sitecore.net/learn/blogs/technical-blogs/john-west-sitecore-blog/posts/2015/02/maximize-sitecore-developer-productivity.aspx).
+Recommended by [John West](https://twitter.com/sitecorejohn) to use as a tool for [maximizing Sitecore developer productivity](https://www.sitecore.net/learn/blogs/technical-blogs/john-west-sitecore-blog/posts/2015/02/maximize-sitecore-developer-productivity.aspx).
 
 _"Get a job done with a one liner!  
 Just provisioned a new language for the whole content tree with a one-liner. Whaaaat?  
@@ -72,12 +72,12 @@ The following book should provide you with enough information to use and be prod
 
 We have a video series available to help walk you through the module [here](https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b).
 
-We also maintain a comprehensive list of links to [blogs and videos](http://blog.najmanowicz.com/sitecore-powershell-console/) to help you on your journey to SPE awesomeness. Happy coding!
+We also maintain a comprehensive list of links to [blogs and videos](https://blog.najmanowicz.com/sitecore-powershell-console/) to help you on your journey to SPE awesomeness. Happy coding!
 
 ## Development Team
 
-* [Adam Najmanowicz](http://blog.najmanowicz.com/) \| [@adamnaj](https://twitter.com/adamnaj)
-* [Michael West](http://michaellwest.blogspot.com/) \| [@michaelwest101](https://twitter.com/MichaelWest101)
+* [Adam Najmanowicz](https://blog.najmanowicz.com/) \| [@adamnaj](https://twitter.com/adamnaj)
+* [Michael West](https://michaellwest.blogspot.com/) \| [@michaelwest101](https://twitter.com/MichaelWest101)
 
 ## Help and Support
 

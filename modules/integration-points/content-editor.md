@@ -21,7 +21,7 @@ The _Context Menu_ integration allows for options in the context menu. Rules can
 
 * Task Management
 
-See how Adam added [context menu PowerShell scripts](http://blog.najmanowicz.com/2011/11/22/context-powershell-scripts-for-sitecore/).
+See how Adam added [context menu PowerShell scripts](https://blog.najmanowicz.com/2011/11/22/context-powershell-scripts-for-sitecore/).
 
 ## Gutter
 
@@ -94,7 +94,7 @@ There is a way to generate small buttons and combo buttons. You simply need to p
 
 ![Buttons in the Ribbon](../../.gitbook/assets/ribbon-script-button-size2.png)
 
-See the birth of [extending the Sitecore ribbon with powershell scripts](http://blog.najmanowicz.com/2011/11/24/extending-sitecore-ribbon-with-powershell-scripts/) by Adam.
+See the birth of [extending the Sitecore ribbon with powershell scripts](https://blog.najmanowicz.com/2011/11/24/extending-sitecore-ribbon-with-powershell-scripts/) by Adam.
 
 Check out an example of the [5 steps to extending the Sitecore ribbon](https://sitecoresandbox.com/2016/06/03/content-editor-ribbon-buttons-using-sitecore-powershell-extensions/) in the wild by Toby.
 
@@ -114,7 +114,7 @@ The _Warning_ integration allows for notifications and commands in the Content E
 
 ![License Expiration Warning](../../.gitbook/assets/warning-notification-for-licensing.png)
 
-Alan provided a nice example \[here\]\[4\] on setting up the warning with commands.
+Alan provided a nice example [here][4] on setting up the warning with commands.
 
-\[4\]: [https://alan-null.github.io/2016/04/content-editor-notifications](https://alan-null.github.io/2016/04/content-editor-notifications)
+[4]: [https://alan-null.github.io/2016/04/content-editor-notifications](https://alan-null.github.io/2016/04/content-editor-notifications)
 

@@ -342,7 +342,7 @@ Great we've just changed it! Our property handlers take care of all the necessar
 
 To provide an example – I’ve extended my home with additional fields as follows:
 
-![Extended Sample Item](http://blog.najmanowicz.com/wp-content/uploads/2014/10/image.png)
+![Extended Sample Item](https://blog.najmanowicz.com/wp-content/uploads/2014/10/image.png)
 
 **Example:** The following assigns an image to the Image field.
 
@@ -368,7 +368,7 @@ What about fields that accept lists of items? We've got your back here as well.
 
 Let's see how our item looks in the Content editor after all the assignments that we've just performed:
 
-![ItemList Assignment](http://blog.najmanowicz.com/wp-content/uploads/2014/10/image1.png)
+![ItemList Assignment](https://blog.najmanowicz.com/wp-content/uploads/2014/10/image1.png)
 
 Great! Looks like it worked.
 
@@ -378,7 +378,7 @@ Those little improvements make your scripts much more succinct and understandabl
 
 As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`.
 
-Choosing this way is situational and will usually only be required if you're working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` trick used in [this blog post](http://bartlomiejmucha.com/en/blog).
+Choosing this way is situational and will usually only be required if you're working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` trick used in [this blog post](https://bartlomiejmucha.com/en/blog).
 
 **Example:** The following sets multiple automated properties while using the `Sitecore.Data.BulkUpdateContext`.
 
@@ -476,5 +476,5 @@ Remove-Item -Path "master:\content\home\sample item\Sample Item 3" -Permanently
 
 ### References
 
-* [Working with Sitecore Items in PowerShell Extensions](http://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
+* [Working with Sitecore Items in PowerShell Extensions](https://blog.najmanowicz.com/2014/10/12/working-with-sitecore-items-in-powershell-extensions/)
 

@@ -55,7 +55,7 @@ PS master:\> Get-Package -Path master:\content\home
 * [New-ItemSource](new-itemsource.md)
 * [New-Package](new-package.md)
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
-* [http://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/](http://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/) 
+* [https://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/](https://blog.najmanowicz.com/2011/12/19/continuous-deployment-in-sitecore-with-powershell/) 
 * [https://gist.github.com/AdamNaj/f4251cb2645a1bfcddae](https://gist.github.com/AdamNaj/f4251cb2645a1bfcddae) 
 * [https://www.youtube.com/watch?v=60BGRDNONo0&list=PLph7ZchYd\_nCypVZSNkudGwPFRqf1na0b&index=7](https://www.youtube.com/watch?v=60BGRDNONo0&list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b&index=7) 
 
