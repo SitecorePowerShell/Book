@@ -14,7 +14,7 @@ The ConvertTo-CliXml command exports Microsoft .NET Framework objects from Power
 
 ## Parameters
 
-### -InputObject  &lt;PSObject&gt;
+### -InputObject  &lt;PSObject&gt;
 
 Specifies the object to be converted. Enter a variable that contains the objects, or type a command or expression that gets the objects. You can also pipe objects to ConvertTo-CliXml.
 
@@ -46,7 +46,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> #Convert original item to xml
 PS master:\> $myCliXmlItem = Get-Item -Path master:\content\home | ConvertTo-CliXml 
 PS master:\> #print the CliXml

@@ -18,15 +18,15 @@ The Identity parameter specifies the Sitecore user to get. You can specify a use
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: admin
 Fully Qualified Name
-    Example: sitecore\admi 
+    Example: sitecore\admi
 ```
 
 | Aliases |  |
@@ -37,7 +37,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -InstanceId  &lt;String\[\]&gt;
+### -InstanceId  &lt;String\[\]&gt;
 
 Specifies the Sitecore SessionID.
 
@@ -61,7 +61,7 @@ The output type is the type of the objects that the cmdlet emits.
 
 * Sitecore.Web.Authentication.DomainAccessGuard.Session
 
-  Returns one or more user sessions. 
+  Returns one or more user sessions.
 
 ## Notes
 
@@ -71,7 +71,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Get-Session
 
 Created                LastRequest            SessionID                  UserName
@@ -82,7 +82,7 @@ Created                LastRequest            SessionID                  UserNam
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Get-Session -Identity admin
 
 Created                LastRequest            SessionID                  UserName
@@ -92,7 +92,7 @@ Created                LastRequest            SessionID                  UserNam
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> Get-Session -InstanceId tekipna1lk0ccr2z1bdjsua2,wq4bfivfm2tbgkgdccpyzczp
 
 Created                LastRequest            SessionID                  UserName

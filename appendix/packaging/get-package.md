@@ -14,7 +14,7 @@ The Get-Package commands loads the package definition \(xml\) and returns the pa
 
 ## Parameters
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the package file. If the path is not absolute the path needs to be relative to the Sitecore Package path defined in the "PackagePath" setting and later exposed in the Sitecore.Shell.Applications.Install.PackageProjectPath
 
@@ -40,7 +40,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Get-Package -Path master:\content\home
 ```
 

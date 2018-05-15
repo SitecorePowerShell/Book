@@ -22,7 +22,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -CommandName  &lt;String&gt;
+### -CommandName  &lt;String&gt;
 
 Namer of the workflow command.
 
@@ -34,7 +34,7 @@ Namer of the workflow command.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Comments  &lt;String&gt;
+### -Comments  &lt;String&gt;
 
 Comment to be saved in the history table for the action.
 
@@ -46,7 +46,7 @@ Comment to be saved in the history table for the action.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language that will be used as source language. If not specified the current user language will be used. Globbing/wildcard supported.
 
@@ -58,7 +58,7 @@ Language that will be used as source language. If not specified the current user
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to have the workflow action executed.
 
@@ -70,7 +70,7 @@ The item to have the workflow action executed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to have the workflow action executed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -82,7 +82,7 @@ Path to the item to have the workflow action executed - additionally specify Lan
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the the item to have the workflow action executed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -94,7 +94,7 @@ Id of the the item to have the workflow action executed - additionally specify L
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to have the workflow action executed - can work with Language parameter to narrow the publication scope.
 
@@ -122,7 +122,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Submit item to approval, item gotten from path
 
-```powershell
+```text
 PS master:\> Invoke-Workflow -Path master:/content/home -CommandName "Submit" -Comments "Automated"
 ```
 
@@ -130,7 +130,7 @@ PS master:\> Invoke-Workflow -Path master:/content/home -CommandName "Submit" -C
 
 Reject item, item gotten from pipeline
 
-```powershell
+```text
 PS master:\> Get-Item master:/content/home | Invoke-Workflow -CommandName "Reject" -Comments "Automated"
 ```
 

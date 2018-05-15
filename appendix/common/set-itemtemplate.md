@@ -26,7 +26,7 @@ The Set-ItemTemplate command sets the template for an item.
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to set the template for.
 
@@ -38,7 +38,7 @@ The item to set the template for.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to set the template for.
 
@@ -50,7 +50,7 @@ Path to the item to set the template for.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to set the template for.
 
@@ -62,7 +62,7 @@ Id of the item to set the template for.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -TemplateItem  &lt;TemplateItem&gt;
+### -TemplateItem  &lt;TemplateItem&gt;
 
 Sitecore item representing the template.
 
@@ -74,7 +74,7 @@ Sitecore item representing the template.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Template  &lt;String&gt;
+### -Template  &lt;String&gt;
 
 Path representing the template item. This must be of the same database as the item to be altered.
 
@@ -86,7 +86,7 @@ Path representing the template item. This must be of the same database as the it
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -FieldsToCopy  &lt;Hashtable&gt;
+### -FieldsToCopy  &lt;Hashtable&gt;
 
 Hashtable of key value pairs mapping the old template field to a new template field.
 
@@ -100,7 +100,7 @@ Hashtable of key value pairs mapping the old template field to a new template fi
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to set the template for - required if item is specified with Id.
 
@@ -128,7 +128,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 Set template of /sitecore/content/home item using a Template path.
 
-```powershell
+```text
 PS master:\> Set-ItemTemplate -Path master:/sitecore/content/home -Template "/sitecore/templates/User Defined/Page"
 ```
 
@@ -136,7 +136,7 @@ PS master:\> Set-ItemTemplate -Path master:/sitecore/content/home -Template "/si
 
 Set template of /sitecore/content/home item using a TemplateItem.
 
-```powershell
+```text
 PS master:\> $template = Get-ItemTemplate -Path master:\content\home\page1
        PS master:\> Set-ItemTemplate -Path master:\content\home\page2 -TemplateItem $template
 ```
@@ -145,7 +145,7 @@ PS master:\> $template = Get-ItemTemplate -Path master:\content\home\page1
 
 Set the template and remap fields to their new name.
 
-```powershell
+```text
 Set-ItemTemplate -Path "master:\content\home\Page1" `
     -Template "User Defined/Target" `
     -FieldsToCopy @{Field1="Field4"; Field2="Field5"; Field3="Field6"}

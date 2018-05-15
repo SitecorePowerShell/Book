@@ -16,7 +16,7 @@ The Get-LayoutDevice command returns the layout for the specified device.
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the device to return.
 
@@ -28,7 +28,7 @@ Name of the device to return.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Default  &lt;SwitchParameter&gt;
+### -Default  &lt;SwitchParameter&gt;
 
 Determines that a default system layout device should be returned.
 
@@ -62,7 +62,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Get Print device
 
-```powershell
+```text
 PS master:\> Get-LayoutDevice "Print"
 ```
 
@@ -70,7 +70,7 @@ PS master:\> Get-LayoutDevice "Print"
 
 Get default device
 
-```powershell
+```text
 PS master:\> Get-LayoutDevice -Default
 ```
 
@@ -78,7 +78,7 @@ PS master:\> Get-LayoutDevice -Default
 
 Get all layout devices
 
-```powershell
+```text
 PS master:\> Get-LayoutDevice *
 ```
 

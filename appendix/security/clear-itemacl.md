@@ -18,7 +18,7 @@ Removes all security information from the item specified.
 
 ## Parameters
 
-### -PassThru  &lt;SwitchParameter&gt;
+### -PassThru  &lt;SwitchParameter&gt;
 
 Passes the processed item back into the pipeline.
 
@@ -30,7 +30,7 @@ Passes the processed item back into the pipeline.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be processed.
 
@@ -42,7 +42,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed.
 
@@ -54,7 +54,7 @@ Path to the item to be processed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed. Requires the Database parameter to be specified.
 
@@ -66,7 +66,7 @@ Id of the item to be processed. Requires the Database parameter to be specified.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be fetched with Id parameter.
 
@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Clears the security information from the Home item providing its path
 
-```powershell
+```text
 PS master:\> Clear-ItemAcl -Path master:\content\home
 ```
 
@@ -108,7 +108,7 @@ PS master:\> Clear-ItemAcl -Path master:\content\home
 
 Clears the security information from the Home item by providing it from the pipeline and passing it back to the pipeline.
 
-```powershell
+```text
 PS master:\> Get-Item -Path master:\content\home | Clear-ItemAcl -PassThru
 
 Name   Children Languages                Id                                     TemplateName

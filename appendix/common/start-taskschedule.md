@@ -20,7 +20,7 @@ Executes a task schedule either passed from Get-Schedule, based on Item or Sched
 
 ## Parameters
 
-### -Schedule  &lt;ScheduleItem&gt;
+### -Schedule  &lt;ScheduleItem&gt;
 
 ScheduleItem most conveniently obtained from Get-Schedule command.
 
@@ -32,7 +32,7 @@ ScheduleItem most conveniently obtained from Get-Schedule command.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 Schedule item - if Item is of wrong template - an appropriate error will be written to teh host.
 
@@ -44,7 +44,7 @@ Schedule item - if Item is of wrong template - an appropriate error will be writ
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the schedule item - if item is of wrong template - an appropriate error will be written to teh host.
 
@@ -56,7 +56,7 @@ Path to the schedule item - if item is of wrong template - an appropriate error 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -66,7 +66,7 @@ Path to the schedule item - if item is of wrong template - an appropriate error 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * Sitecore.Tasks.ScheduleItem
 
-  Sitecore.Data.Items.Item 
+  Sitecore.Data.Items.Item
 
 ## Outputs
 
@@ -98,7 +98,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Start-TaskSchedule -Path "master:/system/Tasks/Schedules/Email Campaign/Clean Message History"
 
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run
@@ -108,7 +108,7 @@ Clean Message History            master          True     False        False    
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Get-TaskSchedule -Name "Check Bounced Messages" -Database "master" | Start-TaskSchedule
 
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run

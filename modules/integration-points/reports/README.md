@@ -2,7 +2,7 @@
 
 The reports which come out of the box provide a wide variety of information regarding your Sitecore installation.
 
-We've built quite a few reports, many similar to the [Advanced System Report][1] \(ASR\) module.
+We've built quite a few reports, many similar to the [Advanced System Report](https://github.com/SitecorePowerShell/Book/tree/9c7126d7a38df6ef372e8baef52f9a02baabd550/modules/integration-points/reports/[https:/marketplace.sitecore.net/en/Modules/A/Advanced/_System/_Reporter.aspx]) \(ASR\) module.
 
 ## Running a Report
 
@@ -71,13 +71,11 @@ Here is what users may see in the event they do not have the appropriate access.
 ![Reports without Access](../../../.gitbook/assets/reports-menuwithoutaccess.png)
 
 1. Navigate to the item `/sitecore/content/Documents and settings/All users/Start menu/Right/Reporting Tools/PowerShell Reports`
-2. Grant access to `sitecore\Sitecore Client Authoring` 
+2. Grant access to `sitecore\Sitecore Client Authoring`
 
    ![Report Viewer Access](../../../.gitbook/assets/reports-vieweraccess.png)
 
-3. Verify the reports are now visible to the Authoring users. 
+3. Verify the reports are now visible to the Authoring users.
 
    ![Reports with Access](../../../.gitbook/assets/reports-menuwithaccess.png)
-
-[1]: [https://marketplace.sitecore.net/en/Modules/A/Advanced\_System\_Reporter.aspx](https://marketplace.sitecore.net/en/Modules/A/Advanced_System_Reporter.aspx)
 

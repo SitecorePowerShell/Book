@@ -32,7 +32,7 @@ If you have retrieved your items directly using the Sitecore API you can still a
 
 **Example:** The following will retrieve the item based on the Sitecore path.
 
-```powershell
+```text
 PS master:\> Get-Item -Path master:\content\home
 
 Name Children Languages                Id                                     TemplateName
@@ -53,7 +53,7 @@ The above will return the latest version of the item in your current language. B
 
 **Example:** The following will retrieve the Danish version of the _Home_ item.
 
-```powershell
+```text
 PS master:\> Get-Item -Path master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
 
 DisplayName Language ID                                     Version TemplateName
@@ -65,7 +65,7 @@ I've formatted the output above to show you that indeed the right language was r
 
 **Example:** The following retrieves the latest version for all languages of an item.
 
-```powershell
+```text
 PS master:\> Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
 
 DisplayName Language ID                                     Version TemplateName
@@ -82,7 +82,7 @@ Notice that the item with language `en-US` at its third version.
 
 **Example:** The following retrieves the item in all languages and versions.
 
-```powershell
+```text
 PS master:\> Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
 
 DisplayName Language ID                                     Version TemplateName
@@ -101,7 +101,7 @@ You can see that specifying the language and version using the wildcard will ret
 
 **Example:** The following retrieves the child items in all languages and versions.
 
-```powershell
+```text
 PS master:\> Get-ChildItem master:/content -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName
 
 DisplayName         Language ID                                     Version TemplateName
@@ -133,7 +133,7 @@ It's not always most efficient to operate on items by traversing the tree using 
 
 **Example:** The following retrieves all items beneath the path _/sitecore/content/_ with the template of _Sample Item_.
 
-```powershell
+```text
 PS master:\> Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']"
 
 Name                             Children Languages                Id                                     TemplateName
@@ -144,7 +144,7 @@ Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA
 
 **Example:** The following retrieves all items beneath the path _/sitecore/content/_ with the template of _Sample Item_ in all versions and languages.
 
-```powershell
+```text
 PS master:\> Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -AutoSize
 
 DisplayName  Language ID                                     Version TemplateName
@@ -168,7 +168,7 @@ Hjem         da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 
 **Example:** The following retrieves an item by id.
 
-```powershell
+```text
 PS master:\> Get-Item -Path master: -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 
 Name  Children Languages                Id                                     TemplateName
@@ -182,7 +182,7 @@ The Uri encodes the language and version within the path.
 
 **Example:** The following retrieves an item by uri.
 
-```powershell
+```text
 PS master:\> Get-Item -Path master: -Uri "sitecore://master/{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}?lang=en&ver=1"
 
 Name Children Languages                Id                                     TemplateName
@@ -201,7 +201,7 @@ The following examples make use of custom \_PropertySet\_s for the command `Sele
 
 **Example:** The following uses the **PSSecurity** _PropertySet_.
 
-```powershell
+```text
 PS master:\ >Get-Item -Path "master:\content\home" | Select PSSecurity
 
 Name ID                                     __Owner        __Security
@@ -211,7 +211,7 @@ Home {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} sitecore\admin au|sitecore\michael|p
 
 **Example:** The following uses the **PSTemplate** _PropertySet_.
 
-```powershell
+```text
 PS master:\> Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select PSTemplate
 
 Name    ID                                     BaseTemplate
@@ -221,7 +221,7 @@ kitten1 {E58FA823-3CAF-43A1-A5ED-FBE24D3C21B4} {Image, File, Standard template, 
 
 **Example:** The following uses the **PSImage** _PropertySet_.
 
-```powershell
+```text
 PS master:\> Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select PSImage
 
 Name      : kitten1
@@ -235,7 +235,7 @@ Size      : 6593
 
 **Example:** The following uses the **PSSchedule** _PropertySet_.
 
-```powershell
+```text
 PS master:\> Get-Item -Path "/sitecore/system/Tasks/Schedules/Content Testing/Calculate Statistical Relevancy" | Select PSSchedule 
 
 Name     : Calculate Statistical Relevancy
@@ -250,7 +250,7 @@ Items    :
 
 **Example:** The following accesses the _Image_ field casted to the type `Sitecore.Data.Fields.ImageField`.
 
-```powershell
+```text
 $item = Get-Item "master:\content\home"
 $item._.Image.Alt
 ```
@@ -259,7 +259,7 @@ $item._.Image.Alt
 
 **Example:** The following accesses the _Link_ field casted to the type `Sitecore.Data.Fields.LinkField`. From there you can see all of the available properties.
 
-```powershell
+```text
 PS master:\> $currentItem = Get-Item 'master:\content\home\sample-item'
 PS master:\> $currentItem.PSFields."LinkFieldName"
 
@@ -281,7 +281,6 @@ Root         : link
 Xml          : #document
 InnerField   : <link linktype="internal" text="CLICK HERE" querystring="" target="" id="{263293D3-B1B3-4C2C-9A75-6BD418F376BC}" />
 Value        : <link linktype="internal" text="CLICK HERE" querystring="" target="" id="{263293D3-B1B3-4C2C-9A75-6BD418F376BC}" />
-
 ```
 
 ### Changing item properties
@@ -290,13 +289,13 @@ We often see the following two ways of accessing and changing fields used in scr
 
 **Example:** The following sets the title property using `Set-ItemProperty`.
 
-```powershell
+```text
 PS master:\> Set-ItemProperty -Path master:/content/home -Name "Title" -Value "New Title"
 ```
 
 **Example:** The following sets the title and clears the branch id using `.Editing.BeginEdit` and `.Editing.EndEdit` methods.
 
-```powershell
+```text
 $item = Get-Item master:/content/home
 $item.Editing.BeginEdit()
 $item["Title"] = "New Title"
@@ -310,14 +309,14 @@ The previous examples work but are not the most efficient ways to change item co
 
 **Example:** The following sets the title property using the automated PowerShell property.
 
-```powershell
+```text
 $item = Get-Item master:/content/home
 $item.Title = "New Title"
 ```
 
 **Example:** The following sets the title property using the semi-native PowerShell property without the use of a variable.
 
-```powershell
+```text
 (Get-Item master:/content/home).Title = "New Title"
 ```
 
@@ -325,14 +324,14 @@ This technique may be used for a wide variety of property types. There are a oth
 
 **Example:** The following gets the created date.
 
-```powershell
+```text
 PS master:\> (Get-Item master:/content/home).__Created
 Monday, April 07, 2008 1:59:00 PM
 ```
 
 **Example:** The following assigns a `System.DateTime` value to the PowerShell automated property.
 
-```powershell
+```text
 PS master:\> (Get-Item master:/content/home).__Created = [DateTime]::Now
 PS master:\> (Get-Item master:/content/home).__Created
 Monday, October 13, 2014 1:59:41 AM
@@ -346,7 +345,7 @@ To provide an example – I’ve extended my home with additional fields as foll
 
 **Example:** The following assigns an image to the Image field.
 
-```powershell
+```text
 (Get-Item master:/content/home).Image = Get-Item 'master:\media library\logo'
 ```
 
@@ -354,7 +353,7 @@ Easy enough, isn't it? Let SPE detect the field type for you and worry about wha
 
 **Example:** The following assigns a content item to a _GeneralLink_ field.
 
-```powershell
+```text
 (Get-Item master:/content/home).GeneralLink = Get-Item 'master:\content\CognifideCom'
 ```
 
@@ -362,7 +361,7 @@ What about fields that accept lists of items? We've got your back here as well.
 
 **Example:** The following assigns all children of `/sitecore/content/` item to the _ItemList_ field.
 
-```powershell
+```text
 (Get-Item master:/content/home).ItemList = Get-ChildItem 'master:\content\'
 ```
 
@@ -382,7 +381,7 @@ Choosing this way is situational and will usually only be required if you're wor
 
 **Example:** The following sets multiple automated properties while using the `Sitecore.Data.BulkUpdateContext`.
 
-```powershell
+```text
 New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
     foreach($item in Get-ChildItem -Path "master:\content\home") {
         $item.Editing.BeginEdit()
@@ -395,7 +394,7 @@ New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
 
 Example: The following generates a relative url to the specified site and assigns to a variable. Because the `New-UsingBlock` command creates a new closure, you need to return the data to use in a different scope.
 
-```powershell
+```text
 $site = [Sitecore.Sites.SiteContextFactory]::GetSiteContext("usa")
 $relativeUrl = New-UsingBlock (New-Object Sitecore.Sites.SiteContextSwitcher $site) {
     $pageItem = Get-Item -Path "master:" -Id "{50BE527C-7241-4613-A7A9-20D0217B264B}"
@@ -422,7 +421,7 @@ You will find yourself one day in need of copying items on a small to large scal
 
 **Example:** The following copies the item to the specified path with a new ID.
 
-```powershell
+```text
 Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "master:\content\home\Sample Item\Sample Item 2"
 ```
 
@@ -430,7 +429,7 @@ Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "m
 
 **Example:** The following transfers the item to the specified path with the same ID.
 
-```powershell
+```text
 Copy-Item master:\content\Home web:\content\home -TransferOptions 0
 ```
 
@@ -440,7 +439,7 @@ There is a always a better way to do something. Moving items en masse is certain
 
 **Example:** The following moves the item from one parent to another.
 
-```powershell
+```text
 Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "master:\content\home\sample item 2\"
 ```
 
@@ -448,7 +447,7 @@ Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "m
 
 **Example:** The following creates a new item with the specified template.
 
-```powershell
+```text
 New-Item -Path "master:\content\home\sample item\Sample Item 3" -ItemType "Sample/Sample Item"
 
 Name                             Children Languages                Id                                     TemplateName
@@ -458,7 +457,7 @@ Sample Item 3                    False    {en}                     {F6F4F7B7-5E7
 
 **Example:** The following creates a new item with the specified template id and id.
 
-```powershell
+```text
 New-Item -Path "master:\content\home\sample item\Sample Item 4" -ItemType "{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}" -ForceId "{9459ADDD-4471-4ED3-A041-D33E559BD321}"
 
 Name                             Children Languages                Id                                     TemplateName
@@ -470,7 +469,7 @@ Sample Item 4                    False    {en}                     {9459ADDD-447
 
 **Example:** The following removes the item permanently. Proceed with caution.
 
-```powershell
+```text
 Remove-Item -Path "master:\content\home\sample item\Sample Item 3" -Permanently
 ```
 

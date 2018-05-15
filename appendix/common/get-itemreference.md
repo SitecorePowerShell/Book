@@ -24,7 +24,7 @@ The Get-ItemReference command returns all items linked to the specified item. If
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be analysed.
 
@@ -36,7 +36,7 @@ The item to be analysed.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -48,7 +48,7 @@ Path to the item to be processed - additionally specify Language parameter to fe
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -60,7 +60,7 @@ Id of the the item to be processed - additionally specify Language parameter to 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -72,7 +72,7 @@ Database containing the item to be processed - can work with Language parameter 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language that will be used as source language. If not specified the current user language will be used. Globbing/wildcard supported.
 
@@ -84,7 +84,7 @@ Language that will be used as source language. If not specified the current user
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ItemLink  &lt;SwitchParameter&gt;
+### -ItemLink  &lt;SwitchParameter&gt;
 
 Return ItemLink that define both source and target of a link rather than items that are being linked to from the specified item.
 
@@ -108,7 +108,7 @@ The output type is the type of the objects that the cmdlet emits.
 
 * Sitecore.Data.Items.Item
 
-  Sitecore.Links.ItemLink 
+  Sitecore.Links.ItemLink
 
 ## Notes
 
@@ -118,7 +118,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\>Get-ItemReference -Path master:\content\home
 
 Name                             Children Languages                Id                                     TemplateName
@@ -129,7 +129,7 @@ Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\>Get-Item master:\content\home | Get-ItemReference -ItemLink
 
 SourceItemLanguage : en

@@ -14,7 +14,7 @@ The Get-Preset command returns a serialization preset for use with Export-Item.
 
 ## Parameters
 
-### -Name  &lt;String\[\]&gt;
+### -Name  &lt;String\[\]&gt;
 
 Name of the serialization preset.
 
@@ -40,7 +40,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Get-Preset -Name "PowerShell", "AssetsOptimiser" | ft PresetName, Database, Path -AutoSize
 
 PresetName      Database Path

@@ -20,7 +20,7 @@ Depending on the user response one of the 2 strings is returned:
 
 ## Parameters
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Question to ask the user in the dialog
 
@@ -32,7 +32,7 @@ Question to ask the user in the dialog
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Width  &lt;Int32&gt;
+### -Width  &lt;Int32&gt;
 
 Width of the dialog.
 
@@ -44,7 +44,7 @@ Width of the dialog.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Height  &lt;Int32&gt;
+### -Height  &lt;Int32&gt;
 
 Height of the dialog.
 
@@ -70,7 +70,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Show-YesNoCancel "Should we delete those 2 items?"
 
 cancel

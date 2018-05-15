@@ -14,7 +14,7 @@ The Get-Cache command retrieves a Sitecore cache.
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the cache to retrieve. Supports wildcards.
 
@@ -40,7 +40,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Get-Cache -Name master*
 
 Name                                     Enabled       Count       Size   Max Size Default  Scavengable

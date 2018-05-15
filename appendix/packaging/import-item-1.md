@@ -33,7 +33,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Database  &lt;Database&gt;
+### -Database  &lt;Database&gt;
 
 Database to contain the item to be deserialized.
 
@@ -45,7 +45,7 @@ Database to contain the item to be deserialized.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be serialized.
 
@@ -57,7 +57,7 @@ The item to be serialized.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Preset  &lt;IncludeEntry&gt;
+### -Preset  &lt;IncludeEntry&gt;
 
 Name of the preset to be deserialized.
 
@@ -69,7 +69,7 @@ Name of the preset to be deserialized.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item on the drive but without .item extension. If the item does not exist in the Sitecore tree yet, you need to pass the parent item path.
 
@@ -81,7 +81,7 @@ Path to the item on the drive but without .item extension. If the item does not 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Recurse  &lt;SwitchParameter&gt;
+### -Recurse  &lt;SwitchParameter&gt;
 
 If included in the execution - dederializes both the item and all of its children.
 
@@ -93,9 +93,9 @@ If included in the execution - dederializes both the item and all of its childre
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Root  &lt;String&gt;
+### -Root  &lt;String&gt;
 
-The directory which is the root of serialization. Trailing slash  character is required. if not specified the default root will be used.
+The directory which is the root of serialization. Trailing slash character is required. if not specified the default root will be used.
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -105,7 +105,7 @@ The directory which is the root of serialization. Trailing slash  character is r
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -UseNewId  &lt;SwitchParameter&gt;
+### -UseNewId  &lt;SwitchParameter&gt;
 
 Tells Sitecore if each of the items should be created with a newly generated ID, e.g. Import-Item -path "c:\project\data\serialization\master\sitecore\content\articles" -root "c:\project\data\serialization\" -usenewid -recurse
 
@@ -117,7 +117,7 @@ Tells Sitecore if each of the items should be created with a newly generated ID,
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -DisableEvents  &lt;SwitchParameter&gt;
+### -DisableEvents  &lt;SwitchParameter&gt;
 
 If set Sitecore will use EventDisabler during deserialization, e.g.: Import-Item -path "c:\project\data\serialization\master\sitecore\content\articles" -root "c:\project
 
@@ -129,7 +129,7 @@ If set Sitecore will use EventDisabler during deserialization, e.g.: Import-Item
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ForceUpdate  &lt;SwitchParameter&gt;
+### -ForceUpdate  &lt;SwitchParameter&gt;
 
 Forces item to be updated even if it has not changed.
 
@@ -155,13 +155,13 @@ Help Author: Marek Musielak, Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Import-Item -path "c:\project\data\serialization\master\sitecore\content\articles" -root "c:\project\data\serialization\"
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Import-Item -path "c:\project\data\serialization\master\sitecore\content\articles" -root "c:\project\data\serialization\" -recurse
 ```
 

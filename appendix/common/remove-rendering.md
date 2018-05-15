@@ -30,7 +30,7 @@ Removes renderings from an item based on a number of qualifying criteria. The se
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be processed.
 
@@ -42,7 +42,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -54,7 +54,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -66,7 +66,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -78,7 +78,7 @@ Database containing the item to be processed - can work with Language parameter 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -DataSource  &lt;String&gt;
+### -DataSource  &lt;String&gt;
 
 Data source filter - supports wildcards.
 
@@ -90,7 +90,7 @@ Data source filter - supports wildcards.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Rendering  &lt;Item&gt;
+### -Rendering  &lt;Item&gt;
 
 Item representing the sublayout/rendering. If matching the rendering will be removed.
 
@@ -102,7 +102,7 @@ Item representing the sublayout/rendering. If matching the rendering will be rem
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Index  &lt;Int32&gt;
+### -Index  &lt;Int32&gt;
 
 Index at which the rendering exists in the layout. The rendering at that index will be removed.
 
@@ -114,7 +114,7 @@ Index at which the rendering exists in the layout. The rendering at that index w
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PlaceHolder  &lt;String&gt;
+### -PlaceHolder  &lt;String&gt;
 
 Place holder at which the rendering exists in the layout. Rendering at that placeholder will be removed.
 
@@ -126,7 +126,7 @@ Place holder at which the rendering exists in the layout. Rendering at that plac
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Parameter  &lt;Hashtable&gt;
+### -Parameter  &lt;Hashtable&gt;
 
 Additional rendering parameter values. If both name and value match - the rendering will be removed. Values support wildcards.
 
@@ -138,7 +138,7 @@ Additional rendering parameter values. If both name and value match - the render
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Instance  &lt;RenderingDefinition&gt;
+### -Instance  &lt;RenderingDefinition&gt;
 
 Specific instance of rendering that should be removed. The instance coule earlier be obtained through e.g. use of Get-Rendering.
 
@@ -150,7 +150,7 @@ Specific instance of rendering that should be removed. The instance coule earlie
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -UniqueId  &lt;String&gt;
+### -UniqueId  &lt;String&gt;
 
 UniqueID of the rendering to be removed. The instance coule earlier be obtained through e.g. use of OD of rendering retrieved with Get-Rendering.
 
@@ -162,7 +162,7 @@ UniqueID of the rendering to be removed. The instance coule earlier be obtained 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Device  &lt;DeviceItem&gt;
+### -Device  &lt;DeviceItem&gt;
 
 Device for which the rendering should be removed.
 
@@ -174,7 +174,7 @@ Device for which the rendering should be removed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -FinalLayout  &lt;SwitchParameter&gt;
+### -FinalLayout  &lt;SwitchParameter&gt;
 
 Targets the Final Layout. If not provided, the Shared Layout will be targeted. Applies to Sitecore 8.0 and higher only.
 
@@ -186,7 +186,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -218,7 +218,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 remove all renderings for "Default" device
 
-```powershell
+```text
 PS master:\> Remove-Rendering -Path master:\content\home -Device (Get-LayoutDevice "Default")
 ```
 
@@ -226,7 +226,7 @@ PS master:\> Remove-Rendering -Path master:\content\home -Device (Get-LayoutDevi
 
 remove all renderings from the "main" placeholder and all of its embedded placeholders.
 
-```powershell
+```text
 PS master:\> Remove-Rendering -Path master:\content\home -PlaceHolder "main*"
 ```
 
@@ -234,7 +234,7 @@ PS master:\> Remove-Rendering -Path master:\content\home -PlaceHolder "main*"
 
 remove all renderings from the "main" placeholder and all of its embedded placeholders, but only in the "Default" device
 
-```powershell
+```text
 PS master:\> Remove-Rendering -Path master:\content\home -PlaceHolder "main*" -Device (Get-LayoutDevice "Default")
 ```
 

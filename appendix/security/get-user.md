@@ -22,20 +22,20 @@ To search for and retrieve more than one user, use the Filter parameter.
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore user by providing one of the following values.
 
 Local Name:
 
-```powershell
+```text
 admin
 ```
 
 Fully Qualified Name:
 
-```powershell
-sitecore\admi 
+```text
+sitecore\admi
 ```
 
 | Aliases |  |
@@ -46,7 +46,7 @@ sitecore\admi
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Filter  &lt;String&gt;
+### -Filter  &lt;String&gt;
 
 Specifies a simple pattern to match Sitecore users.
 
@@ -54,14 +54,14 @@ Examples: The following examples show how to use the filter syntax.
 
 To get all the users, use the asterisk wildcard:
 
-```powershell
+```text
 Get-User -Filter *
 ```
 
 To get all the users in a domain use the following command:
 
-```powershell
-Get-User -Filter "sitecore\*" 
+```text
+Get-User -Filter "sitecore\*"
 ```
 
 | Aliases |  |
@@ -72,7 +72,7 @@ Get-User -Filter "sitecore\*"
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Current  &lt;SwitchParameter&gt;
+### -Current  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ Get-User -Filter "sitecore\*"
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Authenticated  &lt;SwitchParameter&gt;
+### -Authenticated  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -92,7 +92,7 @@ Get-User -Filter "sitecore\*"
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ResultPageSize  &lt;Int32&gt;
+### -ResultPageSize  &lt;Int32&gt;
 
 Specifies the number of users to retrieve per request to the user provider. Each page of users is written to the pipeline before the next request is made. Without specifying this parameter all accounts are retrieved before passing down the pipeline.
 
@@ -110,7 +110,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Represents the identity of a user. 
+  Represents the identity of a user.
 
 ## Outputs
 
@@ -118,7 +118,7 @@ The output type is the type of the objects that the cmdlet emits.
 
 * Sitecore.Security.Accounts.User
 
-  Returns one or more users. 
+  Returns one or more users.
 
 ## Notes
 
@@ -128,7 +128,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Get-User -Identity admin
 
 Name                     Domain       IsAdministrator IsAuthenticated
@@ -138,7 +138,7 @@ sitecore\admin           sitecore     True            False
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> "admin","michael" | Get-User
 
 Name                     Domain       IsAdministrator IsAuthenticated
@@ -149,7 +149,7 @@ sitecore\michael         sitecore     False           False
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> Get-User -Filter *
 
 Name                     Domain       IsAdministrator IsAuthenticated
@@ -162,7 +162,7 @@ sitecore\michael         sitecore     False           False
 
 ### EXAMPLE 4
 
-```powershell
+```text
 PS master:\> Get-User -Filter "michaellwest@*.com"
 
 Name                     Domain       IsAdministrator IsAuthenticated
@@ -174,7 +174,7 @@ sitecore\michael         sitecore     False           False
 
 Expand the MemberOf property to see a list of roles that the specified user is a member.
 
-```powershell
+```text
 PS master:\> Get-User -Identity sitecore\michael | Select-Object -ExpandProperty MemberOf
 
 Name                                     Domain       IsEveryone

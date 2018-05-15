@@ -14,7 +14,7 @@ The Remove-Domain command removes the specified domain.
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 The name of the domain.
 
@@ -26,7 +26,7 @@ The name of the domain.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Force  &lt;SwitchParameter&gt;
+### -Force  &lt;SwitchParameter&gt;
 
 Indicates that the domain should be removed although it contains users in that domain.
 
@@ -44,7 +44,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Represents the name of a domain. 
+  Represents the name of a domain.
 
 ## Outputs
 
@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Remove-Domain -Name "domainName"
 ```
 

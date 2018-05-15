@@ -16,7 +16,7 @@ The Wait-ScriptSession cmdlet waits for script session to complete before it dis
 
 ## Parameters
 
-### -Timeout  &lt;Int32&gt;
+### -Timeout  &lt;Int32&gt;
 
 The maximum time to wait for all the other running script sessions to complete.
 
@@ -28,7 +28,7 @@ The maximum time to wait for all the other running script sessions to complete.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Any  &lt;SwitchParameter&gt;
+### -Any  &lt;SwitchParameter&gt;
 
 Returns control to the script or displays the command prompt \(and returns the ScriptSession object\) when any script session completes. By default, Wait-ScriptSession waits until all of the specified jobs are complete before displaying the prompt.
 
@@ -40,7 +40,7 @@ Returns control to the script or displays the command prompt \(and returns the S
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String\[\]&gt;
+### -Id  &lt;String\[\]&gt;
 
 Id\(s\) of the session to be stopped.
 
@@ -52,7 +52,7 @@ Id\(s\) of the session to be stopped.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Session  &lt;ScriptSession\[\]&gt;
+### -Session  &lt;ScriptSession\[\]&gt;
 
 Session\(s\) to be stopped.
 
@@ -84,7 +84,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Wait-ScriptSession -Id "My Background Script Session"
 ```
 

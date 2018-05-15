@@ -14,7 +14,7 @@ The Test-Account command determines if a Sitecore role or user account exists.
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Role or User name including domain. If no domain is specified - 'sitecore' will be used as the default value
 
@@ -26,7 +26,7 @@ Role or User name including domain. If no domain is specified - 'sitecore' will 
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -AccountType  &lt;String&gt;
+### -AccountType  &lt;String&gt;
 
 Specifies which account to check existence.
 
@@ -62,7 +62,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Test-Account -Identity Michael
 
 True

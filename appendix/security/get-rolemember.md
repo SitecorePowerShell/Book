@@ -20,15 +20,15 @@ The Identity parameter specifies the Sitecore role to get. You can specify a rol
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore role by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: developer
 Fully Qualified Name
-    Example: sitecore\developer 
+    Example: sitecore\developer
 ```
 
 | Aliases |  |
@@ -39,7 +39,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Recurse  &lt;SwitchParameter&gt;
+### -Recurse  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -UsersOnly  &lt;SwitchParameter&gt;
+### -UsersOnly  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -RolesOnly  &lt;SwitchParameter&gt;
+### -RolesOnly  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Represents the identity of a role. 
+  Represents the identity of a role.
 
 ## Outputs
 
@@ -95,7 +95,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Get-RoleMember -Identity developer
 
 Name                     Domain       IsAdministrator IsAuthenticated
@@ -105,7 +105,7 @@ sitecore\michael         sitecore     False           False
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Get-RoleMember -Identity author
 
 Name                     Domain       IsAdministrator IsAuthenticated

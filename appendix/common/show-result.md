@@ -18,7 +18,7 @@ Shows a Sheer dialog with text results showing the output of the script or anoth
 
 ## Parameters
 
-### -Control  &lt;String&gt;
+### -Control  &lt;String&gt;
 
 Name of the Sheer control to execute.
 
@@ -30,7 +30,7 @@ Name of the Sheer control to execute.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Url  &lt;String&gt;
+### -Url  &lt;String&gt;
 
 Url to the Sheer control to execute.
 
@@ -42,7 +42,7 @@ Url to the Sheer control to execute.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Parameters  &lt;String\[\]&gt;
+### -Parameters  &lt;String\[\]&gt;
 
 Parameters to be passed to the executed control when executing with the -Control parameter specified.
 
@@ -54,7 +54,7 @@ Parameters to be passed to the executed control when executing with the -Control
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Text  &lt;SwitchParameter&gt;
+### -Text  &lt;SwitchParameter&gt;
 
 Shows the default text dialog.
 
@@ -66,7 +66,7 @@ Shows the default text dialog.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Title of the window containing the control.
 
@@ -78,7 +78,7 @@ Title of the window containing the control.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Width  &lt;Int32&gt;
+### -Width  &lt;Int32&gt;
 
 Width of the window containing the control.
 
@@ -90,7 +90,7 @@ Width of the window containing the control.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Height  &lt;Int32&gt;
+### -Height  &lt;Int32&gt;
 
 Height of the window containing the control.
 
@@ -124,7 +124,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Show results of script executio
 
-```powershell
+```text
 PS master:\> Show-Result -Text
 ```
 
@@ -132,20 +132,20 @@ PS master:\> Show-Result -Text
 
 Show the Control Panel control in a Window of specified size.
 
-```powershell
+```text
 PS master:\> Show-Result -Control "ControlPanel" -Width 1024 -Height 640
 ```
 
 ### EXAMPLE 3
 
-```powershell
+```text
 Shows a new instance of ISE
 Show-Result -Url "/sitecore/shell/Applications/PowerShell/PowerShellIse"
 ```
 
 ### EXAMPLE 4
 
-```powershell
+```text
 
 ```
 

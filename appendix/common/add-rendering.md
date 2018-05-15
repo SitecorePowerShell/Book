@@ -18,7 +18,7 @@ Adds a rendering to a chosen device for the presentation of an item.
 
 ## Parameters
 
-### -Instance  &lt;RenderingDefinition&gt;
+### -Instance  &lt;RenderingDefinition&gt;
 
 Rendering definition to be added to the item
 
@@ -30,7 +30,7 @@ Rendering definition to be added to the item
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Parameter  &lt;Hashtable&gt;
+### -Parameter  &lt;Hashtable&gt;
 
 Rendering Parameters to be overriden on the Rendering that is being updated - if not specified the value provided in rendering definition specified in the Instance parameter will be used.
 
@@ -42,7 +42,7 @@ Rendering Parameters to be overriden on the Rendering that is being updated - if
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PlaceHolder  &lt;String&gt;
+### -PlaceHolder  &lt;String&gt;
 
 Placeholder path the Rendering should be added to - if not specified the value provided in rendering definition specified in the Instance parameter will be used.
 
@@ -54,7 +54,7 @@ Placeholder path the Rendering should be added to - if not specified the value p
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -DataSource  &lt;String&gt;
+### -DataSource  &lt;String&gt;
 
 Data source of the Rendering - if not specified the value provided in rendering definition specified in the Instance parameter will be used.
 
@@ -66,7 +66,7 @@ Data source of the Rendering - if not specified the value provided in rendering 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Index  &lt;Int32&gt;
+### -Index  &lt;Int32&gt;
 
 Index at which the Rendering should be inserted. If not provided the rendering will be appended at the end of the list.
 
@@ -78,7 +78,7 @@ Index at which the Rendering should be inserted. If not provided the rendering w
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Device  &lt;DeviceItem&gt;
+### -Device  &lt;DeviceItem&gt;
 
 Device the rendering is assigned to. If not specified - default device will be used.
 
@@ -90,7 +90,7 @@ Device the rendering is assigned to. If not specified - default device will be u
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -FinalLayout  &lt;SwitchParameter&gt;
+### -FinalLayout  &lt;SwitchParameter&gt;
 
 Targets the Final Layout. If not provided, the Shared Layout will be targeted. Applies to Sitecore 8.0 and higher only.
 
@@ -102,7 +102,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -112,7 +112,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be processed.
 
@@ -124,7 +124,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -136,7 +136,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -148,7 +148,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -182,7 +182,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 find item defining rendering and create rendering definitio
 
-```powershell
+```text
 PS master:\> $renderingItem = gi master:\layout\Sublayouts\ZenGarden\Basic\Content | New-Rendering -Placeholder "main"
 # find item you want the rendering added to
 PS master:\> $item = gi master:\content\Demo\Int\Home

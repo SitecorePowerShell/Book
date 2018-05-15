@@ -16,15 +16,15 @@ The Identity parameter specifies the Sitecore role to get. You can specify a rol
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore role by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: developer
 Fully Qualified Name
-    Example: sitecore\developer 
+    Example: sitecore\developer
 ```
 
 | Aliases |  |
@@ -35,7 +35,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Members  &lt;AccountIdentity\[\]&gt;
+### -Members  &lt;AccountIdentity\[\]&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -51,7 +51,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Represents the identity of a role. 
+  Represents the identity of a role.
 
 ## Outputs
 
@@ -67,7 +67,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Add-RoleMember -Identity developer -Members "michael","adam","mike"
 ```
 

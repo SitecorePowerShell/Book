@@ -14,7 +14,7 @@ Sets the current host property and perssits them for the future if used with -Pe
 
 ## Parameters
 
-### -ForegroundColor  &lt;ConsoleColor&gt;
+### -ForegroundColor  &lt;ConsoleColor&gt;
 
 Color of the console text.
 
@@ -26,7 +26,7 @@ Color of the console text.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -BackgroundColor  &lt;ConsoleColor&gt;
+### -BackgroundColor  &lt;ConsoleColor&gt;
 
 Color of the console background.
 
@@ -38,7 +38,7 @@ Color of the console background.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -HostWidth  &lt;Int32&gt;
+### -HostWidth  &lt;Int32&gt;
 
 Width of the text buffer \(texts longer than the number provided will wrap to the next line.
 
@@ -50,7 +50,7 @@ Width of the text buffer \(texts longer than the number provided will wrap to th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Persist  &lt;SwitchParameter&gt;
+### -Persist  &lt;SwitchParameter&gt;
 
 Persist the console setting provided
 
@@ -72,7 +72,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Set width of the console buffer to 80 and persist it for the future instances
 
-```powershell
+```text
 PS master:\> Set-HostProperty -HostWidth 80 -Persist
 ```
 
@@ -80,7 +80,7 @@ PS master:\> Set-HostProperty -HostWidth 80 -Persist
 
 Set color of the console text to cyan. Next instance of the console will revert to default \(white\).
 
-```powershell
+```text
 PS master:\> Set-HostProperty -ForegroundColor Cyan
 ```
 

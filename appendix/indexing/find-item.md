@@ -14,7 +14,7 @@ The Find-Item command searches for items using the Sitecore Content Search API.
 
 ## Parameters
 
-### -Index  &lt;String&gt;
+### -Index  &lt;String&gt;
 
 Name of the Index that will be used for the search:
 
@@ -28,7 +28,7 @@ Find-Item -Index sitecore\_master\_index -First 10
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Criteria  &lt;SearchCriteria\[\]&gt;
+### -Criteria  &lt;SearchCriteria\[\]&gt;
 
 simple search criteria in the following example form:
 
@@ -54,7 +54,7 @@ Find-Item -Index sitecore\_master\_index `-Criteria @{Filter = "StartsWith"; Fie
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Where  &lt;String&gt;
+### -Where  &lt;String&gt;
 
 Works on Sitecore 7.5 and later versions only.
 
@@ -68,7 +68,7 @@ Filtering Criteria using Dynamic Linq syntax: [https://weblogs.asp.net/scottgu/d
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -WhereValues  &lt;Object\[\]&gt;
+### -WhereValues  &lt;Object\[\]&gt;
 
 Works on Sitecore 7.5 and later versions only.
 
@@ -82,7 +82,7 @@ An Array of objects for Dynamic Linq "-Where" parameter as explained in: [https:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -OrderBy  &lt;String&gt;
+### -OrderBy  &lt;String&gt;
 
 Works on Sitecore 7.5 and later versions only.
 
@@ -96,7 +96,7 @@ Field by which the search results sorting should be performed. Dynamic Linq orde
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -First  &lt;Int32&gt;
+### -First  &lt;Int32&gt;
 
 Number of returned search results.
 
@@ -108,7 +108,7 @@ Number of returned search results.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Last  &lt;Int32&gt;
+### -Last  &lt;Int32&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -118,7 +118,7 @@ Number of returned search results.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Skip  &lt;Int32&gt;
+### -Skip  &lt;Int32&gt;
 
 Number of search results to be skipped skip before returning the results commences.
 
@@ -146,7 +146,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Fields by which filtering can be performed using the -Criteria parameter
 
-```powershell
+```text
 Find-Item -Index sitecore_master_index `
           -Criteria @{Filter = "StartsWith"; Field = "_fullpath"; Value = "/sitecore/content/" } `
           -First 1 | 
@@ -157,7 +157,7 @@ Find-Item -Index sitecore_master_index `
 
 Find all children of a specific item including that item - return Sitecore items
 
-```powershell
+```text
 $root = (Get-Item "master:/system/Modules/PowerShell/Script Library/")
 Find-Item -Index sitecore_master_index `
           -Criteria @{Filter = "DescendantOf"; Field = $root } |
@@ -168,7 +168,7 @@ Find-Item -Index sitecore_master_index `
 
 Find all Template Fields using Dynamic LINQ syntax
 
-```powershell
+```text
 Find-Item `
     -Index sitecore_master_index `
     -Where 'TemplateName = @0 And Language=@1' `
@@ -179,7 +179,7 @@ Find-Item `
 
 Find all Template Fields using the -Criteria parameter syntax
 
-```powershell
+```text
 Find-Item `
         -Index sitecore_master_index `
         -Criteria @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"},

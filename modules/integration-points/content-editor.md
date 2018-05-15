@@ -76,7 +76,7 @@ The _Ribbon_ integration allows for commands in the ribbon. Rules can be used to
 
 **Example:** The following script gets the selected Context Menu item and displays an alert using the item name.
 
-```powershell
+```text
 # Use the notation "." to get the current directory/item.
 $item = Get-Item -Path .
 Show-Alert -Title $item.Name
@@ -114,7 +114,5 @@ The _Warning_ integration allows for notifications and commands in the Content E
 
 ![License Expiration Warning](../../.gitbook/assets/warning-notification-for-licensing.png)
 
-Alan provided a nice example [here][4] on setting up the warning with commands.
-
-[4]: [https://alan-null.github.io/2016/04/content-editor-notifications](https://alan-null.github.io/2016/04/content-editor-notifications)
+Alan provided a nice example [here](https://github.com/SitecorePowerShell/Book/tree/5daee3160885dadd7031fee723dccf12a33abd7b/modules/integration-points/[https:/alan-null.github.io/2016/04/content-editor-notifications]/README.md) on setting up the warning with commands.
 

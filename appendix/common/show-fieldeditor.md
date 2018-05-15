@@ -24,7 +24,7 @@ Shows Field editor for a provided item allows for editing all or selected list o
 
 ## Parameters
 
-### -Name  &lt;String\[\]&gt;
+### -Name  &lt;String\[\]&gt;
 
 Array of names of the fields to be edited.
 
@@ -38,7 +38,7 @@ This parameter supports globbing so you can simply use "_" to allow editing of a
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Title of the dialog containing the field editor.
 
@@ -50,7 +50,7 @@ Title of the dialog containing the field editor.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Width  &lt;Int32&gt;
+### -Width  &lt;Int32&gt;
 
 Width of the dialog containing the field editor.
 
@@ -62,7 +62,7 @@ Width of the dialog containing the field editor.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Height  &lt;Int32&gt;
+### -Height  &lt;Int32&gt;
 
 Height of the dialog containing the field editor.
 
@@ -74,7 +74,7 @@ Height of the dialog containing the field editor.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -IncludeStandardFields  &lt;SwitchParameter&gt;
+### -IncludeStandardFields  &lt;SwitchParameter&gt;
 
 Add this parameter to add standard fields to the list that is being considered to be displayed
 
@@ -86,7 +86,7 @@ Add this parameter to add standard fields to the list that is being considered t
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be edited.
 
@@ -98,7 +98,7 @@ The item to be edited.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be edited - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -110,7 +110,7 @@ Path to the item to be edited - additionally specify Language parameter to fetch
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the the item to be edited - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -122,7 +122,7 @@ Id of the the item to be edited - additionally specify Language parameter to fet
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be edited - can work with Language parameter to narrow the publication scope.
 
@@ -134,7 +134,7 @@ Database containing the item to be edited - can work with Language parameter to 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language that will be edited. If not specified the current user language will be used. Globbing/wildcard supported.
 
@@ -146,7 +146,7 @@ Language that will be edited. If not specified the current user language will be
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PreserveSections  &lt;SwitchParameter&gt;
+### -PreserveSections  &lt;SwitchParameter&gt;
 
 If added this parameter tells editor to preserve the original item field sections, otherwise all fields are placed in a single section Named by SectionTitle parameter and having the SectionIcon icon.
 
@@ -158,7 +158,7 @@ If added this parameter tells editor to preserve the original item field section
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -SectionTitle  &lt;String&gt;
+### -SectionTitle  &lt;String&gt;
 
 If PreserveSections is not added to parameters - this parameter provides a title for the global section all fields are placed under.
 
@@ -170,7 +170,7 @@ If PreserveSections is not added to parameters - this parameter provides a title
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -SectionIcon  &lt;String&gt;
+### -SectionIcon  &lt;String&gt;
 
 If PreserveSections is not added to parameters - this parameter provides a iconfor the global section all fields are placed under.
 
@@ -204,7 +204,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Show field editor that shows all non-standard fields on sitecore/content/home item except for field "title" The dialog will be titled "My Home Item" all fields inside will be in single section.
 
-```powershell
+```text
 PS master:\> Show-FieldEditor -Path master:\content\home -Name "*" , "-Title" -Title "My Home Item"
 ```
 
@@ -212,7 +212,7 @@ PS master:\> Show-FieldEditor -Path master:\content\home -Name "*" , "-Title" -T
 
 Show field editor that shows all fields including standard fields on sitecore/content/home The dialog will preserve the item sections.
 
-```powershell
+```text
 PS master:\> Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -IncludeStandardFields -PreserveSections
 ```
 

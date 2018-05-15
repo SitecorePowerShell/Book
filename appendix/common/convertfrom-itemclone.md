@@ -18,7 +18,7 @@ Converts an item from a clone to a fully independent item.
 
 ## Parameters
 
-### -Recurse  &lt;SwitchParameter&gt;
+### -Recurse  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -28,7 +28,7 @@ Converts an item from a clone to a fully independent item.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PassThru  &lt;SwitchParameter&gt;
+### -PassThru  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ Converts an item from a clone to a fully independent item.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be converted.
 
@@ -50,7 +50,7 @@ The item to be converted.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be converted
 
@@ -62,7 +62,7 @@ Path to the item to be converted
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be converted
 
@@ -74,7 +74,7 @@ Id of the item to be converted
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be converted
 
@@ -106,7 +106,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> ConvertFrom-ItemClone -Path master:\content\home
 ```
 

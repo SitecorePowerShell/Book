@@ -39,5 +39,3 @@ Below are the shortcuts available in the console.
 
 **Note:** The font family, font size, and other settings can be configured through the ISE.
 
-[1]: [https://github.com/SitecorePowerShell/Console/issues/314](https://github.com/SitecorePowerShell/Console/issues/314)
-

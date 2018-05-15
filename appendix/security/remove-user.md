@@ -18,15 +18,15 @@ The Identity parameter specifies the Sitecore user to remove. You can specify a 
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: admin
 Fully Qualified Name
-    Example: sitecore\admi 
+    Example: sitecore\admi
 ```
 
 | Aliases |  |
@@ -37,7 +37,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Instance  &lt;User&gt;
+### -Instance  &lt;User&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -71,19 +71,19 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Remove-User -Identity michael
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> "michael","adam","mike" | Remove-User
 ```
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> Get-User -Filter sitecore\m* | Remove-User
 ```
 

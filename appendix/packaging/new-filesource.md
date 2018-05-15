@@ -14,7 +14,7 @@ Creates new File source that can be added to a Sitecore package. Folder provided
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the file source.
 
@@ -26,7 +26,7 @@ Name of the file source.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Root  &lt;DirectoryInfo&gt;
+### -Root  &lt;DirectoryInfo&gt;
 
 Root folder to include in the package
 
@@ -38,7 +38,7 @@ Root folder to include in the package
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -IncludeFilter  &lt;String&gt;
+### -IncludeFilter  &lt;String&gt;
 
 Filter that defines which files will be included.
 
@@ -50,7 +50,7 @@ Filter that defines which files will be included.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ExcludeFilter  &lt;String&gt;
+### -ExcludeFilter  &lt;String&gt;
 
 Filter that defines which files will NOT be included.
 
@@ -62,7 +62,7 @@ Filter that defines which files will NOT be included.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -InstallMode  &lt;String&gt;
+### -InstallMode  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -88,7 +88,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Following example creates a new package, adds content of the Console folder under the site folder saves it in the Sitecore Package folder + gives you an option to download the saved package.
 
-```powershell
+```text
 # Create package
        $package = new-package "Sitecore PowerShell Extensions";
 

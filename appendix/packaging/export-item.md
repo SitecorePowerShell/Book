@@ -32,7 +32,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Entry  &lt;IncludeEntry&gt;
+### -Entry  &lt;IncludeEntry&gt;
 
 Serialization preset to be serialized. Obtain the preset through the use of Get-Preset command.
 
@@ -44,7 +44,7 @@ Serialization preset to be serialized. Obtain the preset through the use of Get-
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Recurse  &lt;SwitchParameter&gt;
+### -Recurse  &lt;SwitchParameter&gt;
 
 Process the item and all of its children - switch which decides if serialization concerns only the single item or the whole tree below the item, e.g.
 
@@ -60,7 +60,7 @@ Root - directory where the serialized files should be saved, e.g. Export-Item -p
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ItemPathsAbsolute  &lt;SwitchParameter&gt;
+### -ItemPathsAbsolute  &lt;SwitchParameter&gt;
 
 Works only with Root parameter and decides if folder structure starting from "sitecore\content" should be created, e.g. if you want to serialize articles item in directory c:\tmp\sitecore\content you can use. For example: Export-Item -Path "master:\content\articles" -ItemPathsAbsolute -Root "c:\tmp"
 
@@ -72,7 +72,7 @@ Works only with Root parameter and decides if folder structure starting from "si
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Root  &lt;String&gt;
+### -Root  &lt;String&gt;
 
 Directory where the serialized files should be saved, e.g.
 
@@ -86,7 +86,7 @@ Export-Item -Path "master:\content" -Root "c:\tmp"
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be serialized.
 
@@ -98,7 +98,7 @@ The item to be serialized.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -110,7 +110,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 You can pass the id of serialized item instead of path, e.g. Export-Item -id "{0DE95AE4-41AB-4D01-9EB0-67441B7C2450}"
 
@@ -122,7 +122,7 @@ You can pass the id of serialized item instead of path, e.g. Export-Item -id "{0
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -146,7 +146,7 @@ Help Author: Marek Musielak, Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Export-Item -Path master:\content\home
 ```
 
@@ -154,7 +154,7 @@ PS master:\> Export-Item -Path master:\content\home
 
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 * [Get-Preset](../common/get-preset.md)
-* [Import-Item]()
+* [Import-Item](export-item.md)
 * [https://www.cognifide.com/blogs/sitecore/serialization-and-deserialization-with-sitecore-powershell-extensions/](https://www.cognifide.com/blogs/sitecore/serialization-and-deserialization-with-sitecore-powershell-extensions/) 
 * [https://www.youtube.com/watch?v=60BGRDNONo0&list=PLph7ZchYd\_nCypVZSNkudGwPFRqf1na0b&index=7](https://www.youtube.com/watch?v=60BGRDNONo0&list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b&index=7) 
 * [https://gist.github.com/AdamNaj/6c86f61510dc3d2d8b2f](https://gist.github.com/AdamNaj/6c86f61510dc3d2d8b2f) 

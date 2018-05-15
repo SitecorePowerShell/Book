@@ -14,7 +14,7 @@ The Write-Log command writes text to the Sitecore event log with the specified l
 
 ## Parameters
 
-### -Object  &lt;Object&gt;
+### -Object  &lt;Object&gt;
 
 Specifies the object to write to the log.
 
@@ -26,7 +26,7 @@ Specifies the object to write to the log.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Separator  &lt;Object&gt;
+### -Separator  &lt;Object&gt;
 
 Strings the output together with the specified text.
 
@@ -38,7 +38,7 @@ Strings the output together with the specified text.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Log  &lt;LogNotificationLevel&gt;
+### -Log  &lt;LogNotificationLevel&gt;
 
 Specifies the Sitecore logging level.
 
@@ -56,7 +56,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Represents the identity of a role. 
+  Represents the identity of a role.
 
 ## Outputs
 
@@ -72,7 +72,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Write-Log "Information."
 ```
 

@@ -14,7 +14,7 @@ The Show-ListView command sends the output from a command to a grid view window 
 
 ## Parameters
 
-### -PageSize  &lt;Int32&gt;
+### -PageSize  &lt;Int32&gt;
 
 Number of results shown per page.
 
@@ -26,7 +26,7 @@ Number of results shown per page.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Modal  &lt;SwitchParameter&gt;
+### -Modal  &lt;SwitchParameter&gt;
 
 If this parameter is provided Results will show in a new window \(in Sitecore 6.x up till Sitecore 7.1\) or in a modal overlay \(Sitecore 7.2+\)
 
@@ -38,7 +38,7 @@ If this parameter is provided Results will show in a new window \(in Sitecore 6.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ActionData  &lt;Object&gt;
+### -ActionData  &lt;Object&gt;
 
 Additional data what will be passed to the view. All actions that are executed from that view window will have that data accessible to them as $actionData variable.
 
@@ -50,7 +50,7 @@ Additional data what will be passed to the view. All actions that are executed f
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ViewName  &lt;String&gt;
+### -ViewName  &lt;String&gt;
 
 View signature name - this can be used by action commands to determine whether to show an action or not using the Show/Enable rules.
 
@@ -62,7 +62,7 @@ View signature name - this can be used by action commands to determine whether t
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ActionsInSession  &lt;SwitchParameter&gt;
+### -ActionsInSession  &lt;SwitchParameter&gt;
 
 If this parameter is specified actions will be executed in the same session as the one in which the command is executed.
 
@@ -74,7 +74,7 @@ If this parameter is specified actions will be executed in the same session as t
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Show  &lt;ShowListViewFeatures&gt;
+### -Show  &lt;ShowListViewFeatures&gt;
 
 Shows UI elements selectively in the results dialog -- All - shows all UI elements automatically - default value -- SharedExport - shows export filters that are not specific to this very `-ViewName report (left-most ribbon panel) -- Filter - shows filter panel -- PagingAlways - shows paging when list is shorter than the page specified -- SharedActions - shows actions that are not specific to this very`-ViewName report \(right-most ribbon panel\) -- StatusBar - shows status bar.
 
@@ -86,7 +86,7 @@ Shows UI elements selectively in the results dialog -- All - shows all UI elemen
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -InfoTitle  &lt;String&gt;
+### -InfoTitle  &lt;String&gt;
 
 Title on the panel that appears below the ribbon in the results window.
 
@@ -98,7 +98,7 @@ Title on the panel that appears below the ribbon in the results window.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -InfoDescription  &lt;String&gt;
+### -InfoDescription  &lt;String&gt;
 
 Description that appears on the panel below the ribbon in the results window.
 
@@ -110,7 +110,7 @@ Description that appears on the panel below the ribbon in the results window.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -MissingDataMessage  &lt;String&gt;
+### -MissingDataMessage  &lt;String&gt;
 
 If no Items were provided for -Data parameter the message provided in this parameter will be shown in the middle of the List View dialog to notify users of the lack of items to display.
 
@@ -122,7 +122,7 @@ If no Items were provided for -Data parameter the message provided in this param
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Icon  &lt;String&gt;
+### -Icon  &lt;String&gt;
 
 Icon of the result window. \(Shows in the top/left corner and on the Sitecore taskbar\).
 
@@ -134,7 +134,7 @@ Icon of the result window. \(Shows in the top/left corner and on the Sitecore ta
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Data  &lt;Object&gt;
+### -Data  &lt;Object&gt;
 
 Data to be displayed in the view.
 
@@ -146,7 +146,7 @@ Data to be displayed in the view.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Property  &lt;Object\[\]&gt;
+### -Property  &lt;Object\[\]&gt;
 
 Specifies the object properties that appear in the display and the order in which they appear. Type one or more property names \(separated by commas\), or use a hash table to display a calculated property.
 
@@ -160,7 +160,7 @@ The value of the Property parameter can be a new calculated property. To create 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Title of the results window.
 
@@ -172,7 +172,7 @@ Title of the results window.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Width  &lt;Int32&gt;
+### -Width  &lt;Int32&gt;
 
 Width of the results window.
 
@@ -184,7 +184,7 @@ Width of the results window.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Height  &lt;Int32&gt;
+### -Height  &lt;Int32&gt;
 
 Height of the results window.
 
@@ -218,7 +218,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 This command formats information about Sitecore items in a table. The Get-ChildItem command gets objects representing the items. The pipeline operator \(\|\) passes the object to the Show-ListView command. Show-ListView displays the objects in a table.
 
-```powershell
+```text
 PS master:\> Get-Item -path master:\* | Show-ListView -Property Name, DisplayName, ProviderPath, TemplateName, Language
 ```
 
@@ -226,7 +226,7 @@ PS master:\> Get-Item -path master:\* | Show-ListView -Property Name, DisplayNam
 
 This command formats information about Sitecore items in a table. The Get-ItemReferrer command gets all references of the "Sample Item" template. The pipeline operator \(\|\) passes the object to the Show-ListView command. Show-ListView displays the objects in a table. The Properties are not displaying straight properties but use the Name/Expression scheme to provide a nicely named values that like in the case of languages which are aggregarde form the "Languages" property.
 
-```powershell
+```text
 PS master:\> Get-ItemReferrer -path 'master:\templates\Sample\Sample Item' | 
                  Show-ListView -Property `
                      @{Label="Name"; Expression={$_.DisplayName} }, 

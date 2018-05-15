@@ -34,7 +34,7 @@ View the list of SPE sessions and "kill" them as needed.
 
 ### Create Anti-Package
 
-This tool provides similar functionality to the [Sitecore Rocks][2] module.
+This tool provides similar functionality to the [Sitecore Rocks](https://github.com/SitecorePowerShell/Book/tree/9c7126d7a38df6ef372e8baef52f9a02baabd550/modules/integration-points/[https:/marketplace.sitecore.net/en/Modules/S/Sitecore/_Rocks.aspx]) module.
 
 ### Re-create Site from Sitemap
 
@@ -52,27 +52,25 @@ To create your own Toolbox item take the following steps: 1. Create the _Toolbox
 
   ![Module Libraries](../../.gitbook/assets/module-createlibraries.png)
 
-* Select the _Toolbox_ item and click _Proceed_.  
+* Select the _Toolbox_ item and click _Proceed_.
 
   ![Module Toolbox Library](../../.gitbook/assets/module-createtoolboxlibrary.png)
 
   1. Create a _PowerShell Script_ under the _Toolbox_ item.
 
-* Right click the _Toolbox_ library and choose _PowerShell Script_.  
+* Right click the _Toolbox_ library and choose _PowerShell Script_.
 
   ![Libary Script](../../.gitbook/assets/library-createscript.png)
 
-  1. Open and edit the _PowerShell Script_ using the ISE.  
+  1. Open and edit the _PowerShell Script_ using the ISE.
 
      ![ISE Edit](../../.gitbook/assets/script-editise.png)
 
-  2. Run the _Rebuild All_ command in the ISE by navigating to the _Settings_ tab and selecting the icon to rebuild. Be certain to enable the module before running the rebuild command.  
+  2. Run the _Rebuild All_ command in the ISE by navigating to the _Settings_ tab and selecting the icon to rebuild. Be certain to enable the module before running the rebuild command.
 
      ![ISE Settings Tab](../../.gitbook/assets/ise-settingstab.png)
 
-  3. Verify the new toolbox item appears in the Toolbox.  
+  3. Verify the new toolbox item appears in the Toolbox.
 
      ![Toolbox Item](../../.gitbook/assets/toolbox-newitem.png)
-
-[2]: [https://marketplace.sitecore.net/en/Modules/S/Sitecore\_Rocks.aspx](https://marketplace.sitecore.net/en/Modules/S/Sitecore_Rocks.aspx)
 

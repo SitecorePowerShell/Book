@@ -20,15 +20,15 @@ The Import-Role command imports \(deserializes\) Sitecore roles from the Sitecor
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore role to be deserialized by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: developer
 Fully Qualified Name
-    Example: sitecore\developer 
+    Example: sitecore\developer
 ```
 
 | Aliases |  |
@@ -39,7 +39,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Filter  &lt;String&gt;
+### -Filter  &lt;String&gt;
 
 Specifies a simple pattern to match Sitecore roles.
 
@@ -57,7 +57,7 @@ To get all the roles in a domain use the following command: Import-Role -Filter 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Role  &lt;User&gt;
+### -Role  &lt;User&gt;
 
 An existing role object to be restored to the version from disk
 
@@ -69,7 +69,7 @@ An existing role object to be restored to the version from disk
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the file the role should be loaded from.
 
@@ -81,7 +81,7 @@ Path to the file the role should be loaded from.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Root  &lt;String&gt;
+### -Root  &lt;String&gt;
 
 Specifies the serialization root directory. If this parameter is not specified - the default Sitecore serialization folder will be used \(unless you're reading from an explicit location with the -Path parameter\).
 
@@ -99,7 +99,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Sitecore.Security.Accounts.Role 
+  Sitecore.Security.Accounts.Role
 
 ## Notes
 
@@ -109,25 +109,25 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Import-Role -Identity sitecore\Author
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Import-Role -Filter sitecore\*
 ```
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> Import-Role -Root C:\my\Serialization\Folder\ -Filter *\*
 ```
 
 ### EXAMPLE 4
 
-```powershell
+```text
 PS master:\> Import-Role -Path C:\my\Serialization\Folder\Admins.role
 ```
 

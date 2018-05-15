@@ -20,15 +20,15 @@ To search for and retrieve more than one role, use the Filter parameter.
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore role by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: developer
 Fully Qualified Name
-    Example: sitecore\developer 
+    Example: sitecore\developer
 ```
 
 | Aliases |  |
@@ -39,7 +39,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Filter  &lt;String&gt;
+### -Filter  &lt;String&gt;
 
 Specifies a simple pattern to match Sitecore roles.
 
@@ -63,7 +63,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Represents the identity of a role. 
+  Represents the identity of a role.
 
 ## Outputs
 
@@ -71,7 +71,7 @@ The output type is the type of the objects that the cmdlet emits.
 
 * Sitecore.Security.Accounts.Role
 
-  Returns one or more roles. 
+  Returns one or more roles.
 
 ## Notes
 
@@ -81,7 +81,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Get-Role -Identity sitecore\developer
 
 Name                                     Domain       IsEveryone
@@ -91,7 +91,7 @@ sitecore\developer                       sitecore     False
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> "sitecore\developer","sitecore\author" | Get-Role
 
 Name                                     Domain       IsEveryone
@@ -102,7 +102,7 @@ sitecore\developer                       sitecore     False
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> Get-Role -Filter sitecore\d*
 
 Name                                     Domain       IsEveryone
@@ -115,7 +115,7 @@ sitecore\Developer                       sitecore     False
 
 Expand the MemberOf property to see a list of roles that the specified role is a member.
 
-```powershell
+```text
 PS master:\> Get-Role -Identity sitecore\developer | Select-Object -ExpandProperty MemberOf
 
 Name                                     Domain       IsEveryone

@@ -18,7 +18,7 @@ The Get-Layout command returns the layout for the specified item.
 
 ## Parameters
 
-### -Device  &lt;DeviceItem&gt;
+### -Device  &lt;DeviceItem&gt;
 
 Layout Device for which the item should be returned. If not specified All layouts used will be returned. If Device is specified but no layout is specified the command will return an error that can be silenced
 
@@ -30,7 +30,7 @@ Layout Device for which the item should be returned. If not specified All layout
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -FinalLayout  &lt;SwitchParameter&gt;
+### -FinalLayout  &lt;SwitchParameter&gt;
 
 Returns the Final Layout. If not provided, the Shared Layout will be returned. Applies to Sitecore 8.0 and higher only.
 
@@ -42,7 +42,7 @@ Returns the Final Layout. If not provided, the Shared Layout will be returned. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ Returns the Final Layout. If not provided, the Shared Layout will be returned. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be processed.
 
@@ -64,7 +64,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -76,7 +76,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -88,7 +88,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -120,7 +120,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Get-Layout -Path master:\content\home
 ```
 

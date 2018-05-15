@@ -20,7 +20,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The script item to be executed.
 
@@ -32,7 +32,7 @@ The script item to be executed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the script item to be executed. Path can be absolute or Relavie to Script library root. e.g. the following two commands are equivalent:
 
@@ -46,7 +46,7 @@ PS master:\&gt; Invoke-Script 'master:\system\Modules\PowerShell\Script Library\
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ArgumentList  &lt;Object\[\]&gt;
+### -ArgumentList  &lt;Object\[\]&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Invoke-Script 'Examples\Script Testing\Long Running Script with Progress Demo'
 ```
 

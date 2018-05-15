@@ -18,7 +18,7 @@ Sets item layout for a specific device provided
 
 ## Parameters
 
-### -Device  &lt;DeviceItem&gt;
+### -Device  &lt;DeviceItem&gt;
 
 Device for which to set layout.
 
@@ -30,7 +30,7 @@ Device for which to set layout.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Layout  &lt;Item&gt;
+### -Layout  &lt;Item&gt;
 
 Sitecore item defining the layout.
 
@@ -42,7 +42,7 @@ Sitecore item defining the layout.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -FinalLayout  &lt;SwitchParameter&gt;
+### -FinalLayout  &lt;SwitchParameter&gt;
 
 Targets the Final Layout. If not provided, the Shared Layout will be targeted. Applies to Sitecore 8.0 and higher only.
 
@@ -54,7 +54,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -64,7 +64,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be processed.
 
@@ -76,7 +76,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -88,7 +88,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -100,7 +100,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -126,7 +126,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Set-Layout -Path master:\content\home
 ```
 

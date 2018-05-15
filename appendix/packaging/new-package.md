@@ -14,7 +14,7 @@ Creates a new Sitecore install package object that allows for further addition o
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Package name
 
@@ -42,7 +42,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Following example creates a new package, adds content/home item to it and saves it in the Sitecore Package folder+ gives you an option to download the saved package.
 
-```powershell
+```text
 # Create package
        $package = new-package "Sitecore PowerShell Extensions";
 

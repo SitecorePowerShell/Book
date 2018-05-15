@@ -24,7 +24,7 @@ Checks if a user can perform an operation on an item.
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be tested against.
 
@@ -36,7 +36,7 @@ The item to be tested against.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be tested against.
 
@@ -48,7 +48,7 @@ Path to the item to be tested against.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be tested against. Requires the Database parameter to be specified.
 
@@ -60,7 +60,7 @@ Id of the item to be tested against. Requires the Database parameter to be speci
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be fetched with Id parameter.
 
@@ -72,7 +72,7 @@ Database containing the item to be fetched with Id parameter.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -AccessRight  &lt;String&gt;
+### -AccessRight  &lt;String&gt;
 
 The access right to grand or deny. Well known rights are:
 
@@ -84,11 +84,11 @@ The access right to grand or deny. Well known rights are:
 * item:create - "Create" - controls whether an account can create child items. The create access right requires the read access right.
 * item:delete - "Delete" - Delete right for items. controls whether an account can delete an item. The delete access right requires the read access right
 
-    Important!
+  Important!
 
   The Delete command also deletes all child items, even if the account has been denied Delete
 
-  rights for one or more of the subitems. 
+  rights for one or more of the subitems.
 
 * item:admin - "Administer" - controls whether an account can configure access rights on an item. The administer access right requires the read and write access rights.
 * language:read - "Language Read" - controls whether a user can read a specific language version of items.
@@ -111,17 +111,17 @@ The access right to grand or deny. Well known rights are:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 User name including domain for which the access rule is being created. If no domain is specified - 'sitecore' will be used as the default domain.
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: adam
 Fully Qualified Name
-    Example: sitecore\adam 
+    Example: sitecore\adam
 ```
 
 | Aliases |  |
@@ -154,7 +154,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Denies the "sitecore\author2" user renaming the descendants of the Home item. The security info is created prior to adding it to the item. The item is delivered to the Add-ItemAcl from the pipeline and returned to the pipeline after processing due to the -PassThru parameter.
 
-```powershell
+```text
 PS master:\> $acl = New-ItemAcl -AccessRight item:rename -PropagationType Descendants -SecurityPermission AllowAccess -Identity "sitecore\author2"
 PS master:\> Get-Item -Path master:\content\home | Set-ItemAcl -AccessRules $acl
 

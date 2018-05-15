@@ -18,7 +18,7 @@ The Identity parameter specifies the Sitecore user to get. You can specify a use
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -28,7 +28,7 @@ The Identity parameter specifies the Sitecore user to get. You can specify a use
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Instance  &lt;User&gt;
+### -Instance  &lt;User&gt;
 
 Specifies the Sitecore user by providing an instance of a user.
 
@@ -64,13 +64,13 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Unlock-User -Identity michael
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Get-User -Filter * | Unlock-User
 ```
 

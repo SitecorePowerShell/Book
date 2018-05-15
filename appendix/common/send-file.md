@@ -20,7 +20,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the file to be downloaded. The file has to exist in the Data folder. Files from outside the Data folder are not downloadable.
 
@@ -32,7 +32,7 @@ Path to the file to be downloaded. The file has to exist in the Data folder. Fil
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Message  &lt;String&gt;
+### -Message  &lt;String&gt;
 
 Message to show the user in the download dialog.
 
@@ -44,7 +44,7 @@ Message to show the user in the download dialog.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be downloaded.
 
@@ -56,7 +56,7 @@ The item to be downloaded.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -NoDialog  &lt;SwitchParameter&gt;
+### -NoDialog  &lt;SwitchParameter&gt;
 
 If this parameter is used the Dialog will not be shown but instead the file download will begin immediately.
 
@@ -68,7 +68,7 @@ If this parameter is used the Dialog will not be shown but instead the file down
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ShowFullPath  &lt;SwitchParameter&gt;
+### -ShowFullPath  &lt;SwitchParameter&gt;
 
 If this parameter is used the Dialog will display full path to the file downloaded in the dialog, otherwise only the file name will be shown.
 
@@ -80,7 +80,7 @@ If this parameter is used the Dialog will display full path to the file download
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Download dialog title.
 
@@ -92,7 +92,7 @@ Download dialog title.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Width  &lt;Int32&gt;
+### -Width  &lt;Int32&gt;
 
 Download dialog width.
 
@@ -104,7 +104,7 @@ Download dialog width.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Height  &lt;Int32&gt;
+### -Height  &lt;Int32&gt;
 
 Download dialog height.
 
@@ -138,7 +138,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Download File from server disk drive
 
-```powershell
+```text
 PS master:\> Send-File -Path "C:\Projects\ZenGarden\Data\packages\Sitecore PowerShell Extensions-2.6.zip"
 ```
 
@@ -146,7 +146,7 @@ PS master:\> Send-File -Path "C:\Projects\ZenGarden\Data\packages\Sitecore Power
 
 Download item from media library
 
-```powershell
+```text
 PS master:\> Get-Item "master:/media library/Showcase/cognifide_logo" | Send-File -Message "Cognifide Logo"
 ```
 

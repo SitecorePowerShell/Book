@@ -16,7 +16,7 @@ The Remove-Role command removes a Sitecore role.
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Role name including domain. If no domain is specified - 'sitecore' will be used as the default value
 
@@ -28,7 +28,7 @@ Role name including domain. If no domain is specified - 'sitecore' will be used 
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Instance  &lt;Role&gt;
+### -Instance  &lt;Role&gt;
 
 Role instance like that returned by the Get-Role command.
 
@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Remove-Role -Identity Michael
 ```
 

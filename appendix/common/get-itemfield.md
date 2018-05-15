@@ -18,7 +18,7 @@ Retrieves item fields as either names or fields or template fields.
 
 ## Parameters
 
-### -IncludeStandardFields  &lt;SwitchParameter&gt;
+### -IncludeStandardFields  &lt;SwitchParameter&gt;
 
 Includes fields that are defined on "Standard template"
 
@@ -30,7 +30,7 @@ Includes fields that are defined on "Standard template"
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ReturnType  &lt;ReturnValue&gt;
+### -ReturnType  &lt;ReturnValue&gt;
 
 Determines type returned. The possible values include:
 
@@ -46,7 +46,7 @@ Determines type returned. The possible values include:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String\[\]&gt;
+### -Name  &lt;String\[\]&gt;
 
 Array of names to include - supports wildcards.
 
@@ -58,7 +58,7 @@ Array of names to include - supports wildcards.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language that will be analysed. If not specified the current user language will be used. Globbing/wildcard supported.
 
@@ -70,7 +70,7 @@ Language that will be analysed. If not specified the current user language will 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be analysed.
 
@@ -82,7 +82,7 @@ The item to be analysed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be analysed.
 
@@ -94,7 +94,7 @@ Path to the item to be analysed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be analysed.
 
@@ -106,7 +106,7 @@ Id of the item to be analysed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be analysed - can work with Language parameter to narrow the publication scope.
 
@@ -132,7 +132,7 @@ The output type is the type of the objects that the cmdlet emits.
 
   Sitecore.Data.Templates.TemplateField
 
-  Sitecore.Data.Fields.Field 
+  Sitecore.Data.Fields.Field
 
 ## Notes
 
@@ -144,7 +144,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Get list of names of non standard fields from /sitecore/content/home item
 
-```powershell
+```text
 PS master:\> Get-ItemField -Path master:\content\home
 
 Text
@@ -156,7 +156,7 @@ Image
 
 Get list of fields including standard fields from /sitecore/content/home item and list their Name, DisplayName, SectionDisplayName and Description in a table.
 
-```powershell
+```text
 PS master:\> Get-Item master:\content\home | Get-ItemField -IncludeStandardFields -ReturnType Field -Name "*" | ft Name, DisplayName, SectionDisplayName, Description -auto
 
 Name                                DisplayName                        SectionDisplayName Description

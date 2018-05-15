@@ -14,7 +14,7 @@ The cmdlet allows to send content of an object \(FileInfo, Stream, String, Strin
 
 ## Parameters
 
-### -InputObject  &lt;Object&gt;
+### -InputObject  &lt;Object&gt;
 
 Object content to be sent to the client. Object must be of one of the following types:
 
@@ -32,7 +32,7 @@ Object content to be sent to the client. Object must be of one of the following 
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -ContentType  &lt;String&gt;
+### -ContentType  &lt;String&gt;
 
 The MIME content type of the object. In most cases you can skip this parameter and still have the content type be deduced by the browser from the
 
@@ -55,7 +55,7 @@ Common examples \(after Wikipedia\)
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the file you want the user browser to save the object as.
 
@@ -89,7 +89,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Send first log file to the user
 
-```powershell
+```text
 Get-Item "$SitecoreLogFolder\*.*" | select -first 1 | Out-Download
 ```
 
@@ -97,7 +97,7 @@ Get-Item "$SitecoreLogFolder\*.*" | select -first 1 | Out-Download
 
 Send Hello World text file to the user
 
-```powershell
+```text
 "Hello World!" | Out-Download -Name hello-world.txt
 ```
 
@@ -105,7 +105,7 @@ Send Hello World text file to the user
 
 Get a list of sitecore branches under root item in the master database and send the list to user as excel file
 
-```powershell
+```text
 Import-Function -Name ConvertTo-Xlsx
 
 [byte[]]$outobject = Get-ChildItem master:\ | 

@@ -14,7 +14,7 @@ The Get-Archive command returns Sitecore archives in context of the specified da
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the archive to retrieve.
 
@@ -26,7 +26,7 @@ Name of the archive to retrieve.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;Database&gt;
+### -Database  &lt;Database&gt;
 
 Database for which the archives should be retrieved.
 
@@ -58,7 +58,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Get-Archive -Database "master"
 
 Name                                        Items

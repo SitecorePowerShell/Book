@@ -14,7 +14,7 @@ The Export-Package command creates a Sitecore installation package as either a .
 
 ## Parameters
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path the project should be saved under.
 
@@ -26,7 +26,7 @@ Path the project should be saved under.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Project  &lt;PackageProject&gt;
+### -Project  &lt;PackageProject&gt;
 
 Project object created ealier with the New-Package. or Loaded with Get-Package.
 
@@ -38,7 +38,7 @@ Project object created ealier with the New-Package. or Loaded with Get-Package.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Zip  &lt;SwitchParameter&gt;
+### -Zip  &lt;SwitchParameter&gt;
 
 Specify this parameter to exposrt package with all its assets in a zip file. If this parameter is missing only Xml file with the package project definition will be saved.
 
@@ -50,7 +50,7 @@ Specify this parameter to exposrt package with all its assets in a zip file. If 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -NoClobber  &lt;SwitchParameter&gt;
+### -NoClobber  &lt;SwitchParameter&gt;
 
 Do not overwrite \(replace the contents\) of an existing file. By default, if a file exists in the specified path, Export-Package overwrites the file without warning.
 
@@ -62,7 +62,7 @@ Do not overwrite \(replace the contents\) of an existing file. By default, if a 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -IncludeProject  &lt;SwitchParameter&gt;
+### -IncludeProject  &lt;SwitchParameter&gt;
 
 Specify this parameter if exporting the zip file and when you want it to contain the project definitnion xml file in it.
 
@@ -90,7 +90,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Following example creates a new package, adds content/home item to it and saves it in the Sitecore Package folder+ gives you an option to download the saved package.
 
-```powershell
+```text
 # Create package
        $package = new-package "Sitecore PowerShell Extensions";
 

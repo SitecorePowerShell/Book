@@ -30,17 +30,17 @@ Retrieves security access rules from an item.
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 User name including domain for which the access rule is being created. If no domain is specified - 'sitecore' will be used as the default domain.
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: adam
 Fully Qualified Name
-    Example: sitecore\adam 
+    Example: sitecore\adam
 ```
 
 | Aliases |  |
@@ -51,7 +51,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Filter  &lt;String&gt;
+### -Filter  &lt;String&gt;
 
 Specifies a simple pattern to match Sitecore roles & users.
 
@@ -69,7 +69,7 @@ To security got all roles in a domain use the following command: Get-ItemAcl -Fi
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item from which the security rules should be taken.
 
@@ -81,7 +81,7 @@ The item from which the security rules should be taken.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item from which the security rules should be taken.
 
@@ -93,7 +93,7 @@ Path to the item from which the security rules should be taken.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item from which the security rules should be taken.
 
@@ -105,7 +105,7 @@ Id of the item from which the security rules should be taken.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be fetched with Id parameter containing the security rules that should be returned.
 
@@ -139,7 +139,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Take the security information from the Home item and apply it to the Settings item
 
-```powershell
+```text
 $acl = Get-ItemAcl -Path master:\content\home
 Set-ItemAcl -Path master:\content\Settings -AccessRules $acl -PassThru
 ```
@@ -148,7 +148,7 @@ Set-ItemAcl -Path master:\content\Settings -AccessRules $acl -PassThru
 
 Take the security information from the Home item and add it to the access rules on the Settings item
 
-```powershell
+```text
 $acl = Get-ItemAcl -Path master:\content\home
 Add-ItemAcl -Path master:\content\Settings -AccessRules $acl -PassThru
 ```

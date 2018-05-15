@@ -16,7 +16,7 @@ Removes a persistent Script Session from memory.
 
 ## Parameters
 
-### -Id  &lt;String\[\]&gt;
+### -Id  &lt;String\[\]&gt;
 
 Id of the PowerShell session to be removed from memory.
 
@@ -28,7 +28,7 @@ Id of the PowerShell session to be removed from memory.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Session  &lt;ScriptSession\[\]&gt;
+### -Session  &lt;ScriptSession\[\]&gt;
 
 Session to be removed.
 
@@ -54,7 +54,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 The following removes the script session using the specified Id.
 
 PS master:\> Remove-ScriptSession -Id "Long running script"

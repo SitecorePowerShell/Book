@@ -14,7 +14,7 @@ The New-Role command creates a new Sitecore role.
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Role name including domain. If no domain is specified - 'sitecore' will be used as the default value
 
@@ -46,7 +46,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> New-Role -Identity Michael
 ```
 

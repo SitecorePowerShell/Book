@@ -18,7 +18,7 @@ The Get-ScriptSession command returns the list of PowerShell Extensions script s
 
 ## Parameters
 
-### -Current  &lt;SwitchParameter&gt;
+### -Current  &lt;SwitchParameter&gt;
 
 Returns current script session if the session is run in a background job.
 
@@ -30,7 +30,7 @@ Returns current script session if the session is run in a background job.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -SessionType  &lt;String\[\]&gt;
+### -SessionType  &lt;String\[\]&gt;
 
 Type of the script session to be retrieved. The SessionType is a string that identifies where the session has been launched. You can type one or more session types \(separated by commas\) and use wildcards to filter. To find currently running types of a script session, type "Get-ScriptSession" without parameters.
 
@@ -42,7 +42,7 @@ Type of the script session to be retrieved. The SessionType is a string that ide
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -State  &lt;RunspaceAvailability&gt;
+### -State  &lt;RunspaceAvailability&gt;
 
 Type of the script session to be retrieved. The parameter limits script sessions to be returned to only those in a specific state, the values should be "Busy" or "Available". To find states of currently running script sessions, type "Get-ScriptSession" without parameters.
 
@@ -54,7 +54,7 @@ Type of the script session to be retrieved. The parameter limits script sessions
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String\[\]&gt;
+### -Id  &lt;String\[\]&gt;
 
 Gets the script session with the specified IDs. The ID is a string that uniquely identifies the script session within the server. You can type one or more IDs \(separated by commas\). To find the ID of a script session, type "Get-ScriptSession" without parameters.
 
@@ -66,7 +66,7 @@ Gets the script session with the specified IDs. The ID is a string that uniquely
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Session  &lt;ScriptSession\[\]&gt;
+### -Session  &lt;ScriptSession\[\]&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -96,7 +96,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\>Get-ScriptSession
 
 Type         Key                                                                              Location                                 Auto Disposed
@@ -108,7 +108,7 @@ Context      $scriptSession$|zwlyrcmmzwisv22djsv0ej2a|packageBuilder            
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\>Get-ScriptSession -Current
 
 Type         Key                                                                              Location                                 Auto Disposed

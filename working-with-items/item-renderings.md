@@ -4,7 +4,7 @@ In this section we'll show how to manage item renderings.
 
 **Example:** The following demonstrates the use of `Get-Rendering` and `Set-Rendering` for updating values on templates.
 
-```powershell
+```text
 $rendering = Get-Item -Path "master:\sitecore\layout\Sublayouts\Sample Sublayout"
 
 $items = Get-ChildItem -Path "master:\sitecore\templates\Sample Item" -Recurse 
@@ -21,14 +21,14 @@ foreach($item in $items) {
 
 **Example:** The following demonstrates how to report on pages referencing the specified rendering.
 
-```powershell
+```text
 Get-Item "master:\layout\Renderings\Feature\Experience Accelerator\Page Content\Page Content" | 
     Get-ItemReferrer | Where-Object { $_.ContentPath.StartsWith("/Demo/usa/Home") } | Show-ListView
 ```
 
 **Example:** The following demonstrates how to report on which renderings are globally set to "Cacheable".
 
-```powershell
+```text
 Get-ChildItem -Path "master:\layout\Renderings" -Recurse | 
     Where-Object { $_.Cacheable -eq "1" } | 
     Select-Object -Property Name, Cacheable, ClearOnIndexUpdate, VaryBy* | 
@@ -37,7 +37,7 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
 
 **Example:** The following demonstrates how to disable global caching on all renderings.
 
-```powershell
+```text
 $VerbosePreference = "Continue"
 Get-ChildItem -Path "master:\layout\Renderings" -Recurse | 
     Where-Object { $_.Cacheable -eq "1" } | 
@@ -48,7 +48,7 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
 
 **Example:** The following moves renderings from one placeholder to another. [See this article for more details](https://www.kasaku.co.uk/2018/02/28/updating-rendering-placeholders/).
 
-```powershell
+```text
 $placeholderMappings = @(
  @("/old-placeholder","/new-placeholder"),
  @("/another-old-placeholder","/new-placeholder")
@@ -87,7 +87,7 @@ foreach ( $item in Get-ChildItem -Item $rootItem -Recurse )
 
 **Example:** The following removes a datasource from a rendering on the FinalLayout.
 
-```powershell
+```text
 Get-Rendering -Item $item -PlaceHolder "main" | 
   Foreach-Object { Set-Rendering -Item $item -Instance $_ -DataSource $null -FinalLayout }
 ```

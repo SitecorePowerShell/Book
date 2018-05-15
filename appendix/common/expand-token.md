@@ -23,7 +23,7 @@ Some example of tokens include:
 
 ## Parameters
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language that will be processed. If not specified the current user language will be used. Globbing/wildcard supported.
 
@@ -35,7 +35,7 @@ Language that will be processed. If not specified the current user language will
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be processed.
 
@@ -47,7 +47,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -59,7 +59,7 @@ Path to the item to be processed - additionally specify Language parameter to fe
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -71,7 +71,7 @@ Id of the the item to be processed - additionally specify Language parameter to 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -103,7 +103,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Get-Item master:\content\home | Expand-Token
 ```
 

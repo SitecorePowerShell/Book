@@ -14,7 +14,7 @@ New-UsingBlock.
 
 ## Parameters
 
-### -InputObject  &lt;IDisposable&gt;
+### -InputObject  &lt;IDisposable&gt;
 
 Object that should be disposed after the Script block is executed.
 
@@ -26,7 +26,7 @@ Object that should be disposed after the Script block is executed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ScriptBlock  &lt;ScriptBlock&gt;
+### -ScriptBlock  &lt;ScriptBlock&gt;
 
 Script to be executed within the "Using" context.
 
@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Assuming all items under /sitecore/content/home have both 'Title' and 'MetaTitle' fields... Using New-UsingBlock to bulk update items under /sitecore/Content/ to have their 'MetaTitle' field to be equal to the 'Title' field
 
-```powershell
+```text
 New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
 foreach ( $item in (Get-ChildItem -Path master:\Content\Home -Recurse -WithParent) ) {
         $item."MetaTitle" = $item.Title
@@ -72,7 +72,7 @@ foreach ( $item in (Get-ChildItem -Path master:\Content\Home -Recurse -WithParen
 
 Using New-UsingBlock to perform a test with UserSwitcher - checking whether an anonymous user can change a field The test should end up showing the error as below and the Title should not be changed!
 
-```powershell
+```text
 $anonymous = Get-User -Identity "extranet\Anonymous"
 $testItem = Get-Item -Path master:\Content\Home
 

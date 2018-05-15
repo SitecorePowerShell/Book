@@ -22,7 +22,7 @@ The Get-SpeModule command returns the object that describes a Sitecore PowerShel
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 A script or library item that is defined within the module to be returned.
 
@@ -34,7 +34,7 @@ A script or library item that is defined within the module to be returned.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to a script or library item that is defined within the module to be returned.
 
@@ -46,7 +46,7 @@ Path to a script or library item that is defined within the module to be returne
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of a script or library item that is defined within the module to be returned.
 
@@ -58,7 +58,7 @@ Id of a script or library item that is defined within the module to be returned.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the module to be returned.
 
@@ -70,7 +70,7 @@ Database containing the module to be returned.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name fo the module to return. Supports wildcards.
 
@@ -88,7 +88,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * Sitecore.Data.Items.Item
 
-  System.String 
+  System.String
 
 ## Outputs
 
@@ -106,7 +106,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Return all modules defined in the provided database
 
-```powershell
+```text
 PS master:\> Get-SpeModule -Database (Get-Database "master")
 ```
 
@@ -114,7 +114,7 @@ PS master:\> Get-SpeModule -Database (Get-Database "master")
 
 Return all modules defined in the master database Matching the "Content\*" wildcard
 
-```powershell
+```text
 PS master:\> Get-SpeModule -Database (Get-Database "master")
 ```
 
@@ -122,7 +122,7 @@ PS master:\> Get-SpeModule -Database (Get-Database "master")
 
 Return the module the piped script belongs to
 
-```powershell
+```text
 PS master:\> Get-item "master:\system\Modules\PowerShell\Script Library\Copy Renderings\Content Editor\Context Menu\Layout\Copy Renderings" |  Get-SpeModule
 ```
 

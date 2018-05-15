@@ -18,7 +18,7 @@ The Unlock-Item command unlocks the item specified with parameters.
 
 ## Parameters
 
-### -PassThru  &lt;SwitchParameter&gt;
+### -PassThru  &lt;SwitchParameter&gt;
 
 Passes the unlocked item back into the pipeline.
 
@@ -30,7 +30,7 @@ Passes the unlocked item back into the pipeline.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be unlocked.
 
@@ -42,7 +42,7 @@ The item to be unlocked.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be unlocked - can work with Language parameter to specify the language other than current session language.
 
@@ -54,7 +54,7 @@ Path to the item to be unlocked - can work with Language parameter to specify th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be unlocked.
 
@@ -66,7 +66,7 @@ Id of the item to be unlocked.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be fetched with Id parameter.
 
@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Unlock the Home item providing its path
 
-```powershell
+```text
 PS master:\> Unlock-Item -Path master:\content\home
 ```
 
@@ -108,7 +108,7 @@ PS master:\> Unlock-Item -Path master:\content\home
 
 Unlock the Home item providing it from the pipeline and passing it back to the pipeline
 
-```powershell
+```text
 PS master:\> Get-Item -Path master:\content\home | Unlock-Item -PassThru
 
 Name   Children Languages                Id                                     TemplateName

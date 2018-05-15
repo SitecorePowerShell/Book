@@ -14,7 +14,7 @@ The Export-UpdatePackage command generates a Sitecore update package containing 
 
 ## Parameters
 
-### -CommandList  &lt;List\`1&gt;
+### -CommandList  &lt;List\`1&gt;
 
 List of changes to be included in the package.
 
@@ -26,7 +26,7 @@ List of changes to be included in the package.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the package.
 
@@ -38,7 +38,7 @@ Name of the package.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path the update package should be saved under.
 
@@ -50,7 +50,7 @@ Path the update package should be saved under.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Readme  &lt;String&gt;
+### -Readme  &lt;String&gt;
 
 Contents of the "read me" instruction for the package
 
@@ -62,7 +62,7 @@ Contents of the "read me" instruction for the package
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -LicenseFileName  &lt;String&gt;
+### -LicenseFileName  &lt;String&gt;
 
 file name of the license to be included with the package.
 
@@ -74,7 +74,7 @@ file name of the license to be included with the package.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Tag  &lt;String&gt;
+### -Tag  &lt;String&gt;
 
 Package tag.
 
@@ -96,7 +96,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Create an update package that transforms the serialized database state defined in C:\temp\SerializationSource into into set defined in C:\temp\SerializationTarget
 
-```powershell
+```text
 $diff = Get-UpdatePackageDiff -SourcePath C:\temp\SerializationSource -TargetPath C:\temp\SerializationTarget
 Export-UpdatePackage -Path C:\temp\SerializationDiff.update -CommandList $diff -Name name
 ```

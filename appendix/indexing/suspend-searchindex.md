@@ -18,7 +18,7 @@ The Suspend-SearchIndex command suspends \(pauses\) the Sitecore index.
 
 ## Parameters
 
-### -Index  &lt;ISearchIndex&gt;
+### -Index  &lt;ISearchIndex&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -28,7 +28,7 @@ The Suspend-SearchIndex command suspends \(pauses\) the Sitecore index.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 The name of the index to suspend \(pause\).
 
@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 The following suspends (pauses) the indexing process from running.
 
 PS master:\> Suspend-SearchIndex -Name sitecore_master_index
@@ -68,7 +68,7 @@ PS master:\> Suspend-SearchIndex -Name sitecore_master_index
 
 ### EXAMPLE 2
 
-```powershell
+```text
 The following suspends (pauses) the indexing process from running.
 
 PS master:\> Get-SearchIndex -Name sitecore_master_index | Suspend-SearchIndex

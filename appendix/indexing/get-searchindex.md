@@ -16,7 +16,7 @@ The Get-SearchIndex command returns the available Sitecore indexes. These are th
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the index to return.
 
@@ -48,7 +48,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 The following lists all available indexes.
 
 PS master:\>Get-SearchIndex
@@ -72,7 +72,7 @@ social_messages_web              Started         False           False
 
 ### EXAMPLE 2
 
-```powershell
+```text
 The following lists only the specified index.
 
 PS master:\>Get-SearchIndex -Name sitecore_master_index

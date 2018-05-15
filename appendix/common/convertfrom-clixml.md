@@ -14,7 +14,7 @@ The ConvertFrom-CliXml command imports a CliXml string with data that represents
 
 ## Parameters
 
-### -InputObject  &lt;String&gt;
+### -InputObject  &lt;String&gt;
 
 String containing the Xml with serialized objects.
 
@@ -46,7 +46,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> #Convert original item to xml
 PS master:\> $myCliXmlItem = Get-Item -Path master:\content\home | ConvertTo-CliXml 
 PS master:\> #print the CliXml

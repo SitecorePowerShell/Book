@@ -14,17 +14,17 @@ Creates a new access rule for use with Set-ItemAcl and Add-ItemAcl cmdlets.
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 User name including domain for which the access rule is being created. If no domain is specified - 'sitecore' will be used as the default domain.
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: adam
 Fully Qualified Name
-    Example: sitecore\adam 
+    Example: sitecore\adam
 ```
 
 | Aliases |  |
@@ -35,7 +35,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -AccessRight  &lt;String&gt;
+### -AccessRight  &lt;String&gt;
 
 The access right to grand or deny. Well known rights are:
 
@@ -47,11 +47,11 @@ The access right to grand or deny. Well known rights are:
 * item:create - "Create" - controls whether an account can create child items. The create access right requires the read access right.
 * item:delete - "Delete" - Delete right for items. controls whether an account can delete an item. The delete access right requires the read access right
 
-    Important!
+  Important!
 
   The Delete command also deletes all child items, even if the account has been denied Delete
 
-  rights for one or more of the subitems. 
+  rights for one or more of the subitems.
 
 * item:admin - "Administer" - controls whether an account can configure access rights on an item. The administer access right requires the read and write access rights.
 * language:read - "Language Read" - controls whether a user can read a specific language version of items.
@@ -74,7 +74,7 @@ The access right to grand or deny. Well known rights are:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PropagationType  &lt;PropagationType&gt;
+### -PropagationType  &lt;PropagationType&gt;
 
 The PropagationType enumeration determines which items will be granted the access right.
 
@@ -90,7 +90,7 @@ The PropagationType enumeration determines which items will be granted the acces
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -SecurityPermission  &lt;SecurityPermission&gt;
+### -SecurityPermission  &lt;SecurityPermission&gt;
 
 The SecurityPermission determines whether to grant \(allow\) or deny the access right, and deny or allow inheritance of the right.
 
@@ -123,7 +123,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Creates an access rule that allows the "sitecore\adam" user to delete the item to which it will be applied and all of its childre
 
-```powershell
+```text
 PS master:\> New-ItemAcl -AccessRight item:delete -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\adam"
 
 Account           AccessRight    PermissionType   PropagationType  SecurityPermission
@@ -135,7 +135,7 @@ sitecore\admin    item:delete    Access           Any              AllowAccess
 
 Allows the "sitecore\adam" user to delete the Home item and all of its children. Denies the "sitecore\mikey" user reading the descendants of the Home item. ;P The security info is created prior to adding it to the item. The item is delivered to the Add-ItemAcl from the pipeline and returned to the pipeline after processing due to the -PassThru parameter. The security information is added to the previously existing security qualifiers.
 
-```powershell
+```text
 $acl1 = New-ItemAcl -AccessRight item:delete -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\adam"
 $acl2 = New-ItemAcl -AccessRight item:read -PropagationType Descendants -SecurityPermission DenyAccess -Identity "sitecore\mikey"
 Get-Item -Path master:\content\home | Add-ItemAcl -AccessRules $acl1, $acl2 -PassThru
@@ -149,7 +149,7 @@ Home   False    {en, ja-JP, de-DE, da}   {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 
 
 Allows the "sitecore\adam" user to delete the Home item and all of its children. Denies the "sitecore\mikey" user reading the descendants of the Home item. ;P The security info is created prior to setting it to the item. The item is delivered to the Set-ItemAcl from the pipeline and returned to the pipeline after processing due to the -PassThru parameter. Any previuous security information on the item is removed.
 
-```powershell
+```text
 $acl1 = New-ItemAcl -AccessRight item:delete -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\adam"
 $acl2 = New-ItemAcl -AccessRight item:read -PropagationType Descendants -SecurityPermission DenyAccess -Identity "sitecore\mikey"
 Get-Item -Path master:\content\home | Set-ItemAcl -AccessRules $acl1, $acl2 -PassThru

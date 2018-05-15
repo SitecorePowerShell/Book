@@ -22,7 +22,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Index  &lt;ISearchIndex&gt;
+### -Index  &lt;ISearchIndex&gt;
 
 The index instance.
 
@@ -34,7 +34,7 @@ The index instance.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -IncludeRemoteIndex  &lt;SwitchParameter&gt;
+### -IncludeRemoteIndex  &lt;SwitchParameter&gt;
 
 The remote indexing should be triggered.
 
@@ -46,7 +46,7 @@ The remote indexing should be triggered.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -AsJob  &lt;SwitchParameter&gt;
+### -AsJob  &lt;SwitchParameter&gt;
 
 The job created for rebuilding the index should be returned as output.
 
@@ -58,7 +58,7 @@ The job created for rebuilding the index should be returned as output.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 The name of the index to resume.
 
@@ -90,7 +90,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 The following rebuilds the index.
 
 PS master:\> Rebuild-SearchIndex -Name sitecore_master_index
@@ -98,7 +98,7 @@ PS master:\> Rebuild-SearchIndex -Name sitecore_master_index
 
 ### EXAMPLE 2
 
-```powershell
+```text
 The following rebuilds the index.
 
 PS master:\> Get-SearchIndex -Name sitecore_master_index | Rebuild-SearchIndex

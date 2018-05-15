@@ -22,7 +22,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Recurse  &lt;SwitchParameter&gt;
+### -Recurse  &lt;SwitchParameter&gt;
 
 Process the item and all of its children.
 
@@ -34,7 +34,7 @@ Process the item and all of its children.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -IfExist  &lt;ActionIfExists&gt;
+### -IfExist  &lt;ActionIfExists&gt;
 
 Default vaule is Append Accepts one of 3 pretty self explanatory actions:
 
@@ -50,7 +50,7 @@ Default vaule is Append Accepts one of 3 pretty self explanatory actions:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -TargetLanguage  &lt;String\[\]&gt;
+### -TargetLanguage  &lt;String\[\]&gt;
 
 Language or a list of languages that should be created
 
@@ -62,7 +62,7 @@ Language or a list of languages that should be created
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -DoNotCopyFields  &lt;SwitchParameter&gt;
+### -DoNotCopyFields  &lt;SwitchParameter&gt;
 
 Creates a new version in the target language but does not copy field values from the original language
 
@@ -74,7 +74,7 @@ Creates a new version in the target language but does not copy field values from
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -IgnoredFields  &lt;String\[\]&gt;
+### -IgnoredFields  &lt;String\[\]&gt;
 
 List of fields that should not be copied over from original item. As an example, use "\_\_Security" if you don't want the new version to have the same restrictions as the original version.
 
@@ -99,7 +99,7 @@ Fields ignored out of the box include:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language that will be used as source language. If not specified the current user language will be used.
 
@@ -111,7 +111,7 @@ Language that will be used as source language. If not specified the current user
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item / version to be processed.
 
@@ -123,7 +123,7 @@ The item / version to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -135,7 +135,7 @@ Path to the item to be processed - additionally specify Language parameter to fe
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -147,7 +147,7 @@ Id of the item to be processed - additionally specify Language parameter to fetc
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -181,13 +181,13 @@ Help Author: Adam Najmanowicz, Michael West
 
 Translate the Home Item from English to US and Polish leaving the "Title" field blank. If a version exists don't do anything
 
-```powershell
+```text
 PS master:\> Add-ItemVersion -Path "master:\content\home" -Language "en" -TargetLanguage "pl-pl", "en-us" -IfExist Skip -IgnoredFields "Title"
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 Add a Japanese version to /sitecore/content/home item in the master database based on itself
 PS master:\> Add-ItemVersion -Path "master:\content\home" -Language ja-JP -IfExist Append
 ```
@@ -196,7 +196,7 @@ PS master:\> Add-ItemVersion -Path "master:\content\home" -Language ja-JP -IfExi
 
 Translate the children of Home item \(but only those of Template Name "Sample Item"\) from English to US and Polish. If a version exists create a new version for that language. Display results in a table listing item name, language and created version number.
 
-```powershell
+```text
 Get-ChildItem "master:\content\home" -Language "en" -Recurse | `
     Where-Object { $_.TemplateName -eq "Sample Item" } | `
     Add-ItemVersion -TargetLanguage "pl-pl" -IfExist Append | `

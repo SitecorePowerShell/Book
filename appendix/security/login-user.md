@@ -14,7 +14,7 @@ Logs a user in and performs further script instructions in the context of the us
 
 ## Parameters
 
-### -Identity  &lt;GenericIdentity&gt;
+### -Identity  &lt;GenericIdentity&gt;
 
 User name including domain. If no domain is specified - 'sitecore' will be used as the default value
 
@@ -26,7 +26,7 @@ User name including domain. If no domain is specified - 'sitecore' will be used 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Password  &lt;String&gt;
+### -Password  &lt;String&gt;
 
 Password for the account provided using the -Identity parameter.
 
@@ -46,7 +46,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Login-User -Identity "sitecore\admin" -Password "b"
 ```
 

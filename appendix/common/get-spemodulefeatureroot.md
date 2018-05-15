@@ -14,7 +14,7 @@ The Get-SpeModuleFeatureRoot command returns library item or path to the library
 
 ## Parameters
 
-### -Module  &lt;Module&gt;
+### -Module  &lt;Module&gt;
 
 Module for which the feature root library should be returned. If not provided the feature root will be returned for all modules.
 
@@ -26,7 +26,7 @@ Module for which the feature root library should be returned. If not provided th
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -ReturnPath  &lt;SwitchParameter&gt;
+### -ReturnPath  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ Module for which the feature root library should be returned. If not provided th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Feature  &lt;String&gt;
+### -Feature  &lt;String&gt;
 
 Feature for which the root library should be provided. If root item does not exist and -ReturnPath parameter is not specified - nothing will be returned, If -ReturnPath parameter is provided the path in which the feature root should be located will be returned
 
@@ -79,7 +79,7 @@ The output type is the type of the objects that the cmdlet emits.
 
 * Sitecore.Data.Items.Item
 
-  System.String 
+  System.String
 
 ## Notes
 
@@ -91,7 +91,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Return the library item for "Content Editor Context Menu"
 
-```powershell
+```text
 $module = Get-SpeModule -Name "Copy Renderings"
 Get-SpeModuleFeatureRoot -Feature contentEditorContextMenu -Module $module
 ```
@@ -100,7 +100,7 @@ Get-SpeModuleFeatureRoot -Feature contentEditorContextMenu -Module $module
 
 Return the Path to where "List View Export" scripts would be located if this feature was defined
 
-```powershell
+```text
 $module = Get-SpeModule -Name "Copy Renderings"
 Get-SpeModuleFeatureRoot -Module $module -Feature listViewExport -ReturnPath
 ```

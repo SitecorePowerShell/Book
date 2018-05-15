@@ -14,7 +14,7 @@ Creates new Item source that can be added to a Sitecore package. Item provided t
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be added as the root of the source.
 
@@ -26,7 +26,7 @@ The item to be added as the root of the source.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the item source.
 
@@ -38,7 +38,7 @@ Name of the item source.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -SkipVersions  &lt;SwitchParameter&gt;
+### -SkipVersions  &lt;SwitchParameter&gt;
 
 Add this parameter if you want to skip versions of the item from being included in the source and only include the version provided.
 
@@ -50,7 +50,7 @@ Add this parameter if you want to skip versions of the item from being included 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be added - can work with Language parameter to narrow the publication scope.
 
@@ -62,7 +62,7 @@ Database containing the item to be added - can work with Language parameter to n
 | Accept Pipeline Input? | true \(ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Root  &lt;String&gt;
+### -Root  &lt;String&gt;
 
 You can provide the Root as sitecore native path instead of specifying it through. Do not include Item in such case as Item will take priority over Root.
 
@@ -74,7 +74,7 @@ You can provide the Root as sitecore native path instead of specifying it throug
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -InstallMode  &lt;InstallMode&gt;
+### -InstallMode  &lt;InstallMode&gt;
 
 Specifies what installer should do if the item already exists. Possible values:
 
@@ -92,7 +92,7 @@ Specifies what installer should do if the item already exists. Possible values:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -MergeMode  &lt;MergeMode&gt;
+### -MergeMode  &lt;MergeMode&gt;
 
 Specifies what installer should do if the item already exists and InstallMode is specified as Merge. Possible values:
 
@@ -131,7 +131,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Following example creates a new package, adds content/home item to it and saves it in the Sitecore Package folder+ gives you an option to download the saved package.
 
-```powershell
+```text
 # Create package
        $package = new-package "Sitecore PowerShell Extensions";
 

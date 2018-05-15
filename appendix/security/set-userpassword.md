@@ -18,15 +18,15 @@ The Identity parameter specifies the Sitecore user to remove. You can specify a 
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: admin
 Fully Qualified Name
-    Example: sitecore\admi 
+    Example: sitecore\admi
 ```
 
 | Aliases |  |
@@ -37,7 +37,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -NewPassword  &lt;String&gt;
+### -NewPassword  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -47,7 +47,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -OldPassword  &lt;String&gt;
+### -OldPassword  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Reset  &lt;SwitchParameter&gt;
+### -Reset  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -91,13 +91,13 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Set-UserPassword -Identity michael -NewPassword pass123 -OldPassword b
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> "michael","adam","mike" | Set-UserPassword -NewPassword b -Reset
 ```
 

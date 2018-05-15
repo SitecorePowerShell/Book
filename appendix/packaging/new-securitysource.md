@@ -18,7 +18,7 @@ Creates new User & Role source that can be added to a Sitecore package.
 
 ## Parameters
 
-### -Account  &lt;Account&gt;
+### -Account  &lt;Account&gt;
 
 User or Role provided from e.g. Get-Role or Get-User Cmdlet.
 
@@ -30,13 +30,13 @@ User or Role provided from e.g. Get-Role or Get-User Cmdlet.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 User or role name including domain for which the access rule is being created. If no domain is specified - 'sitecore' will be used as the default domain.
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: adam
 Fully Qualified Name
@@ -53,7 +53,7 @@ if -AccountType parameter is specified as Role - only roles will be taken into c
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Filter  &lt;String\[\]&gt;
+### -Filter  &lt;String\[\]&gt;
 
 Specifies a simple pattern to match Sitecore roles & users.
 
@@ -73,7 +73,7 @@ if -AccountType parameter is specified as Role - only roles will be taken into c
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -AccountType  &lt;AccountType&gt;
+### -AccountType  &lt;AccountType&gt;
 
 * Unknown - Both Roles and users will be taken into consideration when looking for accounts through either -Identity or -Filter parameters
 * Role - Only Roles will be taken into consideration when looking for accounts through either -Identity or -Filter parameters
@@ -87,7 +87,7 @@ if -AccountType parameter is specified as Role - only roles will be taken into c
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the security source.
 
@@ -121,7 +121,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Following example creates a new package, adds sitecore\admin user to it and saves it in the Sitecore Package folder+ gives you an option to download the saved package.
 
-```powershell
+```text
 # Create package
        $package = new-package "Sitecore PowerShell Extensions";
 
@@ -148,7 +148,7 @@ $package.Sources.Add($source);
 
 Following example creates a new package, adds all roles within the "sitecore" domain to it and saves it in the Sitecore Package folder+ gives you an option to download the saved package.
 
-```powershell
+```text
 # Create package
        $package = new-package "Sitecore PowerShell Extensions";
 

@@ -18,7 +18,7 @@ Resets item fields, specified as either names, fields or template fields.
 
 ## Parameters
 
-### -IncludeStandardFields  &lt;SwitchParameter&gt;
+### -IncludeStandardFields  &lt;SwitchParameter&gt;
 
 Includes fields that are defined on "Standard template"
 
@@ -30,7 +30,7 @@ Includes fields that are defined on "Standard template"
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String\[\]&gt;
+### -Name  &lt;String\[\]&gt;
 
 Array of field names to include - supports wildcards.
 
@@ -42,7 +42,7 @@ Array of field names to include - supports wildcards.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language that will be reset. If not specified the current user language will be used. Globbing/wildcard supported.
 
@@ -54,7 +54,7 @@ Language that will be reset. If not specified the current user language will be 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be analysed.
 
@@ -66,7 +66,7 @@ The item to be analysed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be analysed.
 
@@ -78,7 +78,7 @@ Path to the item to be analysed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be analysed.
 
@@ -90,7 +90,7 @@ Id of the item to be analysed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be reset - can work with Language parameter to narrow the publication scope.
 
@@ -124,7 +124,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 Reset all item fields, excluding standard fields.
 
-```powershell
+```text
 PS master:\> Reset-ItemField -Path master:\content\home
 ```
 
@@ -132,7 +132,7 @@ PS master:\> Reset-ItemField -Path master:\content\home
 
 Reset all item fields, including standard fields.
 
-```powershell
+```text
 PS master:\> Reset-ItemField -Path master:\content\home -IncludeStandardFields
 ```
 
@@ -140,7 +140,7 @@ PS master:\> Reset-ItemField -Path master:\content\home -IncludeStandardFields
 
 Reset all item fields with names beginning with "a", excluding standard fields.
 
-```powershell
+```text
 PS master:\> Get-Item master:\content\home | Reset-ItemField -Name "a*"
 ```
 

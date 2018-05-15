@@ -18,7 +18,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the package file.
 
@@ -30,7 +30,7 @@ Path to the package file.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -InstallMode  &lt;InstallMode&gt;
+### -InstallMode  &lt;InstallMode&gt;
 
 Undefined, Overwrite, Merge, Skip, SideBySide
 
@@ -42,7 +42,7 @@ Undefined, Overwrite, Merge, Skip, SideBySide
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -MergeMode  &lt;MergeMode&gt;
+### -MergeMode  &lt;MergeMode&gt;
 
 Undefined, Clear, Append, Merge
 
@@ -54,7 +54,7 @@ Undefined, Clear, Append, Merge
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -DisableIndexing  &lt;SwitchParameter&gt;
+### -DisableIndexing  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Install-Package -Path SitecorePowerShellConsole.zip -InstallMode Merge -MergeMode Merge
 ```
 

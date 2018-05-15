@@ -16,7 +16,7 @@ The Receive-ScriptSession cmdlet gets the results of Windows PowerShell script s
 
 ## Parameters
 
-### -KeepResult  &lt;SwitchParameter&gt;
+### -KeepResult  &lt;SwitchParameter&gt;
 
 Saves the script session results in the system, even after you have received them. By default, the script session results and the session itself are deleted when they are retrieved. -KeepResult parameter has the -KeepSession parameter implied in its usage.
 
@@ -28,7 +28,7 @@ Saves the script session results in the system, even after you have received the
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -KeepSession  &lt;SwitchParameter&gt;
+### -KeepSession  &lt;SwitchParameter&gt;
 
 Causes the receiving of the session results to not destroy the session after the cmdlet has executed.
 
@@ -40,7 +40,7 @@ Causes the receiving of the session results to not destroy the session after the
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -HostOutput  &lt;SwitchParameter&gt;
+### -HostOutput  &lt;SwitchParameter&gt;
 
 Add this parameter to receive the host output content. The result of the command execution will basically be what the session would print if it was interactive.
 
@@ -52,7 +52,7 @@ Add this parameter to receive the host output content. The result of the command
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String\[\]&gt;
+### -Id  &lt;String\[\]&gt;
 
 Gets the results of script session with the specified IDs. The ID is a string that uniquely identifies the script session within the server. You can type one or more IDs \(separated by commas\). To find the ID of a script session, type "Get-ScriptSession" without parameters.
 
@@ -64,7 +64,7 @@ Gets the results of script session with the specified IDs. The ID is a string th
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Session  &lt;ScriptSession\[\]&gt;
+### -Session  &lt;ScriptSession\[\]&gt;
 
 Specifies the script session for which results are being retrieved. Enter a variable that contains the script session or a command that gets the script session. You can also pipe a script session object to Receive-ScriptSession.
 
@@ -96,7 +96,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 The following will return the output from all available script sessions.
 
 PS master:\> Get-ScriptSession | Receive-ScriptSession

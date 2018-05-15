@@ -18,7 +18,7 @@ Creates new entry in the history store notifying of workflow state change.
 
 ## Parameters
 
-### -OldState  &lt;String&gt;
+### -OldState  &lt;String&gt;
 
 Id of the old state. If not provided - current item workflow state will be used.
 
@@ -30,7 +30,7 @@ Id of the old state. If not provided - current item workflow state will be used.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -NewState  &lt;String&gt;
+### -NewState  &lt;String&gt;
 
 Id of the old state. If not provided - current item workflow state will be used.
 
@@ -42,7 +42,7 @@ Id of the old state. If not provided - current item workflow state will be used.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Text  &lt;String&gt;
+### -Text  &lt;String&gt;
 
 Action comment.
 
@@ -54,7 +54,7 @@ Action comment.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language that will be used as source language. If not specified the current user language will be used. Globbing/wildcard supported.
 
@@ -66,7 +66,7 @@ Language that will be used as source language. If not specified the current user
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to have the history event attached.
 
@@ -78,7 +78,7 @@ The item to have the history event attached.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to have the history event attached - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -90,7 +90,7 @@ Path to the item to have the history event attached - additionally specify Langu
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the the item to have the history event attached - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -102,7 +102,7 @@ Id of the the item to have the history event attached - additionally specify Lan
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to have the history event attached - can work with Language parameter to narrow the publication scope.
 
@@ -128,7 +128,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> New-ItemWorkflowEvent -Path master:\content\home -lanuage "en" -Text "Just leaving a note"
 ```
 

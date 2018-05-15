@@ -16,7 +16,7 @@ The Remove-Session command removes user sessions in Sitecore.
 
 ## Parameters
 
-### -InstanceId  &lt;String\[\]&gt;
+### -InstanceId  &lt;String\[\]&gt;
 
 Specifies the Sitecore SessionID.
 
@@ -28,7 +28,7 @@ Specifies the Sitecore SessionID.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Instance  &lt;Session&gt;
+### -Instance  &lt;Session&gt;
 
 Specifies the Sitecore user sessions.
 
@@ -60,13 +60,13 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Remove-Session -InstanceId tekipna1lk0ccr2z1bdjsua2,wq4bfivfm2tbgkgdccpyzczp
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Get-Session -Identity michael | Remove-Session
 ```
 

@@ -18,7 +18,7 @@ Creates new rendering definition that can later be added to an item. Most parame
 
 ## Parameters
 
-### -Parameter  &lt;Hashtable&gt;
+### -Parameter  &lt;Hashtable&gt;
 
 Rendering parameters as hashtable
 
@@ -30,7 +30,7 @@ Rendering parameters as hashtable
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PlaceHolder  &lt;String&gt;
+### -PlaceHolder  &lt;String&gt;
 
 Placeholder for the rendering to be placed into.
 
@@ -42,7 +42,7 @@ Placeholder for the rendering to be placed into.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -DataSource  &lt;Item&gt;
+### -DataSource  &lt;Item&gt;
 
 Datasource for the rendering.
 
@@ -54,7 +54,7 @@ Datasource for the rendering.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Cacheable  &lt;SwitchParameter&gt;
+### -Cacheable  &lt;SwitchParameter&gt;
 
 Defined whether the rendering is cacheable.
 
@@ -66,7 +66,7 @@ Defined whether the rendering is cacheable.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -VaryByData  &lt;SwitchParameter&gt;
+### -VaryByData  &lt;SwitchParameter&gt;
 
 Defines whether a data-specific cache version of the rendering should be kept.
 
@@ -78,7 +78,7 @@ Defines whether a data-specific cache version of the rendering should be kept.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -VaryByDevice  &lt;SwitchParameter&gt;
+### -VaryByDevice  &lt;SwitchParameter&gt;
 
 Defines whether a device-specific cache version of the rendering should be kept.
 
@@ -90,7 +90,7 @@ Defines whether a device-specific cache version of the rendering should be kept.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -VaryByLogin  &lt;SwitchParameter&gt;
+### -VaryByLogin  &lt;SwitchParameter&gt;
 
 Defines whether a login - specific cache version of the rendering should be kept.
 
@@ -102,7 +102,7 @@ Defines whether a login - specific cache version of the rendering should be kept
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -VaryByParameters  &lt;SwitchParameter&gt;
+### -VaryByParameters  &lt;SwitchParameter&gt;
 
 Defines whether paremeter - specific cache version of the rendering should be kept.
 
@@ -114,7 +114,7 @@ Defines whether paremeter - specific cache version of the rendering should be ke
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -VaryByQueryString  &lt;SwitchParameter&gt;
+### -VaryByQueryString  &lt;SwitchParameter&gt;
 
 Defines whether query string - specific cache version of the rendering should be kept.
 
@@ -126,7 +126,7 @@ Defines whether query string - specific cache version of the rendering should be
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -VaryByUser  &lt;SwitchParameter&gt;
+### -VaryByUser  &lt;SwitchParameter&gt;
 
 Defines whether a user - specific cache version of the rendering should be kept.
 
@@ -138,7 +138,7 @@ Defines whether a user - specific cache version of the rendering should be kept.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -148,7 +148,7 @@ Defines whether a user - specific cache version of the rendering should be kept.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be processed.
 
@@ -160,7 +160,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -172,7 +172,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -184,7 +184,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -218,7 +218,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 find item defining rendering and create rendering definitio
 
-```powershell
+```text
 PS master:\> $renderingItem = gi master:\layout\Sublayouts\ZenGarden\Basic\Content | New-Rendering -Placeholder "main"
 # find item you want the rendering added to
 PS master:\> $item = gi master:\content\Demo\Int\Home

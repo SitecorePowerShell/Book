@@ -14,7 +14,7 @@ Performs a diff operation between the Source and taget path akin to Sitecore Cou
 
 ## Parameters
 
-### -SourcePath  &lt;String&gt;
+### -SourcePath  &lt;String&gt;
 
 Path containing the current serialization items that needs to be transformed into Target.
 
@@ -26,7 +26,7 @@ Path containing the current serialization items that needs to be transformed int
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -TargetPath  &lt;String&gt;
+### -TargetPath  &lt;String&gt;
 
 Path containing the desired serialization state that the Source needs to be transformed to.
 
@@ -54,7 +54,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Required addition to web.config file for the functionality to work:
 
-```powershell
+```text
 <configuration>
   <configSections>
     <section name="sitecorediff" type="Sitecore.Update.Configuration.ConfigReader, Sitecore.Update"/>
@@ -95,7 +95,7 @@ Required addition to web.config file for the functionality to work:
 
 Create an update package that transforms the serialized database state defined in C:\temp\SerializationSource into into set defined in C:\temp\SerializationTarget
 
-```powershell
+```text
 $diff = Get-UpdatePackageDiff -SourcePath C:\temp\SerializationSource -TargetPath C:\temp\SerializationTarget
 Export-UpdatePackage -Path C:\temp\SerializationDiff.update -CommandList $diff -Name name
 ```

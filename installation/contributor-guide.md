@@ -12,7 +12,7 @@ The solution requires Visual Studio 2015 or later.
 2. Install Sitecore 8+ to a folder of your choice, for example `C:\inetpub\wwwroot\SitecoreSPE_8`
 3. Clone the repo to your local development environment
 
-   ```powershell
+   ```text
    cd "C:\Source\Console"  // Your local source folder, with a new folder for the solution
    git init
    git remote add origin https://github.com/SitecorePowerShell/Console.git
@@ -74,7 +74,7 @@ For more rapid development, you can enable junction deployment on your sites. Wh
 
 To enable a junction deployment for a site, add `junction` property to the site definition and set it to `true`:
 
-```powershell
+```text
 { 
     "sites": [
         {

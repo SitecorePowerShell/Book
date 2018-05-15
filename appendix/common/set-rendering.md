@@ -18,7 +18,7 @@ Updates rendering instance with new values. The instance should be earlier obtai
 
 ## Parameters
 
-### -Instance  &lt;RenderingDefinition&gt;
+### -Instance  &lt;RenderingDefinition&gt;
 
 Instance of the Rendering to be updated.
 
@@ -30,7 +30,7 @@ Instance of the Rendering to be updated.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Parameter  &lt;Hashtable&gt;
+### -Parameter  &lt;Hashtable&gt;
 
 Rendering Parameters to be overriden on the Rendering that is being updated - if not specified the value provided in rendering definition specified in the Instance parameter will be used.
 
@@ -42,7 +42,7 @@ Rendering Parameters to be overriden on the Rendering that is being updated - if
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PlaceHolder  &lt;String&gt;
+### -PlaceHolder  &lt;String&gt;
 
 Placeholder path the Rendering should be added to - if not specified the value provided in rendering definition specified in the Instance parameter will be used.
 
@@ -54,7 +54,7 @@ Placeholder path the Rendering should be added to - if not specified the value p
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -DataSource  &lt;String&gt;
+### -DataSource  &lt;String&gt;
 
 Data source of the Rendering - if not specified the value provided in rendering definition specified in the Instance parameter will be used.
 
@@ -66,7 +66,7 @@ Data source of the Rendering - if not specified the value provided in rendering 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Index  &lt;Int32&gt;
+### -Index  &lt;Int32&gt;
 
 If provided the rendering will be moved to the specified index.
 
@@ -78,7 +78,7 @@ If provided the rendering will be moved to the specified index.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -FinalLayout  &lt;SwitchParameter&gt;
+### -FinalLayout  &lt;SwitchParameter&gt;
 
 Targets the Final Layout. If not provided, the Shared Layout will be targeted. Applies to Sitecore 8.0 and higher only.
 
@@ -90,7 +90,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -100,7 +100,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be processed.
 
@@ -112,7 +112,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -124,7 +124,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -136,7 +136,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -164,7 +164,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 change all rendering's placeholder from main to footer
 
-```powershell
+```text
 PS master:\> $item = Get-Item -Path master:\content\home
 PS master:\> Get-Rendering -Item $item -PlaceHolder "main" | Foreach-Object { $_.Placeholder = "footer"; Set-Rendering -Item $item -Instance $_ }
 ```

@@ -18,7 +18,7 @@ The Get-ItemWorkflowEvent command returns entries from the history store notifyi
 
 ## Parameters
 
-### -Identity  &lt;String&gt;
+### -Identity  &lt;String&gt;
 
 User that has been associated with the enteries. Wildcards are supported.
 
@@ -30,7 +30,7 @@ User that has been associated with the enteries. Wildcards are supported.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language that will be used as source language. If not specified the current user language will be used. Globbing/wildcard supported.
 
@@ -42,7 +42,7 @@ Language that will be used as source language. If not specified the current user
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to have its history items returned.
 
@@ -54,7 +54,7 @@ The item to have its history items returned.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to have its history items returned - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -66,7 +66,7 @@ Path to the item to have its history items returned - additionally specify Langu
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the the item to have its history items returned - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -78,7 +78,7 @@ Id of the the item to have its history items returned - additionally specify Lan
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to have its history items returned - can work with Language parameter to narrow the publication scope.
 
@@ -110,7 +110,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Get-ItemWorkflowEvent -Path master:\content\home
 Date     : 2014-07-27 14:23:33
 NewState : {190B1C84-F1BE-47ED-AA41-F42193D9C8FC}

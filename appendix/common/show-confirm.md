@@ -14,7 +14,7 @@ Shows a user a confirmation request message box. Returns "yes" or "no" based on 
 
 ## Parameters
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Text to show the user in the dialog.
 
@@ -40,7 +40,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Show-Confirm -Title "Do you like Sitecore PowerShell Extensions?"
 
 yes

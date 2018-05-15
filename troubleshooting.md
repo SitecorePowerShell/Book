@@ -10,11 +10,11 @@ We generally see issues occurring due to an incompatible version of Windows Powe
 
 Some users have reported an [issue](https://github.com/SitecorePowerShell/Console/issues/404) where the package installation in Sitecore hangs while installing SPE. One possible fix is to disable the Sitecore Analytics feature; this of course assumes you do not plan on using it for your instance.
 
-**Article:** Martin Miles encountered the issue and proposed a fix [here][1].
+**Article:** Martin Miles encountered the issue and proposed a fix [here](https://github.com/SitecorePowerShell/Book/tree/5daee3160885dadd7031fee723dccf12a33abd7b/[https:/blog.martinmiles.net/post/sitecore-8-re-indexing-errors-out-and-module-installation-never-ends-without-mongodb-running]/README.md).
 
 **Hack: ** Run this script on Sitecore 8.0.
 
-```powershell
+```text
 $paths = @("C:\inetpub\wwwroot\Console\Website\App_Config\Include\*")
 $patterns = @("Sitecore.Analytics*.config", "Sitecore.ExperienceAnalytics*.config")
 
@@ -38,6 +38,4 @@ Be sure the module is enabled and the integrations are rebuilt from within the I
 * Control Panel - Entries not listed.
 * Functions - Import-Function _name_ parameter not populating with functions or can't be found after running the command.
 * Web API - Scripts not existing or can't be found.
-
-[1]: [https://blog.martinmiles.net/post/sitecore-8-re-indexing-errors-out-and-module-installation-never-ends-without-mongodb-running](https://blog.martinmiles.net/post/sitecore-8-re-indexing-errors-out-and-module-installation-never-ends-without-mongodb-running)
 

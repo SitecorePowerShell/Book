@@ -16,15 +16,15 @@ The Identity parameter specifies the Sitecore user to create. You can specify a 
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: developer
 Fully Qualified Name
-    Example: sitecore\developer 
+    Example: sitecore\developer
 ```
 
 | Aliases |  |
@@ -35,7 +35,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Password  &lt;String&gt;
+### -Password  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Email  &lt;String&gt;
+### -Email  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -55,7 +55,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -FullName  &lt;String&gt;
+### -FullName  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Comment  &lt;String&gt;
+### -Comment  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Portrait  &lt;String&gt;
+### -Portrait  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -85,7 +85,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Enabled  &lt;SwitchParameter&gt;
+### -Enabled  &lt;SwitchParameter&gt;
 
 Specifies that the account should be enabled. When enabled, the Password parameter is required.
 
@@ -97,7 +97,7 @@ Specifies that the account should be enabled. When enabled, the Password paramet
 | Accept Pipeline Input? | true \(ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -ProfileItemId  &lt;ID&gt;
+### -ProfileItemId  &lt;ID&gt;
 
 Specifies the profile id to use for the user.
 
@@ -115,7 +115,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Represents the identity of a role. 
+  Represents the identity of a role.
 
 ## Outputs
 
@@ -131,19 +131,19 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> New-User -Identity michael
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> New-User -Identity michael -Enabled -Password b -Email michaellwest@gmail.com -FullName "Michael West"
 ```
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> New-User -Identity michael -PassThru
 
 Name                     Domain       IsAdministrator IsAuthenticated

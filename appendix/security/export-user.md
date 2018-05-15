@@ -32,15 +32,15 @@ You can also pipe a user from the Get-user command.
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: admin
 Fully Qualified Name
-    Example: sitecore\admi 
+    Example: sitecore\admi
 ```
 
 | Aliases |  |
@@ -51,7 +51,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Filter  &lt;String&gt;
+### -Filter  &lt;String&gt;
 
 Specifies a simple pattern to match Sitecore users.
 
@@ -69,7 +69,7 @@ To get all the users in a domain use the following command: Export-User -Filter 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -User  &lt;User&gt;
+### -User  &lt;User&gt;
 
 User object retrieved from the Sitecore API or using the Get-User command.
 
@@ -81,7 +81,7 @@ User object retrieved from the Sitecore API or using the Get-User command.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Current  &lt;SwitchParameter&gt;
+### -Current  &lt;SwitchParameter&gt;
 
 Specifies that the current user should be serialized.
 
@@ -93,7 +93,7 @@ Specifies that the current user should be serialized.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the file the user should be saved to.
 
@@ -105,7 +105,7 @@ Path to the file the user should be saved to.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Root  &lt;String&gt;
+### -Root  &lt;String&gt;
 
 Overrides Sitecore Serialization root directory
 
@@ -131,7 +131,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Export-User -Identify sitecore\admin
 ```
 
@@ -141,7 +141,7 @@ PS master:\> Export-User -Identify sitecore\admin
 * [Import-User](import-user.md)
 * [Export-Item](../packaging/export-item.md)
 * [Import-Role](import-role.md)
-* [Import-Item]()
+* [Import-Item](export-user.md)
 * [Get-User](get-user.md)
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 

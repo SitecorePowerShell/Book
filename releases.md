@@ -1,6 +1,6 @@
 # Releases
 
-Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx) or report issues on [Github][2].
+Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx) or report issues on [Github](https://github.com/SitecorePowerShell/Book/tree/9c7126d7a38df6ef372e8baef52f9a02baabd550/[https:/git.io/spe]/README.md).
 
 ## Version 4.7
 
@@ -130,12 +130,12 @@ This release major focus was security and making your scripting testable and bet
 
 ### Summary of important changes
 
-#### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Aimpact-breaking-change%20is%3Acosed%20milestone%3A"4.2")
+#### \[Breaking Changes\]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3Aimpact-breaking-change is%3Acosed milestone%3A"4.2](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Aimpact-breaking-change%20is%3Acosed%20milestone%3A"4.2)"\)
 
 * You might want to check how your scripts behave for users in other languages as we're now setting the context language on the Job, which e.g. impacts how items are retrieved. \[694\]
 * All remotely accessible services are now disabled by default [716](https://github.com/SitecorePowerShell/Console/issues/716) so you need to provide a patch config file if you want to use SPE in your CI environment out-of-the-box.
 
-#### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3A-release-highlight%20is%3Acosed%20milestone%3A"4.2"%20)
+#### \[Major new Features\]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3A-release-highlight is%3Acosed milestone%3A"4.2" ](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3A-release-highlight%20is%3Acosed%20milestone%3A"4.2"%20)\)
 
 * `Read-Variable` cmdlet now supports validation on field and form level [728](https://github.com/SitecorePowerShell/Console/issues/728).
 * ISE now allows you to emulate script execution in context of any user or language [726](https://github.com/SitecorePowerShell/Console/issues/726).
@@ -144,11 +144,11 @@ This release major focus was security and making your scripting testable and bet
 
 #### Enhancements
 
-* Full list of improvements can be found [here](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Aimprovement%20is%3Acosed%20milestone%3A"4.2"%20)
+* Full list of improvements can be found \[here\]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3Aimprovement is%3Acosed milestone%3A"4.2" ](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Aimprovement%20is%3Acosed%20milestone%3A"4.2"%20)\)
 
 #### Fixes
 
-* Full list of bugs fixed can be found [here](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Abug%20is%3Acosed%20milestone%3A"4.2"%20)
+* Full list of bugs fixed can be found \[here\]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3Abug is%3Acosed milestone%3A"4.2" ](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Abug%20is%3Acosed%20milestone%3A"4.2"%20)\)
 
 ## Version 4.1
 
@@ -237,6 +237,4 @@ A lot of hard work went into this release. Wasn't released as soon as we hoped, 
 * Adam was going crazy trying to resolve an issue [579](https://github.com/SitecorePowerShell/Console/issues/579) where `Set-Layout` wasn't working. We think he's better now and the doctor released him from the clinic.
 * * Through SPE Remoting you are now able to cleanup background `ScriptSessions` through the use of `Stop-ScriptSession` [594](https://github.com/SitecorePowerShell/Console/issues/594) [593](https://github.com/SitecorePowerShell/Console/issues/593).
 * Users with more restricted access caused an issue with function caching [592](https://github.com/SitecorePowerShell/Console/issues/592).
-
-[2]: [https://git.io/spe](https://git.io/spe)
 

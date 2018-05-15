@@ -22,15 +22,15 @@ The Export-Role command exports \(serializes\) Sitecore roles to the filesystem 
 
 ## Parameters
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 Specifies the Sitecore role by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: developer
 Fully Qualified Name
-    Example: sitecore\developer 
+    Example: sitecore\developer
 ```
 
 | Aliases |  |
@@ -41,7 +41,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Filter  &lt;String&gt;
+### -Filter  &lt;String&gt;
 
 Specifies a simple pattern to match Sitecore roles.
 
@@ -59,7 +59,7 @@ To get all the roles in a domain use the following command: Export-Role -Filter 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Role  &lt;Role&gt;
+### -Role  &lt;Role&gt;
 
 Specifies the role to be exported
 
@@ -71,7 +71,7 @@ Specifies the role to be exported
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the file the role should be saved to.
 
@@ -83,7 +83,7 @@ Path to the file the role should be saved to.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Root  &lt;String&gt;
+### -Root  &lt;String&gt;
 
 Specifies the serialization root directory. If this parameter is not specified - the default Sitecore serialization folder will be used \(unless you're saving to an explicit location with the -Path parameter\).
 
@@ -101,7 +101,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Sitecore.Security.Accounts.Role 
+  Sitecore.Security.Accounts.Role
 
 ## Outputs
 
@@ -117,25 +117,25 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Export-Role -Identity sitecore\Author
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Export-Role -Filter sitecore\*
 ```
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> Export-Role -Root C:\my\Serialization\Folder\ -Filter *\*
 ```
 
 ### EXAMPLE 4
 
-```powershell
+```text
 PS master:\> Export-Role -Path C:\my\Serialization\Folder\Authors.role -Identity sitecore\Author
 ```
 
@@ -145,6 +145,6 @@ PS master:\> Export-Role -Path C:\my\Serialization\Folder\Authors.role -Identity
 * [Export-User](export-user.md)
 * [Import-User](import-user.md)
 * [Export-Item](../packaging/export-item.md)
-* [Import-Item]()
+* [Import-Item](export-role.md)
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 

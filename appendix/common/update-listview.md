@@ -14,7 +14,7 @@ This command updates the data displayed by List View that called the script the 
 
 ## Parameters
 
-### -InfoTitle  &lt;String&gt;
+### -InfoTitle  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -24,7 +24,7 @@ This command updates the data displayed by List View that called the script the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -InfoDescription  &lt;String&gt;
+### -InfoDescription  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ This command updates the data displayed by List View that called the script the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -MissingDataMessage  &lt;String&gt;
+### -MissingDataMessage  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ This command updates the data displayed by List View that called the script the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Icon  &lt;String&gt;
+### -Icon  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ This command updates the data displayed by List View that called the script the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Data  &lt;Object&gt;
+### -Data  &lt;Object&gt;
 
 Data that you want to be sent to the list view for display.
 
@@ -66,7 +66,7 @@ Data that you want to be sent to the list view for display.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Property  &lt;Object\[\]&gt;
+### -Property  &lt;Object\[\]&gt;
 
 If this parameter is specified - it allows for modifying the columns shown in the list view, otherwise the columns stay the same as in the original view.
 
@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 This example consists of 2 scripts - a report that shows a list view and the second one that updates the list view from an action.
 
-```powershell
+```text
 # THE INITIAL SCRIPT showing the list of tasks in a list view
 # This script does not yet make use of Update-ListView but tests the state for actions to be performed
 

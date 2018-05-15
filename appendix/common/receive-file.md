@@ -18,7 +18,7 @@ Executing this command with file path on the server \(provided as -Path paramete
 
 ## Parameters
 
-### -Description  &lt;String&gt;
+### -Description  &lt;String&gt;
 
 Dialog description displayed below the dialog title.
 
@@ -30,7 +30,7 @@ Dialog description displayed below the dialog title.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ParentItem  &lt;Item&gt;
+### -ParentItem  &lt;Item&gt;
 
 The item under which the uploaded media items should be stored.
 
@@ -42,7 +42,7 @@ The item under which the uploaded media items should be stored.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the folder where uploaded file should be stored.
 
@@ -54,7 +54,7 @@ Path to the folder where uploaded file should be stored.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Dialog title - shown at the top of the dialog.
 
@@ -66,7 +66,7 @@ Dialog title - shown at the top of the dialog.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -CancelButtonName  &lt;String&gt;
+### -CancelButtonName  &lt;String&gt;
 
 Text shown on the cancel button.
 
@@ -78,7 +78,7 @@ Text shown on the cancel button.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -OkButtonName  &lt;String&gt;
+### -OkButtonName  &lt;String&gt;
 
 Text shown on the OK button.
 
@@ -90,7 +90,7 @@ Text shown on the OK button.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Versioned  &lt;SwitchParameter&gt;
+### -Versioned  &lt;SwitchParameter&gt;
 
 Indicates that the Media item should be created as a Versioned media item.
 
@@ -102,7 +102,7 @@ Indicates that the Media item should be created as a Versioned media item.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String&gt;
+### -Language  &lt;String&gt;
 
 Specifies the language in which the media item should be created. if not specified - context language is selected.
 
@@ -114,7 +114,7 @@ Specifies the language in which the media item should be created. if not specifi
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Overwrite  &lt;SwitchParameter&gt;
+### -Overwrite  &lt;SwitchParameter&gt;
 
 indicates that the upload should overwrite a file or a media item if that one exists. Otherwise a file with a non-confilicting name or a sibling media item is created.
 
@@ -126,7 +126,7 @@ indicates that the upload should overwrite a file or a media item if that one ex
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Unpack  &lt;SwitchParameter&gt;
+### -Unpack  &lt;SwitchParameter&gt;
 
 Indicates that the uplaod is expected to be a ZIP file which should be unpacked when it's received.
 
@@ -138,7 +138,7 @@ Indicates that the uplaod is expected to be a ZIP file which should be unpacked 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -AdvancedDialog  &lt;SwitchParameter&gt;
+### -AdvancedDialog  &lt;SwitchParameter&gt;
 
 Shows advanced dialog where user can upload multiple media items and select if the uploaded items are versioned, overwritten and unpacked.
 
@@ -150,7 +150,7 @@ Shows advanced dialog where user can upload multiple media items and select if t
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Width  &lt;Int32&gt;
+### -Width  &lt;Int32&gt;
 
 Dialog width.
 
@@ -162,7 +162,7 @@ Dialog width.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Height  &lt;Int32&gt;
+### -Height  &lt;Int32&gt;
 
 Dialog width.
 
@@ -180,7 +180,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * Sitecore.Data.Items.Item
 
-  System.String 
+  System.String
 
 ## Outputs
 
@@ -188,7 +188,7 @@ The output type is the type of the objects that the cmdlet emits.
 
 * Sitecore.Data.Items.Item
 
-  System.String 
+  System.String
 
 ## Notes
 
@@ -200,7 +200,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Upload text.txt file to server disk drive. A new file is created with a non-conflicting name and the path to it is returned
 
-```powershell
+```text
 PS master:\> Receive-File -Path "C:\temp\upload"
 C:\temp\upload\text_029.txt
 ```
@@ -209,7 +209,7 @@ C:\temp\upload\text_029.txt
 
 Upload text.txt file to media library under the 'master:\media library\Files' item A new media item is created and returned
 
-```powershell
+```text
 PS master:\> Receive-File -ParentItem (get-item "master:\media library\Files") 
 Name Children Languages Id                                     TemplateName
 ---- -------- --------- --                                     ------------
@@ -220,7 +220,7 @@ text False    {en}      {7B11CE12-C0FC-4650-916C-2FC76F3DCAAF} File
 
 Upload text.txt file to media library under the 'master:\media library\Files' item using advanced dialog. A new media item is created but "undetermined" is returned as the dialog does not return the results.
 
-```powershell
+```text
 PS master:\> Receive-File (get-item "master:\media library\Files") -AdvancedDialog
 undetermined
 ```
@@ -229,7 +229,7 @@ undetermined
 
 Upload text.txt file to media library under the 'master:\media library\Files' item. A new versioned media item in Danish language is created and returned. If the media item existed - it will be overwritten.
 
-```powershell
+```text
 PS master:\> Receive-File -ParentItem (get-item "master:\media library\Files") -Overwrite -Language "da" -Versioned
 Name Children Languages Id                                     TemplateName
 ---- -------- --------- --                                     ------------

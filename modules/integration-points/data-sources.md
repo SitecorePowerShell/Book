@@ -31,21 +31,20 @@ Below are field types you may wish to use a script:
 * Multilist
 * Name Lookup Value List
 * Droplink
+* Begin by adding a new script library called _Data Sources_ followed by adding a script. You can call it something like _Get-GlobalOption_.
 
-1. Begin by adding a new script library called _Data Sources_ followed by adding a script. You can call it something like _Get-GlobalOption_.
+  ```text
+  # The script must return an item. This is useful for populating a Droplink.
+  Get-ChildItem -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+  ```
 
-   ```powershell
-   # The script must return an item. This is useful for populating a Droplink.
-   Get-ChildItem -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
-   ```
+* Add the path to your script in the _Source_ field on the data template. The source should be prefixed with `script:` followed by the path.
 
-2. Add the path to your script in the _Source_ field on the data template. The source should be prefixed with `script:` followed by the path.
+  ```text
+  script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Get-GlobalOption
+  ```
 
-   ```powershell
-   script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Get-GlobalOption
-   ```
-
-3. Enjoy the results.
+* Enjoy the results.
 
 ![Droplink query](../../.gitbook/assets/droplist.png)
 
@@ -60,7 +59,5 @@ Below are field types you may wish to use a script:
 ## References
 
 * PowerShell Scripted Data Sources [part 1](https://blog.najmanowicz.com/2013/04/17/powershell-scripted-datasources-in-sitecore-part-1/) and [part 2](https://blog.najmanowicz.com/2013/05/06/powershell-scripted-data-sources-in-sitecore-part-2/)
-* Sitecore Spark [article][3] on using scripted datasources
-
-[3]: [https://www.sitecorespark.com/blog/2018/3/using-sitecore-powershell-scripts-for-datasources](https://www.sitecorespark.com/blog/2018/3/using-sitecore-powershell-scripts-for-datasources)
+* Sitecore Spark [article](https://github.com/SitecorePowerShell/Book/tree/5daee3160885dadd7031fee723dccf12a33abd7b/modules/integration-points/[https:/www.sitecorespark.com/blog/2018/3/using-sitecore-powershell-scripts-for-datasources]/README.md) on using scripted datasources
 

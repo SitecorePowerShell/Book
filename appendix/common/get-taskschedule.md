@@ -18,7 +18,7 @@ The Get-TaskSchedule command returns one or more task schedule items, based on n
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 Task item to be converted.
 
@@ -30,7 +30,7 @@ Task item to be converted.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be returned as Task Schedule.
 
@@ -42,7 +42,7 @@ Path to the item to be returned as Task Schedule.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;Database&gt;
+### -Database  &lt;Database&gt;
 
 Database containing the task items to be returned. If not provided all databases will be considered for filtering using the "Name" parameter.
 
@@ -54,7 +54,7 @@ Database containing the task items to be returned. If not provided all databases
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Task filter - supports wildcards. Works with "Database" parameter to narrow tassk to only single database.
 
@@ -86,7 +86,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Get-TaskSchedule
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run
 ----                             --------        ------   -----------  ------   -------  ---------    --------               --------
@@ -108,7 +108,7 @@ Test-PowerShell                  web             True     False        True     
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Get-TaskSchedule -Name "*Check*"
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run
 ----                             --------        ------   -----------  ------   -------  ---------    --------               --------
@@ -120,7 +120,7 @@ Check DSN Messages               web             True     False        True     
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> Get-TaskSchedule -Name "*Check*" -Database "master"
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run
 ----                             --------        ------   -----------  ------   -------  ---------    --------               --------

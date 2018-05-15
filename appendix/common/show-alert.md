@@ -14,7 +14,7 @@ Pauses the script and shows an alert specified in the -Title to the user. Once u
 
 ## Parameters
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Text to show the user in the alert dialog.
 
@@ -34,7 +34,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Show-Alert "Hello world."
 ```
 

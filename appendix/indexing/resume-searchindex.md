@@ -18,7 +18,7 @@ The Resume-SearchIndex command resumes the suspended \(paused\) Sitecore index.
 
 ## Parameters
 
-### -Index  &lt;ISearchIndex&gt;
+### -Index  &lt;ISearchIndex&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -28,7 +28,7 @@ The Resume-SearchIndex command resumes the suspended \(paused\) Sitecore index.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 The name of the index to resume.
 
@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 The following stops the indexing process from running.
 
 PS master:\> Resume-SearchIndex -Name sitecore_master_index
@@ -68,7 +68,7 @@ PS master:\> Resume-SearchIndex -Name sitecore_master_index
 
 ### EXAMPLE 2
 
-```powershell
+```text
 The following stops the indexing process from running.
 
 PS master:\> Get-SearchIndex -Name sitecore_master_index | Resume-SearchIndex

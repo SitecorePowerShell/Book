@@ -26,7 +26,7 @@ The Add-BaseTemplate command adds one or more base templates to a template item.
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to add the base template to.
 
@@ -38,7 +38,7 @@ The item to add the base template to.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to add the base template to.
 
@@ -50,7 +50,7 @@ Path to the item to add the base template to.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to add the base template to.
 
@@ -62,7 +62,7 @@ Id of the item to add the base template to.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -TemplateItem  &lt;TemplateItem\[\]&gt;
+### -TemplateItem  &lt;TemplateItem\[\]&gt;
 
 Sitecore item or list of items of base templates to add.
 
@@ -74,7 +74,7 @@ Sitecore item or list of items of base templates to add.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Template  &lt;String\[\]&gt;
+### -Template  &lt;String\[\]&gt;
 
 Path representing the template item to add as a base template. This must be of the same database as the item to be altered. Note that this parameter only supports a single template.
 
@@ -86,7 +86,7 @@ Path representing the template item to add as a base template. This must be of t
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to add the base template to - required if item is specified with Id.
 
@@ -114,7 +114,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 Add base template of /sitecore/templates/User Defined/BaseTemplate to a template, using a path.
 
-```powershell
+```text
 PS master:\> Add-BaseTemplate -Path "master:/sitecore/content/User Defined/Page" -Template "/sitecore/templates/User Defined/BaseTemplate"
 ```
 
@@ -122,7 +122,7 @@ PS master:\> Add-BaseTemplate -Path "master:/sitecore/content/User Defined/Page"
 
 Add multiple base templates to a template, using items.
 
-```powershell
+```text
 PS master:\> $baseA = Get-Item -Path master:/sitecore/content/User Defined/BaseTemplateA
        PS master:\> $baseB = Get-Item -Path master:/sitecore/content/User Defined/BaseTemplateB
        PS master:\> Add-BaseTemplate -Path "master:/sitecore/content/User Defined/Page" -TemplateItem @($baseA, $baseB)

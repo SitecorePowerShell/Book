@@ -22,7 +22,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Recurse  &lt;SwitchParameter&gt;
+### -Recurse  &lt;SwitchParameter&gt;
 
 Deleted language versions from the item and all of its children.
 
@@ -34,7 +34,7 @@ Deleted language versions from the item and all of its children.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language\(s\) that should be deleted form the provided item\(s\). A single language or a list of languages can be defined using the parameter. Language parameter supports globbing so you can delete whole language groups using wildcards.
 
@@ -46,7 +46,7 @@ Language\(s\) that should be deleted form the provided item\(s\). A single langu
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Version  &lt;String\[\]&gt;
+### -Version  &lt;String\[\]&gt;
 
 Version\(s\) that should be deleted form the provided item\(s\). A single version or a list of versions can be defined using the parameter. Version parameter supports globbing so you can delete whole version groups using wildcards.
 
@@ -58,7 +58,7 @@ Version\(s\) that should be deleted form the provided item\(s\). A single versio
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ExcludeLanguage  &lt;String\[\]&gt;
+### -ExcludeLanguage  &lt;String\[\]&gt;
 
 Language\(s\) that should NOT be deleted form the provided item\(s\). A single language or a list of languages can be defined using the parameter. Language parameter supports globbing so you can delete whole language groups using wildcards.
 
@@ -72,7 +72,7 @@ If Language parameter is not is not specified but ExcludeLanguage is provided, t
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -MaxRecentVersions  &lt;Int32&gt;
+### -MaxRecentVersions  &lt;Int32&gt;
 
 If provided - trims the selected language to value specified by this parameter.
 
@@ -84,7 +84,7 @@ If provided - trims the selected language to value specified by this parameter.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item/version to be processed. You can pipe a specific version of the item for it to be removed.
 
@@ -96,7 +96,7 @@ The item/version to be processed. You can pipe a specific version of the item fo
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -108,7 +108,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -120,7 +120,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
@@ -148,7 +148,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Remove Polish and Spanish language from /sitecore/content/home item in the master database
 
-```powershell
+```text
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language "pl-pl", "es-es"
 ```
 
@@ -156,7 +156,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -Language "pl-pl", "e
 
 Remove all english based languages defined in /sitecore/content/home item and all of its children in the master database
 
-```powershell
+```text
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language "en-*" -Recurse
 ```
 
@@ -164,7 +164,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -Language "en-*" -Rec
 
 Remove all languages except those that are "en" based defined in /sitecore/content/home item and all of its children in the master database
 
-```powershell
+```text
 PS master:\> Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*" -Recurse
 ```
 
@@ -172,7 +172,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*
 
 Trim all languages to 3 latest versions for /sitecore/content/home item and all of its children in the master database
 
-```powershell
+```text
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language * -Recurse
 ```
 

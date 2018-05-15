@@ -18,7 +18,7 @@ The Get-ItemClone command returns all the clones for the specified item.
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be analysed for clones presence.
 
@@ -30,7 +30,7 @@ The item to be analysed for clones presence.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be analysed for clones presence.
 
@@ -42,7 +42,7 @@ Path to the item to be analysed for clones presence.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be analysed for clones presence.
 
@@ -54,7 +54,7 @@ Id of the item to be analysed for clones presence.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be processed - if item is being provided through Id.
 
@@ -86,7 +86,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Get-ItemClone -Path master:\content\home
 ```
 

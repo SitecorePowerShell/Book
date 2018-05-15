@@ -30,7 +30,7 @@ Adds new access rule to an item allowing for the item to have the access granted
 
 ## Parameters
 
-### -PropagationType  &lt;PropagationType&gt;
+### -PropagationType  &lt;PropagationType&gt;
 
 The PropagationType enumeration determines which items will be granted the access right.
 
@@ -46,7 +46,7 @@ The PropagationType enumeration determines which items will be granted the acces
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -SecurityPermission  &lt;SecurityPermission&gt;
+### -SecurityPermission  &lt;SecurityPermission&gt;
 
 The SecurityPermission determines whether to grant \(allow\) or deny the access right, and deny or allow inheritance of the right.
 
@@ -63,7 +63,7 @@ The SecurityPermission determines whether to grant \(allow\) or deny the access 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -AccessRules  &lt;AccessRuleCollection&gt;
+### -AccessRules  &lt;AccessRuleCollection&gt;
 
 A single or multiple access rules created e.g. through the New-ItemAcl or obtained from other item using the Get-ItemAcl cmdlet. This information will be appended to the existing security descriptors on the item.
 
@@ -75,7 +75,7 @@ A single or multiple access rules created e.g. through the New-ItemAcl or obtain
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PassThru  &lt;SwitchParameter&gt;
+### -PassThru  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -85,7 +85,7 @@ A single or multiple access rules created e.g. through the New-ItemAcl or obtain
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -AccessRight  &lt;String&gt;
+### -AccessRight  &lt;String&gt;
 
 The access right to grand or deny. Well known rights are:
 
@@ -97,11 +97,11 @@ The access right to grand or deny. Well known rights are:
 * item:create - "Create" - controls whether an account can create child items. The create access right requires the read access right.
 * item:delete - "Delete" - Delete right for items. controls whether an account can delete an item. The delete access right requires the read access right
 
-    Important!
+  Important!
 
   The Delete command also deletes all child items, even if the account has been denied Delete
 
-  rights for one or more of the subitems. 
+  rights for one or more of the subitems.
 
 * item:admin - "Administer" - controls whether an account can configure access rights on an item. The administer access right requires the read and write access rights.
 * language:read - "Language Read" - controls whether a user can read a specific language version of items.
@@ -124,17 +124,17 @@ The access right to grand or deny. Well known rights are:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Identity  &lt;AccountIdentity&gt;
+### -Identity  &lt;AccountIdentity&gt;
 
 User name including domain for which the access rule is being created. If no domain is specified - 'sitecore' will be used as the default domain.
 
 Specifies the Sitecore user by providing one of the following values.
 
-```powershell
+```text
 Local Name
     Example: adam
 Fully Qualified Name
-    Example: sitecore\adam 
+    Example: sitecore\adam
 ```
 
 | Aliases |  |
@@ -145,7 +145,7 @@ Fully Qualified Name
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be processed.
 
@@ -157,7 +157,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be processed.
 
@@ -169,7 +169,7 @@ Path to the item to be processed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be processed. Requires Database parameter to be specified
 
@@ -181,7 +181,7 @@ Id of the item to be processed. Requires Database parameter to be specified
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be fetched using the Id Parameter.
 
@@ -215,7 +215,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 allows the "sitecore\adam" user to rename the Home item and all of its childre
 
-```powershell
+```text
 PS master:\> Add-ItemAcl -Path master:\content\Home -AccessRight "item:rename" -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\admin"
 ```
 
@@ -223,7 +223,7 @@ PS master:\> Add-ItemAcl -Path master:\content\Home -AccessRight "item:rename" -
 
 Allows the "sitecore\adam" user to delete the Home item and all of its children. Denies the "sitecore\mikey" user reading the descendants of the Home item. ;P The security info is created prior to adding it to the item. The item is delivered to the Add-ItemAcl from the pipeline and returned to the pipeline after processing due to the -PassThru parameter.
 
-```powershell
+```text
 $acl1 = New-ItemAcl -AccessRight item:delete -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\admin"
 $acl2 = New-ItemAcl -AccessRight item:read -PropagationType Descendants -SecurityPermission DenyAccess -Identity "sitecore\mikey"
 Get-Item -Path master:\content\home | Add-ItemAcl -AccessRules $acl1, $acl2 -PassThru

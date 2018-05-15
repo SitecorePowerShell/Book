@@ -14,7 +14,7 @@ Executes Sitecore Sheer application, allows for passing additional parameters, l
 
 ## Parameters
 
-### -Application  &lt;String&gt;
+### -Application  &lt;String&gt;
 
 Name of the Application to be executed. Application must be defined in the Core databse.
 
@@ -26,7 +26,7 @@ Name of the Application to be executed. Application must be defined in the Core 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Parameter  &lt;Hashtable&gt;
+### -Parameter  &lt;Hashtable&gt;
 
 Additional parameters passed to the application.
 
@@ -38,7 +38,7 @@ Additional parameters passed to the application.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Icon  &lt;String&gt;
+### -Icon  &lt;String&gt;
 
 Icon of the executed application \(used for titlebar and in the Sitecore taskbar on the desktop\)
 
@@ -50,7 +50,7 @@ Icon of the executed application \(used for titlebar and in the Sitecore taskbar
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Modal  &lt;SwitchParameter&gt;
+### -Modal  &lt;SwitchParameter&gt;
 
 Causes the application to show in new browser modal window or modal overlay if used in Sitecore 7.2 or later.
 
@@ -62,7 +62,7 @@ Causes the application to show in new browser modal window or modal overlay if u
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Title of the window the app opens in.
 
@@ -74,7 +74,7 @@ Title of the window the app opens in.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Width  &lt;Int32&gt;
+### -Width  &lt;Int32&gt;
 
 Width of the modal window.
 
@@ -86,7 +86,7 @@ Width of the modal window.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Height  &lt;Int32&gt;
+### -Height  &lt;Int32&gt;
 
 Height of the modal window.
 
@@ -114,7 +114,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Show Content Editor in new window \(or as an overlay in modal mode in Sitecore 7.2+\) with "/sitecore/templates" item selected.
 
-```powershell
+```text
 $item = gi master:\templates
 
 Show-Application `
@@ -127,7 +127,7 @@ Show-Application `
 
 Show Content Editor as a new application on desktop with "/sitecore/content/home" item selected.
 
-```powershell
+```text
 $item = gi master:\content\home
 
 Show-Application `

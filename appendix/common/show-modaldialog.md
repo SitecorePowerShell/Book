@@ -16,7 +16,7 @@ Shows Sitecore Sheer control as a modal dialog. If control returns a value - the
 
 ## Parameters
 
-### -Control  &lt;String&gt;
+### -Control  &lt;String&gt;
 
 Name of the Sitecore Sheer control to show
 
@@ -28,7 +28,7 @@ Name of the Sitecore Sheer control to show
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Url  &lt;String&gt;
+### -Url  &lt;String&gt;
 
 A fully formed URL that constitutes a control execution request.
 
@@ -40,7 +40,7 @@ A fully formed URL that constitutes a control execution request.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Parameters  &lt;Hashtable&gt;
+### -Parameters  &lt;Hashtable&gt;
 
 Hashtable of parameters to pass to the control in the url.
 
@@ -52,7 +52,7 @@ Hashtable of parameters to pass to the control in the url.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -HandleParameters  &lt;Hashtable&gt;
+### -HandleParameters  &lt;Hashtable&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -62,7 +62,7 @@ Hashtable of parameters to pass to the control in the url.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Title of the control dialog.
 
@@ -74,7 +74,7 @@ Title of the control dialog.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Width  &lt;Int32&gt;
+### -Width  &lt;Int32&gt;
 
 Width of the control dialog.
 
@@ -86,7 +86,7 @@ Width of the control dialog.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Height  &lt;Int32&gt;
+### -Height  &lt;Int32&gt;
 
 Height of the control dialog.
 
@@ -118,7 +118,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_0)"; btn_1="No (returns btn_1)"; btn_2="return btn_2"; te="Message Text"; cp="My Caption"} -Height 120 -Width 400
 ```
 

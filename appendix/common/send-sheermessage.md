@@ -14,7 +14,7 @@ Sends a sheer message to the app in which context the script is executing.
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the Sheer message to execute.
 
@@ -26,7 +26,7 @@ Name of the Sheer message to execute.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -GetResult  &lt;SwitchParameter&gt;
+### -GetResult  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ Name of the Sheer message to execute.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Parameters  &lt;Hashtable&gt;
+### -Parameters  &lt;Hashtable&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 If you execute the following script in the PowerShell ISE the Save dialog will popup
 
-```powershell
+```text
 Send-SheerMessage -Name 'ise:save'
 ```
 

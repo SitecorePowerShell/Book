@@ -14,7 +14,7 @@ Prompts user to provide values for variables required by the script to perform i
 
 ## Parameters
 
-### -Parameters  &lt;Object\[\]&gt;
+### -Parameters  &lt;Object\[\]&gt;
 
 Specifies the variables that value should be provided by the user. Each variable definition can have the following structure:
 
@@ -40,7 +40,7 @@ Variable type specific:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Description  &lt;String&gt;
+### -Description  &lt;String&gt;
 
 Dialog description displayed below the dialog title.
 
@@ -52,7 +52,7 @@ Dialog description displayed below the dialog title.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -CancelButtonName  &lt;String&gt;
+### -CancelButtonName  &lt;String&gt;
 
 Text shown on the cancel button.
 
@@ -64,7 +64,7 @@ Text shown on the cancel button.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -OkButtonName  &lt;String&gt;
+### -OkButtonName  &lt;String&gt;
 
 Text shown on the OK button.
 
@@ -76,7 +76,7 @@ Text shown on the OK button.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ShowHints  &lt;SwitchParameter&gt;
+### -ShowHints  &lt;SwitchParameter&gt;
 
 Specifies whether the variable hints should be displayed. Hints are shown below each the variable title but above the variable editing control.
 
@@ -88,7 +88,7 @@ Specifies whether the variable hints should be displayed. Hints are shown below 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Validator  &lt;ScriptBlock&gt;
+### -Validator  &lt;ScriptBlock&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -98,7 +98,7 @@ Specifies whether the variable hints should be displayed. Hints are shown below 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Title  &lt;String&gt;
+### -Title  &lt;String&gt;
 
 Dialog title - shown at the top of the dialog.
 
@@ -110,7 +110,7 @@ Dialog title - shown at the top of the dialog.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Width  &lt;Int32&gt;
+### -Width  &lt;Int32&gt;
 
 Dialog width.
 
@@ -122,7 +122,7 @@ Dialog width.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Height  &lt;Int32&gt;
+### -Height  &lt;Int32&gt;
 
 Dialog width.
 
@@ -156,7 +156,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 For a good understanding of all the Property types the Read-Variable command accepts open the script located in the following item: /Examples/User Interaction/Read-Variable - Sample the script is located in the Script Library in the Master database.
 
-```powershell
+```text
 
 ```
 
@@ -166,7 +166,7 @@ Following is an example of a simple dialog asking user for various variable type
 
 The type of some of the controls displayed to the user are iferred from the variable type \(like the $item variable or DateTime\) The editors for some other are set by providing the "editor" value
 
-```powershell
+```text
 $item = Get-Item master:\content\home
 $result = Read-Variable -Parameters `
     @{ Name = "someText"; Value="Some Text"; Title="Single Line Text"; Tooltip="Tooltip for singleline"; Placeholder="You see this when text box is empty"}, 
@@ -184,7 +184,7 @@ Following is an example of a multi tabbed dialog asking user for various variabl
 
 The type of some of the controls displayed to the user are iferred from the variable type \(like the $item variable or DateTime\) The editors for some other are set by providing the "editor" value
 
-```powershell
+```text
 $item = Get-Item master:\content\home
 $result = Read-Variable -Parameters `
     @{ Name = "silent"; Value=$true; Title="Proceed Silently"; Tooltip="Check this if you don't want to be interrupted"; Tab="Simple"}, 

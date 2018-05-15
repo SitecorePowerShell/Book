@@ -12,7 +12,7 @@ The _Workflows_ integration allows for scripts to run like workflow commands. Ru
 
 **Example:** The following requests input from the user then writes to the workflow history.
 
-```powershell
+```text
 $item = Get-Item -Path .
 $comment = Show-Input -Prompt "Enter a comment:"
 if($comment) {
@@ -21,11 +21,9 @@ if($comment) {
 Close-Window
 ```
 
-See how Adam integrated [workflow actions][2] if you are really curious to know more.
+See how Adam integrated [workflow actions](https://github.com/SitecorePowerShell/Book/tree/5daee3160885dadd7031fee723dccf12a33abd7b/modules/integration-points/[https:/blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/]/README.md) if you are really curious to know more.
 
 ## References
 
 * [Fixing problematic content or Workflow state](https://www.cognifide.com/blogs/sitecore/feel-the-power-in-powershell/)
-
-[2]: [https://blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/](https://blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/)
 

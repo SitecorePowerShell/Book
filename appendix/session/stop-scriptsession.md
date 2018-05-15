@@ -16,7 +16,7 @@ Aborts the pipeline of a session that is executing. This will stop the session i
 
 ## Parameters
 
-### -Id  &lt;String\[\]&gt;
+### -Id  &lt;String\[\]&gt;
 
 Stops the script session with the specified IDs. The ID is a string that uniquely identifies the script session within the server. You can type one or more IDs \(separated by commas\). To find the ID of a script session, type "Get-ScriptSession" without parameters.
 
@@ -28,7 +28,7 @@ Stops the script session with the specified IDs. The ID is a string that uniquel
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Session  &lt;ScriptSession\[\]&gt;
+### -Session  &lt;ScriptSession\[\]&gt;
 
 Specifies the script session to be stopped. Enter a variable that contains the script session or a command that gets the script session. You can also pipe a script session object to Receive-ScriptSession.
 
@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 The following stops the script session with the specified Id.
 
 PS master:\> Stop-ScriptSession -Id "My Background Script Session"

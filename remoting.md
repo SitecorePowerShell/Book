@@ -15,7 +15,7 @@ The setup of the module only requires a few steps: 1. In the Sitecore instance i
   1. Enable the _remoting_ service through a configuration patch. See the [Security](security/) page for more details.
   2. Grant the _remoting_ service user account through a configuration patch and granting acess to the appropriate role. See the [Security](security/) page for more details.
 
-[![SPE Remoting Module](https://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)](https://www.youtube.com/watch?v=fGvT8eDdWrg "Click for a quick demo")
+![SPE Remoting Module](https://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)
 
 The remoting services use a combination of a SOAP service \(ASMX\) and HttpHandler \(ASHX\). Remoting features are disabled by default and should be configured as needed as can be seen in the [security section here](security/). The SOAP service may require additional Windows authentication using the `-Credential` parameter which is common when logged into a Windows Active Directory domain.
 
@@ -25,13 +25,13 @@ If you have configured the web services to run under _Windows Authentication_ mo
 
 You'll definitely know you need it when you receive an error like the following:
 
-```powershell
+```text
 New-WebServiceProxy : The request failed with HTTP status 401: Unauthorized.
 ```
 
 **Example:** The following connects Windows PowerShell ISE to a remote Sitecore instance using Windows credentials and executes the provided script.
 
-```powershell
+```text
 Import-Module -Name SPE
 $credential = Get-Credential
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore -Credential $credential
@@ -45,7 +45,7 @@ Stop-ScriptSession -Session $session
 
 **Example:** The following connects to several remote instances of Sitecore and returns the server name.
 
-```powershell
+```text
 # If you need to connect to more than one instance of Sitecore add it to the list.
 $instanceUrls = @("https://remotesitecore","https://remotesitecore2")
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri $instanceUrls
@@ -59,7 +59,7 @@ We have provided a service for downloading all files and media items from the se
 
 **Example:** The following downloads a single file from the _Package_ directory.
 
-```powershell
+```text
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
 Receive-RemoteItem -Session $session -Path "default.js" -RootPath App -Destination "C:\Files\"
@@ -68,7 +68,7 @@ Stop-ScriptSession -Session $session
 
 **Example:** The following downloads a single media item from the library.
 
-```powershell
+```text
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
@@ -77,7 +77,7 @@ Stop-ScriptSession -Session $session
 
 ### Script Sessions and Web API Tutorial
 
-[![SPE Web API](https://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)](https://www.youtube.com/watch?v=SmZBGKOryzQ "Click for a quick demo") 
+![SPE Web API](https://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)
 
 ## Advanced Script Sessions
 
@@ -90,11 +90,13 @@ Inevitably you will need to have long running processes triggered remotely. In o
 * `Stop-ScriptSession` - Terminates an existing script session.
 * `Wait-ScriptSession` - Waits for all the script sessions to complete before continuing.
 
-**Note:** These commands are not only used for remoting, we just thought it made sense to talk about them here.
+{% hint style="info" %}
+These commands are not only used for remoting, we just thought it made sense to talk about them here.
+{% endhint %}
 
 **Example:** The following remotely runs the id of a `ScriptSession` and polls the server until completed.
 
-```powershell
+```text
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
 $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
@@ -109,7 +111,7 @@ Stop-ScriptSession -Session $session
 
 **Example:** The following remotely runs a script and checks for any output errors. The _LastErrors_ parameter is available for `ScriptSession` objects.
 
-```powershell
+```text
 $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
     Get-Session -ParameterDoesNotExist "SomeData"
 } -AsJob
@@ -126,9 +128,9 @@ Invoke-RemoteScript -Session $session -ScriptBlock {
 }
 ```
 
-**Example:** The following redirects messages from `Write-Verbose` to the remote session. The data returned will be both `System.String` and `Deserialized.System.Management.Automation.VerboseRecord` so be sure to filter it out when needed. More information about the redirection `4>&1` can be read [here][4].
+**Example:** The following redirects messages from `Write-Verbose` to the remote session. The data returned will be both `System.String` and `Deserialized.System.Management.Automation.VerboseRecord` so be sure to filter it out when needed. More information about the redirection `4>&1` can be read [here](https://github.com/SitecorePowerShell/Book/tree/a1cbd06eba0aad8913e553f4aaa08de0412c635a/[https:/blogs.technet.microsoft.com/heyscriptingguy/2014/03/30/understanding-streams-redirection-and-write-host-in-powershell/]/README.md).
 
-```powershell
+```text
 Invoke-RemoteScript -ScriptBlock {
     Write-Verbose "Hello from the other side" -Verbose 4>&1
     "data"    
@@ -138,7 +140,7 @@ Invoke-RemoteScript -ScriptBlock {
 
 **Example:** The following improves upon the previous example.
 
-```powershell
+```text
 Invoke-RemoteScript -ScriptBlock {
     function Write-Verbose {
         param([string]$Message)
@@ -155,6 +157,4 @@ Invoke-RemoteScript -ScriptBlock {
 
 * Michael's follow up post on [Remoting](https://michaellwest.blogspot.com/2015/07/sitecore-powershell-extensions-remoting.html)
 * Adam's initial post on [Remoting](https://blog.najmanowicz.com/2014/10/10/sitecore-powershell-extensions-remoting/)
-
-[4]: [https://blogs.technet.microsoft.com/heyscriptingguy/2014/03/30/understanding-streams-redirection-and-write-host-in-powershell/](https://blogs.technet.microsoft.com/heyscriptingguy/2014/03/30/understanding-streams-redirection-and-write-host-in-powershell/)
 

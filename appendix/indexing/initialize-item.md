@@ -20,7 +20,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be wrapped/initialized.
 
@@ -32,7 +32,7 @@ The item to be wrapped/initialized.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -SearchResultItem  &lt;SearchResultItem&gt;
+### -SearchResultItem  &lt;SearchResultItem&gt;
 
 The item obtained from Find-Item command to be translated into a sitecore item.
 
@@ -50,7 +50,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * Sitecore.Data.Items.Item
 
-  Sitecore.ContentSearch.SearchTypes.SearchResultItem 
+  Sitecore.ContentSearch.SearchTypes.SearchResultItem
 
 ## Outputs
 
@@ -68,7 +68,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Initialize the item obtained directly through the Sitecore API with additional PowerShell properties
 
-```powershell
+```text
 $item = [Sitecore.Configuration.Factory]::GetDatabase("master").GetItem("/sitecore/content/home");
 #So far the item does not have PowerShell instrumentation wrapped around it yet - the following like wraps $item in those additional properties
 $item = Initialize-Item -Item $item

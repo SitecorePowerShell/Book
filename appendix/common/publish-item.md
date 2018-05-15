@@ -18,7 +18,7 @@ The Publish-Item command publishes the Sitecore item and optionally subitems. Al
 
 ## Parameters
 
-### -Recurse  &lt;SwitchParameter&gt;
+### -Recurse  &lt;SwitchParameter&gt;
 
 Specifies that subitems should also get published with the root item.
 
@@ -30,7 +30,7 @@ Specifies that subitems should also get published with the root item.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Target  &lt;String\[\]&gt;
+### -Target  &lt;String\[\]&gt;
 
 Specifies the publishing targets. The default target database is "web".
 
@@ -42,7 +42,7 @@ Specifies the publishing targets. The default target database is "web".
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PublishMode  &lt;PublishMode&gt;
+### -PublishMode  &lt;PublishMode&gt;
 
 Specified the Publish mode. Valid values are:
 
@@ -59,7 +59,7 @@ Specified the Publish mode. Valid values are:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -PublishRelatedItems  &lt;SwitchParameter&gt;
+### -PublishRelatedItems  &lt;SwitchParameter&gt;
 
 Turns publishing of related items on. Works only on Sitecore 7.2 or newer
 
@@ -71,7 +71,7 @@ Turns publishing of related items on. Works only on Sitecore 7.2 or newer
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -RepublishAll  &lt;SwitchParameter&gt;
+### -RepublishAll  &lt;SwitchParameter&gt;
 
 Republishes all items provided to the publishing job.
 
@@ -83,7 +83,7 @@ Republishes all items provided to the publishing job.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -CompareRevisions  &lt;SwitchParameter&gt;
+### -CompareRevisions  &lt;SwitchParameter&gt;
 
 Turns revision comparison on.
 
@@ -95,7 +95,7 @@ Turns revision comparison on.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -FromDate  &lt;DateTime&gt;
+### -FromDate  &lt;DateTime&gt;
 
 Publishes items newer than the date provided only.
 
@@ -107,7 +107,7 @@ Publishes items newer than the date provided only.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -AsJob  &lt;SwitchParameter&gt;
+### -AsJob  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -117,7 +117,7 @@ Publishes items newer than the date provided only.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 Language of the item that should be published. Supports globbing/wildcards. Allows for more than one language to be provided at once. e.g. "en\*", "pl-pl"
 
@@ -129,7 +129,7 @@ Language of the item that should be published. Supports globbing/wildcards. Allo
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -139,7 +139,7 @@ Language of the item that should be published. Supports globbing/wildcards. Allo
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item that should be published - can work with Language parameter to narrow the publication scope.
 
@@ -151,7 +151,7 @@ Path to the item that should be published - can work with Language parameter to 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item that should be published - can work with Language parameter to narrow the publication scope.
 
@@ -163,7 +163,7 @@ Id of the item that should be published - can work with Language parameter to na
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 | Aliases |  |
 | --- | --- | --- | --- | --- | --- |
@@ -193,19 +193,19 @@ Help Author: Michael West, Adam Najmanowicz
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Publish-Item -Path master:\content\home -Target Internet
 ```
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Get-Item -Path master:\content\home | Publish-Item -Recurse -PublishMode Incremental
 ```
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> Get-Item -Path master:\content\home | Publish-Item -Recurse -Language "en*"
 ```
 

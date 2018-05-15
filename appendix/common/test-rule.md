@@ -14,7 +14,7 @@ Tests item or a stream of items against a sitecore serialized rules engine rule 
 
 ## Parameters
 
-### -Rule  &lt;String&gt;
+### -Rule  &lt;String&gt;
 
 Serialized sitecore rules engine rule. Such rules can be read from rule fields or created by user with the Read-Variable cmdlet.
 
@@ -26,7 +26,7 @@ Serialized sitecore rules engine rule. Such rules can be read from rule fields o
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -InputObject  &lt;PSObject&gt;
+### -InputObject  &lt;PSObject&gt;
 
 Item to be tested
 
@@ -38,7 +38,7 @@ Item to be tested
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -RuleDatabase  &lt;String&gt;
+### -RuleDatabase  &lt;String&gt;
 
 Name of the database from which rules are pulled.
 
@@ -72,7 +72,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Specifies a rule as "items that have layout" and runs the rule againste all items under the ome Item
 
-```powershell
+```text
 $rule = '<ruleset>
 <rule uid="{9CF02118-F189-49C4-9F2B-6698D64ACF23}">
 <conditions>
@@ -88,7 +88,7 @@ Get-ChildItem master:\content\Home -Recurse | ? { Test-Rule -InputObject $_ -Rul
 
 Asks user for the rule and root under which items should be filtered, and lists all items fulfilling the rule under the selected path
 
-```powershell
+```text
 $rule = '<ruleset></ruleset>'
 $root = Get-Item master:\content\home\ 
 

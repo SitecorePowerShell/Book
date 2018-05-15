@@ -16,7 +16,7 @@ Install-UpdatePackage. Install-UpdatePackage -Path "C:\Projects\LaunchSitecore.T
 
 ## Parameters
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the .update package on the Sitecore server disk drive.
 
@@ -28,7 +28,7 @@ Path to the .update package on the Sitecore server disk drive.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -RollbackPackagePath  &lt;String&gt;
+### -RollbackPackagePath  &lt;String&gt;
 
 Specify Rollback Package Path - for rolling back if the installation was not functioning as expected.
 
@@ -40,7 +40,7 @@ Specify Rollback Package Path - for rolling back if the installation was not fun
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -UpgradeAction  &lt;UpgradeAction&gt;
+### -UpgradeAction  &lt;UpgradeAction&gt;
 
 Preview / Upgrade
 
@@ -52,7 +52,7 @@ Preview / Upgrade
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -InstallMode  &lt;InstallMode&gt;
+### -InstallMode  &lt;InstallMode&gt;
 
 Install / Update
 
@@ -78,7 +78,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```powershell
+```text
 PS master:\> Install-UpdatePackage -Path "C:\Projects\LaunchSitecore.TDSMaster.update" -UpgradeAction Preview -InstallMode Install
 ```
 

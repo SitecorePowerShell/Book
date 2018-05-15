@@ -18,7 +18,7 @@ The Unprotect-Item command removes protection from the item provided to it.
 
 ## Parameters
 
-### -PassThru  &lt;SwitchParameter&gt;
+### -PassThru  &lt;SwitchParameter&gt;
 
 Passes the unprotected item back into the pipeline.
 
@@ -30,7 +30,7 @@ Passes the unprotected item back into the pipeline.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be unprotected.
 
@@ -42,7 +42,7 @@ The item to be unprotected.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be unprotected - can work with Language parameter to specify the language other than current session language.
 
@@ -54,7 +54,7 @@ Path to the item to be unprotected - can work with Language parameter to specify
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be unprotected.
 
@@ -66,7 +66,7 @@ Id of the item to be unprotected.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be fetched with Id parameter.
 
@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Unprotect the Home item providing its path
 
-```powershell
+```text
 PS master:\> Unprotect-Item -Path master:\content\home
 ```
 
@@ -108,7 +108,7 @@ PS master:\> Unprotect-Item -Path master:\content\home
 
 Unprotect the Home item providing it from the pipeline and passing it back to the pipeline
 
-```powershell
+```text
 PS master:\> Get-Item -Path master:\content\home | Unprotect-Item -PassThru
 
 Name   Children Languages                Id                                     TemplateName

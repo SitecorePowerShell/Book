@@ -18,7 +18,7 @@ The Get-ItemTemplate command returns the item template and its base templates.
 
 ## Parameters
 
-### -Recurse  &lt;SwitchParameter&gt;
+### -Recurse  &lt;SwitchParameter&gt;
 
 Return the template the item is based on and all of its base templates.
 
@@ -30,7 +30,7 @@ Return the template the item is based on and all of its base templates.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The item to be analysed.
 
@@ -42,7 +42,7 @@ The item to be analysed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the item to be analysed.
 
@@ -54,7 +54,7 @@ Path to the item to be analysed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the item to be analysed.
 
@@ -66,7 +66,7 @@ Id of the item to be analysed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the item to be analysed - required if item is specified with Id.
 
@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Get template of /sitecore/conent/home item
 
-```powershell
+```text
 PS master:\> Get-ItemTemplate -Path master:\content\home
 
        BaseTemplates  : {Standard template}
@@ -121,7 +121,7 @@ PS master:\> Get-ItemTemplate -Path master:\content\home
 
 Get template of /sitecore/conent/home item and all of the templates its template is based on then format it to only show the template name, path and Key
 
-```powershell
+```text
 PS master:\> Get-Item -Path master:/content/Home | Get-ItemTemplate -Recurse | ft Name, FullName, Key -auto
 
        Name              FullName                                 Key

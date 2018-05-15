@@ -28,7 +28,7 @@ The cmdlet manipulates link to a specific item. The target item can be provided 
 
 ## Parameters
 
-### -Link  &lt;ItemLink&gt;
+### -Link  &lt;ItemLink&gt;
 
 ItemLink retrieved from the Link database. Use this parameter to do more granular filtering.
 
@@ -40,7 +40,7 @@ ItemLink retrieved from the Link database. Use this parameter to do more granula
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -NewTarget  &lt;Item&gt;
+### -NewTarget  &lt;Item&gt;
 
 New item the links should be pointing to
 
@@ -52,7 +52,7 @@ New item the links should be pointing to
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -RemoveLink  &lt;SwitchParameter&gt;
+### -RemoveLink  &lt;SwitchParameter&gt;
 
 If provided, removes all links to the current target item.
 
@@ -64,7 +64,7 @@ If provided, removes all links to the current target item.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 The current item to be relinked.
 
@@ -76,7 +76,7 @@ The current item to be relinked.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path  &lt;String&gt;
 
 Path to the current item to be relinked - can work with Language parameter to narrow the publication scope.
 
@@ -88,7 +88,7 @@ Path to the current item to be relinked - can work with Language parameter to na
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id  &lt;String&gt;
 
 Id of the current item to be relinked - can work with Language parameter to specify the language other than current session language. Requires the Database parameter to be specified.
 
@@ -100,7 +100,7 @@ Id of the current item to be relinked - can work with Language parameter to spec
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database  &lt;String&gt;
 
 Database containing the current item to be relinked.
 
@@ -112,7 +112,7 @@ Database containing the current item to be relinked.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language  &lt;String\[\]&gt;
 
 If you need the current item to be relinked in specific Language You can specify it with this parameter. Globbing/wildcard supported.
 
@@ -142,7 +142,7 @@ This example covers global operations
 
 Assuming Sitecore PowerShell Extensions 4.2 or newer is installed Assuming your Home has an "Image" field of type "Image" Assuming you have second item next to Home called Home2 that has an "Image" field of type "Image"
 
-```powershell
+```text
 $coverImage = Get-Item 'master:\media library\Default Website\cover'
 $scLogoImage = Get-item 'master:\media library\Default Website\sc_logo'
 
@@ -175,7 +175,7 @@ This example covers more fine-grained filtered approach to removing links
 
 Assuming Sitecore PowerShell Extensions 4.2 or newer is installed Assuming your Home has an "Image" field of type "Image" Assuming you have second item next to Home called Home2 that has an "Image" field of type "Image"
 
-```powershell
+```text
 $coverImage = Get-Item 'master:\media library\Default Website\cover'
 $scLogoImage = Get-item 'master:\media library\Default Website\sc_logo'
 
@@ -202,7 +202,7 @@ This example covers more fine-grained filtered approach to removing links
 
 Assuming Sitecore PowerShell Extensions 4.2 or newer is installed Assuming your Home has an "Image" field of type "Image" Assuming you have second item next to Home called Home2 that has an "Image" field of type "Image"
 
-```powershell
+```text
 $coverImage = Get-Item 'master:\media library\Default Website\cover'
 $scLogoImage = Get-item 'master:\media library\Default Website\sc_logo'
 

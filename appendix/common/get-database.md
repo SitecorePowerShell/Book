@@ -14,7 +14,7 @@ The Get-Database command retrieves one or more Sitecore Database objects based o
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 Name of the database to be returned.
 
@@ -26,7 +26,7 @@ Name of the database to be returned.
 | Accept Pipeline Input? | true \(ByValue\) |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item  &lt;Item&gt;
 
 Database returned will be taken from the item passed to the command.
 
@@ -44,7 +44,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * Sitecore.Data.Items.Item
 
-  System.String 
+  System.String
 
 ## Outputs
 
@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Get-Database
 Name                 Languages                      Protected  Read Only
 ----                 ---------                      ---------  ---------
@@ -72,7 +72,7 @@ filesystem           {en, en-US}                    False      True
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Get-Database -Name "master"
 
 Name                 Languages                      Protected  Read Only
@@ -82,7 +82,7 @@ master               {en, de-DE, es-ES, pt-BR...}   False      False
 
 ### EXAMPLE 3
 
-```powershell
+```text
 PS master:\> Get-Item . | Get-Database
 
 Name                 Languages                      Protected  Read Only

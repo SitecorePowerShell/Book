@@ -28,5 +28,3 @@ The integration point is disabled by default and can be enabled through configur
 
 * Watch Adam present this and much more on Sitecore! Experienced [here](https://vimeo.com/134196432).
 
-
-

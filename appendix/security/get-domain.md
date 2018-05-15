@@ -14,7 +14,7 @@ The Get-Domain command returns all the domains or the specified domain.
 
 ## Parameters
 
-### -Name  &lt;String&gt;
+### -Name  &lt;String&gt;
 
 The name of the domai
 
@@ -32,7 +32,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 * System.String
 
-  Represents the name of a domain. 
+  Represents the name of a domain.
 
 ## Outputs
 
@@ -48,7 +48,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```powershell
+```text
 PS master:\> Get-Domain -Name sitecore
 Name            AccountPrefix   EnsureAnonymousUser    LocallyManaged
 ----            -------------   -------------------    --------------
@@ -57,7 +57,7 @@ sitecore        sitecore\       False                  False
 
 ### EXAMPLE 2
 
-```powershell
+```text
 PS master:\> Get-Domain
 
 Name            AccountPrefix   EnsureAnonymousUser    LocallyManaged
