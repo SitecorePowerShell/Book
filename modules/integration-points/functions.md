@@ -18,3 +18,5 @@ Here's a short video on authoring custom functions.
 
 ![Creating Functions](https://img.youtube.com/vi/bn4LSDF8p4g/0.jpg)
 
+[Click for a demo](https://www.youtube.com/watch?v=bn4LSDF8p4g)
+

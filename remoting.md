@@ -17,6 +17,8 @@ The setup of the module only requires a few steps: 1. In the Sitecore instance i
 
 ![SPE Remoting Module](https://img.youtube.com/vi/fGvT8eDdWrg/0.jpg)
 
+[Click for a demo](https://www.youtube.com/watch?v=fGvT8eDdWrg)
+
 The remoting services use a combination of a SOAP service \(ASMX\) and HttpHandler \(ASHX\). Remoting features are disabled by default and should be configured as needed as can be seen in the [security section here](security/). The SOAP service may require additional Windows authentication using the `-Credential` parameter which is common when logged into a Windows Active Directory domain.
 
 ### Windows Authenticated Requests
@@ -78,6 +80,8 @@ Stop-ScriptSession -Session $session
 ### Script Sessions and Web API Tutorial
 
 ![SPE Web API](https://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)
+
+[Click for a demo](https://www.youtube.com/watch?v=SmZBGKOryzQ)
 
 ## Advanced Script Sessions
 
