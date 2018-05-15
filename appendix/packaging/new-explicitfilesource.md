@@ -64,7 +64,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Following example creates a new package, adds content of the Console folder \(except the source files\) under the site folder saves it in the Sitecore Package folder + gives you an option to download the saved package.
 
-```text
+```powershell
 # Create package
        $package = new-package "Sitecore PowerShell Extensions";
 

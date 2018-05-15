@@ -12,7 +12,7 @@ The _Workflows_ integration allows for scripts to run like workflow commands. Ru
 
 **Example:** The following requests input from the user then writes to the workflow history.
 
-```text
+```powershell
 $item = Get-Item -Path .
 $comment = Show-Input -Prompt "Enter a comment:"
 if($comment) {

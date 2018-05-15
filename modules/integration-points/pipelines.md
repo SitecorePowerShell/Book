@@ -2,7 +2,7 @@
 
 Use the following in your scripts to get access to the arguments passed to the processor.
 
-```text
+```powershell
  $pipelineArgs = Get-Variable -Name pipelineArgs -ValueOnly
 ```
 
@@ -12,7 +12,7 @@ Use the following in your scripts to get access to the arguments passed to the p
 
 * Enforce user password expiration
 
-```text
+```powershell
 $pipelineArgs.Username
 $pipelineArgs.Password
 $pipelineArgs.Success
@@ -25,7 +25,7 @@ $pipelineArgs.StartUrl
 
 * Automatically show quick info section
 
-```text
+```powershell
 $pipelineArgs.Username
 $pipelineArgs.StartUrl
 ```

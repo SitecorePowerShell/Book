@@ -22,7 +22,7 @@ The Identity parameter specifies the Sitecore user to get. You can specify a use
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: michael
 Fully Qualified Name
@@ -73,13 +73,13 @@ Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Disable-User -Identity michael
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-User -Filter * | Disable-User
 ```
 

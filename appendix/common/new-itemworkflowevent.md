@@ -128,7 +128,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> New-ItemWorkflowEvent -Path master:\content\home -lanuage "en" -Text "Just leaving a note"
 ```
 

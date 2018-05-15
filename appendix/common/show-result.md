@@ -124,7 +124,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Show results of script executio
 
-```text
+```powershell
 PS master:\> Show-Result -Text
 ```
 
@@ -132,20 +132,20 @@ PS master:\> Show-Result -Text
 
 Show the Control Panel control in a Window of specified size.
 
-```text
+```powershell
 PS master:\> Show-Result -Control "ControlPanel" -Width 1024 -Height 640
 ```
 
 ### EXAMPLE 3
 
-```text
+```powershell
 Shows a new instance of ISE
 Show-Result -Url "/sitecore/shell/Applications/PowerShell/PowerShellIse"
 ```
 
 ### EXAMPLE 4
 
-```text
+```powershell
 
 ```
 

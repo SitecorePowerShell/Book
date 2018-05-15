@@ -25,13 +25,13 @@ If you have configured the web services to run under _Windows Authentication_ mo
 
 You'll definitely know you need it when you receive an error like the following:
 
-```text
+```powershell
 New-WebServiceProxy : The request failed with HTTP status 401: Unauthorized.
 ```
 
 **Example:** The following connects Windows PowerShell ISE to a remote Sitecore instance using Windows credentials and executes the provided script.
 
-```text
+```powershell
 Import-Module -Name SPE
 $credential = Get-Credential
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore -Credential $credential
@@ -45,7 +45,7 @@ Stop-ScriptSession -Session $session
 
 **Example:** The following connects to several remote instances of Sitecore and returns the server name.
 
-```text
+```powershell
 # If you need to connect to more than one instance of Sitecore add it to the list.
 $instanceUrls = @("https://remotesitecore","https://remotesitecore2")
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri $instanceUrls
@@ -59,7 +59,7 @@ We have provided a service for downloading all files and media items from the se
 
 **Example:** The following downloads a single file from the _Package_ directory.
 
-```text
+```powershell
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
 Receive-RemoteItem -Session $session -Path "default.js" -RootPath App -Destination "C:\Files\"
@@ -68,7 +68,7 @@ Stop-ScriptSession -Session $session
 
 **Example:** The following downloads a single media item from the library.
 
-```text
+```powershell
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
 Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination "C:\Images\" -Database master
@@ -94,7 +94,7 @@ Inevitably you will need to have long running processes triggered remotely. In o
 
 **Example:** The following remotely runs the id of a `ScriptSession` and polls the server until completed.
 
-```text
+```powershell
 Import-Module -Name SPE
 $session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
 $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
@@ -109,7 +109,7 @@ Stop-ScriptSession -Session $session
 
 **Example:** The following remotely runs a script and checks for any output errors. The _LastErrors_ parameter is available for `ScriptSession` objects.
 
-```text
+```powershell
 $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
     Get-Session -ParameterDoesNotExist "SomeData"
 } -AsJob
@@ -128,7 +128,7 @@ Invoke-RemoteScript -Session $session -ScriptBlock {
 
 **Example:** The following redirects messages from `Write-Verbose` to the remote session. The data returned will be both `System.String` and `Deserialized.System.Management.Automation.VerboseRecord` so be sure to filter it out when needed. More information about the redirection `4>&1` can be read [here][4].
 
-```text
+```powershell
 Invoke-RemoteScript -ScriptBlock {
     Write-Verbose "Hello from the other side" -Verbose 4>&1
     "data"    
@@ -138,7 +138,7 @@ Invoke-RemoteScript -ScriptBlock {
 
 **Example:** The following improves upon the previous example.
 
-```text
+```powershell
 Invoke-RemoteScript -ScriptBlock {
     function Write-Verbose {
         param([string]$Message)

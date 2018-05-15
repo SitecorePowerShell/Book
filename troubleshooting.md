@@ -14,7 +14,7 @@ Some users have reported an [issue](https://github.com/SitecorePowerShell/Consol
 
 **Hack: ** Run this script on Sitecore 8.0.
 
-```text
+```powershell
 $paths = @("C:\inetpub\wwwroot\Console\Website\App_Config\Include\*")
 $patterns = @("Sitecore.Analytics*.config", "Sitecore.ExperienceAnalytics*.config")
 

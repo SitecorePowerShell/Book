@@ -128,7 +128,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 Set template of /sitecore/content/home item using a Template path.
 
-```text
+```powershell
 PS master:\> Set-ItemTemplate -Path master:/sitecore/content/home -Template "/sitecore/templates/User Defined/Page"
 ```
 
@@ -136,7 +136,7 @@ PS master:\> Set-ItemTemplate -Path master:/sitecore/content/home -Template "/si
 
 Set template of /sitecore/content/home item using a TemplateItem.
 
-```text
+```powershell
 PS master:\> $template = Get-ItemTemplate -Path master:\content\home\page1
        PS master:\> Set-ItemTemplate -Path master:\content\home\page2 -TemplateItem $template
 ```
@@ -145,7 +145,7 @@ PS master:\> $template = Get-ItemTemplate -Path master:\content\home\page1
 
 Set the template and remap fields to their new name.
 
-```text
+```powershell
 Set-ItemTemplate -Path "master:\content\home\Page1" `
     -Template "User Defined/Target" `
     -FieldsToCopy @{Field1="Field4"; Field2="Field5"; Field3="Field6"}

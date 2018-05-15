@@ -6,7 +6,7 @@ Ever wanted to package up items and files without opening the Sitecore Package D
 
 **Example:** The following example demonstrates how to generate a package.
 
-```text
+```powershell
 $package = New-Package "Package-of-Stuff"
 $package.Sources.Clear()
 
@@ -36,7 +36,7 @@ Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Versi
 
 **Example:** The following adds a Post Step and custom attributes.
 
-```text
+```powershell
 $package = New-Package "Package-of-Stuff"
 $package.Sources.Clear()
 

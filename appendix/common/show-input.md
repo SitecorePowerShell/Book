@@ -90,7 +90,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Requests that the user provides an email, validates it against a regular expression snd whows an allert if the format is not valid
 
-```text
+```powershell
 PS master:\> Show-Input "Please provide your email" -DefaultValue "my@email.com"  -Validation "^[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" -ErrorMessage "Not a proper email!"
 ```
 
@@ -98,7 +98,7 @@ PS master:\> Show-Input "Please provide your email" -DefaultValue "my@email.com"
 
 Uses Show-Input command to request user a new name for the content item validating the proper characters are used and assigns the result to $newName variable \(nothing gets changed\)
 
-```text
+```powershell
 PS master:\> $contentItem = get-item master:\content
 PS master:\> $newName = Show-Input "Please provide the new name for the '$($contentItem.Name)' Item" -DefaultValue $contentItem.Name  -Validation "^[\w\*\$][\w\s\-\$]*(\(\d{1,}\)){0,1}$" -ErrorMessage "Invalid characters in the name"
 
@@ -110,7 +110,7 @@ PS master:\> Write-Host "The new name you've chosen is '$($newName)'"
 
 Requests that the user provides a string of at most 5 characters
 
-```text
+```powershell
 Show-Input "Please provide 5 characters at most" -MaxLength 5
 ```
 

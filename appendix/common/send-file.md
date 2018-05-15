@@ -138,7 +138,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Download File from server disk drive
 
-```text
+```powershell
 PS master:\> Send-File -Path "C:\Projects\ZenGarden\Data\packages\Sitecore PowerShell Extensions-2.6.zip"
 ```
 
@@ -146,7 +146,7 @@ PS master:\> Send-File -Path "C:\Projects\ZenGarden\Data\packages\Sitecore Power
 
 Download item from media library
 
-```text
+```powershell
 PS master:\> Get-Item "master:/media library/Showcase/cognifide_logo" | Send-File -Message "Cognifide Logo"
 ```
 

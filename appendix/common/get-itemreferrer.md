@@ -118,7 +118,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\>Get-ItemReferrer -Path master:\content\home
 
 Name                             Children Languages                Id                                     TemplateName
@@ -131,7 +131,7 @@ learn-about-oms                  False    {en, de-DE, es-ES, pt... {79ECF4DF-9DB
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\>Get-Item master:\content\home | Get-ItemReferrer -ItemLink
 
 SourceItemLanguage : en

@@ -20,7 +20,7 @@ The Identity parameter specifies the Sitecore role to get. You can specify a rol
 
 Specifies the Sitecore role by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: developer
 Fully Qualified Name
@@ -67,7 +67,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Remove-RoleMember -Identity developer -Members "michael","adam","mike"
 ```
 

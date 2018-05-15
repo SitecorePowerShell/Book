@@ -98,13 +98,13 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Protect-Item -Path master:\content\home
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-Item -Path master:\content\home | Protect-Item -PassThru
 
 Name                             Children Languages                Id                                     TemplateName

@@ -22,7 +22,7 @@ The Identity parameter specifies the Sitecore user to get. You can specify a use
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: admin
 Fully Qualified Name
@@ -71,7 +71,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Get-Session
 
 Created                LastRequest            SessionID                  UserName
@@ -82,7 +82,7 @@ Created                LastRequest            SessionID                  UserNam
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-Session -Identity admin
 
 Created                LastRequest            SessionID                  UserName
@@ -92,7 +92,7 @@ Created                LastRequest            SessionID                  UserNam
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Get-Session -InstanceId tekipna1lk0ccr2z1bdjsua2,wq4bfivfm2tbgkgdccpyzczp
 
 Created                LastRequest            SessionID                  UserName

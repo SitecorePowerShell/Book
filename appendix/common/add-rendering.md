@@ -182,7 +182,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 find item defining rendering and create rendering definitio
 
-```text
+```powershell
 PS master:\> $renderingItem = gi master:\layout\Sublayouts\ZenGarden\Basic\Content | New-Rendering -Placeholder "main"
 # find item you want the rendering added to
 PS master:\> $item = gi master:\content\Demo\Int\Home

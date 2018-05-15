@@ -76,7 +76,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Invoke-Script 'Examples\Script Testing\Long Running Script with Progress Demo'
 ```
 

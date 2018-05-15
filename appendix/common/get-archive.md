@@ -58,7 +58,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Get-Archive -Database "master"
 
 Name                                        Items

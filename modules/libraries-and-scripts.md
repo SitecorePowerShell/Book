@@ -14,14 +14,14 @@ As a best practice we recommend that the _Function_ library consist of reusable 
 
 **Example:** The following demonstrates the use of the _Function_ script library containing _Get-DateMessage_.
 
-```text
+```powershell
 # /sitecore/system/modules/powershell/script library/spe rocks/functions/get-datemessage
 function Get-DateMessage {
   "The current date and time is: $(Get-Date)"
 }
 ```
 
-```text
+```powershell
 # /sitecore/system/modules/powershell/script library/spe rocks/alerts/show-datemessage
 Import-Function -Name Get-DateMessage
 

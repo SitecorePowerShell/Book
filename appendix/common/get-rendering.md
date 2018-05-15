@@ -218,7 +218,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 get all renderings for "Default" device, located in the any placeholder that has name in it or any of its sub-placeholders
 
-```text
+```powershell
 PS master:\> Get-Item master:\content\home | Get-Rendering -Placeholder "*main*" -Device (Get-LayoutDevice "Default")
 ```
 

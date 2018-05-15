@@ -34,14 +34,14 @@ Below are field types you may wish to use a script:
 
 1. Begin by adding a new script library called _Data Sources_ followed by adding a script. You can call it something like _Get-GlobalOption_.
 
-   ```text
+   ```powershell
    # The script must return an item. This is useful for populating a Droplink.
    Get-ChildItem -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
    ```
 
 2. Add the path to your script in the _Source_ field on the data template. The source should be prefixed with `script:` followed by the path.
 
-   ```text
+   ```powershell
    script:/sitecore/system/Modules/PowerShell/Script Library/X-Demo/Data Sources/Get-GlobalOption
    ```
 

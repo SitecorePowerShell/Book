@@ -148,7 +148,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Remove Polish and Spanish language from /sitecore/content/home item in the master database
 
-```text
+```powershell
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language "pl-pl", "es-es"
 ```
 
@@ -156,7 +156,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -Language "pl-pl", "e
 
 Remove all english based languages defined in /sitecore/content/home item and all of its children in the master database
 
-```text
+```powershell
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language "en-*" -Recurse
 ```
 
@@ -164,7 +164,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -Language "en-*" -Rec
 
 Remove all languages except those that are "en" based defined in /sitecore/content/home item and all of its children in the master database
 
-```text
+```powershell
 PS master:\> Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*" -Recurse
 ```
 
@@ -172,7 +172,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*
 
 Trim all languages to 3 latest versions for /sitecore/content/home item and all of its children in the master database
 
-```text
+```powershell
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language * -Recurse
 ```
 

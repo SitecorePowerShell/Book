@@ -86,7 +86,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Get-TaskSchedule
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run
 ----                             --------        ------   -----------  ------   -------  ---------    --------               --------
@@ -108,7 +108,7 @@ Test-PowerShell                  web             True     False        True     
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-TaskSchedule -Name "*Check*"
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run
 ----                             --------        ------   -----------  ------   -------  ---------    --------               --------
@@ -120,7 +120,7 @@ Check DSN Messages               web             True     False        True     
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Get-TaskSchedule -Name "*Check*" -Database "master"
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run
 ----                             --------        ------   -----------  ------   -------  ---------    --------               --------

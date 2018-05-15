@@ -64,13 +64,13 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Unlock-User -Identity michael
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-User -Filter * | Unlock-User
 ```
 

@@ -89,7 +89,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Send first log file to the user
 
-```text
+```powershell
 Get-Item "$SitecoreLogFolder\*.*" | select -first 1 | Out-Download
 ```
 
@@ -97,7 +97,7 @@ Get-Item "$SitecoreLogFolder\*.*" | select -first 1 | Out-Download
 
 Send Hello World text file to the user
 
-```text
+```powershell
 "Hello World!" | Out-Download -Name hello-world.txt
 ```
 
@@ -105,7 +105,7 @@ Send Hello World text file to the user
 
 Get a list of sitecore branches under root item in the master database and send the list to user as excel file
 
-```text
+```powershell
 Import-Function -Name ConvertTo-Xlsx
 
 [byte[]]$outobject = Get-ChildItem master:\ | 

@@ -46,7 +46,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Login-User -Identity "sitecore\admin" -Password "b"
 ```
 

@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Get template of /sitecore/conent/home item
 
-```text
+```powershell
 PS master:\> Get-ItemTemplate -Path master:\content\home
 
        BaseTemplates  : {Standard template}
@@ -121,7 +121,7 @@ PS master:\> Get-ItemTemplate -Path master:\content\home
 
 Get template of /sitecore/conent/home item and all of the templates its template is based on then format it to only show the template name, path and Key
 
-```text
+```powershell
 PS master:\> Get-Item -Path master:/content/Home | Get-ItemTemplate -Recurse | ft Name, FullName, Key -auto
 
        Name              FullName                                 Key

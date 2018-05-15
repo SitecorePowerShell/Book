@@ -156,7 +156,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 For a good understanding of all the Property types the Read-Variable command accepts open the script located in the following item: /Examples/User Interaction/Read-Variable - Sample the script is located in the Script Library in the Master database.
 
-```text
+```powershell
 
 ```
 
@@ -166,7 +166,7 @@ Following is an example of a simple dialog asking user for various variable type
 
 The type of some of the controls displayed to the user are iferred from the variable type \(like the $item variable or DateTime\) The editors for some other are set by providing the "editor" value
 
-```text
+```powershell
 $item = Get-Item master:\content\home
 $result = Read-Variable -Parameters `
     @{ Name = "someText"; Value="Some Text"; Title="Single Line Text"; Tooltip="Tooltip for singleline"; Placeholder="You see this when text box is empty"}, 
@@ -184,7 +184,7 @@ Following is an example of a multi tabbed dialog asking user for various variabl
 
 The type of some of the controls displayed to the user are iferred from the variable type \(like the $item variable or DateTime\) The editors for some other are set by providing the "editor" value
 
-```text
+```powershell
 $item = Get-Item master:\content\home
 $result = Read-Variable -Parameters `
     @{ Name = "silent"; Value=$true; Title="Proceed Silently"; Tooltip="Check this if you don't want to be interrupted"; Tab="Simple"}, 

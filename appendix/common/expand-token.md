@@ -103,7 +103,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Get-Item master:\content\home | Expand-Token
 ```
 

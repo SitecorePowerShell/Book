@@ -60,13 +60,13 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Remove-Session -InstanceId tekipna1lk0ccr2z1bdjsua2,wq4bfivfm2tbgkgdccpyzczp
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-Session -Identity michael | Remove-Session
 ```
 

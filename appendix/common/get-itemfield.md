@@ -144,7 +144,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Get list of names of non standard fields from /sitecore/content/home item
 
-```text
+```powershell
 PS master:\> Get-ItemField -Path master:\content\home
 
 Text
@@ -156,7 +156,7 @@ Image
 
 Get list of fields including standard fields from /sitecore/content/home item and list their Name, DisplayName, SectionDisplayName and Description in a table.
 
-```text
+```powershell
 PS master:\> Get-Item master:\content\home | Get-ItemField -IncludeStandardFields -ReturnType Field -Name "*" | ft Name, DisplayName, SectionDisplayName, Description -auto
 
 Name                                DisplayName                        SectionDisplayName Description

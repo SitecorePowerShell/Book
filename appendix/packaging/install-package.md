@@ -72,7 +72,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Install-Package -Path SitecorePowerShellConsole.zip -InstallMode Merge -MergeMode Merge
 ```
 

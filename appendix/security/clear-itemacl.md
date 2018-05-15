@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Clears the security information from the Home item providing its path
 
-```text
+```powershell
 PS master:\> Clear-ItemAcl -Path master:\content\home
 ```
 
@@ -108,7 +108,7 @@ PS master:\> Clear-ItemAcl -Path master:\content\home
 
 Clears the security information from the Home item by providing it from the pipeline and passing it back to the pipeline.
 
-```text
+```powershell
 PS master:\> Get-Item -Path master:\content\home | Clear-ItemAcl -PassThru
 
 Name   Children Languages                Id                                     TemplateName

@@ -48,7 +48,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Get-Domain -Name sitecore
 Name            AccountPrefix   EnsureAnonymousUser    LocallyManaged
 ----            -------------   -------------------    --------------
@@ -57,7 +57,7 @@ sitecore        sitecore\       False                  False
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-Domain
 
 Name            AccountPrefix   EnsureAnonymousUser    LocallyManaged

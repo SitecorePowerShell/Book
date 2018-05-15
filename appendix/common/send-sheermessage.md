@@ -56,7 +56,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 If you execute the following script in the PowerShell ISE the Save dialog will popup
 
-```text
+```powershell
 Send-SheerMessage -Name 'ise:save'
 ```
 

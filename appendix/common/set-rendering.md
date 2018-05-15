@@ -164,7 +164,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 change all rendering's placeholder from main to footer
 
-```text
+```powershell
 PS master:\> $item = Get-Item -Path master:\content\home
 PS master:\> Get-Rendering -Item $item -PlaceHolder "main" | Foreach-Object { $_.Placeholder = "footer"; Set-Rendering -Item $item -Instance $_ }
 ```

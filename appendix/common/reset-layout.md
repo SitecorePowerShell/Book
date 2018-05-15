@@ -108,7 +108,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Reset-Layout -Path master:\content\home
 ```
 

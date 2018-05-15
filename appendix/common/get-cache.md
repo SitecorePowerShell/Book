@@ -40,7 +40,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Get-Cache -Name master*
 
 Name                                     Enabled       Count       Size   Max Size Default  Scavengable

@@ -91,7 +91,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Return the library item for "Content Editor Context Menu"
 
-```text
+```powershell
 $module = Get-SpeModule -Name "Copy Renderings"
 Get-SpeModuleFeatureRoot -Feature contentEditorContextMenu -Module $module
 ```
@@ -100,7 +100,7 @@ Get-SpeModuleFeatureRoot -Feature contentEditorContextMenu -Module $module
 
 Return the Path to where "List View Export" scripts would be located if this feature was defined
 
-```text
+```powershell
 $module = Get-SpeModule -Name "Copy Renderings"
 Get-SpeModuleFeatureRoot -Module $module -Feature listViewExport -ReturnPath
 ```

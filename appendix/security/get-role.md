@@ -24,7 +24,7 @@ To search for and retrieve more than one role, use the Filter parameter.
 
 Specifies the Sitecore role by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: developer
 Fully Qualified Name
@@ -81,7 +81,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Get-Role -Identity sitecore\developer
 
 Name                                     Domain       IsEveryone
@@ -91,7 +91,7 @@ sitecore\developer                       sitecore     False
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> "sitecore\developer","sitecore\author" | Get-Role
 
 Name                                     Domain       IsEveryone
@@ -102,7 +102,7 @@ sitecore\developer                       sitecore     False
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Get-Role -Filter sitecore\d*
 
 Name                                     Domain       IsEveryone
@@ -115,7 +115,7 @@ sitecore\Developer                       sitecore     False
 
 Expand the MemberOf property to see a list of roles that the specified role is a member.
 
-```text
+```powershell
 PS master:\> Get-Role -Identity sitecore\developer | Select-Object -ExpandProperty MemberOf
 
 Name                                     Domain       IsEveryone

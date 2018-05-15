@@ -20,7 +20,7 @@ User name including domain for which the access rule is being created. If no dom
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: adam
 Fully Qualified Name
@@ -123,7 +123,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Creates an access rule that allows the "sitecore\adam" user to delete the item to which it will be applied and all of its childre
 
-```text
+```powershell
 PS master:\> New-ItemAcl -AccessRight item:delete -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\adam"
 
 Account           AccessRight    PermissionType   PropagationType  SecurityPermission
@@ -135,7 +135,7 @@ sitecore\admin    item:delete    Access           Any              AllowAccess
 
 Allows the "sitecore\adam" user to delete the Home item and all of its children. Denies the "sitecore\mikey" user reading the descendants of the Home item. ;P The security info is created prior to adding it to the item. The item is delivered to the Add-ItemAcl from the pipeline and returned to the pipeline after processing due to the -PassThru parameter. The security information is added to the previously existing security qualifiers.
 
-```text
+```powershell
 $acl1 = New-ItemAcl -AccessRight item:delete -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\adam"
 $acl2 = New-ItemAcl -AccessRight item:read -PropagationType Descendants -SecurityPermission DenyAccess -Identity "sitecore\mikey"
 Get-Item -Path master:\content\home | Add-ItemAcl -AccessRules $acl1, $acl2 -PassThru
@@ -149,7 +149,7 @@ Home   False    {en, ja-JP, de-DE, da}   {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 
 
 Allows the "sitecore\adam" user to delete the Home item and all of its children. Denies the "sitecore\mikey" user reading the descendants of the Home item. ;P The security info is created prior to setting it to the item. The item is delivered to the Set-ItemAcl from the pipeline and returned to the pipeline after processing due to the -PassThru parameter. Any previuous security information on the item is removed.
 
-```text
+```powershell
 $acl1 = New-ItemAcl -AccessRight item:delete -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\adam"
 $acl2 = New-ItemAcl -AccessRight item:read -PropagationType Descendants -SecurityPermission DenyAccess -Identity "sitecore\mikey"
 Get-Item -Path master:\content\home | Set-ItemAcl -AccessRules $acl1, $acl2 -PassThru

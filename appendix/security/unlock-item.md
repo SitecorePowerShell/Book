@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Unlock the Home item providing its path
 
-```text
+```powershell
 PS master:\> Unlock-Item -Path master:\content\home
 ```
 
@@ -108,7 +108,7 @@ PS master:\> Unlock-Item -Path master:\content\home
 
 Unlock the Home item providing it from the pipeline and passing it back to the pipeline
 
-```text
+```powershell
 PS master:\> Get-Item -Path master:\content\home | Unlock-Item -PassThru
 
 Name   Children Languages                Id                                     TemplateName

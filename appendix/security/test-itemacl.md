@@ -117,7 +117,7 @@ User name including domain for which the access rule is being created. If no dom
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: adam
 Fully Qualified Name
@@ -154,7 +154,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Denies the "sitecore\author2" user renaming the descendants of the Home item. The security info is created prior to adding it to the item. The item is delivered to the Add-ItemAcl from the pipeline and returned to the pipeline after processing due to the -PassThru parameter.
 
-```text
+```powershell
 PS master:\> $acl = New-ItemAcl -AccessRight item:rename -PropagationType Descendants -SecurityPermission AllowAccess -Identity "sitecore\author2"
 PS master:\> Get-Item -Path master:\content\home | Set-ItemAcl -AccessRules $acl
 

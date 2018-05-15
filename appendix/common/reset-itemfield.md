@@ -124,7 +124,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 Reset all item fields, excluding standard fields.
 
-```text
+```powershell
 PS master:\> Reset-ItemField -Path master:\content\home
 ```
 
@@ -132,7 +132,7 @@ PS master:\> Reset-ItemField -Path master:\content\home
 
 Reset all item fields, including standard fields.
 
-```text
+```powershell
 PS master:\> Reset-ItemField -Path master:\content\home -IncludeStandardFields
 ```
 
@@ -140,7 +140,7 @@ PS master:\> Reset-ItemField -Path master:\content\home -IncludeStandardFields
 
 Reset all item fields with names beginning with "a", excluding standard fields.
 
-```text
+```powershell
 PS master:\> Get-Item master:\content\home | Reset-ItemField -Name "a*"
 ```
 

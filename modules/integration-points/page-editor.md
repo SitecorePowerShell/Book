@@ -8,7 +8,7 @@ The _Notification_ integration adds a notification to the Page Editor. The scrip
 
 **Example:** The following adds an information notification to the page for Sitecore 8 and a warning for Sitecore 7.
 
-```text
+```powershell
 $title = "Thank you for using SPE!"
 $text = "Today is $([datetime]::Now.ToLongDateString())"
 $icon = @{$true="Office/32x32/information.png";$false="Applications/16x16/warning.png"}[$SitecoreVersion.Major -gt 7]
@@ -36,7 +36,7 @@ The _Experience Button_ integration adds a button to the Page Editor. Rules can 
 
 **Example:** The following adds a command which will display a dialog asking a question, then send an email with the response.
 
-```text
+```powershell
 $item = Get-Item -Path .
 $response = Show-Input -Prompt "What's the message for $($item.Name)?"
 if($response) {

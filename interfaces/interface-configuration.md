@@ -6,7 +6,7 @@ The Console, ISE, and Result dialog all provide a way a way to view output data.
 
 **Example:** The following configures colors for the background and forground text in multiple streams.
 
-```text
+```powershell
 $Host.UI.RawUI.BackgroundColor = ($bckgrnd = 'DarkRed')
 $Host.UI.RawUI.ForegroundColor = 'Cyan'
 $Host.PrivateData.WarningForegroundColor = 'Magenta'

@@ -16,7 +16,7 @@ The _Alert_ dialog is a way to notify the user of important information with an 
 
 **Example:** The following display a modal dialog.
 
-```text
+```powershell
 Show-Alert -Title "SPE is great!"
 ```
 
@@ -30,7 +30,7 @@ The _Confirmation_ dialog is a way to verify with the user before proceeding.
 
 **Example:** The following displays a modal dialog with an OK or Cancel confirmation.
 
-```text
+```powershell
 Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 ```
 
@@ -45,7 +45,7 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 
 **Example:** The following displays an input dialog for text.
 
-```text
+```powershell
 Show-Input "Please provide 5 characters at most" -MaxLength 5
 ```
 
@@ -58,7 +58,7 @@ Show-Input "Please provide 5 characters at most" -MaxLength 5
 
 **Example:** The following displays an input dialog with a error validation message.
 
-```text
+```powershell
 $inputProps = @{
     Prompt = "Enter a new name for the item:"
     Validation = [Sitecore.Configuration.Settings]::ItemNameValidation
@@ -81,7 +81,7 @@ The `Read-Variable` command provides a way to prompt the user for information an
 
 **Note:** The name _selectedOption_ will result in a variable that contains the selected option.
 
-```text
+```powershell
 $options = @{
     "A"="a"
     "B"="b"
@@ -150,7 +150,7 @@ The _Confirmation Choice_ dialog allows for multiple combinations like that seen
 
 **Example:** The following displays a modal dialog with choices.
 
-```text
+```powershell
 Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_0)"; btn_1="No (returns btn_1)"; btn_2="returns btn_2"; te="Have you downloaded SPE?"; cp="Important Questions"} -Height 120 -Width 400
 ```
 
@@ -170,7 +170,7 @@ The _Upload_ dialog provides a way to upload files from a local filesystem to th
 
 **Example:** The following displays an advanced upload dialog.
 
-```text
+```powershell
 Receive-File (Get-Item "master:\media library\Files") -AdvancedDialog
 ```
 
@@ -184,7 +184,7 @@ The _Download_ dialog provides a way to download files from the server to a loca
 
 **Example:** The following displays a download dialog.
 
-```text
+```powershell
 Get-Item -Path "master:\media library\Files\readme" | Send-File
 ```
 
@@ -196,7 +196,7 @@ The _Field Editor_ dialog offers a convenient way to present the user with field
 
 **Example:** The following displays a field editor dialog.
 
-```text
+```powershell
 Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
 ```
 
@@ -213,7 +213,7 @@ The _File Browser_ is an obvious choice when you need to upload, download, or de
 
 **Example:** The following displays a file browser dialog for installation packages.
 
-```text
+```powershell
 Show-ModalDialog -HandleParameters @{
     "h"="Create an Anti-Package"; 
     "t" = "Select a package that needs an anti-package"; 
@@ -234,7 +234,7 @@ Show-ModalDialog -HandleParameters @{
 
 **Example:** The following displays a simple file browser dialog.
 
-```text
+```powershell
 Show-ModalDialog -HandleParameters @{
     "h"="FileBrowser";
 } -Control "FileBrowser" -Width 500
@@ -249,7 +249,7 @@ Show-ModalDialog -HandleParameters @{
 
 **Example:** The following displays a Sheer UI control without any additional parameters.
 
-```text
+```powershell
 Show-ModalDialog -Control "ControlPanel"
 ```
 
@@ -259,7 +259,7 @@ The "Data List" is essentially a report viewer which supports custom actions, ex
 
 **Example:** The following displays a list view dialog with the child items under the Sitecore tree.
 
-```text
+```powershell
 Get-Item -Path master:\* | Show-ListView -Property Name, DisplayName, ProviderPath, TemplateName, Language
 ```
 
@@ -271,7 +271,7 @@ The _Results_ dialog resembles the Console but does not provide a prompt to the 
 
 **Example:** The following displays a dialog with the all the information written to the ScriptSession output buffer.
 
-```text
+```powershell
 for($i = 0; $i -lt 10; $i++) {
     Write-Verbose "Index = $($i)" -Verbose
 }

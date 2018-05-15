@@ -10,7 +10,7 @@ While SPE comes with an example configuration, which is disabled by default, it 
 
 An event configuration patch may look like the following:
 
-```text
+```powershell
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <events>

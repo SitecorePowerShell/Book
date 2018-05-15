@@ -48,7 +48,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 The following lists all available indexes.
 
 PS master:\>Get-SearchIndex
@@ -72,7 +72,7 @@ social_messages_web              Started         False           False
 
 ### EXAMPLE 2
 
-```text
+```powershell
 The following lists only the specified index.
 
 PS master:\>Get-SearchIndex -Name sitecore_master_index

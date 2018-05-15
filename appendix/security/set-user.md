@@ -46,7 +46,7 @@ Specifies the Sitecore user portrait image.
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: admin
 
@@ -176,25 +176,25 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Set-User -Identity michael -Email michaellwest@gmail.com
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> "michael","adam","mike" | Set-User -Enable $false
 ```
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Get-User -Filter * | Set-User -Comment "Sitecore user"
 ```
 
 ### EXAMPLE 4
 
-```text
+```powershell
 PS master:\> Set-User -Identity michael -CustomProperties @{"Date"=(Get-Date)}
 PS master:\>(Get-User michael).Profile.GetCustomProperty("Date")
 
@@ -203,7 +203,7 @@ PS master:\>(Get-User michael).Profile.GetCustomProperty("Date")
 
 ### EXAMPLE 5
 
-```text
+```powershell
 PS master:\> Set-User -Identity michael -IsAdministrator $true -CustomProperties @{"HireDate"="03/17/2010"}
 PS master:\>$user = Get-User -Identity michael
 PS master:\>$user.Profile.GetCustomProperty("HireDate")

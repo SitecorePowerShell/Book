@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 The following stops the script session with the specified Id.
 
 PS master:\> Stop-ScriptSession -Id "My Background Script Session"

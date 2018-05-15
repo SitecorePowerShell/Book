@@ -112,7 +112,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Take the security information from the Home item and apply it to the Settings item
 
-```text
+```powershell
 $acl = Get-ItemAcl -Path master:\content\home
 Set-ItemAcl -Path master:\content\Settings -AccessRules $acl -PassThru
 ```
@@ -121,7 +121,7 @@ Set-ItemAcl -Path master:\content\Settings -AccessRules $acl -PassThru
 
 Allows the "sitecore\adam" user to delete the Home item and all of its children. Denies the "sitecore\mikey" user reading the descendants of the Home item. ;P The security info is created prior to setting it to the item. The item is delivered to the Set-ItemAcl from the pipeline and returned to the pipeline after processing due to the -PassThru parameter. Any previuous security information on the item is removed.
 
-```text
+```powershell
 $acl1 = New-ItemAcl -AccessRight item:delete -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\adam"
 $acl2 = New-ItemAcl -AccessRight item:read -PropagationType Descendants -SecurityPermission DenyAccess -Identity "sitecore\mikey"
 Get-Item -Path master:\content\home | Set-ItemAcl -AccessRules $acl1, $acl2 -PassThru

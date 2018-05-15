@@ -146,7 +146,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Fields by which filtering can be performed using the -Criteria parameter
 
-```text
+```powershell
 Find-Item -Index sitecore_master_index `
           -Criteria @{Filter = "StartsWith"; Field = "_fullpath"; Value = "/sitecore/content/" } `
           -First 1 | 
@@ -157,7 +157,7 @@ Find-Item -Index sitecore_master_index `
 
 Find all children of a specific item including that item - return Sitecore items
 
-```text
+```powershell
 $root = (Get-Item "master:/system/Modules/PowerShell/Script Library/")
 Find-Item -Index sitecore_master_index `
           -Criteria @{Filter = "DescendantOf"; Field = $root } |
@@ -168,7 +168,7 @@ Find-Item -Index sitecore_master_index `
 
 Find all Template Fields using Dynamic LINQ syntax
 
-```text
+```powershell
 Find-Item `
     -Index sitecore_master_index `
     -Where 'TemplateName = @0 And Language=@1' `
@@ -179,7 +179,7 @@ Find-Item `
 
 Find all Template Fields using the -Criteria parameter syntax
 
-```text
+```powershell
 Find-Item `
         -Index sitecore_master_index `
         -Criteria @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"},

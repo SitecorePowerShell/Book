@@ -78,7 +78,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Install-UpdatePackage -Path "C:\Projects\LaunchSitecore.TDSMaster.update" -UpgradeAction Preview -InstallMode Install
 ```
 

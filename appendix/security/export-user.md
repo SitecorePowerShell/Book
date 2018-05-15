@@ -36,7 +36,7 @@ You can also pipe a user from the Get-user command.
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: admin
 Fully Qualified Name
@@ -131,7 +131,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Export-User -Identify sitecore\admin
 ```
 

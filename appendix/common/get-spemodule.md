@@ -106,7 +106,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Return all modules defined in the provided database
 
-```text
+```powershell
 PS master:\> Get-SpeModule -Database (Get-Database "master")
 ```
 
@@ -114,7 +114,7 @@ PS master:\> Get-SpeModule -Database (Get-Database "master")
 
 Return all modules defined in the master database Matching the "Content\*" wildcard
 
-```text
+```powershell
 PS master:\> Get-SpeModule -Database (Get-Database "master")
 ```
 
@@ -122,7 +122,7 @@ PS master:\> Get-SpeModule -Database (Get-Database "master")
 
 Return the module the piped script belongs to
 
-```text
+```powershell
 PS master:\> Get-item "master:\system\Modules\PowerShell\Script Library\Copy Renderings\Content Editor\Context Menu\Layout\Copy Renderings" |  Get-SpeModule
 ```
 

@@ -40,7 +40,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Get-Package -Path master:\content\home
 ```
 

@@ -218,7 +218,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 This command formats information about Sitecore items in a table. The Get-ChildItem command gets objects representing the items. The pipeline operator \(\|\) passes the object to the Show-ListView command. Show-ListView displays the objects in a table.
 
-```text
+```powershell
 PS master:\> Get-Item -path master:\* | Show-ListView -Property Name, DisplayName, ProviderPath, TemplateName, Language
 ```
 
@@ -226,7 +226,7 @@ PS master:\> Get-Item -path master:\* | Show-ListView -Property Name, DisplayNam
 
 This command formats information about Sitecore items in a table. The Get-ItemReferrer command gets all references of the "Sample Item" template. The pipeline operator \(\|\) passes the object to the Show-ListView command. Show-ListView displays the objects in a table. The Properties are not displaying straight properties but use the Name/Expression scheme to provide a nicely named values that like in the case of languages which are aggregarde form the "Languages" property.
 
-```text
+```powershell
 PS master:\> Get-ItemReferrer -path 'master:\templates\Sample\Sample Item' | 
                  Show-ListView -Property `
                      @{Label="Name"; Expression={$_.DisplayName} }, 

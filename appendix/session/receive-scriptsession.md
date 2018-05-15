@@ -96,7 +96,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 The following will return the output from all available script sessions.
 
 PS master:\> Get-ScriptSession | Receive-ScriptSession

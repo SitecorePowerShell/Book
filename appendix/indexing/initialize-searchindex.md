@@ -90,7 +90,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 The following rebuilds the index.
 
 PS master:\> Rebuild-SearchIndex -Name sitecore_master_index
@@ -98,7 +98,7 @@ PS master:\> Rebuild-SearchIndex -Name sitecore_master_index
 
 ### EXAMPLE 2
 
-```text
+```powershell
 The following rebuilds the index.
 
 PS master:\> Get-SearchIndex -Name sitecore_master_index | Rebuild-SearchIndex
