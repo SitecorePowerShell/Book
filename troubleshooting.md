@@ -12,7 +12,7 @@ Some users have reported an [issue](https://github.com/SitecorePowerShell/Consol
 
 **Article:** Martin Miles encountered the issue and proposed a fix [here](https://github.com/SitecorePowerShell/Book/tree/5daee3160885dadd7031fee723dccf12a33abd7b/[https:/blog.martinmiles.net/post/sitecore-8-re-indexing-errors-out-and-module-installation-never-ends-without-mongodb-running]/README.md).
 
-**Hack: ** Run this script on Sitecore 8.0.
+**Hack:**  Run this script on Sitecore 8.0.
 
 ```text
 $paths = @("C:\inetpub\wwwroot\Console\Website\App_Config\Include\*")
