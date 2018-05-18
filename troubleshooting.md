@@ -39,3 +39,10 @@ Be sure the module is enabled and the integrations are rebuilt from within the I
 * Functions - Import-Function _name_ parameter not populating with functions or can't be found after running the command.
 * Web API - Scripts not existing or can't be found.
 
+### Remoting
+
+* **404** error in browser console can be caused by missing SPE files, a custom pipeline, or perhaps a rewrite rule.
+* **"The request failed with an empty response."** could be caused when TLS is offloaded to a load balancer and traffic to the endpoint is no longer over HTTPS. Fixed by issue \#[1005](https://github.com/SitecorePowerShell/Console/issues/1005).
+
+
+
