@@ -151,7 +151,7 @@ The _Confirmation Choice_ dialog allows for multiple combinations like that seen
 **Example:** The following displays a modal dialog with choices.
 
 ```text
-Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes (returns btn_0)"; btn_1="No (returns btn_1)"; btn_2="returns btn_2"; te="Have you downloaded SPE?"; cp="Important Questions"} -Height 120 -Width 400
+Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes - returns btn_0"; btn_1="No - returns btn_1"; btn_2="returns btn_2"; te="Have you downloaded SPE?"; cp="Important Questions"} -Height 120 -Width 650
 ```
 
 **Note:** The hashtable keys should be incremented like _btn\_0_, _btn\_1_, and so on. The return value is the key name.
