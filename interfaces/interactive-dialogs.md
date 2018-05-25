@@ -1,9 +1,5 @@
 # Interactive Dialogs
 
-![](https://github.com/sitecorepowershell/sitecore-powershell-extensions/tree/b6365f8ecf54966c2e1757f549f543976500aa52/assets/modaldialog-showinput-errortext.png)
-
-\# Interactive Dialogs
-
 We've provided a few commands to interact with the user through dialogs.
 
 ## Simple Dialogs
