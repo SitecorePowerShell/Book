@@ -307,13 +307,18 @@ $item.Editing.EndEdit()
 
 **Note:** The above example may also be written in the ISE where no console prompt is visible.
 
-The previous examples work but are not the most efficient ways to change item content. The items returned by the provider expose the Sitecore item fields as automated PowerShell properties.
+The previous examples work but are not the most efficient ways to change item content. The items returned by the provider expose the Sitecore item fields as automatic PowerShell properties.
+
+{% hint style="info" %}
+If the property name on the data template contains a space, such as \`Closing Date\`, then you will need to wrap the field name in quotes \(single or double\).
+{% endhint %}
 
 **Example:** The following sets the title property using the automated PowerShell property.
 
 ```text
 $item = Get-Item master:/content/home
 $item.Title = "New Title"
+$item."Closing Date" = [datetime]::Today
 ```
 
 **Example:** The following sets the title property using the semi-native PowerShell property without the use of a variable.
