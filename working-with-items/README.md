@@ -4,6 +4,8 @@ description: Introduction to the core commands provided by the module.
 
 # Working with Items
 
+## Command Introduction
+
 The majority of scripts written with SPE contain one or more of the following commands:
 
 * `Get-Item` : used when a single item is needed, such as the root node to a tree.
@@ -13,7 +15,7 @@ The majority of scripts written with SPE contain one or more of the following co
 * `Move-Item` : used to transfer an item from one location to another.
 * `Copy-Item` : used to copy an item from one location to another.
 
-## How do I manage my content through PowerShell?
+### Command Parameters
 
 The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using [Dynamic Parameters](https://msdn.microsoft.com/en-us/library/dd878299%28v=vs.85%29.aspx). These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provided this table to help you discover the hidden gems within each command.
 
@@ -38,6 +40,8 @@ The following commands provide you with the core methods needed to manage your c
 **Legend:** "–" - not applicable; "✓" - available.
 
 Below we will show how to use each command with the Windows PowerShell syntax followed by some examples of the common C\# equivalent.
+
+## Finding Items
 
 If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Initialize-Item` command.
 
@@ -366,7 +370,8 @@ To provide an example – I’ve extended my home with additional fields as foll
 **Example:** The following assigns an image to the Image field.
 
 ```text
-(Get-Item master:/content/home).Image = Get-Item 'master:\media library\logo'
+$homeItem = Get-Item -Path "master:/content/home"
+$homeItem.Image = Get-Item -Path "master:\media library\logo"
 ```
 
 Easy enough, isn't it? Let SPE detect the field type for you and worry about what to call! Now let's assign a content item to _GeneralLink_.
@@ -374,7 +379,8 @@ Easy enough, isn't it? Let SPE detect the field type for you and worry about wha
 **Example:** The following assigns a content item to a _GeneralLink_ field.
 
 ```text
-(Get-Item master:/content/home).GeneralLink = Get-Item 'master:\content\CognifideCom'
+$homeItem = Get-Item -Path "master:/content/home"
+$homeItem.GeneralLink = Get-Item -Path "master:\content\CognifideCom"
 ```
 
 What about fields that accept lists of items? We've got your back here as well.
@@ -382,7 +388,8 @@ What about fields that accept lists of items? We've got your back here as well.
 **Example:** The following assigns all children of `/sitecore/content/` item to the _ItemList_ field.
 
 ```text
-(Get-Item master:/content/home).ItemList = Get-ChildItem 'master:\content\'
+$homeItem = Get-Item -Path "master:/content/home"
+$homeItem.ItemList = Get-ChildItem -Path 'master:\content\'
 ```
 
 Let's see how our item looks in the Content editor after all the assignments that we've just performed:
@@ -435,6 +442,8 @@ Some other classes you may want to use with the `New-UsingBlock` function:
 * `Sitecore.Data.DatabaseCacheDisabler`
 * `Sitecore.Data.Events.EventDisabler`
 
+## Copying Items
+
 ### Copy-Item : to a new destination
 
 You will find yourself one day in need of copying items on a small to large scale. The `Copy-Item` command will likely meet the need.
@@ -453,6 +462,8 @@ Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "m
 Copy-Item master:\content\Home web:\content\home -TransferOptions 0
 ```
 
+## Moving Items
+
 ### Move-Item : to a new destination
 
 There is a always a better way to do something. Moving items en masse is certainly one that you don't want to do by hand. If the destination item exists the moved item will be added as a child. If the destination item does not exist the source item will be renamed when moved.
@@ -462,6 +473,8 @@ There is a always a better way to do something. Moving items en masse is certain
 ```text
 Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "master:\content\home\sample item 2\"
 ```
+
+## Creating Items
 
 ### New-Item
 
@@ -484,6 +497,8 @@ Name                             Children Languages                Id           
 ----                             -------- ---------                --                                     ------------
 Sample Item 4                    False    {en}                     {9459ADDD-4471-4ED3-A041-D33E559BD321} Sample Item
 ```
+
+## Removing Items
 
 ### Remove-Item : permanently
 
