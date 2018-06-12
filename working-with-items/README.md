@@ -1,4 +1,17 @@
+---
+description: Introduction to the core commands provided by the module.
+---
+
 # Working with Items
+
+The majority of scripts written with SPE contain one or more of the following commands:
+
+* `Get-Item` : used when a single item is needed, such as the root node to a tree.
+* `Get-ChildItem` : used when children and grandchildren \(optional\) are needed.
+* `New-Item` : used to create a new item based on a specified data template.
+* `Remove-Item` : used to delete or recycle an item.
+* `Move-Item` : used to transfer an item from one location to another.
+* `Copy-Item` : used to copy an item from one location to another.
 
 ## How do I manage my content through PowerShell?
 
@@ -394,7 +407,7 @@ New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
         $item.Editing.BeginEdit()
         $item["Title"] = "Sample Item"
         $item["Text"] = "Sample Item"
-        $item.Editing.EndEdit() | Out-Null
+        $item.Editing.EndEdit() > $null
     }
 }
 ```
