@@ -8,6 +8,50 @@ description: Introduction to the core commands provided by the module.
 
 The majority of scripts written with SPE contain one or more of the following commands:
 
+{% tabs %}
+{% tab title="Get-Item" %}
+* Use this to retrieve a single item. Throws an error if the item does not exist.
+* Use when Sitecore `query:` or `fast:` is required. May return more than 1 item.
+
+```text
+Get-Item -Path "master:\content\home"
+```
+{% endtab %}
+
+{% tab title="Get-ChildItem" %}
+* Use to return an item's children and grandchildren.
+
+```text
+Get-ChildItem -Path "master:\content\home" -Recurse
+```
+{% endtab %}
+
+{% tab title="New-Item" %}
+* Use to create an item based on a specified data template.
+
+```text
+New-Item -Path "master:\content\home" -ItemType "Sample/Sample Item" -Name "Demo"
+```
+{% endtab %}
+
+{% tab title="Remove-Item" %}
+* Use to delete or recycle an item.
+* Accepts items returned by `Get-Item` and `Get-ChildItem`.
+
+```text
+Get-Item -Path "master:\content\home\delete-me" | Remove-Item
+```
+{% endtab %}
+
+{% tab title="Move-Item" %}
+
+{% endtab %}
+
+{% tab title="Copy-Item" %}
+
+{% endtab %}
+{% endtabs %}
+
 * `Get-Item` : used when a single item is needed, such as the root node to a tree.
 * `Get-ChildItem` : used when children and grandchildren \(optional\) are needed.
 * `New-Item` : used to create a new item based on a specified data template.
