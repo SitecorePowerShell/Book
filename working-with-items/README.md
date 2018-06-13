@@ -88,7 +88,7 @@ Below we will show how to use each command with the Windows PowerShell syntax fo
 
 ## Finding Items
 
-If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Initialize-Item` command. We'll show an example of this later.
+If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Initialize-Item` command. We'll show an [example](./#sitecore-api) of this later.
 
 {% hint style="info" %}
 Check out some performance details when using different methods of querying items on the [Sitecore StackExchange](https://sitecore.stackexchange.com/questions/6803/sitecore-powershell-query-for-big-images-of-a-certain-size/6811#6811).
