@@ -1,26 +1,22 @@
+---
+description: Welcome to the wonderful world of Sitecore PowerShell Extensions.
+---
+
 # Introduction
 
 ![Sitecore PowerShell Extensions](.gitbook/assets/readme-console-ise.png)
+
+## About the Module
 
 The [Sitecore PowerShell Extensions](https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx) \(SPE\) module is a Sitecore development accelerator which can drastically increase your productivity and curtail the amount of time it takes to deliver a Sitecore solution.
 
 The module provides a command line \(CLI\) and scripting environment \(ISE\) for automating tasks. SPE works with the Sitecore process, capable of making native calls to the Sitecore API and manipulating files. Running commands and writing scripts follow the standard and well-known Windows PowerShell syntax. Windows PowerShell is a common tool used in IT for desktop and server management, so we decided to stick with that as a framework to build upon.
 
-Below are some of the things you get with SPE:
-
-* [Index Viewer](modules/integration-points/toolbox.md)
-* [Scheduled Task Manager](modules/integration-points/toolbox.md)
-* [Report Runner](modules/integration-points/reports/)
-* [User Session Manager](modules/integration-points/toolbox.md)
-* [Bulk Rename/Remove/Create Tool](working-with-items/)
-* Data Importer
-* ~~Professional Chef~~
-
 ## Bundled Tools
 
 The following are some helpful modules distributed with SPE.
 
-* **Bundle**
+* **Tools**
   * Authoring Instrumentation
   * Copy Renderings
   * Package Generator
@@ -32,16 +28,19 @@ The following are some helpful modules distributed with SPE.
   * Media Library Maintenance
   * System Maintenance
   * Task Management
+    * [Scheduled Task Manager](modules/integration-points/toolbox.md)
   * User Management
+    * [User Session Manager](modules/integration-points/toolbox.md)
   * User Session Management
 * **Reporting**
-  * Authorable Reports - reports based on the Sitecore Rules Engine.
-  * Content Reports - variety of reports to help audit the Sitecore solution.
+  * [Authorable Reports](modules/integration-points/reports/authoring-reports.md) - reports based on the Sitecore Rules Engine.
+    * [Index Viewer](modules/integration-points/toolbox.md)
+  * [Content Reports](modules/integration-points/reports/) - variety of reports to help audit the Sitecore solution.
 * **Samples**
   * Automatically show quick info section
   * Enforce user password expiration
   * Example Event Handlers
-  * Getting Started
+  * Getting Started - includes the Kitchen Sink Demo for `Read-Variable`.
   * License Expiration
   * Random desktop background
   * Unlock user items on logout
@@ -52,7 +51,6 @@ The following are Sitecore modules that enhance the SPE experience.
 
 * [SPE Image Importer](https://marketplace.sitecore.net/en/Modules/S/SPE_Image_Uploader_Module10.aspx) : [Himadri Chakrabarti](https://twitter.com/himadric)
 * [Multi-Item Publish](https://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/) : [Richard Seal](https://twitter.com/rich_seal)
-* [ActiveCommerce PowerShell Extensions](https://github.com/ActiveCommerce/activecommerce-powershell-extensions) : [Nick Wesselman](https://twitter.com/techphoria414)
 
 ## Endorsements
 
