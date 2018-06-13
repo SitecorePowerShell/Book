@@ -30,7 +30,7 @@ Get-ChildItem -Path "master:\content\home" -Recurse
 * Use to create an item based on a specified data template.
 
 ```text
-New-Item -Path "master:\content\home" -ItemType "Sample/Sample Item" -Name "Demo"
+New-Item -Path "master:\content\home" -Name "Demo" -ItemType "Sample/Sample Item"
 ```
 {% endtab %}
 
@@ -44,20 +44,21 @@ Get-Item -Path "master:\content\home\delete-me" | Remove-Item
 {% endtab %}
 
 {% tab title="Move-Item" %}
+* Use to transfer an item from one location to another.
 
+```text
+Move-Item -Path "master:\content\home\Demo" -Destination "master:\content\home\Demo1"
+```
 {% endtab %}
 
 {% tab title="Copy-Item" %}
+* Use to duplicate an item from one location to another.
 
+```text
+Copy-Item -Path "master:\content\home\Demo1" -Destination "master:\content\home\Demo2"
+```
 {% endtab %}
 {% endtabs %}
-
-* `Get-Item` : used when a single item is needed, such as the root node to a tree.
-* `Get-ChildItem` : used when children and grandchildren \(optional\) are needed.
-* `New-Item` : used to create a new item based on a specified data template.
-* `Remove-Item` : used to delete or recycle an item.
-* `Move-Item` : used to transfer an item from one location to another.
-* `Copy-Item` : used to copy an item from one location to another.
 
 ### Command Parameters
 
@@ -497,7 +498,10 @@ If you have reached this point, then you are clearly a nerd and want to access u
 **Example:** The following queries all descendants of the media library, filters by size, and wraps with automatic properties.
 
 ```text
-# Get the root node using Get-Item, then a call to Axes.$mediaItemContainer = Get-Item -Path "master:/media library"$items = $mediaItemContainer.Axes.GetDescendants() |     Where-Object { [int]$_.Fields["Size"].Value -gt 100000 } | Initialize-Item
+# Get the root node using Get-Item, then a call to Axes.
+$mediaItemContainer = Get-Item -Path "master:/media library"
+$items = $mediaItemContainer.Axes.GetDescendants() | 
+    Where-Object { [int]$_.Fields["Size"].Value -gt 100000 } | Initialize-Item
 ```
 
 ## Copying Items
