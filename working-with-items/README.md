@@ -43,7 +43,11 @@ Below we will show how to use each command with the Windows PowerShell syntax fo
 
 ## Finding Items
 
-If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Initialize-Item` command.
+If you have retrieved your items directly using the Sitecore API you can still add the nice wrapper. You can do that by piping them through the `Initialize-Item` command. We'll show an example of this later.
+
+{% hint style="info" %}
+Check out some performance details when using different methods of querying items on the [Sitecore StackExchange](https://sitecore.stackexchange.com/questions/6803/sitecore-powershell-query-for-big-images-of-a-certain-size/6811#6811).
+{% endhint %}
 
 ### Get-Item : by Path
 
@@ -441,6 +445,16 @@ Some other classes you may want to use with the `New-UsingBlock` function:
 * `Sitecore.Data.Proxies.ProxyDisabler`
 * `Sitecore.Data.DatabaseCacheDisabler`
 * `Sitecore.Data.Events.EventDisabler`
+
+### Sitecore API
+
+If you have reached this point, then you are clearly a nerd and want to access using the raw Sitecore API.
+
+**Example:** The following queries all descendants of the media library, filters by size, and wraps with automatic properties.
+
+```text
+# Get the root node using Get-Item, then a call to Axes.$mediaItemContainer = Get-Item -Path "master:/media library"$items = $mediaItemContainer.Axes.GetDescendants() |     Where-Object { [int]$_.Fields["Size"].Value -gt 100000 } | Initialize-Item
+```
 
 ## Copying Items
 
