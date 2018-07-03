@@ -2,6 +2,8 @@
 
 In this section we'll show how to manage item renderings.
 
+### Update rendering parameters
+
 **Example:** The following demonstrates the use of `Get-Rendering` and `Set-Rendering` for updating values on templates.
 
 ```text
@@ -19,12 +21,16 @@ foreach($item in $items) {
 }
 ```
 
+### Find pages using rendering
+
 **Example:** The following demonstrates how to report on pages referencing the specified rendering.
 
 ```text
 Get-Item "master:\layout\Renderings\Feature\Experience Accelerator\Page Content\Page Content" | 
     Get-ItemReferrer | Where-Object { $_.ContentPath.StartsWith("/Demo/usa/Home") } | Show-ListView
 ```
+
+### Find renderings marked cacheable
 
 **Example:** The following demonstrates how to report on which renderings are globally set to "Cacheable".
 
@@ -34,6 +40,17 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
     Select-Object -Property Name, Cacheable, ClearOnIndexUpdate, VaryBy* | 
     Sort-Object -Property Name | Show-ListView
 ```
+
+### Find renderings with personalization
+
+**Example:** The following demonstrates how to find renderings with a conditions node set on the item.
+
+```text
+$query = "fast:/sitecore/content//*[@__renderings='%<conditions%' or @#__Final Renderings#='%<conditions%']"
+$items = Get-Item -Path "master:" -Query $query
+```
+
+### Disable cacheable setting on renderings
 
 **Example:** The following demonstrates how to disable global caching on all renderings.
 
@@ -45,6 +62,8 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
 
 # VERBOSE: Disabled global caching on Navigation
 ```
+
+### Move renderings between placeholders
 
 **Example:** The following moves renderings from one placeholder to another. [See this article for more details](https://www.kasaku.co.uk/2018/02/28/updating-rendering-placeholders/).
 
@@ -84,6 +103,8 @@ foreach ( $item in Get-ChildItem -Item $rootItem -Recurse )
     }
 }
 ```
+
+### Remove datasource from rendering
 
 **Example:** The following removes a datasource from a rendering on the FinalLayout.
 
