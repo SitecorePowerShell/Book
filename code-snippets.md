@@ -95,6 +95,28 @@ foreach($version in $item.Versions.GetVersions()) {
 }
 ```
 
+## Restore Recycle bin items
+
+**Example:** The following restores items in the media library that were removed yesterday. [Credit](https://gist.github.com/technomaz/58890edff903123083c77ad8f1b1b2e2) @technomaz.
+
+```text
+[datetime]$archivedDate = [datetime]::Today.AddDays(-1)
+Write-Host "Restoring items recycled after $($archivedDate.ToShortDateString())"
+
+foreach($archive in Get-Archive -Name "recyclebin") {
+    Write-Host " - Found $($archive.GetEntryCount()) entries"
+    $entries = $archive.GetEntries(0, $archive.GetEntryCount())
+    foreach($entry in $entries) {
+        if($entry.ArchiveLocalDate -ge $archivedDate) { 
+            Write-Host "Restoring item: $($entry.OriginalLocation) {$($entry.ArchivalId)}on date $($entry.ArchiveLocalDate)"
+            $archive.RestoreItem($entry.ArchivalId)
+        } else {
+            Write-Host "Skipping $($entry.OriginalLocation) on date $($entry.ArchiveLocalDate)"
+        }
+    }
+}
+```
+
 ## Run JavaScript
 
 **Example:** The following logs messages to the browser console and then alerts the user with a message.
