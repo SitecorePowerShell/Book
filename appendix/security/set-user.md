@@ -23,7 +23,7 @@ The Identity parameter specifies the Sitecore user to set. You can specify a use
 Specifies whether the Sitecore user should be classified as an Administrator.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Specifies whether the Sitecore user should be classified as an Administrator.
 Specifies the Sitecore user portrait image.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -65,7 +65,7 @@ Fully Qualified Name
 ### -Instance  &lt;User&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -77,7 +77,7 @@ Fully Qualified Name
 Specifies the Sitecore user email address. The value is validated for a properly formatted address.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -87,7 +87,7 @@ Specifies the Sitecore user email address. The value is validated for a properly
 ### -FullName  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -97,7 +97,7 @@ Specifies the Sitecore user email address. The value is validated for a properly
 ### -Comment  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -109,7 +109,7 @@ Specifies the Sitecore user email address. The value is validated for a properly
 Specifies the profile id to use for the user.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -121,7 +121,7 @@ Specifies the profile id to use for the user.
 Specifies the url to navigate to once the user is logged in. The values are validated with a pretermined set.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -133,7 +133,7 @@ Specifies the url to navigate to once the user is logged in. The values are vali
 Specifies whether the Sitecore user should be enabled.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -145,7 +145,7 @@ Specifies whether the Sitecore user should be enabled.
 Specifies a hashtable of custom properties to assign to the Sitecore user profile.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

@@ -19,7 +19,7 @@ The Get-Database command retrieves one or more Sitecore Database objects based o
 Name of the database to be returned.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Name of the database to be returned.
 Database returned will be taken from the item passed to the command.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

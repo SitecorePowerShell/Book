@@ -23,7 +23,7 @@ Executing this command with file path on the server \(provided as -Path paramete
 Dialog description displayed below the dialog title.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Dialog description displayed below the dialog title.
 The item under which the uploaded media items should be stored.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -47,7 +47,7 @@ The item under which the uploaded media items should be stored.
 Path to the folder where uploaded file should be stored.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -59,7 +59,7 @@ Path to the folder where uploaded file should be stored.
 Dialog title - shown at the top of the dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Dialog title - shown at the top of the dialog.
 Text shown on the cancel button.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -83,7 +83,7 @@ Text shown on the cancel button.
 Text shown on the OK button.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -95,7 +95,7 @@ Text shown on the OK button.
 Indicates that the Media item should be created as a Versioned media item.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -107,7 +107,7 @@ Indicates that the Media item should be created as a Versioned media item.
 Specifies the language in which the media item should be created. if not specified - context language is selected.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -119,7 +119,7 @@ Specifies the language in which the media item should be created. if not specifi
 indicates that the upload should overwrite a file or a media item if that one exists. Otherwise a file with a non-confilicting name or a sibling media item is created.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -131,7 +131,7 @@ indicates that the upload should overwrite a file or a media item if that one ex
 Indicates that the uplaod is expected to be a ZIP file which should be unpacked when it's received.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -143,7 +143,7 @@ Indicates that the uplaod is expected to be a ZIP file which should be unpacked 
 Shows advanced dialog where user can upload multiple media items and select if the uploaded items are versioned, overwritten and unpacked.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -155,7 +155,7 @@ Shows advanced dialog where user can upload multiple media items and select if t
 Dialog width.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -167,7 +167,7 @@ Dialog width.
 Dialog width.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

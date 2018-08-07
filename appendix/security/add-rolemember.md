@@ -28,7 +28,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -38,7 +38,7 @@ Fully Qualified Name
 ### -Members  &lt;AccountIdentity\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

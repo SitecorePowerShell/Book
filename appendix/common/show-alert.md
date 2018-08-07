@@ -19,7 +19,7 @@ Pauses the script and shows an alert specified in the -Title to the user. Once u
 Text to show the user in the alert dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

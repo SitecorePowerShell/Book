@@ -17,7 +17,7 @@ Merge-Layout -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Language &lt;Str
 ### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -27,7 +27,7 @@ Merge-Layout -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Language &lt;Str
 ### -Item  &lt;Item&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -37,7 +37,7 @@ Merge-Layout -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Language &lt;Str
 ### -Path  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -47,7 +47,7 @@ Merge-Layout -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Language &lt;Str
 ### -Id  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -57,7 +57,7 @@ Merge-Layout -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Language &lt;Str
 ### -Database  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

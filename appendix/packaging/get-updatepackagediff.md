@@ -19,7 +19,7 @@ Performs a diff operation between the Source and taget path akin to Sitecore Cou
 Path containing the current serialization items that needs to be transformed into Target.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Path containing the current serialization items that needs to be transformed int
 Path containing the desired serialization state that the Source needs to be transformed to.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |

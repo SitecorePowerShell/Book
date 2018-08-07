@@ -19,7 +19,7 @@ The Test-Account command determines if a Sitecore role or user account exists.
 Role or User name including domain. If no domain is specified - 'sitecore' will be used as the default value
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -35,7 +35,7 @@ Specifies which account to check existence.
 * User 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

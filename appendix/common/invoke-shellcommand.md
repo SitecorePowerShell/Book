@@ -27,7 +27,7 @@ The following abbreviations are aliases for this cmdlet:
 Name of the sitecore command e.g. "item:publishingviewer"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -39,7 +39,7 @@ Name of the sitecore command e.g. "item:publishingviewer"
 Language that will be used as source language. If not specified the current user language will be used. Globbing/wildcard supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -51,7 +51,7 @@ Language that will be used as source language. If not specified the current user
 The item to be sent to the command.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -63,7 +63,7 @@ The item to be sent to the command.
 Path to the item to be sent to the command - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -75,7 +75,7 @@ Path to the item to be sent to the command - additionally specify Language param
 Id of the the item to be sent to the command - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -87,7 +87,7 @@ Id of the the item to be sent to the command - additionally specify Language par
 Database containing the item to be sent to the command - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

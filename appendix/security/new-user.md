@@ -28,7 +28,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -38,7 +38,7 @@ Fully Qualified Name
 ### -Password  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -48,7 +48,7 @@ Fully Qualified Name
 ### -Email  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -58,7 +58,7 @@ Fully Qualified Name
 ### -FullName  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -68,7 +68,7 @@ Fully Qualified Name
 ### -Comment  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -78,7 +78,7 @@ Fully Qualified Name
 ### -Portrait  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -90,7 +90,7 @@ Fully Qualified Name
 Specifies that the account should be enabled. When enabled, the Password parameter is required.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -102,7 +102,7 @@ Specifies that the account should be enabled. When enabled, the Password paramet
 Specifies the profile id to use for the user.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

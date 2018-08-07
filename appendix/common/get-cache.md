@@ -19,7 +19,7 @@ The Get-Cache command retrieves a Sitecore cache.
 Name of the cache to retrieve. Supports wildcards.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |

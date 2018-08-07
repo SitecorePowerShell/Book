@@ -35,7 +35,7 @@ Starts a new Script Session and executes a script provided in it. The session ca
 Id of the session to be created or retrieved. If the session with the same ID exists - it will be used, unless it's busy - in which case an error will be raised. If a session with the Id provided does not exist - it will be created. The Id is a string that uniquely identifies the script session within the server. You can type one or more IDs \(separated by commas\). To find the ID of a script session, type "Get-ScriptSession" without parameters.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Id of the session to be created or retrieved. If the session with the same ID ex
 Specifies the script session in context of which the script should be executed. Enter a variable that contains the script session or a command that gets the script session. You can also pipe a script session object to Start-ScriptSession. If the session is busy at the moment of the call - an error will be raised instead of running the script.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Specifies the script session in context of which the script should be executed. 
 Script item containing the code to be executed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Script item containing the code to be executed.
 Path to the script item containing the code to be executed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -83,7 +83,7 @@ Path to the script item containing the code to be executed.
 Script to be executed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -95,7 +95,7 @@ Script to be executed.
 Name of the Sitecore job that will run the script session. This can be used to monitor the session progress.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -107,7 +107,7 @@ Name of the Sitecore job that will run the script session. This can be used to m
 Hashtable with the additional parameters required by the invoked script. The parameters will be instantiated in the session as variables.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -119,7 +119,7 @@ Hashtable with the additional parameters required by the invoked script. The par
 User name including domain in context of which the script will be executed. If no domain is specified - 'sitecore' will be used as the default value. If user is not specified the current user will be the impersonation context.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -131,7 +131,7 @@ User name including domain in context of which the script will be executed. If n
 Add this parameter to disable security in the Job running the script session.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -143,7 +143,7 @@ Add this parameter to disable security in the Job running the script session.
 Providing this parameter will cause the session to be automatically destroyed after it has executed. Use this parameter if you're not in need of the results of the script execution.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -155,7 +155,7 @@ Providing this parameter will cause the session to be automatically destroyed af
 If the new session is run from an interactive session \(e.g. from desktop, menu item, console or ISE\) using this parameter will cause dialog to be shown to the user to monitor the script progress.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -167,7 +167,7 @@ If the new session is run from an interactive session \(e.g. from desktop, menu 
 Context item for the script session. The script will start in the location of the item.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

@@ -19,7 +19,7 @@ Creates new File source that can be added to a Sitecore package. Folder provided
 Name of the file source.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Name of the file source.
 Path to the file to be included. this can be automatically discovered if a stream of files is piped to the command.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -41,7 +41,7 @@ Path to the file to be included. this can be automatically discovered if a strea
 ### -InstallMode  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

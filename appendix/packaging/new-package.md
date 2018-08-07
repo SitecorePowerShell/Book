@@ -19,7 +19,7 @@ Creates a new Sitecore install package object that allows for further addition o
 Package name
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

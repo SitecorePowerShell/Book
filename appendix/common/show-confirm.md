@@ -19,7 +19,7 @@ Shows a user a confirmation request message box. Returns "yes" or "no" based on 
 Text to show the user in the dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

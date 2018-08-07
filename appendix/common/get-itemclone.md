@@ -23,7 +23,7 @@ The Get-ItemClone command returns all the clones for the specified item.
 The item to be analysed for clones presence.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -35,7 +35,7 @@ The item to be analysed for clones presence.
 Path to the item to be analysed for clones presence.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -47,7 +47,7 @@ Path to the item to be analysed for clones presence.
 Id of the item to be analysed for clones presence.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Id of the item to be analysed for clones presence.
 Database containing the item to be processed - if item is being provided through Id.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

@@ -23,7 +23,7 @@ The Get-ItemWorkflowEvent command returns entries from the history store notifyi
 User that has been associated with the enteries. Wildcards are supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ User that has been associated with the enteries. Wildcards are supported.
 Language that will be used as source language. If not specified the current user language will be used. Globbing/wildcard supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Language that will be used as source language. If not specified the current user
 The item to have its history items returned.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -59,7 +59,7 @@ The item to have its history items returned.
 Path to the item to have its history items returned - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -71,7 +71,7 @@ Path to the item to have its history items returned - additionally specify Langu
 Id of the the item to have its history items returned - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -83,7 +83,7 @@ Id of the the item to have its history items returned - additionally specify Lan
 Database containing the item to have its history items returned - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

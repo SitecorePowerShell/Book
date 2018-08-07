@@ -21,7 +21,7 @@ The Get-SearchIndex command returns the available Sitecore indexes. These are th
 Name of the index to return.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

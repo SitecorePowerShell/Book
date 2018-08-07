@@ -19,7 +19,7 @@ The Export-UpdatePackage command generates a Sitecore update package containing 
 List of changes to be included in the package.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ List of changes to be included in the package.
 Name of the package.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 2 |
 | Default Value |  |
@@ -43,7 +43,7 @@ Name of the package.
 Path the update package should be saved under.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 3 |
 | Default Value |  |
@@ -55,7 +55,7 @@ Path the update package should be saved under.
 Contents of the "read me" instruction for the package
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Contents of the "read me" instruction for the package
 file name of the license to be included with the package.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ file name of the license to be included with the package.
 Package tag.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

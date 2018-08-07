@@ -19,7 +19,7 @@ The ConvertFrom-CliXml command imports a CliXml string with data that represents
 String containing the Xml with serialized objects.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

@@ -19,7 +19,7 @@ Logs a user in and performs further script instructions in the context of the us
 User name including domain. If no domain is specified - 'sitecore' will be used as the default value
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ User name including domain. If no domain is specified - 'sitecore' will be used 
 Password for the account provided using the -Identity parameter.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 2 |
 | Default Value |  |

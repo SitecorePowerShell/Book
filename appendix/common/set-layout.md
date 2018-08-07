@@ -23,7 +23,7 @@ Sets item layout for a specific device provided
 Device for which to set layout.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Device for which to set layout.
 Sitecore item defining the layout.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Sitecore item defining the layout.
 Targets the Final Layout. If not provided, the Shared Layout will be targeted. Applies to Sitecore 8.0 and higher only.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -57,7 +57,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 ### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -69,7 +69,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 The item to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -81,7 +81,7 @@ The item to be processed.
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -93,7 +93,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -105,7 +105,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

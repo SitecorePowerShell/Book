@@ -1,7 +1,3 @@
----
-description: Welcome to the wonderful world of Sitecore PowerShell Extensions.
----
-
 # Introduction
 
 ![Sitecore PowerShell Extensions](.gitbook/assets/readme-console-ise.png)

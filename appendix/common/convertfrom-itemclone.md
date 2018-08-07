@@ -21,7 +21,7 @@ Converts an item from a clone to a fully independent item.
 ### -Recurse  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -31,7 +31,7 @@ Converts an item from a clone to a fully independent item.
 ### -PassThru  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ Converts an item from a clone to a fully independent item.
 The item to be converted.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -55,7 +55,7 @@ The item to be converted.
 Path to the item to be converted
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -67,7 +67,7 @@ Path to the item to be converted
 Id of the item to be converted
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ Id of the item to be converted
 Database containing the item to be converted
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

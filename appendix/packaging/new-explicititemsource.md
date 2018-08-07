@@ -19,7 +19,7 @@ Creates new Item source that can be added to a Sitecore package. This source onl
 The item to be added to the source. If used in pipeline after e.g. Get-Item the source is created once all items are piped into it.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -31,7 +31,7 @@ The item to be added to the source. If used in pipeline after e.g. Get-Item the 
 Name of the item source.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -43,7 +43,7 @@ Name of the item source.
 Add this parameter if you want to skip versions of the item from being included in the source and only include the version provided.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 2 |
 | Default Value |  |
@@ -61,7 +61,7 @@ Specifies what installer should do if the item already exists. Possible values:
 * SideBySide - all new item will be created. 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -78,7 +78,7 @@ Specifies what installer should do if the item already exists and InstallMode is
 * Merge - All versions with the same number in both packages are replaced with versions from installed package. All versions which are in the package but not in the target are added. All versions which are not in the package but are in the target remains unchanged. This option also preserves history, however it might overwrite some of the changes. Other languages remains unchanged. All child items which are in the package are changed. 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

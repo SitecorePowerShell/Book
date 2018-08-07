@@ -21,7 +21,7 @@ The following abbreviations are aliases for this cmdlet:
 ### -Item  &lt;Item&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -31,7 +31,7 @@ The following abbreviations are aliases for this cmdlet:
 ### -SearchResultItem  &lt;SearchResultItem&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -41,7 +41,7 @@ The following abbreviations are aliases for this cmdlet:
 ### -AsJob  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -51,7 +51,7 @@ The following abbreviations are aliases for this cmdlet:
 ### -Name  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

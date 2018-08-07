@@ -31,7 +31,7 @@ The Set-ItemTemplate command sets the template for an item.
 The item to set the template for.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ The item to set the template for.
 Path to the item to set the template for.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Path to the item to set the template for.
 Id of the item to set the template for.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Id of the item to set the template for.
 Sitecore item representing the template.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ Sitecore item representing the template.
 Path representing the template item. This must be of the same database as the item to be altered.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -93,7 +93,7 @@ Hashtable of key value pairs mapping the old template field to a new template fi
 @{"Title"="Headline";"Text"="Copy"}
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -105,7 +105,7 @@ Hashtable of key value pairs mapping the old template field to a new template fi
 Database containing the item to set the template for - required if item is specified with Id.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

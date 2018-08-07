@@ -32,7 +32,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -42,7 +42,7 @@ Fully Qualified Name
 ### -Recurse  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -52,7 +52,7 @@ Fully Qualified Name
 ### -UsersOnly  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -62,7 +62,7 @@ Fully Qualified Name
 ### -RolesOnly  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

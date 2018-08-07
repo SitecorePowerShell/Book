@@ -37,7 +37,7 @@ The following abbreviations are aliases for this cmdlet:
 Serialization preset to be serialized. Obtain the preset through the use of Get-Preset command.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -53,7 +53,7 @@ Export-Item -path "master:\content\articles" -recurse
 Root - directory where the serialized files should be saved, e.g. Export-Item -path "master:\content" -Root "c:\tmp"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -65,7 +65,7 @@ Root - directory where the serialized files should be saved, e.g. Export-Item -p
 Works only with Root parameter and decides if folder structure starting from "sitecore\content" should be created, e.g. if you want to serialize articles item in directory c:\tmp\sitecore\content you can use. For example: Export-Item -Path "master:\content\articles" -ItemPathsAbsolute -Root "c:\tmp"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ Directory where the serialized files should be saved, e.g.
 Export-Item -Path "master:\content" -Root "c:\tmp"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -91,7 +91,7 @@ Export-Item -Path "master:\content" -Root "c:\tmp"
 The item to be serialized.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -103,7 +103,7 @@ The item to be serialized.
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -115,7 +115,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 You can pass the id of serialized item instead of path, e.g. Export-Item -id "{0DE95AE4-41AB-4D01-9EB0-67441B7C2450}"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -125,7 +125,7 @@ You can pass the id of serialized item instead of path, e.g. Export-Item -id "{0
 ### -Database  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

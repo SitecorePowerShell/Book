@@ -21,7 +21,7 @@ Name of the Index that will be used for the search:
 Find-Item -Index sitecore\_master\_index -First 10
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -47,7 +47,7 @@ Fields by which you can filter can be discovered using the following script:
 Find-Item -Index sitecore\_master\_index `-Criteria @{Filter = "StartsWith"; Field = "_fullpath"; Value = "/sitecore/content/" }` -First 1 \| select -expand "Fields"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -61,7 +61,7 @@ Works on Sitecore 7.5 and later versions only.
 Filtering Criteria using Dynamic Linq syntax: [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -75,7 +75,7 @@ Works on Sitecore 7.5 and later versions only.
 An Array of objects for Dynamic Linq "-Where" parameter as explained in: [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -89,7 +89,7 @@ Works on Sitecore 7.5 and later versions only.
 Field by which the search results sorting should be performed. Dynamic Linq ordering syntax used. [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -101,7 +101,7 @@ Field by which the search results sorting should be performed. Dynamic Linq orde
 Number of returned search results.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -111,7 +111,7 @@ Number of returned search results.
 ### -Last  &lt;Int32&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -123,7 +123,7 @@ Number of returned search results.
 Number of search results to be skipped skip before returning the results commences.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

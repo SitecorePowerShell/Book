@@ -23,7 +23,7 @@ The Get-ItemTemplate command returns the item template and its base templates.
 Return the template the item is based on and all of its base templates.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Return the template the item is based on and all of its base templates.
 The item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -47,7 +47,7 @@ The item to be analysed.
 Path to the item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -59,7 +59,7 @@ Path to the item to be analysed.
 Id of the item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Id of the item to be analysed.
 Database containing the item to be analysed - required if item is specified with Id.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

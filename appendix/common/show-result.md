@@ -23,7 +23,7 @@ Shows a Sheer dialog with text results showing the output of the script or anoth
 Name of the Sheer control to execute.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Name of the Sheer control to execute.
 Url to the Sheer control to execute.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Url to the Sheer control to execute.
 Parameters to be passed to the executed control when executing with the -Control parameter specified.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Parameters to be passed to the executed control when executing with the -Control
 Shows the default text dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Shows the default text dialog.
 Title of the window containing the control.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -83,7 +83,7 @@ Title of the window containing the control.
 Width of the window containing the control.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -95,7 +95,7 @@ Width of the window containing the control.
 Height of the window containing the control.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

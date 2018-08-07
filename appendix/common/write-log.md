@@ -19,7 +19,7 @@ The Write-Log command writes text to the Sitecore event log with the specified l
 Specifies the object to write to the log.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Specifies the object to write to the log.
 Strings the output together with the specified text.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ Strings the output together with the specified text.
 Specifies the Sitecore logging level.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

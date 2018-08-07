@@ -21,7 +21,7 @@ The Identity parameter specifies the Sitecore user to get. You can specify a use
 ### -Identity  &lt;AccountIdentity&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -33,7 +33,7 @@ The Identity parameter specifies the Sitecore user to get. You can specify a use
 Specifies the Sitecore user by providing an instance of a user.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

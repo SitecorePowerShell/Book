@@ -23,7 +23,7 @@ The Get-Layout command returns the layout for the specified item.
 Layout Device for which the item should be returned. If not specified All layouts used will be returned. If Device is specified but no layout is specified the command will return an error that can be silenced
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Layout Device for which the item should be returned. If not specified All layout
 Returns the Final Layout. If not provided, the Shared Layout will be returned. Applies to Sitecore 8.0 and higher only.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -45,7 +45,7 @@ Returns the Final Layout. If not provided, the Shared Layout will be returned. A
 ### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -57,7 +57,7 @@ Returns the Final Layout. If not provided, the Shared Layout will be returned. A
 The item to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -69,7 +69,7 @@ The item to be processed.
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -81,7 +81,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -93,7 +93,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

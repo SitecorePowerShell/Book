@@ -23,7 +23,7 @@ The Publish-Item command publishes the Sitecore item and optionally subitems. Al
 Specifies that subitems should also get published with the root item.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Specifies that subitems should also get published with the root item.
 Specifies the publishing targets. The default target database is "web".
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -52,7 +52,7 @@ Specified the Publish mode. Valid values are:
 * Smart 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -64,7 +64,7 @@ Specified the Publish mode. Valid values are:
 Turns publishing of related items on. Works only on Sitecore 7.2 or newer
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -76,7 +76,7 @@ Turns publishing of related items on. Works only on Sitecore 7.2 or newer
 Republishes all items provided to the publishing job.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -88,7 +88,7 @@ Republishes all items provided to the publishing job.
 Turns revision comparison on.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -100,7 +100,7 @@ Turns revision comparison on.
 Publishes items newer than the date provided only.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -110,7 +110,7 @@ Publishes items newer than the date provided only.
 ### -AsJob  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -122,7 +122,7 @@ Publishes items newer than the date provided only.
 Language of the item that should be published. Supports globbing/wildcards. Allows for more than one language to be provided at once. e.g. "en\*", "pl-pl"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -132,7 +132,7 @@ Language of the item that should be published. Supports globbing/wildcards. Allo
 ### -Item  &lt;Item&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -144,7 +144,7 @@ Language of the item that should be published. Supports globbing/wildcards. Allo
 Path to the item that should be published - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -156,7 +156,7 @@ Path to the item that should be published - can work with Language parameter to 
 Id of the item that should be published - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -166,7 +166,7 @@ Id of the item that should be published - can work with Language parameter to na
 ### -Database  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

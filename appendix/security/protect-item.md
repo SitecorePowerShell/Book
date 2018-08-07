@@ -23,7 +23,7 @@ The Protect-Item command protects the item by making it read-only.
 Passes the processed item back into the pipeline.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Passes the processed item back into the pipeline.
 The item to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -47,7 +47,7 @@ The item to be processed.
 Path to the item to be processed - can work with Language parameter to specify the language other than current session language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -59,7 +59,7 @@ Path to the item to be processed - can work with Language parameter to specify t
 Id of the item to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Id of the item to be processed.
 Database containing the item to be fetched with Id parameter.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

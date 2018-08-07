@@ -25,7 +25,7 @@ The following abbreviations are aliases for this cmdlet:
 The item to be wrapped/initialized.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -37,7 +37,7 @@ The item to be wrapped/initialized.
 The item obtained from Find-Item command to be translated into a sitecore item.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

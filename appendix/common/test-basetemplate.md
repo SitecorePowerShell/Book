@@ -25,7 +25,7 @@ Test-BaseTemplate \[-Database &lt;String&gt;\]
 ### -Item  &lt;Item&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Test-BaseTemplate \[-Database &lt;String&gt;\]
 ### -Path  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -45,7 +45,7 @@ Test-BaseTemplate \[-Database &lt;String&gt;\]
 ### -Id  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Test-BaseTemplate \[-Database &lt;String&gt;\]
 ### -TemplateItem  &lt;TemplateItem\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -65,7 +65,7 @@ Test-BaseTemplate \[-Database &lt;String&gt;\]
 ### -Template  &lt;String\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -75,7 +75,7 @@ Test-BaseTemplate \[-Database &lt;String&gt;\]
 ### -Database  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

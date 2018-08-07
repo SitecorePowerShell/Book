@@ -21,7 +21,7 @@ Removes a persistent Script Session from memory.
 Id of the PowerShell session to be removed from memory.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -33,7 +33,7 @@ Id of the PowerShell session to be removed from memory.
 Session to be removed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

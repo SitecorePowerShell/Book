@@ -19,7 +19,7 @@ Sends a sheer message to the app in which context the script is executing.
 Name of the Sheer message to execute.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -29,7 +29,7 @@ Name of the Sheer message to execute.
 ### -GetResult  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -39,7 +39,7 @@ Name of the Sheer message to execute.
 ### -Parameters  &lt;Hashtable&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

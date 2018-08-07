@@ -19,7 +19,7 @@ New-UsingBlock.
 Object that should be disposed after the Script block is executed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Object that should be disposed after the Script block is executed.
 Script to be executed within the "Using" context.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 2 |
 | Default Value |  |

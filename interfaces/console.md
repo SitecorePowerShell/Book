@@ -11,7 +11,7 @@ The following figure shows the Console when the User Account Controls \(UAC\) ar
 Below are the shortcuts available in the console.
 
 | **Shortcut** | **Usage** |
-| --- | --- |
+| :--- | :--- |
 | Enter | Submits line for execution. |
 | Tab | Autocomplete commands. Press tab again to cycle through commands. |
 | Shift+Tab | Reverse cycle through Autocomplete commands. |

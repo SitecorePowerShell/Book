@@ -23,7 +23,7 @@ Retrieves item fields as either names or fields or template fields.
 Includes fields that are defined on "Standard template"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -39,7 +39,7 @@ Determines type returned. The possible values include:
 * TemplateField - template fields. 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -51,7 +51,7 @@ Determines type returned. The possible values include:
 Array of names to include - supports wildcards.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -63,7 +63,7 @@ Array of names to include - supports wildcards.
 Language that will be analysed. If not specified the current user language will be used. Globbing/wildcard supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -75,7 +75,7 @@ Language that will be analysed. If not specified the current user language will 
 The item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -87,7 +87,7 @@ The item to be analysed.
 Path to the item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -99,7 +99,7 @@ Path to the item to be analysed.
 Id of the item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -111,7 +111,7 @@ Id of the item to be analysed.
 Database containing the item to be analysed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

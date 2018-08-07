@@ -27,7 +27,7 @@ The following abbreviations are aliases for this cmdlet:
 The index instance.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -39,7 +39,7 @@ The index instance.
 The remote indexing should be triggered.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -51,7 +51,7 @@ The remote indexing should be triggered.
 The job created for rebuilding the index should be returned as output.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -63,7 +63,7 @@ The job created for rebuilding the index should be returned as output.
 The name of the index to resume.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

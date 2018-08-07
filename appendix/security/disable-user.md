@@ -30,7 +30,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -42,7 +42,7 @@ Fully Qualified Name
 Specifies the Sitecore user by providing an instance of a user.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

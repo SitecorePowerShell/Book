@@ -21,7 +21,7 @@ Aborts the pipeline of a session that is executing. This will stop the session i
 Stops the script session with the specified IDs. The ID is a string that uniquely identifies the script session within the server. You can type one or more IDs \(separated by commas\). To find the ID of a script session, type "Get-ScriptSession" without parameters.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -33,7 +33,7 @@ Stops the script session with the specified IDs. The ID is a string that uniquel
 Specifies the script session to be stopped. Enter a variable that contains the script session or a command that gets the script session. You can also pipe a script session object to Receive-ScriptSession.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

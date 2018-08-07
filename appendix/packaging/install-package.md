@@ -23,7 +23,7 @@ The following abbreviations are aliases for this cmdlet:
 Path to the package file.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |
@@ -35,7 +35,7 @@ Path to the package file.
 Undefined, Overwrite, Merge, Skip, SideBySide
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Undefined, Overwrite, Merge, Skip, SideBySide
 Undefined, Clear, Append, Merge
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -57,7 +57,7 @@ Undefined, Clear, Append, Merge
 ### -DisableIndexing  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

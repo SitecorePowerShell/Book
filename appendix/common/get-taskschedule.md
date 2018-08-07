@@ -23,7 +23,7 @@ The Get-TaskSchedule command returns one or more task schedule items, based on n
 Task item to be converted.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Task item to be converted.
 Path to the item to be returned as Task Schedule.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Path to the item to be returned as Task Schedule.
 Database containing the task items to be returned. If not provided all databases will be considered for filtering using the "Name" parameter.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 2 |
 | Default Value |  |
@@ -59,7 +59,7 @@ Database containing the task items to be returned. If not provided all databases
 Task filter - supports wildcards. Works with "Database" parameter to narrow tassk to only single database.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |

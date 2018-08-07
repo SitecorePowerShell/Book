@@ -23,7 +23,7 @@ The Get-ScriptSession command returns the list of PowerShell Extensions script s
 Returns current script session if the session is run in a background job.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Returns current script session if the session is run in a background job.
 Type of the script session to be retrieved. The SessionType is a string that identifies where the session has been launched. You can type one or more session types \(separated by commas\) and use wildcards to filter. To find currently running types of a script session, type "Get-ScriptSession" without parameters.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Type of the script session to be retrieved. The SessionType is a string that ide
 Type of the script session to be retrieved. The parameter limits script sessions to be returned to only those in a specific state, the values should be "Busy" or "Available". To find states of currently running script sessions, type "Get-ScriptSession" without parameters.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Type of the script session to be retrieved. The parameter limits script sessions
 Gets the script session with the specified IDs. The ID is a string that uniquely identifies the script session within the server. You can type one or more IDs \(separated by commas\). To find the ID of a script session, type "Get-ScriptSession" without parameters.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -69,7 +69,7 @@ Gets the script session with the specified IDs. The ID is a string that uniquely
 ### -Session  &lt;ScriptSession\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

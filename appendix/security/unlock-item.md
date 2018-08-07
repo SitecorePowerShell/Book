@@ -23,7 +23,7 @@ The Unlock-Item command unlocks the item specified with parameters.
 Passes the unlocked item back into the pipeline.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Passes the unlocked item back into the pipeline.
 The item to be unlocked.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -47,7 +47,7 @@ The item to be unlocked.
 Path to the item to be unlocked - can work with Language parameter to specify the language other than current session language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -59,7 +59,7 @@ Path to the item to be unlocked - can work with Language parameter to specify th
 Id of the item to be unlocked.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Id of the item to be unlocked.
 Database containing the item to be fetched with Id parameter.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

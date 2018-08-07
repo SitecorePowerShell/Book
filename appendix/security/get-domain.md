@@ -19,7 +19,7 @@ The Get-Domain command returns all the domains or the specified domain.
 The name of the domai
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

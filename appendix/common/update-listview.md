@@ -17,7 +17,7 @@ This command updates the data displayed by List View that called the script the 
 ### -InfoTitle  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -27,7 +27,7 @@ This command updates the data displayed by List View that called the script the 
 ### -InfoDescription  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -37,7 +37,7 @@ This command updates the data displayed by List View that called the script the 
 ### -MissingDataMessage  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ This command updates the data displayed by List View that called the script the 
 ### -Icon  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ This command updates the data displayed by List View that called the script the 
 Data that you want to be sent to the list view for display.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Data that you want to be sent to the list view for display.
 If this parameter is specified - it allows for modifying the columns shown in the list view, otherwise the columns stay the same as in the original view.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

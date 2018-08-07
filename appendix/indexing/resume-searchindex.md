@@ -21,7 +21,7 @@ The Resume-SearchIndex command resumes the suspended \(paused\) Sitecore index.
 ### -Index  &lt;ISearchIndex&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -33,7 +33,7 @@ The Resume-SearchIndex command resumes the suspended \(paused\) Sitecore index.
 The name of the index to resume.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

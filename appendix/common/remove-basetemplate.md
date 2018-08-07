@@ -31,7 +31,7 @@ The Remove-BaseTemplate command removes one or more base templates from a templa
 The item to remove the base template from.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ The item to remove the base template from.
 Path to the item to remove the base template from.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Path to the item to remove the base template from.
 Id of the item to remove the base template from.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Id of the item to remove the base template from.
 Sitecore item or list of items of base templates to remove.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ Sitecore item or list of items of base templates to remove.
 Path representing the template item to remove as a base template. This must be of the same database as the item to be altered. Note that this parameter only supports a single template.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -91,7 +91,7 @@ Path representing the template item to remove as a base template. This must be o
 Database containing the item to remove the base template from - required if item is specified with Id.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

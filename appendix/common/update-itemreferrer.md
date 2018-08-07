@@ -33,7 +33,7 @@ The cmdlet manipulates link to a specific item. The target item can be provided 
 ItemLink retrieved from the Link database. Use this parameter to do more granular filtering.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -45,7 +45,7 @@ ItemLink retrieved from the Link database. Use this parameter to do more granula
 New item the links should be pointing to
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 2 |
 | Default Value |  |
@@ -57,7 +57,7 @@ New item the links should be pointing to
 If provided, removes all links to the current target item.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -69,7 +69,7 @@ If provided, removes all links to the current target item.
 The current item to be relinked.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -81,7 +81,7 @@ The current item to be relinked.
 Path to the current item to be relinked - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -93,7 +93,7 @@ Path to the current item to be relinked - can work with Language parameter to na
 Id of the current item to be relinked - can work with Language parameter to specify the language other than current session language. Requires the Database parameter to be specified.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -105,7 +105,7 @@ Id of the current item to be relinked - can work with Language parameter to spec
 Database containing the current item to be relinked.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -117,7 +117,7 @@ Database containing the current item to be relinked.
 If you need the current item to be relinked in specific Language You can specify it with this parameter. Globbing/wildcard supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

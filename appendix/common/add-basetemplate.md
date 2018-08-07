@@ -31,7 +31,7 @@ The Add-BaseTemplate command adds one or more base templates to a template item.
 The item to add the base template to.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ The item to add the base template to.
 Path to the item to add the base template to.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Path to the item to add the base template to.
 Id of the item to add the base template to.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Id of the item to add the base template to.
 Sitecore item or list of items of base templates to add.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ Sitecore item or list of items of base templates to add.
 Path representing the template item to add as a base template. This must be of the same database as the item to be altered. Note that this parameter only supports a single template.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -91,7 +91,7 @@ Path representing the template item to add as a base template. This must be of t
 Database containing the item to add the base template to - required if item is specified with Id.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

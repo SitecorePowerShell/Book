@@ -13,7 +13,7 @@ Invoke-JavaScript \[-Script\] &lt;String&gt;
 ### -Script  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

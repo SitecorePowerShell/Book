@@ -29,7 +29,7 @@ Checks if a user can perform an operation on an item.
 The item to be tested against.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -41,7 +41,7 @@ The item to be tested against.
 Path to the item to be tested against.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -53,7 +53,7 @@ Path to the item to be tested against.
 Id of the item to be tested against. Requires the Database parameter to be specified.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -65,7 +65,7 @@ Id of the item to be tested against. Requires the Database parameter to be speci
 Database containing the item to be fetched with Id parameter.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -104,7 +104,7 @@ The access right to grand or deny. Well known rights are:
 * remote:fieldread - "Field Remote Read" - Field Read right for remoted clients. 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -125,7 +125,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

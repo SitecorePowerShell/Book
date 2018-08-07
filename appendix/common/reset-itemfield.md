@@ -23,7 +23,7 @@ Resets item fields, specified as either names, fields or template fields.
 Includes fields that are defined on "Standard template"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Includes fields that are defined on "Standard template"
 Array of field names to include - supports wildcards.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Array of field names to include - supports wildcards.
 Language that will be reset. If not specified the current user language will be used. Globbing/wildcard supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Language that will be reset. If not specified the current user language will be 
 The item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -71,7 +71,7 @@ The item to be analysed.
 Path to the item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -83,7 +83,7 @@ Path to the item to be analysed.
 Id of the item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -95,7 +95,7 @@ Id of the item to be analysed.
 Database containing the item to be reset - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

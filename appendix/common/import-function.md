@@ -19,7 +19,7 @@ The Import-Function command imports a function script from the script library's 
 Name of the script in the "Functions" library or one of its sub-libraries.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Name of the script in the "Functions" library or one of its sub-libraries.
 Name of the library withing the "Functions" library. Provide this name to disambiguate a script from other scripts of the same name that might exist in multiple sub-librarties of the Functions library.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ Name of the library withing the "Functions" library. Provide this name to disamb
 Name of the module "Functions" are going to be taken from. Provide this name to disambiguate a script from other scripts of the same name that might exist in multiple Modules.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

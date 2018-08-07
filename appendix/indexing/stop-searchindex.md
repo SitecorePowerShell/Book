@@ -21,7 +21,7 @@ The Stop-SearchIndex command stops the Sitecore index.
 ### -Index  &lt;ISearchIndex&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -33,7 +33,7 @@ The Stop-SearchIndex command stops the Sitecore index.
 The name of the index to stop.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

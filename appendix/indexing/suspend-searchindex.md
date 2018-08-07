@@ -21,7 +21,7 @@ The Suspend-SearchIndex command suspends \(pauses\) the Sitecore index.
 ### -Index  &lt;ISearchIndex&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -33,7 +33,7 @@ The Suspend-SearchIndex command suspends \(pauses\) the Sitecore index.
 The name of the index to suspend \(pause\).
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

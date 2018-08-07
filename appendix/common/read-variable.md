@@ -33,7 +33,7 @@ Variable type specific:
 * Domain - for user and role selectors you can limit the users & roles presented to only the domain - specified\) 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -45,7 +45,7 @@ Variable type specific:
 Dialog description displayed below the dialog title.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -57,7 +57,7 @@ Dialog description displayed below the dialog title.
 Text shown on the cancel button.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -69,7 +69,7 @@ Text shown on the cancel button.
 Text shown on the OK button.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -81,7 +81,7 @@ Text shown on the OK button.
 Specifies whether the variable hints should be displayed. Hints are shown below each the variable title but above the variable editing control.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -91,7 +91,7 @@ Specifies whether the variable hints should be displayed. Hints are shown below 
 ### -Validator  &lt;ScriptBlock&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -103,7 +103,7 @@ Specifies whether the variable hints should be displayed. Hints are shown below 
 Dialog title - shown at the top of the dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -115,7 +115,7 @@ Dialog title - shown at the top of the dialog.
 Dialog width.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -127,7 +127,7 @@ Dialog width.
 Dialog width.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

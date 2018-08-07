@@ -19,7 +19,7 @@ The Get-Archive command returns Sitecore archives in context of the specified da
 Name of the archive to retrieve.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Name of the archive to retrieve.
 Database for which the archives should be retrieved.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 2 |
 | Default Value |  |

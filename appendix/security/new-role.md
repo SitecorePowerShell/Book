@@ -19,7 +19,7 @@ The New-Role command creates a new Sitecore role.
 Role name including domain. If no domain is specified - 'sitecore' will be used as the default value
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

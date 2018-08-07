@@ -21,7 +21,7 @@ The Get-LayoutDevice command returns the layout for the specified device.
 Name of the device to return.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -33,7 +33,7 @@ Name of the device to return.
 Determines that a default system layout device should be returned.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

@@ -44,7 +44,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -62,7 +62,7 @@ To get security for all roles, use the asterisk wildcard: Get-ItemAcl -Filter \*
 To security got all roles in a domain use the following command: Get-ItemAcl -Filter "sitecore\*"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -74,7 +74,7 @@ To security got all roles in a domain use the following command: Get-ItemAcl -Fi
 The item from which the security rules should be taken.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -86,7 +86,7 @@ The item from which the security rules should be taken.
 Path to the item from which the security rules should be taken.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -98,7 +98,7 @@ Path to the item from which the security rules should be taken.
 Id of the item from which the security rules should be taken.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -110,7 +110,7 @@ Id of the item from which the security rules should be taken.
 Database containing the item to be fetched with Id parameter containing the security rules that should be returned.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

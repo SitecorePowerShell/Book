@@ -39,7 +39,7 @@ sitecore\admi
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -65,7 +65,7 @@ Get-User -Filter "sitecore\*"
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -75,7 +75,7 @@ Get-User -Filter "sitecore\*"
 ### -Current  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -85,7 +85,7 @@ Get-User -Filter "sitecore\*"
 ### -Authenticated  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -97,7 +97,7 @@ Get-User -Filter "sitecore\*"
 Specifies the number of users to retrieve per request to the user provider. Each page of users is written to the pipeline before the next request is made. Without specifying this parameter all accounts are retrieved before passing down the pipeline.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

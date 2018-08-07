@@ -17,7 +17,7 @@ Get-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Not
 ### -NotificationType  &lt;NotificationType&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -27,7 +27,7 @@ Get-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Not
 ### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -37,7 +37,7 @@ Get-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Not
 ### -Item  &lt;Item&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -47,7 +47,7 @@ Get-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Not
 ### -Path  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -57,7 +57,7 @@ Get-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Not
 ### -Id  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Get-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Not
 ### -Database  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

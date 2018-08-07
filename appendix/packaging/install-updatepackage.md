@@ -21,7 +21,7 @@ Install-UpdatePackage. Install-UpdatePackage -Path "C:\Projects\LaunchSitecore.T
 Path to the .update package on the Sitecore server disk drive.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -33,7 +33,7 @@ Path to the .update package on the Sitecore server disk drive.
 Specify Rollback Package Path - for rolling back if the installation was not functioning as expected.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |
@@ -45,7 +45,7 @@ Specify Rollback Package Path - for rolling back if the installation was not fun
 Preview / Upgrade
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -57,7 +57,7 @@ Preview / Upgrade
 Install / Update
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

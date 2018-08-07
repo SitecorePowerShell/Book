@@ -19,7 +19,7 @@ The Get-SpeModuleFeatureRoot command returns library item or path to the library
 Module for which the feature root library should be returned. If not provided the feature root will be returned for all modules.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -29,7 +29,7 @@ Module for which the feature root library should be returned. If not provided th
 ### -ReturnPath  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -60,7 +60,7 @@ Valid features:
 * isePlugi 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

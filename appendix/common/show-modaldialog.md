@@ -21,7 +21,7 @@ Shows Sitecore Sheer control as a modal dialog. If control returns a value - the
 Name of the Sitecore Sheer control to show
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -33,7 +33,7 @@ Name of the Sitecore Sheer control to show
 A fully formed URL that constitutes a control execution request.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -45,7 +45,7 @@ A fully formed URL that constitutes a control execution request.
 Hashtable of parameters to pass to the control in the url.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Hashtable of parameters to pass to the control in the url.
 ### -HandleParameters  &lt;Hashtable&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Hashtable of parameters to pass to the control in the url.
 Title of the control dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ Title of the control dialog.
 Width of the control dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -91,7 +91,7 @@ Width of the control dialog.
 Height of the control dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

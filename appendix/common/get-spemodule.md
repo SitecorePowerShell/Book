@@ -27,7 +27,7 @@ The Get-SpeModule command returns the object that describes a Sitecore PowerShel
 A script or library item that is defined within the module to be returned.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -39,7 +39,7 @@ A script or library item that is defined within the module to be returned.
 Path to a script or library item that is defined within the module to be returned.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -51,7 +51,7 @@ Path to a script or library item that is defined within the module to be returne
 Id of a script or library item that is defined within the module to be returned.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -63,7 +63,7 @@ Id of a script or library item that is defined within the module to be returned.
 Database containing the module to be returned.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -75,7 +75,7 @@ Database containing the module to be returned.
 Name fo the module to return. Supports wildcards.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

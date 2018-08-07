@@ -19,7 +19,7 @@ The Show-ListView command sends the output from a command to a grid view window 
 Number of results shown per page.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -31,7 +31,7 @@ Number of results shown per page.
 If this parameter is provided Results will show in a new window \(in Sitecore 6.x up till Sitecore 7.1\) or in a modal overlay \(Sitecore 7.2+\)
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ If this parameter is provided Results will show in a new window \(in Sitecore 6.
 Additional data what will be passed to the view. All actions that are executed from that view window will have that data accessible to them as $actionData variable.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Additional data what will be passed to the view. All actions that are executed f
 View signature name - this can be used by action commands to determine whether to show an action or not using the Show/Enable rules.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ View signature name - this can be used by action commands to determine whether t
 If this parameter is specified actions will be executed in the same session as the one in which the command is executed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ If this parameter is specified actions will be executed in the same session as t
 Shows UI elements selectively in the results dialog -- All - shows all UI elements automatically - default value -- SharedExport - shows export filters that are not specific to this very `-ViewName report (left-most ribbon panel) -- Filter - shows filter panel -- PagingAlways - shows paging when list is shorter than the page specified -- SharedActions - shows actions that are not specific to this very`-ViewName report \(right-most ribbon panel\) -- StatusBar - shows status bar.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -91,7 +91,7 @@ Shows UI elements selectively in the results dialog -- All - shows all UI elemen
 Title on the panel that appears below the ribbon in the results window.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -103,7 +103,7 @@ Title on the panel that appears below the ribbon in the results window.
 Description that appears on the panel below the ribbon in the results window.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -115,7 +115,7 @@ Description that appears on the panel below the ribbon in the results window.
 If no Items were provided for -Data parameter the message provided in this parameter will be shown in the middle of the List View dialog to notify users of the lack of items to display.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -127,7 +127,7 @@ If no Items were provided for -Data parameter the message provided in this param
 Icon of the result window. \(Shows in the top/left corner and on the Sitecore taskbar\).
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -139,7 +139,7 @@ Icon of the result window. \(Shows in the top/left corner and on the Sitecore ta
 Data to be displayed in the view.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -153,7 +153,7 @@ Specifies the object properties that appear in the display and the order in whic
 The value of the Property parameter can be a new calculated property. To create a calculated, property, use a hash table. Valid keys are: -- Name \(or Label\) &lt;string&gt; -- Expression &lt;string&gt; or &lt;script block&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -165,7 +165,7 @@ The value of the Property parameter can be a new calculated property. To create 
 Title of the results window.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -177,7 +177,7 @@ Title of the results window.
 Width of the results window.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -189,7 +189,7 @@ Width of the results window.
 Height of the results window.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

@@ -1,8 +1,12 @@
+---
+description: Visual components made available to users in the Content Editor.
+---
+
 # Content Editor
 
 ## Context Menu
 
-The _Context Menu_ integration allows for options in the context menu. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
+The _Context Menu_ integration reveals a list of options to the user in the context menu under a special node called _Scripts_. The Sitecore rules engine may be used to control visibility and enabled state. The script is only executed when the option is clicked.
 
 1. Begin by adding a new script to the _Context Menu_ library. The name of the script will appear in the context menu.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
@@ -25,7 +29,7 @@ See how Adam added [context menu PowerShell scripts](https://blog.najmanowicz.co
 
 ## Gutter
 
-The _Gutter_ integration allows for full flexibility of adding a gutter element.
+The _Gutter_ integration reveals a visual notification to the user in the far left gutter. The Sitecore rules engine may be used to control enabled state.
 
 1. Begin by adding a new script to the _Gutters_ library.
 2. Edit the script to create a new instance of `Sitecore.Shell.Applications.ContentEditor.Gutters.GutterIconDescriptor` if the right conditions are met. 
@@ -44,7 +48,7 @@ The _Gutter_ integration allows for full flexibility of adding a gutter element.
 
 ## Insert Item
 
-The _Insert Item_ integration allows for insert options in the context menu. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
+The _Insert Item_ integration reveals a list of options to the user in the context menu under the node called _Insert_. The Sitecore rules engine may be used to control visibility and enabled state. The script is only executed when the option is clicked.
 
 1. Begin by adding a new script to the _Insert Item_ library. The name of the script will appear in the context menu.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
@@ -61,7 +65,7 @@ The _Insert Item_ integration allows for insert options in the context menu. Rul
 
 ## Ribbon
 
-The _Ribbon_ integration allows for commands in the ribbon. Rules can be used to control visiblity and enablement. The script is only executed when the option is clicked.
+The _Ribbon_ integration reveals commands to the user in the ribbon. The Sitecore rules engine may be used to control visibility and enabled state. The script is only executed when the option is clicked.
 
 1. Begin by adding a new child script library to the _Ribbon_ library; we'll refer to this library as the **Tab** library. Choose a name such as _Home_ or _Developer_ \(this should match an existing tab name\).
 2. Add a child script library to the **Tab** library; we'll call this the **Chunk** library. Choose a name such as _Edit_ or _Tools_. 
@@ -72,8 +76,6 @@ The _Ribbon_ integration allows for commands in the ribbon. Rules can be used to
 7. Configure any rules as needed.
 
 ![Ribbon Script Library Structure](../../.gitbook/assets/ribbon-script-structure.png)
-
-\# Content Editor
 
 **Example:** The following script gets the selected Context Menu item and displays an alert using the item name.
 
@@ -101,7 +103,7 @@ Check out an example of the [5 steps to extending the Sitecore ribbon](https://s
 
 ## Warning
 
-The _Warning_ integration allows for notifications and commands in the Content Editor. Rules can be used to control visiblity and enablement. The scripts are only executed when the rule is met and the command is clicked.
+The _Warning_ integration reveals a notification to the user above content. The Sitecore rules engine can be used to control visibility and enabled state. The scripts are only executed when the rule is met and the command is clicked.
 
 1. Begin by adding a new script library to the _Warning_ library.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.

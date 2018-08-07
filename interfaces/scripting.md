@@ -50,7 +50,7 @@ The _Open_ dialog provides both a search and tree view of the scripts stored in 
 Below are the shortcuts available in the ISE.
 
 | **Shortcut** | **Usage** |
-| --- | --- |
+| :--- | :--- |
 | TAB | Indent |
 | Ctrl-Space | Autocomplete commands. Use the up or down direction keys to cycle through options. |
 | Ctrl-Enter | Displays the command help window. |

@@ -27,7 +27,7 @@ The following abbreviations are aliases for this cmdlet:
 Process the item and all of its children.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ Default vaule is Append Accepts one of 3 pretty self explanatory actions:
 * OverwriteLatest - if language version exists overwrite the last version with values copied from the original language 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Default vaule is Append Accepts one of 3 pretty self explanatory actions:
 Language or a list of languages that should be created
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Language or a list of languages that should be created
 Creates a new version in the target language but does not copy field values from the original language
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -92,7 +92,7 @@ Fields ignored out of the box include:
 * \_\_Reminder text 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -104,7 +104,7 @@ Fields ignored out of the box include:
 Language that will be used as source language. If not specified the current user language will be used.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -116,7 +116,7 @@ Language that will be used as source language. If not specified the current user
 The item / version to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -128,7 +128,7 @@ The item / version to be processed.
 Path to the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -140,7 +140,7 @@ Path to the item to be processed - additionally specify Language parameter to fe
 Id of the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -152,7 +152,7 @@ Id of the item to be processed - additionally specify Language parameter to fetc
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

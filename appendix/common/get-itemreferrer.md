@@ -29,7 +29,7 @@ The Get-ItemReferrer command returns all items referring to the specified item. 
 The item to be analysed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -41,7 +41,7 @@ The item to be analysed.
 Path to the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -53,7 +53,7 @@ Path to the item to be processed - additionally specify Language parameter to fe
 Id of the the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -65,7 +65,7 @@ Id of the the item to be processed - additionally specify Language parameter to 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -77,7 +77,7 @@ Database containing the item to be processed - can work with Language parameter 
 Language that will be used as source language. If not specified the current user language will be used. Globbing/wildcard supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -89,7 +89,7 @@ Language that will be used as source language. If not specified the current user
 Return ItemLink that define both source and target of a link rather than items linking to the specified item.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

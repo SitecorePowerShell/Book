@@ -23,7 +23,7 @@ Updates rendering instance with new values. The instance should be earlier obtai
 Instance of the Rendering to be updated.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Instance of the Rendering to be updated.
 Rendering Parameters to be overriden on the Rendering that is being updated - if not specified the value provided in rendering definition specified in the Instance parameter will be used.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Rendering Parameters to be overriden on the Rendering that is being updated - if
 Placeholder path the Rendering should be added to - if not specified the value provided in rendering definition specified in the Instance parameter will be used.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Placeholder path the Rendering should be added to - if not specified the value p
 Data source of the Rendering - if not specified the value provided in rendering definition specified in the Instance parameter will be used.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Data source of the Rendering - if not specified the value provided in rendering 
 If provided the rendering will be moved to the specified index.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -83,7 +83,7 @@ If provided the rendering will be moved to the specified index.
 Targets the Final Layout. If not provided, the Shared Layout will be targeted. Applies to Sitecore 8.0 and higher only.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -93,7 +93,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 ### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -105,7 +105,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 The item to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -117,7 +117,7 @@ The item to be processed.
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -129,7 +129,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -141,7 +141,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

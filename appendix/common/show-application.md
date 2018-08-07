@@ -19,7 +19,7 @@ Executes Sitecore Sheer application, allows for passing additional parameters, l
 Name of the Application to be executed. Application must be defined in the Core databse.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Name of the Application to be executed. Application must be defined in the Core 
 Additional parameters passed to the application.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 2 |
 | Default Value |  |
@@ -43,7 +43,7 @@ Additional parameters passed to the application.
 Icon of the executed application \(used for titlebar and in the Sitecore taskbar on the desktop\)
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Icon of the executed application \(used for titlebar and in the Sitecore taskbar
 Causes the application to show in new browser modal window or modal overlay if used in Sitecore 7.2 or later.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Causes the application to show in new browser modal window or modal overlay if u
 Title of the window the app opens in.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ Title of the window the app opens in.
 Width of the modal window.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -91,7 +91,7 @@ Width of the modal window.
 Height of the modal window.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

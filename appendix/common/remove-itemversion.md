@@ -27,7 +27,7 @@ The following abbreviations are aliases for this cmdlet:
 Deleted language versions from the item and all of its children.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -39,7 +39,7 @@ Deleted language versions from the item and all of its children.
 Language\(s\) that should be deleted form the provided item\(s\). A single language or a list of languages can be defined using the parameter. Language parameter supports globbing so you can delete whole language groups using wildcards.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -51,7 +51,7 @@ Language\(s\) that should be deleted form the provided item\(s\). A single langu
 Version\(s\) that should be deleted form the provided item\(s\). A single version or a list of versions can be defined using the parameter. Version parameter supports globbing so you can delete whole version groups using wildcards.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -65,7 +65,7 @@ Language\(s\) that should NOT be deleted form the provided item\(s\). A single l
 If Language parameter is not is not specified but ExcludeLanguage is provided, the default value of "\*" is assumed for Language parameter.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -77,7 +77,7 @@ If Language parameter is not is not specified but ExcludeLanguage is provided, t
 If provided - trims the selected language to value specified by this parameter.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -89,7 +89,7 @@ If provided - trims the selected language to value specified by this parameter.
 The item/version to be processed. You can pipe a specific version of the item for it to be removed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -101,7 +101,7 @@ The item/version to be processed. You can pipe a specific version of the item fo
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -113,7 +113,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -125,7 +125,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

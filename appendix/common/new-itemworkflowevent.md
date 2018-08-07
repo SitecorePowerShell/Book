@@ -23,7 +23,7 @@ Creates new entry in the history store notifying of workflow state change.
 Id of the old state. If not provided - current item workflow state will be used.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Id of the old state. If not provided - current item workflow state will be used.
 Id of the old state. If not provided - current item workflow state will be used.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Id of the old state. If not provided - current item workflow state will be used.
 Action comment.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Action comment.
 Language that will be used as source language. If not specified the current user language will be used. Globbing/wildcard supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Language that will be used as source language. If not specified the current user
 The item to have the history event attached.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -83,7 +83,7 @@ The item to have the history event attached.
 Path to the item to have the history event attached - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -95,7 +95,7 @@ Path to the item to have the history event attached - additionally specify Langu
 Id of the the item to have the history event attached - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -107,7 +107,7 @@ Id of the the item to have the history event attached - additionally specify Lan
 Database containing the item to have the history event attached - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

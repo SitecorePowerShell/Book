@@ -39,7 +39,7 @@ The PropagationType enumeration determines which items will be granted the acces
 * Entity - applies right to the item only 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -56,7 +56,7 @@ The SecurityPermission determines whether to grant \(allow\) or deny the access 
 * DenyInheritance - 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -68,7 +68,7 @@ The SecurityPermission determines whether to grant \(allow\) or deny the access 
 A single or multiple access rules created e.g. through the New-ItemAcl or obtained from other item using the Get-ItemAcl cmdlet. This information will be appended to the existing security descriptors on the item.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -78,7 +78,7 @@ A single or multiple access rules created e.g. through the New-ItemAcl or obtain
 ### -PassThru  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -117,7 +117,7 @@ The access right to grand or deny. Well known rights are:
 * remote:fieldread - "Field Remote Read" - Field Read right for remoted clients. 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -138,7 +138,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -150,7 +150,7 @@ Fully Qualified Name
 The item to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -162,7 +162,7 @@ The item to be processed.
 Path to the item to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -174,7 +174,7 @@ Path to the item to be processed.
 Id of the item to be processed. Requires Database parameter to be specified
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -186,7 +186,7 @@ Id of the item to be processed. Requires Database parameter to be specified
 Database containing the item to be fetched using the Id Parameter.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

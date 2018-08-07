@@ -32,7 +32,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -50,7 +50,7 @@ To get all the roles, use the asterisk wildcard: Get-Role -Filter \*
 To get all the roles in a domain use the following command: Get-Role -Filter "sitecore\*"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

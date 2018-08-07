@@ -28,7 +28,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -67,7 +67,7 @@ The access right to grand or deny. Well known rights are:
 * remote:fieldread - "Field Remote Read" - Field Read right for remoted clients. 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 2 |
 | Default Value |  |
@@ -83,7 +83,7 @@ The PropagationType enumeration determines which items will be granted the acces
 * Entity - applies right to the item only 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 3 |
 | Default Value |  |
@@ -100,7 +100,7 @@ The SecurityPermission determines whether to grant \(allow\) or deny the access 
 * DenyInheritance - 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 4 |
 | Default Value |  |

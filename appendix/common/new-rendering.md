@@ -23,7 +23,7 @@ Creates new rendering definition that can later be added to an item. Most parame
 Rendering parameters as hashtable
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -35,7 +35,7 @@ Rendering parameters as hashtable
 Placeholder for the rendering to be placed into.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Placeholder for the rendering to be placed into.
 Datasource for the rendering.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Datasource for the rendering.
 Defined whether the rendering is cacheable.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Defined whether the rendering is cacheable.
 Defines whether a data-specific cache version of the rendering should be kept.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -83,7 +83,7 @@ Defines whether a data-specific cache version of the rendering should be kept.
 Defines whether a device-specific cache version of the rendering should be kept.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -95,7 +95,7 @@ Defines whether a device-specific cache version of the rendering should be kept.
 Defines whether a login - specific cache version of the rendering should be kept.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -107,7 +107,7 @@ Defines whether a login - specific cache version of the rendering should be kept
 Defines whether paremeter - specific cache version of the rendering should be kept.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -119,7 +119,7 @@ Defines whether paremeter - specific cache version of the rendering should be ke
 Defines whether query string - specific cache version of the rendering should be kept.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -131,7 +131,7 @@ Defines whether query string - specific cache version of the rendering should be
 Defines whether a user - specific cache version of the rendering should be kept.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -141,7 +141,7 @@ Defines whether a user - specific cache version of the rendering should be kept.
 ### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -153,7 +153,7 @@ Defines whether a user - specific cache version of the rendering should be kept.
 The item to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -165,7 +165,7 @@ The item to be processed.
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -177,7 +177,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -189,7 +189,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

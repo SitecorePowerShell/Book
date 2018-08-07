@@ -3,7 +3,7 @@
 SPE provides some convenient variables out of the box for use in running commands and scripts. Many of the variables prefixed with _Sitecore_ derive from the Sitecore.config settings. Run the command `Get-Variable` to see the complete list.
 
 | **Variable** | **Example** |
-| --- | --- |
+| :--- | :--- |
 | AppPath | C:\Inetpub\wwwroot\Console\Website\ |
 | HostSettings | ...   FontSize : 12   FontFamily : Wingdings   ... |
 | me | sitecore\admin |

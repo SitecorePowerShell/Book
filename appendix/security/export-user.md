@@ -44,7 +44,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -62,7 +62,7 @@ To get all the users, use the asterisk wildcard: Export-User -Filter \*
 To get all the users in a domain use the following command: Export-User -Filter "sitecore\*"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -74,7 +74,7 @@ To get all the users in a domain use the following command: Export-User -Filter 
 User object retrieved from the Sitecore API or using the Get-User command.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -86,7 +86,7 @@ User object retrieved from the Sitecore API or using the Get-User command.
 Specifies that the current user should be serialized.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -98,7 +98,7 @@ Specifies that the current user should be serialized.
 Path to the file the user should be saved to.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -110,7 +110,7 @@ Path to the file the user should be saved to.
 Overrides Sitecore Serialization root directory
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

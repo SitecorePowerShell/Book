@@ -25,7 +25,7 @@ The following abbreviations are aliases for this cmdlet:
 Path to the file to be downloaded. The file has to exist in the Data folder. Files from outside the Data folder are not downloadable.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -37,7 +37,7 @@ Path to the file to be downloaded. The file has to exist in the Data folder. Fil
 Message to show the user in the download dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -49,7 +49,7 @@ Message to show the user in the download dialog.
 The item to be downloaded.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -61,7 +61,7 @@ The item to be downloaded.
 If this parameter is used the Dialog will not be shown but instead the file download will begin immediately.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -73,7 +73,7 @@ If this parameter is used the Dialog will not be shown but instead the file down
 If this parameter is used the Dialog will display full path to the file downloaded in the dialog, otherwise only the file name will be shown.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -85,7 +85,7 @@ If this parameter is used the Dialog will display full path to the file download
 Download dialog title.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -97,7 +97,7 @@ Download dialog title.
 Download dialog width.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -109,7 +109,7 @@ Download dialog width.
 Download dialog height.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

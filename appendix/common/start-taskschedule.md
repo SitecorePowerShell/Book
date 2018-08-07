@@ -25,7 +25,7 @@ Executes a task schedule either passed from Get-Schedule, based on Item or Sched
 ScheduleItem most conveniently obtained from Get-Schedule command.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -37,7 +37,7 @@ ScheduleItem most conveniently obtained from Get-Schedule command.
 Schedule item - if Item is of wrong template - an appropriate error will be written to teh host.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -49,7 +49,7 @@ Schedule item - if Item is of wrong template - an appropriate error will be writ
 Path to the schedule item - if item is of wrong template - an appropriate error will be written to teh host.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -59,7 +59,7 @@ Path to the schedule item - if item is of wrong template - an appropriate error 
 ### -Id  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -69,7 +69,7 @@ Path to the schedule item - if item is of wrong template - an appropriate error 
 ### -Database  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

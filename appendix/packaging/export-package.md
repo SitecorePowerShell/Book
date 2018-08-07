@@ -19,7 +19,7 @@ The Export-Package command creates a Sitecore installation package as either a .
 Path the project should be saved under.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Path the project should be saved under.
 Project object created ealier with the New-Package. or Loaded with Get-Package.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 2 |
 | Default Value |  |
@@ -43,7 +43,7 @@ Project object created ealier with the New-Package. or Loaded with Get-Package.
 Specify this parameter to exposrt package with all its assets in a zip file. If this parameter is missing only Xml file with the package project definition will be saved.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Specify this parameter to exposrt package with all its assets in a zip file. If 
 Do not overwrite \(replace the contents\) of an existing file. By default, if a file exists in the specified path, Export-Package overwrites the file without warning.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Do not overwrite \(replace the contents\) of an existing file. By default, if a 
 Specify this parameter if exporting the zip file and when you want it to contain the project definitnion xml file in it.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

@@ -25,7 +25,7 @@ Depending on the user response one of the 2 strings is returned:
 Question to ask the user in the dialog
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -37,7 +37,7 @@ Question to ask the user in the dialog
 Width of the dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -49,7 +49,7 @@ Width of the dialog.
 Height of the dialog.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

@@ -17,7 +17,7 @@ Remove-SearchIndexItem -SearchResultItem &lt;SearchResultItem&gt; \[-AsJob\]
 ### -Item  &lt;Item&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -27,7 +27,7 @@ Remove-SearchIndexItem -SearchResultItem &lt;SearchResultItem&gt; \[-AsJob\]
 ### -SearchResultItem  &lt;SearchResultItem&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -37,7 +37,7 @@ Remove-SearchIndexItem -SearchResultItem &lt;SearchResultItem&gt; \[-AsJob\]
 ### -AsJob  &lt;SwitchParameter&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ Remove-SearchIndexItem -SearchResultItem &lt;SearchResultItem&gt; \[-AsJob\]
 ### -Name  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

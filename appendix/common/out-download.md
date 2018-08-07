@@ -25,7 +25,7 @@ Object content to be sent to the client. Object must be of one of the following 
 * Byte\[\] 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -48,7 +48,7 @@ Common examples \(after Wikipedia\)
 * image/jpg 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -60,7 +60,7 @@ Common examples \(after Wikipedia\)
 Name of the file you want the user browser to save the object as.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

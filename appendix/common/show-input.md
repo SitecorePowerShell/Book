@@ -19,7 +19,7 @@ Shows prompt message box asking user to provide a text string.
 Prompt message to show in the message box shown to a user.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Prompt message to show in the message box shown to a user.
 Default value to be provided for the text box.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ Default value to be provided for the text box.
 Regex for value validation. If user enters a value that does not validate - en error message defined with the "ErrorMessage" parameter will be shown and user will be asked to enter the value again.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Regex for value validation. If user enters a value that does not validate - en e
 Error message to show when regex validation fails.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Error message to show when regex validation fails.
 Maximum length of the string returned. If user enters a longer value - en error message will be shown and user will be asked to enter the value again.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

@@ -27,7 +27,7 @@ The following abbreviations are aliases for this cmdlet:
 Namer of the workflow command.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -39,7 +39,7 @@ Namer of the workflow command.
 Comment to be saved in the history table for the action.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -51,7 +51,7 @@ Comment to be saved in the history table for the action.
 Language that will be used as source language. If not specified the current user language will be used. Globbing/wildcard supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -63,7 +63,7 @@ Language that will be used as source language. If not specified the current user
 The item to have the workflow action executed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -75,7 +75,7 @@ The item to have the workflow action executed.
 Path to the item to have the workflow action executed - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -87,7 +87,7 @@ Path to the item to have the workflow action executed - additionally specify Lan
 Id of the the item to have the workflow action executed - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -99,7 +99,7 @@ Id of the the item to have the workflow action executed - additionally specify L
 Database containing the item to have the workflow action executed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

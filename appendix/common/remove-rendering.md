@@ -35,7 +35,7 @@ Removes renderings from an item based on a number of qualifying criteria. The se
 The item to be processed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -47,7 +47,7 @@ The item to be processed.
 Path to the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Path to the item to be processed - can work with Language parameter to narrow th
 Id of the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -71,7 +71,7 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -83,7 +83,7 @@ Database containing the item to be processed - can work with Language parameter 
 Data source filter - supports wildcards.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -95,7 +95,7 @@ Data source filter - supports wildcards.
 Item representing the sublayout/rendering. If matching the rendering will be removed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -107,7 +107,7 @@ Item representing the sublayout/rendering. If matching the rendering will be rem
 Index at which the rendering exists in the layout. The rendering at that index will be removed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -119,7 +119,7 @@ Index at which the rendering exists in the layout. The rendering at that index w
 Place holder at which the rendering exists in the layout. Rendering at that placeholder will be removed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -131,7 +131,7 @@ Place holder at which the rendering exists in the layout. Rendering at that plac
 Additional rendering parameter values. If both name and value match - the rendering will be removed. Values support wildcards.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -143,7 +143,7 @@ Additional rendering parameter values. If both name and value match - the render
 Specific instance of rendering that should be removed. The instance coule earlier be obtained through e.g. use of Get-Rendering.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -155,7 +155,7 @@ Specific instance of rendering that should be removed. The instance coule earlie
 UniqueID of the rendering to be removed. The instance coule earlier be obtained through e.g. use of OD of rendering retrieved with Get-Rendering.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -167,7 +167,7 @@ UniqueID of the rendering to be removed. The instance coule earlier be obtained 
 Device for which the rendering should be removed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -179,7 +179,7 @@ Device for which the rendering should be removed.
 Targets the Final Layout. If not provided, the Shared Layout will be targeted. Applies to Sitecore 8.0 and higher only.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -189,7 +189,7 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 ### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

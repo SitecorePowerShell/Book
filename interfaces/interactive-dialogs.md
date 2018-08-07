@@ -31,7 +31,7 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 ```
 
 | Button Name | Return Value |
-| --- | --- |
+| :--- | :--- |
 | OK | yes |
 | Cancel | no |
 
@@ -46,7 +46,7 @@ Show-Input "Please provide 5 characters at most" -MaxLength 5
 ```
 
 | Button Name | Return Value |
-| --- | --- |
+| :--- | :--- |
 | OK | &lt; user input &gt; |
 | Cancel | $null |
 
@@ -98,7 +98,7 @@ Read-Variable @props
 ```
 
 | Button Name | Return Value |
-| --- | --- |
+| :--- | :--- |
 | OK | ok |
 | Cancel | cancel |
 | &lt; variables &gt; | &lt; selection &gt; |
@@ -108,7 +108,7 @@ Read-Variable @props
 **Supported Parameter Values**
 
 | Key | Type | Description | Example |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | Name | string | Variable name | isSilent |
 | Value | bool string int float datetime Item | Default value | $true |
 | Title | string | Header or Label | "Proceed Silently |
@@ -153,7 +153,7 @@ Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes - returns btn
 **Note:** The hashtable keys should be incremented like _btn\_0_, _btn\_1_, and so on. The return value is the key name.
 
 | Button Name | Return Value |
-| --- | --- |
+| :--- | :--- |
 | &lt; first button &gt; | btn\_0 |
 | &lt; second button &gt; | btn\_1 |
 | &lt; third button &gt; | btn\_2 |
@@ -197,7 +197,7 @@ Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
 ```
 
 | Button Name | Return Value |
-| --- | --- |
+| :--- | :--- |
 | OK | ok |
 | Cancel | cancel |
 
@@ -222,7 +222,7 @@ Show-ModalDialog -HandleParameters @{
 ```
 
 | Button Name | Return Value |
-| --- | --- |
+| :--- | :--- |
 | OK | &lt; selected file &gt; |
 | Cancel | undetermined |
 
@@ -237,7 +237,7 @@ Show-ModalDialog -HandleParameters @{
 ```
 
 | Button Name | Return Value |
-| --- | --- |
+| :--- | :--- |
 | OK | &lt; selected file &gt; |
 | Cancel | undetermined |
 

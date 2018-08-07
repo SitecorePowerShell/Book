@@ -19,7 +19,7 @@ Creates new File source that can be added to a Sitecore package. Folder provided
 Name of the file source.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ Name of the file source.
 Root folder to include in the package
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 2 |
 | Default Value |  |
@@ -43,7 +43,7 @@ Root folder to include in the package
 Filter that defines which files will be included.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 3 |
 | Default Value |  |
@@ -55,7 +55,7 @@ Filter that defines which files will be included.
 Filter that defines which files will NOT be included.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 4 |
 | Default Value |  |
@@ -65,7 +65,7 @@ Filter that defines which files will NOT be included.
 ### -InstallMode  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

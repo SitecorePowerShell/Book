@@ -21,7 +21,7 @@ The Remove-Session command removes user sessions in Sitecore.
 Specifies the Sitecore SessionID.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -33,7 +33,7 @@ Specifies the Sitecore SessionID.
 Specifies the Sitecore user sessions.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

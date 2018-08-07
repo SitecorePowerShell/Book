@@ -19,7 +19,7 @@ The Get-Preset command returns a serialization preset for use with Export-Item.
 Name of the serialization preset.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 1 |
 | Default Value |  |

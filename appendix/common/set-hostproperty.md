@@ -19,7 +19,7 @@ Sets the current host property and perssits them for the future if used with -Pe
 Color of the console text.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -31,7 +31,7 @@ Color of the console text.
 Color of the console background.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ Color of the console background.
 Width of the text buffer \(texts longer than the number provided will wrap to the next line.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Width of the text buffer \(texts longer than the number provided will wrap to th
 Persist the console setting provided
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

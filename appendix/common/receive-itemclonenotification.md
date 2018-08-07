@@ -19,7 +19,7 @@ Receive-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] -N
 ### -Notification  &lt;Notification&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -29,7 +29,7 @@ Receive-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] -N
 ### -Action  &lt;NotificationAction&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -39,7 +39,7 @@ Receive-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] -N
 ### -NotificationType  &lt;NotificationType&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -49,7 +49,7 @@ Receive-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] -N
 ### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -59,7 +59,7 @@ Receive-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] -N
 ### -Item  &lt;Item&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -69,7 +69,7 @@ Receive-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] -N
 ### -Path  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -79,7 +79,7 @@ Receive-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] -N
 ### -Id  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -89,7 +89,7 @@ Receive-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] -N
 ### -Database  &lt;String&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

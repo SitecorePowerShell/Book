@@ -23,7 +23,7 @@ The second policy relates to the Sitecore user account. The code executed throug
 The following settings are configured under `core:\content\Applications\PowerShell`.
 
 | **Feature** | **Visibility** |
-| --- | --- |
+| :--- | :--- |
 | PowerShell Console | sitecore\Developer \(read\) |
 | PowerShell ISE | sitecore\Developer \(read\) |
 | PowerShell ListView | sitecore\Sitecore Client Users \(read\) |
@@ -36,7 +36,7 @@ The following settings are configured under `core:\content\Applications\PowerShe
 The following settings are configured under `core:\content\Applications\Content Editor\Context Menues\Default\`.
 
 | **Feature** | **Visibility** | **Command State** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Edit Script | sitecore\Developer \(read\) | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden** |
 | Console | sitecore\Developer \(read\) | **Enabled** until user is _non-admin_ and not in _sitecore\Sitecore Client Developing_ |
 | Script | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** |
@@ -60,7 +60,7 @@ Let's have a look at the configurable features which make up the UAC.
 The way in which scripts make their way into Sitecore through built-in interfaces. Includes the [Console](../interfaces/console.md), [ISE](../interfaces/scripting.md), and Content Editor via _Item Saving_.
 
 | Attribute | Description |
-| --- | --- |
+| :--- | :--- |
 | name | built-in name for the gate |
 | token | name of the token to use for the elevated session |
 
@@ -69,7 +69,7 @@ The way in which scripts make their way into Sitecore through built-in interface
 The object which expires after a predetermined time. These can be unique to each gate or shared.
 
 | Attribute | Description |
-| --- | --- |
+| :--- | :--- |
 | name | unique string used for the gate _token_ attribute |
 | expiration | timespan used to determine the elevated session lifetime \(hh:mm:ss\) |
 | elevationAction | action to perform when session elevation is triggered \(allow, block, password\) |

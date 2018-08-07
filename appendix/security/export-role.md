@@ -34,7 +34,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -52,7 +52,7 @@ To get all the roles, use the asterisk wildcard: Export-Role -Filter \*
 To get all the roles in a domain use the following command: Export-Role -Filter "sitecore\*"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -64,7 +64,7 @@ To get all the roles in a domain use the following command: Export-Role -Filter 
 Specifies the role to be exported
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -76,7 +76,7 @@ Specifies the role to be exported
 Path to the file the role should be saved to.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -88,7 +88,7 @@ Path to the file the role should be saved to.
 Specifies the serialization root directory. If this parameter is not specified - the default Sitecore serialization folder will be used \(unless you're saving to an explicit location with the -Path parameter\).
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

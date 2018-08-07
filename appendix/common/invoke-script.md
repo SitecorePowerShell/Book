@@ -25,7 +25,7 @@ The following abbreviations are aliases for this cmdlet:
 The script item to be executed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -39,7 +39,7 @@ Path to the script item to be executed. Path can be absolute or Relavie to Scrip
 PS master:\&gt; Invoke-Script 'master:\system\Modules\PowerShell\Script Library\Examples\Script Testing\Long Running Script with Progress Demo' PS master:\&gt; Invoke-Script 'Examples\Script Testing\Long Running Script with Progress Demo'
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -49,7 +49,7 @@ PS master:\&gt; Invoke-Script 'master:\system\Modules\PowerShell\Script Library\
 ### -ArgumentList  &lt;Object\[\]&gt;
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

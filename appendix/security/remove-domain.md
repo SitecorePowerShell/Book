@@ -19,7 +19,7 @@ The Remove-Domain command removes the specified domain.
 The name of the domain.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -31,7 +31,7 @@ The name of the domain.
 Indicates that the domain should be removed although it contains users in that domain.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

@@ -19,7 +19,7 @@ Tests item or a stream of items against a sitecore serialized rules engine rule 
 Serialized sitecore rules engine rule. Such rules can be read from rule fields or created by user with the Read-Variable cmdlet.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -31,7 +31,7 @@ Serialized sitecore rules engine rule. Such rules can be read from rule fields o
 Item to be tested
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ Item to be tested
 Name of the database from which rules are pulled.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

@@ -23,7 +23,7 @@ Creates new User & Role source that can be added to a Sitecore package.
 User or Role provided from e.g. Get-Role or Get-User Cmdlet.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 2 |
 | Default Value |  |
@@ -46,7 +46,7 @@ Fully Qualified Name
 if -AccountType parameter is specified as Role - only roles will be taken into consideration. if -AccountType parameter is specified as User - only users will be taken into consideration.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 2 |
 | Default Value |  |
@@ -66,7 +66,7 @@ To security got all roles in a domain use the following command: Get-ItemAcl -Fi
 if -AccountType parameter is specified as Role - only roles will be taken into consideration. if -AccountType parameter is specified as User - only users will be taken into consideration.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 2 |
 | Default Value |  |
@@ -80,7 +80,7 @@ if -AccountType parameter is specified as Role - only roles will be taken into c
 * User - Only Users will be taken into consideration when looking for accounts through either -Identity or -Filter parameters 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 3 |
 | Default Value |  |
@@ -92,7 +92,7 @@ if -AccountType parameter is specified as Role - only roles will be taken into c
 Name of the security source.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |

@@ -21,7 +21,7 @@ The Wait-ScriptSession cmdlet waits for script session to complete before it dis
 The maximum time to wait for all the other running script sessions to complete.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -33,7 +33,7 @@ The maximum time to wait for all the other running script sessions to complete.
 Returns control to the script or displays the command prompt \(and returns the ScriptSession object\) when any script session completes. By default, Wait-ScriptSession waits until all of the specified jobs are complete before displaying the prompt.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -45,7 +45,7 @@ Returns control to the script or displays the command prompt \(and returns the S
 Id\(s\) of the session to be stopped.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -57,7 +57,7 @@ Id\(s\) of the session to be stopped.
 Session\(s\) to be stopped.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

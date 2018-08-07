@@ -21,7 +21,7 @@ The Receive-ScriptSession cmdlet gets the results of Windows PowerShell script s
 Saves the script session results in the system, even after you have received them. By default, the script session results and the session itself are deleted when they are retrieved. -KeepResult parameter has the -KeepSession parameter implied in its usage.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -33,7 +33,7 @@ Saves the script session results in the system, even after you have received the
 Causes the receiving of the session results to not destroy the session after the cmdlet has executed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -45,7 +45,7 @@ Causes the receiving of the session results to not destroy the session after the
 Add this parameter to receive the host output content. The result of the command execution will basically be what the session would print if it was interactive.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -57,7 +57,7 @@ Add this parameter to receive the host output content. The result of the command
 Gets the results of script session with the specified IDs. The ID is a string that uniquely identifies the script session within the server. You can type one or more IDs \(separated by commas\). To find the ID of a script session, type "Get-ScriptSession" without parameters.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -69,7 +69,7 @@ Gets the results of script session with the specified IDs. The ID is a string th
 Specifies the script session for which results are being retrieved. Enter a variable that contains the script session or a command that gets the script session. You can also pipe a script session object to Receive-ScriptSession.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |

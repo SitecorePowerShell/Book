@@ -38,7 +38,7 @@ The following abbreviations are aliases for this cmdlet:
 Database to contain the item to be deserialized.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -50,7 +50,7 @@ Database to contain the item to be deserialized.
 The item to be serialized.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -62,7 +62,7 @@ The item to be serialized.
 Name of the preset to be deserialized.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -74,7 +74,7 @@ Name of the preset to be deserialized.
 Path to the item on the drive but without .item extension. If the item does not exist in the Sitecore tree yet, you need to pass the parent item path.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -86,7 +86,7 @@ Path to the item on the drive but without .item extension. If the item does not 
 If included in the execution - dederializes both the item and all of its children.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -98,7 +98,7 @@ If included in the execution - dederializes both the item and all of its childre
 The directory which is the root of serialization. Trailing slash character is required. if not specified the default root will be used.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -110,7 +110,7 @@ The directory which is the root of serialization. Trailing slash character is re
 Tells Sitecore if each of the items should be created with a newly generated ID, e.g. Import-Item -path "c:\project\data\serialization\master\sitecore\content\articles" -root "c:\project\data\serialization\" -usenewid -recurse
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -122,7 +122,7 @@ Tells Sitecore if each of the items should be created with a newly generated ID,
 If set Sitecore will use EventDisabler during deserialization, e.g.: Import-Item -path "c:\project\data\serialization\master\sitecore\content\articles" -root "c:\project
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -134,7 +134,7 @@ If set Sitecore will use EventDisabler during deserialization, e.g.: Import-Item
 Forces item to be updated even if it has not changed.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

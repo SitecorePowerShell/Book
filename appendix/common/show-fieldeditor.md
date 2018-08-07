@@ -31,7 +31,7 @@ Array of names of the fields to be edited.
 This parameter supports globbing so you can simply use "_" to allow editing of all fields. If a field is prefixed with a dash - this field will be excluded from the list of fields. e.g. the following will display all fields except title from Show-FieldEditor -Path "master:\content\home" -Name "_", "-Title"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -43,7 +43,7 @@ This parameter supports globbing so you can simply use "_" to allow editing of a
 Title of the dialog containing the field editor.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -55,7 +55,7 @@ Title of the dialog containing the field editor.
 Width of the dialog containing the field editor.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -67,7 +67,7 @@ Width of the dialog containing the field editor.
 Height of the dialog containing the field editor.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -79,7 +79,7 @@ Height of the dialog containing the field editor.
 Add this parameter to add standard fields to the list that is being considered to be displayed
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -91,7 +91,7 @@ Add this parameter to add standard fields to the list that is being considered t
 The item to be edited.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -103,7 +103,7 @@ The item to be edited.
 Path to the item to be edited - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -115,7 +115,7 @@ Path to the item to be edited - additionally specify Language parameter to fetch
 Id of the the item to be edited - additionally specify Language parameter to fetch different item language than the current user language.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -127,7 +127,7 @@ Id of the the item to be edited - additionally specify Language parameter to fet
 Database containing the item to be edited - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -139,7 +139,7 @@ Database containing the item to be edited - can work with Language parameter to 
 Language that will be edited. If not specified the current user language will be used. Globbing/wildcard supported.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -151,7 +151,7 @@ Language that will be edited. If not specified the current user language will be
 If added this parameter tells editor to preserve the original item field sections, otherwise all fields are placed in a single section Named by SectionTitle parameter and having the SectionIcon icon.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -163,7 +163,7 @@ If added this parameter tells editor to preserve the original item field section
 If PreserveSections is not added to parameters - this parameter provides a title for the global section all fields are placed under.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -175,7 +175,7 @@ If PreserveSections is not added to parameters - this parameter provides a title
 If PreserveSections is not added to parameters - this parameter provides a iconfor the global section all fields are placed under.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

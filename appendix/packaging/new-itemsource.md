@@ -19,7 +19,7 @@ Creates new Item source that can be added to a Sitecore package. Item provided t
 The item to be added as the root of the source.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -31,7 +31,7 @@ The item to be added as the root of the source.
 Name of the item source.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -43,7 +43,7 @@ Name of the item source.
 Add this parameter if you want to skip versions of the item from being included in the source and only include the version provided.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 2 |
 | Default Value |  |
@@ -55,7 +55,7 @@ Add this parameter if you want to skip versions of the item from being included 
 Database containing the item to be added - can work with Language parameter to narrow the publication scope.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 3 |
 | Default Value |  |
@@ -67,7 +67,7 @@ Database containing the item to be added - can work with Language parameter to n
 You can provide the Root as sitecore native path instead of specifying it through. Do not include Item in such case as Item will take priority over Root.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | 4 |
 | Default Value |  |
@@ -85,7 +85,7 @@ Specifies what installer should do if the item already exists. Possible values:
 * SideBySide - all new item will be created. 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
@@ -102,7 +102,7 @@ Specifies what installer should do if the item already exists and InstallMode is
 * Merge - All versions with the same number in both packages are replaced with versions from installed package. All versions which are in the package but not in the target are added. All versions which are not in the package but are in the target remains unchanged. This option also preserves history, however it might overwrite some of the changes. Other languages remains unchanged. All child items which are in the package are changed. 
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |

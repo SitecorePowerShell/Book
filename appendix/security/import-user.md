@@ -32,7 +32,7 @@ Fully Qualified Name
 ```
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -50,7 +50,7 @@ To get all the roles, use the asterisk wildcard: Import-User -Filter \*
 To get all the roles in a domain use the following command: Import-User -Filter "sitecore\*"
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -62,7 +62,7 @@ To get all the roles in a domain use the following command: Import-User -Filter 
 User object retrieved from the Sitecore API or using the Get-User command identifying the user account to be deserialized.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | 1 |
 | Default Value |  |
@@ -74,7 +74,7 @@ User object retrieved from the Sitecore API or using the Get-User command identi
 Path to the file the user should be loaded from.
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | true |
 | Position? | named |
 | Default Value |  |
@@ -86,7 +86,7 @@ Path to the file the user should be loaded from.
 Specifies the serialization root directory. If this parameter is not specified - the default Sitecore serialization folder will be used \(unless you're reading from an explicit location with the -Path parameter\).
 
 | Aliases |  |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Required? | false |
 | Position? | named |
 | Default Value |  |
