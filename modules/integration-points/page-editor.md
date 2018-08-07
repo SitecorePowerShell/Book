@@ -2,7 +2,7 @@
 
 ## Notification
 
-The _Notification_ integration adds a notification to the Page Editor. The script is executed every time the page loads.
+The _Notification_ integration reveals to the user a notification above the content. The Sitecore rules engine may be used to control the enabled state. The script is executed every time the page loads.
 
 ![A Notification for the current date](../../.gitbook/assets/notification-information.png)
 
