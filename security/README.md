@@ -2,6 +2,10 @@
 
 You need to be mindful that Sitecore PowerShell Extensions is a very sharp tool and while it can be leveraged to do great things, it can also be a vector of dangerous attacks if not secured properly. This is why we recommend that you **do not install** it on Content Delivery instances and if possible avoid deploying it on servers that face Internet altogether.
 
+{% hint style="danger" %}
+Installing SPE in internet facing \(DMZ\) scenarios is not recommend. Please avoid installing in the Content Delivery instances.
+{% endhint %}
+
 ## Security Policies
 
 There are two main security policies to consider when using the SPE module:
@@ -13,7 +17,11 @@ There are two main security policies to consider when using the SPE module:
 
 The first policy relates to the Application Pool service account running in IIS. The Windows PowerShell runspace will have access to the local system via providers \(i.e. FileSystem, Registry\), and be managed through the Console or ISE. If the service account is capable of removing files from the root directory, then SPE can accomplish the same.
 
-When using the IIS identities such as _ApplicationPoolIdentity_ and _NetworkService_ the scripts will not have access to directories outside of the application such as the drive root, but you should perform a due dilligence to make sure this is the case! You may also notice that the _$HOME_ variable is empty; this is because only named service accounts have profiles.
+When using the IIS identities such as _ApplicationPoolIdentity_ and _NetworkService_ the scripts may have access to directories outside of the application such as the drive root; you should perform a due dilligence to make sure this is the case! You may also notice that the _$HOME_ variable is empty; this is because only named service accounts have profiles.
+
+{% hint style="warning" %}
+The application pool service account can give SPE access to many features in the OS.
+{% endhint %}
 
 ### Sitecore User Account
 
@@ -30,26 +38,26 @@ The following settings are configured under `core:\content\Applications\PowerShe
 | PowerShell Runner | sitecore\Sitecore Client Users \(read\) |
 | PowerShell Reports | No default settings. See [here](../modules/integration-points/reports/) for instructions. |
 
-**Note:** The security is validated _OnLoad_.
+**Note:** The security is validated in each SPE application within the function `OnLoad`.
 
 **Menu Item Security**  
 The following settings are configured under `core:\content\Applications\Content Editor\Context Menues\Default\`.
 
 | **Feature** | **Visibility** | **Command State** |
 | :--- | :--- | :--- |
-| Edit Script | sitecore\Developer \(read\) | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden** |
-| Console | sitecore\Developer \(read\) | **Enabled** until user is _non-admin_ and not in _sitecore\Sitecore Client Developing_ |
-| Script | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** |
+| Edit with ISE | sitecore\Developer \(read\) | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden** |
+| Console | sitecore\Developer \(read\) | **Enabled** when user is _admin_ or in the role _sitecore\Sitecore Client Developing_ otherwise **Hidden** |
+| Scripts | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** when the service and user are authorized to execute otherwise **Hidden** |
 
-**Note:** See the _Interactive_ section on _PowerShell Script Library_ and _PowerShell Script_ items for visibility and enabled rules. To hide each feature you can change also the security settings for the roles that should not see the menu.
+**Note:** See the _Interactive_ section on _PowerShell Script Library_ and _PowerShell Script_ items for visibility and enabled rules. To hide each feature you can change the security settings for the roles that should not see the menu.
 
 ## Security Hardening
 
-The following section outlines steps you can take to minimize the surface area for attack. The following topics describe how to manage security for interfaces and services to the various parts of the module.
+The following section outlines steps you can take to minimize the surface area for attack. The following topics describe how to manage security for interfaces and services for the various parts of the module.
 
 ### Session Elevation
 
-The various [interfaces](../interfaces/) bundled with the module provide convenient ways to interact with the Sitecore API. The module provides a **User Account Control** feature akin to that of Microsoft Windows.
+The [interfaces](../interfaces/) bundled with the module provide convenient ways to interact with the Sitecore API. The module provides a **User Account Control** \(UAC\) feature akin to that of Microsoft Windows.
 
 #### User Account Control
 
@@ -73,6 +81,8 @@ The object which expires after a predetermined time. These can be unique to each
 | name | unique string used for the gate _token_ attribute |
 | expiration | timespan used to determine the elevated session lifetime \(hh:mm:ss\) |
 | elevationAction | action to perform when session elevation is triggered \(allow, block, password\) |
+
+Actions supported out of the box:
 
 * **Allow** - Always allow the session to run elevated without prompting the user for permission. This should never be used outside of a developer's machine.
 * **Block** - Always block the session from running elevated without prompting the user for permission.
@@ -127,7 +137,7 @@ The following warning is rendered in the ISE while the session state is elevated
 
 ### Configure Web Services
 
-The web services providing external access to Sitecore are disabled by default. You can override by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
+The web services providing external access to Sitecore are disabled by default. You can override this behavior by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
 
 Look for the following section and enable as needed.
 
