@@ -1,12 +1,16 @@
 # Contributor Guide
 
+{% hint style="warning" %}
+Support for Sitecore 7 has discontinued with SPE 5.0.
+{% endhint %}
+
 The following guide should provide you with enough information to setup a development environment configured to contribute to SPE. We'll begin with a single installation of Sitecore 8+.
 
 The solution requires Visual Studio 2015 or later.
 
 > This guide assumes a source root location of "C:\Source" and a site root location of "C:\inetput\wwwroot". These are not prerequisites of the project, and you can use whatever folder locations suit you.
 
-## Single Instance for Sitecore 8
+## Single Instance for Sitecore 8 & 9
 
 1. Meet the prerequisites found [here](./)
 2. Install Sitecore 8+ to a folder of your choice, for example `C:\inetpub\wwwroot\SitecoreSPE_8`
