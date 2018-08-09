@@ -1,6 +1,6 @@
 # Variables
 
-SPE provides some convenient variables out of the box for use in running commands and scripts. Many of the variables prefixed with _Sitecore_ derive from the Sitecore.config settings. Run the command `Get-Variable` to see the complete list.
+There are several variables available out of the box for use in running commands and scripts. Many of the variables prefixed with _Sitecore_ derive from the Sitecore.config settings. Run the command `Get-Variable` to see the complete list available in the currently running session.
 
 | **Variable** | **Example** |
 | :--- | :--- |
@@ -25,5 +25,5 @@ SPE provides some convenient variables out of the box for use in running command
 | SitecoreTempFolder | C:\Inetpub\wwwroot\Console\Website\temp |
 | SitecoreVersion | 8.2.160729 |
 
-**Note:** Any new variables created are stored within the session of console instance; when the session ends the variables are removed. You'll also need to be careful not to overwrite the built-in variables.
+**Note:** Any new variables created are stored within the current session; when the session ends the variables are removed. Be careful not to overwrite the built-in variables.
 
