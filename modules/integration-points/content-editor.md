@@ -1,7 +1,3 @@
----
-description: Visual components made available to users in the Content Editor.
----
-
 # Content Editor
 
 ## Context Menu
