@@ -1,4 +1,4 @@
-# Table of contents
+# Summary
 
 * [Introduction](README.md)
 * [Disclaimer](disclaimer.md)
@@ -9,11 +9,11 @@
   * [Scripting](interfaces/scripting.md)
   * [Interface Configuration](interfaces/interface-configuration.md)
   * [Interactive Dialogs](interfaces/interactive-dialogs.md)
-  * [Variables](interfaces/variables.md)
-  * [Providers](interfaces/providers.md)
 * [Working with Items](working-with-items/README.md)
   * [Item Languages](working-with-items/item-languages.md)
   * [Item Renderings](working-with-items/item-renderings.md)
+  * [Variables](interfaces/variables.md)
+  * [Providers](interfaces/providers.md)
 * [Modules](modules/README.md)
   * [Libraries and Scripts](modules/libraries-and-scripts.md)
   * [Integration Points](modules/integration-points/README.md)
