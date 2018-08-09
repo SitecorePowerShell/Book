@@ -10,6 +10,7 @@
   * [Interface Configuration](interfaces/interface-configuration.md)
   * [Interactive Dialogs](interfaces/interactive-dialogs.md)
   * [Variables](interfaces/variables.md)
+  * [Providers](interfaces/providers.md)
 * [Working with Items](working-with-items/README.md)
   * [Item Languages](working-with-items/item-languages.md)
   * [Item Renderings](working-with-items/item-renderings.md)
