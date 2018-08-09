@@ -1,39 +1,41 @@
 # Scripting
 
-The Integrated Scripting Environment \(ISE\) is a great way to group together commands and save for later use. Think of the ISE as a beefed up version of the Console. The default configuration for SPE requires the ISE to be in an [Elevated Session State](../security/) before executing scripts.
+The Integrated Scripting Environment \(ISE\) is a great way to group together commands and save for later use. This tool helps you write scripts in Powerful Ways! 
 
-The following figure shows the ISE when the User Account Controls \(UAC\) are disabled. While this is a common configuration for developers, we highly encourage you to ensure UAC is enabled in higher environments.
+The default security configuration for SPE requires the ISE to be in an [Elevated Session State](../security/) before executing scripts. The following figure shows the ISE when the User Account Controls \(UAC\) are disabled. While this is a common configuration for developers, we highly encourage you to ensure UAC is enabled in higher environments.
+
+Let's have a quick walk through of each ribbon tab available.
 
 ### Home Tab
 
 ![PowerShell ISE](../.gitbook/assets/ise-empty.png)
 
 * **Write:**
-  * New - Creates a new script or module.
-  * Open - Opens an existing script for the library.
-  * Save - Saves the current script to the library.
-  * Save As - Saves a copy of the current script to the library.
-  * Reload - Opens the original copy of the current script without saving any modifications.
+  * **New** - Creates a new script or module.
+  * **Open** - Opens an existing script for the library.
+  * **Save** - Saves the current script to the library.
+  * **Save As** - Saves a copy of the current script to the library.
+  * **Reload** - Opens the original copy of the current script without saving any modifications.
 * **Script Execution:**
-  * Execute - Runs the current script as a background job or in the http context.
-  * Selection - Runs the selected text of the current script.
-  * Debug - Runs the current script with the debugging mode enabled.
-  * Abort - Stops the execution of an executing script.
+  * **Execute** - Runs the current script as a background job or in the `HttpContext`.
+  * **Selection** - Runs the selected text of the current script.
+  * **Debug** - Runs the current script with the debugging mode enabled. A temporary file is generated on the file system to support the use of breakpoints.
+  * **Abort** - Stops the execution of an executing script.
 * **Context:**
-  * Context - Specifies the current item in the script. Often denoted as a _._ \(dot\) or _$pwd_ \(present working directory\). An MRU and tree view are provided for choosing a path.
-  * Session - Specifies the session to use when executing the script. Reused sessions live in the _HttpSession_. Options include the session created for the ISE instance, One-Time session, or the Persistent Session ID configured on the script.
+  * **Context** - Specifies the current item in the script. Helpful if you write a script dependent on a specific path, or the current directory is denoted as a _`.`_ \(dot\) or _`$pwd` \(_present working directory\). An MRU and tree view are provided for choosing a path.
+  * **Session** - Specifies the session to use when executing the script. Reused sessions live in the _`HttpSession`_. Options include the session created for the _ISE instance_, _One-Time session_, or the _Persistent Session ID_ configured on the script.
 * **UI Context:**
-  * Language - Specifies the context language to use when executing the script.
-  * User - Specifies the context user to impersonate when executing the script. This can be used to emulate `UserSwitcher` code.
+  * **Language** - Specifies the context language to use when executing the script.
+  * **User** - Specifies the context user to impersonate when executing the script. This can be used to emulate `UserSwitcher` code.
 
 ### Settings Tab
 
 ![ISE Settings Tab](../.gitbook/assets/ise-settings.png)
 
 * **Preferences:**
-  * Settings - This is where you configure the Console and ISE font family, font size, and other useful things.
+  * **Settings** - This is where you configure the Console and ISE font family, font size, and other useful things.
 * **Integration:**
-  * Rebuild All - This is where you rebuild the integration points for Control Panel, Gutters, and Ribbons. Without running this you will not see those integrations appear \(or disappear\).
+  * **Rebuild All** - This is where you rebuild the integration points for Control Panel, Gutters, and Ribbons. Without running this you will not see those integrations appear \(or disappear\).
 
 ### Plugins Tab
 

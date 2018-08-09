@@ -1,4 +1,4 @@
-## Providers
+# Providers
 
 You can interact with the providers typically available in the standard Windows PowerShell Console. Below are some of the important providers. Run the command `Get-PSProvider` to see the complete list.
 
@@ -17,3 +17,4 @@ The console prompt typically begins with `PS master:\>`. The present working dir
 ```
 
 **Note:** Include the backslash in the path \(i.e. **C:\**\) to get the root of the drive when interacting with the _FileSystem_ provider; the behavior seen is different than you might expeect because of _w3wp.exe_. See issue \#[314](https://github.com/SitecorePowerShell/Console/issues/314).
+

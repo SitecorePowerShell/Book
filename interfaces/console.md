@@ -1,8 +1,8 @@
 # Console
 
-The SPE Console is a command line interface \(CLI\) designed for efficiency. The console provides a streamlined tool for working with Windows PowerShell and Sitecore. The default configuration for SPE requires the Console to be in an [Elevated Session State](../security/) before allowing the execution of commands.
+The Console is a command line interface \(CLI\) designed for efficiency, providing a streamlined tool for working with Windows PowerShell and Sitecore. 
 
-The following figure shows the Console when the User Account Controls \(UAC\) are disabled. While this is a common configuration for developers, we highly encourage you to ensure UAC is enabled in higher environments.
+The default security configuration for SPE requires the Console to be in an [Elevated Session State](../security/) before allowing the execution of commands. The following figure shows the Console when the User Account Controls \(UAC\) are disabled. While this is a common configuration for developers, we highly encourage you to ensure UAC is enabled in higher environments.
 
 ![PowerShell Console](../.gitbook/assets/cli-empty%20%281%29.png)
 
