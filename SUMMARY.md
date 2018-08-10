@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
 * [Introduction](README.md)
 * [Disclaimer](disclaimer.md)
@@ -12,8 +12,8 @@
 * [Working with Items](working-with-items/README.md)
   * [Item Languages](working-with-items/item-languages.md)
   * [Item Renderings](working-with-items/item-renderings.md)
-  * [Variables](interfaces/variables.md)
-  * [Providers](interfaces/providers.md)
+  * [Variables](working-with-items/variables.md)
+  * [Providers](working-with-items/providers.md)
 * [Modules](modules/README.md)
   * [Libraries and Scripts](modules/libraries-and-scripts.md)
   * [Integration Points](modules/integration-points/README.md)

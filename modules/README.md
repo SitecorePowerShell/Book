@@ -1,10 +1,10 @@
 # Modules
 
-Sitecore PowerShell Extensions provides a way to organize your scripts into _modules_.
+Sitecore PowerShell Extensions provides an organization structure composed of _modules_, _libraries_, and _scripts_. Modules make up the highest level and can be grouped together by module folders.
 
 Some benefits to using modules:
 
-* The integration points contained within each module can be enabled or disabled globally. For this to take full affect the integration should be rebuilt in the ISE.
+* The [integration points](integration-points/) contained within each module can be enabled or disabled globally. For this to take full affect the integration should be rebuilt in the ISE.
 * Organization of custom scripts is a cinch.
 * More reasons can be found in Adam's [post](https://github.com/SitecorePowerShell/Book/tree/9c7126d7a38df6ef372e8baef52f9a02baabd550/modules/[https:/blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/]/README.md).
 

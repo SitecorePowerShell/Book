@@ -28,5 +28,5 @@ The console prompt typically begins with `PS master:\>`. The present working dir
 
 ## Variables
 
-Read more about the different variables [here](variables.md).
+Read more about the different variables [here]().
 

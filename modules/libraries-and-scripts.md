@@ -10,9 +10,9 @@ The library items represent a collection of scripts, and may be structured with 
 
 You'll find that with the _Integration Points_ some libraries should be created with specific names \(i.e. Content Editor, Control Panel\).
 
-As a best practice we recommend that the _Function_ library consist of reusable functions while other libraries contain the solution specific scripts.
+As a best practice we recommend that the _Functions_ library consist of reusable scripts containing PowerShell functions \(i.e. `Do-Something`\) while other libraries contain the solution specific scripts \(i.e. `MakeScriptingGreatAgain`\).
 
-**Example:** The following demonstrates the use of the _Function_ script library containing _Get-DateMessage_.
+**Example:** The following demonstrates the use of the _Functions_ script library containing _Get-DateMessage_.
 
 ```text
 # /sitecore/system/modules/powershell/script library/spe rocks/functions/get-datemessage
@@ -48,13 +48,13 @@ Some names we've used included:
 * User Interaction
 * **Web API**
 
-Many of the of the libraries are integration points for the module.
+**Note:** Many of the of the libraries are integration points for the module. When the integration point wizard runs, you will see that these can be generated automatically.
 
 ### Fields
 
 **Interactive** : The following fields support the two custom rules as well as a variety of out-of-the-box rules.
 
-* **ShowRule** \(Show if rules are met or not defined\)
+* **ShowRule** \(Show if rules are met or not defined\) - typically controls visibility of integration points.
   * **PowerShell**
     * where _specific_ persistent PowerShell session was already initiated
     * where _specific_ persistent PowerShell session was already initiated and has the _specific_ variable defined and not null
@@ -62,7 +62,7 @@ Many of the of the libraries are integration points for the module.
   * **PowerShell ISE**
     * when _length_ script length is _compares to_ _number_ characters long
     * when the edited script is _in a state_
-* **EnableRule** \(Enable if rules are met or not defined\)
+* **EnableRule** \(Enable if rules are met or not defined\) - typically controls enabled state of integration points.
   * _**Same as above**_ 
 
 ## PowerShell Script
