@@ -2,7 +2,7 @@
 
 ## General
 
-We generally see issues occurring due to an incompatible version of Windows PowerShell. Be sure to install version 3 or later.
+We generally see issues occurring due to an incompatible version of Windows PowerShell. Be sure to install Windows PowerShell version 3 or newer.
 
 ## Installation
 
