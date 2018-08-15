@@ -26,3 +26,4 @@ There are several variables available out of the box for use in running commands
 | SitecoreVersion | 8.2.160729 |
 
 **Note:** Any new variables created are stored within the current session; when the session ends the variables are removed. Be careful not to overwrite the built-in variables.
+

@@ -242,6 +242,26 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 </configuration>
 ```
 
+**Example:** The following configuration grants access to custom roles without removing any existing roles.
+
+```text
+<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <powershell>
+      <services>
+        <remoting>
+          <patch:attribute name="enabled">true</patch:attribute>
+          <authorization>
+            <add Permission="Allow" IdentityType="User" Identity="sitecore\test1"  desc="test1" />
+            <add Permission="Allow" IdentityType="User" Identity="sitecore\test2"  desc="test2" />
+          </authorization>
+        </remoting>
+      </services>
+    </powershell>
+  </sitecore>
+</configuration>
+```
+
 #### IIS level security
 
 Deny access to the web services for unauthenticated users and roles using the `<deny>` element as described [here](https://msdn.microsoft.com/en-us/library/8aeskccd%28v=vs.71%29.aspx) in `sitecore modules\PowerShell\Services\web.config`.
