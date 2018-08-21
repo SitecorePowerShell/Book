@@ -113,3 +113,9 @@ Get-Rendering -Item $item -PlaceHolder "main" |
   Foreach-Object { Set-Rendering -Item $item -Instance $_ -DataSource $null -FinalLayout }
 ```
 
+### Further Reading
+
+* [Parse raw layout xml and count components](https://sitecore.stackexchange.com/questions/4952/get-amount-of-components-on-final-layout-programmatically)
+
+
+
