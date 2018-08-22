@@ -79,3 +79,5 @@ Here is what users may see in the event they do not have the appropriate access.
 
    ![Reports with Access](../../../.gitbook/assets/reports-menuwithaccess.png)
 
+**Note:** The role `sitecore\Sitecore Client Maintaining` is granted access to the reports by default.
+
