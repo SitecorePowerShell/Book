@@ -228,6 +228,14 @@ Home         en-GB    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Hjem         da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 ```
 
+**Example:** The following retrieves items matching the query with a specified ISO date and present in a report dialog.
+
+```text
+$isoDate = [Sitecore.DateUtil]::ToIsoDate([datetime]::Today)
+Get-Item -Path master: -Query "/sitecore/content/home//*[@__Publish > '$($isoDate)']" | 
+    Show-ListView -Property ID,Name,ItemPath
+```
+
 ### Get-Item : by Id
 
 **Example:** The following retrieves an item by id.
