@@ -540,6 +540,13 @@ There is a always a better way to do something. Moving items en masse is certain
 Move-Item -Path "master:\content\home\sample item\Sample Item 1" -Destination "master:\content\home\sample item 2\"
 ```
 
+Example: The following gets an item and moves to a new parent node, along with all the children.
+
+```text
+Get-Item -Path "master:" -ID "{65736CA0-7D69-452A-A16F-2F42264D21C5}" | 
+    Move-Item -Destination "master:{DFDDF372-3AB7-45B1-9E7C-0D0B27350439}"
+```
+
 ## Creating Items
 
 ### New-Item
