@@ -117,5 +117,5 @@ The _Warning_ integration reveals a notification to the user above content. The 
 
 ![License Expiration Warning](../../.gitbook/assets/warning-notification-for-licensing.png)
 
-Alan provided a nice example [here](https://github.com/SitecorePowerShell/Book/tree/5daee3160885dadd7031fee723dccf12a33abd7b/modules/integration-points/[https:/alan-null.github.io/2016/04/content-editor-notifications]/README.md) on setting up the warning with commands.
+Alan provided a nice example [here ](https://alan-null.github.io/2016/04/content-editor-notifications)on setting up the warning with commands.
 
