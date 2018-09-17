@@ -4,6 +4,8 @@ Closes the runner job window after the script completes.
 
 ## Syntax
 
+Close-Window
+
 ## Detailed Description
 
 Ensures the runner process window is closed after the script finishes execution. This is commonly used when the runner should close after a report runs while in the Desktop mode.
