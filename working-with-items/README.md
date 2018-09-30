@@ -62,7 +62,7 @@ The following commands provide you with the core methods needed to manage your c
 
 | **Parameter Name** | **Description** | **Copy-Item** | **Get-Item** | **Get-ChildItem** | **Move-Item** | **New-Item** | **Remove-Item** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| AmbiguousPaths | More than one item matches the criteria so show them all. | – | ✓ | ✓ | – | – | – |
+| AmbiguousPaths | More than one item matches the criteria so show them all. | – | ✓ | - | – | – | – |
 | Database | The specified database will be used. Requires the ID to be set. | – | ✓ | – | – | – | – |
 | DestinationItem | Parent item to receive the copied item. | ✓ | – | – | ✓ | – | – |
 | FailSilently | Unauthorized access errors will be suppressed | ✓ | – | – | ✓ | – | ✓ |
