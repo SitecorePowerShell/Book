@@ -215,6 +215,8 @@ The preferred way to override the settings is through the use of a configuration
 </configuration>
 ```
 
+**Note:** When using the attribute `requireSecureConnection`, you may find that this causes a 403 status code when testing against a server hosted behind a load balancer. If the load balancer maintains the TLS certificate and forwards traffic to a backend web server over port 80 .Net will not recognize this as a secure connection.
+
 ### Restrict Users and Roles
 
 #### Sitecore level security
