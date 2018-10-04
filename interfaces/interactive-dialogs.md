@@ -131,6 +131,7 @@ Read-Variable @props
 * droptree
 * info
 * multilist
+* multilist search
 * multiple user
 * multiple user role
 * multiple role
