@@ -2,7 +2,7 @@
 
 ## Notification
 
-The _Notification_ integration reveals to the user a notification above the content. The Sitecore rules engine may be used to control the enabled state. The script is executed every time the page loads.
+The _Notification_ integration reveals to the user a notification above the content. The Sitecore rules engine may be used to control the enabled state; simply configure the **Enable** rule on the script. The script is executed every time the page loads.
 
 ![A Notification for the current date](../../.gitbook/assets/notification-information.png)
 
@@ -30,7 +30,7 @@ The _Experience Button_ integration adds a button to the Page Editor. Rules can 
 1. Begin by adding a new script to the _Experience Button_ library. The name of the script will appear in the tooltip.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 3. Change the icon of the item to match the script purpose.
-4. Configure any rules as needed.
+4. Configure any **Enable** or **Show** rules as needed.
 
 ![An Experience Button for sending emails](../../.gitbook/assets/experience-button-with-tooltip.png)
 

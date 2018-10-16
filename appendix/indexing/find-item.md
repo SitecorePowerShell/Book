@@ -4,7 +4,9 @@ Finds items using the Sitecore Content Search API.
 
 ## Syntax
 
-Find-Item \[-Index\] &lt;String&gt; \[-Criteria &lt;SearchCriteria\[\]&gt;\] \[-Where &lt;String&gt;\] \[-WhereValues &lt;Object\[\]&gt;\] \[-OrderBy &lt;String&gt;\] \[-First &lt;Int32&gt;\] \[-Last &lt;Int32&gt;\] \[-Skip &lt;Int32&gt;\]
+```text
+Find-Item [-Index] <String> [-Criteria <SearchCriteria[]>] [-Where <String>] [-WhereValues <Object[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+```
 
 ## Detailed Description
 
@@ -30,21 +32,36 @@ Find-Item -Index sitecore\_master\_index -First 10
 
 ### -Criteria  &lt;SearchCriteria\[\]&gt;
 
-simple search criteria in the following example form:
+Simple form of search in which logical "AND" operations are needed.
 
-@{ Filter = "Equals"; Field = "\_templatename"; Value = "PowerShell Script"; }, @{ Filter = "StartsWith"; Field = "\_fullpath"; Value = "/sitecore/system/Modules/PowerShell/Script Library/System Maintenance"; }, @{ Filter = "DescendantOf"; Value = \(Get-Item "master:/system/Modules/PowerShell/Script Library/"\) }
+```text
+@{ Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; }, 
+@{ Filter = "DescendantOf"; Value = (Get-Item "master:/content/") }
+```
 
 Where "Filter" is one of the following values:
 
 * Equals
-* StartsWith,
-* Contains,
+* StartsWith
+* Contains
+* ContainsAny
+* ContainsAll
 * EndsWith
 * DescendantOf
 
 Fields by which you can filter can be discovered using the following script:
 
-Find-Item -Index sitecore\_master\_index `-Criteria @{Filter = "StartsWith"; Field = "_fullpath"; Value = "/sitecore/content/" }` -First 1 \| select -expand "Fields"
+```text
+$criteria = @(
+    @{Filter = "StartsWith"; Field = "_fullpath"; Value = "/sitecore/content/" }
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+
+Find-Item @props -First 1 | Select-Object -Expand "Fields"
+```
 
 | Aliases |  |
 | :--- | :--- |
@@ -56,7 +73,15 @@ Find-Item -Index sitecore\_master\_index `-Criteria @{Filter = "StartsWith"; Fie
 
 ### -Where  &lt;String&gt;
 
-Works on Sitecore 7.5 and later versions only.
+```text
+$props = @{
+    Index = "sitecore_master_index"
+    Where = 'TemplateName = @0 And Language=@1'
+    WhereValues = "Template Field", "en"
+}
+
+Find-Item @props
+```
 
 Filtering Criteria using Dynamic Linq syntax: [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
@@ -70,8 +95,6 @@ Filtering Criteria using Dynamic Linq syntax: [https://weblogs.asp.net/scottgu/d
 
 ### -WhereValues  &lt;Object\[\]&gt;
 
-Works on Sitecore 7.5 and later versions only.
-
 An Array of objects for Dynamic Linq "-Where" parameter as explained in: [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
 | Aliases |  |
@@ -83,8 +106,6 @@ An Array of objects for Dynamic Linq "-Where" parameter as explained in: [https:
 | Accept Wildcard Characters? | false |
 
 ### -OrderBy  &lt;String&gt;
-
-Works on Sitecore 7.5 and later versions only.
 
 Field by which the search results sorting should be performed. Dynamic Linq ordering syntax used. [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
@@ -144,46 +165,125 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-Fields by which filtering can be performed using the -Criteria parameter
+Fields by which filtering can be performed using the -Criteria parameter.
 
 ```text
-Find-Item -Index sitecore_master_index `
-          -Criteria @{Filter = "StartsWith"; Field = "_fullpath"; Value = "/sitecore/content/" } `
-          -First 1 | 
-    select -expand "Fields"
+$criteria = @(
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"}, 
+    @{Filter = "Contains"; Field = "Title"; Value = "Sitecore"}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+
+Find-Item @props
 ```
 
 ### EXAMPLE 2
 
-Find all children of a specific item including that item - return Sitecore items
+Find items using a search built by the Query Builder field.
 
 ```text
-$root = (Get-Item "master:/system/Modules/PowerShell/Script Library/")
-Find-Item -Index sitecore_master_index `
-          -Criteria @{Filter = "DescendantOf"; Field = $root } |
-    Initialize-Item
+$props = @{
+    Index = "sitecore_master_index"
+    ScopeQuery = "location:{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9};custom:title|Sitecore"
+}
+
+Find-Item @props
 ```
 
 ### EXAMPLE 3
 
-Find all Template Fields using Dynamic LINQ syntax
+Find all Template Fields using Dynamic LINQ syntax.
 
 ```text
-Find-Item `
-    -Index sitecore_master_index `
-    -Where 'TemplateName = @0 And Language=@1' `
-    -WhereValues "Template Field", "en"
+$props = @{
+    Index = "sitecore_master_index"
+    Where = 'TemplateName = @0 And Language=@1'
+    WhereValues = "Template Field", "en"
+}
+
+Find-Item @props
 ```
 
 ### EXAMPLE 4
 
-Find all Template Fields using the -Criteria parameter syntax
+Find items using a complex search predicate.
 
 ```text
-Find-Item `
-        -Index sitecore_master_index `
-        -Criteria @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"},
-                  @{Filter = "Equals"; Field = "_language"; Value = "en"}
+$criteriaTemplate = @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"; }, @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; Boost=25; }, @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; }
+$predicateTemplate = New-SearchPredicate -Operation Or -Criteria $criteriaTemplate
+
+$criteriaContent = @{Filter = "Contains"; Field = "Title"; Value = 'Sitecore'}
+$predicateTitle = New-SearchPredicate -Criteria $criteriaContent
+
+$predicateTemplateAndTitle = New-SearchPredicate -First $predicateTemplate -Second $predicateTitle -Operation And
+
+$root = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$criteriaRoot = @{Filter = "DescendantOf"; Value = $root }
+$predicateRoot = New-SearchPredicate -Criteria $criteriaRoot
+
+$predicate = New-SearchPredicate -First $predicateRoot -Second $predicateTemplateAndTitle -Operation And
+
+$props = @{
+    Index = "sitecore_master_index"
+    Predicate = $predicate
+}
+
+Find-Item @props
+```
+
+### EXAMPLE 5
+
+Find items using logical AND conditions with ContainsAny. Demonstrates that different array types are handled.
+
+```text
+$criteria = @(
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; Boost=25; },
+    @{Filter = "ContainsAny"; Field = "Title"; Value = [string[]]@('$name','$date')},
+    @{Filter = "ContainsAny"; Field = "Title"; Value = @('$name','$date')},
+    @{Filter = "ContainsAny"; Field = "Title"; Value = [System.Collections.ArrayList]@('$name','$date')},
+    @{Filter = "ContainsAny"; Field = "Title"; Value = [System.Collections.Generic.List[string]]@('$name','$date')}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+
+Find-Item @props
+```
+
+### EXAMPLE 6
+
+Find items using logical AND with ContainsAll. Demonstrates looking in multilist fields.
+
+```text
+$criteria = @(
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; Boost=25; },
+    @{Filter = "ContainsAll"; Field = "RelatedImages"; Value = @('{4D427A1D-312D-4EEE-A519-1F5700675BAF}','{4B603402-62AB-4ECB-9CAE-98790DDBC35A}')}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+
+Find-Item @props
+```
+
+### EXAMPLE 7
+
+Find an item by ID.
+
+```text
+$criteria = @(
+    @{Filter = "Equals"; Field = "_group"; Value = "{C89D37FF-3919-4D69-9925-943B67BD22D6}"}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+Find-Item @props
 ```
 
 ## Related Topics

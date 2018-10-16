@@ -11,7 +11,7 @@ The _Context Menu_ integration reveals a list of options to the user in the cont
 1. Begin by adding a new script to the _Context Menu_ library. The name of the script will appear in the context menu.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 3. Change the icon of the item to match the script purpose.
-4. Configure any rules as needed.
+4. Configure any **Enable** or **Show** rules as needed.
 
 **Note:** Examples included in the following modules
 
@@ -35,7 +35,8 @@ The _Gutter_ integration reveals a visual notification to the user in the far le
 2. Edit the script to create a new instance of `Sitecore.Shell.Applications.ContentEditor.Gutters.GutterIconDescriptor` if the right conditions are met. 
    * Set the **Icon**, **Tooltip**, and **Click** properties.
    * Return the gutter object
-3. Rebuild the gutter integration from within the ISE.
+3. Configure any **Enable** rules to ensure the script runs only when necessary.
+4. Rebuild the gutter integration from within the ISE.
    * Settings tab
    * Integration chunk
    * Sync Library with Content Editor Gutter command
@@ -53,7 +54,7 @@ The _Insert Item_ integration reveals a list of options to the user in the conte
 1. Begin by adding a new script to the _Insert Item_ library. The name of the script will appear in the context menu.
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 3. Change the icon of the item to match the script purpose.
-4. Configure any rules as needed.
+4. Configure any **Show** rules as needed.
 
 **Note:** Examples included in the following modules
 
@@ -73,7 +74,7 @@ The _Ribbon_ integration reveals commands to the user in the ribbon. The Sitecor
 4. Optionally add a short description on the item, which is found as a standard field on the item. The description will appear as a tooltip on the ribbon button.
 5. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 6. Change the icon of the item to match the script purpose.
-7. Configure any rules as needed.
+7. Configure any **Enable** or **Show** rules as needed.
 
 ![Ribbon Script Library Structure](../../.gitbook/assets/ribbon-script-structure.png)
 
@@ -109,7 +110,7 @@ The _Warning_ integration reveals a notification to the user above content. The 
 2. Edit the script to perform the appropriate actions. The script can run in the background and show dialogs.
 3. The warning notification title, text and icon should be configured in the script.
    * Include options to the warning by adding one or more secondary scripts to the script library. 
-4. Configure any rules as needed.
+4. Configure any **Enable** rules to ensure the script only runs when required.
 
 **Note:** Examples included in the following modules
 

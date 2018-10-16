@@ -6,6 +6,8 @@ Use the following in your scripts to get access to the arguments passed to the p
  $pipelineArgs = Get-Variable -Name pipelineArgs -ValueOnly
 ```
 
+Configure any **Enable** rules to ensure your script only runs when necessary.
+
 ## Logging In
 
 **Note:** Examples included in the following modules

@@ -39,6 +39,8 @@ Let's have a quick walk through of each ribbon tab available.
 
 ### Plugins Tab
 
+The plugins feature is a great way to add custom behaviors while in the ISE. Any plugin added can make use of the **Enable** or **Show** rules to control how it appears in the ribbon.
+
 ![ISE Plugins Tab](../.gitbook/assets/ise-plugins.png)
 
 * **Platform:** Custom scripts added to the _ISE Plugins_ integration point script library will appear here.

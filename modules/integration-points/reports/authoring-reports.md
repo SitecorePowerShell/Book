@@ -39,7 +39,9 @@ The **Authorable Reports** module has a few points of interest.
 
 ## Static Reports
 
-The **Content Reports** module includes other reports used for auditing. Below are some examples on how to create your own.
+The **Content Reports** module includes other reports used for auditing. Below are some examples on how to create your own. You can control the report menu with the **Enable** and **Show** rules. This can be helpful if you want to secure specific reports with security roles.
+
+The rules engine can be used the control the report export and action commands. Use the **Enable** and **Show** rules to make the necessary changes.
 
 **Examples:**
 
