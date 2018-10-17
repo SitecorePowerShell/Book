@@ -71,23 +71,23 @@ There are a number of use cases for the **EnableRule** and **ShowRule**. The fol
 
 | ShowRule | EnableRule |
 | :--- | :--- |
-| [Insert Item](integration-points/content-editor.md#insert-item) |  |
-| [Ribbon](integration-points/content-editor.md#ribbon) | [Ribbon](integration-points/content-editor.md#ribbon) |
-| [Context Menu](integration-points/content-editor.md#context-menu) | [Context Menu](integration-points/content-editor.md#context-menu) |
-| IISE Plugin | ISE Plugin |
-| Report List View Action | Report List View Action |
-| Report List View Export | Report List View Export |
-|  | [Gutter](integration-points/content-editor.md#gutter) |
+| Content Editor [Context Menu](integration-points/content-editor.md#context-menu) | Content Editor [Context Menu](integration-points/content-editor.md#context-menu) |
+|  | Content Editor [Gutter](integration-points/content-editor.md#gutter) |
+| Content Editor [Insert Item](integration-points/content-editor.md#insert-item) |  |
+| Content Editor [Ribbon](integration-points/content-editor.md#ribbon) | Content Editor [Ribbon](integration-points/content-editor.md#ribbon) |
 |  | Content Editor [Warning](integration-points/content-editor.md#warning) |
+|  | [DataSources](integration-points/data-sources.md) |
+|  | [Event Handlers](integration-points/event-handlers.md) |
+| ISE Plugin | ISE Plugin |
+| [Reports](integration-points/reports/) |  |
+| Reports List View Action | Reports List View Action |
+| Reports List View Export | Reports List View Export |
 |  | Page Editor [Notification](integration-points/page-editor.md#notification) |
 |  | Page Editor [Experience Button](integration-points/page-editor.md#experience-button) |
-|  | [DataSources](integration-points/data-sources.md) |
-|  | [Tasks](integration-points/tasks/) |
-|  | [Event Handlers](integration-points/event-handlers.md) |
 |  | [Pipelines](integration-points/pipelines.md) |
-|  | [Workflow Action](integration-points/workflows.md) |
+|  | [Tasks](integration-points/tasks/) |
 | [Toolbox](integration-points/toolbox.md) |  |
-| [Reports](integration-points/reports/) |  |
+|  | [Workflow Action](integration-points/workflows.md) |
 
 ## PowerShell Script
 
