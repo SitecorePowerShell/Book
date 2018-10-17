@@ -65,6 +65,30 @@ Some names we've used included:
 * **EnableRule** \(Enable if rules are met or not defined\) - typically controls enabled state of integration points.
   * _**Same as above**_ 
 
+#### Rules Usage
+
+There are a number of use cases for the **EnableRule** and **ShowRule**. The following outlines some simple scenarios you can use the rules. Typically, if there is a UI component the **ShowRule** can be used to ensure it appears while the **EnableRule** can toggle when it can be clicked. If there is no UI component, the **EnableRule** is used to determine when the script should be executed; useful to limit creation of PowerShell runspaces.
+
+| ShowRule | EnableRule |
+| :--- | :--- |
+| [Insert Item](integration-points/content-editor.md#insert-item) |  |
+| [Ribbon](integration-points/content-editor.md#ribbon) | [Ribbon](integration-points/content-editor.md#ribbon) |
+| [Context Menu](integration-points/content-editor.md#context-menu) | [Context Menu](integration-points/content-editor.md#context-menu) |
+| IISE Plugin | ISE Plugin |
+| Report List View Action | Report List View Action |
+| Report List View Export | Report List View Export |
+|  | [Gutter](integration-points/content-editor.md#gutter) |
+|  | Content Editor [Warning](integration-points/content-editor.md#warning) |
+|  | Page Editor [Notification](integration-points/page-editor.md#notification) |
+|  | Page Editor [Experience Button](integration-points/page-editor.md#experience-button) |
+|  | [DataSources](integration-points/data-sources.md) |
+|  | [Tasks](integration-points/tasks/) |
+|  | [Event Handlers](integration-points/event-handlers.md) |
+|  | [Pipelines](integration-points/pipelines.md) |
+|  | [Workflow Action](integration-points/workflows.md) |
+| [Toolbox](integration-points/toolbox.md) |  |
+| [Reports](integration-points/reports/) |  |
+
 ## PowerShell Script
 
 The script items represent the code that will be executed.
