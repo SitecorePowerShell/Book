@@ -67,7 +67,10 @@ Some names we've used included:
 
 #### Rules Usage
 
-There are a number of use cases for the **EnableRule** and **ShowRule**. The following outlines some simple scenarios you can use the rules. Typically, if there is a UI component the **ShowRule** can be used to ensure it appears while the **EnableRule** can toggle when it can be clicked. If there is no UI component, the **EnableRule** is used to determine when the script should be executed; useful to limit creation of PowerShell runspaces.
+There are a number of use cases for the **EnableRule** and **ShowRule**. 
+
+* If there is a UI component the **ShowRule** can be used to ensure it appears while the **EnableRule** can toggle when it can be clicked.
+* If there is no UI component, the **EnableRule** is used to determine when the script should be executed; useful to limit creation of PowerShell runspaces.
 
 | ShowRule | EnableRule |
 | :--- | :--- |
