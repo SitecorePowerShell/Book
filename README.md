@@ -16,13 +16,9 @@ Support for Sitecore 7 has discontinued with SPE 5.0.
 
 The following are some helpful modules distributed with SPE.
 
-* **Tools**
-  * Authoring Instrumentation
-  * Copy Renderings
-  * Package Generator
-  * Publishing Status Gutter
 * **Core**
   * Platform
+  * X-UnitTests
 * **Maintenance**
   * Index On Demand
   * Media Library Maintenance
@@ -44,6 +40,13 @@ The following are some helpful modules distributed with SPE.
   * License Expiration
   * Random desktop background
   * Unlock user items on logout
+* **Tools**
+  * Authoring Instrumentation
+  * Copy Renderings
+  * Data Management
+  * Elevated Unlock
+  * Package Generator
+  * Publishing Status Gutter
 
 ## Community Add-ons
 
