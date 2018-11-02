@@ -236,6 +236,25 @@ Get-Item -Path master: -Query "/sitecore/content/home//*[@__Publish > '$($isoDat
     Show-ListView -Property ID,Name,ItemPath
 ```
 
+### Get-Item : by XPath
+
+The setup is not exactly like you would find in the XPath Builder but should get the job done. Read more about it [here](https://github.com/SitecorePowerShell/Console/issues/1069).
+
+**Example:** The following retrieves items matching an XPath query.
+
+```text
+$query = "ancestor-or-self::*[@@templatename='Sample Item']"
+
+# Retrieve the items with Axes and a given context item.
+$SitecoreContextItem.Axes.SelectItems($query)
+
+# Retrieve the items using the Query class and context item.
+[Sitecore.Data.Query.Query]::SelectItems($query, $SitecoreContextItem)
+
+# Retrieve the items by prepending the context path to the query.
+Get-Item -Path "master:" -Query ("$($SitecoreContextItem.Paths.Path)/$query")
+```
+
 ### Get-Item : by Id
 
 **Example:** The following retrieves an item by id.
