@@ -67,6 +67,8 @@ Have to include it as a default install for all sandboxes now."_ - [Alex Shyba](
 
 _"Thank you for the GitBook. Invaluable Reference."_ - [Nick Wesselman](https://twitter.com/techphoria414)'s [tweet](https://twitter.com/techphoria414/status/632033887632289792)
 
+_"The Sitecore powershell tools are absurdly good and helpful. I know they make a lot of people nervous, but they are incredibly well managed. Everybody should learn to sling some shell in Sitecore, you'll never look back."_ - [Christopher Campbell](https://twitter.com/RehbellOne) [tweet](https://twitter.com/RehbellOne/status/1058048820435607552)
+
 ## Training Material
 
 The following book should provide you with enough information to use and be productive with SPE. Don't worry, you will be able to use it without having to write any code.
