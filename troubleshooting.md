@@ -43,6 +43,8 @@ Be sure the module is enabled and the integrations are rebuilt from within the I
 
 * **404** error in browser console can be caused by missing SPE files, a custom pipeline, or perhaps a rewrite rule.
 * **"The request failed with an empty response."** could be caused when TLS is offloaded to a load balancer and traffic to the endpoint is no longer over HTTPS. Fixed by issue \#[1005](https://github.com/SitecorePowerShell/Console/issues/1005).
+* **"The underlying connection was closed: An unexpected error occurred on a send."** could be caused in Azure PaaS when requests are made using TLS 1.1 or lower. Setting the SecurityProtocol may help. Thanks to Jayesh Sheth for pointing to a resolution.
+  * `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
 
 
 
