@@ -5,7 +5,10 @@ Finds items using the Sitecore Content Search API.
 ## Syntax
 
 ```text
-Find-Item [-Index] <String> [-Criteria <SearchCriteria[]>] [-Where <String>] [-WhereValues <Object[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-Criteria <SearchCriteria[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-Where <String>] [-WhereValues <Object[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-Predicate <Expression<Func<SearchResultItem, bool>>>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-ScopeQuery <String>] [-Where <String>] [-WhereValues <Object[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
 ```
 
 ## Detailed Description
@@ -47,7 +50,34 @@ Where "Filter" is one of the following values:
 * ContainsAny
 * ContainsAll
 * EndsWith
-* DescendantOf
+* DescendantOf - performs a _Contains_ with the field **\_path**
+* Fuzzy
+* InclusiveRange - performs a _Between_ using `int`, `double`, `datetime`, and `string`types
+* ExclusiveRange - same as _InclusiveRange_
+* MatchesRegex - use something like `^.*$`
+* MatchesWildcard - use something like `H?li*m`
+
+Where "Field" is the Index Field name found on the `SearchResultItem` such as the following:
+
+* \_\_smallcreateddate - CreatedDate
+* \_group - ID
+* \_template - TemplateId
+* \_templatename - TemplateName
+* \_fullpath - Path
+
+Where "Value" is one of the following:
+
+* string
+* string\[\]
+* Sitecore.Data.ID
+* Sitecore.Data.Items.Item
+* Sitecore.Data.Items.Item\[\]
+* object\[\]
+* PSObject\[\]
+* System.Collections.ArrayList
+* System.Collections.Generics.List&lt;string&gt;
+
+Where "Boost" is a positive number greater than 0
 
 Fields by which you can filter can be discovered using the following script:
 
@@ -96,6 +126,30 @@ Filtering Criteria using Dynamic Linq syntax: [https://weblogs.asp.net/scottgu/d
 ### -WhereValues  &lt;Object\[\]&gt;
 
 An Array of objects for Dynamic Linq "-Where" parameter as explained in: [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -Predicate &lt;Expression&lt;Func&lt;SearchResultItem,bool&gt;&gt;&gt;
+
+Use the `New-SearchPredicate` command to build the appropriate predicates.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -ScopeQuery &lt;String&gt;
+
+When combined with the Query Builder field, a simple query can be crafted to return search results.
 
 | Aliases |  |
 | :--- | :--- |
@@ -283,6 +337,27 @@ $props = @{
     Index = "sitecore_master_index"
     Criteria = $criteria
 }
+Find-Item @props
+```
+
+### EXAMPLE 8
+
+Find items within a data range. Possible filters are `InclusiveRange` and `ExclusiveRange` .
+
+```text
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = @{
+        Field = "__smallcreateddate"
+        Filter = "InclusiveRange"
+        Value = @([datetime]"01/05/2015", [datetime]::Today)
+    }, @{
+        Field = "_name"
+        Filter = "Fuzzy"
+        Value = "sample"
+    }
+}
+
 Find-Item @props
 ```
 
