@@ -72,7 +72,7 @@ Where "Value" is one of the following:
 * Sitecore.Data.ID
 * Sitecore.Data.Items.Item
 * Sitecore.Data.Items.Item\[\]
-* object\[\]
+* object\[\] - when using `@()` you'll get this type, which will be treated as an array of strings
 * PSObject\[\]
 * System.Collections.ArrayList
 * System.Collections.Generics.List&lt;string&gt;
@@ -350,7 +350,7 @@ $props = @{
     Criteria = @{
         Field = "__smallcreateddate"
         Filter = "InclusiveRange"
-        Value = @([datetime]"01/05/2015", [datetime]::Today)
+        Value = [datetime[]]@([datetime]"01/05/2015", [datetime]::Today)
     }, @{
         Field = "_name"
         Filter = "Fuzzy"
