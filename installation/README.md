@@ -9,6 +9,10 @@
   * [Detecting your PowerShell version](https://stackoverflow.com/questions/1825585/determine-installed-powershell-version)
 * PowerShell [Execution Policy](https://technet.microsoft.com/en-us/library/ee176961.aspx) set to `RemoteSigned` \(probably optional\)
 
+{% hint style="warning" %}
+Sitecore versions 7.x and below are no longer supported with the release of SPE 5.0.
+{% endhint %}
+
 ## Download the Module
 
 The SPE module installs like any other for Sitecore.
