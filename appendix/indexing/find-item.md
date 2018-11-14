@@ -342,7 +342,7 @@ Find-Item @props
 
 ### EXAMPLE 8
 
-Find items within a data range. Possible filters are `InclusiveRange` and `ExclusiveRange` .
+Find items within a data range. Possible filters are `InclusiveRange` and `ExclusiveRange` . When using dates, only **yyyyMMdd** is considered in the comparison so no need to get too precise.
 
 ```text
 $props = @{
