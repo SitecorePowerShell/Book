@@ -2,6 +2,27 @@
 
 Thank you for taking the time to check out the latest and greatest changes for SPE. Please provide your feedback and recommend SPE on Twitter and the [Marketplace](https://marketplace.sitecore.net/en/Modules/Sitecore_PowerShell_console.aspx) or report issues on [Github](https://github.com/SitecorePowerShell/Book/tree/9c7126d7a38df6ef372e8baef52f9a02baabd550/[https:/git.io/spe]/README.md).
 
+## Version 5.0
+
+It's been exactly one year since the last release of SPE. In this version we added some powerful new features, along with improvements to the UI (icons, styles).
+
+**Note**: This major release dropped support for **Sitecore 7**. Only install this version if using Sitecore 8 or 9.
+
+* [Full issue list available on GitHub](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A5.0)
+* [Release highlights](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A5.0)
+
+### Summary of important changes
+
+#### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A5.0+is%3Aissue%20label%3Aimpact-breaking-change)
+
+* No breaking changes
+
+#### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A5.0)
+
+#### [All improvements](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Aimprovement+is%3Aclosed+milestone%3A5.0)
+
+#### [All Fixes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3Abug+is%3Aclosed+milestone%3A5.0)
+
 ## Version 4.7
 
 This release has a major focus on stability and overcoming any problems that were reported by our users.
@@ -51,7 +72,7 @@ You'll have to forgive me, I got lazy when this release came out and forgot to u
 
 #### [Breaking Changes](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+is%3Aclosed+milestone%3A4.5+is%3Aissue%20label%3Aimpact-breaking-change)
 
-* no breaking changes
+* No breaking changes
 
 #### [Major new Features](https://github.com/SitecorePowerShell/Console/issues?q=is%3Aissue+label%3A-release-highlight+is%3Aclosed+milestone%3A4.5)
 
