@@ -4,7 +4,7 @@ Thank you for taking the time to check out the latest and greatest changes for S
 
 ## Version 5.0
 
-It's been exactly one year since the last release of SPE. In this version we added some powerful new features, along with improvements to the UI (icons, styles).
+It's been exactly one year since the last release of SPE. In this version we added some powerful new features, along with improvements to the UI \(icons, styles\).
 
 **Note**: This major release dropped support for **Sitecore 7**. Only install this version if using Sitecore 8 or 9.
 
@@ -151,12 +151,12 @@ This release major focus was security and making your scripting testable and bet
 
 ### Summary of important changes
 
-#### \[Breaking Changes\]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3Aimpact-breaking-change is%3Acosed milestone%3A"4.2](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Aimpact-breaking-change%20is%3Acosed%20milestone%3A"4.2)"\)
+#### \[Breaking Changes\]\(\[[https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue) label%3Aimpact-breaking-change is%3Acosed milestone%3A"4.2\]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3Aimpact-breaking-change is%3Acosed milestone%3A"4.2\)"\](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Aimpact-breaking-change%20is%3Acosed%20milestone%3A"4.2%29"\)\)
 
 * You might want to check how your scripts behave for users in other languages as we're now setting the context language on the Job, which e.g. impacts how items are retrieved. \[694\]
 * All remotely accessible services are now disabled by default [716](https://github.com/SitecorePowerShell/Console/issues/716) so you need to provide a patch config file if you want to use SPE in your CI environment out-of-the-box.
 
-#### \[Major new Features\]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3A-release-highlight is%3Acosed milestone%3A"4.2" ](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3A-release-highlight%20is%3Acosed%20milestone%3A"4.2"%20)\)
+#### \[Major new Features\]\(\[[https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue) label%3A-release-highlight is%3Acosed milestone%3A"4.2" \]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3A-release-highlight is%3Acosed milestone%3A"4.2" \)\](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3A-release-highlight%20is%3Acosed%20milestone%3A"4.2"%20%29\)\)
 
 * `Read-Variable` cmdlet now supports validation on field and form level [728](https://github.com/SitecorePowerShell/Console/issues/728).
 * ISE now allows you to emulate script execution in context of any user or language [726](https://github.com/SitecorePowerShell/Console/issues/726).
@@ -165,11 +165,11 @@ This release major focus was security and making your scripting testable and bet
 
 #### Enhancements
 
-* Full list of improvements can be found \[here\]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3Aimprovement is%3Acosed milestone%3A"4.2" ](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Aimprovement%20is%3Acosed%20milestone%3A"4.2"%20)\)
+* Full list of improvements can be found \[here\]\(\[[https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue) label%3Aimprovement is%3Acosed milestone%3A"4.2" \]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3Aimprovement is%3Acosed milestone%3A"4.2" \)\](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Aimprovement%20is%3Acosed%20milestone%3A"4.2"%20%29\)\)
 
 #### Fixes
 
-* Full list of bugs fixed can be found \[here\]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3Abug is%3Acosed milestone%3A"4.2" ](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Abug%20is%3Acosed%20milestone%3A"4.2"%20)\)
+* Full list of bugs fixed can be found \[here\]\(\[[https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue) label%3Abug is%3Acosed milestone%3A"4.2" \]\([https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue label%3Abug is%3Acosed milestone%3A"4.2" \)\](https://github.com/SitecorePowerShell/Console/issues?utf8=✓&q=is%3Aissue%20label%3Abug%20is%3Acosed%20milestone%3A"4.2"%20%29\)\)
 
 ## Version 4.1
 

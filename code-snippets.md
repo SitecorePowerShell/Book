@@ -42,6 +42,19 @@ $field.Replace("{493B3A83-0FA7-4484-8FC9-4680991CF742}","{493B3A83-0FA7-4484-8FC
 $item.Editing.EndEdit()
 ```
 
+Example: The following adds new Ids to an existing list. Makes use of the `Sitecore.Text.ListString` class.
+
+```text
+[Sitecore.Text.ListString]$ids = $item.Fields["Rendering"].Value
+$ids.AddAt(0,"{guid1}") > $null
+$ids.Add("{guid2}") > $null
+$ids.Add("{guid3}") > $null
+
+$item.Editing.BeginEdit()
+$item.Fields["Rendering"].Value = $ids.ToString()
+$item.Editing.EndEdit() > $null
+```
+
 **Example:** The following appends a an `ID` to a set of items in all languages. It verifies that the field _Keywords_ exists.
 
 ```text
