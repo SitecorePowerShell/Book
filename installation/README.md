@@ -13,6 +13,10 @@
 Sitecore versions 7.x and below are no longer supported with the release of SPE 5.0.
 {% endhint %}
 
+## Installation Walkthrough
+
+We have a short [video tutorial here](https://youtu.be/bVqa4DAANYk) walking through the installation here. The irony is that it's recorded for Sitecore version 7.x which is no longer supported.  ¯\\_\(ツ\)\_/¯ 
+
 ## Download the Module
 
 The SPE module installs like any other for Sitecore.
