@@ -187,7 +187,7 @@ PS master:\> $renderingItem = gi master:\layout\Sublayouts\ZenGarden\Basic\Conte
 # find item you want the rendering added to
 PS master:\> $item = gi master:\content\Demo\Int\Home
 # Add the rendering to the item
-PS master:\> Add-Rendering -Item $item -PlaceHolder "main" -Rendering $renderingItem -Parameter @{ FieldName = "Content" }
+PS master:\> Add-Rendering -Item $item -PlaceHolder "main" -Instance $renderingItem -Parameter @{ FieldName = "Content" }
 ```
 
 ## Related Topics
