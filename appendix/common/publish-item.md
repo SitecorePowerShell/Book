@@ -109,6 +109,8 @@ Publishes items newer than the date provided only.
 
 ### -AsJob  &lt;SwitchParameter&gt;
 
+The Sitecore API called to perform the publish is different with this switch. You may find that events fire as expected using this.
+
 | Aliases |  |
 | :--- | :--- |
 | Required? | false |
