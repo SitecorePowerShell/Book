@@ -33,7 +33,7 @@ The solution requires Visual Studio 2015 or later.
 
    > You may notice there is a %%sourceFolder%% value in this configuration file. This is a special string that gets replaced as part of the SPE deployment with your source folder location. You don't need to update this manually.
 
-7. Open the solution in Visual Studio. Unload the `Cognfide.PowerShell.Sitecore7` for now, as it won't build. Details of how to setup Sitecore 7 support is provided later on in this tutorial.
+7. Open the solution in Visual Studio.
 8. Compile the solution. Whenever you compile the solution, SPE will be automatically deployed to the site installation paths you have set in `deploy.user.json`
 9. Login to Sitecore
 10. Navigate to `/Unicorn.aspx`. Use Unicorn to sync all projects into Sitecore.
@@ -44,14 +44,14 @@ The solution requires Visual Studio 2015 or later.
 
 Any changes you make going foward just require a build of the solution. Remember that when pulling down updates to the source, you should execute a Unicorn sync to ensure your items are up to date.
 
-## Multiple Instances, and Sitecore 7 support
+## Multiple Instances
 
-The SPE deployment process supports multiple sites and multiple versions of Sitecore. The following steps carry on from above to add further support for another Sitecore site, running version 7.x.
+The SPE deployment process supports multiple sites and multiple versions of Sitecore. The following steps carry on from above to add further support for another Sitecore site, such as 8.x or 9.x.
 
 1. Complete the steps for a Single Instance.
-2. Install Sitecore 7.x to a folder of your choice, for example `C:\inetpub\wwwroot\SitecoreSPE_7`
-3. Edit the sites definition in `deploy.user.json` to add your new Sitecore installation folder. Set the `version` property to `7`.
-4. Copy the following Sitecore dependencies to the `\Libraries\SC7` folder from your Sitecore installation:
+2. Install Sitecore 8.x/9.x to a folder of your choice, for example `C:\inetpub\wwwroot\SitecoreSPE_91`
+3. Edit the sites definition in `deploy.user.json` to add your new Sitecore installation folder. Set the `version` property to `9`.
+4. Copy the following Sitecore dependencies to the `\Libraries\SC91` folder from your Sitecore installation:
    * Sitecore.Analytics.dll
    * Sitecore.Client.dll
    * Sitecore.ContentSearch.dll
@@ -61,8 +61,7 @@ The SPE deployment process supports multiple sites and multiple versions of Site
    * Sitecore.Logging.dll
    * Sitecore.NVelocity.dll
    * Sitecore.Update.dll
-5. Make sure the `Cognfide.PowerShell.Sitecore7` project is loaded in the Visual Studio solution
-6. Follow steps 7 onward from the **Single Instance** guide above to deploy to your Sitecore 7 installation and sync the SPE items into Sitecore.
+5. Follow steps 7 onward from the **Single Instance** guide above to deploy to your Sitecore 8.x/9.x installation and sync the SPE items into Sitecore.
 
 > SPE can be deployed to as many Sitecore sites as you like. Each time you first deploy to a new installation, make sure you use Unicorn to sync the latest state of items into Sitecore.
 
