@@ -376,6 +376,15 @@ InnerField   : <link linktype="internal" text="CLICK HERE" querystring="" target
 Value        : <link linktype="internal" text="CLICK HERE" querystring="" target="" id="{263293D3-B1B3-4C2C-9A75-6BD418F376BC}" />
 ```
 
+**Example:** The following finds all of the `TextField`s and outputs to the console.
+
+```text
+$item = Get-Item -Path "master:\content\home"
+foreach($field in $item.Fields) {
+    $item.PSFields."$($field.Name)" | Where-Object { $_ -is [Sitecore.Data.Fields.TextField] }
+}
+```
+
 ### Get-Item : then change item properties
 
 We often see the following two ways of accessing and changing fields used in scripts. One uses `Set-ItemProperty` and the other is more natural to a Sitecore developer.
