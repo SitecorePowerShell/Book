@@ -27,6 +27,8 @@ Get-ChildItem -Path "master:\content\home" -Recurse
 
 ```text
 New-Item -Path "master:\content\home" -Name "Demo" -ItemType "Sample/Sample Item"
+# or
+New-Item -Path "master:\content\home" -Name "Demo" -ItemType "{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}"
 ```
 {% endtab %}
 
