@@ -1,39 +1,36 @@
 # Get-SitecoreJob
- 
-Returns list of the current sitecore jobs 
 
-## Syntax 
- 
+Returns list of the current sitecore jobs
+
+## Syntax
+
 Get-SitecoreJob
 
- 
-## Detailed Description 
- 
+## Detailed Description
+
 The Get-SitecoreJob command returns the list of the currently running jobs of Sitecore.
- 
-© 2010-2017 Implemented by Vangasewinkel Benjamin using the Adam Najmanowicz, Michael West Sitecore PowerShell Extensions. All rights reserved. 
- 
-## Parameters 
- 
+
+© 2010-2017 Implemented by Vangasewinkel Benjamin using the Adam Najmanowicz, Michael West Sitecore PowerShell Extensions. All rights reserved.
+
+## Parameters
+
 None
- 
-## Outputs 
- 
-The output type is the type of the objects that the cmdlet emits. 
- 
+
+## Outputs
+
+The output type is the type of the objects that the cmdlet emits.
+
 * Sitecore.Jobs.Job 
- 
-## Notes 
- 
+
+## Notes
+
 Help Author: Vangansewinkel Benjamin
- 
-## Examples 
- 
-### EXAMPLE 1 
- 
- 
-```powershell   
- 
+
+## Examples
+
+### EXAMPLE 1
+
+```text
 PS master:\> Get-SitecoreJob
 
 Category     : PowerShell
@@ -45,7 +42,7 @@ Status       : Sitecore.Jobs.JobStatus
 WaitHandle   : System.Threading.ManualResetEvent
 QueueTime    : 11/13/2017 1:03:18 PM
 MessageQueue : Sitecore.Jobs.AsyncUI.MessageQueue
- 
+
 Category     : Indexing
 Handle       : dca83fc7-def7-4564-ac44-987e79ffc3cd;DCI5CG6011F3Y-sc81u3contact
 IsDone       : True
@@ -55,7 +52,7 @@ Status       : Sitecore.Jobs.JobStatus
 WaitHandle   : System.Threading.ManualResetEvent
 QueueTime    : 11/13/2017 1:03:29 PM
 MessageQueue : Sitecore.Jobs.AsyncUI.MessageQueue
- 
+
 Category     : PowerShell
 Handle       : de0a1dce-45f7-44fb-81b5-02b402c1f614;DCI5CG6011F3Y-sc81u3contact
 IsDone       : False
@@ -65,14 +62,11 @@ Status       : Sitecore.Jobs.JobStatus
 WaitHandle   : System.Threading.ManualResetEvent
 QueueTime    : 11/13/2017 1:03:29 PM
 MessageQueue : Sitecore.Jobs.AsyncUI.MessageQueue
-``` 
- 
-### EXAMPLE 2 
- 
- 
- 
-```powershell   
- 
+```
+
+### EXAMPLE 2
+
+```text
 PS master:\> $jobs = Get-SitecoreJob
 PS master:\> $jobs[0].Status
 
@@ -85,29 +79,24 @@ Status       : Sitecore.Jobs.JobStatus
 WaitHandle   : System.Threading.ManualResetEvent
 QueueTime    : 11/13/2017 1:05:54 PM
 MessageQueue : Sitecore.Jobs.AsyncUI.MessageQueue
- 
-``` 
- 
-### EXAMPLE 3 
- 
- 
- 
-```powershell   
- 
+```
+
+### EXAMPLE 3
+
+```text
 PS master:\> Get-SitecoreJob | Show-ListView -Property "Category", "IsDone", "Name", "QueueTime", `
-	@{Label="Status Expiry"; Expression={$_.Status.Expiry} },
-	@{Label="Status Failed"; Expression={$_.Status.Failed} },
-	@{Label="Status State"; Expression={$_.Status.State} },
-	@{Label="Status Processed"; Expression={$_.Status.Processed} },
-	@{Label="Status Total"; Expression={$_.Status.Total} },
-	@{Label="Status Message"; Expression={$_.Status.Messages} }
-``` 
+    @{Label="Status Expiry"; Expression={$_.Status.Expiry} },
+    @{Label="Status Failed"; Expression={$_.Status.Failed} },
+    @{Label="Status State"; Expression={$_.Status.State} },
+    @{Label="Status Processed"; Expression={$_.Status.Processed} },
+    @{Label="Status Total"; Expression={$_.Status.Total} },
+    @{Label="Status Message"; Expression={$_.Status.Messages} }
+```
 
-![Example 3](../../images/screenshots/get-sitecorejobs-listview.png) 
+![Example 3](../../.gitbook/assets/get-sitecorejobs-listview.png)
 
- 
-## Related Topics 
- 
+## Related Topics
 
-* <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
-* <a href='https://www.youtube.com/watch?v=N3xgZcU9FqQ&list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b&index=9' target='_blank'>https://www.youtube.com/watch?v=N3xgZcU9FqQ&list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b&index=9</a><br/>
+* [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
+* [https://www.youtube.com/watch?v=N3xgZcU9FqQ&list=PLph7ZchYd\_nCypVZSNkudGwPFRqf1na0b&index=9](https://www.youtube.com/watch?v=N3xgZcU9FqQ&list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b&index=9) 
+

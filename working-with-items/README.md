@@ -251,8 +251,6 @@ $query = "ancestor-or-self::*[@@templatename='Sample Item']"
 $SitecoreContextItem.Axes.SelectItems($query)
 
 # Retrieve the items using the Query class and context item.
-[Sitecore.Data.Query.Query]::SelectItems($query, $SitecoreContextItem)
-
 # Retrieve the items by prepending the context path to the query.
 Get-Item -Path "master:" -Query ("$($SitecoreContextItem.Paths.Path)/$query")
 ```

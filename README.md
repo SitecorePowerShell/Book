@@ -18,7 +18,9 @@ The following are some helpful modules distributed with SPE.
 
 * **Core**
   * Platform
-  * X-UnitTests
+    * PowerShell Background Session Manager
+    * Recreate site from sitemap
+  * X-UnitTests - examples at how to use [Pester](https://github.com/pester/Pester) to test your scripts
 * **Maintenance**
   * Index On Demand
   * Media Library Maintenance
@@ -30,7 +32,7 @@ The following are some helpful modules distributed with SPE.
   * User Session Management
 * **Reporting**
   * [Authorable Reports](modules/integration-points/reports/authoring-reports.md) - reports based on the Sitecore Rules Engine.
-    * [Index Viewer](modules/integration-points/toolbox.md)
+    * [Index Viewer](modules/integration-points/toolbox.md) - similar to the Luke tool
   * [Content Reports](modules/integration-points/reports/) - variety of reports to help audit the Sitecore solution.
 * **Samples**
   * Automatically show quick info section
@@ -44,8 +46,12 @@ The following are some helpful modules distributed with SPE.
   * Authoring Instrumentation
   * Copy Renderings
   * Data Management
-  * Elevated Unlock
-  * Package Generator
+    * Bulk Data Generator - useful for items and users
+    * Bulk Item Restorer - restore items from recycle bin
+    * Data Importer - create or update items from a Csv
+    * Find and Replace - use Content Search to change text
+  * Elevated Unlock - provides options to unlock items using delegated administration
+  * Package Generator - a simple method to package up items
   * Publishing Status Gutter
 
 ## Community Add-ons
