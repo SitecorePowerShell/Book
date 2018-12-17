@@ -75,14 +75,6 @@ _"Thank you for the GitBook. Invaluable Reference."_ - [Nick Wesselman](https://
 
 _"The Sitecore powershell tools are absurdly good and helpful. I know they make a lot of people nervous, but they are incredibly well managed. Everybody should learn to sling some shell in Sitecore, you'll never look back."_ - [Christopher Campbell](https://twitter.com/RehbellOne) [tweet](https://twitter.com/RehbellOne/status/1058048820435607552)
 
-## Training Material
-
-The following book should provide you with enough information to use and be productive with SPE. Don't worry, you will be able to use it without having to write any code.
-
-We have a video series available to help walk you through the module [here](https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b).
-
-We also maintain a comprehensive list of links to [blogs and videos](https://blog.najmanowicz.com/sitecore-powershell-console/) to help you on your journey to SPE awesomeness. Happy coding!
-
 ## Development Team
 
 * [Adam Najmanowicz](https://blog.najmanowicz.com/) \| [@adamnaj](https://twitter.com/adamnaj)
