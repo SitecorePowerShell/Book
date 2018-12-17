@@ -19,7 +19,7 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
 | `// Create a new list of strings  var names = new List();  names.Add("Michael");  names.Add("Adam");` | `# Create a new list of strings  $names = @()  $names += "Michael"  $names += "Adam"` |
 | `// Create a hashtable of data  var table = new Hashtable(); table["Name"] = "Michael"; table["Age"] = 33;` | `# Create a new hashtable of data  $table = @{} $table["Name"] = "Michael" $table["Age"] = 33` |
 | `// Check if the string is null or empty using a static method  if(string.IsNullOrEmpty(name)) { … }` | `# Check if the string is null or empty using a static method  if([string]::IsNullOrEmpty($name)) { … }` |
-| `/` _``_ ``    _`Create a comment block`_ `/` | `<#      Create a comment block #>` |
+| `/* Create a comment block */` | `<# Create a comment block #>` |
 | `// Loop through a list of strings  foreach(var name in names) { … }` | `# Loop through a list of strings  foreach($name in $names) { … }` |
 | `// Compare values  name == "Michael" total <= 3 names.Count() > 2 && name[0] != "Adam"` | `# Compare values  $name -eq "Michael" # case-insensitive $total -le 3 $names.Count() -gt 2 –and $name[0] -ne "Adam"` |
 | `// Negate value  var isTrue = !false;` | `# Negate value $isTrue = !$false $isTrue = -not $false` |
