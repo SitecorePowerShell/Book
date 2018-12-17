@@ -5,6 +5,7 @@
 * [Installation](installation/README.md)
   * [Contributor Guide](installation/contributor-guide.md)
 * [Training](training.md)
+* [Community](community.md)
 * [Interfaces](interfaces/README.md)
   * [Console](interfaces/console.md)
   * [Scripting](interfaces/scripting.md)
