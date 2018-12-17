@@ -54,13 +54,6 @@ The following are some helpful modules distributed with SPE.
   * Package Generator - a simple method to package up items
   * Publishing Status Gutter
 
-## Community Add-ons
-
-The following are Sitecore modules that enhance the SPE experience.
-
-* [SPE Image Importer](https://marketplace.sitecore.net/en/Modules/S/SPE_Image_Uploader_Module10.aspx) : [Himadri Chakrabarti](https://twitter.com/himadric)
-* [Multi-Item Publish](https://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/) : [Richard Seal](https://twitter.com/rich_seal)
-
 ## Endorsements
 
 _"There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API"_ - [Alistair Deneys](https://twitter.com/adeneys) - Sitecore Symposium 2012
