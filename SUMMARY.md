@@ -4,6 +4,7 @@
 * [Disclaimer](disclaimer.md)
 * [Installation](installation/README.md)
   * [Contributor Guide](installation/contributor-guide.md)
+* [Training](training/README.md)
 * [Interfaces](interfaces/README.md)
   * [Console](interfaces/console.md)
   * [Scripting](interfaces/scripting.md)
