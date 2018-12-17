@@ -14,17 +14,17 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
 
 | Microsoft .Net C\# | Windows PowerShell |
 | :--- | :--- |
-| `// Assign data to a new variable   var name = "Michael";` | `# Assign data to a new variable  $name = "Michael"` |
-| `// Perform simple math   var total = 1 + 1;` | `# Perform simple math  $total = 1 + 1` |
-| `// Create a new list of strings  var names = new List();  names.Add("Michael");  names.Add("Adam");` | `# Create a new list of strings  $names = @()  $names += "Michael"  $names += "Adam"` |
-| `// Create a hashtable of data  var table = new Hashtable(); table["Name"] = "Michael"; table["Age"] = 33;` | `# Create a new hashtable of data  $table = @{} $table["Name"] = "Michael" $table["Age"] = 33` |
-| `// Check if the string is null or empty using a static method  if(string.IsNullOrEmpty(name)) { … }` | `# Check if the string is null or empty using a static method  if([string]::IsNullOrEmpty($name)) { … }` |
-| `/* Create a comment block */` | `<# Create a comment block #>` |
-| `// Loop through a list of strings  foreach(var name in names) { … }` | `# Loop through a list of strings  foreach($name in $names) { … }` |
-| `// Compare values  name == "Michael" total <= 3 names.Count() > 2 && name[0] != "Adam"` | `# Compare values  $name -eq "Michael" # case-insensitive $total -le 3 $names.Count() -gt 2 –and $name[0] -ne "Adam"` |
-| `// Negate value  var isTrue = !false;` | `# Negate value $isTrue = !$false $isTrue = -not $false` |
-| `// String interpolation  var message = $"Hello, {name}";` | `# String interpolation  $message = "Hello, $($name)"` |
-| `// Access instance property  var today = DateTime.Today;` | `# Access instance property  $today = [datetime]::Today` |
+| `// Assign data to a new variable`<br/>`var name = "Michael";` | `# Assign data to a new variable`<br/>`$name = "Michael"` |
+| `// Perform simple math`<br/>`var total = 1 + 1;` | `# Perform simple math`<br/>`$total = 1 + 1` |
+| `// Create a new list of strings`<br/>`var names = new List();`<br/>`names.Add("Michael");`<br/>`names.Add("Adam");` | `# Create a new list of strings`<br/>`$names = @()`<br/>`$names += "Michael"`<br/>`$names += "Adam"` |
+| `// Create a hashtable of data`<br/>`var table = new Hashtable();`<br/>`table["Name"] = "Michael";`<br/>`table["Age"] = 33;` | `# Create a new hashtable of data`<br/>`$table = @{}`<br/>`$table["Name"] = "Michael"`<br/>`$table["Age"] = 33` |
+| `// Check if the string is null or empty using a static method`<br/>`if(string.IsNullOrEmpty(name)) { … }` | `# Check if the string is null or empty using a static method`<br/>`if([string]::IsNullOrEmpty($name)) { … }` |
+| `/*`<br/>&nbsp;&nbsp; `Create a comment block`<br/>`*/` | `<#`<br/>&nbsp;&nbsp;`Create a comment block`<br/>`#>` |
+| `// Loop through a list of strings`<br/>`foreach(var name in names) { … }` | `# Loop through a list of strings`<br/>`foreach($name in $names) { … }` |
+| `// Compare values`<br/>`name == "Michael"`<br/>`total <= 3 names.Count() > 2 && name[0] != "Adam"` | `# Compare values`<br/>`$name -eq "Michael" # case-insensitive`<br/>`$total -le 3 $names.Count() -gt 2 –and $name[0] -ne "Adam"` |
+| `// Negate value`<br/>`var isTrue = !false;` | `# Negate value`<br/>`$isTrue = !$false $isTrue = -not $false` |
+| `// String interpolation`<br/>`var message = $"Hello, {name}";` | `# String interpolation`<br/>`$message = "Hello, $($name)"` |
+| `// Access instance property`<br/>`var today = DateTime.Today;` | `# Access instance property`<br/>`$today = [datetime]::Today` |
 
 As you can see in the table above, the language syntaxes are not all that different. Within a few minutes you might even be able to translate code from your library classes into SPE scripts.
 
