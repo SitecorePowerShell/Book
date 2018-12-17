@@ -1,0 +1,143 @@
+# Community Add-ons
+
+There are some really amazing contributions and add-ons to SPE from the community.
+
+## Unicorn
+
+A well known and widely adopted module [Unicorn](https://github.com/SitecoreUnicorn/Unicorn) has published some SPE commands. These commands are available (and optional) after installing Unicorn. Below are some samples ripped off from Kam Figy's [blog](https://kamsar.net/index.php/2017/02/Unicorn-4-Preview-Part-2-SPE-Support/).
+
+### Configurations
+
+**Example:** The following lists configurations by name.
+
+```powershell
+# Default returns all configurations
+Get-UnicornConfiguration
+
+# Exact match
+Get-UnicornConfiguration -Filter "Foundation.Foo"
+
+# Filter using a wildcard
+Get-UnicornConfiguration -Filter "Foundation.*"
+```
+### Syncing
+
+**Example:** The following syncs configurations just like you would through the Unicorn Control Panel or the PowerShell API.
+
+```powershell
+# Sync one
+Sync-UnicornConfiguration "Foundation.Foo"
+
+# Sync multiple by name
+Sync-UnicornConfiguration @("Foundation.Foo", "Foundation.Bar")
+
+# Sync multiple from pipeline
+Get-UnicornConfiguration "Foundation.*" | Sync-UnicornConfiguration
+
+# Sync all, except transparent sync-enabled configurations
+Get-UnicornConfiguration | Sync-UnicornConfiguration -SkipTransparent
+
+# Optionally set log output level (Debug, Info, Warn, Error)
+Sync-UnicornConfiguration -LogLevel Warn
+```
+
+![Example Syncing](https://user-images.githubusercontent.com/933163/50114210-9ccaac00-0209-11e9-9241-2738b50b1f75.png)
+
+### Partial Syncing
+
+```powershell
+# Sync a single item (note: must be under Unicorn control)
+Get-Item "/sitecore/content" | Sync-UnicornItem
+
+# Sync multiple single items (note: all must be under Unicorn control)
+Get-ChildItem "/sitecore/content" | Sync-UnicornItem 
+
+# Sync an entire item tree, show only warnings and errors
+Get-Item "/sitecore/content" | Sync-UnicornItem -Recurse -LogLevel Warn
+```
+
+### Reserializing
+
+```powershell
+# Reserialize one
+Export-UnicornConfiguration "Foundation.Foo"
+
+# Reserialize multiple by name
+Export-UnicornConfiguration @("Foundation.Foo", "Foundation.Bar")
+
+# Reserialize from pipeline
+Get-UnicornConfiguration "Foundation.*" | Export-UnicornConfiguration
+```
+
+### Partial Reserializing
+
+```powershell
+# Reserialize a single item (note: must be under Unicorn control)
+Get-Item "/sitecore/content" | Export-UnicornItem
+
+# Reserialize multiple single items (note: all must be under Unicorn control)
+Get-ChildItem "/sitecore/content" | Export-UnicornItem 
+
+# Reserialize an entire item tree
+Get-Item "/sitecore/content" | Export-UnicornItem -Recurse
+```
+
+### Converting to Raw Yaml
+
+```powershell
+# Convert an item to YAML format (always uses default excludes and field formatters)
+Get-Item "/sitecore/content" | ConvertTo-RainbowYaml
+
+# Convert many items to YAML strings
+Get-ChildItem "/sitecore/content" | ConvertTo-RainbowYaml
+
+# Disable all field formats and field filtering
+# (e.g. disable XML pretty printing,
+# and don't ignore the Revision and Modified fields, etc)
+Get-Item "/sitecore/content" | ConvertTo-RainbowYaml -Raw
+```
+
+![Converting To Yaml](https://user-images.githubusercontent.com/933163/50114470-32663b80-020a-11e9-917c-6707e85524dd.png)
+
+### Converting from Raw Yaml
+
+```powershell
+# Get IItemDatas from YAML variable
+$rawYaml | ConvertFrom-RainbowYaml
+
+# Get IItemData and disable all field filters
+# (use this if you ran ConvertTo-RainbowYaml with -Raw)
+$yaml | ConvertFrom-RainbowYaml -Raw
+```
+
+![Converting from Yaml](https://user-images.githubusercontent.com/933163/50114544-5cb7f900-020a-11e9-90a7-f5b834eb7285.png)
+
+### Deserialization
+
+```powershell
+# Deserialize IItemDatas from ConvertFrom-RainbowYaml
+$rawYaml | ConvertFrom-RainbowYaml | Import-RainbowItem
+
+# Deserialize raw YAML from pipeline into Sitecore 
+# Shortcut bypassing ConvertFrom-RainbowYaml
+$yaml | Import-RainbowItem
+
+# Deserialize and disable all field filters
+# (use this if you ran ConvertTo-RainbowYaml with -Raw)
+$yaml | Import-RainbowItem -Raw
+
+# Deserialize multiple at once
+$yamlStringArray | Import-RainbowItem
+
+# Complete example that does nothing but eat CPU
+Get-ChildItem "/sitecore/content" | ConvertTo-RainbowYaml | Import-RainbowItem
+```
+
+![Deserialization](https://user-images.githubusercontent.com/933163/50114603-8bce6a80-020a-11e9-8876-2df4d24e5443.png)
+
+## SPE Modules
+
+The following are Sitecore modules that enhance the SPE experience.
+
+* [SPE Image Importer](https://marketplace.sitecore.net/en/Modules/S/SPE_Image_Uploader_Module10.aspx) : [Himadri Chakrabarti](https://twitter.com/himadric)
+* [Multi-Item Publish](https://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/) : [Richard Seal](https://twitter.com/rich_seal)
