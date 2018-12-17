@@ -4,7 +4,7 @@ The PowerShell Toolbox is quick way to access frequently used scripts.
 
 Navigate to _Sitecore -&gt; PowerShell Toolbox_ and after selecting you should see the configured scripts:
 
-![Toolbox](../../.gitbook/assets/toolbox-list.png)
+![image](https://user-images.githubusercontent.com/933163/50113236-fda4b500-0206-11e9-8997-c629927a5148.png)
 
 **Note:** Examples included in the following modules
 
@@ -86,5 +86,5 @@ To create your own Toolbox item take the following steps: 1. Create the _Toolbox
 
   3. Verify the new toolbox item appears in the Toolbox.
 
-     ![Toolbox Item](../../.gitbook/assets/toolbox-newitem.png)
+     ![image](https://user-images.githubusercontent.com/933163/50113236-fda4b500-0206-11e9-8997-c629927a5148.png)
 
