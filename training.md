@@ -31,7 +31,11 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
     <tr>
       <td style="text-align:left"><code>// Perform simple math</code>  <code>var total = 1 + 1;</code>
       </td>
-      <td style="text-align:left"><code># Perform simple math</code>  <code>$total = 1 + 1</code>
+      <td style="text-align:left">
+        <p><code># Perform simple math</code> 
+        </p>
+        <p><code>$total = 1 + 1</code>
+        </p>
       </td>
     </tr>
     <tr>
@@ -85,7 +89,11 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>// Compare values</code>  <code>name == &quot;Michael&quot;</code>  <code>total &lt;= 3 names.Count() &gt; 2 &amp;&amp; name[0] != &quot;Adam&quot;</code>
+      <td style="text-align:left">
+        <p><code>// Compare values</code> 
+        </p>
+        <p><code>name == &quot;Michael&quot;</code>  <code>total &lt;= 3 names.Count() &gt; 2 &amp;&amp; name[0] != &quot;Adam&quot;</code>
+        </p>
       </td>
       <td style="text-align:left"><code># Compare values</code>  <code>$name -eq &quot;Michael&quot; # case-insensitive</code>  <code>$total -le 3 $names.Count -gt 2 &#x2013;and $name[0] -ne &quot;Adam&quot;</code>
       </td>
@@ -119,7 +127,7 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
       </td>
     </tr>
   </tbody>
-</table>As you can see in the table above, the language syntaxes are not all that different. Within a few minutes you might even be able to translate code from your library classes into SPE scripts.
+</table>As you can see in the table above, the language syntax is not all that different between C\# and PowerShell. Within a few minutes you might even be able to translate code from your library classes into SPE scripts.
 
 #### Performance Considerations
 
@@ -138,7 +146,11 @@ $names.Add("Adam") > $null
 ```
 
 {% hint style="info" %}
-Using dynamic array types and redirecting results with `> $null` is a great way to speed up scripts.
+Checklist of performance tuning ideas:
+
+* Use dynamic arrays to void the use of `+=`
+* Suppress output with `> $null` instead of `Out-Null`
+* Use hashtables as lookup tables for data
 {% endhint %}
 
 ### PowerShell Commands
