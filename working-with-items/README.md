@@ -288,7 +288,7 @@ In all the examples you'll notice we specified the database. Windows PowerShell 
 
 ### Get-Item : select properties
 
-The following examples make use of custom \_PropertySet\_s for the command `Select-Object`.
+The following examples make use of custom _PropertySet_  for the command `Select-Object`.
 
 **Example:** The following uses the **PSSecurity** _PropertySet_.
 

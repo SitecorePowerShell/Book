@@ -1,16 +1,16 @@
-# Community Add-ons
+# Community
 
 There are some really amazing contributions and add-ons to SPE from the community.
 
 ## Unicorn
 
-A well known and widely adopted module [Unicorn](https://github.com/SitecoreUnicorn/Unicorn) has published some SPE commands. These commands are available (and optional) after installing Unicorn. Below are some samples ripped off from Kam Figy's [blog](https://kamsar.net/index.php/2017/02/Unicorn-4-Preview-Part-2-SPE-Support/).
+A well known and widely adopted module [Unicorn](https://github.com/SitecoreUnicorn/Unicorn) has published some SPE commands. These commands are available \(and optional\) after installing Unicorn. Below are some samples ripped off from Kam Figy's [blog](https://kamsar.net/index.php/2017/02/Unicorn-4-Preview-Part-2-SPE-Support/).
 
 ### Configurations
 
 **Example:** The following lists configurations by name.
 
-```powershell
+```text
 # Default returns all configurations
 Get-UnicornConfiguration
 
@@ -20,11 +20,12 @@ Get-UnicornConfiguration -Filter "Foundation.Foo"
 # Filter using a wildcard
 Get-UnicornConfiguration -Filter "Foundation.*"
 ```
+
 ### Syncing
 
 **Example:** The following syncs configurations just like you would through the Unicorn Control Panel or the PowerShell API.
 
-```powershell
+```text
 # Sync one
 Sync-UnicornConfiguration "Foundation.Foo"
 
@@ -45,7 +46,7 @@ Sync-UnicornConfiguration -LogLevel Warn
 
 ### Partial Syncing
 
-```powershell
+```text
 # Sync a single item (note: must be under Unicorn control)
 Get-Item "/sitecore/content" | Sync-UnicornItem
 
@@ -58,7 +59,7 @@ Get-Item "/sitecore/content" | Sync-UnicornItem -Recurse -LogLevel Warn
 
 ### Reserializing
 
-```powershell
+```text
 # Reserialize one
 Export-UnicornConfiguration "Foundation.Foo"
 
@@ -71,7 +72,7 @@ Get-UnicornConfiguration "Foundation.*" | Export-UnicornConfiguration
 
 ### Partial Reserializing
 
-```powershell
+```text
 # Reserialize a single item (note: must be under Unicorn control)
 Get-Item "/sitecore/content" | Export-UnicornItem
 
@@ -84,7 +85,7 @@ Get-Item "/sitecore/content" | Export-UnicornItem -Recurse
 
 ### Converting to Raw Yaml
 
-```powershell
+```text
 # Convert an item to YAML format (always uses default excludes and field formatters)
 Get-Item "/sitecore/content" | ConvertTo-RainbowYaml
 
@@ -101,7 +102,7 @@ Get-Item "/sitecore/content" | ConvertTo-RainbowYaml -Raw
 
 ### Converting from Raw Yaml
 
-```powershell
+```text
 # Get IItemDatas from YAML variable
 $rawYaml | ConvertFrom-RainbowYaml
 
@@ -114,7 +115,7 @@ $yaml | ConvertFrom-RainbowYaml -Raw
 
 ### Deserialization
 
-```powershell
+```text
 # Deserialize IItemDatas from ConvertFrom-RainbowYaml
 $rawYaml | ConvertFrom-RainbowYaml | Import-RainbowItem
 
@@ -141,3 +142,4 @@ The following are Sitecore modules that enhance the SPE experience.
 
 * [SPE Image Importer](https://marketplace.sitecore.net/en/Modules/S/SPE_Image_Uploader_Module10.aspx) : [Himadri Chakrabarti](https://twitter.com/himadric)
 * [Multi-Item Publish](https://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/) : [Richard Seal](https://twitter.com/rich_seal)
+
