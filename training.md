@@ -10,7 +10,9 @@ We have a video series available to help walk you through the module [here](http
 
 We also maintain a comprehensive list of links to [blogs and videos](https://blog.najmanowicz.com/sitecore-powershell-console/) to help you on your journey to SPE awesomeness. Happy coding!
 
-## Syntax Comparison
+## Language Syntax
+
+### C\# to PowerShell
 
 | Microsoft .Net C\# | Windows PowerShell |
 | :--- | :--- |
@@ -27,4 +29,169 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
 | `// Access instance property` `var today = DateTime.Today;` | `# Access instance property` `$today = [datetime]::Today` |
 
 As you can see in the table above, the language syntaxes are not all that different. Within a few minutes you might even be able to translate code from your library classes into SPE scripts.
+
+### PowerShell Commands
+
+**Example:** The following provides an example syntax for a fake command.
+
+```text
+Get-Something [[-SomeParameter] <sometype[]>] [-AnotherParameter <anothertype>] [-SomeSwitch]
+```
+
+PowerShell commands follow a Verb-Noun syntax. Notice that all properly named commands start with a verb such as Get, Set, or Remove and end with a noun such as Item, User, or Role. 
+
+The verbs are considered “approved” if they align with those that Microsoft recommends. See the following URL [https://msdn.microsoft.com/en-us/library/ms714428\(v=vs.85\).aspx](https://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx) for a list of approved verbs and a brief explanation on why they were chosen. They are intended to be pretty generic so they apply for multiple contexts like the filesystem, registry, and even Sitecore! 
+
+{% hint style="info" %}
+The noun in the command should be singular even if the command returns more than one object.
+{% endhint %}
+
+The parameters follow the command and usually require arguments. In our example above we have a parameter called **SomeParameter** followed by an argument of type **SomeType**. The final parameter **SomeSwitch** is called a switch. The switch is like a flag that enables or disables behavior for the command.
+
+**Example**: The following provides possible permutations for the fake command.
+
+```text
+<#
+    All of the parameters in the command are surrounded by square brackets 
+    indicating they are optional.
+#>
+Get-Something
+
+<# 
+    SomeParameter has double brackets around the parameter name and argument 
+    indicating the name is optional and when an argument is passed the name 
+    can be skipped.
+#>
+Get-Something "data"
+
+<#
+    AnotherParameter has single brackets indicating that the parameter is 
+    optional. If the argument is used so must the name. The same reasoning 
+    can be applied to the switch.
+#>
+Get-Something "data","data2" -AnotherParameter 100 –SomeSwitch
+```
+
+{% hint style="info" %}
+The brackets surrounding the parameter and the brackets immediately following a type have different meanings. The former has to do with optional usage whereas the latter indicates the data can be an array of objects.
+{% endhint %}
+
+{% hint style="warning" %}
+Allow scripts to be written with the full command and parameter names 
+
+* Avoid relying on positional or optional parameters.
+* Avoid abbreviating parameter names.
+* Avoid using command aliases \(e.g. dir, cd\).
+{% endhint %}
+
+Some of the most useful commands to learn can be seen in the table below. These come with vanilla PowerShell.
+
+| Command | Description |
+| :--- | :--- |
+| Get-Item | Returns an object at the specified path. |
+| Get-ChildItem | Returns children at the specified path. Supports recursion. |
+| Get-Help | Returns the help documentation for the specified command or document. |
+| Get-Command | Returns a list of commands. |
+| ForEach-Object | Enumerates over the objects passed through the pipeline. |
+| Where-Object | Enumerates over the objects passed through the pipeline and filters objects. |
+| Select-Object | Returns objects from the pipeline with the specified properties and filters objects. |
+| Sort-Object | Sorts the pipeline objects with the specified criteria; usually a property name. |
+| Get-Member | Returns the methods and properties for the specified object. |
+
+{% hint style="info" %}
+PowerShell was designed so that after learning a few concepts you can get up and running. Once you get past the basics you should be able to understand most scripts included with SPE.
+{% endhint %}
+
+### Pipelines
+
+PowerShell supports chaining of commands through a feature called “Pipelines” using the pipe “\|”. Similar to Sitecore in that you can short circuit the processing of objects using **Where-Object**. Let’s have a look at a few examples.
+
+**Example:** The following queries a Sitecore item and removes it.
+
+```text
+# The remove command accepts pipeline input.
+Get-Item -Path "master:\content\home\sample item" | Remove-Item
+
+# If multiple items are passed through the pipeline each are removed individually.
+$items | Remove-Item
+```
+
+PowerShell also comes with a set of useful commands for filtering and sorting. Let’s see those in action. 
+
+**Example:** The following queries a tree of Sitecore items and returns only those that meet the criteria. The item properties are reduced and thensorted.
+
+```text
+# Use variables for parameters such as paths to make scripts easier to read.
+$path = "master:\content\home\"
+
+Get-ChildItem -Path $path -Recurse | 
+    Where-Object { $_.Name -like "*Sitecore*" } | 
+    Select-Object -Property Name, ItemPath, ID
+    Sort-Object -Property Name
+
+```
+
+{% hint style="info" %}
+A best practice in PowerShell is to reduce the number of objects passed through the pipeline as far left as possible. While the example would work if the **Sort-Object** command came before **Where-Object**, we will see a performance improvement because the sorting has fewer objects to worry about. Some commands such as **Get-ChildItem** support additional options for filtering which further improves performance.
+{% endhint %}
+
+**Example:** The following demonstrates how commands can be written clearly with little confusion on the intent, then how aliases and abbreviations can get in the way. Always think about the developer that comes after you to maintain the code.
+
+```text
+# Longhand
+Get-Command -Name ForEach-Object –Type cmdlet | Select-Object -ExpandProperty ParameterSets
+
+# Shorthand
+gcm -na foreach-object -ty cmdlet | select -exp parametersets
+```
+
+Windows PowerShell is bundled with a ton of documentation that could not possible be included with this book; we can however show you how to access it.
+
+**Example:** The following examples demonstrate ways to get help…with PowerShell.
+
+```text
+# Displays all of the about help documents.
+help about_*
+
+# Displays help documentation on the topic of Splatting.
+help about_Splatting
+
+# Displays help documentation on the specified command.
+help Get-Member
+```
+
+{% hint style="info" %}
+PowerShell does not include the complete help documentation by default on Windows. Run the command **Update-Help** from an elevated prompt to update the help files to the latest available version. See `help update-help` for more information on the command syntax and details of its use. All of the SPE help documentation is available regardless of running **Update-Help**.
+{% endhint %}
+
+### Providers
+
+The provider architecture in PowerShell enables a developer to make a command like **Get-Item** interact with the filesystem files and folders, and then interact with the Sitecore CMS items. 
+
+The SPE module implements a new provider that bridges the Windows PowerShell platform with the Sitecore API. The following table demonstrates the use of **Get-Item** for a variety of providers.
+
+| Name | Drives | Example |
+| :--- | :--- | :--- |
+| Alias | Alias | Get-Item -Path alias:\dir |
+| CmsItemProvider | core, master, web | Get-Item -Path master:\ |
+| Environment | Env | Get-Item -Path env:\HOMEPATH |
+| FileSystem | C, D, F, H | Get-Item -Path c:\Windows |
+| Function | Function | Get-Item -Path function:\prompt |
+| Registry | HKLM, HKCU | Get-Item -Path hklm:\SOFTWARE |
+| Variable | Variable | Get-Item -Path variable:\PSVersionTable |
+
+The default provider used by the PowerShell Console and ISE is the **CmsItemProvider** with the drive set to the master database. 
+
+**Example:** The following demonstrates switching between providers using the function **cd**, an alias for **Set-Location**, while in the Console.
+
+```text
+PS master:\> cd c:\
+PS C:\> cd hklm:
+PS HKLM:\> cd env:
+PS Env:\>
+```
+
+{% hint style="warning" %}
+You may have noticed that the C drive is the only path in which a backslash was used before changing drives. Leaving off the backslash will result in the path changing to C:\windows\system32\inetsrv. This similar behavior can be experienced while in the Windows PowerShell Console, where the path is changed to C:\Windows\System32.
+{% endhint %}
 
