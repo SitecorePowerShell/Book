@@ -18,7 +18,7 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
 | :--- | :--- |
 | `// Assign data to a new variable` `var name = "Michael";` | `# Assign data to a new variable` `$name = "Michael"` |
 | `// Perform simple math` `var total = 1 + 1;` | `# Perform simple math` `$total = 1 + 1` |
-| `// Create a new list of strings` `var names = new List();` `names.Add("Michael");` `names.Add("Adam");` | `# Create a new list of strings` `$names = @()` `$names += "Michael"` `$names += "Adam"` |
+| `// Create a new list of strings` `var names = new List<string>();` `names.Add("Michael");` `names.Add("Adam");` | `# Create a new list of strings` `$names = @()` `$names += "Michael"` `$names += "Adam"` |
 | `// Create a hashtable of data` `var table = new Hashtable();` `table["Name"] = "Michael";` `table["Age"] = 33;` | `# Create a new hashtable of data` `$table = @{}` `$table["Name"] = "Michael"` `$table["Age"] = 33` |
 | `// Check if the string is null or empty using a static method` `if(string.IsNullOrEmpty(name)) { … }` | `# Check if the string is null or empty using a static method` `if([string]::IsNullOrEmpty($name)) { … }` |
 | `/*`    `Create a comment block` `*/` | `<#`   `Create a comment block` `#>` |
