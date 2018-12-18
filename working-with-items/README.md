@@ -118,7 +118,7 @@ The above will return the latest version of the item in your current language. B
 **Example:** The following will retrieve the Danish version of the _Home_ item.
 
 ```text
-PS master:\> Get-Item -Path master:/content/home -Language da | Format-Table DisplayName, Language, Id, Version, TemplateName
+PS master:\> Get-Item -Path master:/content/home -Language da | Format-Table -Property DisplayName, Language, Id, Version, TemplateName
 
 DisplayName Language ID                                     Version TemplateName
 ----------- -------- --                                     ------- ------------
@@ -130,7 +130,7 @@ I've formatted the output above to show you that indeed the right language was r
 **Example:** The following retrieves the latest version for all languages of an item.
 
 ```text
-PS master:\> Get-Item master:/content/home -Language * | Format-Table DisplayName, Language, Id, Version, TemplateName
+PS master:\> Get-Item -Path master:/content/home -Language * | Format-Table -Property DisplayName, Language, Id, Version, TemplateName
 
 DisplayName Language ID                                     Version TemplateName
 ----------- -------- --                                     ------- ------------
@@ -147,7 +147,7 @@ Notice that the item with language `en-US` at its third version.
 **Example:** The following retrieves the item in all languages and versions.
 
 ```text
-PS master:\> Get-Item master:/content/home -Language * -Version *| Format-Table DisplayName, Language, Id, Version, TemplateName
+PS master:\> Get-Item -Path master:/content/home -Language * -Version *| Format-Table -Property DisplayName, Language, Id, Version, TemplateName
 
 DisplayName Language ID                                     Version TemplateName
 ----------- -------- --                                     ------- ------------
@@ -168,7 +168,7 @@ You can see that specifying the language and version using the wildcard will ret
 **Example:** The following retrieves the child items in all languages and versions.
 
 ```text
-PS master:\> Get-ChildItem master:/content -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName
+PS master:\> Get-ChildItem -Path master:/content -Language * -Version * | Format-Table -Property DisplayName, Language, Id, Version, TemplateName
 
 DisplayName         Language ID                                     Version TemplateName
 -----------         -------- --                                     ------- ------------
@@ -211,7 +211,7 @@ Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA
 **Example:** The following retrieves all items beneath the path _/sitecore/content/_ with the template of _Sample Item_ in all versions and languages.
 
 ```text
-PS master:\> Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table DisplayName, Language, Id, Version, TemplateName -AutoSize
+PS master:\> Get-Item -Path master: -Query "/sitecore/content//*[@@templatename='Sample Item']" -Language * -Version * | Format-Table -Property DisplayName, Language, Id, Version, TemplateName -AutoSize
 
 DisplayName  Language ID                                     Version TemplateName
 -----------  -------- --                                     ------- ------------
@@ -293,7 +293,7 @@ The following examples make use of custom \_PropertySet\_s for the command `Sele
 **Example:** The following uses the **PSSecurity** _PropertySet_.
 
 ```text
-PS master:\ >Get-Item -Path "master:\content\home" | Select PSSecurity
+PS master:\ >Get-Item -Path "master:\content\home" | Select-Object -Property PSSecurity
 
 Name ID                                     __Owner        __Security
 ---- --                                     -------        ----------
@@ -303,7 +303,7 @@ Home {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} sitecore\admin au|sitecore\michael|p
 **Example:** The following uses the **PSTemplate** _PropertySet_.
 
 ```text
-PS master:\> Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select PSTemplate
+PS master:\> Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select-Object -Property PSTemplate
 
 Name    ID                                     BaseTemplate
 ----    --                                     ------------
@@ -313,7 +313,7 @@ kitten1 {E58FA823-3CAF-43A1-A5ED-FBE24D3C21B4} {Image, File, Standard template, 
 **Example:** The following uses the **PSImage** _PropertySet_.
 
 ```text
-PS master:\> Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select PSImage
+PS master:\> Get-Item -Path "/sitecore/media library/Images/SPE/kitten1" | Select-Object -Property PSImage
 
 Name      : kitten1
 ID        : {E58FA823-3CAF-43A1-A5ED-FBE24D3C21B4}
@@ -327,7 +327,7 @@ Size      : 6593
 **Example:** The following uses the **PSSchedule** _PropertySet_.
 
 ```text
-PS master:\> Get-Item -Path "/sitecore/system/Tasks/Schedules/Content Testing/Calculate Statistical Relevancy" | Select PSSchedule 
+PS master:\> Get-Item -Path "/sitecore/system/Tasks/Schedules/Content Testing/Calculate Statistical Relevancy" | Select-Object -Property PSSchedule 
 
 Name     : Calculate Statistical Relevancy
 ID       : {C7533E65-A1D6-4F99-9F12-0AB157299D80}
@@ -342,7 +342,7 @@ Items    :
 **Example:** The following accesses the _Image_ field casted to the type `Sitecore.Data.Fields.ImageField`.
 
 ```text
-$item = Get-Item "master:\content\home"
+$item = Get-Item -Path "master:\content\home"
 $item._.Image.Alt
 ```
 
@@ -351,7 +351,7 @@ $item._.Image.Alt
 **Example:** The following accesses the _Link_ field casted to the type `Sitecore.Data.Fields.LinkField`. From there you can see all of the available properties.
 
 ```text
-PS master:\> $currentItem = Get-Item 'master:\content\home\sample-item'
+PS master:\> $currentItem = Get-Item -Path 'master:\content\home\sample-item'
 PS master:\> $currentItem.PSFields."LinkFieldName"
 
 Anchor       :
@@ -414,7 +414,7 @@ If the property name on the data template contains a space, such as \`Closing Da
 **Example:** The following sets the title property using the automated PowerShell property.
 
 ```text
-$item = Get-Item master:/content/home
+$item = Get-Item -Path master:/content/home
 $item.Title = "New Title"
 $item."Closing Date" = [datetime]::Today
 ```
@@ -422,7 +422,7 @@ $item."Closing Date" = [datetime]::Today
 **Example:** The following sets the title property using the semi-native PowerShell property without the use of a variable.
 
 ```text
-(Get-Item master:/content/home).Title = "New Title"
+(Get-Item -Path master:/content/home).Title = "New Title"
 ```
 
 This technique may be used for a wide variety of property types. There are a other hidden gems in those properties. For example if we detect that the field is a _Date_ or _Datetime_ field, we will return `System.DateTime` typed value from a field rather than the `System.String` Sitecore stores internally.
@@ -430,15 +430,15 @@ This technique may be used for a wide variety of property types. There are a oth
 **Example:** The following gets the created date.
 
 ```text
-PS master:\> (Get-Item master:/content/home).__Created
+PS master:\> (Get-Item -Path master:/content/home).__Created
 Monday, April 07, 2008 1:59:00 PM
 ```
 
 **Example:** The following assigns a `System.DateTime` value to the PowerShell automated property.
 
 ```text
-PS master:\> (Get-Item master:/content/home).__Created = [DateTime]::Now
-PS master:\> (Get-Item master:/content/home).__Created
+PS master:\> (Get-Item -Path master:/content/home).__Created = [DateTime]::Now
+PS master:\> (Get-Item -Path master:/content/home).__Created
 Monday, October 13, 2014 1:59:41 AM
 ```
 
@@ -553,7 +553,7 @@ Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "m
 **Example:** The following transfers the item to the specified path with the same ID.
 
 ```text
-Copy-Item master:\content\Home web:\content\home -TransferOptions 0
+Copy-Item -Path master:\content\Home -Destination web:\content\home -TransferOptions 0
 ```
 
 ## Moving Items
