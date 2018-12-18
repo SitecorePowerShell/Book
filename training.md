@@ -14,21 +14,116 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
 
 ### C\# to PowerShell
 
-| Microsoft .Net C\# | Windows PowerShell |
-| :--- | :--- |
-| `// Assign data to a new variable` `var name = "Michael";` | `# Assign data to a new variable` `$name = "Michael"` |
-| `// Perform simple math` `var total = 1 + 1;` | `# Perform simple math` `$total = 1 + 1` |
-| `// Create a new list of strings` `var names = new List<string>();` `names.Add("Michael");` `names.Add("Adam");` | `# Create a new list of strings` `$names = @()` `$names += "Michael"` `$names += "Adam"` |
-| `// Create a hashtable of data` `var table = new Hashtable();` `table["Name"] = "Michael";` `table["Age"] = 33;` | `# Create a new hashtable of data` `$table = @{}` `$table["Name"] = "Michael"` `$table["Age"] = 33` |
-| `// Check if the string is null or empty using a static method` `if(string.IsNullOrEmpty(name)) { … }` | `# Check if the string is null or empty using a static method` `if([string]::IsNullOrEmpty($name)) { … }` |
-| `/*`    `Create a comment block` `*/` | `<#`   `Create a comment block` `#>` |
-| `// Loop through a list of strings` `foreach(var name in names) { … }` | `# Loop through a list of strings` `foreach($name in $names) { … }` |
-| `// Compare values` `name == "Michael"` `total <= 3 names.Count() > 2 && name[0] != "Adam"` | `# Compare values` `$name -eq "Michael" # case-insensitive` `$total -le 3 $names.Count -gt 2 –and $name[0] -ne "Adam"` |
-| `// Negate value` `var isTrue = !false;` | `# Negate value` `$isTrue = !$false $isTrue = -not $false` |
-| `// String interpolation` `var message = $"Hello, {name}";` | `# String interpolation` `$message = "Hello, $($name)"` |
-| `// Access instance property` `var today = DateTime.Today;` | `# Access instance property` `$today = [datetime]::Today` |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Microsoft .Net C#</th>
+      <th style="text-align:left">Windows PowerShell</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>// Assign data to a new variable</code>  <code>var name = &quot;Michael&quot;;</code>
+      </td>
+      <td style="text-align:left"><code># Assign data to a new variable</code>  <code>$name = &quot;Michael&quot;</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>// Perform simple math</code>  <code>var total = 1 + 1;</code>
+      </td>
+      <td style="text-align:left"><code># Perform simple math</code>  <code>$total = 1 + 1</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>// Create a new list of strings</code>  <code>var names = new List&lt;string&gt;();</code>  <code>names.Add(&quot;Michael&quot;);</code>  <code>names.Add(&quot;Adam&quot;);</code>
+      </td>
+      <td style="text-align:left">
+        <p><code># Create a new list of strings</code>  <code>$names = @()</code> 
+        </p>
+        <p><code>$names += &quot;Michael&quot;</code> 
+        </p>
+        <p><code>$names += &quot;Adam&quot;</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>// Create a hashtable of data</code>  <code>var table = new Hashtable();</code>  <code>table[&quot;Name&quot;] = &quot;Michael&quot;;</code>  <code>table[&quot;Age&quot;] = 33;</code>
+      </td>
+      <td style="text-align:left">
+        <p><code># Create a new hashtable of data</code>  <code>$table = @{}</code> 
+        </p>
+        <p><code>$table[&quot;Name&quot;] = &quot;Michael&quot;</code>  <code>$table[&quot;Age&quot;] = 33</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>// Check if the string is null or empty using a static method</code>  <code>if(string.IsNullOrEmpty(name)) { &#x2026; }</code>
+      </td>
+      <td style="text-align:left"><code># Check if the string is null or empty using a static method</code>  <code>if([string]::IsNullOrEmpty($name)) { &#x2026; }</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/*</code>  <code>Create a comment block</code>  <code>*/</code>
+      </td>
+      <td style="text-align:left"><code>&lt;#</code>  <code>Create a comment block</code>  <code>#&gt;</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>// Loop through a list of strings</code>  <code>foreach(var name in names) { &#x2026; }</code>
+      </td>
+      <td style="text-align:left"><code># Loop through a list of strings</code>  <code>foreach($name in $names) { &#x2026; }</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>// Compare values</code>  <code>name == &quot;Michael&quot;</code>  <code>total &lt;= 3 names.Count() &gt; 2 &amp;&amp; name[0] != &quot;Adam&quot;</code>
+      </td>
+      <td style="text-align:left"><code># Compare values</code>  <code>$name -eq &quot;Michael&quot; # case-insensitive</code>  <code>$total -le 3 $names.Count -gt 2 &#x2013;and $name[0] -ne &quot;Adam&quot;</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p><code>// Negate value</code> 
+        </p>
+        <p><code>var isTrue = !false;</code>
+        </p>
+      </td>
+      <td style="text-align:left"><code># Negate value</code>  <code>$isTrue = !$false $isTrue = -not $false</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>// String interpolation</code>  <code>var message = $&quot;Hello, {name}&quot;;</code>
+      </td>
+      <td style="text-align:left"><code># String interpolation</code>  <code>$message = &quot;Hello, $($name)&quot;</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>// Access instance property</code>  <code>var today = DateTime.Today;</code>
+      </td>
+      <td style="text-align:left"><code># Access instance property</code>  <code>$today = [datetime]::Today</code>
+      </td>
+    </tr>
+  </tbody>
+</table>As you can see in the table above, the language syntaxes are not all that different. Within a few minutes you might even be able to translate code from your library classes into SPE scripts.
 
-As you can see in the table above, the language syntaxes are not all that different. Within a few minutes you might even be able to translate code from your library classes into SPE scripts.
+#### Performance Considerations
+
+You may find yourself trying to optimize your scripts. A few things that might help include the following.
+
+```text
+# Use ArrayList to append items rather than creating new fixed dimensional arrays
+$names = [System.Collections.ArrayList]@()
+$names.Add("Michael") > $null
+$names.Add("Adam") > $null
+
+# Optionally create static static typed arrays
+$names = [System.Collections.Generic.List[string]]@()
+$names.Add("Michael") > $null
+$names.Add("Adam") > $null
+```
+
+{% hint style="info" %}
+Using dynamic array types and redirecting results with `> $null` is a great way to speed up scripts.
+{% endhint %}
 
 ### PowerShell Commands
 
@@ -38,9 +133,9 @@ As you can see in the table above, the language syntaxes are not all that differ
 Get-Something [[-SomeParameter] <sometype[]>] [-AnotherParameter <anothertype>] [-SomeSwitch]
 ```
 
-PowerShell commands follow a Verb-Noun syntax. Notice that all properly named commands start with a verb such as Get, Set, or Remove and end with a noun such as Item, User, or Role. 
+PowerShell commands follow a Verb-Noun syntax. Notice that all properly named commands start with a verb such as Get, Set, or Remove and end with a noun such as Item, User, or Role.
 
-The verbs are considered “approved” if they align with those that Microsoft recommends. See the following URL [https://msdn.microsoft.com/en-us/library/ms714428\(v=vs.85\).aspx](https://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx) for a list of approved verbs and a brief explanation on why they were chosen. They are intended to be pretty generic so they apply for multiple contexts like the filesystem, registry, and even Sitecore! 
+The verbs are considered “approved” if they align with those that Microsoft recommends. See the following URL [https://msdn.microsoft.com/en-us/library/ms714428\(v=vs.85\).aspx](https://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx) for a list of approved verbs and a brief explanation on why they were chosen. They are intended to be pretty generic so they apply for multiple contexts like the filesystem, registry, and even Sitecore!
 
 {% hint style="info" %}
 The noun in the command should be singular even if the command returns more than one object.
@@ -77,12 +172,11 @@ The brackets surrounding the parameter and the brackets immediately following a 
 {% endhint %}
 
 {% hint style="warning" %}
-Allow scripts to be written with the full command and parameter names 
+Allow scripts to be written with the full command and parameter names
 
 * Avoid relying on positional or optional parameters.
 * Avoid abbreviating parameter names.
 * Avoid using command aliases \(e.g. dir, cd\).
-
 {% endhint %}
 
 Some of the most useful commands to learn can be seen in the table below. These come with vanilla PowerShell.
@@ -117,7 +211,7 @@ Get-Item -Path "master:\content\home\sample item" | Remove-Item
 $items | Remove-Item
 ```
 
-PowerShell also comes with a set of useful commands for filtering and sorting. Let’s see those in action. 
+PowerShell also comes with a set of useful commands for filtering and sorting. Let’s see those in action.
 
 **Example:** The following queries a tree of Sitecore items and returns only those that meet the criteria. The item properties are reduced and thensorted.
 
@@ -129,7 +223,6 @@ Get-ChildItem -Path $path -Recurse |
     Where-Object { $_.Name -like "*Sitecore*" } | 
     Select-Object -Property Name, ItemPath, ID
     Sort-Object -Property Name
-
 ```
 
 {% hint style="info" %}
@@ -167,7 +260,7 @@ PowerShell does not include the complete help documentation by default on Window
 
 ### Providers
 
-The provider architecture in PowerShell enables a developer to make a command like **Get-Item** interact with the filesystem files and folders, and then interact with the Sitecore CMS items. 
+The provider architecture in PowerShell enables a developer to make a command like **Get-Item** interact with the filesystem files and folders, and then interact with the Sitecore CMS items.
 
 The SPE module implements a new provider that bridges the Windows PowerShell platform with the Sitecore API. The following table demonstrates the use of **Get-Item** for a variety of providers.
 
@@ -181,7 +274,7 @@ The SPE module implements a new provider that bridges the Windows PowerShell pla
 | Registry | HKLM, HKCU | Get-Item -Path hklm:\SOFTWARE |
 | Variable | Variable | Get-Item -Path variable:\PSVersionTable |
 
-The default provider used by the PowerShell Console and ISE is the **CmsItemProvider** with the drive set to the master database. 
+The default provider used by the PowerShell Console and ISE is the **CmsItemProvider** with the drive set to the master database.
 
 **Example:** The following demonstrates switching between providers using the function **cd**, an alias for **Set-Location**, while in the Console.
 
