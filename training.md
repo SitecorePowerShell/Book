@@ -57,6 +57,16 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>// Ordered Dictionary</code>  <code>var od = new OrderedDictionary();</code>  <code>od.Add(&quot;z&quot;,&quot;Last Letter&quot;);</code>  <code>od.Add(&quot;a&quot;,&quot;First Letter&quot;);</code>
+      </td>
+      <td style="text-align:left">
+        <p><code># Ordered Dictionary </code>
+        </p>
+        <p><code>$od = [ordered]@{}</code>  <code>$od.Add(&quot;z&quot;,&quot;Last Letter&quot;)</code>  <code>$od.Add(&quot;a&quot;,&quot;First Letter&quot;)</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>// Check if the string is null or empty using a static method</code>  <code>if(string.IsNullOrEmpty(name)) { &#x2026; }</code>
       </td>
       <td style="text-align:left"><code># Check if the string is null or empty using a static method</code>  <code>if([string]::IsNullOrEmpty($name)) { &#x2026; }</code>
@@ -87,7 +97,13 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
         <p><code>var isTrue = !false;</code>
         </p>
       </td>
-      <td style="text-align:left"><code># Negate value</code>  <code>$isTrue = !$false $isTrue = -not $false</code>
+      <td style="text-align:left">
+        <p><code># Negate value</code> 
+        </p>
+        <p><code>$isTrue = !$false </code>
+        </p>
+        <p><code>$isTrue = -not $false</code>
+        </p>
       </td>
     </tr>
     <tr>
