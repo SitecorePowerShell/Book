@@ -82,6 +82,7 @@ Allow scripts to be written with the full command and parameter names
 * Avoid relying on positional or optional parameters.
 * Avoid abbreviating parameter names.
 * Avoid using command aliases \(e.g. dir, cd\).
+
 {% endhint %}
 
 Some of the most useful commands to learn can be seen in the table below. These come with vanilla PowerShell.
