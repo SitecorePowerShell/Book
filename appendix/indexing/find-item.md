@@ -8,7 +8,7 @@ Finds items using the Sitecore Content Search API.
 Find-Item [-Index] <String> [-Criteria <SearchCriteria[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
 Find-Item [-Index] <String> [-Where <String>] [-WhereValues <Object[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
 Find-Item [-Index] <String> [-Predicate <Expression<Func<SearchResultItem, bool>>>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
-Find-Item [-Index] <String> [-ScopeQuery <String>] [-Where <String>] [-WhereValues <Object[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-ScopeQuery <String>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
 ```
 
 ## Detailed Description
