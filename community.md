@@ -142,7 +142,7 @@ Get-ChildItem "/sitecore/content" | ConvertTo-RainbowYaml | Import-RainbowItem
 
 ```text
 # Create a new Sitecore Package (SPE cmdlet)
-$pkg = New-Package
+$pkg = New-Package -Name MyCustomPackage
 
 # Get the Unicorn Configuration(s) we want to package
 $configs = Get-UnicornConfiguration "Foundation.*" 
@@ -154,7 +154,7 @@ $configs = Get-UnicornConfiguration "Foundation.*"
 $configs | New-UnicornItemSource -Project $pkg
 
 # Export the package to a zip file on disk
-Export-Package -Project $pkg -Path "C:\foo.zip"
+Export-Package -Project $pkg -Path "C:\foo.zip" -Zip
 ```
 
 ## SPE Modules
