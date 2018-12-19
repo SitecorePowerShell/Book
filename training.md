@@ -163,13 +163,17 @@ Get-Something [[-SomeParameter] <sometype[]>] [-AnotherParameter <anothertype>] 
 
 PowerShell commands follow a Verb-Noun syntax. Notice that all properly named commands start with a verb such as Get, Set, or Remove and end with a noun such as Item, User, or Role.
 
-The verbs are considered “approved” if they align with those that Microsoft recommends. See the following URL [https://msdn.microsoft.com/en-us/library/ms714428\(v=vs.85\).aspx](https://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx) for a list of approved verbs and a brief explanation on why they were chosen. They are intended to be pretty generic so they apply for multiple contexts like the filesystem, registry, and even Sitecore!
-
 {% hint style="info" %}
 The noun in the command should be singular even if the command returns more than one object.
 {% endhint %}
 
+The verbs are considered “approved” if they align with those that Microsoft recommends. See the following URL [https://msdn.microsoft.com/en-us/library/ms714428\(v=vs.85\).aspx](https://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx) for a list of approved verbs and a brief explanation on why they were chosen. They are intended to be pretty generic so they apply for multiple contexts like the filesystem, registry, and even Sitecore!
+
 The parameters follow the command and usually require arguments. In our example above we have a parameter called **SomeParameter** followed by an argument of type **SomeType**. The final parameter **SomeSwitch** is called a switch. The switch is like a flag that enables or disables behavior for the command.
+
+{% hint style="info" %}
+The brackets surrounding the parameter and the brackets immediately following a type have different meanings. The former has to do with optional usage whereas the latter indicates the data can be an array of objects.
+{% endhint %}
 
 **Example**: The following provides possible permutations for the fake command.
 
@@ -194,10 +198,6 @@ Get-Something "data"
 #>
 Get-Something "data","data2" -AnotherParameter 100 –SomeSwitch
 ```
-
-{% hint style="info" %}
-The brackets surrounding the parameter and the brackets immediately following a type have different meanings. The former has to do with optional usage whereas the latter indicates the data can be an array of objects.
-{% endhint %}
 
 {% hint style="warning" %}
 Allow scripts to be written with the full command and parameter names
