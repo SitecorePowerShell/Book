@@ -39,7 +39,11 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>// Create a new list of strings</code>  <code>var names = new List&lt;string&gt;();</code>  <code>names.Add(&quot;Michael&quot;);</code>  <code>names.Add(&quot;Adam&quot;);</code>
+      <td style="text-align:left">
+        <p><code>// Create a new list of strings</code>  <code>var names = new List&lt;string&gt;();</code>  <code>names.Add(&quot;Michael&quot;);</code> 
+        </p>
+        <p><code>names.Add(&quot;Adam&quot;);</code>
+        </p>
       </td>
       <td style="text-align:left">
         <p><code># Create a new list of strings</code>  <code>$names = @()</code> 
