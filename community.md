@@ -4,7 +4,9 @@ There are some really amazing contributions and add-ons to SPE from the communit
 
 ## Unicorn
 
-A well known and widely adopted module [Unicorn](https://github.com/SitecoreUnicorn/Unicorn) has published some SPE commands. These commands are available \(and optional\) after installing Unicorn. Below are some samples ripped off from Kam Figy's [blog](https://kamsar.net/index.php/2017/02/Unicorn-4-Preview-Part-2-SPE-Support/).
+![SPE + Unicorn](https://user-images.githubusercontent.com/933163/50198867-4053b380-0313-11e9-9e46-5eb5513417ff.png)
+
+A well known and widely adopted module [Unicorn](https://github.com/SitecoreUnicorn/Unicorn) has published some SPE commands. These commands are available \(and optional\) after installing Unicorn. Below are some samples ripped off from Kam Figy's blog posts [here](https://kamsar.net/index.php/2017/02/Unicorn-4-Preview-Part-2-SPE-Support/) and [here](https://kamsar.net/index.php/2017/02/Unicorn-4-Preview-Part-2-5-Generating-Packages-with-SPE/).
 
 ### Configurations
 
@@ -135,6 +137,25 @@ Get-ChildItem "/sitecore/content" | ConvertTo-RainbowYaml | Import-RainbowItem
 ```
 
 ![Deserialization](https://user-images.githubusercontent.com/933163/50114603-8bce6a80-020a-11e9-8876-2df4d24e5443.png)
+
+### Packaging
+
+```text
+# Create a new Sitecore Package (SPE cmdlet)
+$pkg = New-Package
+
+# Get the Unicorn Configuration(s) we want to package
+$configs = Get-UnicornConfiguration "Foundation.*" 
+
+# Pipe the configs into New-UnicornItemSource 
+# to process them and add them to the package project
+# (without -Project, this would emit the source object(s) 
+#   which can be manually added with $pkg.Sources.Add())
+$configs | New-UnicornItemSource -Project $pkg
+
+# Export the package to a zip file on disk
+Export-Package -Project $pkg -Path "C:\foo.zip"
+```
 
 ## SPE Modules
 
