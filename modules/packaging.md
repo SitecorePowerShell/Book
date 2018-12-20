@@ -19,7 +19,7 @@ Set of instructions for the user.
 
 # Items using New-ItemSource and New-ExplicitItemSource
 $source = Get-Item -Path "master:\templates\Feature\Forms" | 
-    New-ItemSource -Name 'Feature Forms Items' -InstallMode Overwrite $package.Sources.Add($source)
+    New-ItemSource -Name 'Feature Forms Items' -InstallMode Overwrite
 $package.Sources.Add($source)
 
 # Files using New-FileSource and New-ExplicitFileSource
