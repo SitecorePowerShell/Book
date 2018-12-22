@@ -137,17 +137,46 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
 
 You may find yourself trying to optimize your scripts. A few things that might help include the following.
 
+{% tabs %}
+{% tab title="ArrayList" %}
 ```text
 # Use ArrayList to append items rather than creating new fixed dimensional arrays
 $names = [System.Collections.ArrayList]@()
 $names.Add("Michael") > $null
 $names.Add("Adam") > $null
+```
+{% endtab %}
 
+{% tab title="List" %}
+```text
 # Optionally create static static typed arrays
 $names = [System.Collections.Generic.List[string]]@()
 $names.Add("Michael") > $null
 $names.Add("Adam") > $null
 ```
+{% endtab %}
+
+{% tab title="HashSet" %}
+​[Find items based on a template](https://sitecore.stackexchange.com/a/15168/95)
+
+```text
+# HashSet when only values are needed
+$nameLookup = New-Object System.Collections.Generic.HashSet[string]
+$nameLookup.Add("Michael") > $null
+```
+{% endtab %}
+
+{% tab title="Queue" %}
+[Find items based on a template](https://sitecore.stackexchange.com/a/15168/95)
+
+```text
+# Queue when ... a queue is needed
+$queue = New-Object System.Collections.Queue
+$queue.Enqueue("{GUID}")
+$queue.Dequeue()
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 Checklist of performance tuning ideas:
