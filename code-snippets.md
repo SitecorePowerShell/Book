@@ -24,7 +24,9 @@ $sourceTemplate | Get-ItemReferrer | Where-Object { $PSItem.Paths.IsContentItem 
 $item.Editing.BeginEdit()
 $item["Allowed Controls"] = "{guid1}|{guid2}|{guid3}"
 $item.Editing.EndEdit()
+```
 
+```text
 # Array of Ids.
 $ids = [System.String]::Join("|", $array)
 $item.Editing.BeginEdit()
@@ -163,5 +165,5 @@ Wait-RemoteScriptSession -Session $session -Id $jobId -Delay 5 -Verbose
 Stop-ScriptSession -Session $session
 ```
 
-Not seeing what you are looking for? You can always check out some Github Gists that [Adam](https://gist.github.com/adamnaj) and [Michael](https://gist.github.com/michaellwest) have shared.
+Not seeing what you are looking for? You can always check out some Github Gists that [Adam](https://gist.github.com/adamnaj) and [Michael](https://gist.github.com/michaellwest) have shared or the [Sitecore Stack Exchange](https://sitecore.stackexchange.com/questions/tagged/powershell-extensions).
 

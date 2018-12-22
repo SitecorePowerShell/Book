@@ -56,17 +56,17 @@ The following are some helpful modules distributed with SPE.
 
 ## Endorsements
 
-_"There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API"_ - [Alistair Deneys](https://twitter.com/adeneys) - Sitecore Symposium 2012
+> _There is nothing you can not do with PowerShell Console, because you're inside the Sitecore application. You can call the Sitecore API._ - [Alistair Deneys](https://twitter.com/adeneys) - Sitecore Symposium 2012
 
-Recommended by [John West](https://twitter.com/sitecorejohn) to use as a tool for [maximizing Sitecore developer productivity](https://www.sitecore.net/learn/blogs/technical-blogs/john-west-sitecore-blog/posts/2015/02/maximize-sitecore-developer-productivity.aspx).
+> Recommended by [John West](https://twitter.com/sitecorejohn) to use as a tool for [maximizing Sitecore developer productivity](https://www.sitecore.net/learn/blogs/technical-blogs/john-west-sitecore-blog/posts/2015/02/maximize-sitecore-developer-productivity.aspx).
 
-_"Get a job done with a one liner!  
-Just provisioned a new language for the whole content tree with a one-liner. Whaaaat?  
-Have to include it as a default install for all sandboxes now."_ - [Alex Shyba](https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx)'s comment on Marketplace
+> _Get a job done with a one liner!  
+> Just provisioned a new language for the whole content tree with a one-liner. Whaaaat?  
+> Have to include it as a default install for all sandboxes now._ - [Alex Shyba](https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx)'s comment on Marketplace
 
-_"Thank you for the GitBook. Invaluable Reference."_ - [Nick Wesselman](https://twitter.com/techphoria414)'s [tweet](https://twitter.com/techphoria414/status/632033887632289792)
+> _hank you for the GitBook. Invaluable Reference._ - [Nick Wesselman](https://twitter.com/techphoria414)'s [tweet](https://twitter.com/techphoria414/status/632033887632289792)
 
-_"The Sitecore powershell tools are absurdly good and helpful. I know they make a lot of people nervous, but they are incredibly well managed. Everybody should learn to sling some shell in Sitecore, you'll never look back."_ - [Christopher Campbell](https://twitter.com/RehbellOne) [tweet](https://twitter.com/RehbellOne/status/1058048820435607552)
+> _The Sitecore powershell tools are absurdly good and helpful. I know they make a lot of people nervous, but they are incredibly well managed. Everybody should learn to sling some shell in Sitecore, you'll never look back._ - [Christopher Campbell](https://twitter.com/RehbellOne) [tweet](https://twitter.com/RehbellOne/status/1058048820435607552)
 
 ## Development Team
 

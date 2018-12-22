@@ -216,20 +216,34 @@ The brackets surrounding the parameter and the brackets immediately following a 
     indicating they are optional.
 #>
 Get-Something
+```
 
+```text
 <# 
     SomeParameter has double brackets around the parameter name and argument 
     indicating the name is optional and when an argument is passed the name 
     can be skipped.
 #>
 Get-Something "data"
+```
 
+```text
 <#
     AnotherParameter has single brackets indicating that the parameter is 
     optional. If the argument is used so must the name. The same reasoning 
     can be applied to the switch.
 #>
 Get-Something "data","data2" -AnotherParameter 100 –SomeSwitch
+```
+
+```text
+# Splat parameters to command
+$props = @{
+    "SomeParameter" = @("data","data2")
+    "AnotherParameter" = 100
+    "SomeSwitch" = $true
+}
+Get-Something @props
 ```
 
 {% hint style="warning" %}
