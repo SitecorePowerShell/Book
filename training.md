@@ -8,7 +8,7 @@ The world renowned Sitecore PowerShell Extensions module has so much to offer, b
 
 Don't worry, you will be able to use it without having to write any code.
 
-## Training Material
+## Videos and Blogs
 
 We have a video series available to help walk you through the module [here](https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b).
 
@@ -201,6 +201,22 @@ $watch = [System.Diagnostics.Stopwatch]::StartNew()
 Get-Item -Path "master:" > $null
 $watch.Stop()
 $watch.ElapsedMilliseconds
+```
+{% endtab %}
+
+{% tab title="Terminate Output" %}
+**Example:** The following terminates the output.
+
+```text
+# Slow but functional
+$builder = New-Object System.Text.StringBuilder
+$builder.Append("Hello World!") | Out-Null
+$builder.ToString()
+
+# Much faster
+$builder = New-Object System.Text.StringBuilder
+$builder.Append("Hello World!") > $null
+$builder.ToString()
 ```
 {% endtab %}
 {% endtabs %}
