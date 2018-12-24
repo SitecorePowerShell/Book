@@ -14,13 +14,13 @@ We have a video series available to help walk you through the module [here](http
 
 We also maintain a comprehensive list of links to [blogs and videos](https://blog.najmanowicz.com/sitecore-powershell-console/) to help you on your journey to SPE awesomeness. Happy coding!
 
-## Language Syntax
+## Language Basics
 
 PowerShell is built on the Microsoft .Net technology; you will find that most APIs in your libraries can be accessed from within the PowerShell runtime. In this section we will see similarities between the C\# and PowerShell syntax.
 
 ### C\# to PowerShell
 
-Use the table below to aid in translating from C\# to PowerShell.
+Use the table below to aid in translating from C\# to PowerShell. Some of the examples below are not "exact" translations, but should give you a good idea on what it would look like. For example, creating a new dynamic list in C\# is often written as a fixed dimensional array recreated with every new addition.
 
 <table>
   <thead>
@@ -200,7 +200,7 @@ Checklist of performance tuning ideas:
 
 Learning PowerShell begins with running your first command. In this section we learn about the basic command syntax, and some common ones you should learn.
 
-### Command Syntax
+### Syntax
 
 **Example:** The following provides an example syntax for a fake command.
 
@@ -272,15 +272,15 @@ Some of the most useful commands to learn can be seen in the table below. These 
 
 | Command | Description |
 | :--- | :--- |
-| Get-Item | Returns an object at the specified path. |
-| Get-ChildItem | Returns children at the specified path. Supports recursion. |
-| Get-Help | Returns the help documentation for the specified command or document. |
-| Get-Command | Returns a list of commands. |
-| ForEach-Object | Enumerates over the objects passed through the pipeline. |
-| Where-Object | Enumerates over the objects passed through the pipeline and filters objects. |
-| Select-Object | Returns objects from the pipeline with the specified properties and filters objects. |
-| Sort-Object | Sorts the pipeline objects with the specified criteria; usually a property name. |
-| Get-Member | Returns the methods and properties for the specified object. |
+| **Get-Item** | Returns an object at the specified path. |
+| **Get-ChildItem** | Returns children at the specified path. Supports recursion. |
+| **Get-Help** | Returns the help documentation for the specified command or document. |
+| **Get-Command** | Returns a list of commands. |
+| **ForEach-Object** | Enumerates over the objects passed through the pipeline. |
+| **Where-Object** | Enumerates over the objects passed through the pipeline and filters objects. |
+| **Select-Object** | Returns objects from the pipeline with the specified properties and filters objects. |
+| **Sort-Object** | Sorts the pipeline objects with the specified criteria; usually a property name. |
+| **Get-Member** | Returns the methods and properties for the specified object. |
 
 {% hint style="info" %}
 PowerShell was designed so that after learning a few concepts you can get up and running. Once you get past the basics you should be able to understand most scripts included with SPE.
@@ -302,7 +302,7 @@ $items | Remove-Item
 
 PowerShell also comes with a set of useful commands for filtering and sorting. Let’s see those in action.
 
-**Example:** The following queries a tree of Sitecore items and returns only those that meet the criteria. The item properties are reduced and thensorted.
+**Example:** The following queries a tree of Sitecore items and returns only those that meet the criteria. The item properties are reduced and then sorted.
 
 ```text
 # Use variables for parameters such as paths to make scripts easier to read.
@@ -310,25 +310,25 @@ $path = "master:\content\home\"
 
 Get-ChildItem -Path $path -Recurse | 
     Where-Object { $_.Name -like "*Sitecore*" } | 
-    Select-Object -Property Name, ItemPath, ID
+    Select-Object -Property ID,Name,ItemPath
     Sort-Object -Property Name
 ```
 
 {% hint style="info" %}
-A best practice in PowerShell is to reduce the number of objects passed through the pipeline as far left as possible. While the example would work if the **Sort-Object** command came before **Where-Object**, we will see a performance improvement because the sorting has fewer objects to worry about. Some commands such as **Get-ChildItem** support additional options for filtering which further improves performance.
+A best practice in PowerShell is to reduce the number of objects passed through the pipeline as far left as possible. While the example would work if the **Sort-Object** command came before **Where-Object**, we will see a performance improvement because the sorting has fewer objects to evaluate. Some commands such as **Get-ChildItem** support additional options for filtering which further improve performance.
 {% endhint %}
 
 **Example:** The following demonstrates how commands can be written clearly with little confusion on the intent, then how aliases and abbreviations can get in the way. Always think about the developer that comes after you to maintain the code.
 
 ```text
-# Longhand
+# Longhand - recommended
 Get-Command -Name ForEach-Object –Type cmdlet | Select-Object -ExpandProperty ParameterSets
 
-# Shorthand
+# Shorthand - not recommend
 gcm -na foreach-object -ty cmdlet | select -exp parametersets
 ```
 
-Windows PowerShell is bundled with a ton of documentation that could not possible be included with this book; we can however show you how to access it.
+Windows PowerShell is bundled with a ton of documentation that could not possibly be included with this book; we can however show you how to access it.
 
 **Example:** The following examples demonstrate ways to get help…with PowerShell.
 
@@ -347,7 +347,7 @@ help Get-Member
 PowerShell does not include the complete help documentation by default on Windows. Run the command **Update-Help** from an elevated prompt to update the help files to the latest available version. See `help update-help` for more information on the command syntax and details of its use. All of the SPE help documentation is available regardless of running **Update-Help**.
 {% endhint %}
 
-### Providers
+## Providers
 
 The provider architecture in PowerShell enables a developer to make a command like **Get-Item** interact with the filesystem files and folders, and then interact with the Sitecore CMS items.
 
@@ -355,15 +355,15 @@ The SPE module implements a new provider that bridges the Windows PowerShell pla
 
 | Name | Drives | Example |
 | :--- | :--- | :--- |
-| Alias | Alias | Get-Item -Path alias:\dir |
-| CmsItemProvider | core, master, web | Get-Item -Path master:\ |
-| Environment | Env | Get-Item -Path env:\HOMEPATH |
-| FileSystem | C, D, F, H | Get-Item -Path c:\Windows |
-| Function | Function | Get-Item -Path function:\prompt |
-| Registry | HKLM, HKCU | Get-Item -Path hklm:\SOFTWARE |
-| Variable | Variable | Get-Item -Path variable:\PSVersionTable |
+| Alias | Alias | `Get-Item -Path alias:\dir` |
+| CmsItemProvider | core, master, web | `Get-Item -Path master:\` |
+| Environment | Env | `Get-Item -Path env:\HOMEPATH` |
+| FileSystem | C, D, F, H | `Get-Item -Path c:\Windows` |
+| Function | Function | `Get-Item -Path function:\prompt` |
+| Registry | HKLM, HKCU | `Get-Item -Path hklm:\SOFTWARE` |
+| Variable | Variable | `Get-Item -Path variable:\PSVersionTable` |
 
-The default provider used by the PowerShell Console and ISE is the **CmsItemProvider** with the drive set to the master database.
+The default provider used by the PowerShell Console and ISE is the **CmsItemProvider** with the drive set to the **master** database.
 
 **Example:** The following demonstrates switching between providers using the function **cd**, an alias for **Set-Location**, while in the Console.
 

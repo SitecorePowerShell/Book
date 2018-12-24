@@ -1,3 +1,10 @@
+---
+description: >-
+  Sitecore PowerShell Extensions is an open source module built for the Sitecore
+  Content Management System. Run commands and scripts written in PowerShell
+  using the Sitecore API.
+---
+
 # Introduction
 
 ![Sitecore PowerShell Extensions](.gitbook/assets/readme-console-ise.png)
