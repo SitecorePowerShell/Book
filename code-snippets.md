@@ -9,7 +9,8 @@ $sourceTemplate = Get-Item -Path "master:\{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}
 $targetTemplate = Get-Item -Path "master:\{93A8866B-972F-4FBF-8FD9-D6004B18C0AF}"
 
 # Use Get-ItemReferrer to find all items referencing the template, rather than scanning the content tree.
-$sourceTemplate | Get-ItemReferrer | Where-Object { $PSItem.Paths.IsContentItem } |
+$sourceTemplate | Get-ItemReferrer | 
+    Where-Object { $PSItem.TemplateId -eq $sourceTemplate.ID -and $PSItem.Paths.IsContentItem } |
     ForEach-Object {
         Set-ItemTemplate -Item $PSItem -TemplateItem $targetTemplate
     }
@@ -28,6 +29,9 @@ $item.Editing.EndEdit()
 
 ```text
 # Array of Ids.
+$array = [System.Collections.ArrayList]@()
+$array.Add({guid1}) > $null
+$array.Add({guid2}) > $null
 $ids = [System.String]::Join("|", $array)
 $item.Editing.BeginEdit()
 $item["Allowed Controls"] = $ids
@@ -38,13 +42,12 @@ $item.Editing.EndEdit()
 
 ```text
 [Sitecore.Data.Fields.MultilistField]$field = $item.Fields["Allowed Controls"]
-
 $item.Editing.BeginEdit()
 $field.Replace("{493B3A83-0FA7-4484-8FC9-4680991CF742}","{493B3A83-0FA7-4484-8FC9-4680991CF743}")
 $item.Editing.EndEdit()
 ```
 
-Example: The following adds new Ids to an existing list. Makes use of the `Sitecore.Text.ListString` class.
+**Example:** The following adds new Ids to an existing list. Makes use of the `Sitecore.Text.ListString` class.
 
 ```text
 [Sitecore.Text.ListString]$ids = $item.Fields["Rendering"].Value
