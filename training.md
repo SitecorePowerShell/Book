@@ -148,42 +148,59 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
 You may find yourself trying to optimize your scripts. A few things that might help include the following.
 
 {% tabs %}
-{% tab title="ArrayList" %}
+{% tab title="Collections" %}
+**Example:** The following demonstrates the use of an **ArrayList**. Performs much better than purely using `@()`.
+
 ```text
 # Use ArrayList to append items rather than creating new fixed dimensional arrays
 $names = [System.Collections.ArrayList]@()
 $names.Add("Michael") > $null
 $names.Add("Adam") > $null
 ```
-{% endtab %}
 
-{% tab title="List" %}
+**Example:** The following demonstrates the use of **List&lt;string&gt;**. This is ideal when statically typed arrays are required.
+
 ```text
 # Optionally create static static typed arrays
 $names = [System.Collections.Generic.List[string]]@()
 $names.Add("Michael") > $null
 $names.Add("Adam") > $null
 ```
-{% endtab %}
 
-{% tab title="HashSet" %}
-​[Find items based on a template](https://sitecore.stackexchange.com/a/15168/95)
+**Example:** The following demonstrates the use of **HashSet**. Use when a distinct list of items is needed. Performs like a **Dictionary** but without the requirement for a key.
 
 ```text
 # HashSet when only values are needed
 $nameLookup = New-Object System.Collections.Generic.HashSet[string]
 $nameLookup.Add("Michael") > $null
 ```
-{% endtab %}
 
-{% tab title="Queue" %}
-[Find items based on a template](https://sitecore.stackexchange.com/a/15168/95)
+**Example:** The following demonstrates the use of **Queue**. A Sitecore Stack Exchange answer to [find items based on a template](https://sitecore.stackexchange.com/a/15168/95) may be helpful.
 
 ```text
 # Queue when ... a queue is needed
 $queue = New-Object System.Collections.Queue
 $queue.Enqueue("{GUID}")
 $queue.Dequeue()
+```
+{% endtab %}
+
+{% tab title="Measure Time" %}
+**Example:** The following measures code execution time using `Measure-Command`.
+
+```text
+Measure-Command -Expression {
+    Get-Item -Path "master:" > $null
+} | Select-Object -ExpandProperty TotalMilliseconds
+```
+
+**Example:** The following measures code execution time using a `Stopwatch`.
+
+```text
+$watch = [System.Diagnostics.Stopwatch]::StartNew()
+Get-Item -Path "master:" > $null
+$watch.Stop()
+$watch.ElapsedMilliseconds
 ```
 {% endtab %}
 {% endtabs %}
