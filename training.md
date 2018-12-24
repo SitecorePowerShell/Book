@@ -1,6 +1,10 @@
+---
+description: Find resources for learning PowerShell and the SPE module.
+---
+
 # Training
 
-Sitecore PowerShell Extensions module has so much to offer, but sometimes those new to the module may find it difficult to know where to start. The following book should provide you with enough information to use and be productive with SPE.
+The world renowned Sitecore PowerShell Extensions module has so much to offer, but sometimes those new to the module may find it difficult to know where to start. The following book should provide you with enough information to use and be productive with SPE.
 
 Don't worry, you will be able to use it without having to write any code.
 
@@ -12,7 +16,11 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
 
 ## Language Syntax
 
+PowerShell is built on the Microsoft .Net technology; you will find that most APIs in your libraries can be accessed from within the PowerShell runtime. In this section we will see similarities between the C\# and PowerShell syntax.
+
 ### C\# to PowerShell
+
+Use the table below to aid in translating from C\# to PowerShell.
 
 <table>
   <thead>
@@ -40,13 +48,15 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
     </tr>
     <tr>
       <td style="text-align:left">
-        <p><code>// Create a new list of strings</code>  <code>var names = new List&lt;string&gt;();</code>  <code>names.Add(&quot;Michael&quot;);</code> 
+        <p><code>// Create a new dynamic list of strings</code>  <code>var names = new List&lt;string&gt;();</code>  <code>names.Add(&quot;Michael&quot;);</code> 
         </p>
         <p><code>names.Add(&quot;Adam&quot;);</code>
         </p>
       </td>
       <td style="text-align:left">
-        <p><code># Create a new list of strings</code>  <code>$names = @()</code> 
+        <p><code># Create a new fixed list of strings</code>
+        </p>
+        <p><code>[string[]]$names = @()</code> 
         </p>
         <p><code>$names += &quot;Michael&quot;</code> 
         </p>
@@ -133,7 +143,7 @@ We also maintain a comprehensive list of links to [blogs and videos](https://blo
   </tbody>
 </table>As you can see in the table above, the language syntax is not all that different between C\# and PowerShell. Within a few minutes you might even be able to translate code from your library classes into SPE scripts.
 
-#### Performance Considerations
+### Performance Considerations
 
 You may find yourself trying to optimize your scripts. A few things that might help include the following.
 
@@ -186,7 +196,11 @@ Checklist of performance tuning ideas:
 * Use hashtables as lookup tables for data
 {% endhint %}
 
-### PowerShell Commands
+## PowerShell Commands
+
+Learning PowerShell begins with running your first command. In this section we learn about the basic command syntax, and some common ones you should learn.
+
+### Command Syntax
 
 **Example:** The following provides an example syntax for a fake command.
 
