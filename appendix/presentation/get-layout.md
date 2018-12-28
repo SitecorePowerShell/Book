@@ -4,11 +4,13 @@ Returns the layout for the specified item.
 
 ## Syntax
 
-Get-Layout \[-Item\] &lt;Item&gt; \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+```text
+Get-Layout [-Item] <Item> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Get-Layout \[-Path\] &lt;String&gt; \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Get-Layout [-Path] <String> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Get-Layout -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Get-Layout -Id <String> [-Database <String>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
+```
 
 ## Detailed Description
 

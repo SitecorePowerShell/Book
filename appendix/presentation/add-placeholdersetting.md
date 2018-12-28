@@ -4,11 +4,13 @@ Adds a placeholder setting to a chosen device for the presentation of an item.
  
 ## Syntax 
  
-Add-PlaceholderSetting [-Item] &lt;Item&gt; -Instance &lt;PlaceholderDefinition&gt; [-MetaDataItemId &lt;string&gt;] [-Key &lt;string&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Add-PlaceholderSetting [-Path] &lt;string&gt; -Instance &lt;PlaceholderDefinition&gt; [-MetaDataItemId &lt;string&gt;] [-Key &lt;string&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Add-PlaceholderSetting -Instance &lt;PlaceholderDefinition&gt; -Id &lt;string&gt; [-MetaDataItemId &lt;string&gt;] [-Key &lt;string&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;] [-Database &lt;string&gt;]
+```text
+Add-PlaceholderSetting [-Item] <Item> -Instance <PlaceholderDefinition> [-MetaDataItemId <string>] [-Key <string>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Add-PlaceholderSetting [-Path] <string> -Instance <PlaceholderDefinition> [-MetaDataItemId <string>] [-Key <string>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Add-PlaceholderSetting -Instance <PlaceholderDefinition> -Id <string> [-MetaDataItemId <string>] [-Key <string>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>] [-Database <string>]
+```
  
 ## Detailed Description 
  

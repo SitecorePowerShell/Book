@@ -4,11 +4,13 @@ Creates new rendering definition that can later be added to an item.
 
 ## Syntax
 
-New-Rendering \[-Item\] &lt;Item&gt; \[-Parameter &lt;Hashtable&gt;\] \[-PlaceHolder &lt;String&gt;\] \[-DataSource &lt;Item&gt;\] \[-Cacheable\] \[-VaryByData\] \[-VaryByDevice\] \[-VaryByLogin\] \[-VaryByParameters\] \[-VaryByQueryString\] \[-VaryByUser\] \[-Language &lt;String\[\]&gt;\]
+```text
+New-Rendering [-Item] <Item> [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <Item>] [-Cacheable] [-VaryByData] [-VaryByDevice] [-VaryByLogin] [-VaryByParameters] [-VaryByQueryString] [-VaryByUser] [-Language <String[]>]
 
-New-Rendering \[-Path\] &lt;String&gt; \[-Parameter &lt;Hashtable&gt;\] \[-PlaceHolder &lt;String&gt;\] \[-DataSource &lt;Item&gt;\] \[-Cacheable\] \[-VaryByData\] \[-VaryByDevice\] \[-VaryByLogin\] \[-VaryByParameters\] \[-VaryByQueryString\] \[-VaryByUser\] \[-Language &lt;String\[\]&gt;\]
+New-Rendering [-Path] <String> [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <Item>] [-Cacheable] [-VaryByData] [-VaryByDevice] [-VaryByLogin] [-VaryByParameters] [-VaryByQueryString] [-VaryByUser] [-Language <String[]>]
 
-New-Rendering -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Parameter &lt;Hashtable&gt;\] \[-PlaceHolder &lt;String&gt;\] \[-DataSource &lt;Item&gt;\] \[-Cacheable\] \[-VaryByData\] \[-VaryByDevice\] \[-VaryByLogin\] \[-VaryByParameters\] \[-VaryByQueryString\] \[-VaryByUser\] \[-Language &lt;String\[\]&gt;\]
+New-Rendering -Id <String> [-Database <String>] [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <Item>] [-Cacheable] [-VaryByData] [-VaryByDevice] [-VaryByLogin] [-VaryByParameters] [-VaryByQueryString] [-VaryByUser] [-Language <String[]>]
+```
 
 ## Detailed Description
 

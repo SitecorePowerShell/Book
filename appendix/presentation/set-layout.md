@@ -4,11 +4,13 @@ Sets item layout for a device.
 
 ## Syntax
 
-Set-Layout \[-Item\] &lt;Item&gt; -Device &lt;DeviceItem&gt; \[-Layout &lt;Item&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+```text
+Set-Layout [-Item] <Item> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
 
-Set-Layout \[-Path\] &lt;String&gt; -Device &lt;DeviceItem&gt; \[-Layout &lt;Item&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Set-Layout [-Path] <String> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
 
-Set-Layout -Id &lt;String&gt; \[-Database &lt;String&gt;\] -Device &lt;DeviceItem&gt; \[-Layout &lt;Item&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Set-Layout -Id <String> [-Database <String>] -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
+```
 
 ## Detailed Description
 

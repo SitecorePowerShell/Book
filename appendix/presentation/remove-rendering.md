@@ -4,23 +4,25 @@ Removes renderings from an item.
 
 ## Syntax
 
-Remove-Rendering -Item &lt;Item&gt; \[-DataSource &lt;String&gt;\] \[-Rendering &lt;Item&gt;\] \[-Index &lt;Int32&gt;\] \[-PlaceHolder &lt;String&gt;\] \[-Parameter &lt;Hashtable&gt;\] \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+```text
+Remove-Rendering -Item <Item> [-DataSource <String>] [-Rendering <Item>] [-Index <Int32>] [-PlaceHolder <String>] [-Parameter <Hashtable>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Remove-Rendering -Item &lt;Item&gt; -Instance &lt;RenderingDefinition&gt; \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Remove-Rendering -Item <Item> -Instance <RenderingDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Remove-Rendering -Item &lt;Item&gt; -UniqueId &lt;String&gt; \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Remove-Rendering -Item <Item> -UniqueId <String> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Remove-Rendering -Path &lt;String&gt; \[-DataSource &lt;String&gt;\] \[-Rendering &lt;Item&gt;\] \[-Index &lt;Int32&gt;\] \[-PlaceHolder &lt;String&gt;\] \[-Parameter &lt;Hashtable&gt;\] \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Remove-Rendering -Path <String> [-DataSource <String>] [-Rendering <Item>] [-Index <Int32>] [-PlaceHolder <String>] [-Parameter <Hashtable>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Remove-Rendering -Path &lt;String&gt; -Instance &lt;RenderingDefinition&gt; \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Remove-Rendering -Path <String> -Instance <RenderingDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Remove-Rendering -Path &lt;String&gt; -UniqueId &lt;String&gt; \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Remove-Rendering -Path <String> -UniqueId <String> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Remove-Rendering \[-Id &lt;String&gt;\] \[-Database &lt;String&gt;\] \[-DataSource &lt;String&gt;\] \[-Rendering &lt;Item&gt;\] \[-Index &lt;Int32&gt;\] \[-PlaceHolder &lt;String&gt;\] \[-Parameter &lt;Hashtable&gt;\] \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Remove-Rendering [-Id <String>] [-Database <String>] [-DataSource <String>] [-Rendering <Item>] [-Index <Int32>] [-PlaceHolder <String>] [-Parameter <Hashtable>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Remove-Rendering \[-Id &lt;String&gt;\] \[-Database &lt;String&gt;\] -Instance &lt;RenderingDefinition&gt; \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Remove-Rendering [-Id <String>] [-Database <String>] -Instance <RenderingDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Remove-Rendering \[-Id &lt;String&gt;\] \[-Database &lt;String&gt;\] -UniqueId &lt;String&gt; \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Remove-Rendering [-Id <String>] [-Database <String>] -UniqueId <String> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
+```
 
 ## Detailed Description
 

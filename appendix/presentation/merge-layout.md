@@ -2,11 +2,13 @@
 
 ## Syntax
 
-Merge-Layout \[-Item\] &lt;Item&gt; \[-Language &lt;String\[\]&gt;\]
+```text
+Merge-Layout [-Item] <Item> [-Language <String[]>]
 
-Merge-Layout \[-Path\] &lt;String&gt; \[-Language &lt;String\[\]&gt;\]
+Merge-Layout [-Path] <String> [-Language <String[]>]
 
-Merge-Layout -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Language &lt;String\[\]&gt;\]
+Merge-Layout -Id <String> [-Database <String>] [-Language <String[]>]
+```
 
 ## Detailed Description
 

@@ -4,11 +4,13 @@ Creates new placeholder setting definition that can later be added to an item.
  
 ## Syntax 
  
-New-PlaceholderSetting [-Item] &lt;Item&gt; [-Key &lt;string&gt;] [-Language &lt;string[]&gt;] 
- 
-New-PlaceholderSetting [-Path] &lt;string&gt; [-Key &lt;string&gt;] [-Language &lt;string[]&gt;] 
- 
-New-PlaceholderSetting -Id &lt;string&gt; [-Key &lt;string&gt;] [-Language &lt;string[]&gt;] [-Database &lt;string&gt;] 
+```text
+New-PlaceholderSetting [-Item] <Item> [-Key <string>] [-Language <string[]>]
+
+New-PlaceholderSetting [-Path] <string> [-Key <string>] [-Language <string[]>]
+
+New-PlaceholderSetting -Id <string> [-Key <string>] [-Language <string[]>] [-Database <string>]
+```
  
 ## Detailed Description 
  

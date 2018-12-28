@@ -4,11 +4,13 @@ Resets the layout for the specified item.
 
 ## Syntax
 
-Reset-Layout \[-Item\] &lt;Item&gt; \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+```text
+Reset-Layout [-Item] <Item> [-FinalLayout] [-Language <String[]>]
 
-Reset-Layout \[-Path\] &lt;String&gt; \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Reset-Layout [-Path] <String> [-FinalLayout] [-Language <String[]>]
 
-Reset-Layout -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Reset-Layout -Id <String> [-Database <String>] [-FinalLayout] [-Language <String[]>]
+```
 
 ## Detailed Description
 

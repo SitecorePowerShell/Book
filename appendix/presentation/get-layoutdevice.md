@@ -4,9 +4,11 @@ Returns the layout for the specified device.
 
 ## Syntax
 
-Get-LayoutDevice \[-Name\] &lt;String&gt;
+```text
+Get-LayoutDevice [-Name] <String>
 
-Get-LayoutDevice \[-Default\]
+Get-LayoutDevice [-Default]
+```
 
 ## Detailed Description
 

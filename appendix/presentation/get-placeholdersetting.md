@@ -4,23 +4,25 @@ The Get-PlaceholderSetting command returns PlaceholderSettingDefinition(s) for a
  
 ## Syntax 
  
-Get-PlaceholderSetting -Item &lt;Item&gt; [-Key &lt;string&gt;] [-PlaceholderSetting &lt;Item&gt;] [-Index &lt;int&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;] 
- 
-Get-PlaceholderSetting -Item &lt;Item&gt; -Instance &lt;PlaceholderDefinition&gt; [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Get-PlaceholderSetting -Item &lt;Item&gt; -UniqueId &lt;string&gt; [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;] 
- 
-Get-PlaceholderSetting -Path &lt;string&gt; [-Key &lt;string&gt;] [-PlaceholderSetting &lt;Item&gt;] [-Index &lt;int&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;] 
- 
-Get-PlaceholderSetting -Path &lt;string&gt; -Instance &lt;PlaceholderDefinition&gt; [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;] 
- 
-Get-PlaceholderSetting -Path &lt;string&gt; -UniqueId &lt;string&gt; [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;] 
- 
-Get-PlaceholderSetting [-Id &lt;string&gt;] [-Database &lt;string&gt;] [-Key &lt;string&gt;] [-PlaceholderSetting &lt;Item&gt;] [-Index &lt;int&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;] 
- 
-Get-PlaceholderSetting -Instance &lt;PlaceholderDefinition&gt; [-Id &lt;string&gt;] [-Database &lt;string&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;] 
- 
-Get-PlaceholderSetting -UniqueId &lt;string&gt; [-Id &lt;string&gt;] [-Database &lt;string&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;] 
+```text
+Get-PlaceholderSetting -Item <Item> [-Key <string>] [-PlaceholderSetting <Item>] [-Index <int>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Get-PlaceholderSetting -Item <Item> -Instance <PlaceholderDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Get-PlaceholderSetting -Item <Item> -UniqueId <string> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Get-PlaceholderSetting -Path <string> [-Key <string>] [-PlaceholderSetting <Item>] [-Index <int>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Get-PlaceholderSetting -Path <string> -Instance <PlaceholderDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Get-PlaceholderSetting -Path <string> -UniqueId <string> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Get-PlaceholderSetting [-Id <string>] [-Database <string>] [-Key <string>] [-PlaceholderSetting <Item>] [-Index <int>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Get-PlaceholderSetting -Instance <PlaceholderDefinition> [-Id <string>] [-Database <string>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Get-PlaceholderSetting -UniqueId <string> [-Id <string>] [-Database <string>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+``` 
   
 ## Detailed Description 
  

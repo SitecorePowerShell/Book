@@ -4,11 +4,13 @@ Adds a rendering to a chosen device for the presentation of an item.
 
 ## Syntax
 
-Add-Rendering \[-Item\] &lt;Item&gt; -Instance &lt;RenderingDefinition&gt; \[-Parameter &lt;Hashtable&gt;\] -PlaceHolder &lt;String&gt; \[-DataSource &lt;String&gt;\] \[-Index &lt;Int32&gt;\] \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+```text
+Add-Rendering [-Item] <Item> -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Add-Rendering \[-Path\] &lt;String&gt; -Instance &lt;RenderingDefinition&gt; \[-Parameter &lt;Hashtable&gt;\] -PlaceHolder &lt;String&gt; \[-DataSource &lt;String&gt;\] \[-Index &lt;Int32&gt;\] \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Add-Rendering [-Path] <String> -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
-Add-Rendering -Id &lt;String&gt; \[-Database &lt;String&gt;\] -Instance &lt;RenderingDefinition&gt; \[-Parameter &lt;Hashtable&gt;\] -PlaceHolder &lt;String&gt; \[-DataSource &lt;String&gt;\] \[-Index &lt;Int32&gt;\] \[-Device &lt;DeviceItem&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Add-Rendering -Id <String> [-Database <String>] -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
+```
 
 ## Detailed Description
 

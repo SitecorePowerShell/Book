@@ -4,23 +4,25 @@ Removes placeholder setting(s) from an item using the filtering parameters.
  
 ## Syntax 
  
-Remove-PlaceholderSetting -Item &lt;Item&gt; [-Key &lt;string&gt;] [-PlaceholderSetting &lt;Item&gt;] [-Index &lt;int&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Remove-PlaceholderSetting -Item &lt;Item&gt; -Instance &lt;PlaceholderDefinition&gt; [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Remove-PlaceholderSetting -Item &lt;Item&gt; -UniqueId &lt;string&gt; [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Remove-PlaceholderSetting -Path &lt;string&gt; [-Key &lt;string&gt;] [-PlaceholderSetting &lt;Item&gt;] [-Index &lt;int&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Remove-PlaceholderSetting -Path &lt;string&gt; -Instance &lt;PlaceholderDefinition&gt; [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Remove-PlaceholderSetting -Path &lt;string&gt; -UniqueId &lt;string&gt; [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Remove-PlaceholderSetting [-Id &lt;string&gt;] [-Database &lt;string&gt;] [-Key &lt;string&gt;] [-PlaceholderSetting &lt;Item&gt;] [-Index &lt;int&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Remove-PlaceholderSetting -Instance &lt;PlaceholderDefinition&gt; [-Id &lt;string&gt;] [-Database &lt;string&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
- 
-Remove-PlaceholderSetting -UniqueId &lt;string&gt; [-Id &lt;string&gt;] [-Database &lt;string&gt;] [-Device &lt;DeviceItem&gt;] [-FinalLayout] [-Language &lt;string[]&gt;]
+```text
+Remove-PlaceholderSetting -Item <Item> [-Key <string>] [-PlaceholderSetting <Item>] [-Index <int>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Remove-PlaceholderSetting -Item <Item> -Instance <PlaceholderDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Remove-PlaceholderSetting -Item <Item> -UniqueId <string> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Remove-PlaceholderSetting -Path <string> [-Key <string>] [-PlaceholderSetting <Item>] [-Index <int>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Remove-PlaceholderSetting -Path <string> -Instance <PlaceholderDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Remove-PlaceholderSetting -Path <string> -UniqueId <string> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Remove-PlaceholderSetting [-Id <string>] [-Database <string>] [-Key <string>] [-PlaceholderSetting <Item>] [-Index <int>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Remove-PlaceholderSetting -Instance <PlaceholderDefinition> [-Id <string>] [-Database <string>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+
+Remove-PlaceholderSetting -UniqueId <string> [-Id <string>] [-Database <string>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
+```
  
 ## Detailed Description 
  
