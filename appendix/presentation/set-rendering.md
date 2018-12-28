@@ -4,11 +4,13 @@ Updates rendering with new values.
 
 ## Syntax
 
-Set-Rendering \[-Item\] &lt;Item&gt; -Instance &lt;RenderingDefinition&gt; \[-Parameter &lt;Hashtable&gt;\] \[-PlaceHolder &lt;String&gt;\] \[-DataSource &lt;String&gt;\] \[-Index &lt;Int32&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+```text
+Set-Rendering [-Item] <Item> -Instance <RenderingDefinition> [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <String>] [-Index <Int32>] [-FinalLayout] [-Device <DeviceItem>] [-Language <String[]>]
 
-Set-Rendering \[-Path\] &lt;String&gt; -Instance &lt;RenderingDefinition&gt; \[-Parameter &lt;Hashtable&gt;\] \[-PlaceHolder &lt;String&gt;\] \[-DataSource &lt;String&gt;\] \[-Index &lt;Int32&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Set-Rendering [-Path] <String> -Instance <RenderingDefinition> [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <String>] [-Index <Int32>] [-FinalLayout] [-Device <DeviceItem>] [-Language <String[]>]
 
-Set-Rendering -Id &lt;String&gt; \[-Database &lt;String&gt;\] -Instance &lt;RenderingDefinition&gt; \[-Parameter &lt;Hashtable&gt;\] \[-PlaceHolder &lt;String&gt;\] \[-DataSource &lt;String&gt;\] \[-Index &lt;Int32&gt;\] \[-FinalLayout\] \[-Language &lt;String\[\]&gt;\]
+Set-Rendering -Id <String> [-Database <String>] -Instance <RenderingDefinition> [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <String>] [-Index <Int32>] [-FinalLayout] [-Device <DeviceItem>] [-Language <String[]>]
+```
 
 ## Detailed Description
 
@@ -90,6 +92,18 @@ Targets the Final Layout. If not provided, the Shared Layout will be targeted. A
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
+### -Device  &lt;DeviceItem&gt;
+
+Specifies the target device when applying the rendering changes.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
 ### -Language  &lt;String\[\]&gt;
 
 | Aliases |  |
@@ -162,11 +176,15 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-change all rendering's placeholder from main to footer
+Change all rendering's placeholder from main to footer
 
 ```text
-PS master:\> $item = Get-Item -Path master:\content\home
-PS master:\> Get-Rendering -Item $item -PlaceHolder "main" | Foreach-Object { $_.Placeholder = "footer"; Set-Rendering -Item $item -Instance $_ }
+$item = Get-Item -Path master:\content\home
+Get-Rendering -Item $item -PlaceHolder "main" | 
+    Foreach-Object { 
+        $_.Placeholder = "footer"; 
+        Set-Rendering -Item $item -Instance $_
+    }
 ```
 
 ## Related Topics
