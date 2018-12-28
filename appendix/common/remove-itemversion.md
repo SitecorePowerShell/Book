@@ -4,17 +4,19 @@ Removes Language/Version from a single item or a branch of items
 
 ## Syntax
 
-Remove-ItemVersion -Language &lt;String\[\]&gt; \[-Version &lt;String\[\]&gt;\] \[-ExcludeLanguage &lt;String\[\]&gt;\] \[-Path\] &lt;String&gt; \[-Recurse\] \[-MaxRecentVersions &lt;Int32&gt;\]
+```text
+Remove-ItemVersion -Language <String[]> [-Version <String[]>] [-ExcludeLanguage <String[]>] [-Path] <String> [-Recurse] [-MaxRecentVersions <Int32>]
 
-Remove-ItemVersion -Language &lt;String\[\]&gt; \[-Version &lt;String\[\]&gt;\] \[-ExcludeLanguage &lt;String\[\]&gt;\] -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Recurse\] \[-MaxRecentVersions &lt;Int32&gt;\]
+Remove-ItemVersion -Language <String[]> [-Version <String[]>] [-ExcludeLanguage <String[]>] -Id <String> [-Database <String>] [-Recurse] [-MaxRecentVersions <Int32>]
 
-Remove-ItemVersion \[-Language &lt;String\[\]&gt;\] \[-Version &lt;String\[\]&gt;\] \[-ExcludeLanguage &lt;String\[\]&gt;\] \[-Item\] &lt;Item&gt; \[-Recurse\] \[-MaxRecentVersions &lt;Int32&gt;\]
+Remove-ItemVersion [-Language <String[]>] [-Version <String[]>] [-ExcludeLanguage <String[]>] [-Item] <Item> [-Recurse] [-MaxRecentVersions <Int32>]
+```
 
 ## Detailed Description
 
 Removes Language/Version from a an Item either sent from pipeline or defined with Path or ID. A single language or a list of languages can be defined using the Language parameter. Language parameter supports globbing so you can delete whole language groups using wildcards.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
+© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
 
 The following abbreviations are aliases for this cmdlet:
 
@@ -132,6 +134,18 @@ Database containing the item to be processed - can work with Language parameter 
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
+### -Archive  &lt;SwitchParameter&gt;
+
+Specifying this switch will move the items to the archive rather than recycle bin.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
 ## Inputs
 
 The input type is the type of the objects that you can pipe to the cmdlet.
@@ -174,6 +188,15 @@ Trim all languages to 3 latest versions for /sitecore/content/home item and all 
 
 ```text
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language * -Recurse
+```
+
+### EXAMPLE 5
+
+The following moves the specified item version to the archive.
+
+```text
+$itemId = "{72EB19F8-E62A-4B99-80A3-63E03F4FD036}"
+Get-Item -Path "master:" -ID $itemId -Version 2 | Remove-ItemVersion -Archive
 ```
 
 ## Related Topics

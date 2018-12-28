@@ -1,0 +1,112 @@
+# Get-ArchiveItem
+
+Retrieves a list of items found in the specified archive.
+
+## Syntax
+
+```text
+Get-ArchiveItem -Archive <Archive>
+Get-ArchiveItem -Archive <Archive> [-ItemId <ID>]
+Get-ArchiveItem -Archive <Archive> [-Identity <AccountIdentity>]
+```
+
+## Detailed Description
+
+The Get-ArchiveItem command returns items found in the "archive" and "recyclebin" archives.
+
+© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+
+## Parameters
+
+### -Archive  &lt;Archive&gt;
+
+Specifies the archive to use when determining which ArchiveEntry items to process. Use Get-Archive to find the appropriate archive.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | true |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false|
+| Accept Wildcard Characters? | false |
+
+### -ItemId  &lt;ID&gt;
+
+Specifies the ID for the original item that should be processed. This is NOT the ArchivalId.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -Identity  &lt;AccountIdentity&gt;
+
+Specifies the user responsible for moving the item to the archive.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+## Inputs
+
+None.
+
+## Outputs
+
+The output type is the type of the objects that the cmdlet emits.
+
+* Sitecore.Data.Archiving.ArchiveEntry 
+
+## Notes
+
+Help Author: Adam Najmanowicz, Michael West
+
+## Examples
+
+### EXAMPLE 1
+
+The following returns all items found in the specified archive.
+
+```text
+$database = Get-Database -Name "master"
+$archiveName = "recyclebin"
+$archive = Get-Archive -Database $database -Name $archiveName
+Get-ArchiveItem -Archive $archive
+```
+
+### EXAMPLE 2
+
+The following returns items matching the ItemId found in the specified archive.
+
+```text
+$database = Get-Database -Name "master"
+$archiveName = "recyclebin"
+$archive = Get-Archive -Database $database -Name $archiveName
+Get-ArchiveItem -Archive $archive -ItemId "{1BB32980-66B4-4ADA-9170-10A9D3336613}"
+```
+
+### EXAMPLE 3
+
+The following returns items moved to the recycle bin by the user found in the specified archive.
+
+```text
+$database = Get-Database -Name "master"
+$archiveName = "recyclebin"
+$archive = Get-Archive -Database $database -Name $archiveName
+Get-ArchiveItem -Archive $archive -Identity "sitecore\admin"
+```
+
+## Related Topics
+
+* Remove-ArchiveItem
+* Restore-ArchiveItem
+* Remove-Item
+* Remove-ItemVersion
+* [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
