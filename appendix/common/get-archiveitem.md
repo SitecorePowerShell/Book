@@ -103,6 +103,32 @@ $archive = Get-Archive -Database $database -Name $archiveName
 Get-ArchiveItem -Archive $archive -Identity "sitecore\admin"
 ```
 
+### EXAMPLE 4
+
+The following demonstrates changing the archive date on an item.
+
+```text
+$item = Get-Item -Path "master:" -ID "{1BB32980-66B4-4ADA-9170-10A9D3336613}"
+$date = $item[[Sitecore.FieldIDs]::ArchiveDate]
+$serverTime = [Sitecore.DateUtil]::IsoDateToServerTimeIsoDate($date)
+$serverTimeDateTime = [Sitecore.DateUtil]::IsoDateToDateTime($serverTime, [datetime]::MinValue)
+
+# Here you could add more time to the $serverTimeDateTime
+
+$utcTimeDateTime = [Sitecore.DateUtil]::ToUniversalTime($serverTimeDateTime)
+$isoTime = [Sitecore.DateUtil]::ToIsoDate($utcTimeDateTime)
+
+$item.Editing.BeginEdit()
+$item[[Sitecore.FieldIDs]::ArchiveDate] = $isoTime
+$item.Editing.EndEdit()
+
+# Some time after the date has passed
+$database = Get-Database -Name "master"
+$archiveName = "archive"
+$archive = Get-Archive -Database $database -Name $archiveName
+Get-ArchiveItem -Archive $archive -ItemId "{1BB32980-66B4-4ADA-9170-10A9D3336613}"
+```
+
 ## Related Topics
 
 * Remove-ArchiveItem
