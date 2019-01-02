@@ -105,9 +105,9 @@ Get-ArchiveItem -Archive $archive -Identity "sitecore\admin"
 
 ### EXAMPLE 4
 
-The following demonstrates changing the archive date on an item.
+The following demonstrates changing the archive date on an item followed by retrieving the archived item.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -ID "{1BB32980-66B4-4ADA-9170-10A9D3336613}"
 $date = $item[[Sitecore.FieldIDs]::ArchiveDate]
 $serverTime = [Sitecore.DateUtil]::IsoDateToServerTimeIsoDate($date)
