@@ -10,7 +10,7 @@ Remove-Domain \[-Name\] &lt;String&gt; \[-Force\]
 
 The Remove-Domain command removes the specified domain.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

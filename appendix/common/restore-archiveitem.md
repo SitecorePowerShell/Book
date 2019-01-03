@@ -14,7 +14,7 @@ Restore-ArchiveItem -Archive <Archive> [-ArchiveItem <ArchiveEntry[]>]
 
 The Restore-ArchiveItem command restores entries from specified archive back to the original database.
 
-© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

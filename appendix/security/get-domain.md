@@ -10,7 +10,7 @@ Get-Domain \[-Name &lt;String&gt;\]
 
 The Get-Domain command returns all the domains or the specified domain.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

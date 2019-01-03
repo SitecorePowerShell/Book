@@ -20,7 +20,7 @@ Show-FieldEditor -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Language &lt
 
 Shows Field editor for a provided item allows for editing all or selected list of fields. If user closes the dialog by pressing the "OK" button "ok" string will be returned. Otherwise "cancel" will be returned.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

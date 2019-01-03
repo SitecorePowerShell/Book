@@ -14,7 +14,7 @@ Unlock-Item -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-PassThru\]
 
 The Unlock-Item command unlocks the item specified with parameters.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

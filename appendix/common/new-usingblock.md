@@ -10,7 +10,7 @@ New-UsingBlock \[-InputObject\] &lt;IDisposable&gt; \[-ScriptBlock\] &lt;ScriptB
 
 The `New-UsingBlock` command disposes of the provided input object after the specified scriptblock completes execution. You may find the data returned by the scriptblock is contained within the following object `System.Collections.ObjectModel.Collection`1[[System.Management.Automation.PSObject, System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]`. This helps when multiple objects are returned and is [known behavior](https://stackoverflow.com/questions/9028804/why-does-invoking-a-powershell-script-block-with-invoke-return-a-collection).
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

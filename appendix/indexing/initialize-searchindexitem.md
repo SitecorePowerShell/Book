@@ -10,7 +10,7 @@ Initialize-SearchIndexItem -SearchResultItem &lt;SearchResultItem&gt; \[-AsJob\]
 
 ## Detailed Description
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
 
 The following abbreviations are aliases for this cmdlet:
 

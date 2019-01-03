@@ -24,7 +24,7 @@ Update-ItemReferrer -RemoveLink -Id &lt;String&gt; \[-Database &lt;String&gt;\] 
 
 The cmdlet manipulates link to a specific item. The target item can be provided as an Item object or through Path/ID. it does not modifies the item itself but rather other items that link to it. If the -RemoveLink parameter is used the link will be removed rather than modified. To deliver more fine grained filtering you can provide ItemLink using the -Link parameter. You can obtain ItemLinks using Get-ItemReferrer or Get-ItemReference cmdlets. Consult Examples for specific use cases of each approach.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

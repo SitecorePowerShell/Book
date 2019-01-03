@@ -20,7 +20,7 @@ Get-ItemReference -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Language &l
 
 The Get-ItemReference command returns all items linked to the specified item. If -ItemLink parameter is used the command will return links rather than items.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

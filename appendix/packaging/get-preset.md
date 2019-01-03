@@ -10,7 +10,7 @@ Get-Preset \[\[-Name\] &lt;String\[\]&gt;\]
 
 The Get-Preset command returns a serialization preset for use with Export-Item.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

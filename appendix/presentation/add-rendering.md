@@ -16,7 +16,7 @@ Add-Rendering -Id <String> [-Database <String>] -Instance <RenderingDefinition> 
 
 Adds a rendering to a chosen device for the presentation of an item.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

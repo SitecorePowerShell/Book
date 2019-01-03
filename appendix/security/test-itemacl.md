@@ -20,7 +20,7 @@ Test-ItemAcl -Id &lt;String&gt; \[-Database &lt;String&gt;\] -AccessRight &lt;St
 
 Checks if a user can perform an operation on an item.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

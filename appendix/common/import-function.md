@@ -10,7 +10,7 @@ Import-Function \[-Name\] &lt;String&gt; \[-Library &lt;String&gt;\] \[-Module &
 
 The Import-Function command imports a function script from the script library's "Functions" folder.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

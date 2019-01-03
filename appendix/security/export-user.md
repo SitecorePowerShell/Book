@@ -28,7 +28,7 @@ To search for and retrieve more than one user, use the Filter parameter.
 
 You can also pipe a user from the Get-user command.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

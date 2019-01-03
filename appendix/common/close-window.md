@@ -10,7 +10,7 @@ Close-Window
 
 Ensures the runner process window is closed after the script finishes execution. This is commonly used when the runner should close after a report runs while in the Desktop mode.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

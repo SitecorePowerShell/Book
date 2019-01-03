@@ -12,7 +12,7 @@ The New-User command creates a new user in Sitecore.
 
 The Identity parameter specifies the Sitecore user to create. You can specify a user by its local name or fully qualified name.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

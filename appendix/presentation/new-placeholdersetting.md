@@ -16,7 +16,7 @@ New-PlaceholderSetting -Id <string> [-Key <string>] [-Language <string[]>] [-Dat
  
 Creates new placeholder setting definition that can later be added to an item. Most parameters can later be overriden when calling Add-PlaceholderSetting. 
  
-© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions 
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions 
 
 ## Parameters 
  

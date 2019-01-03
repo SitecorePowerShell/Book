@@ -12,7 +12,7 @@ Receive-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] -N
 
 ## Detailed Description
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

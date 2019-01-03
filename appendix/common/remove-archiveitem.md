@@ -14,7 +14,7 @@ Remove-ArchiveItem -Archive <Archive> [-ArchiveItem <ArchiveEntry[]>]
 
 The Remove-ArchiveItem command permanently removes entries from specified archive.
 
-© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

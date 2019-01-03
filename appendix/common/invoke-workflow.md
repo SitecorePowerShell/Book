@@ -14,7 +14,7 @@ Invoke-Workflow -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-CommandName &
 
 Executes Workflow action for an item. If the workflow action could not be performed for any reason - an appropriate error will be raised.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
 
 The following abbreviations are aliases for this cmdlet:
 

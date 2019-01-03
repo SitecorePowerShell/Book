@@ -24,7 +24,7 @@ Both of them will serialize the content item in the master database. In first ca
 
 Get-Childitem "master:\content\home" -recurse \| Where-Object { $\_."\_\_Created By" -eq "sitecore\admin" } \| Export-Item
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
 
 The following abbreviations are aliases for this cmdlet:
 

@@ -10,7 +10,7 @@ Get-SpeModuleFeatureRoot \[-Module &lt;Module&gt;\] \[-ReturnPath\] \[-Feature\]
 
 The Get-SpeModuleFeatureRoot command returns library item or path to the library where scripts for a particular integration point should be located for a specific module.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

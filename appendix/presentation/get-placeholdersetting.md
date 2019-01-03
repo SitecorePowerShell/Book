@@ -28,7 +28,7 @@ Get-PlaceholderSetting -UniqueId <string> [-Id <string>] [-Database <string>] [-
  
 The Get-PlaceholderSetting command returns PlaceholderSettingDefinition(s) for an item using the filtering parameters. 
  
-© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions 
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions 
 
 ## Parameters 
  

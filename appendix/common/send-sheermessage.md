@@ -10,7 +10,7 @@ Send-SheerMessage \[-Name\] &lt;String&gt; \[-GetResult\] \[-Parameters &lt;Hash
 
 Sends a sheer message to the app in which context the script is executing.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

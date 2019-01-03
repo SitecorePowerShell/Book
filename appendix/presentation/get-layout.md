@@ -16,7 +16,7 @@ Get-Layout -Id <String> [-Database <String>] [-Device <DeviceItem>] [-FinalLayou
 
 The Get-Layout command returns the layout for the specified item.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

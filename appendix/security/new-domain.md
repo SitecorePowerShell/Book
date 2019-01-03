@@ -10,7 +10,7 @@ New-Domain \[-Name\] &lt;String&gt; \[-LocallyManaged\]
 
 The New-Domain command creates a domain if it does not exist.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

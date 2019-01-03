@@ -16,7 +16,7 @@ The Identity parameter specifies the Sitecore role to get. You can specify a rol
 
 To search for and retrieve more than one role, use the Filter parameter.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

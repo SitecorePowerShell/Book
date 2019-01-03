@@ -14,7 +14,7 @@ Suspend-SearchIndex \[-Name &lt;String&gt;\]
 
 The Suspend-SearchIndex command suspends \(pauses\) the Sitecore index.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

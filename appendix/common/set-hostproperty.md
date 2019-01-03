@@ -10,7 +10,7 @@ Set-HostProperty \[-ForegroundColor &lt;Black \| DarkBlue \| DarkGreen \| DarkCy
 
 Sets the current host property and perssits them for the future if used with -Persist parameter.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

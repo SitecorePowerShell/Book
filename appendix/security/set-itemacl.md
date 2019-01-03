@@ -14,7 +14,7 @@ Set-ItemAcl -AccessRules &lt;AccessRuleCollection&gt; \[-Item\] &lt;Item&gt; \[-
 
 Sets new security information on an item. The new rules will overwrite the existing security descriptors on the item.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

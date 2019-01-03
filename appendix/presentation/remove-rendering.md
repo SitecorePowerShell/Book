@@ -28,7 +28,7 @@ Remove-Rendering [-Id <String>] [-Database <String>] -UniqueId <String> [-Device
 
 Removes renderings from an item based on a number of qualifying criteria. The search criteria are cumulative and narrowing the search in an "AND" manner.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

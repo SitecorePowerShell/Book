@@ -16,7 +16,7 @@ New-Rendering -Id <String> [-Database <String>] [-Parameter <Hashtable>] [-Place
 
 Creates new rendering definition that can later be added to an item. Most parameters can later be overriden when calling Add-Rendering.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

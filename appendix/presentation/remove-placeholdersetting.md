@@ -28,7 +28,7 @@ Remove-PlaceholderSetting -UniqueId <string> [-Id <string>] [-Database <string>]
  
 Removes placeholder setting(s) from an item using the filtering parameters.
  
-© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions 
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions 
 
 ## Parameters 
  

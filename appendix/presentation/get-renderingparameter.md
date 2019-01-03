@@ -12,7 +12,7 @@ Get-RenderingParameter -Instance <RenderingDefinition> [-Name <String[]>]
 
 Gets the available rendering parameters found for a given rendering.
 
-© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

@@ -10,7 +10,7 @@ Update-ListView \[-InfoTitle &lt;String&gt;\] \[-InfoDescription &lt;String&gt;\
 
 This command updates the data displayed by List View that called the script the command is part of. Calling this command makes sense only when it's being used in script exposed as Action on the Show-ListView window. For example the main script might be listing all logged in users. And than the "Kick" action might be closing sessions for selected rows and refreshing the List view to take into account that the sessions are no longer connected. Another example is Task Manager script you can find in Toolbox. The List View shown by it shows tasks and when they were last run. If you choose to execute a task the Update-ListView command will later be called to update the data to account for the fact that the task's "Last Run" date has been updated.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

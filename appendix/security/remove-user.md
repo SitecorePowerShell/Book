@@ -14,7 +14,7 @@ The Remove-User command removes a user from Sitecore.
 
 The Identity parameter specifies the Sitecore user to remove. You can specify a user by its local name or fully qualified name.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

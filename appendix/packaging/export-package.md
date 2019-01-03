@@ -10,7 +10,7 @@ Export-Package \[\[-Path\] &lt;String&gt;\] \[\[-Project\] &lt;PackageProject&gt
 
 The Export-Package command creates a Sitecore installation package as either a .zip containing all items and files or .xml with project definition.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

@@ -12,7 +12,7 @@ Send-File \[-Item\] &lt;Item&gt; \[-Message &lt;String&gt;\] \[-NoDialog\] \[-Sh
 
 Executing this command with file path on the server provides script users with means to download a file to their computer. Executing it for an Item located in Sitecore Media library allows the user to download the blob stored in that item. If the file has been downloaded the dialog returns "downloaded" string, otherwise "cancelled" is returned.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
 
 The following abbreviations are aliases for this cmdlet:
 

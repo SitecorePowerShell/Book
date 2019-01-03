@@ -14,7 +14,7 @@ Publish-Item -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Recurse\] \[-Tar
 
 The Publish-Item command publishes the Sitecore item and optionally subitems. Allowing for granular control over languages and modes of publishing.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

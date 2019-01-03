@@ -14,7 +14,7 @@ Initialize-SearchIndex \[-Name &lt;String&gt;\] \[-AsJob\]
 
 The Rebuild-SearchIndex command rebuilds Sitecore index. This command is an alias for Initialize-SearchIndex.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
 
 The following abbreviations are aliases for this cmdlet:
 

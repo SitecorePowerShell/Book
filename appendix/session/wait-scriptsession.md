@@ -12,7 +12,7 @@ Wait-ScriptSession -Session &lt;ScriptSession\[\]&gt; \[-Timeout &lt;Int32&gt;\]
 
 The Wait-ScriptSession cmdlet waits for script session to complete before it displays the command prompt or allows the script to continue. You can wait until any script session is complete, or until all script sessions are complete, and you can set a maximum wait time for the script session. When the commands in the script session are complete, Wait-ScriptSession displays the command prompt and returns a script session object so that you can pipe it to another command. You can use Wait-ScriptSession cmdlet to wait for script sessions, such as those that were started by using the Start-ScriptSession cmdlet.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

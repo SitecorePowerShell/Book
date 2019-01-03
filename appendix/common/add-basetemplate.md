@@ -22,7 +22,7 @@ Add-BaseTemplate \[-Database &lt;String&gt;\]
 
 The Add-BaseTemplate command adds one or more base templates to a template item.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

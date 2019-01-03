@@ -10,7 +10,7 @@ Show-Input \[-Prompt\] &lt;String&gt; \[-DefaultValue &lt;String&gt;\] \[-Valida
 
 Shows prompt message box asking user to provide a text string.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

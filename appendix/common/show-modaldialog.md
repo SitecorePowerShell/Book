@@ -12,7 +12,7 @@ Show-ModalDialog -Url &lt;String&gt; \[-HandleParameters &lt;Hashtable&gt;\] \[-
 
 Shows Sitecore Sheer control as a modal dialog. If control returns a value - the value will be passed back as the result of the command execution.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

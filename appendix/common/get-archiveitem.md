@@ -14,7 +14,7 @@ Get-ArchiveItem -Archive <Archive> [-Identity <AccountIdentity>]
 
 The Get-ArchiveItem command returns items found in the "archive" and "recyclebin" archives.
 
-© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

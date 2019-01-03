@@ -10,7 +10,7 @@ Show-ListView \[-PageSize &lt;Int32&gt;\] \[-Modal\] \[-ActionData &lt;Object&gt
 
 The Show-ListView command sends the output from a command to a grid view window where the output is displayed in an interactive table. Because this command requires a user interface, it does not work in a non-interactive scenarios like within web service calls. You can use the following features of the table to examine your data: -- Sort. To sort the data, click a column header. Click again to toggle from ascending to descending order. -- Quick Filter. Use the "Filter" box at the top of the window to search the text in the table. You can search for text in a particular column, search for literals, and search for multiple words. -- Execute actions on selected items. To execute action on the data from Show-ListView, Ctrl+click the items you want to be included in the action and press the desired action in the "Actions" chunk in the ribbon. -- Export contents of the view in XML, CSV, Json, HTML or Excel file and download that onto the user's computer. The downloaded results will take into account current filter and order of the items.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

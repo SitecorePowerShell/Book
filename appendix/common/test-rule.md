@@ -10,7 +10,7 @@ Test-Rule \[-Rule &lt;String&gt;\] \[-InputObject &lt;PSObject&gt;\] \[-RuleData
 
 Tests item or a stream of items against a sitecore serialized rules engine rule set.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

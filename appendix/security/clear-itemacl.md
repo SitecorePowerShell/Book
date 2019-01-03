@@ -14,7 +14,7 @@ Clear-ItemAcl -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-PassThru\]
 
 Removes all security information from the item specified.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

@@ -28,7 +28,7 @@ Get-Rendering [-Id <String>] [-Database <String>] -UniqueId <String> [-Device <D
 
 The Get-Rendering command returns a RenderingDefinition for an item using the filtering parameters.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

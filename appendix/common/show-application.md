@@ -10,7 +10,7 @@ Show-Application \[-Application\] &lt;String&gt; \[\[-Parameter\] &lt;Hashtable&
 
 Executes Sitecore Sheer application, allows for passing additional parameters, launching it on desktop in cooperative or in Modal mode.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

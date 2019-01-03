@@ -16,7 +16,7 @@ Reset-Layout -Id <String> [-Database <String>] [-FinalLayout] [-Language <String
 
 The Reset-Layout command resets the layout for the specified item.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

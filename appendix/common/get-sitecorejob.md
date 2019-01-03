@@ -10,7 +10,7 @@ Get-SitecoreJob
 
 The Get-SitecoreJob command returns the list of the currently running jobs of Sitecore.
 
-© 2010-2017 Implemented by Vangasewinkel Benjamin using the Adam Najmanowicz, Michael West Sitecore PowerShell Extensions. All rights reserved.
+© 2010-2019 Implemented by Vangasewinkel Benjamin using the Adam Najmanowicz, Michael West Sitecore PowerShell Extensions. All rights reserved.
 
 ## Parameters
 

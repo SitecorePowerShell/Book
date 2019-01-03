@@ -12,7 +12,7 @@ Remove-RenderingParameter -Instance <RenderingDefinition> [-Name <String[]>]
 
 Removes the specified rendering parameter from the rendering.
 
-© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

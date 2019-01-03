@@ -16,7 +16,7 @@ Add-PlaceholderSetting -Instance <PlaceholderDefinition> -Id <string> [-MetaData
  
 Adds a placeholder setting to a chosen device for the presentation of an item.
  
-© 2010-2018 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions 
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions 
 
 ## Parameters 
  

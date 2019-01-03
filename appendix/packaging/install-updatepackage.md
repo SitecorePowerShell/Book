@@ -12,7 +12,7 @@ The Install-UpdatePackage command installs update packages that are used created
 
 Install-UpdatePackage. Install-UpdatePackage -Path "C:\Projects\LaunchSitecore.TDSMaster.update" -UpgradeAction {Preview or Upgrade} -InstallMode {Install or Update}
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 

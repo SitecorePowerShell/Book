@@ -10,7 +10,7 @@ New-ExplicitItemSource \[-Item &lt;Item&gt;\] \[-Name\] &lt;String&gt; \[\[-Skip
 
 Creates new Item source that can be added to a Sitecore package. This source only includes items explicitly added to it and not their children.
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 
