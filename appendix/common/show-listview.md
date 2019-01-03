@@ -234,6 +234,27 @@ PS master:\> Get-ItemReferrer -path 'master:\templates\Sample\Sample Item' |
                      @{Label="Languages"; Expression={$_.Languages | % { $_.Name + ", "} } }
 ```
 
+### EXAMPLE 3
+
+The following demonstrates the use of a custom object used in the report. Notice that a custom Icon can be set.
+
+```text
+$item = Get-Item -Path "master:\content\home\sample item 1"
+ 
+$customItem = [pscustomobject]@{
+    "ID"=$Item.ID
+    "Icon"=$Item.__Icon
+    "DisplayName"=$Item.DisplayName
+    "ItemPath"=$Item.ItemPath
+    "Version"=$Item.Version
+    "Language"=$Item.Language
+    "__Updated"=$Item.__Updated
+    "__Updated by"=$Item."__Updated by"
+}
+
+$customItem | Show-ListView
+```
+
 ## Related Topics
 
 * [Update-ListView](update-listview.md)
