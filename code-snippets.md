@@ -82,6 +82,27 @@ foreach($item in $items) {
 }
 ```
 
+## Edit NameValueListField
+
+**Example:** The following example gets all of the name/value pairs of a `NameValueListField` and appends a new pair.
+
+```text
+$item = Get-Item -Path "master:" -ID "{371EEE15-B6F3-423A-BB25-0B5CED860EEA}"
+
+$nameValues = New-Object System.Collections.Specialized.NameValueCollection
+$pairs = $item.Redirects -split "&"
+foreach($pair in $pairs) {
+    $split = $pair -split "="
+    if($split -and $split.Length -le 2) {
+        Write-Host "$($split[0]) = $($split[1])"
+        $nameValues.Add($split[0],$split[1])
+    }
+}
+# Here you can add or remove name/value pairs
+$nameValues["^/ab[cd]/$"] = "/somewhere/fun"
+$item.Redirects = [Sitecore.StringUtil]::NameValuesToString($nameValues,"&")
+```
+
 ## Parse Html
 
 **Example:** The following demonstrates the use of the **HtmlAgilityPack** for parsing html.
