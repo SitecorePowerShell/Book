@@ -163,5 +163,6 @@ The following are Sitecore modules that enhance the SPE experience.
 
 * [SPE Image Importer](https://marketplace.sitecore.net/en/Modules/S/SPE_Image_Uploader_Module10.aspx) : [Himadri Chakrabarti](https://twitter.com/himadric)
 * [Multi-Item Publish](https://www.sitecorenutsbolts.net/2015/12/14/Multi-Item-Publish-with-Sitecore-Powershell-Extensions/) : [Richard Seal](https://twitter.com/rich_seal)
+* [Publish Status](http://marketplace.sitecore.net/Modules/P/Publish_Status_for_Sitecore_Powershell_Extensions.aspx?sc_lang=en) : [Morten Engel](https://mortenengel.blogspot.com/2018/11/publish-viewercanceler-using-sitecore.html)
 * [Westco Pull Up Fields](https://github.com/michaellwest/westco-spe-pullupfields) : [Michael West](https://twitter.com/MichaelWest101)
 * [Westco Image Optimizer](https://github.com/michaellwest/westco-spe-imageoptimizer) : [Michael West](https://twitter.com/MichaelWest101)
