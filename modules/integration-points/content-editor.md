@@ -106,7 +106,13 @@ Check out an example of the [5 steps to extending the Sitecore ribbon](https://s
 
 Similar to the _Ribbon_ integration, this provides a way to show buttons when certain contextual conditions are met. Most common is with media items. The steps are the same as with the standard _Ribbon_, but the structure is slightly changed.
 
+In the following example, we have a ribbon button that appears whenever the selected item in the Content Editor is a media item. Take note of the "Optimize" button.
 
+![Contextual Ribbon Command](https://user-images.githubusercontent.com/933163/51213796-8a639100-18e1-11e9-858a-f5611cc71f0b.png)
+
+The ribbon structure would look like the following:
+
+![Script Library Structure](https://user-images.githubusercontent.com/933163/51213924-f5ad6300-18e1-11e9-9aa8-42020f849a10.png)
 
 ## Warning
 
