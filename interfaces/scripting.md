@@ -67,5 +67,5 @@ Below are the shortcuts available in the ISE.
 | Ctrl-Shift-E | Aborts the running script |
 | Ctrl-F | Search for keywords in the script |
 
-For more commands built into the script editor see [here](https://github.com/SitecorePowerShell/Book/tree/9c7126d7a38df6ef372e8baef52f9a02baabd550/interfaces/[https:/github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts]/README.md)
+For more commands built into the script editor see [here](https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts)
 
