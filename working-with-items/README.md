@@ -53,6 +53,7 @@ Move-Item -Path "master:\content\home\Demo" -Destination "master:\content\home\D
 * Use to duplicate an item from one location to another.
 
 ```text
+# Add -PassThru to output the new item
 Copy-Item -Path "master:\content\home\Demo1" -Destination "master:\content\home\Demo2"
 ```
 {% endtab %}
