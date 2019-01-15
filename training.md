@@ -1,7 +1,3 @@
----
-description: Find resources for learning PowerShell and the SPE module.
----
-
 # Training
 
 The world renowned Sitecore PowerShell Extensions module has so much to offer, but sometimes those new to the module may find it difficult to know where to start. The following book should provide you with enough information to use and be productive with SPE.

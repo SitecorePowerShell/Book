@@ -102,6 +102,12 @@ See the birth of [extending the Sitecore ribbon with powershell scripts](https:/
 
 Check out an example of the [5 steps to extending the Sitecore ribbon](https://sitecoresandbox.com/2016/06/03/content-editor-ribbon-buttons-using-sitecore-powershell-extensions/) in the wild by Toby.
 
+### Contextual Ribbon
+
+Similar to the _Ribbon_ integration, this provides a way to show buttons when certain contextual conditions are met. Most common is with media items. The steps are the same as with the standard _Ribbon_, but the structure is slightly changed.
+
+
+
 ## Warning
 
 The _Warning_ integration reveals a notification to the user above content. The Sitecore rules engine can be used to control visibility and enabled state. The scripts are only executed when the rule is met and the command is clicked.

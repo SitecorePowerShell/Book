@@ -1,6 +1,6 @@
 # Scripting
 
-The Integrated Scripting Environment \(ISE\) is a great way to group together commands and save for later use. This tool helps you write scripts in Powerful Ways! 
+The Integrated Scripting Environment \(ISE\) is a great way to group together commands and save for later use. This tool helps you write scripts in Powerful Ways!
 
 The default security configuration for SPE requires the ISE to be in an [Elevated Session State](../security/) before executing scripts. The following figure shows the ISE when the User Account Controls \(UAC\) are disabled. While this is a common configuration for developers, we highly encourage you to ensure UAC is enabled in higher environments.
 
@@ -22,8 +22,8 @@ Let's have a quick walk through of each ribbon tab available.
   * **Debug** - Runs the current script with the debugging mode enabled. A temporary file is generated on the file system to support the use of breakpoints.
   * **Abort** - Stops the execution of an executing script.
 * **Context:**
-  * **Context** - Specifies the current item in the script. Helpful if you write a script dependent on a specific path, or the current directory is denoted as a _`.`_ \(dot\) or _`$pwd` \(_present working directory\). An MRU and tree view are provided for choosing a path.
-  * **Session** - Specifies the session to use when executing the script. Reused sessions live in the _`HttpSession`_. Options include the session created for the _ISE instance_, _One-Time session_, or the _Persistent Session ID_ configured on the script.
+  * **Context** - Specifies the current item in the script. Helpful if you write a script dependent on a specific path, or the current directory is denoted as a `.` \(dot\) or \_`$pwd` \(\_present working directory\). An MRU and tree view are provided for choosing a path.
+  * **Session** - Specifies the session to use when executing the script. Reused sessions live in the `HttpSession`. Options include the session created for the _ISE instance_, _One-Time session_, or the _Persistent Session ID_ configured on the script.
 * **UI Context:**
   * **Language** - Specifies the context language to use when executing the script.
   * **User** - Specifies the context user to impersonate when executing the script. This can be used to emulate `UserSwitcher` code.

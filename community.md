@@ -166,3 +166,4 @@ The following are Sitecore modules that enhance the SPE experience.
 * [Publish Status](http://marketplace.sitecore.net/Modules/P/Publish_Status_for_Sitecore_Powershell_Extensions.aspx?sc_lang=en) : [Morten Engel](https://mortenengel.blogspot.com/2018/11/publish-viewercanceler-using-sitecore.html)
 * [Westco Pull Up Fields](https://github.com/michaellwest/westco-spe-pullupfields) : [Michael West](https://twitter.com/MichaelWest101)
 * [Westco Image Optimizer](https://github.com/michaellwest/westco-spe-imageoptimizer) : [Michael West](https://twitter.com/MichaelWest101)
+
