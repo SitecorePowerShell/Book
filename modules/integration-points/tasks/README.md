@@ -41,7 +41,7 @@ Run or edit the scheduled task:
 
 ![Run or Edit Task Schedule](../../../.gitbook/assets/task-runedittask.png)
 
-The scheduled task is capable of running 1-to-many scripts. Choose all that apply for the selected task.
+The scheduled task is capable of running 1-to-many scripts. Choose all that apply for the selected task. Each script runs within a shared session, making it possible to share results between scripts.
 
 **Note:** Make use of the **Enable Rule** to take advantage of the rules engine.
 
