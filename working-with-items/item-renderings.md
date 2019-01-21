@@ -113,6 +113,15 @@ Get-Rendering -Item $item -PlaceHolder "main" |
   Foreach-Object { Set-Rendering -Item $item -Instance $_ -DataSource $null -FinalLayout }
 ```
 
+### Replace compatible rendering
+
+```text
+$rendering = Get-Item master:\layout\path\to\your\rendering
+$renderingPageContainer = Get-Rendering -Item $item "{F39BAC93-1EEC-446B-A4A1-AB7F7C1B6267}" -Device $defaultLayout
+$renderingPageContainer.ItemID = $rendering.ID
+Set-Rendering -Item $item -Instance $renderingPageContainer
+```
+
 ### Further Reading
 
 * [Parse raw layout xml and count components](https://sitecore.stackexchange.com/questions/4952/get-amount-of-components-on-final-layout-programmatically)

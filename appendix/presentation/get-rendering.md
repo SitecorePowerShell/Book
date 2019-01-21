@@ -216,12 +216,23 @@ Help Author: Adam Najmanowicz, Michael West
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 1
 
-get all renderings for "Default" device, located in the any placeholder that has name in it or any of its sub-placeholders
+Get all renderings for "Default" device, located in the any placeholder that has name in it or any of its sub-placeholders.
 
 ```text
-PS master:\> Get-Item master:\content\home | Get-Rendering -Placeholder "*main*" -Device (Get-LayoutDevice "Default")
+Get-Item master:\content\home | 
+    Get-Rendering -Placeholder "*main*" -Device (Get-LayoutDevice "Default")
+```
+
+### EXAMPLE 2
+
+The following example returns all renderings on the home page.
+
+```text
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$defaultLayout = Get-LayoutDevice "Default"
+Get-Rendering -Item $item -Device $defaultLayout -FinalLayout
 ```
 
 ## Related Topics
