@@ -239,6 +239,19 @@ Get-Item -Path master: -Query "/sitecore/content/home//*[@__Publish > '$($isoDat
     Show-ListView -Property ID,Name,ItemPath
 ```
 
+### Get-Item: by Path with Sitecore Fast query
+
+**Example:** The following returns items with a specific template under a given root using Fast query.
+
+```text
+$rootItemId = "{839085D0-C279-47C6-83C9-9CC28E7C111E}"
+$rootItem = Get-Item -Path "master:" -ID $rootItemId
+$templateId = "{759BA7B1-A216-467E-A37C-2B8D7F1A713C}"
+
+$query = "fast:$($rootItem.ItemPath)//*[@@templateid='$($templateId)']"
+Get-Item -Path "master:" -Query $query
+```
+
 ### Get-Item : by XPath
 
 The setup is not exactly like you would find in the XPath Builder but should get the job done. Read more about it [here](https://github.com/SitecorePowerShell/Console/issues/1069).
@@ -254,17 +267,6 @@ $SitecoreContextItem.Axes.SelectItems($query)
 # Retrieve the items using the Query class and context item.
 # Retrieve the items by prepending the context path to the query.
 Get-Item -Path "master:" -Query ("$($SitecoreContextItem.Paths.Path)/$query")
-```
-
-**Example:** The following returns items with a specific template under a given root using Fast query.
-
-```text
-$rootItemId = "{839085D0-C279-47C6-83C9-9CC28E7C111E}"
-$rootItem = Get-Item -Path "master:" -ID $rootItemId
-$templateId = "{759BA7B1-A216-467E-A37C-2B8D7F1A713C}"
-
-$query = "fast:$($rootItem.ItemPath)//*[@@templateid='$($templateId)']"
-Get-Item -Path "master:" -Query $query
 ```
 
 ### Get-Item : by Id
