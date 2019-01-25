@@ -190,7 +190,7 @@ GetEngaged          pt-BR    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       Tena
 GetEngaged          pl-PL    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
 ```
 
-### Get-Item : by Path with Sitecore query
+### Get-Item : Sitecore query
 
 It's not always most efficient to operate on items by traversing the tree using `Get-ChildItem`. This is especially true if you need to work on large trees but need to select only a few items \(e.g. a specific template\). For this we’ve introduced support for the Sitecore query within our provider.
 
@@ -239,7 +239,7 @@ Get-Item -Path master: -Query "/sitecore/content/home//*[@__Publish > '$($isoDat
     Show-ListView -Property ID,Name,ItemPath
 ```
 
-### Get-Item: by Path with Sitecore Fast query
+### Get-Item : Sitecore Fast query
 
 **Example:** The following returns items with a specific template under a given root using Fast query.
 
