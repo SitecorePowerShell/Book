@@ -27,101 +27,121 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><code>// Assign data to a new variable</code>  <code>var name = &quot;Michael&quot;;</code>
+      <td style="text-align:left"><code>// Assign data to a new variable</code><br/><code>var name = &quot;Michael&quot;;</code>
       </td>
-      <td style="text-align:left"><code># Assign data to a new variable</code>  <code>$name = &quot;Michael&quot;</code>
+      <td style="text-align:left"><code># Assign data to a new variable</code><br/><code>$name = &quot;Michael&quot;</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>// Perform simple math</code>  <code>var total = 1 + 1;</code>
       </td>
       <td style="text-align:left">
-        <p><code># Perform simple math</code> 
-        </p>
-        <p><code>$total = 1 + 1</code>
-        </p>
+        <code># Perform simple math</code> 
+        <br/>
+        <code>$total = 1 + 1</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">
-        <p><code>// Create a new dynamic list of strings</code>  <code>var names = new List&lt;string&gt;();</code>  <code>names.Add(&quot;Michael&quot;);</code> 
-        </p>
-        <p><code>names.Add(&quot;Adam&quot;);</code>
-        </p>
+        <code>// Create a new dynamic list of strings</code><br/>  <code>var names = new List&lt;string&gt;();</code><br/>  <code>names.Add(&quot;Michael&quot;);</code><br/> 
+        <code>names.Add(&quot;Adam&quot;);</code>
       </td>
       <td style="text-align:left">
-        <p><code># Create a new fixed list of strings</code>
-        </p>
-        <p><code>[string[]]$names = @()</code> 
-        </p>
-        <p><code>$names += &quot;Michael&quot;</code> 
-        </p>
-        <p><code>$names += &quot;Adam&quot;</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>// Create a hashtable of data</code>  <code>var table = new Hashtable();</code>  <code>table[&quot;Name&quot;] = &quot;Michael&quot;;</code>  <code>table[&quot;Age&quot;] = 33;</code>
-      </td>
-      <td style="text-align:left">
-        <p><code># Create a new hashtable of data</code>  <code>$table = @{}</code> 
-        </p>
-        <p><code>$table[&quot;Name&quot;] = &quot;Michael&quot;</code>  <code>$table[&quot;Age&quot;] = 33</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>// Ordered Dictionary</code>  <code>var od = new OrderedDictionary();</code>  <code>od.Add(&quot;z&quot;,&quot;Last Letter&quot;);</code>  <code>od.Add(&quot;a&quot;,&quot;First Letter&quot;);</code>
-      </td>
-      <td style="text-align:left">
-        <p><code># Ordered Dictionary </code>
-        </p>
-        <p><code>$od = [ordered]@{}</code>  <code>$od.Add(&quot;z&quot;,&quot;Last Letter&quot;)</code>  <code>$od.Add(&quot;a&quot;,&quot;First Letter&quot;)</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>// Check if the string is null or empty using a static method</code>  <code>if(string.IsNullOrEmpty(name)) { &#x2026; }</code>
-      </td>
-      <td style="text-align:left"><code># Check if the string is null or empty using a static method</code>  <code>if([string]::IsNullOrEmpty($name)) { &#x2026; }</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>/*</code>  <code>Create a comment block</code>  <code>*/</code>
-      </td>
-      <td style="text-align:left"><code>&lt;#</code>  <code>Create a comment block</code>  <code>#&gt;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>// Loop through a list of strings</code>  <code>foreach(var name in names) { &#x2026; }</code>
-      </td>
-      <td style="text-align:left"><code># Loop through a list of strings</code>  <code>foreach($name in $names) { &#x2026; }</code>
+        <code># Create a new fixed list of strings</code>
+        <br/>
+        <code>[string[]]$names = @()</code> 
+        <br/>
+        <code>$names += &quot;Michael&quot;</code> 
+        <br/>
+        <code>$names += &quot;Adam&quot;</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">
-        <p><code>// Compare values</code> 
-        </p>
-        <p><code>name == &quot;Michael&quot;</code>  <code>total &lt;= 3 names.Count() &gt; 2 &amp;&amp; name[0] != &quot;Adam&quot;</code>
-        </p>
+      <code>// Create a hashtable of data</code><br/>
+      <code>var table = new Hashtable();</code><br/>
+      <code>table[&quot;Name&quot;] = &quot;Michael&quot;;</code><br/>
+      <code>table[&quot;Age&quot;] = 33;</code>
       </td>
-      <td style="text-align:left"><code># Compare values</code>  <code>$name -eq &quot;Michael&quot; # case-insensitive</code>  <code>$total -le 3 $names.Count -gt 2 &#x2013;and $name[0] -ne &quot;Adam&quot;</code>
+      <td style="text-align:left">
+        <code># Create a new hashtable of data</code><br/>
+        <code>$table = @{}</code><br/> 
+        <code>$table[&quot;Name&quot;] = &quot;Michael&quot;</code><br/>
+        <code>$table[&quot;Age&quot;] = 33</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">
-        <p><code>// Negate value</code> 
-        </p>
-        <p><code>var isTrue = !false;</code>
-        </p>
+      <code>// Ordered Dictionary</code><br/>
+      <code>var od = new OrderedDictionary();</code><br/>
+      <code>od.Add(&quot;z&quot;,&quot;Last Letter&quot;);</code><br/>  <code>od.Add(&quot;a&quot;,&quot;First Letter&quot;);</code>
       </td>
       <td style="text-align:left">
-        <p><code># Negate value</code> 
-        </p>
-        <p><code>$isTrue = !$false </code>
-        </p>
-        <p><code>$isTrue = -not $false</code>
-        </p>
+        <code># Ordered Dictionary </code><br/>
+        <code>$od = [ordered]@{}</code><br/>
+        <code>$od.Add(&quot;z&quot;,&quot;Last Letter&quot;)</code><br/>
+        <code>$od.Add(&quot;a&quot;,&quot;First Letter&quot;)</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+      <code>// Check if the string is null or empty using a static method</code><br/>
+      <code>if(string.IsNullOrEmpty(name)) { &#x2026; }</code>
+      </td>
+      <td style="text-align:left">
+      <code># Check if the string is null or empty using a static method</code><br/>
+      <code>if([string]::IsNullOrEmpty($name)) { &#x2026; }</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+      <code>/*</code><br/>
+      <code>Create a comment block</code><br/>
+      <code>*/</code>
+      </td>
+      <td style="text-align:left">
+      <code>&lt;#</code><br/>
+      <code>Create a comment block</code><br/>
+      <code>#&gt;</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+      <code>// Loop through a list of strings</code><br/>
+      <code>foreach(var name in names) { &#x2026; }</code>
+      </td>
+      <td style="text-align:left">
+      <code># Loop through a list of strings</code><br/>
+      <code>foreach($name in $names) { &#x2026; }</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <code>// Compare values</code> 
+        <br/>
+        <code>name == &quot;Michael&quot;</code><br/><code>total &lt;= 3 names.Count() &gt; 2 &amp;&amp; name[0] != &quot;Adam&quot;</code>
+      </td>
+      <td style="text-align:left">
+        <code># Compare values</code>
+        <br/>
+        <code>$name -eq &quot;Michael&quot;</code>
+        <br/>
+        <code># case-insensitive</code>
+        <br/>
+        <code>$total -le 3 $names.Count -gt 2 &#x2013;and $name[0] -ne &quot;Adam&quot;</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <code>// Negate value</code><br/>
+        <code>var isTrue = !false;</code>
+      </td>
+      <td style="text-align:left">
+        <code># Negate value</code> 
+        <br/>
+        <code>$isTrue = !$false </code>
+        <br/>
+        <code>$isTrue = -not $false</code>
       </td>
     </tr>
     <tr>
@@ -134,6 +154,12 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
       <td style="text-align:left"><code>// Access instance property</code>  <code>var today = DateTime.Today;</code>
       </td>
       <td style="text-align:left"><code># Access instance property</code>  <code>$today = [datetime]::Today</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>// Escape characters</code>  <code>string message = "They said to me, \"SPE is the greatest!\".";</code>
+      </td>
+      <td style="text-align:left"><code># Escape characters</code>  <code>$message = "They said to me, `"SPE is the greatest!`"."</code>
       </td>
     </tr>
   </tbody>
