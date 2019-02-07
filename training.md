@@ -157,9 +157,13 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>// Escape characters</code>  <code>string message = "They said to me, \"SPE is the greatest!\".";</code>
+      <td style="text-align:left">
+      <code>// Escape characters</code><br/>
+      <code>string message = "They said to me, \"SPE is the greatest!\".";</code>
       </td>
-      <td style="text-align:left"><code># Escape characters</code>  <code>$message = "They said to me, `"SPE is the greatest!`"."</code>
+      <td style="text-align:left">
+      <code># Escape characters</code><br/>
+      <code>$message = "They said to me, `"SPE is the greatest!`"."</code>
       </td>
     </tr>
   </tbody>
