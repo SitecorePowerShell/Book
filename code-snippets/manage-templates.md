@@ -19,3 +19,9 @@ $sourceTemplate | Get-ItemReferrer |
         Set-ItemTemplate -Item $PSItem -TemplateItem $targetTemplate
     }
 ```
+
+# Sitecore Stack Exchange
+
+The following examples are best kept on SSE since it provides more context about the problem being solved.
+
+* [Question](https://sitecore.stackexchange.com/a/15168/95) Find all items based on a template found anywhere in the inheritance chain.
