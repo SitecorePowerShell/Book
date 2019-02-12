@@ -168,7 +168,7 @@ foreach($archive in Get-Archive -Name "recyclebin") {
 Invoke-JavaScript -Script "alert('hello from powershell');"
 ```
 
-![Invoke JavaScript](.gitbook/assets/interact-with-browser-using-js.gif)
+![Invoke JavaScript](../.gitbook/assets/interact-with-browser-using-js.gif)
 
 **Example:** [Remote Package Installation](https://gist.github.com/michaellwest/14e9ef98f9e8b450c1b39813d13cbc50)
 
