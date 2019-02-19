@@ -393,9 +393,12 @@ Value        : <link linktype="internal" text="CLICK HERE" querystring="" target
 ```text
 $item = Get-Item -Path "master:\content\home"
 foreach($field in $item.Fields) {
-    $item.PSFields."$($field.Name)" | Where-Object { $_ -is [Sitecore.Data.Fields.TextField] }
+    $item.PSFields."$($field.Name)" | 
+        Where-Object { $_ -is [Sitecore.Data.Fields.TextField] }
 }
 ```
+
+## Editing Items
 
 ### Get-Item : then change item properties
 
@@ -433,10 +436,11 @@ $item.Title = "New Title"
 $item."Closing Date" = [datetime]::Today
 ```
 
-**Example:** The following sets the title property using the semi-native PowerShell property without the use of a variable.
+**Example:** The following changes the display name of the item.
 
 ```text
-(Get-Item -Path master:/content/home).Title = "New Title"
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$item."__Display name" = "I Like Turtles"
 ```
 
 This technique may be used for a wide variety of property types. There are a other hidden gems in those properties. For example if we detect that the field is a _Date_ or _Datetime_ field, we will return `System.DateTime` typed value from a field rather than the `System.String` Sitecore stores internally.
@@ -444,16 +448,20 @@ This technique may be used for a wide variety of property types. There are a oth
 **Example:** The following gets the created date.
 
 ```text
-PS master:\> (Get-Item -Path master:/content/home).__Created
-Monday, April 07, 2008 1:59:00 PM
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$item.__Created 
+
+# Monday, April 07, 2008 1:59:00 PM
 ```
 
 **Example:** The following assigns a `System.DateTime` value to the PowerShell automated property.
 
 ```text
-PS master:\> (Get-Item -Path master:/content/home).__Created = [DateTime]::Now
-PS master:\> (Get-Item -Path master:/content/home).__Created
-Monday, October 13, 2014 1:59:41 AM
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$item.__Created = [DateTime]::Now
+$item.__Created
+
+# Tuesday, March 17, 2020 12:00:00 PM
 ```
 
 Great we've just changed it! Our property handlers take care of all the necessary usages of `.Editing.BeginEdit` and `.Editing.EndEdit`. This method can be applied for a variety of field types such as _GeneralLink_ and _Image_.
@@ -499,9 +507,9 @@ Those little improvements make your scripts much more succinct and understandabl
 
 As with every rule there is an exception to this one. Those automated properties perform the `$item.Editing.BeginEdit()` and `$item.Editing.EndEdit()` every time which results in saving the item after every assignment. Assigning multiple properties on an item this way might be detrimental to the performance of your script. In such cases you might want to call `$item.Editing.BeginEdit()` yourself before modifying the item. Subsequently call the `$item["field name"] = "new value"` for each property modify. Finally end with the `$item.Editing.EndEdit()`.
 
-Choosing this way is situational and will usually only be required if you're working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` trick used in [this blog post](https://bartlomiejmucha.com/en/blog).
+Choosing this way is situational and will usually only be required if you're working with a large volume of data. In those cases you might also want to introduce the `Sitecore.Data.BulkUpdateContext` technique.
 
-**Example:** The following sets multiple automated properties while using the `Sitecore.Data.BulkUpdateContext`.
+**Example:** The following sets multiple properties while using the `Sitecore.Data.BulkUpdateContext`.
 
 ```text
 New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
