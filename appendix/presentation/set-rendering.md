@@ -174,15 +174,28 @@ Help Author: Adam Najmanowicz, Michael West
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 1
 
-Change all rendering's placeholder from main to footer
+Change all rendering's placeholder from main to footer.
 
 ```text
 $item = Get-Item -Path master:\content\home
 Get-Rendering -Item $item -PlaceHolder "main" | 
     Foreach-Object { 
         $_.Placeholder = "footer"; 
+        Set-Rendering -Item $item -Instance $_
+    }
+```
+
+### EXAMPLE 2
+
+Clear the datasource value for a rendering.
+
+```text
+$item = Get-Item -Path master:\content\home
+Get-Rendering -Item $item -PlaceHolder "main" | 
+    Foreach-Object { 
+        $_.DataSource = $null 
         Set-Rendering -Item $item -Instance $_
     }
 ```
