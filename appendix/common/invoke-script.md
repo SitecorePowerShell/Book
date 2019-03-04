@@ -74,10 +74,32 @@ Help Author: Adam Najmanowicz, Michael West
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 1
 
 ```text
-PS master:\> Invoke-Script 'Examples\Script Testing\Long Running Script with Progress Demo'
+Invoke-Script 'Examples\Script Testing\Long Running Script with Progress Demo'
+```
+
+### EXAMPLE 2
+
+Run a script with arguments passed in.
+
+```text
+$scriptItem = Get-Item -Path "master:" -ID "{35311878-54EF-4E7A-9B95-3B63F5DEE97D}"
+
+$arguments = @{
+    TemplateId = "{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}"
+}
+$scriptItem | Invoke-Script -ArgumentList $arguments
+```
+
+The arguments are passed and used in the called script like below:
+
+```text
+param($params)
+$templateId = $params.templateId
+
+Get-ItemReferrer -ID $templateId
 ```
 
 ## Related Topics
