@@ -68,7 +68,7 @@ The _Insert Item_ integration reveals a list of options to the user in the conte
 
 The _Ribbon_ integration reveals commands to the user in the ribbon. The Sitecore rules engine may be used to control visibility and enabled state. The script is only executed when the option is clicked.
 
-1. Begin by adding a new child script library to the _Ribbon_ library; we'll refer to this library as the **Tab** library. Choose a name such as _Home_ or _Developer_ \(this should match an existing tab name\).
+1. Begin by adding a new child script library to the _Ribbon_ library; we'll refer to this library as the **Tab** library. Choose a name that matches an existing tab to be used, such as _Home_ or _Developer_, or a new name to create a new tab.
 2. Add a child script library to the **Tab** library; we'll call this the **Chunk** library. Choose a name such as _Edit_ or _Tools_. 
 3. Add a new script to the **Chunk** script library; we'll refer to this library as the **Command** library. The name of the script will appear in the ribbon chunk as a command.
 4. Optionally add a short description on the item, which is found as a standard field on the item. The description will appear as a tooltip on the ribbon button.
