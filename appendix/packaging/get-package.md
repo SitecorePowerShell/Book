@@ -10,7 +10,7 @@ Get-Package \[-Path\] &lt;String&gt;
 
 The Get-Package commands loads the package definition \(xml\) and returns the package project. Package definitions can be created by PowerShell scripts using the Export-Package command \(without the -Zip parameter\)
 
-© 2010-2017 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 
@@ -40,8 +40,10 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
+The following assumes that the project file is located in the default package directory.
+
 ```text
-PS master:\> Get-Package -Path master:\content\home
+PS master:\> Get-Package -Path myproject.xml
 ```
 
 ## Related Topics
