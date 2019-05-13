@@ -266,7 +266,12 @@ Find-Item @props
 Find items using a complex search predicate.
 
 ```text
-$criteriaTemplate = @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"; }, @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; Boost=25; }, @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; }
+$criteriaTemplate = @(
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"; }, 
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; Boost=25; }, 
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; }
+)
+
 $predicateTemplate = New-SearchPredicate -Operation Or -Criteria $criteriaTemplate
 
 $criteriaContent = @{Filter = "Contains"; Field = "Title"; Value = 'Sitecore'}
