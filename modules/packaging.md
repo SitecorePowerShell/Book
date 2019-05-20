@@ -52,3 +52,58 @@ $package.Metadata.Attributes = "scriptId={9b9a3906-1979-11e7-8c9d-177c30471cec}|
 Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Version).xml"
 ```
 
+**Example:** The following adds a Post Step included with SPE to delete a file.
+
+```text
+$package = New-Package "Package-of-Stuff"
+$package.Sources.Clear()
+
+$package.Metadata.Author = "Michael West"
+$package.Metadata.Publisher = "Team Awesome"
+$package.Metadata.Version = "1.0"
+$package.Metadata.Readme = @"
+Set of instructions for the user.
+"@
+$newPackageFiles = @([PSCustomObject]@{"FileName"="/bin/Company.Feature.Unused.dll"})
+$package.Metadata.PostStep = "Cognifide.PowerShell.Package.Install.PackagePostStep, Cognifide.PowerShell.Package"
+$package.Metadata.Comment = New-PackagePostStep -PackageFiles $newPackageFiles
+```
+
+The function `New-PackagePostStep` used by the example above can be included in the same script. 
+```text
+function New-PackagePostStep {
+    param(
+        $PackageItems,
+        $PackageFiles
+    )
+    
+    $writer = New-Object System.IO.StringWriter
+    $output = New-Object System.Xml.XmlTextWriter([System.IO.TextWriter]$writer)
+    $output.Formatting = [System.Xml.Formatting]::Indented
+    $output.WriteStartElement("uninstall")
+    
+    if($PackageItems) {
+        $output.WriteStartElement("items")
+        foreach($packageItem in $PackageItems) {
+            $output.WriteStartElement("item")
+            $output.WriteAttributeString("database", $packageItem.Database)
+            $output.WriteAttributeString("id", $packageItem.ID.ToString())
+            $output.WriteEndElement()
+        }
+        $output.WriteEndElement()
+    }
+    if($PackageFiles) {
+        $output.WriteStartElement("files")
+        foreach($packageFile in $PackageFiles) {
+            $output.WriteStartElement("file")
+            $output.WriteAttributeString("filename", $packageFile.FileName)
+            $output.WriteEndElement()
+        }
+        $output.WriteEndElement()            
+    }
+
+    $output.WriteEndElement()
+    $writer.ToString()
+}
+```
+
