@@ -6,6 +6,10 @@ We generally see issues occurring due to an incompatible version of Windows Powe
 
 ## Installation
 
+### Elevated Session Hanging
+
+There is an additional configuration file added to support Identity Server. If you are installing Sitecore 9.1 or later you will want to enable the configuration file `Cognifide.PowerShell.IdentityServer.config`.
+
 ### Hanging Installation Wizard
 
 Some users have reported an [issue](https://github.com/SitecorePowerShell/Console/issues/404) where the package installation in Sitecore hangs while installing SPE. One possible fix is to disable the Sitecore Analytics feature; this of course assumes you do not plan on using it for your instance.

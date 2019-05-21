@@ -115,6 +115,10 @@ Gates with **Password** protection enabled prompt the user when no elevated sess
 
 ![Elevate Session State](../.gitbook/assets/security-elevatedsessionstate-password.png)
 
+**Note:** If you are using Sitecore 9.1 or later with Identity Server, there is a configuration file that should be enabled.
+
+- `Cognifide.PowerShell.IdentityServer.config`
+
 **Content Editor**
 
 A Content Editor Warning is displayed when a PowerShell Module, Script Library, and Script is selected. Click "Elevate session" to show the hidden fields and enable the management of the item.
@@ -291,7 +295,7 @@ The following files are the bare minimum required to support SPE web services. T
 * `App_Config\Include\Cognifide.PowerShell.config`
 * `App_Config\Include\Cognifide.PowerShell.Minimal.config`
 * `bin\Cognifide.PowerShell.dll`
-* `bin\Cognifide.PowerShell.VersionSpecific.dll`
+* `bin\Cognifide.PowerShell.Abstractions.dll`
 * `sitecore modules\PowerShell\Services\web.config`
 * `sitecore modules\PowerShell\Services\RemoteAutomation.asmx`
 * `sitecore modules\PowerShell\Services\RemoteScriptCall.ashx`
