@@ -621,6 +621,21 @@ Name                             Children Languages                Id           
 Sample Item 4                    False    {en}                     {9459ADDD-4471-4ED3-A041-D33E559BD321} Sample Item
 ```
 
+**Example:** The following creates a new item as a child of the specified item.
+
+```text
+$templateId = "{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}"
+$parentItem = Get-Item -Path "master:\" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+New-Item -Parent $parentItem -Name "Sample Item 3" -ItemType $templateId
+
+
+Name          Children Language Version Id                                     TemplateName
+----          -------- -------- ------- --                                     ------------
+Sample Item 3 False    en       1       {2F71043A-C731-4EC2-BFE4-0604D4D71652} Sample Item
+```
+
+**Note:** The `New-Item` command was passed to `Format-Table -Autosize` to improve the formatting.
+
 ## Removing Items
 
 ### Remove-Item : permanently
