@@ -604,7 +604,8 @@ Get-Item -Path "master:" -ID "{65736CA0-7D69-452A-A16F-2F42264D21C5}" |
 **Example:** The following creates a new item with the specified template.
 
 ```text
-New-Item -Path "master:\content\home\sample item\Sample Item 3" -ItemType "Sample/Sample Item"
+$itemPath = "master:\content\home\sample item\Sample Item 3"
+New-Item -Path $itemPath -ItemType "Sample/Sample Item"
 
 Name                             Children Languages                Id                                     TemplateName
 ----                             -------- ---------                --                                     ------------
@@ -614,7 +615,10 @@ Sample Item 3                    False    {en}                     {F6F4F7B7-5E7
 **Example:** The following creates a new item with the specified template id and id.
 
 ```text
-New-Item -Path "master:\content\home\sample item\Sample Item 4" -ItemType "{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}" -ForceId "{9459ADDD-4471-4ED3-A041-D33E559BD321}"
+$itemPath = "master:\content\home\sample item\Sample Item 4"
+$templateId = "{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}"
+$itemId = "{9459ADDD-4471-4ED3-A041-D33E559BD321}"
+New-Item -Path $itemPath -ItemType $templateId  -ForceId $itemId
 
 Name                             Children Languages                Id                                     TemplateName
 ----                             -------- ---------                --                                     ------------
