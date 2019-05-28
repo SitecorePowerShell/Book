@@ -172,7 +172,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 The output type is the type of the objects that the cmdlet emits.
 
-* Sitecore.Layouts.RenderingDefinition 
+* System.Void 
 
 ## Notes
 
@@ -180,16 +180,18 @@ Help Author: Adam Najmanowicz, Michael West
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 1
 
-find item defining rendering and create rendering definitio
+Find item defining rendering and create rendering definition.
 
 ```text
-PS master:\> $renderingItem = gi master:\layout\Sublayouts\ZenGarden\Basic\Content | New-Rendering -Placeholder "main"
-# find item you want the rendering added to
-PS master:\> $item = gi master:\content\Demo\Int\Home
+# Find the rendering item and convert to a rendering
+$renderingPath = "/sitecore/layout/Renderings/Feature/Experience Accelerator/Page Content/Page Content"
+$renderingItem = Get-Item -Database "master" -Path $renderingPath | New-Rendering -Placeholder "main"
+# Find the item to receive the new rendering
+$item = Get-Item -Path "master:\content\Training\Playground\play1\Home"
 # Add the rendering to the item
-PS master:\> Add-Rendering -Item $item -PlaceHolder "main" -Instance $renderingItem -Parameter @{ FieldName = "Content" }
+Add-Rendering -Item $item -PlaceHolder "main" -Instance $renderingItem -Parameter @{ "Reset Caching Options" = "1" } -FinalLayout
 ```
 
 ## Related Topics

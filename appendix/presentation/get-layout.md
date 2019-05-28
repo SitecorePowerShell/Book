@@ -120,10 +120,12 @@ Help Author: Adam Najmanowicz, Michael West
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 1
+
+The following retrieves the layouts defined on the home item.
 
 ```text
-PS master:\> Get-Layout -Path master:\content\home
+Get-Layout -Path "master:{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 ```
 
 ## Related Topics

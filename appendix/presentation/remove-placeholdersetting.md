@@ -458,7 +458,7 @@ Help Author: Adam Najmanowicz, Michael West
 Remove all placeholder settings for "Default" device 
  
 ```text
-PS master:\> Remove-PlaceholderSetting -Path master:\content\home -Device (Get-LayoutDevice "Default")  
+Remove-PlaceholderSetting -Path master:\content\home -Device (Get-LayoutDevice "Default")  
 ``` 
  
 ### EXAMPLE 2 
@@ -466,7 +466,7 @@ PS master:\> Remove-PlaceholderSetting -Path master:\content\home -Device (Get-L
 Remove all placeholder settings with the "content" key. 
  
 ```text
-PS master:\> Remove-PlaceholderSetting -Path master:\content\home -Key "content" 
+Remove-PlaceholderSetting -Path master:\content\home -Key "content" 
 ``` 
  
 ## Related Topics 

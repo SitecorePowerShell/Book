@@ -1,5 +1,7 @@
 # Merge-Layout
 
+The Merge-Layout command takes all the layout information stored in the FinalLayout field and merges into the SharedLayout field. The FinalLayout field is reset after the merge completes.
+
 ## Syntax
 
 ```text
@@ -65,4 +67,36 @@ Merge-Layout -Id <String> [-Database <String>] [-Language <String[]>]
 | Default Value |  |
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
+
+## Inputs
+
+The input type is the type of the objects that you can pipe to the cmdlet.
+
+* Sitecore.Data.Items.Item 
+
+## Notes
+
+Help Author: Adam Najmanowicz, Michael West
+
+## Examples
+
+### EXAMPLE 1
+
+The following retrieves all pages under home and merges the layout.
+
+```text
+Get-ChildItem master:\content\Showcase\int\home -Recurse | Merge-Layout
+```
+
+## Related Topics
+
+* [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
+* [Add-Rendering](add-rendering.md)
+* [New-Rendering](new-rendering.md)
+* [Set-Rendering](set-rendering.md)
+* [Get-Rendering](get-rendering.md)
+* [Get-LayoutDevice](get-layoutdevice.md)
+* [Remove-Rendering](remove-rendering.md)
+* [Get-Layout](get-layout.md)
+* [Reset-Layout](reset-layout.md)
 

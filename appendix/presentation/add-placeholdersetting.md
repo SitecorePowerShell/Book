@@ -366,6 +366,12 @@ The input type is the type of the objects that you can pipe to the cmdlet.
  
 * Sitecore.Data.Items.Item
 
+## Outputs
+
+The output type is the type of the objects that the cmdlet emits.
+
+* System.Void 
+
 ## Notes 
  
 Help Author: Adam Najmanowicz, Michael West, Alex Washtell
@@ -377,11 +383,10 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 Create item defining placeholder setting and add to an item
  
 ```text
-PS master:\> $placeholderSetting = gi "master:\layout\Placeholder Settings\content" | New-PlaceholderSetting -Key "content"
-# find item you want the placeholder setting added to
-PS master:\> $item = gi master:\content\Home
+$placeholderSetting = gi "master:\layout\Placeholder Settings\content" | New-PlaceholderSetting -Key "content"
+$item = gi master:\content\Home
 # Add the placeholder setting to the item
-PS master:\> Add-PlaceholderSetting -Item $item -Instance $placeholderSetting
+Add-PlaceholderSetting -Item $item -Instance $placeholderSetting
 ``` 
 
 ### EXAMPLE 2
@@ -389,15 +394,15 @@ PS master:\> Add-PlaceholderSetting -Item $item -Instance $placeholderSetting
 Create item defining placeholder setting and add to an item, overriding the key
  
 ```text 
-PS master:\> $placeholderSetting = gi "master:\layout\Placeholder Settings\content" | New-PlaceholderSetting -Key "content"
+$placeholderSetting = gi "master:\layout\Placeholder Settings\content" | New-PlaceholderSetting -Key "content"
 # find item you want the placeholder setting added to
-PS master:\> $item = gi master:\content\Home
+$item = gi master:\content\Home
 # Add the placeholder setting to the item
-PS master:\> Add-PlaceholderSetting -Item $item -Instance $placeholderSetting -Key "content-override"
+Add-PlaceholderSetting -Item $item -Instance $placeholderSetting -Key "content-override"
 ``` 
 
 ## Related Topics 
- 
+
 
 * <a href='https://github.com/SitecorePowerShell/Console/' target='_blank'>https://github.com/SitecorePowerShell/Console/</a><br/>
 * [Get-PlaceholderSetting](get-placeholdersetting.md)

@@ -1,6 +1,6 @@
 # Reset-Layout
 
-Resets the layout for the specified item.
+Resets the SharedLayout or FinalLayout field for the specified item.
 
 ## Syntax
 
@@ -108,10 +108,12 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 1
+
+The following resets the layout information on the SharedLayout.
 
 ```text
-PS master:\> Reset-Layout -Path master:\content\home
+Reset-Layout -Path master:\content\home
 ```
 
 ## Related Topics

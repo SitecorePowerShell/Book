@@ -458,12 +458,12 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 ## Examples 
  
-### EXAMPLE 
+### EXAMPLE 1
  
 Get all placeholder settings for "Default" device, using any key matching the wildcard "content*"
  
 ```text
-PS master:\> Get-Item master:\content\home | Get-PlaceholderSetting -Key "content*" -Device (Get-LayoutDevice "Default") 
+Get-Item master:\content\home | Get-PlaceholderSetting -Key "content*" -Device (Get-LayoutDevice "Default") 
 ``` 
  
 ## Related Topics 

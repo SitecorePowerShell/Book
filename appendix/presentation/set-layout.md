@@ -126,10 +126,32 @@ Help Author: Adam Najmanowicz, Michael West
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 1
 
 ```text
-PS master:\> Set-Layout -Path master:\content\home
+# where my test page will go
+$path = 'master:\content\Sample'
+
+# wipe and re-create it if exists
+if(Test-Path $path){
+    Remove-Item $path
+}
+$item = New-Item -Path $path -ItemType "Sample/Sample Item"
+
+# wipe renderings just to make sure
+$item."__Renderings" = ""
+
+# select default layout
+$device = Get-LayoutDevice -Default
+
+# and a layout we will change to
+$layout = Get-Item -Path 'master:\layout\Layouts\System\Simulated Device Layout'
+
+# change the layout from what is in Standard values to the new one.
+Set-Layout -Item $item -Device $device -Layout $layout | Out-Null
+
+# verify
+Get-Layout $item 
 ```
 
 ## Related Topics
@@ -143,4 +165,5 @@ PS master:\> Set-Layout -Path master:\content\home
 * [Remove-Rendering](remove-rendering.md)
 * [Get-Layout](get-layout.md)
 * [Reset-Layout](reset-layout.md)
+* [Issue #579](https://github.com/SitecorePowerShell/Console/issues/579)
 

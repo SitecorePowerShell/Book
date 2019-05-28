@@ -238,12 +238,12 @@ The output type is the type of the objects that the cmdlet emits.
 
 ## Examples 
  
-### EXAMPLE
+### EXAMPLE 1
  
 Create item defining placeholder setting
  
 ```text
-PS master:\> $placeholderSetting = gi "master:\layout\Placeholder Settings\content" | New-PlaceholderSetting -Key "content"
+$placeholderSetting = gi "master:\layout\Placeholder Settings\content" | New-PlaceholderSetting -Key "content"
 ```
 
 ## Related Topics 

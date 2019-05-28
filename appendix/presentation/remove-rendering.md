@@ -221,7 +221,7 @@ Help Author: Adam Najmanowicz, Michael West
 remove all renderings for "Default" device
 
 ```text
-PS master:\> Remove-Rendering -Path master:\content\home -Device (Get-LayoutDevice "Default")
+Remove-Rendering -Path master:\content\home -Device (Get-LayoutDevice "Default")
 ```
 
 ### EXAMPLE 2
@@ -229,7 +229,7 @@ PS master:\> Remove-Rendering -Path master:\content\home -Device (Get-LayoutDevi
 remove all renderings from the "main" placeholder and all of its embedded placeholders.
 
 ```text
-PS master:\> Remove-Rendering -Path master:\content\home -PlaceHolder "main*"
+Remove-Rendering -Path master:\content\home -PlaceHolder "main*"
 ```
 
 ### EXAMPLE 3
@@ -237,7 +237,7 @@ PS master:\> Remove-Rendering -Path master:\content\home -PlaceHolder "main*"
 remove all renderings from the "main" placeholder and all of its embedded placeholders, but only in the "Default" device
 
 ```text
-PS master:\> Remove-Rendering -Path master:\content\home -PlaceHolder "main*" -Device (Get-LayoutDevice "Default")
+Remove-Rendering -Path master:\content\home -PlaceHolder "main*" -Device (Get-LayoutDevice "Default")
 ```
 
 ## Related Topics
