@@ -27,32 +27,35 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><code>// Assign data to a new variable</code><br/><code>var name = &quot;Michael&quot;;</code>
+      <td style="text-align:left">
+        <code>// Assign data to a new variable</code><br/>
+        <code>var name = &quot;Michael&quot;;</code>
       </td>
-      <td style="text-align:left"><code># Assign data to a new variable</code><br/><code>$name = &quot;Michael&quot;</code>
+      <td style="text-align:left">
+        <code># Assign data to a new variable</code><br/>
+        <code>$name = &quot;Michael&quot;</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>// Perform simple math</code>  <code>var total = 1 + 1;</code>
+      <td style="text-align:left">
+        <code>// Perform simple math</code><br/>
+        <code>var total = 1 + 1;</code>
       </td>
       <td style="text-align:left">
-        <code># Perform simple math</code> 
-        <br/>
+        <code># Perform simple math</code><br/>
         <code>$total = 1 + 1</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">
-        <code>// Create a new dynamic list of strings</code><br/>  <code>var names = new List&lt;string&gt;();</code><br/>  <code>names.Add(&quot;Michael&quot;);</code><br/> 
+        <code>// Create a new dynamic list of strings</code><br/>
+        <code>var names = new List&lt;string&gt;();</code><br/>  <code>names.Add(&quot;Michael&quot;);</code><br/> 
         <code>names.Add(&quot;Adam&quot;);</code>
       </td>
       <td style="text-align:left">
-        <code># Create a new fixed list of strings</code>
-        <br/>
-        <code>[string[]]$names = @()</code> 
-        <br/>
-        <code>$names += &quot;Michael&quot;</code> 
-        <br/>
+        <code># Create a new fixed list of strings</code><br/>
+        <code>[string[]]$names = @()</code><br/>
+        <code>$names += &quot;Michael&quot;</code><br/>
         <code>$names += &quot;Adam&quot;</code>
       </td>
     </tr>
@@ -96,12 +99,12 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
     <tr>
       <td style="text-align:left">
       <code>/*</code><br/>
-      <code>Create a comment block</code><br/>
+      <code>&nbsp;&nbsp;Create a comment block</code><br/>
       <code>*/</code>
       </td>
       <td style="text-align:left">
       <code>&lt;#</code><br/>
-      <code>Create a comment block</code><br/>
+      <code>&nbsp;&nbsp;Create a comment block</code><br/>
       <code>#&gt;</code>
       </td>
     </tr>
@@ -117,17 +120,14 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
     </tr>
     <tr>
       <td style="text-align:left">
-        <code>// Compare values</code> 
-        <br/>
-        <code>name == &quot;Michael&quot;</code><br/><code>total &lt;= 3 names.Count() &gt; 2 &amp;&amp; name[0] != &quot;Adam&quot;</code>
+        <code>// Compare values</code><br/>
+        <code>name == &quot;Michael&quot;</code><br/>
+        <code>total &lt;= 3 names.Count() &gt; 2 &amp;&amp; name[0] != &quot;Adam&quot;</code>
       </td>
       <td style="text-align:left">
-        <code># Compare values</code>
-        <br/>
-        <code>$name -eq &quot;Michael&quot;</code>
-        <br/>
-        <code># case-insensitive</code>
-        <br/>
+        <code># Compare values</code><br/>
+        <code>$name -eq &quot;Michael&quot;</code><br/>
+        <code># case-insensitive</code><br/>
         <code>$total -le 3 $names.Count -gt 2 &#x2013;and $name[0] -ne &quot;Adam&quot;</code>
       </td>
     </tr>
@@ -137,33 +137,39 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
         <code>var isTrue = !false;</code>
       </td>
       <td style="text-align:left">
-        <code># Negate value</code> 
-        <br/>
-        <code>$isTrue = !$false </code>
-        <br/>
+        <code># Negate value</code><br/>
+        <code>$isTrue = !$false </code><br/>
         <code>$isTrue = -not $false</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>// String interpolation</code>  <code>var message = $&quot;Hello, {name}&quot;;</code>
+      <td style="text-align:left">
+        <code>// String interpolation</code><br/>
+        <code>var message = $&quot;Hello, {name}&quot;;</code>
       </td>
-      <td style="text-align:left"><code># String interpolation</code>  <code>$message = &quot;Hello, $($name)&quot;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>// Access instance property</code>  <code>var today = DateTime.Today;</code>
-      </td>
-      <td style="text-align:left"><code># Access instance property</code>  <code>$today = [datetime]::Today</code>
+      <td style="text-align:left">
+        <code># String interpolation</code><br/>
+        <code>$message = &quot;Hello, $($name)&quot;</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">
-      <code>// Escape characters</code><br/>
-      <code>string message = "They said to me, \"SPE is the greatest!\".";</code>
+        <code>// Access instance property</code><br/>
+        <code>var today = DateTime.Today;</code>
       </td>
       <td style="text-align:left">
-      <code># Escape characters</code><br/>
-      <code>$message = "They said to me, `"SPE is the greatest!`"."</code>
+        <code># Access instance property</code><br/>
+        <code>$today = [datetime]::Today</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <code>// Escape characters</code><br/>
+        <code>string message = "They said to me, \"SPE is the greatest!\".";</code>
+      </td>
+      <td style="text-align:left">
+        <code># Escape characters</code><br/>
+        <code>$message = "They said to me, `"SPE is the greatest!`"."</code>
       </td>
     </tr>
   </tbody>
