@@ -138,9 +138,6 @@ if(Test-Path $path){
 }
 $item = New-Item -Path $path -ItemType "Sample/Sample Item"
 
-# wipe renderings just to make sure
-$item."__Renderings" = ""
-
 # select default layout
 $device = Get-LayoutDevice -Default
 
@@ -151,7 +148,7 @@ $layout = Get-Item -Path 'master:\layout\Layouts\System\Simulated Device Layout'
 Set-Layout -Item $item -Device $device -Layout $layout | Out-Null
 
 # verify
-Get-Layout $item 
+Get-Layout $item  
 ```
 
 ## Related Topics
