@@ -13,7 +13,7 @@ Find-Item [-Index] <String> [-ScopeQuery <String>] [-OrderBy <String>] [-First <
 
 ## Detailed Description
 
-The Find-Item command searches for items using the Sitecore Content Search API.
+The Find-Item command searches for items using the Sitecore Content Search API. The type `SearchResultItem` is used as the type when working with `IQueryable`.
 
 © 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
