@@ -108,11 +108,13 @@ Where "Invert" is a boolean to indicate the following:
 
 ### -Where  &lt;String&gt;
 
+Where the "Where" is the Dynamic Linq query and "WhereValues" includes the array of values to be replaced in the query.
+
 ```text
 $props = @{
     Index = "sitecore_master_index"
     Where = 'TemplateName = @0 And Language=@1'
-    WhereValues = "Template Field", "en"
+    WhereValues = "Sample Item", "en"
 }
 
 Find-Item @props
@@ -255,13 +257,17 @@ Find-Item @props
 
 ### EXAMPLE 3
 
-Find all Template Fields using Dynamic LINQ syntax.
+Find all items of template "Sample Item" which are in "English" under the "Home" item using Dynamic LINQ syntax.
 
 ```text
+$templateId = [ID]::Parse("{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}")
+$homeId = [ID]::Parse("{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}")
+$language = "en"
+
 $props = @{
     Index = "sitecore_master_index"
-    Where = 'TemplateName = @0 And Language=@1'
-    WhereValues = "Template Field", "en"
+    Where = 'TemplateId = @0 And Language=@1 And Paths.Contains(@2)'
+    WhereValues = $templateId, $language, $homeId
 }
 
 Find-Item @props
