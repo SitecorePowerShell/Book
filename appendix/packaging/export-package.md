@@ -92,7 +92,7 @@ Following example creates a new package, adds content/home item to it and saves 
 
 ```text
 # Create package
-$package = new-package "Sitecore PowerShell Extensions";
+$package = new-package "Package for something special";
 
 # Set package metadata
 $package.Sources.Clear();
