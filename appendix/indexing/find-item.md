@@ -93,6 +93,11 @@ $props = @{
 Find-Item @props -First 1 | Select-Object -Expand "Fields"
 ```
 
+Where "Invert" is a boolean to indicate the following:
+
+* $false - This is the default value. Do exactly as the query is defined.
+* $true - Reverse the logic. For example, "Contains" is treated like "NotContains", "Equals" is treated like "NotEquals".
+
 | Aliases |  |
 | :--- | :--- |
 | Required? | false |
@@ -224,7 +229,8 @@ Fields by which filtering can be performed using the -Criteria parameter.
 ```text
 $criteria = @(
     @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"}, 
-    @{Filter = "Contains"; Field = "Title"; Value = "Sitecore"}
+    @{Filter = "Contains"; Field = "Title"; Value = "Sitecore"},
+    @{Filter = "Contains"; Field = "Title"; Value = "Powerful ways"; "Invert" = $true}
 )
 $props = @{
     Index = "sitecore_master_index"
