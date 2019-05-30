@@ -101,10 +101,39 @@ Help Author: Adam Najmanowicz, Michael West
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 1
+
+The following expands tokens in fields on the item.
 
 ```text
-PS master:\> Get-Item master:\content\home | Expand-Token
+Get-Item -Path "master:\content\home" | Expand-Token
+```
+
+### EXAMPLE 2
+
+The following expands tokens in fields on the item. If the standard value of the field contains a token we modify the field to the token so the expansion will work (Sitecore API does not expand if the field is the same as Standard Values and never modified).
+
+```text
+$tokens = @('$name', '$id', '$parentId', '$parentname', '$date', '$time', '$now')
+
+$item = Get-Item -Path "master:\content\home"
+
+$standardValueFields = Get-ItemField -Item $item -ReturnType Field -Name "*" `
+    | Where-Object { $_.ContainsStandardValue }
+    
+$item.Editing.BeginEdit()
+
+foreach ($field in $standardValueFields) {
+    $value = $field.Value
+    
+    if ($tokens -contains $value) {
+        $item[$field.Name] = $value
+    }
+}
+
+$item.Editing.EndEdit()
+
+Expand-Token -Item $item
 ```
 
 ## Related Topics
