@@ -5,9 +5,9 @@ Gets Sitecore items from the specified drive.
 ## Syntax
 
 ```
-Get-Item [-Path] <String[]> [-ID <ID>] [-Language <String[]>] [-Version <String>]  [<CommonParameters>]
+Get-Item [-Path] <String[]> [-ID <ID>] [-Language <String[]>] [-Version <String>] [<CommonParameters>]
 
-Get-Item [-Path] <String[]> [-Query <String>] [-Language <String[]>] [-Version <String>] [-AmbiguousPaths]  [<CommonParameters>]
+Get-Item [-Path] <String[]> [-Query <String>] [-Language <String[]>] [-Version <String>] [-AmbiguousPaths] [<CommonParameters>]
 
 Get-Item [-Path] <String[]> [-Uri <String>] [-Language <String[]>] [-Version <String>] [<CommonParameters>]
 
@@ -58,7 +58,7 @@ The Sitecore query or fast query to retrieve the item.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item &lt;Item&gt;
 
 The item to be processed.
 
@@ -70,7 +70,7 @@ The item to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path &lt;String&gt;
 
 Path to the item to be processed - can work with Language parameter to specify the language other than current session language.
 
@@ -82,7 +82,7 @@ Path to the item to be processed - can work with Language parameter to specify t
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id &lt;String&gt;
 
 Id of the item to be processed.
 
@@ -94,9 +94,33 @@ Id of the item to be processed.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database &lt;String&gt;
 
 Database containing the item to be fetched with Id parameter.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -Language &lt;Language[]&gt;
+
+Language(s) to use for filtering items.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -Version &lt;String&gt;
+
+Version number to use for filtering items.
 
 | Aliases |  |
 | :--- | :--- |
