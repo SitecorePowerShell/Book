@@ -151,6 +151,8 @@
     * [Resume-SearchIndex](appendix/indexing/resume-searchindex.md)
     * [Stop-SearchIndex](appendix/indexing/stop-searchindex.md)
     * [Suspend-SearchIndex](appendix/indexing/suspend-searchindex.md)
+  * [Provider](appendix/provider/README.md)
+    * [Get-Item](appendix/provider/get-item.md)
   * [Security](appendix/security/README.md)
     * [Add-ItemAcl](appendix/security/add-itemacl.md)
     * [Add-RoleMember](appendix/security/add-rolemember.md)
