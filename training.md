@@ -61,10 +61,10 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
     </tr>
     <tr>
       <td style="text-align:left">
-      <code>// Create a hashtable of data</code><br/>
-      <code>var table = new Hashtable();</code><br/>
-      <code>table[&quot;Name&quot;] = &quot;Michael&quot;;</code><br/>
-      <code>table[&quot;Age&quot;] = 33;</code>
+        <code>// Create a hashtable of data</code><br/>
+        <code>var table = new Hashtable();</code><br/>
+        <code>table[&quot;Name&quot;] = &quot;Michael&quot;;</code><br/>
+        <code>table[&quot;Age&quot;] = 33;</code>
       </td>
       <td style="text-align:left">
         <code># Create a new hashtable of data</code><br/>
@@ -75,9 +75,10 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
     </tr>
     <tr>
       <td style="text-align:left">
-      <code>// Ordered Dictionary</code><br/>
-      <code>var od = new OrderedDictionary();</code><br/>
-      <code>od.Add(&quot;z&quot;,&quot;Last Letter&quot;);</code><br/>  <code>od.Add(&quot;a&quot;,&quot;First Letter&quot;);</code>
+        <code>// Ordered Dictionary</code><br/>
+        <code>var od = new OrderedDictionary();</code><br/>
+        <code>od.Add(&quot;z&quot;,&quot;Last Letter&quot;);</code><br/>
+        <code>od.Add(&quot;a&quot;,&quot;First Letter&quot;);</code>
       </td>
       <td style="text-align:left">
         <code># Ordered Dictionary </code><br/>
@@ -88,34 +89,34 @@ Use the table below to aid in translating from C\# to PowerShell. Some of the ex
     </tr>
     <tr>
       <td style="text-align:left">
-      <code>// Check if the string is null or empty using a static method</code><br/>
-      <code>if(string.IsNullOrEmpty(name)) { &#x2026; }</code>
+        <code>// Check if the string is null or empty using a static method</code><br/>
+        <code>if(string.IsNullOrEmpty(name)) { &#x2026; }</code>
       </td>
       <td style="text-align:left">
-      <code># Check if the string is null or empty using a static method</code><br/>
-      <code>if([string]::IsNullOrEmpty($name)) { &#x2026; }</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-      <code>/*</code><br/>
-      <code>&nbsp;&nbsp;Create a comment block</code><br/>
-      <code>*/</code>
-      </td>
-      <td style="text-align:left">
-      <code>&lt;#</code><br/>
-      <code>&nbsp;&nbsp;Create a comment block</code><br/>
-      <code>#&gt;</code>
+        <code># Check if the string is null or empty using a static method</code><br/>
+        <code>if([string]::IsNullOrEmpty($name)) { &#x2026; }</code>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">
-      <code>// Loop through a list of strings</code><br/>
-      <code>foreach(var name in names) { &#x2026; }</code>
+        <code>/*</code><br/>
+        <code>&nbsp;&nbsp;Create a comment block</code><br/>
+        <code>*/</code>
       </td>
       <td style="text-align:left">
-      <code># Loop through a list of strings</code><br/>
-      <code>foreach($name in $names) { &#x2026; }</code>
+        <code>&lt;#</code><br/>
+        <code>&nbsp;&nbsp;Create a comment block</code><br/>
+        <code>#&gt;</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <code>// Loop through a list of strings</code><br/>
+        <code>foreach(var name in names) { &#x2026; }</code>
+      </td>
+      <td style="text-align:left">
+        <code># Loop through a list of strings</code><br/>
+        <code>foreach($name in $names) { &#x2026; }</code>
       </td>
     </tr>
     <tr>
