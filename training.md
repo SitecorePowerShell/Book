@@ -254,13 +254,11 @@ $builder.ToString()
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
 Checklist of performance tuning ideas:
 
 * Use dynamic arrays to void the use of `+=`
 * Suppress output with `> $null` instead of `Out-Null`
 * Use hashtables as lookup tables for data
-{% endhint %}
 
 ## PowerShell Commands
 
