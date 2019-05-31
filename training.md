@@ -256,7 +256,7 @@ $builder.ToString()
 
 Checklist of performance tuning ideas:
 
-* Use dynamic arrays to void the use of `+=`
+* Use dynamic arrays to avoid the use of `+=`
 * Suppress output with `> $null` instead of `Out-Null`
 * Use hashtables as lookup tables for data
 
@@ -324,13 +324,11 @@ $props = @{
 Get-Something @props
 ```
 
-{% hint style="warning" %}
 Allow scripts to be written with the full command and parameter names
 
 * Avoid relying on positional or optional parameters.
 * Avoid abbreviating parameter names.
 * Avoid using command aliases \(e.g. dir, cd\).
-{% endhint %}
 
 Some of the most useful commands to learn can be seen in the table below. These come with vanilla PowerShell.
 
