@@ -1,6 +1,6 @@
 # Disclaimer
 
-Since every environment is different, any and all code should not be run in a production environment without your team or organization thoroughly testing first. We recommended the of use a test lab environment often referred to as development/staging instance of Sitecore.
+Since every environment is different, any and all code should not be run in a production environment without your team or organization thoroughly testing first. We recommend the use of a test lab environment often referred to as development/staging instance of Sitecore.
 
 The disclaimer is provided because someone somewhere will inevitably not follow this recommendation and in the event that they do hose their Sitecore environment, they have no one to blame but themselves.
 
