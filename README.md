@@ -64,9 +64,12 @@ The following are some helpful modules distributed with SPE.
 > Just provisioned a new language for the whole content tree with a one-liner. Whaaaat?  
 > Have to include it as a default install for all sandboxes now._ - [Alex Shyba](https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx)'s comment on Marketplace
 
-> _hank you for the GitBook. Invaluable Reference._ - [Nick Wesselman](https://twitter.com/techphoria414)'s [tweet](https://twitter.com/techphoria414/status/632033887632289792)
+> _Thank you for the GitBook. Invaluable Reference._ - [Nick Wesselman](https://twitter.com/techphoria414)'s [tweet](https://twitter.com/techphoria414/status/632033887632289792)
 
 > _The Sitecore powershell tools are absurdly good and helpful. I know they make a lot of people nervous, but they are incredibly well managed. Everybody should learn to sling some shell in Sitecore, you'll never look back._ - [Christopher Campbell](https://twitter.com/RehbellOne) [tweet](https://twitter.com/RehbellOne/status/1058048820435607552)
+
+> _I literally couldn't work without SPE - I can't remember the last implementation I did that _didn't_ have it installed lol_
+> _@michaellwest & @adamnaj better not ever retire it :smile:_ - [Richard Seal](https://twitter.com/rich_seal)
 
 ## Development Team
 
