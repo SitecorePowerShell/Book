@@ -119,6 +119,23 @@ Gates with **Password** protection enabled prompt the user when no elevated sess
 
 - `Cognifide.PowerShell.IdentityServer.config`
 
+```text
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:security="http://www.sitecore.net/xmlconfig/security/">
+  <sitecore role:require="Standalone or ContentManagement" security:require="Sitecore">
+    <pipelines>
+      <owin.cookieAuthentication.validateIdentity>
+        <processor type="Sitecore.Owin.Authentication.Pipelines.CookieAuthentication.ValidateIdentity.ValidateSiteNeutralPaths, Sitecore.Owin.Authentication">
+          <siteNeutralPaths hint="list">
+            <!-- This entry corrects the infinite loop of ExecuteCommand in the SPE Console -->
+            <path hint="spe">/sitecore%20modules/PowerShell</path>
+          </siteNeutralPaths>
+        </processor>
+      </owin.cookieAuthentication.validateIdentity>
+    </pipelines>
+  </sitecore>
+</configuration>
+```
+
 **Content Editor**
 
 A Content Editor Warning is displayed when a PowerShell Module, Script Library, and Script is selected. Click "Elevate session" to show the hidden fields and enable the management of the item.
