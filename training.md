@@ -18,27 +18,20 @@ PowerShell is built on the Microsoft .Net technology; you will find that most AP
 
 Use the table below to aid in translating from C\# to PowerShell. Some of the examples below are not "exact" translations, but should give you a good idea on what it would look like. For example, creating a new dynamic list in C\# is often written as a fixed dimensional array recreated with every new addition.
 
-{% tabs %}
-{% tab title="Variables" %}
-```csharp
-// Assign data to a new variable
-var name = "Michael";
-```
+**Note:** Variables in PowerShell are denoted by the `$` character followed by the name. You will see this through the examples below.
 
-```text
-# Assign data to a new variable
-$name = "Michael"
-```
-{% endtab %}
+{% tabs %}
 {% tab title="Arithmetic" %}
 ```csharp
-// Perform simple math
+// Perform simple math in C#
 var total = 1 + 1;
+total += 2;
 ```
 
 ```text
-# Perform simple math
+# Perform simple math in PowerShell
 $total = 1 + 1
+$total += 2
 ```
 {% endtab %}
 {% tab title="Collections" %}
@@ -47,7 +40,7 @@ Working with Dynamic and Fixed dimensional arrays.
 
 ```csharp
 /*
-  Create a new dynamic list of strings
+  Create a new dynamic list of strings in C#
 */
 var names = new List<string>();
 names.Add("Michael");
@@ -56,7 +49,7 @@ names.Add("Adam");
 
 ```text
 <#
-  Create a new fixed list of strings
+  Create a new fixed list of strings in PowerShell
 #>
 [string[]]$names = @()
 $names += "Michael"
@@ -66,14 +59,14 @@ $names += "Adam"
 Working with hashtables.
 
 ```csharp
-// Create a hashtable of data
+// Create a hashtable of data in C#
 var table = new Hashtable();
 table["Name"] = "Michael";
 table["Age"] = 33;
 ```
 
 ```text
-# Create a new hashtable of data
+# Create a new hashtable of data in PowerShell
 $table = @{}
 $table["Name"] = "Michael"
 $table["Age"] = 33
@@ -82,14 +75,14 @@ $table["Age"] = 33
 Working with dictionaries.
 
 ```csharp
-// Ordered Dictionary
+// Ordered Dictionary in C#
 var od = new OrderedDictionary();
 od.Add("z","Last Letter");
 od.Add("a","First Letter");
 ```
 
 ```text
-# Ordered Dictionary
+# Ordered Dictionary in PowerShell
 $od = [ordered]@{}
 $od.Add("z","Last Letter")
 $od.Add("a","First Letter")
@@ -97,7 +90,7 @@ $od.Add("a","First Letter")
 {% endtab %}
 {% tab title="If-Else" %}
 ```csharp
-// Check if the string is null or empty using a static method
+// Check if the string is null or empty using a static method in C#
 if(string.IsNullOrEmpty(name)) { 
   ...
 }
@@ -107,7 +100,7 @@ else {
 ```
 
 ```text
-# Check if the string is null or empty using a static method
+# Check if the string is null or empty using a static method in PowerShell
 if([string]::IsNullOrEmpty($name)) {
   ...
 } else {
@@ -117,13 +110,13 @@ if([string]::IsNullOrEmpty($name)) {
 {% endtab %}
 {% tab title="Comparisons" %}
 ```csharp
-// Compare values
+// Compare values in C#
 name == "Michael"
 total <= 3 names.Count() > 2 && name[0] != "Adam"
 ```
 
 ```text
-# Compare values
+# Compare values in PowerShell
 $name -eq "Michael"
 
 # case-insensitive
@@ -132,47 +125,52 @@ $total -le 3 $names.Count -gt 2 –and $name[0] -ne "Adam"
 {% endtab %}
 {% tab title="Negate" %}
 ```csharp
-// Negate value
+// Negate value in C#
 var isTrue = !false;
 ```
 
 ```text
-# Negate value
+# Negate value in PowerShell
 $isTrue = !$false
 $isTrue = -not $false
 ```
 {% endtab %}
 {% tab title="Strings" %}
 ```csharp
-// String interpolation
+// String interpolation in C#
 var message = $"Hello, {name}";
 ```
 
 ```text
-# String interpolation
+# String interpolation in PowerShell
 $message = "Hello, $($name)"
+```
+
+Escape double quotes in string. Alternatively you can use a single quote.
+
+```csharp
+// Escape characters in C#
+string message = "They said to me, \"SPE is the greatest!\".";
+message = 'I said, "Thanks!"';
+message = "We celebrated together, 'Go SPE!'";
+```
+
+```text
+# Escape characters in PowerShell
+$message = "They said to me, `"SPE is the greatest!`"."
+$message = 'I said, "Thanks!".'
+$message = "We celebrated together, 'Go SPE!'."
 ```
 {% endtab %}
 {% tab title="Static Members" %}
 ```csharp
-// Access instance property
+// Access static property in C#
 var today = DateTime.Today;
 ```
 
 ```text
-# Access instance property
+# Access static property in PowerShell
 $today = [datetime]::Today
-```
-{% endtab %}
-{% tab title="Escaping" %}
-```csharp
-// Escape characters
-string message = "They said to me, \"SPE is the greatest!\".";
-```
-
-```text
-# Escape characters
-$message = "They said to me, `"SPE is the greatest!`"."
 ```
 {% endtab %}
 {% endtabs %}
@@ -353,7 +351,9 @@ PowerShell was designed so that after learning a few concepts you can get up and
 
 ### Pipelines
 
-PowerShell supports chaining of commands through a feature called “Pipelines” using the pipe “\|”. Similar to Sitecore in that you can short circuit the processing of objects using **Where-Object**. Let’s have a look at a few examples.
+PowerShell supports chaining of commands through a feature called "Pipelines" using the pipe "\|". Similar to Sitecore in that you can short circuit the processing of objects using **Where-Object**. Let’s have a look at a few examples.
+
+**Note:** The characters `$_` and `$PSItem` represent the current object getting processed in the pipeline.
 
 **Example:** The following queries a Sitecore item and removes it.
 
