@@ -18,163 +18,166 @@ PowerShell is built on the Microsoft .Net technology; you will find that most AP
 
 Use the table below to aid in translating from C\# to PowerShell. Some of the examples below are not "exact" translations, but should give you a good idea on what it would look like. For example, creating a new dynamic list in C\# is often written as a fixed dimensional array recreated with every new addition.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Microsoft .Net C#</th>
-      <th style="text-align:left">Windows PowerShell</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <code>// Assign data to a new variable</code><br/>
-        <code>var name = &quot;Michael&quot;;</code>
-      </td>
-      <td style="text-align:left">
-        <code># Assign data to a new variable</code><br/>
-        <code>$name = &quot;Michael&quot;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Perform simple math</code><br/>
-        <code>var total = 1 + 1;</code>
-      </td>
-      <td style="text-align:left">
-        <code># Perform simple math</code><br/>
-        <code>$total = 1 + 1</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Create a new dynamic list of strings</code><br/>
-        <code>var names = new List&lt;string&gt;();</code><br/>  <code>names.Add(&quot;Michael&quot;);</code><br/> 
-        <code>names.Add(&quot;Adam&quot;);</code>
-      </td>
-      <td style="text-align:left">
-        <code># Create a new fixed list of strings</code><br/>
-        <code>[string[]]$names = @()</code><br/>
-        <code>$names += &quot;Michael&quot;</code><br/>
-        <code>$names += &quot;Adam&quot;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Create a hashtable of data</code><br/>
-        <code>var table = new Hashtable();</code><br/>
-        <code>table[&quot;Name&quot;] = &quot;Michael&quot;;</code><br/>
-        <code>table[&quot;Age&quot;] = 33;</code>
-      </td>
-      <td style="text-align:left">
-        <code># Create a new hashtable of data</code><br/>
-        <code>$table = @{}</code><br/> 
-        <code>$table[&quot;Name&quot;] = &quot;Michael&quot;</code><br/>
-        <code>$table[&quot;Age&quot;] = 33</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Ordered Dictionary</code><br/>
-        <code>var od = new OrderedDictionary();</code><br/>
-        <code>od.Add(&quot;z&quot;,&quot;Last Letter&quot;);</code><br/>
-        <code>od.Add(&quot;a&quot;,&quot;First Letter&quot;);</code>
-      </td>
-      <td style="text-align:left">
-        <code># Ordered Dictionary </code><br/>
-        <code>$od = [ordered]@{}</code><br/>
-        <code>$od.Add(&quot;z&quot;,&quot;Last Letter&quot;)</code><br/>
-        <code>$od.Add(&quot;a&quot;,&quot;First Letter&quot;)</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Check if the string is null or empty using a static method</code><br/>
-        <code>if(string.IsNullOrEmpty(name)) { &#x2026; }</code>
-      </td>
-      <td style="text-align:left">
-        <code># Check if the string is null or empty using a static method</code><br/>
-        <code>if([string]::IsNullOrEmpty($name)) { &#x2026; }</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>/*</code><br/>
-        <code>&nbsp;&nbsp;Create a comment block</code><br/>
-        <code>*/</code>
-      </td>
-      <td style="text-align:left">
-        <code>&lt;#</code><br/>
-        <code>&nbsp;&nbsp;Create a comment block</code><br/>
-        <code>#&gt;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Loop through a list of strings</code><br/>
-        <code>foreach(var name in names) { &#x2026; }</code>
-      </td>
-      <td style="text-align:left">
-        <code># Loop through a list of strings</code><br/>
-        <code>foreach($name in $names) { &#x2026; }</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Compare values</code><br/>
-        <code>name == &quot;Michael&quot;</code><br/>
-        <code>total &lt;= 3 names.Count() &gt; 2 &amp;&amp; name[0] != &quot;Adam&quot;</code>
-      </td>
-      <td style="text-align:left">
-        <code># Compare values</code><br/>
-        <code>$name -eq &quot;Michael&quot;</code><br/>
-        <code># case-insensitive</code><br/>
-        <code>$total -le 3 $names.Count -gt 2 &#x2013;and $name[0] -ne &quot;Adam&quot;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Negate value</code><br/>
-        <code>var isTrue = !false;</code>
-      </td>
-      <td style="text-align:left">
-        <code># Negate value</code><br/>
-        <code>$isTrue = !$false </code><br/>
-        <code>$isTrue = -not $false</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// String interpolation</code><br/>
-        <code>var message = $&quot;Hello, {name}&quot;;</code>
-      </td>
-      <td style="text-align:left">
-        <code># String interpolation</code><br/>
-        <code>$message = &quot;Hello, $($name)&quot;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Access instance property</code><br/>
-        <code>var today = DateTime.Today;</code>
-      </td>
-      <td style="text-align:left">
-        <code># Access instance property</code><br/>
-        <code>$today = [datetime]::Today</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <code>// Escape characters</code><br/>
-        <code>string message = "They said to me, \"SPE is the greatest!\".";</code>
-      </td>
-      <td style="text-align:left">
-        <code># Escape characters</code><br/>
-        <code>$message = "They said to me, `"SPE is the greatest!`"."</code>
-      </td>
-    </tr>
-  </tbody>
-</table>As you can see in the table above, the language syntax is not all that different between C\# and PowerShell. Within a few minutes you might even be able to translate code from your library classes into SPE scripts.
+{% tabs %}
+{% tab title="Variables" %}
+```csharp
+// Assign data to a new variable
+var name = "Michael";
+```
+
+```text
+# Assign data to a new variable
+$name = "Michael"
+```
+{% endtab %}
+{% tab title="Arithmetic" %}
+```csharp
+// Perform simple math
+var total = 1 + 1;
+```
+
+```text
+# Perform simple math
+$total = 1 + 1
+```
+{% endtab %}
+{% tab title="Collections" %}
+
+Working with Dynamic and Fixed dimensional arrays.
+
+```csharp
+/*
+  Create a new dynamic list of strings
+*/
+var names = new List<string>();
+names.Add("Michael");
+names.Add("Adam");
+```
+
+```text
+<#
+  Create a new fixed list of strings
+#>
+[string[]]$names = @()
+$names += "Michael"
+$names += "Adam"
+```
+
+Working with hashtables.
+
+```csharp
+// Create a hashtable of data
+var table = new Hashtable();
+table["Name"] = "Michael";
+table["Age"] = 33;
+```
+
+```text
+# Create a new hashtable of data
+$table = @{}
+$table["Name"] = "Michael"
+$table["Age"] = 33
+```
+
+Working with dictionaries.
+
+```csharp
+// Ordered Dictionary
+var od = new OrderedDictionary();
+od.Add("z","Last Letter");
+od.Add("a","First Letter");
+```
+
+```text
+# Ordered Dictionary
+$od = [ordered]@{}
+$od.Add("z","Last Letter")
+$od.Add("a","First Letter")
+```
+{% endtab %}
+{% tab title="If-Else" %}
+```csharp
+// Check if the string is null or empty using a static method
+if(string.IsNullOrEmpty(name)) { 
+  ...
+}
+else {
+  ...
+}
+```
+
+```text
+# Check if the string is null or empty using a static method
+if([string]::IsNullOrEmpty($name)) {
+  ...
+} else {
+  ...
+}
+```
+{% endtab %}
+{% tab title="Comparisons" %}
+```csharp
+// Compare values
+name == "Michael"
+total <= 3 names.Count() > 2 && name[0] != "Adam"
+```
+
+```text
+# Compare values
+$name -eq "Michael"
+
+# case-insensitive
+$total -le 3 $names.Count -gt 2 –and $name[0] -ne "Adam"
+```
+{% endtab %}
+{% tab title="Negate" %}
+```csharp
+// Negate value
+var isTrue = !false;
+```
+
+```text
+# Negate value
+$isTrue = !$false
+$isTrue = -not $false
+```
+{% endtab %}
+{% tab title="Strings" %}
+```csharp
+// String interpolation
+var message = $"Hello, {name}";
+```
+
+```text
+# String interpolation
+$message = "Hello, $($name)"
+```
+{% endtab %}
+{% tab title="Static Members" %}
+```csharp
+// Access instance property
+var today = DateTime.Today;
+```
+
+```text
+# Access instance property
+$today = [datetime]::Today
+```
+{% endtab %}
+{% tab title="Escaping" %}
+```csharp
+// Escape characters
+string message = "They said to me, \"SPE is the greatest!\".";
+```
+
+```text
+# Escape characters
+$message = "They said to me, `"SPE is the greatest!`"."
+```
+{% endtab %}
+{% endtabs %}
+
+As you can see in the table above, the language syntax is not all that different between C\# and PowerShell. Within a few minutes you might even be able to translate code from your library classes into SPE scripts.
 
 ### Performance Considerations
 
