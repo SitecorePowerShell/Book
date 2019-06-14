@@ -353,7 +353,9 @@ PowerShell was designed so that after learning a few concepts you can get up and
 
 PowerShell supports chaining of commands through a feature called "Pipelines" using the pipe "\|". Similar to Sitecore in that you can short circuit the processing of objects using **Where-Object**. Let’s have a look at a few examples.
 
-**Note:** The characters `$_` and `$PSItem` represent the current object getting processed in the pipeline.
+{% hint style="info" %}
+The characters `$_` and `$PSItem` represent the current object getting processed in the pipeline.
+{% endhint %}
 
 **Example:** The following queries a Sitecore item and removes it.
 
