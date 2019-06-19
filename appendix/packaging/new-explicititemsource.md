@@ -109,25 +109,25 @@ Following example creates a new package, adds content/home item and all of its c
 
 ```text
 # Create package
-       $package = new-package "Sitecore PowerShell Extensions";
+$package = new-package "Sitecore PowerShell Extensions";
 
 # Set package metadata
-       $package.Sources.Clear();
+$package.Sources.Clear();
 
-       $package.Metadata.Author = "Adam Najmanowicz - Cognifide, Michael West";
-       $package.Metadata.Publisher = "Cognifide Limited";
-       $package.Metadata.Version = "2.7";
-       $package.Metadata.Readme = 'This text will be visible to people installing your package'
+$package.Metadata.Author = "Adam Najmanowicz - Cognifide, Michael West";
+$package.Metadata.Publisher = "Cognifide Limited";
+$package.Metadata.Version = "2.7";
+$package.Metadata.Readme = 'This text will be visible to people installing your package'
 
 # Add content/home and all of its children to the package
 $source = Get-Item 'master:\content\home' | New-ExplicitItemSource -Name 'Home Page' -InstallMode Overwrite
 $package.Sources.Add($source);
 
 # Save package
-       Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Version).zip" -Zip
+Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Version).zip" -Zip
 
 # Offer the user to download the package
-       Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Version).zip"
+Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Version).zip"
 ```
 
 ## Related Topics

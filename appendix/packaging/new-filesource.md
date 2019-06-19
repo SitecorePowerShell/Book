@@ -90,25 +90,25 @@ Following example creates a new package, adds content of the Console folder unde
 
 ```text
 # Create package
-       $package = new-package "Sitecore PowerShell Extensions";
+$package = new-package "Sitecore PowerShell Extensions";
 
 # Set package metadata
-       $package.Sources.Clear();
+$package.Sources.Clear();
 
-       $package.Metadata.Author = "Adam Najmanowicz - Cognifide, Michael West";
-       $package.Metadata.Publisher = "Cognifide Limited";
-       $package.Metadata.Version = "2.7";
-       $package.Metadata.Readme = 'This text will be visible to people installing your package'
+$package.Metadata.Author = "Adam Najmanowicz - Cognifide, Michael West";
+$package.Metadata.Publisher = "Cognifide Limited";
+$package.Metadata.Version = "2.7";
+$package.Metadata.Readme = 'This text will be visible to people installing your package'
 
 # Add content of the Console folder in the site folder to the package
-       $source = New-FileSource -Name "Console Assets" -Root "$AppPath\Console"
-       $package.Sources.Add($source);
+$source = New-FileSource -Name "Console Assets" -Root "$AppPath\Console"
+$package.Sources.Add($source);
 
 # Save package
-       Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Version).zip" -Zip
+Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Version).zip" -Zip
 
 # Offer the user to download the package
-       Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Version).zip"
+Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Version).zip"
 ```
 
 ## Related Topics
