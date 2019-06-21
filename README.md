@@ -12,6 +12,11 @@ The module provides a command line \(CLI\) and scripting environment \(ISE\) for
 Support for Sitecore 7 has discontinued with SPE 5.0.
 {% endhint %}
 
+## Development Team
+
+* [Adam Najmanowicz](https://blog.najmanowicz.com/) \| [@adamnaj](https://twitter.com/adamnaj) 
+* [Michael West](https://michaellwest.blogspot.com/) \| [@michaelwest101](https://twitter.com/MichaelWest101)
+
 ## Bundled Tools
 
 The following are some helpful modules distributed with SPE.
@@ -70,11 +75,6 @@ The following are some helpful modules distributed with SPE.
 
 > _I literally couldn't work without SPE - I can't remember the last implementation I did that _didn't_ have it installed lol_
 > _@michaellwest & @adamnaj better not ever retire it :smile:_ - [Richard Seal](https://twitter.com/rich_seal)
-
-## Development Team
-
-* [Adam Najmanowicz](https://blog.najmanowicz.com/) \| [@adamnaj](https://twitter.com/adamnaj)
-* [Michael West](https://michaellwest.blogspot.com/) \| [@michaelwest101](https://twitter.com/MichaelWest101)
 
 ## Help and Support
 

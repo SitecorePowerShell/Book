@@ -71,6 +71,8 @@ Invoke-JavaScript -Script "alert('hello from powershell');"
 
 ![Invoke JavaScript](../.gitbook/assets/interact-with-browser-using-js.gif)
 
+## Remoting
+
 **Example:** [Remote Package Installation](https://gist.github.com/michaellwest/14e9ef98f9e8b450c1b39813d13cbc50)
 
 ```text
@@ -78,7 +80,7 @@ Import-Module -Name SPE -Force
 
 $packageName = "$($SitecorePackageFolder)\[PACKAGE].zip"
 
-$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "http://remotesitecore"
+$session = New-ScriptSession -Username "admin" -Password "b" -ConnectionUri "https://remotesitecore"
 Test-RemoteConnection -Session $session -Quiet
 $jobId = Invoke-RemoteScript -Session $session -ScriptBlock {
     [Sitecore.Configuration.Settings+Indexing]::Enabled = $false
