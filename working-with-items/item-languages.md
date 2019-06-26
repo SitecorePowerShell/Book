@@ -48,6 +48,19 @@ Get-ChildItem "master:\content" -Recurse |
     Remove-ItemLanguage -Language "fr-CA"
 ```
 
+## New Item with Forced Language Version
+
+**Example:** The following example creates a new item with language versions only matching the specified languages; all other language version are removed.
+
+```text
+$itemPath = "master:\content\home\sample item\Sample Item 3"
+New-Item -Path $itemPath -ItemType "Sample/Sample Item" -Language "en-CA"
+
+Name          Children Language Version Id                                     TemplateName
+----          -------- -------- ------- --                                     ------------
+Sample Item 3 False    en-CA    1       {C9517583-3AF9-4AFB-B247-BB0A09F55D94} Sample Item
+```
+
 ## Parameters and Configuration
 
 Supported parameters:
