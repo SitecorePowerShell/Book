@@ -1,3 +1,7 @@
+---
+description: SPE includes several built-in interfaces for managing and executing scripts, as well as provides tools for modifying content.
+---
+
 # Interfaces
 
 Here we'll discuss the Console, ISE, and other dialogs made available through SPE.

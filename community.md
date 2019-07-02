@@ -1,3 +1,7 @@
+---
+description: See some of the community contributed modules built for SPE.
+---
+
 # Community
 
 There are some really amazing contributions and add-ons to SPE from the community.
