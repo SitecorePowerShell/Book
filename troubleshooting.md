@@ -10,7 +10,9 @@ We generally see issues occurring due to an incompatible version of Windows Powe
 
 There is an additional configuration file added to support Identity Server. If you are installing Sitecore 9.1 or later you will want to enable the configuration file `Cognifide.PowerShell.IdentityServer.config`.
 
-**Note:** You can see the Sitecore Stack Exchange answer [here](https://sitecore.stackexchange.com/questions/17984/unable-to-elevate-console-in-9-1-azure-paas/18775#18775) describing the contents of the configuration.
+{% hint style="info" %}
+You can see the Sitecore Stack Exchange answer [here](https://sitecore.stackexchange.com/questions/17984/unable-to-elevate-console-in-9-1-azure-paas/18775#18775) describing the contents of the configuration.
+{% endhint %}
 
 ### Hanging Installation Wizard
 

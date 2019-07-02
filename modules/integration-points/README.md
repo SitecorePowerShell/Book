@@ -4,7 +4,9 @@ The SPE Modules support a wide variety of predefined script libraries to help wi
 
 The following list outlines the available libraries for _Integration Points_ that may be added to modules. These may also be generated automatically when creating or updating modules.
 
-**Note:** Be certain to enable the module when you need to use it.
+{% hint style="info" }
+Be certain to enable the module when you need to use it.
+{% endhint %}
 
 * [**Content Editor**](content-editor.md)
   * Context Menu - Visibility can be control using rules made available from within the _Interactive_ field section.

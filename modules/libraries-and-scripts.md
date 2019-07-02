@@ -48,7 +48,9 @@ Some names we've used included:
 * User Interaction
 * **Web API**
 
-**Note:** Many of the of the libraries are integration points for the module. When the integration point wizard runs, you will see that these can be generated automatically.
+{% hint style="info" %}
+Many of the libraries are integration points for the module. When the integration point wizard runs, you will see that these can be generated automatically.
+{% endhint %}
 
 ### Fields
 

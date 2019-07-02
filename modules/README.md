@@ -8,7 +8,9 @@ Some benefits to using modules:
 * Organization of custom scripts is a cinch.
 * More reasons can be found in Adam's [post](https://github.com/SitecorePowerShell/Book/tree/9c7126d7a38df6ef372e8baef52f9a02baabd550/modules/[https:/blog.najmanowicz.com/2014/11/01/sitecore-powershell-extensions-3-0-modules-proposal/]/README.md).
 
-**Note:** The _Platform_ module is one you should avoid changing.
+{% hint style="warning" %}
+The _Platform_ module is one you should avoid changing.
+{% endhint %}
 
 ## Create a custom module
 
