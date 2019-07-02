@@ -1,3 +1,7 @@
+---
+description: Review prerequisites and details on how to get setup with SPE.
+---
+
 # Installation
 
 ## Prerequisites
