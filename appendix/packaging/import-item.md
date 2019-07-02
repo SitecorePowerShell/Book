@@ -170,7 +170,6 @@ PS master:\> Import-Item -path "c:\project\data\serialization\master\sitecore\co
 * [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 * [Export-Item](export-item.md)
 * [Get-Preset](../common/get-preset.md)
-* [https://www.cognifide.com/blogs/sitecore/serialization-and-deserialization-with-sitecore-powershell-extensions/](https://www.cognifide.com/blogs/sitecore/serialization-and-deserialization-with-sitecore-powershell-extensions/) 
 * [https://www.youtube.com/watch?v=60BGRDNONo0&list=PLph7ZchYd\_nCypVZSNkudGwPFRqf1na0b&index=7](https://www.youtube.com/watch?v=60BGRDNONo0&list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b&index=7) 
 * [https://gist.github.com/AdamNaj/6c86f61510dc3d2d8b2f](https://gist.github.com/AdamNaj/6c86f61510dc3d2d8b2f) 
 * [https://stackoverflow.com/questions/20266841/sitecore-powershell-deserialization](https://stackoverflow.com/questions/20266841/sitecore-powershell-deserialization) 

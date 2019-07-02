@@ -139,7 +139,7 @@ Help Author: Adam Najmanowicz, Michael West
 Download File from server disk drive
 
 ```text
-PS master:\> Send-File -Path "C:\Projects\ZenGarden\Data\packages\Sitecore PowerShell Extensions-2.6.zip"
+PS master:\> Send-File -Path "C:\Projects\ZenGarden\Data\packages\Sitecore PowerShell Extensions-6.0.zip"
 ```
 
 ### EXAMPLE 2
@@ -147,7 +147,7 @@ PS master:\> Send-File -Path "C:\Projects\ZenGarden\Data\packages\Sitecore Power
 Download item from media library
 
 ```text
-PS master:\> Get-Item "master:/media library/Showcase/cognifide_logo" | Send-File -Message "Cognifide Logo"
+PS master:\> Get-Item "master:/media library/Showcase/awesome_logo" | Send-File -Message "Awesome Logo"
 ```
 
 ## Related Topics

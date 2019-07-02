@@ -181,13 +181,6 @@ Home                en-US    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 2       Samp
 Home                en-US    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 3       Sample Item
 Home                en-GB    {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
 Hjem                da       {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 1       Sample Item
-CognifideCom        en       {6A1EC18E-AF9B-443E-84C7-5528F2363A10} 1       TenantTemplate
-Demo                en       {4F02AEDF-1CC6-4B84-8B6E-F5CB465F8AD9} 1       TenantTemplate
-GetEngaged          en       {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
-GetEngaged          de-DE    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
-GetEngaged          es-ES    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
-GetEngaged          pt-BR    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
-GetEngaged          pl-PL    {68AD4037-EE50-4615-BA2E-AE11B1D3F6CC} 1       TenantTemplate
 ```
 
 ### Get-Item : Sitecore query
@@ -483,7 +476,7 @@ Easy enough, isn't it? Let SPE detect the field type for you and worry about wha
 
 ```text
 $homeItem = Get-Item -Path "master:/content/home"
-$homeItem.GeneralLink = Get-Item -Path "master:\content\CognifideCom"
+$homeItem.GeneralLink = Get-Item -Path "master:\content\home-away-from-home"
 ```
 
 What about fields that accept lists of items? We've got your back here as well.

@@ -59,7 +59,6 @@ PowerShell      master   /sitecore/templates/Modules/PowerShell Console
 PowerShell      master   /sitecore/system/Modules/PowerShell/Console Colors
 PowerShell      master   /sitecore/system/Modules/PowerShell/Rules
 PowerShell      master   /sitecore/system/Modules/PowerShell/Script Library
-AssetsOptimiser master   /sitecore/templates/Cognifide/Optimiser
 AssetsOptimiser master   /sitecore/system/Modules/Optimiser
 ```
 

@@ -108,15 +108,14 @@ Help Author: Adam Najmanowicz, Michael West
 Following example creates a new package, adds content/home item and all of its children to it and saves it in the Sitecore Package folder + gives you an option to download the saved package.
 
 ```text
-# Create package
-$package = new-package "Sitecore PowerShell Extensions";
+$package = New-Package "Packing in Powerful Ways";
 
 # Set package metadata
 $package.Sources.Clear();
 
-$package.Metadata.Author = "Adam Najmanowicz - Cognifide, Michael West";
-$package.Metadata.Publisher = "Cognifide Limited";
-$package.Metadata.Version = "2.7";
+$package.Metadata.Author = "Adam Najmanowicz, Michael West";
+$package.Metadata.Publisher = "Powerful Ways";
+$package.Metadata.Version = "1.0";
 $package.Metadata.Readme = 'This text will be visible to people installing your package'
 
 # Add content/home and all of its children to the package
