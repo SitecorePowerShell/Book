@@ -378,6 +378,40 @@ $props = @{
 Find-Item @props
 ```
 
+### EXAMPLE 9
+
+Find and count all items beneath a root item using the item path.
+
+```text
+$criteria = @(
+    @{Filter = "Contains"; Field = "_fullpath"; Value = "/sitecore/content/home"},
+    @{Filter = "Equals"; Field = "_latestversion"; Value = "1"}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+
+Find-Item @props | Measure-Object
+```
+
+### EXAMPLE 10
+
+Find and count all items beneath a root item using the item id.
+
+```text
+$criteria = @(
+    @{Filter = "Contains"; Field = "_path"; Value = "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"},
+    @{Filter = "Equals"; Field = "_latestversion"; Value = "1"}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+
+Find-Item @props | Measure-Object
+```
+
 ## Related Topics
 
 * [Initialize-Item](initialize-item.md)
