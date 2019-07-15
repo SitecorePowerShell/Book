@@ -25,7 +25,7 @@ The solution requires Visual Studio 2015 or later.
    ```
 
 4. Copy `C:\Source\Console\deploy.user.json.sample` to `C:\Source\Console\deploy.user.json`. This will be a file just for your local environment and will be ignored by git.
-5. Edit the sites definition in `deploy.user.json` to target your Sitecore installation folder, making sure you use double-slashes for paths like in the existing file. For this site, make sure the `version` property is `8`. Remove any other sites in the file that do not apply.
+5. Edit the sites definition in `deploy.user.json` to target your Sitecore web root folder, making sure you use double-slashes for paths like in the existing file. For this site, make sure the `version` property is `8`. Remove any other sites in the file that do not apply.
 
    > The `deploy.user.json` file supports deploying SPE to multiple Sitecore installations. For now, we are just deploying to a single instance, but later on in the tutorial we will cover multiple instances.
 
@@ -34,7 +34,7 @@ The solution requires Visual Studio 2015 or later.
    > You may notice there is a %%sourceFolder%% value in this configuration file. This is a special string that gets replaced as part of the SPE deployment with your source folder location. You don't need to update this manually.
 
 7. Open the solution in Visual Studio.
-8. Compile the solution. Whenever you compile the solution, SPE will be automatically deployed to the site installation paths you have set in `deploy.user.json`
+8. Compile the solution. Whenever you compile the solution, SPE will be automatically deployed to the site web root paths you have set in `deploy.user.json`
 9. Login to Sitecore
 10. Navigate to `/Unicorn.aspx`. Use Unicorn to sync all projects into Sitecore.
 
@@ -50,18 +50,8 @@ The SPE deployment process supports multiple sites and multiple versions of Site
 
 1. Complete the steps for a Single Instance.
 2. Install Sitecore 8.x/9.x to a folder of your choice, for example `C:\inetpub\wwwroot\SitecoreSPE_91`
-3. Edit the sites definition in `deploy.user.json` to add your new Sitecore installation folder. Set the `version` property to `9`.
-4. Copy the following Sitecore dependencies to the `\Libraries\SC91` folder from your Sitecore installation:
-   * Sitecore.Analytics.dll
-   * Sitecore.Client.dll
-   * Sitecore.ContentSearch.dll
-   * Sitecore.ContentSearch.Linq.dll
-   * Sitecore.ExperienceEditor.dll
-   * Sitecore.Kernel.dll
-   * Sitecore.Logging.dll
-   * Sitecore.NVelocity.dll
-   * Sitecore.Update.dll
-5. Follow steps 7 onward from the **Single Instance** guide above to deploy to your Sitecore 8.x/9.x installation and sync the SPE items into Sitecore.
+3. Edit the sites definition in `deploy.user.json` to add your new Sitecore web root folder. Set the `version` property to `9.0`, `9.1` or `9.2` depending on the major/minor version.
+4. Follow steps 7 onward from the **Single Instance** guide above to deploy to your Sitecore 8.x/9.x installation and sync the SPE items into Sitecore.
 
 > SPE can be deployed to as many Sitecore sites as you like. Each time you first deploy to a new installation, make sure you use Unicorn to sync the latest state of items into Sitecore.
 
@@ -81,7 +71,7 @@ To enable a junction deployment for a site, add `junction` property to the site 
 { 
     "sites": [
         {
-            "path": "C:\\inetput\\wwwroot\\SitecoreSPE_8",
+            "path": "C:\\inetput\\wwwroot\\SitecoreSPE_8\\Website",
             "version": 8,
             "junction": true
         }
