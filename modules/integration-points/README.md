@@ -19,7 +19,7 @@ Be certain to enable the module when you need to use it.
 * [**Event Handlers**](event-handlers.md) - Requires a patch file to enable the desired events. Read more about it [here](https://blog.najmanowicz.com/2013/05/27/react-to-sitecore-events-with-powershell-scripts/).
 * [**Functions**](functions.md) - Exposes scripts to the command _Import-Function_.
 * **Internal**
-  * ISE Plugins - Appears as a button in the ISE _Settings_ tab.
+  * [ISE Plugins](ise-plugins.md) - Appears as a button in the ISE _Settings_ tab.
   * List View - Represents the ribbon buttons such as for **Actions** and **Exports**.
 * [**Page Editor**](page-editor.md) \(Experience Editor\)
   * Notification - Appears as a notification message beneath the ribbon in the _Experience Editor_.
