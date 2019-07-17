@@ -24,6 +24,7 @@
     * [Data Sources](modules/integration-points/data-sources.md)
     * [Event Handlers](modules/integration-points/event-handlers.md)
     * [Functions](modules/integration-points/functions.md)
+    * [ISE Plugins](modules/integration-points/ise-plugins.md)
     * [Page Editor](modules/integration-points/page-editor.md)
     * [Pipelines](modules/integration-points/pipelines.md)
     * [Reports](modules/integration-points/reports/README.md)
