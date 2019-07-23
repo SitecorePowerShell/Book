@@ -82,3 +82,17 @@ Test-BaseTemplate \[-Database &lt;String&gt;\]
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
+## Notes
+
+Help Author: Adam Najmanowicz, Michael West
+
+## Examples
+
+### EXAMPLE 1
+
+The following example determines if the item inherits from the specified template.
+
+```text
+$item = Get-Item -Path "master:\content\home"
+Test-BaseTemplate -Item $item -Template "Sample/Sample Content"
+```
