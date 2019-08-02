@@ -13,7 +13,7 @@ The _Workflows_ integration allows for scripts to run like workflow commands. Ru
 **Example:** The following requests input from the user then writes to the workflow history.
 
 ```text
-$item = Get-Item -Path .
+$item = $SitecoreContextItem
 $comment = Show-Input -Prompt "Enter a comment:"
 if($comment) {
     New-ItemWorkflowEvent -Item $item -Text $comment
