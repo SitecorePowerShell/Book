@@ -412,6 +412,22 @@ $props = @{
 Find-Item @props | Measure-Object
 ```
 
+### EXAMPLE 11
+
+Find items and sort (boost) based on the date field. If this were used on a field containing future dates you should expect to see them mixed with past dates. This example demonstrates using Solr functions.
+
+```text
+$criteria = @(
+    @{Filter = "Equals"; Field = "_val_"; Value = "recip(abs(ms(NOW/HOUR,__smallcreateddate_tdt)),3.16e-11,4,.4)"}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+
+Find-Item @props | Select-Object Name,CreatedDate
+```
+
 ## Related Topics
 
 * [Initialize-Item](initialize-item.md)
