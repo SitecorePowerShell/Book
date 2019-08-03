@@ -4,19 +4,15 @@ Sets the item template.
 
 ## Syntax
 
-Set-ItemTemplate -Item &lt;Item&gt; -TemplateItem &lt;TemplateItem&gt; \[-FieldsToCopy &lt;Hashtable&gt;\]
-
-Set-ItemTemplate -Item &lt;Item&gt; -Template &lt;String&gt; \[-FieldsToCopy &lt;Hashtable&gt;\]
-
-Set-ItemTemplate -Path &lt;String&gt; -TemplateItem &lt;TemplateItem&gt; \[-FieldsToCopy &lt;Hashtable&gt;\]
-
-Set-ItemTemplate -Path &lt;String&gt; -Template &lt;String&gt; \[-FieldsToCopy &lt;Hashtable&gt;\]
-
-Set-ItemTemplate -Id &lt;String&gt; -TemplateItem &lt;TemplateItem&gt; \[-FieldsToCopy &lt;Hashtable&gt;\]
-
-Set-ItemTemplate -Id &lt;String&gt; -Template &lt;String&gt; \[-FieldsToCopy &lt;Hashtable&gt;\]
-
-Set-ItemTemplate \[-Database &lt;String&gt;\] \[-FieldsToCopy &lt;Hashtable&gt;\]
+```text
+Set-ItemTemplate -Item <Item> -TemplateItem <TemplateItem> [-FieldsToCopy <Hashtable>]
+Set-ItemTemplate -Item <Item> -Template <String> [-FieldsToCopy <Hashtable>]
+Set-ItemTemplate -Path <String> -TemplateItem <TemplateItem> [-FieldsToCopy <Hashtable>]
+Set-ItemTemplate -Path <String> -Template <String> [-FieldsToCopy <Hashtable>]
+Set-ItemTemplate -Id <String> -TemplateItem <TemplateItem> [-FieldsToCopy <Hashtable>]
+Set-ItemTemplate -Id <String> -Template <String> [-FieldsToCopy <Hashtable>]
+Set-ItemTemplate [-Database <String>] [-FieldsToCopy <Hashtable>]
+```
 
 ## Detailed Description
 
