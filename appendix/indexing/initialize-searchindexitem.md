@@ -2,11 +2,11 @@
 
 ## Syntax
 
-Initialize-SearchIndexItem -Item &lt;Item&gt; \[-Name &lt;String&gt;\] \[-AsJob\]
-
-Initialize-SearchIndexItem -Item &lt;Item&gt; \[-Name &lt;String&gt;\] \[-AsJob\]
-
-Initialize-SearchIndexItem -SearchResultItem &lt;SearchResultItem&gt; \[-AsJob\]
+```text
+Initialize-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
+Initialize-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
+Initialize-SearchIndexItem -SearchResultItem <SearchResultItem> [-AsJob]
+```
 
 ## Detailed Description
 
@@ -58,3 +58,14 @@ The following abbreviations are aliases for this cmdlet:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
+## Examples
+
+### EXAMPLE 1
+
+The following rebuilds the index for a given tree with the specified root node and index name.
+
+```text
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$indexName = "sitecore_master_index"
+Initialize-SearchIndexItem -Item $item -Name $indexName
+```
