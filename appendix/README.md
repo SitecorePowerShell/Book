@@ -13,6 +13,13 @@
 
 **Legend:** "–" - not supported; "✓" - supported.
 
+When reviewing the different download packages you may see some names that are not too clear. The following list outlines what those names should mean.
+
+* **N.X : Full N.X release** - This refers to the package used by Standalone and CM roles. This includes what is required to see the PowerShell ISE, Console and their associated services.
+* **N.X : Server-side remoting only** - This refers to the package with only files. Useful for remotely connecting to SPE.
+* **N.X Authorable Reports : Additional reports and tools** - This package is a sublemental installation to the full version with additional reports.
+* **N.X Remoting : SPE Remoting module for CI/CD** - This provides a Windows PowerShell module for connecting to SPE remotely. Use in combination with the full or minimal packages.
+
 ## Commands
 
 The following commands are distributed with the Sitecore PowerShell Extensions module.
