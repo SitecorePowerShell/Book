@@ -4,23 +4,14 @@ Adds new access rule to an item allowing for the item to have the access granted
 
 ## Syntax
 
-Add-ItemAcl -PropagationType &lt;Unknown \| Descendants \| Entity \| Any&gt; -SecurityPermission &lt;NotSet \| AllowAccess \| DenyAccess \| AllowInheritance \| DenyInheritance&gt; -AccessRight &lt;String&gt; -Identity &lt;AccountIdentity&gt; -Path &lt;String&gt; \[-PassThru\]
-
-Add-ItemAcl -PropagationType &lt;Unknown \| Descendants \| Entity \| Any&gt; -SecurityPermission &lt;NotSet \| AllowAccess \| DenyAccess \| AllowInheritance \| DenyInheritance&gt; -AccessRight &lt;String&gt; -Identity &lt;AccountIdentity&gt; -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-PassThru\]
-
-Add-ItemAcl -PropagationType &lt;Unknown \| Descendants \| Entity \| Any&gt; -SecurityPermission &lt;NotSet \| AllowAccess \| DenyAccess \| AllowInheritance \| DenyInheritance&gt; -AccessRight &lt;String&gt; -Identity &lt;AccountIdentity&gt; -Item &lt;Item&gt; \[-PassThru\]
-
-Add-ItemAcl -AccessRules &lt;AccessRuleCollection&gt; -Path &lt;String&gt; \[-PassThru\]
-
-Add-ItemAcl -AccessRules &lt;AccessRuleCollection&gt; -Id &lt;String&gt; \[-PassThru\]
-
-Add-ItemAcl -AccessRules &lt;AccessRuleCollection&gt; -Item &lt;Item&gt; \[-PassThru\]
-
-Add-ItemAcl -Item &lt;Item&gt; \[-PassThru\]
-
-Add-ItemAcl -Path &lt;String&gt; \[-PassThru\]
-
-Add-ItemAcl -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-PassThru\]
+```text
+Add-ItemAcl -PropagationType <Unknown | Descendants | Entity | Any> -SecurityPermission <NotSet | AllowAccess | DenyAccess | AllowInheritance | DenyInheritance> -AccessRight <String> -Identity <AccountIdentity> -Path <String> [-PassThru]
+Add-ItemAcl -PropagationType <Unknown | Descendants | Entity | Any> -SecurityPermission <NotSet | AllowAccess | DenyAccess | AllowInheritance | DenyInheritance> -AccessRight <String> -Identity <AccountIdentity> -Id <String> [-Database <String>] [-PassThru]
+Add-ItemAcl -PropagationType <Unknown | Descendants | Entity | Any> -SecurityPermission <NotSet | AllowAccess | DenyAccess | AllowInheritance | DenyInheritance> -AccessRight <String> -Identity <AccountIdentity> -Item <Item> [-PassThru]
+Add-ItemAcl -AccessRules <AccessRuleCollection> -Path <String> [-PassThru]
+Add-ItemAcl -AccessRules <AccessRuleCollection> -Id <String> [-PassThru]
+Add-ItemAcl -AccessRules <AccessRuleCollection> -Item <Item> [-PassThru]
+```
 
 ## Detailed Description
 
@@ -231,6 +222,19 @@ Get-Item -Path master:\content\home | Add-ItemAcl -AccessRules $acl1, $acl2 -Pas
 Name   Children Languages                Id                                     TemplateName
 ----   -------- ---------                --                                     ------------
 Home   False    {en, ja-JP, de-DE, da}   {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
+```
+
+### EXAMPLE 3
+
+The following demonstrates how to add several AccessRule to an item when the PropogationType and SecurityPermission are the same.
+
+```text
+$item = Get-Item -Path master:\content\youritem
+$role = "sitecore\role"
+$rights = @("item:create", "item:write", "item:rename", "item:delete")
+
+$item | Clear-ItemAcl
+$rights  | ForEach-Object { Add-ItemAcl -Item $item -AccessRight $_ -PropagationType Any -SecurityPermission AllowAccess -Identity $role }
 ```
 
 ## Related Topics
