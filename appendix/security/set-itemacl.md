@@ -4,11 +4,11 @@ Sets new security information on an item overwriting the previous settings.
 
 ## Syntax
 
-Set-ItemAcl -AccessRules &lt;AccessRuleCollection&gt; \[-Path\] &lt;String&gt; \[-PassThru\]
-
-Set-ItemAcl -AccessRules &lt;AccessRuleCollection&gt; -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-PassThru\]
-
-Set-ItemAcl -AccessRules &lt;AccessRuleCollection&gt; \[-Item\] &lt;Item&gt; \[-PassThru\]
+```text
+Set-ItemAcl -AccessRules <AccessRuleCollection> [-Path] <String> [-PassThru]
+Set-ItemAcl -AccessRules <AccessRuleCollection> -Id <String> [-Database <String>] [-PassThru]
+Set-ItemAcl -AccessRules <AccessRuleCollection> [-Item] <Item> [-PassThru]
+```
 
 ## Detailed Description
 
@@ -129,6 +129,17 @@ Get-Item -Path master:\content\home | Set-ItemAcl -AccessRules $acl1, $acl2 -Pas
 Name   Children Languages                Id                                     TemplateName
 ----   -------- ---------                --                                     ------------
 Home   False    {en, ja-JP, de-DE, da}   {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} Sample Item
+```
+
+### EXAMPLE 3
+
+The following applies a new set of AccessRule to an item using `Set-ItemAcl` and `New-ItemAcl` when the PropogationType and SecurityPermission are the same.
+
+```text
+$role = "sitecore\yourrole"
+$rights = @("item:create", "item:write", "item:rename", "item:delete")
+
+Get-Item -Path master:\content\youritem | Set-ItemAcl -AccessRules ($rights | ForEach-Object { New-ItemAcl -AccessRight $_ -PropagationType Any -SecurityPermission AllowAccess -Identity $role })
 ```
 
 ## Related Topics
