@@ -5,9 +5,9 @@ Resets item fields, specified as either names, fields or template fields.
 ## Syntax
 
 ```text
-Reset-ItemField [-Item] <Item> [-IncludeStandardFields] [-Name <String[]>] [-Language <String[]>]
-Reset-ItemField [-Path] <String> [-IncludeStandardFields] [-Name <String[]>] [-Language <String[]>]
-Reset-ItemField -Id <String> [-Database <String>] [-IncludeStandardFields] [-Name <String[]>] [-Language <String[]>]
+Reset-ItemField [-Item] <Item> [-IncludeStandardFields] [-Name <String[]>]
+Reset-ItemField [-Path] <String> [-IncludeStandardFields] [-Name <String[]>]
+Reset-ItemField -Id <String> [-Database <String>] [-IncludeStandardFields] [-Name <String[]>]
 ```
 
 ## Detailed Description
