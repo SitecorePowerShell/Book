@@ -42,18 +42,6 @@ Array of field names to include - supports wildcards.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
-
-Language that will be reset. If not specified the current user language will be used. Globbing/wildcard supported.
-
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
-| Accept Wildcard Characters? | false |
-
 ### -Item  &lt;Item&gt;
 
 The item to be analysed.
