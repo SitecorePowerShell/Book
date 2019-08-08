@@ -4,11 +4,11 @@ Resets item fields, specified as either names, fields or template fields.
 
 ## Syntax
 
-Reset-ItemField \[-Item\] &lt;Item&gt; \[-IncludeStandardFields\] \[-Name &lt;String\[\]&gt;\] \[-Language &lt;String\[\]&gt;\]
-
-Reset-ItemField \[-Path\] &lt;String&gt; \[-IncludeStandardFields\] \[-Name &lt;String\[\]&gt;\] \[-Language &lt;String\[\]&gt;\]
-
-Reset-ItemField -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-IncludeStandardFields\] \[-Name &lt;String\[\]&gt;\] \[-Language &lt;String\[\]&gt;\]
+```text
+Reset-ItemField [-Item] <Item> [-IncludeStandardFields] [-Name <String[]>] [-Language <String[]>]
+Reset-ItemField [-Path] <String> [-IncludeStandardFields] [-Name <String[]>] [-Language <String[]>]
+Reset-ItemField -Id <String> [-Database <String>] [-IncludeStandardFields] [-Name <String[]>] [-Language <String[]>]
+```
 
 ## Detailed Description
 
@@ -142,6 +142,15 @@ Reset all item fields with names beginning with "a", excluding standard fields.
 
 ```text
 PS master:\> Get-Item master:\content\home | Reset-ItemField -Name "a*"
+```
+
+### EXAMPLE 4
+
+The following resets one of the Standard Values fields for all versions and languages.
+
+```text
+Get-ChildItem -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" -Version * -Language * -Recurse |
+    Reset-ItemField -Name "__Workflow State" -IncludeStandardFields
 ```
 
 ## Related Topics
