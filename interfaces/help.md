@@ -72,7 +72,7 @@ Once the script containing this function has been invoked, the help text will be
 Get-Help Output-String
 ```
 
-For further information on comment-based help, refer to the (official PowerShell documentation)[https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help].
+For further information on comment-based help, refer to the [official PowerShell documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
 
 ## Online appendix
 
