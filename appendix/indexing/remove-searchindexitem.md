@@ -2,11 +2,11 @@
 
 ## Syntax
 
-Remove-SearchIndexItem -Item &lt;Item&gt; \[-Name &lt;String&gt;\] \[-AsJob\]
-
-Remove-SearchIndexItem -Item &lt;Item&gt; \[-Name &lt;String&gt;\] \[-AsJob\]
-
-Remove-SearchIndexItem -SearchResultItem &lt;SearchResultItem&gt; \[-AsJob\]
+```text
+Remove-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
+Remove-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
+Remove-SearchIndexItem -SearchResultItem <SearchResultItem> [-AsJob]
+```
 
 ## Detailed Description
 
@@ -54,3 +54,14 @@ Remove-SearchIndexItem -SearchResultItem &lt;SearchResultItem&gt; \[-AsJob\]
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
+## Examples
+
+### EXAMPLE 1
+
+The following removes the indexed item from the specified search index.
+
+```text
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$indexName = "sitecore_master_index"
+Remove-SearchIndexItem -Item $item -Name $indexName
+```
