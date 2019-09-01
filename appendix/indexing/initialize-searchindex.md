@@ -4,11 +4,11 @@ Rebuilds the Sitecore index.
 
 ## Syntax
 
-Initialize-SearchIndex -Index &lt;ISearchIndex&gt; \[-IncludeRemoteIndex\] \[-AsJob\]
-
-Initialize-SearchIndex \[-IncludeRemoteIndex\] \[-Name &lt;String&gt;\] \[-AsJob\]
-
-Initialize-SearchIndex \[-Name &lt;String&gt;\] \[-AsJob\]
+```text
+Initialize-SearchIndex -Index <ISearchIndex> [-IncludeRemoteIndex] [-AsJob]
+Initialize-SearchIndex [-IncludeRemoteIndex] [-Name <String>] [-AsJob]
+Initialize-SearchIndex [-Name <String>] [-AsJob]
+```
 
 ## Detailed Description
 
@@ -93,7 +93,7 @@ Help Author: Adam Najmanowicz, Michael West
 ```text
 The following rebuilds the index.
 
-PS master:\> Rebuild-SearchIndex -Name sitecore_master_index
+Initialize-SearchIndex -Name sitecore_master_index
 ```
 
 ### EXAMPLE 2
@@ -101,7 +101,7 @@ PS master:\> Rebuild-SearchIndex -Name sitecore_master_index
 ```text
 The following rebuilds the index.
 
-PS master:\> Get-SearchIndex -Name sitecore_master_index | Rebuild-SearchIndex
+Get-SearchIndex -Name sitecore_master_index | Initialize-SearchIndex
 ```
 
 ## Related Topics
