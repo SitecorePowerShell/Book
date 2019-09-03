@@ -157,6 +157,26 @@ Invoke-RemoteScript -ScriptBlock {
 } -Session $session
 ```
 
+## Troubleshooting
+
+If you receive the following error when trying to run a script (note the namespace is `Microsoft.PowerShell.Commands` instead of `Cognifide.Powershell` or similar):
+
+```
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.NewItemCommand
+```
+
+then add the following line as the first line within the Invoke-RemoteScript block: `Set-Location -Path "master:"`
+
+**Example:**
+```
+Invoke-RemoteScript -ScriptBlock {
+    Set-Location -Path "master:"
+    ...
+    [The rest of your script]
+    ...
+}
+```
+
 ## References:
 
 * Michael's follow up post on [Remoting](https://michaellwest.blogspot.com/2015/07/sitecore-powershell-extensions-remoting.html)
