@@ -17,6 +17,10 @@ foreach($x in $htmlDocument.DocumentNode.SelectNodes("//li")) {
 }
 ```
 
+**Example:** The following demonstrates how to remove empty paragraph tags in an html field.
+
+[Sitecore Stack Exchanage](https://sitecore.stackexchange.com/a/20845/95)
+
 ## Workflow History
 
 **Example:** The following prints the workflow history of the home item.
