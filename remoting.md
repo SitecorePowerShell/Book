@@ -179,7 +179,7 @@ Invoke-RemoteScript -ScriptBlock {
 
 This issue occurs due to the fact that the remoting session defaults to the `FileSystem` provider. Changing the location activates the custom provider included with SPE. As part of the custom provider there are additional parameters added to commands native to PowerShell.
 
-## References:
+## References
 
 * Michael's follow up post on [Remoting](https://michaellwest.blogspot.com/2015/07/sitecore-powershell-extensions-remoting.html)
 * Adam's initial post on [Remoting](https://blog.najmanowicz.com/2014/10/10/sitecore-powershell-extensions-remoting/)
