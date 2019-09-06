@@ -2,11 +2,13 @@
 
 ## Syntax
 
-Get-ItemCloneNotification \[-Item\] &lt;Item&gt; \[-NotificationType &lt;Notification \| ChildCreatedNotification \| FieldChangedNotification \| FirstVersionAddedNotification \| ItemMovedChildCreatedNotification \| ItemMovedChildRemovedNotification \| ItemMovedNotification \| ItemTreeMovedNotification \| ItemVersionNotification \| OriginalItemChangedTemplateNotification \| VersionAddedNotification&gt;\] \[-Language &lt;String\[\]&gt;\]
+```text
+Get-ItemCloneNotification [-Item] <Item> [-NotificationType <Notification | ChildCreatedNotification | FieldChangedNotification | FirstVersionAddedNotification | ItemMovedChildCreatedNotification | ItemMovedChildRemovedNotification | ItemMovedNotification | ItemTreeMovedNotification | ItemVersionNotification | OriginalItemChangedTemplateNotification | VersionAddedNotification>] [-Language <String[]>]
 
-Get-ItemCloneNotification \[-Path\] &lt;String&gt; \[-NotificationType &lt;Notification \| ChildCreatedNotification \| FieldChangedNotification \| FirstVersionAddedNotification \| ItemMovedChildCreatedNotification \| ItemMovedChildRemovedNotification \| ItemMovedNotification \| ItemTreeMovedNotification \| ItemVersionNotification \| OriginalItemChangedTemplateNotification \| VersionAddedNotification&gt;\] \[-Language &lt;String\[\]&gt;\]
+Get-ItemCloneNotification [-Path] <String> [-NotificationType <Notification | ChildCreatedNotification | FieldChangedNotification | FirstVersionAddedNotification | ItemMovedChildCreatedNotification | ItemMovedChildRemovedNotification | ItemMovedNotification | ItemTreeMovedNotification | ItemVersionNotification | OriginalItemChangedTemplateNotification | VersionAddedNotification>] [-Language <String[]>]
 
-Get-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-NotificationType &lt;Notification \| ChildCreatedNotification \| FieldChangedNotification \| FirstVersionAddedNotification \| ItemMovedChildCreatedNotification \| ItemMovedChildRemovedNotification \| ItemMovedNotification \| ItemTreeMovedNotification \| ItemVersionNotification \| OriginalItemChangedTemplateNotification \| VersionAddedNotification&gt;\] \[-Language &lt;String\[\]&gt;\]
+Get-ItemCloneNotification -Id <String> [-Database <String>] [-NotificationType <Notification | ChildCreatedNotification | FieldChangedNotification | FirstVersionAddedNotification | ItemMovedChildCreatedNotification | ItemMovedChildRemovedNotification | ItemMovedNotification | ItemTreeMovedNotification | ItemVersionNotification | OriginalItemChangedTemplateNotification | VersionAddedNotification>] [-Language <String[]>]
+```
 
 ## Detailed Description
 
@@ -74,3 +76,13 @@ Get-ItemCloneNotification -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Not
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
+## Examples
+
+### EXAMPLE 1
+
+The following gets the cloned `Item` and returns the available notifications.
+
+```text
+$clonedItem = Get-Item -Path "master:" -ID "{9F158637-52C2-4005-8329-21527685CB71}"
+Get-ItemCloneNotification -Item $clonedItem
+```
