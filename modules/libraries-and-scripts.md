@@ -84,7 +84,7 @@ There are a number of use cases for the **EnableRule** and **ShowRule**.
 |  | [DataSources](integration-points/data-sources.md) |
 |  | [Event Handlers](integration-points/event-handlers.md) |
 | ISE Plugin | ISE Plugin |
-| [Reports](integration-points/reports/) |  |
+| [Reports](integration-points/reports/) | [Reports](integration-points/reports/) |
 | Reports List View Action | Reports List View Action |
 | Reports List View Export | Reports List View Export |
 |  | Page Editor [Notification](integration-points/page-editor.md#notification) |
