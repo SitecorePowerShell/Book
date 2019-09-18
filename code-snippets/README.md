@@ -4,6 +4,23 @@ description: Useful code snippets to help you with those complex scripts.
 
 # Code Snippets
 
+## List fields on template
+
+**Example:** The following demonstrates how to list all of the fields of a template excluding the Standard Template fields.
+
+```text
+# Create a list of field names on the Standard Template. This will help us filter out extraneous fields.
+$standardTemplate = Get-Item -Path "master:" -ID "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+$standardTemplateTemplateItem = [Sitecore.Data.Items.TemplateItem]$standardTemplate
+$standardFields = $standardTemplateTemplateItem.OwnFields + $standardTemplateTemplateItem.Fields | Select-Object -ExpandProperty key -Unique
+
+$itemTemplate = Get-Item -Path "master:" -ID "{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}"
+$itemTemplateTemplateItem = [Sitecore.Data.Items.TemplateItem]$itemTemplate
+$itemTemplateFields = $itemTemplateTemplateItem.OwnFields + $itemTemplateTemplateItem.Fields | Select-Object -ExpandProperty key -Unique
+
+$filterFields = $itemTemplateFields | Where-Object { $standardFields -notcontains $_ } | Sort-Object
+```
+
 ## Parse Html
 
 **Example:** The following demonstrates the use of the **HtmlAgilityPack** for parsing html.
