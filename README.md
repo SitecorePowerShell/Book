@@ -13,7 +13,7 @@ The book provides documentation about how to use the module based on the latest 
 {% endhint %}
 
 {% hint style="warning" %}
-Support for Sitecore 7 has discontinued with SPE 5.0.
+Support for Sitecore 7 has discontinued with SPE 5.0. Check the [appendix](appendix/README.md) for version compatibility.
 {% endhint %}
 
 ## Development Team
