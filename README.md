@@ -9,7 +9,7 @@ The [Sitecore PowerShell Extensions](https://marketplace.sitecore.net/Modules/Si
 The module provides a command line \(CLI\) and a scripting environment \(ISE\) for automating tasks. SPE works with the Sitecore process, capable of making native calls to the Sitecore API and manipulating files. Running commands and writing scripts follow the standard and well-known Windows PowerShell syntax. Windows PowerShell is a common tool used in IT for desktop and server management, so we decided to stick with that as a framework to build upon.
 
 {% hint style="info" %}
-The book provides documentation about how to use the module based on the latest released version. While some of the screenshots and marterial may be slightly out-of-date you will inevitably find details referring to something doesn't exist on your installed version. Feel free to submit a pull request for corrections [here](https://github.com/SitecorePowerShell/Book).
+The book provides documentation about how to use the module based on the latest released version. While some of the screenshots and materials may be slightly out-of-date, you will inevitably find details referring to something that doesn't exist on your installed version. Feel free to submit a pull request for corrections [here](https://github.com/SitecorePowerShell/Book).
 {% endhint %}
 
 {% hint style="warning" %}
