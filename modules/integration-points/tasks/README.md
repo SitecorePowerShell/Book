@@ -14,7 +14,7 @@ To help make the setup simple, we've provided a _Task Command_.
 
 ![PowerShell Script Command](../../../.gitbook/assets/tasks-powershellscriptcommand.png)
 
-The command shown above is simply a type exposed as a public method in the _Cognifide.PowerShell_ assembly. There exists an update method which accepts one or more items and executes the associated script.
+The command shown above is simply a type exposed as a public method in the _Spe_ assembly. There exists an update method which accepts one or more items and executes the associated script.
 
 Beneath _Schedules_ you can create as many tasks as Sitecore will allow. Configure the _Command_ and _Items_ fields like that shown below.
 

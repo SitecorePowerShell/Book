@@ -1,20 +1,20 @@
-# Set-Layout
+# Remove-Layout
 
-Sets item layout for a device.
+Removes item layout for a device.
 
 ## Syntax
 
 ```text
-Set-Layout [-Item] <Item> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
+Remove-Layout [-Item] <Item> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
 
-Set-Layout [-Path] <String> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
+Remove-Layout [-Path] <String> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
 
-Set-Layout -Id <String> [-Database <String>] -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
+Remove-Layout -Id <String> [-Database <String>] -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
 ```
 
 ## Detailed Description
 
-Sets item layout for a specific device provided
+Removes item layout for the specified device.
 
 © 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
@@ -129,26 +129,11 @@ Help Author: Adam Najmanowicz, Michael West
 ### EXAMPLE 1
 
 ```text
-# where my test page will go
-$path = 'master:\content\Sample'
+$itemId = "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$layoutDevice = Get-LayoutDevice -Name "Print"
 
-# wipe and re-create it if exists
-if(Test-Path $path){
-    Remove-Item $path
-}
-$item = New-Item -Path $path -ItemType "Sample/Sample Item"
-
-# select default layout
-$device = Get-LayoutDevice -Default
-
-# and a layout we will change to
-$layout = Get-Item -Path 'master:\layout\Layouts\System\Simulated Device Layout'
-
-# change the layout from what is in Standard values to the new one.
-Set-Layout -Item $item -Device $device -Layout $layout | Out-Null
-
-# verify
-Get-Layout $item  
+Remove-Layout -Item $item -Device $layoutDevice -FinalLayout
 ```
 
 ## Related Topics
@@ -163,4 +148,4 @@ Get-Layout $item
 * [Get-Layout](get-layout.md)
 * [Reset-Layout](reset-layout.md)
 * [#579](https://github.com/SitecorePowerShell/Console/issues/579)
-
+* [#1111](https://github.com/SitecorePowerShell/Console/issues/1111)

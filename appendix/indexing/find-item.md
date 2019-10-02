@@ -56,6 +56,8 @@ Where "Filter" is one of the following values:
 * ExclusiveRange - same as _InclusiveRange_
 * MatchesRegex - use something like `^.*$`
 * MatchesWildcard - use something like `H?li*m`
+* LessThan
+* GreaterThan
 
 Where "Field" is the Index Field name found on the `SearchResultItem` such as the following:
 
@@ -203,6 +205,20 @@ Number of returned search results.
 ### -Skip  &lt;Int32&gt;
 
 Number of search results to be skipped skip before returning the results commences.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -Property  &lt;String\[\]&gt;
+
+An array of property names which match with the `SearchResultItem` type. 
+
+**Note:** The use of `Initialize-Item` is not supported because the object returned is no longer a `SearchResultItem` and therefore unable to guarantee that `Item` objects can be returned. [#1123](https://github.com/SitecorePowerShell/Console/issues/1123)
 
 | Aliases |  |
 | :--- | :--- |
@@ -428,12 +444,28 @@ $props = @{
 Find-Item @props | Select-Object Name,CreatedDate
 ```
 
+### EXAMPLE 12
+
+Find items where the created date is older than the specified time in UTC.
+
+```text
+$date = New-Object DateTime 2019, 8, 1, 0, 0, 0, ([DateTimeKind]::Utc)
+
+$criteria = @(
+    @{Filter = "LessThan"; Field = "__smallupdateddate"; Value = $date} 
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+
+Find-Item @props
+```
+
 ## Related Topics
 
 * [Initialize-Item](initialize-item.md)
-* Get-Item
-* Get-ChildItem
 * [https://gist.github.com/AdamNaj/273458beb3f2b179a0b6](https://gist.github.com/AdamNaj/273458beb3f2b179a0b6) 
 * [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library) 
-* [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
+* [#1128](https://github.com/SitecorePowerShell/Console/issues/1128) 
 

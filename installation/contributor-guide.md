@@ -29,7 +29,7 @@ The solution requires Visual Studio 2015 or later.
 
    > The `deploy.user.json` file supports deploying SPE to multiple Sitecore installations. For now, we are just deploying to a single instance, but later on in the tutorial we will cover multiple instances.
 
-6. Copy `C:\Source\Console\UserConfiguration\App_Config\Include\z.Cognifide.PowerShell.Development.User.config.sample` to a file of the same name, without the `.sample` suffix. This file can be edited to add any SPE-specific configuration that you want in your sites, but don't wish to commit back into the repo.
+6. Copy `C:\Source\Console\UserConfiguration\App_Config\Include\z.Spe.Development.User.config.sample` to a file of the same name, without the `.sample` suffix. This file can be edited to add any SPE-specific configuration that you want in your sites, but don't wish to commit back into the repo.
 
    > You may notice there is a %%sourceFolder%% value in this configuration file. This is a special string that gets replaced as part of the SPE deployment with your source folder location. You don't need to update this manually.
 

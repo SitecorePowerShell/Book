@@ -86,7 +86,7 @@ At line:3 char:1
 + New-UsingBlock (New-Object Sitecore.Security.Accounts.UserSwitcher $a ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (:) [New-UsingBlock], SetValueInvocationException
-    + FullyQualifiedErrorId : ScriptSetValueRuntimeException,Cognifide.PowerShell.Commandlets.Data.NewUsingBlockCommand
+    + FullyQualifiedErrorId : ScriptSetValueRuntimeException,Spe.Commands.Data.NewUsingBlockCommand
 ```
 
 ## Related Topics

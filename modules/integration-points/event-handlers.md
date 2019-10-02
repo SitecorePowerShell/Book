@@ -4,7 +4,7 @@ The Event Handler integration provides a way to execute scripts when defined eve
 
 Steps required to activate this integration include the following: 
 
-1. Enable the _Cognifide.PowerShell.Events.config_ or apply your own patch with the required events enabled.
+1. Enable the _Spe.Events.config_ or apply your own patch with the required events enabled.
 2. Add a new integration point library to your new or existing module.
 3. Add a new script to the appropriate event library.
 4. Configure an **Enable Rule** if needed.
@@ -21,7 +21,7 @@ An event configuration patch may look like the following:
   <sitecore>
     <events>
       <event name="item:added">
-        <handler type="Cognifide.PowerShell.Integrations.Tasks.ScriptedItemEventHandler, Cognifide.PowerShell" method="OnEvent" />
+        <handler type="Spe.Integrations.Tasks.ScriptedItemEventHandler, Spe" method="OnEvent" />
       </event>
     </events>
   </sitecore>

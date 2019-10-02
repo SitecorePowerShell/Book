@@ -44,7 +44,7 @@ Session to be removed.
 
 The input type is the type of the objects that you can pipe to the cmdlet.
 
-* Resident Script Session obtained through Get-ScriptSessio _Id of a resident Script Sessio_ Cognifide.PowerShell.Core.Host.ScriptSessio\* System.String 
+* System.String or Spe.Core.Host.ScriptSession
 
 ## Notes
 

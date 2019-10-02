@@ -65,7 +65,7 @@ $package.Metadata.Readme = @"
 Set of instructions for the user.
 "@
 $newPackageFiles = @([PSCustomObject]@{"FileName"="/bin/Company.Feature.Unused.dll"})
-$package.Metadata.PostStep = "Cognifide.PowerShell.Package.Install.PackagePostStep, Cognifide.PowerShell.Package"
+$package.Metadata.PostStep = "Spe.Package.Install.PackagePostStep, Spe.Package"
 $package.Metadata.Comment = New-PackagePostStep -PackageFiles $newPackageFiles
 ```
 

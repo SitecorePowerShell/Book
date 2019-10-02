@@ -71,7 +71,7 @@ Supported parameters:
 * `-DoNotCopyFields` creates a new version but does not copy field values from original language
 * `-IgnoredFields` list of fields that should not be copied over from original item this can contain e.g. `__Security` if you don't want the new version to have the same restrictions as the original version.
 
-On top of the ignored fields in the `-IgnoredFields` the following fields are ignored as configured within the `Cognifide.PowerShell.config` file:
+On top of the ignored fields in the `-IgnoredFields` the following fields are ignored as configured within the `Spe.config` file:
 
 ```markup
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">

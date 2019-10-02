@@ -86,7 +86,7 @@ The input type is the type of the objects that you can pipe to the cmdlet.
 
 The output type is the type of the objects that the cmdlet emits.
 
-* Cognifide.PowerShell.PowerShellIntegrations.Host.ScriptSessio 
+* Spe.Core.Host.ScriptSession 
 
 ## Notes
 

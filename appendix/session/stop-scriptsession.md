@@ -44,13 +44,13 @@ Specifies the script session to be stopped. Enter a variable that contains the s
 
 The input type is the type of the objects that you can pipe to the cmdlet.
 
-* System.String or Cognifide.PowerShell.Core.Host.ScriptSessio 
+* System.String or Spe.Core.Host.ScriptSession 
 
 ## Outputs
 
 The output type is the type of the objects that the cmdlet emits.
 
-* Cognifide.PowerShell.Core.Host.ScriptSessio 
+* Spe.Core.Host.ScriptSession
 
 ## Notes
 

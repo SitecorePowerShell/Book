@@ -159,7 +159,7 @@ Invoke-RemoteScript -ScriptBlock {
 
 ## Troubleshooting
 
-If you receive the following error when trying to run a script (note the namespace is `Microsoft.PowerShell.Commands` instead of `Cognifide.Powershell` or similar):
+If you receive the following error when trying to run a script (note the namespace is `Microsoft.PowerShell.Commands` instead of `Spe` or similar):
 
 ```
     + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.NewItemCommand

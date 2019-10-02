@@ -30,18 +30,16 @@ The following are some helpful modules distributed with SPE.
     * PowerShell Background Session Manager
     * Recreate site from sitemap
   * X-UnitTests - examples at how to use [Pester](https://github.com/pester/Pester) to test your scripts
+* **Extensions**
+  * [Authorable Reports](modules/integration-points/reports/authoring-reports.md) - reports based on the Sitecore Rules Engine.
+    * [Index Viewer](modules/integration-points/toolbox.md) - similar to the Luke tool
 * **Maintenance**
   * Index On Demand
   * Media Library Maintenance
   * System Maintenance
   * Task Management
     * [Scheduled Task Manager](modules/integration-points/toolbox.md)
-  * User Management
-    * [User Session Manager](modules/integration-points/toolbox.md)
-  * User Session Management
 * **Reporting**
-  * [Authorable Reports](modules/integration-points/reports/authoring-reports.md) - reports based on the Sitecore Rules Engine.
-    * [Index Viewer](modules/integration-points/toolbox.md) - similar to the Luke tool
   * [Content Reports](modules/integration-points/reports/) - variety of reports to help audit the Sitecore solution.
 * **Samples**
   * Automatically show quick info section
@@ -50,6 +48,7 @@ The following are some helpful modules distributed with SPE.
   * Getting Started - includes the Kitchen Sink Demo for `Read-Variable`.
   * License Expiration
   * Random desktop background
+  * Training Modules
   * Unlock user items on logout
 * **Tools**
   * Authoring Instrumentation
@@ -57,11 +56,16 @@ The following are some helpful modules distributed with SPE.
   * Data Management
     * Bulk Data Generator - useful for items and users
     * Bulk Item Restorer - restore items from recycle bin
+    * Bulk Template Changer - can't think of a better description than this
     * Data Importer - create or update items from a Csv
     * Find and Replace - use Content Search to change text
   * Elevated Unlock - provides options to unlock items using delegated administration
   * Package Generator - a simple method to package up items
   * Publishing Status Gutter
+  * Security Management
+    * Logged in Session Manager
+    * Transfer item security
+* **Training**
 
 ## Endorsements
 

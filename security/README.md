@@ -121,7 +121,7 @@ Gates with **Password** protection enabled prompt the user when no elevated sess
 
 **Note:** If you are using Sitecore 9.1 or later with Identity Server, there is a configuration file that should be enabled.
 
-- `Cognifide.PowerShell.IdentityServer.config`
+- `Spe.IdentityServer.config`
 
 ```text
 <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:security="http://www.sitecore.net/xmlconfig/security/">
@@ -162,7 +162,7 @@ The following warning is rendered in the ISE while the session state is elevated
 
 ### Configure Web Services
 
-The web services providing external access to Sitecore are disabled by default. You can override this behavior by patching the following configuration file `\App_Config\Include\Cognifide.PowerShell.config`.
+The web services providing external access to Sitecore are disabled by default. You can override this behavior by patching the following configuration file `\App_Config\Include\Spe.config`.
 
 Look for the following section and enable as needed.
 
@@ -246,7 +246,7 @@ The preferred way to override the settings is through the use of a configuration
 
 #### Sitecore level security
 
-You are required to explicitly grant the SPE Remoting session user account to a predefined role found in the configuration `Cognifide.PowerShell.config`. There is a generic list of permissions configured by default but we highly encourage you to adjust to meet your security requirements.
+You are required to explicitly grant the SPE Remoting session user account to a predefined role found in the configuration `Spe.config`. There is a generic list of permissions configured by default but we highly encourage you to adjust to meet your security requirements.
 
 **Example:** The following configuration defines the roles that have access to use SPE Remoting. Any role previously defined in the `<authorization/>` section is removed and custom roles are then added.
 
@@ -313,10 +313,10 @@ The following files are the bare minimum required to support SPE web services. T
 
 **Required:**
 
-* `App_Config\Include\Cognifide.PowerShell.config`
-* `App_Config\Include\Cognifide.PowerShell.Minimal.config`
-* `bin\Cognifide.PowerShell.dll`
-* `bin\Cognifide.PowerShell.Abstractions.dll`
+* `App_Config\Include\Spe.config`
+* `App_Config\Include\Spe.Minimal.config`
+* `bin\Spe.dll`
+* `bin\Spe.Abstractions.dll`
 * `sitecore modules\PowerShell\Services\web.config`
 * `sitecore modules\PowerShell\Services\RemoteAutomation.asmx`
 * `sitecore modules\PowerShell\Services\RemoteScriptCall.ashx`
@@ -327,10 +327,10 @@ You will also need to patch the configuration with the following:
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
     <sitecore>
         <controlSources>
-            <source mode="on" namespace="Cognifide.PowerShell.Client.Controls" assembly="Cognifide.PowerShell">
+            <source mode="on" namespace="Spe.Client.Controls" assembly="Spe">
                 <patch:delete />
             </source>
-            <source mode="on" namespace="Cognifide.PowerShell.Client.Applications"
+            <source mode="on" namespace="Spe.Client.Applications"
                   folder="/sitecore modules/Shell/PowerShell/" deep="true">
                 <patch:delete />
             </source>

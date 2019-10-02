@@ -78,7 +78,7 @@ Creates a new version in the target language but does not copy field values from
 
 List of fields that should not be copied over from original item. As an example, use "\_\_Security" if you don't want the new version to have the same restrictions as the original version.
 
-In addition to the fields in -IgnoredFields the following fields are ignored as configured in Cognifide.PowerShell.config file in the following location: configuration/sitecore/powershell/translation/ignoredFields.
+In addition to the fields in -IgnoredFields the following fields are ignored as configured in Spe.config file in the following location: configuration/sitecore/powershell/translation/ignoredFields.
 
 Fields ignored out of the box include:
 
