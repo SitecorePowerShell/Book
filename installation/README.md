@@ -13,7 +13,7 @@ description: Review prerequisites and details on how to get setup with SPE.
   * [Detecting your PowerShell version](https://stackoverflow.com/questions/1825585/determine-installed-powershell-version)
 * PowerShell [Execution Policy](https://technet.microsoft.com/en-us/library/ee176961.aspx) set to `RemoteSigned` \(probably optional\)
 
-{% hint style="warning" %}
+{% hint style="info" %}
 The release of SPE 6.0 introduced name changes to some files which are now reflected throughout the documentation. Review [issue #1109](https://github.com/SitecorePowerShell/Console/issues/1109) to see the full scope of what changed. Any place where the name _Cognifide_ or _Cognifide.PowerShell_ was used is now replaced with _SPE_.
 {% endhint %}
 
