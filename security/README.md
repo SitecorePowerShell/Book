@@ -313,8 +313,8 @@ The following files are the bare minimum required to support SPE web services. T
 
 **Required:**
 
-* `App_Config\Include\Spe.config`
-* `App_Config\Include\Spe.Minimal.config`
+* `App_Config\Include\Spe\Spe.config`
+* `App_Config\Include\Spe\Spe.Minimal.config`
 * `bin\Spe.dll`
 * `bin\Spe.Abstractions.dll`
 * `sitecore modules\PowerShell\Services\web.config`
