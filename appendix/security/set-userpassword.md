@@ -26,7 +26,7 @@ Specifies the Sitecore user by providing one of the following values.
 Local Name
     Example: admin
 Fully Qualified Name
-    Example: sitecore\admi
+    Example: sitecore\admin
 ```
 
 | Aliases |  |
