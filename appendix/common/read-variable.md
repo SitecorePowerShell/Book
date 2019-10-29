@@ -182,7 +182,7 @@ $result = Read-Variable -Parameters `
 
 Following is an example of a multi tabbed dialog asking user for various variable types.
 
-The type of some of the controls displayed to the user are iferred from the variable type \(like the $item variable or DateTime\) The editors for some other are set by providing the "editor" value
+The type of some of the controls displayed to the user are inferred from the variable type \(like the $item variable or DateTime\) The editors for some other are set by providing the "editor" value
 
 ```text
 $item = Get-Item master:\content\home
