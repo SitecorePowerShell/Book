@@ -4,7 +4,9 @@ Prompts user to provide values for variables required by the script to perform i
 
 ## Syntax
 
-Read-Variable \[-Parameters &lt;Object\[\]&gt;\] \[-Description &lt;String&gt;\] \[-CancelButtonName &lt;String&gt;\] \[-OkButtonName &lt;String&gt;\] \[-ShowHints\] \[-Validator &lt;ScriptBlock&gt;\] \[-Title &lt;String&gt;\] \[-Width &lt;Int32&gt;\] \[-Height &lt;Int32&gt;\]
+```text
+Read-Variable [-Parameters <Object[]>] [-Description <String>] [-CancelButtonName <String>] [-OkButtonName <String>] [-ShowHints] [-Validator <ScriptBlock>] [-Title <String>] [-Width <Int32>] [-Height <Int32>]
+```
 
 ## Detailed Description
 
@@ -154,10 +156,26 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-For a good understanding of all the Property types the Read-Variable command accepts open the script located in the following item: /Examples/User Interaction/Read-Variable - Sample the script is located in the Script Library in the Master database.
+The following provides a dialog with a dropdown of options.
 
 ```text
+$options = @{
+    "A"="a"
+    "B"="b"
+}
 
+$props = @{
+    Parameters = @(
+        @{Name="selectedOption"; Title="Choose an option"; Options=$options; Tooltip="Choose one."}
+    )
+    Title = "Option selector"
+    Description = "Choose the right option."
+    Width = 300
+    Height = 300
+    ShowHints = $true
+}
+
+Read-Variable @props
 ```
 
 ### EXAMPLE 2
