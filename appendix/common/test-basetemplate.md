@@ -2,19 +2,15 @@
 
 ## Syntax
 
-Test-BaseTemplate -Item &lt;Item&gt; -TemplateItem &lt;TemplateItem\[\]&gt;
-
-Test-BaseTemplate -Item &lt;Item&gt; -Template &lt;String\[\]&gt;
-
-Test-BaseTemplate -Path &lt;String&gt; -TemplateItem &lt;TemplateItem\[\]&gt;
-
-Test-BaseTemplate -Path &lt;String&gt; -Template &lt;String\[\]&gt;
-
-Test-BaseTemplate -Id &lt;String&gt; -TemplateItem &lt;TemplateItem\[\]&gt;
-
-Test-BaseTemplate -Id &lt;String&gt; -Template &lt;String\[\]&gt;
-
-Test-BaseTemplate \[-Database &lt;String&gt;\]
+```text
+Test-BaseTemplate -Item <Item> -TemplateItem <TemplateItem[]>
+Test-BaseTemplate -Item <Item> -Template <String[]>
+Test-BaseTemplate -Path <String> -TemplateItem <TemplateItem[]>
+Test-BaseTemplate -Path <String> -Template <String[]>
+Test-BaseTemplate -Id <String> -TemplateItem <TemplateItem[]>
+Test-BaseTemplate -Id <String> -Template <String[]>
+Test-BaseTemplate [-Database <String>]
+```
 
 ## Detailed Description
 
@@ -95,4 +91,7 @@ The following example determines if the item inherits from the specified templat
 ```text
 $item = Get-Item -Path "master:\content\home"
 Test-BaseTemplate -Item $item -Template "Sample/Sample Content"
+
+# Alternatively you can use the Template Id
+Test-BaseTemplate -Item $item -Template "{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}"
 ```
