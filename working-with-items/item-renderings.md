@@ -2,6 +2,16 @@
 
 In this section we'll show how to manage item renderings.
 
+### List renderings
+
+**Example:** The following demonstrates the use of `Get-LayoutDevice` and `Get-Rendering` to find all renderings on a page associated with the FinalLayout.
+
+```text
+$defaultLayout = Get-LayoutDevice -Default
+$rootItem = Get-Item -Path "master:" -ID "{961563FC-3445-4558-BF3A-06DF06BA6298}"
+Get-Rendering -Item $rootItem -Device $defaultLayout -FinalLayout
+```
+
 ### Update rendering parameters
 
 **Example:** The following demonstrates the use of `Get-Rendering` and `Set-Rendering` for updating values on templates.
