@@ -34,6 +34,31 @@ foreach($x in $htmlDocument.DocumentNode.SelectNodes("//li")) {
 }
 ```
 
+**Example:** The following demonstrates how to update text in the document and exclude certain nodes.
+
+```text
+$html = @"
+<div class="kitchen">
+   <div class="kitchen">
+        <blockquote>kitchen<br />
+            <span class="kitchen">kitchen</span>
+        </blockquote>
+        <a><img title="kitchen" src="https://kitchen-sink.local" /></a>
+    </div>
+</div>
+"@
+
+$htmlDocument = New-Object -TypeName HtmlAgilityPack.HtmlDocument
+$htmlDocument.LoadHtml($html)
+foreach($x in $htmlDocument.DocumentNode.Descendants()) {
+    if($x.Name -ne "img" -and ![string]::IsNullOrEmpty($x.Text)) {
+        $x.Text = $x.Text.Replace("kitchen", "sink")
+    }
+}
+
+$htmlDocument.DocumentNode.OuterHtml
+```
+
 **Example:** The following demonstrates how to remove empty paragraph tags in an html field.
 
 [Sitecore Stack Exchanage](https://sitecore.stackexchange.com/a/20845/95)
