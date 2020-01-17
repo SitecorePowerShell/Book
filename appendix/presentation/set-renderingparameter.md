@@ -5,7 +5,7 @@ Adds and updates the specified rendering parameter from the rendering.
 ## Syntax
 
 ```text
-Remove-RenderingParameter -Instance <RenderingDefinition> -Parameter <IDictionary> [-Overwrite]
+Set-RenderingParameter -Instance <RenderingDefinition> -Parameter <IDictionary> [-Overwrite]
 ```
 
 ## Detailed Description
