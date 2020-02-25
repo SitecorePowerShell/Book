@@ -29,7 +29,7 @@ We have a short [video tutorial here](https://youtu.be/bVqa4DAANYk) walking thro
 
 The SPE module installs like any other for Sitecore.
 
-[Download](https://marketplace.sitecore.net/Modules/Sitecore_PowerShell_console.aspx) the module from the [Sitecore Marketplace](https://marketplace.sitecore.net/) and install through the _Installation Wizard_.
+[Download](https://github.com/SitecorePowerShell/Console/releases) the module from the GitHub releases page and install through the _Installation Wizard_.
 
 Following the installation you'll find these new items added to the Sitecore menu:
 
