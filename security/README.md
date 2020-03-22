@@ -121,9 +121,9 @@ Gates with **Password** protection enabled prompt the user when no elevated sess
 
 **Note:** If you are using Sitecore 9.1 or later with Identity Server, there is a configuration file that should be enabled.
 
-- `Spe.IdentityServer.config`
+* `Spe.IdentityServer.config`
 
-```text
+```markup
 <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:security="http://www.sitecore.net/xmlconfig/security/">
   <sitecore role:require="Standalone or ContentManagement" security:require="Sitecore">
     <pipelines>
@@ -271,7 +271,7 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 
 **Example:** The following configuration grants access to custom roles without removing any existing roles.
 
-```text
+```markup
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>

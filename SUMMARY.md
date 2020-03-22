@@ -137,7 +137,7 @@
     * [New-Package](appendix/packaging/new-package.md)
   * [Presentation](appendix/presentation/README.md)
     * [Add-PlaceholderSetting](appendix/presentation/add-placeholdersetting.md)
-    * [Add-Rendering](appendix/presentation/add-rendering.md)  
+    * [Add-Rendering](appendix/presentation/add-rendering.md)
     * [Get-Layout](appendix/presentation/get-layout.md)
     * [Get-LayoutDevice](appendix/presentation/get-layoutdevice.md)
     * [Get-PlaceholderSetting](appendix/presentation/get-placeholdersetting.md)
