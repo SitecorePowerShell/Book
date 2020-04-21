@@ -5,17 +5,17 @@ Finds items using the Sitecore Content Search API.
 ## Syntax
 
 ```text
-Find-Item [-Index] <String> [-Criteria <SearchCriteria[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
-Find-Item [-Index] <String> [-Where <String>] [-WhereValues <Object[]>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
-Find-Item [-Index] <String> [-Predicate <Expression<Func<SearchResultItem, bool>>>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
-Find-Item [-Index] <String> [-ScopeQuery <String>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-Criteria <SearchCriteria[]>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-Where <String>] [-WhereValues <Object[]>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-Predicate <Expression<Func<SearchResultItem, bool>>>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-ScopeQuery <String>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
 ```
 
 ## Detailed Description
 
 The Find-Item command searches for items using the Sitecore Content Search API. The type `SearchResultItem` is used as the type when working with `IQueryable`.
 
-© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+© 2010-2020 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 
@@ -462,10 +462,134 @@ $props = @{
 Find-Item @props
 ```
 
+### EXAMPLE 13
+
+Find items where the title contains the specified value. A custom implementation of `SearchResultItem` is used to enable the use of the property `Title` in the Dynamic Query.
+
+```text
+class TitleSearchResultItem : SearchResultItem
+{
+   [Sitecore.ContentSearch.IndexField("title")]
+   [string]$Title
+}
+
+$props = @{
+    Index = "sitecore_master_index"
+    Where = "Title.Contains(@0)"
+    WhereValues = "great"
+    QueryType = [TitleSearchResultItem]
+}
+
+Find-Item @props
+```
+
+### EXAMPLE 14
+
+Find items where the path contains the specified Id and base templates contain the specified Id using a Dynamic Query. A custom implementation of `SearchResultItem` is used to enable the use of the property `TemplateIds` in the Dynamic Query.
+
+```text
+class TemplatesSearchResultItem : SearchResultItem
+{
+   [Sitecore.ContentSearch.IndexField("_templates")]
+   [System.Collections.Generic.List[ID]]$TemplateIds
+}
+
+$props = @{
+    Index = "sitecore_master_index"
+    Where = "Paths.Contains(@0) And TemplateIds.Contains(@1)"
+    WhereValues = [ID]::Parse("{371EEE15-B6F3-423A-BB25-0B5CED860EEA}"), [ID]::Parse("{B0B6FB08-6BBE-43F2-8E36-FCE228325B63}")
+    QueryType = [TemplatesSearchResultItem]
+}
+
+Find-Item @props
+```
+
+### EXAMPLE 15
+
+Find items where the title contains "Sitecore" using a Scope Query. A custom implementation of `SearchResultItem` is used to enable the use of the property `Title` in the Scope Query.
+
+```text
+class TitleSearchResultItem : SearchResultItem
+{
+   [Sitecore.ContentSearch.IndexField("title")]
+   [string]$Title
+}
+
+$props = @{
+    Index = "sitecore_master_index"
+    ScopeQuery = "location:{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9};custom:title|Sitecore"
+    QueryType = [TitleSearchResultItem]
+}
+
+Find-Item @props | Select-Object -Property Title
+```
+
+### EXAMPLE 16
+
+Find items where the template is "Sample Content" and the title contains "Sitecore" and created by "admin" using the Criteria Query. A custom implementation of `SearchResultItem` is used to enable the use of the property `Title` and `Creator` in the Dynamic Query.
+
+```text
+class TitleSearchResultItem : SearchResultItem
+{
+   [Sitecore.ContentSearch.IndexField("title")]
+   [string]$Title
+   [Sitecore.ContentSearch.IndexField("_creator")]
+   [string]$Creator
+}
+
+$criteria = @(
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"}, 
+    @{Filter = "Contains"; Field = "Title"; Value = "Sitecore"},
+    @{Filter = "Contains"; Field = "_creator"; Value = "admin"}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+    QueryType = [TitleSearchResultItem]
+}
+
+Find-Item @props
+```
+
+### EXAMPLE 17
+
+Find items matching a complex query. A custom implementation of `SearchResultItem` is used to enable the use of the property `Title` in the Predicate Query.
+
+```text
+class TitleSearchResultItem : SearchResultItem
+{
+   [Sitecore.ContentSearch.IndexField("title")]
+   [string]$Title
+}
+
+$criteriaTemplate = @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"; }, @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; Boost=25; }, @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; }
+$predicateTemplate = New-SearchPredicate -Operation Or -Criteria $criteriaTemplate -QueryType ([TitleSearchResultItem])
+
+$criteriaContent = @{Filter = "Contains"; Field = "Title"; Value = 'Sitecore'}
+$predicateTitle = New-SearchPredicate -Criteria $criteriaContent -QueryType ([TitleSearchResultItem])
+
+$predicateTemplateAndTitle = New-SearchPredicate -First $predicateTemplate -Second $predicateTitle -Operation And -QueryType ([TitleSearchResultItem])
+
+$root = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$criteriaRoot = @{Filter = "DescendantOf"; Value = $root }
+$predicateRoot = New-SearchPredicate -Criteria $criteriaRoot -QueryType ([TitleSearchResultItem])
+
+$predicate = New-SearchPredicate -First $predicateRoot -Second $predicateTemplateAndTitle -Operation And -QueryType ([TitleSearchResultItem])
+
+$props = @{
+    Index = "sitecore_master_index"
+    Predicate = $predicate
+    QueryType = [TitleSearchResultItem]
+}
+
+Find-Item @props
+```
+
 ## Related Topics
 
 * [Initialize-Item](initialize-item.md)
 * [https://gist.github.com/AdamNaj/273458beb3f2b179a0b6](https://gist.github.com/AdamNaj/273458beb3f2b179a0b6) 
 * [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library) 
-* [#1128](https://github.com/SitecorePowerShell/Console/issues/1128) 
+* [#1128](https://github.com/SitecorePowerShell/Console/issues/1128)
+* [#1120](https://github.com/SitecorePowerShell/Console/issues/1120)
 
