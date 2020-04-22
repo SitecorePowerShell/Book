@@ -187,7 +187,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*
 Trim all languages to 3 latest versions for /sitecore/content/home item and all of its children in the master database
 
 ```text
-PS master:\> Remove-ItemVersion -Path master:\content\home -Language * -Recurse
+PS master:\> Remove-ItemVersion -Path master:\content\home -Language * -MaxRecentVersions 3 -Recurse
 ```
 
 ### EXAMPLE 5
