@@ -10,13 +10,13 @@
 | 4.0 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – | – | – | – | – |
 | 4.1-4.6 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – | – | – | – |
 | 4.7 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – | – |
-| 5.0 | – | – | – | – | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ [[1]](#Compatibility-Notes) [[2]](#Compatibility-Notes) | – |
-| 5.1 | – | – | – | – | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ [[2]](#Compatibility-Notes) | – |
+| 5.0 | – | – | – | – | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ [[1]](#notes) [[2]](#notes) | – |
+| 5.1 | – | – | – | – | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ [[2]](#notes) | – |
 | 6.0 | – | – | – | – | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 **Legend:** "–" - not supported; "✓" - supported.
 
-### Compatibility Notes
+### Compatibility Notes {#notes}
 
 - [1] Released by Sitecore for SXA. Download from the [SXA 1.9.0 release page](https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/19/Sitecore_Experience_Accelerator_190.aspx)
 - [2] Some features are not available. It is recommended to upgrade to 6.0 for 9.2.
