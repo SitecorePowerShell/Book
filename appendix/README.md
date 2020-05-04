@@ -20,8 +20,8 @@
 
 - [1] Released by Sitecore for SXA. Download from the [SXA 1.9.0 release page](https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/19/Sitecore_Experience_Accelerator_190.aspx)
 - [2] Some features are not available. It is recommended to upgrade to 6.0 for 9.2.
-- - Publish-Item command unsupported ([Issue #1129](https://github.com/SitecorePowerShell/Console/issues/1129))
-- - Indexing commands unsupported ([Issue #1133](https://github.com/SitecorePowerShell/Console/issues/1133))
+  - Publish-Item command unsupported ([Issue #1129](https://github.com/SitecorePowerShell/Console/issues/1129))
+  - Indexing commands unsupported ([Issue #1133](https://github.com/SitecorePowerShell/Console/issues/1133))
 
 ### Releases
 
