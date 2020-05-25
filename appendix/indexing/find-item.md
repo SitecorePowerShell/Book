@@ -642,8 +642,8 @@ Find-Item @props | Select-Object -Expand Categories | Select-Object -Expand Valu
 * [Initialize-Item](initialize-item.md)
 * [https://gist.github.com/AdamNaj/273458beb3f2b179a0b6](https://gist.github.com/AdamNaj/273458beb3f2b179a0b6) 
 * [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library) 
-* [#1128](https://github.com/SitecorePowerShell/Console/issues/1128)
-* [#1120](https://github.com/SitecorePowerShell/Console/issues/1120)
+* [#1128](https://github.com/SitecorePowerShell/Console/issues/1128) Added support for GreaterThan and LessThan
+* [#1120](https://github.com/SitecorePowerShell/Console/issues/1120) Added support for custom `SearchResultItem` type
 * [#1174](https://github.com/SitecorePowerShell/Console/issues/1174) Added support for Facet
 * [#1176](https://github.com/SitecorePowerShell/Console/issues/1176) Added support for Filter
 
