@@ -5,11 +5,11 @@ Adds a rendering to a chosen device for the presentation of an item.
 ## Syntax
 
 ```text
-Add-Rendering [-Item] <Item> -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
+Add-Rendering [-Item] <Item> -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>] [-PassThru]
 
-Add-Rendering [-Path] <String> -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
+Add-Rendering [-Path] <String> -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>] [-PassThru]
 
-Add-Rendering -Id <String> [-Database <String>] -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
+Add-Rendering -Id <String> [-Database <String>] -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>] [-PassThru]
 ```
 
 ## Detailed Description
@@ -153,6 +153,16 @@ Id of the item to be processed - can work with Language parameter to narrow the 
 ### -Database  &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -PassThru  &lt;SwitchParameter&gt;
 
 | Aliases |  |
 | :--- | :--- |

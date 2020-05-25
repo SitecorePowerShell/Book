@@ -4,11 +4,13 @@ Creates a version of the item in a new language based on an existing language ve
 
 ## Syntax
 
-Add-ItemVersion \[-Item\] &lt;Item&gt; \[-Recurse\] \[-IfExist &lt;Append \| Skip \| OverwriteLatest&gt;\] \[-TargetLanguage &lt;String\[\]&gt;\] \[-DoNotCopyFields\] \[-IgnoredFields &lt;String\[\]&gt;\] \[-Language &lt;String\[\]&gt;\]
+```text
+Add-ItemVersion [-Item] <Item> [-Recurse] [-IfExist <Append | Skip | OverwriteLatest>] [-TargetLanguage <String[]>] [-DoNotCopyFields] [-IgnoredFields <String[]>] [-Language <String[]>]
 
-Add-ItemVersion \[-Path\] &lt;String&gt; \[-Recurse\] \[-IfExist &lt;Append \| Skip \| OverwriteLatest&gt;\] \[-TargetLanguage &lt;String\[\]&gt;\] \[-DoNotCopyFields\] \[-IgnoredFields &lt;String\[\]&gt;\] \[-Language &lt;String\[\]&gt;\]
+Add-ItemVersion [-Path] <String> [-Recurse] [-IfExist <Append | Skip | OverwriteLatest>] [-TargetLanguage <String[]>] [-DoNotCopyFields] [-IgnoredFields <String[]>] [-Language <String[]>]
 
-Add-ItemVersion -Id &lt;String&gt; \[-Database &lt;String&gt;\] \[-Recurse\] \[-IfExist &lt;Append \| Skip \| OverwriteLatest&gt;\] \[-TargetLanguage &lt;String\[\]&gt;\] \[-DoNotCopyFields\] \[-IgnoredFields &lt;String\[\]&gt;\] \[-Language &lt;String\[\]&gt;\]
+Add-ItemVersion -Id <String> [-Database <String>] [-Recurse] [-IfExist <Append | Skip | OverwriteLatest>] [-TargetLanguage <String[]>] [-DoNotCopyFields] [-IgnoredFields <String[]>] [-Language <String[]>]
+```
 
 ## Detailed Description
 
@@ -22,7 +24,7 @@ The following abbreviations are aliases for this cmdlet:
 
 ## Parameters
 
-### -Recurse  &lt;SwitchParameter&gt;
+### -Recurse &lt;SwitchParameter&gt;
 
 Process the item and all of its children.
 
@@ -34,9 +36,9 @@ Process the item and all of its children.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -IfExist  &lt;ActionIfExists&gt;
+### -IfExist &lt;ActionIfExists&gt;
 
-Default vaule is Append Accepts one of 3 pretty self explanatory actions:
+Default value is Append. Accepts one of 3 pretty self explanatory actions:
 
 * Append - \[Default\] if language version exists create a new version with values copied from the original language
 * Skip - if language version exists don't do anything
@@ -50,7 +52,22 @@ Default vaule is Append Accepts one of 3 pretty self explanatory actions:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -TargetLanguage  &lt;String\[\]&gt;
+### -IfNoSourceVersion &lt;ActionIfNoVersion&gt;
+
+Default value is Skip. Accepts one of 3 pretty self explanatory actions:
+
+* Skip - \[Default\] if the source item has no versions
+* Add - if the source item has no versions 
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -TargetLanguage &lt;String\[\]&gt;
 
 Language or a list of languages that should be created
 
@@ -62,7 +79,7 @@ Language or a list of languages that should be created
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -DoNotCopyFields  &lt;SwitchParameter&gt;
+### -DoNotCopyFields &lt;SwitchParameter&gt;
 
 Creates a new version in the target language but does not copy field values from the original language
 
@@ -74,7 +91,7 @@ Creates a new version in the target language but does not copy field values from
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -IgnoredFields  &lt;String\[\]&gt;
+### -IgnoredFields &lt;String\[\]&gt;
 
 List of fields that should not be copied over from original item. As an example, use "\_\_Security" if you don't want the new version to have the same restrictions as the original version.
 
@@ -99,7 +116,7 @@ Fields ignored out of the box include:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Language  &lt;String\[\]&gt;
+### -Language &lt;String\[\]&gt;
 
 Language that will be used as source language. If not specified the current user language will be used.
 
@@ -111,7 +128,7 @@ Language that will be used as source language. If not specified the current user
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Item  &lt;Item&gt;
+### -Item &lt;Item&gt;
 
 The item / version to be processed.
 
@@ -123,7 +140,7 @@ The item / version to be processed.
 | Accept Pipeline Input? | true \(ByValue, ByPropertyName\) |
 | Accept Wildcard Characters? | false |
 
-### -Path  &lt;String&gt;
+### -Path &lt;String&gt;
 
 Path to the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -135,7 +152,7 @@ Path to the item to be processed - additionally specify Language parameter to fe
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Id  &lt;String&gt;
+### -Id &lt;String&gt;
 
 Id of the item to be processed - additionally specify Language parameter to fetch different item language than the current user language.
 
@@ -147,7 +164,7 @@ Id of the item to be processed - additionally specify Language parameter to fetc
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Database  &lt;String&gt;
+### -Database &lt;String&gt;
 
 Database containing the item to be processed - can work with Language parameter to narrow the publication scope.
 

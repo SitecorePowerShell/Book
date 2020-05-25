@@ -6,8 +6,8 @@ Finds items using the Sitecore Content Search API.
 
 ```text
 Find-Item [-Index] <String> [-Criteria <SearchCriteria[]>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
-Find-Item [-Index] <String> [-Where <String>] [-WhereValues <Object[]>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
-Find-Item [-Index] <String> [-Predicate <Expression<Func<SearchResultItem, bool>>>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-Where <String>] [-WhereValues <Object[]>] [-Filter <String>] [-FilterValues <Object[]>] [-FacetOn <String[]>] [-FacetMinCount <Int32>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Index] <String> [-WherePredicate <Expression<Func<SearchResultItem, bool>>>] [-FilterPredicate <Expression<Func<SearchResultItem, bool>>>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
 Find-Item [-Index] <String> [-ScopeQuery <String>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
 ```
 
@@ -144,7 +144,29 @@ An Array of objects for Dynamic Linq "-Where" parameter as explained in: [https:
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -Predicate &lt;Expression&lt;Func&lt;SearchResultItem,bool&gt;&gt;&gt;
+### -Filter  &lt;String&gt;
+
+Where the "Filter" is the Dynamic Linq query and "FilterValues" includes the array of values to be replaced in the query.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -FilterValues  &lt;Object\[\]&gt;
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -WherePredicate  &lt;Expression&lt;Func&lt;SearchResultItem,bool&gt;&gt;&gt;
 
 Use the `New-SearchPredicate` command to build the appropriate predicates.
 
@@ -156,7 +178,19 @@ Use the `New-SearchPredicate` command to build the appropriate predicates.
 | Accept Pipeline Input? | false |
 | Accept Wildcard Characters? | false |
 
-### -ScopeQuery &lt;String&gt;
+### -FilterPredicate  &lt;Expression&lt;Func&lt;SearchResultItem,bool&gt;&gt;&gt;
+
+Use the `New-SearchPredicate` command to build the appropriate predicates.
+
+| Aliases |  |
+| :--- | :--- |
+| Required? | false |
+| Position? | named |
+| Default Value |  |
+| Accept Pipeline Input? | false |
+| Accept Wildcard Characters? | false |
+
+### -ScopeQuery  &lt;String&gt;
 
 When combined with the Query Builder field, a simple query can be crafted to return search results.
 
@@ -315,7 +349,7 @@ $predicate = New-SearchPredicate -First $predicateRoot -Second $predicateTemplat
 
 $props = @{
     Index = "sitecore_master_index"
-    Predicate = $predicate
+    WherePredicate = $predicate
 }
 
 Find-Item @props
@@ -578,11 +612,29 @@ $predicate = New-SearchPredicate -First $predicateRoot -Second $predicateTemplat
 
 $props = @{
     Index = "sitecore_master_index"
-    Predicate = $predicate
+    WherePredicate = $predicate
     QueryType = [TitleSearchResultItem]
 }
 
 Find-Item @props
+```
+
+### EXAMPLE 18
+
+Find items under the Content tree where the language is "en" and there are more than two occurrences. This could be used to find duplicate item names at the same path.
+
+```text
+$props = @{
+    Index = "sitecore_master_index"
+    Where = 'Paths.Contains(@0)'
+    WhereValues = [ID]::Parse("{0DE95AE4-41AB-4D01-9EB0-67441B7C2450}")
+    Filter = 'Language = @0'
+    FilterValues = "en"
+    FacetOn = "Path"
+    FacetMinCount = 2
+}
+
+Find-Item @props | Select-Object -Expand Categories | Select-Object -Expand Values
 ```
 
 ## Related Topics
@@ -592,4 +644,6 @@ Find-Item @props
 * [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library) 
 * [#1128](https://github.com/SitecorePowerShell/Console/issues/1128)
 * [#1120](https://github.com/SitecorePowerShell/Console/issues/1120)
+* [#1174](https://github.com/SitecorePowerShell/Console/issues/1174) Added support for Facet
+* [#1176](https://github.com/SitecorePowerShell/Console/issues/1176) Added support for Filter
 
