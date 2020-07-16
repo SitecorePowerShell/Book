@@ -88,5 +88,8 @@ foreach($pair in $pairs) {
 }
 # Here you can add or remove name/value pairs
 $nameValues["^/ab[cd]/$"] = "/somewhere/fun"
+foreach($key in $nameValues.AllKeys) {
+    $nameValues[$key] = [Uri]::EscapeDataString($nameValues[$key])
+}
 $item.Redirects = [Sitecore.StringUtil]::NameValuesToString($nameValues,"&")
 ```
