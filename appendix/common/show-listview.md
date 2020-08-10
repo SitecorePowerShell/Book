@@ -174,7 +174,7 @@ Title of the results window.
 
 ### -Width  &lt;Int32&gt;
 
-Width of the results window.
+Width of the results window. Only applicable when also using the `-Modal` switch.
 
 | Aliases |  |
 | :--- | :--- |
@@ -186,7 +186,7 @@ Width of the results window.
 
 ### -Height  &lt;Int32&gt;
 
-Height of the results window.
+Height of the results window. Only applicable when also using the `-Modal` switch.
 
 | Aliases |  |
 | :--- | :--- |
