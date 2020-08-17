@@ -129,17 +129,27 @@ Read-Variable @props
 * date time
 * droplist
 * droptree
+* email
+* groupeddroplink
+* groupeddroplist
 * info
+* item
+* link
+* marquee
 * multilist
 * multilist search
 * multiple user
 * multiple user role
 * multiple role
+* multitext
+* number
+* pass
 * radio
 * rule
 * rule action
 * tree
 * treelist
+* tristate
 * time
 
 ### Confirmation Choice
