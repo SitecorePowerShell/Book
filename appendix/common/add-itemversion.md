@@ -16,7 +16,9 @@ Add-ItemVersion -Id <String> [-Database <String>] [-Recurse] [-IfExist <Append |
 
 Creates a new version of the item in a specified language based on an existing language/version. Based on parameters you can make the command bahave differently when a version in the target language already exists and define which fields if any should be copied over from the original language.
 
-© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions\#\# Aliases
+© 2010-2020 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+
+## Aliases
 
 The following abbreviations are aliases for this cmdlet:
 
@@ -38,7 +40,7 @@ Process the item and all of its children.
 
 ### -IfExist &lt;ActionIfExists&gt;
 
-Default value is Append. Accepts one of 3 pretty self explanatory actions:
+Default value is Append. Accepts one of 3 values:
 
 * Append - \[Default\] if language version exists create a new version with values copied from the original language
 * Skip - if language version exists don't do anything
@@ -54,10 +56,10 @@ Default value is Append. Accepts one of 3 pretty self explanatory actions:
 
 ### -IfNoSourceVersion &lt;ActionIfNoVersion&gt;
 
-Default value is Skip. Accepts one of 3 pretty self explanatory actions:
+Default value is Skip. Accepts one of 2 values:
 
-* Skip - \[Default\] if the source item has no versions
-* Add - if the source item has no versions 
+* Skip - \[Default\] if the source item has no versions don't do anything
+* Add - if the source item has no versions create a version without any copied values
 
 | Aliases |  |
 | :--- | :--- |
