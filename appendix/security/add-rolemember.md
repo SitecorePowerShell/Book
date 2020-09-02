@@ -65,10 +65,19 @@ Help Author: Adam Najmanowicz, Michael West
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 2
 
 ```text
 PS master:\> Add-RoleMember -Identity developer -Members "michael","adam","mike"
+```
+
+### EXAMPLE 2
+
+The following adds all users of a given domain to the Developer role.
+
+```text
+$users = Get-User -Filter * | Where-Object { @("ad1","ad2") -contains $_.Domain }
+Add-RoleMember -Identity "sitecore\Developer" -Members $users
 ```
 
 ## Related Topics
