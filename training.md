@@ -213,6 +213,18 @@ $nameLookup = New-Object System.Collections.Generic.HashSet[string]
 $nameLookup.Add("Michael") > $null
 ```
 
+```text
+# Case insensitive lookup
+$nameLookup = New-Object System.Collections.Generic.HashSet[string]([StringComparer]::OrdinalIgnoreCase)
+$nameLookup.Add("Michael") > $null
+
+if($nameLookup.Contains("michael")) {
+  Write-Host "Found it!" -ForegroundColor Green
+} else {
+  Write-Host "No esta aqui :-(" -ForegroundColor White -BackgroundColor Red
+}
+```
+
 **Example:** The following demonstrates the use of **Queue**. A Sitecore Stack Exchange answer to [find items based on a template](https://sitecore.stackexchange.com/a/15168/95) may be helpful.
 
 ```text
