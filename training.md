@@ -213,6 +213,7 @@ $nameLookup = New-Object System.Collections.Generic.HashSet[string]
 $nameLookup.Add("Michael") > $null
 ```
 
+**Example:** The following demonstrates the use of **HashSet** where the casing of the items are ignored.
 ```text
 # Case insensitive lookup
 $nameLookup = New-Object System.Collections.Generic.HashSet[string]([StringComparer]::OrdinalIgnoreCase)
@@ -223,6 +224,27 @@ if($nameLookup.Contains("michael")) {
 } else {
   Write-Host "No esta aqui :-(" -ForegroundColor White -BackgroundColor Red
 }
+```
+
+**Example:** The following demonstrates how to replace the use of Compare-Object with **HashSet**. This is useful and important when the collection size is large and you are working with simple data like strings. Compare-Object does offer a way to compare specific properties. 
+```text
+# Instead of using Compare-Object to compare two datasets, such as for strings or integeters, consider using HashSet instead.
+# Populate collection
+$referenceIds = [System.Collections.Generic.List[string]]@()
+# Populate collection
+$differenceIds = [System.Collections.Generic.List[string]]@()
+
+<#
+$leftOnlyObjects = Compare-Object -ReferenceObject $referenceIds -DifferenceObject $differenceIds | 
+            Where-Object { $_.SideIndicator -eq "<=" } | Select-Object -ExpandProperty InputObject
+#>
+$referenceHash = New-Object 'System.Collections.Generic.HashSet[String]'
+$referenceHash.UnionWith($referenceIds)
+$differenceHash = New-Object 'System.Collections.Generic.HashSet[String]'
+$differenceHash.UnionWith($differenceIds)
+$leftOnlyHash = New-Object 'System.Collections.Generic.HashSet[String]'($referenceHash)
+$leftOnlyHash.ExceptWith($differenceHash)
+$leftOnlyObjects = $leftOnlyHash
 ```
 
 **Example:** The following demonstrates the use of **Queue**. A Sitecore Stack Exchange answer to [find items based on a template](https://sitecore.stackexchange.com/a/15168/95) may be helpful.
