@@ -10,7 +10,9 @@ Remove-SearchIndexItem -SearchResultItem <SearchResultItem> [-AsJob]
 
 ## Detailed Description
 
-© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+Removes an indexed item from the specified index. Supports wildcard filtering for the index name.
+
+© 2010-2020 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Parameters
 
@@ -63,5 +65,15 @@ The following removes the indexed item from the specified search index.
 ```text
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $indexName = "sitecore_master_index"
+Remove-SearchIndexItem -Item $item -Name $indexName
+```
+
+### EXAMPLE 2
+
+The following removes the indexed item from the indexes matching the wildcard pattern.
+
+```text
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$indexName = "sitecore_*_index"
 Remove-SearchIndexItem -Item $item -Name $indexName
 ```

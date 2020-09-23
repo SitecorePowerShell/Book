@@ -10,7 +10,9 @@ Initialize-SearchIndexItem -SearchResultItem <SearchResultItem> [-AsJob]
 
 ## Detailed Description
 
-© 2010-2019 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
+Rebuilds the index for a given tree with the specified root item and index name. Supports wildcard filtering for the index name.
+
+© 2010-2020 Adam Najmanowicz, Michael West. All rights reserved. Sitecore PowerShell Extensions
 
 ## Aliases
 
@@ -69,5 +71,15 @@ The following rebuilds the index for a given tree with the specified root node a
 ```text
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $indexName = "sitecore_master_index"
+Initialize-SearchIndexItem -Item $item -Name $indexName
+```
+
+### EXAMPLE 2
+
+The following rebuilds the indexes matching the wildcard pattern for a given tree with the specified root node and index name.
+
+```text
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$indexName = "sitecore_*_index"
 Initialize-SearchIndexItem -Item $item -Name $indexName
 ```
