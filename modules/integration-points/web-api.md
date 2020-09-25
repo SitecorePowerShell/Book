@@ -10,7 +10,7 @@ Here's the url broken down:
   * `v2` - This is the service that executes scripts stored in the integration point library.
 * **Database** - Specifies which database contains the script.
   * `master` - This database requires the credentials to be provided.
-* **Script** - Specifies the name of the script contained in the database.
+* **Script** - Specifies the name of the script contained in the database. The SPE module containing the script needs to be enabled otherwise you'll receive a 404 error.
   * `homeanddescendants` - Replace this name with whatever your script is called in the Web API library.
 * **Query String Parameters (deprecated)** - Specifies the additional bits of data for use by the web service.
   * `user` and `password` - Authenticates the request and in most cases will be needed. If the script is published to the _web_ database the credentials are not required. You should use the **Basic** header instead of the query string.
@@ -43,7 +43,7 @@ Invoke-RestMethod -Headers $headers -Uri "https://spe.dev.local/-/script/v2/mast
 
 ## Security
 
-The integration point is disabled by default and can be enabled through configuration as described [here](../../security/). See **Restfulv2**.
+The integration point is disabled by default and can be enabled through configuration as described [here](../../security/). See **Restfulv2**. Be sure to enable the SPE script module in the content tree.
 
 ## References
 
