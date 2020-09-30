@@ -119,7 +119,7 @@ $package.Metadata.Version = "1.0";
 $package.Metadata.Readme = 'This text will be visible to people installing your package'
 
 # Add content/home and all of its children to the package
-$source = Get-Item 'master:\content\home' | New-ExplicitItemSource -Name 'Home Page' -InstallMode Overwrite
+$source = Get-Item 'master:\content\home\*' | New-ExplicitItemSource -Name 'Home Page' -InstallMode Overwrite
 $package.Sources.Add($source);
 
 # Save package
