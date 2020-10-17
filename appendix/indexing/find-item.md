@@ -62,6 +62,7 @@ Where "Filter" is one of the following values:
 Where "Field" is the Index Field name found on the `SearchResultItem` such as the following:
 
 * \_\_smallcreateddate - CreatedDate
+* \_\_smallupdateddate - Updated
 * \_group - ID
 * \_template - TemplateId
 * \_templatename - TemplateName
@@ -204,7 +205,7 @@ When combined with the Query Builder field, a simple query can be crafted to ret
 
 ### -OrderBy  &lt;String&gt;
 
-Field by which the search results sorting should be performed. Dynamic Linq ordering syntax used. [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
+Field by which the search results sorting should be performed. This is the .Net Property name as see on the SearchResultItem class. Dynamic Linq ordering syntax used. [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
 | Aliases |  |
 | :--- | :--- |
@@ -635,6 +636,25 @@ $props = @{
 }
 
 Find-Item @props | Select-Object -Expand Categories | Select-Object -Expand Values
+```
+
+### EXAMPLE 19
+
+Find the most recently updated item.
+
+```text
+$templateId = "{C382C7B8-7567-40CB-AE89-7F5680735D4E}"
+$criteria = @(
+    @{Filter = "Equals"; Field = "_template"; Value = $templateId}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+    OrderBy = "Updated"
+    Last = 1
+}
+
+Find-Item @props | Select-Object -Property ItemId, Name, Path, Updated
 ```
 
 ## Related Topics
