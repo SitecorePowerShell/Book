@@ -657,6 +657,19 @@ $props = @{
 Find-Item @props | Select-Object -Property ItemId, Name, Path, Updated
 ```
 
+### EXAMPLE 20
+
+Find items where the expiration date has not passed (now to the future) or the expiration date is empty (never expires).
+
+```text
+$props = @{
+    Index = "sitecore_sxa_master_index"
+    ScopeQuery = "+location:{447D82A5-BDBD-4898-8598-D79B3EB9BE6D};+template:{51ED5851-1A61-4DAE-B803-6C7FAE6B43D8};custom:EventEndDate|[* TO NOW-100YEARS];custom:EventEndDate|[NOW TO *];"
+}
+
+Find-Item @props
+```
+
 ## Related Topics
 
 * [Initialize-Item](initialize-item.md)
