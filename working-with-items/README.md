@@ -568,6 +568,17 @@ Copy-Item -Path "master:\content\home\Sample Item\Sample Item 1" -Destination "m
 Copy-Item -Path master:\content\Home -Destination web:\content\home -TransferOptions 0
 ```
 
+**Example:** The following copies an entire tree of items and maintains the tree structure.
+
+```text
+$sourceId = "{AF27FAD3-2AF0-4682-9BF7-375197587579}"
+$destinationId = "{53F94442-555B-4622-B813-A16ED2CAB01B}"
+$children = Get-ChildItem -Path "master:" -ID $sourceId
+foreach($child in $children) {
+    $child | Copy-Item -Destination $destinationId -Recurse
+}
+```
+
 ## Moving Items
 
 ### Move-Item : to a new destination
