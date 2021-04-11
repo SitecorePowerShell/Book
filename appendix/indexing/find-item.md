@@ -525,6 +525,7 @@ Find items where the path contains the specified Id and base templates contain t
 ```text
 class TemplatesSearchResultItem : SearchResultItem
 {
+   # For items contained within an SXA index try using the name "inheritance_sm".
    [Sitecore.ContentSearch.IndexField("_templates")]
    [System.Collections.Generic.List[ID]]$TemplateIds
 }
