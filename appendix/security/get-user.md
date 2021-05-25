@@ -35,7 +35,7 @@ admin
 Fully Qualified Name:
 
 ```text
-sitecore\admi
+sitecore\admin
 ```
 
 | Aliases |  |
