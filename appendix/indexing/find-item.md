@@ -360,6 +360,8 @@ Find-Item @props
 
 Find items using logical AND conditions with ContainsAny. Demonstrates that different array types are handled.
 
+**Note:** When searching for `ID`s you can use the proper type like `[ID[]]@("{C852E80E-ED49-4354-A397-6F66487F0E26}")` so SPE will handle the conversion to `ShortID`.
+
 ```text
 $criteria = @(
     @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; Boost=25; },
