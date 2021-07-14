@@ -70,6 +70,20 @@ foreach($item in $items) {
 }
 ```
 
+**Example:** The following example extracts the items from a 'keywords' field, comma separates the values, and then outputs to a report.
+
+```text
+function Get-KeywordsAsString($item) {
+    [Sitecore.Data.Fields.MultilistField] $field = $item.Fields["Keywords"]
+    $items = $field.GetItems()
+    $strArray = $items | Foreach { $_.DisplayName }
+    $strArray -join ', '
+}
+Get-ChildItem -Path 'master:\content\home\path-to-item' `
+  | Show-ListView -Property Name, Language, Version, ID, TemplateName, ItemPath, `
+        @{ Label = "KeywordsAsString"; Expression = { Get-KeywordsAsString($_) } }
+```
+
 ## Edit NameValueListField
 
 **Example:** The following example gets all of the name/value pairs of a `NameValueListField` and appends a new pair.
