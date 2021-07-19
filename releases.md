@@ -7,3 +7,4 @@ The following links provide a way to report issues and get the latest release.
 * [Module issue tracker](https://github.com/SitecorePowerShell/Console/issues)
 * [Module releases](https://github.com/SitecorePowerShell/Console/releases)
 
+See the [Appendix](/appendix) for a compatibility matrix.
