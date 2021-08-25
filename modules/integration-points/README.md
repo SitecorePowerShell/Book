@@ -10,11 +10,11 @@ Be certain to enable the module when you need to use it.
 
 * [**Content Editor**](content-editor.md)
   * Context Menu - Visibility can be control using rules made available from within the _Interactive_ field section.
-  * Gutters - Requires the library to be [synced](#syncing-integrations).
+  * Gutters - Requires the library to be [synced (see below)](#syncing-integrations).
   * Insert Item - Visibility can be control using rules made available from within the _Interactive_ field section.
-  * Ribbon - Requires the library to be [synced](#syncing-integrations). Visibility can be control using rules made available from within the _Interactive_ field section.
+  * Ribbon - Requires the library to be [synced (see below)](#syncing-integrations). Visibility can be control using rules made available from within the _Interactive_ field section.
   * Warning - Appears as a warning message beneath the ribbon in the _Content Editor_.
-* [**Control Panel**](control-panel.md) - Requires the library to be [synced](#syncing-integrations).
+* [**Control Panel**](control-panel.md) - Requires the library to be [synced (see below)](#syncing-integrations).
 * [**Data Sources**](https://github.com/sitecorepowershell/sitecore-powershell-extensions/tree/b6365f8ecf54966c2e1757f549f543976500aa52/date-sources.md) - Not a formal integration point library, but a good place to add scripts used for Data Source Scripts. Read more about how they work [here](https://blog.najmanowicz.com/2013/04/17/powershell-scripted-datasources-in-sitecore-part-1/) and [here](https://github.com/SitecorePowerShell/Book/tree/9c7126d7a38df6ef372e8baef52f9a02baabd550/modules/integration-points/[https:/blog.najmanowicz.com/2013/05/06/powershell-scripted-data-sources-in-sitecore-part-2/]/README.md). The _Source_ field simply references the script like _script:/sitecore/system/Modules/PowerShell/Script Library/\[MODULE NAME\]/Data Sources/\[SCRIPT NAME\]_.
 * [**Event Handlers**](event-handlers.md) - Requires a patch file to enable the desired events. Read more about it [here](https://blog.najmanowicz.com/2013/05/27/react-to-sitecore-events-with-powershell-scripts/).
 * [**Functions**](functions.md) - Exposes scripts to the command _Import-Function_.
