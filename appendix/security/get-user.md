@@ -4,11 +4,11 @@ Returns one or more Sitecore users using the specified criteria.
 
 ## Syntax
 
-Get-User \[-Identity\] &lt;AccountIdentity&gt; \[-Authenticated\]
-
-Get-User -Filter &lt;String&gt; \[-Authenticated\] \[-ResultPageSize &lt;Int32&gt;\]
-
+```
+Get-User [-Identity] <AccountIdentity> [-Authenticated]
+Get-User -Filter <String> [-Authenticated] [-ResultPageSize <Int32>]
 Get-User -Current
+```
 
 ## Detailed Description
 
