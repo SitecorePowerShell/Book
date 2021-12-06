@@ -21,6 +21,22 @@ $itemTemplateFields = $itemTemplateTemplateItem.OwnFields + $itemTemplateTemplat
 $filterFields = $itemTemplateFields | Where-Object { $standardFields -notcontains $_ } | Sort-Object
 ```
 
+## Media item url
+
+**Example:** The following demonstrates how to generate the public facing url from a media item.
+
+```text
+$item = Get-Item -Path "master:{04DAD0FD-DB66-4070-881F-17264CA257E1}"
+$siteName = "website"
+
+$site = [Sitecore.Sites.SiteContextFactory]::GetSiteContext($siteName)
+New-UsingBlock (New-Object Sitecore.Sites.SiteContextSwitcher $site) {
+    [Sitecore.Resources.Media.MediaManager]::GetMediaUrl($item)
+}
+
+# /-/media/default-website/cover.jpg
+```
+
 ## Parse Html
 
 **Example:** The following demonstrates the use of the **HtmlAgilityPack** for parsing html.
