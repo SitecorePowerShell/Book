@@ -5,9 +5,10 @@ Restores items to the original database from the specified archive.
 ## Syntax
 
 ```text
-Restore-ArchiveItem -Archive <Archive> [-ItemId <ID>]
-Restore-ArchiveItem -Archive <Archive> [-Identity <AccountIdentity>]
-Restore-ArchiveItem -Archive <Archive> [-ArchiveItem <ArchiveEntry[]>]
+Restore-ArchiveItem -Archive <Archive> [-WhatIf] [-Confirm]  [<CommonParameters>]
+Restore-ArchiveItem -Archive <Archive> [-ItemId <ID>] [-WhatIf] [-Confirm]  [<CommonParameters>]
+Restore-ArchiveItem -Archive <Archive> [-Identity <AccountIdentity>] [-WhatIf] [-Confirm]  [<CommonParameters>]
+Restore-ArchiveItem -ArchiveItem <ArchiveEntry[]> [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
 ## Detailed Description
