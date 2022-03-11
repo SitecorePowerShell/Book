@@ -120,6 +120,7 @@
 * [Stop-ScriptSession](appendix/commands/Stop-ScriptSession.md)
 * [Stop-SearchIndex](appendix/commands/Stop-SearchIndex.md)
 * [Suspend-SearchIndex](appendix/commands/Suspend-SearchIndex.md)
+* [Switch-Rendering](appendix/commands/Switch-Rendering.md)
 * [Test-Account](appendix/commands/Test-Account.md)
 * [Test-BaseTemplate](appendix/commands/Test-BaseTemplate.md)
 * [Test-ItemAcl](appendix/commands/Test-ItemAcl.md)
