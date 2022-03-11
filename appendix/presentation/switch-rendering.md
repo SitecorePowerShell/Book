@@ -238,7 +238,7 @@ foreach($sourceRendering in $sourceRenderings) {
 
 ## Related Topics
 
-* [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
+* [#1110](https://github.com/SitecorePowerShell/Console/issues/1110) Switch-Rendering added in 6.0
 * [New-Rendering](new-rendering.md)
 * [Set-Rendering](set-rendering.md)
 * [Get-Rendering](get-rendering.md)
