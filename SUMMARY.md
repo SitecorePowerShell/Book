@@ -153,6 +153,7 @@
     * [Set-Layout](appendix/presentation/set-layout.md)
     * [Set-Rendering](appendix/presentation/set-rendering.md)
     * [Set-RenderingParameter](appendix/presentation/set-renderingparameter.md)
+    * [Switch-Rendering](appendix/presentation/switch-rendering.md)
   * [Provider](appendix/provider/README.md)
     * [Get-Item](appendix/provider/get-item.md)
   * [Security](appendix/security/README.md)
