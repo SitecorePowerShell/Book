@@ -7,7 +7,7 @@ description: View important details on how to keep Sitecore secure while using S
 You need to be mindful that Sitecore PowerShell Extensions is a very sharp tool and while it can be leveraged to do great things, it can also be a vector of dangerous attacks if not secured properly. This is why we recommend that you **do not install** it on Content Delivery instances and if possible avoid deploying it on servers that face Internet altogether.
 
 {% hint style="danger" %}
-Installing SPE in internet facing \(DMZ\) scenarios is not recommend. Please avoid installing in the Content Delivery instances.
+Installing SPE in internet facing \(DMZ\) scenarios is not recommend. Please avoid installing in the Content Delivery instances. Implement a strategy which provides the least amount of access required. Consider locking down the web server to only allow connections to your databases and preapproved web services.
 {% endhint %}
 
 ## Security Policies
