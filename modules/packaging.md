@@ -55,6 +55,8 @@ Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Ver
 **Example:** The following adds a Post Step included with SPE to delete a file.
 
 ```text
+Import-Function -Name New-PackagePostStep
+
 $package = New-Package "Package-of-Stuff"
 $package.Sources.Clear()
 
@@ -68,42 +70,3 @@ $newPackageFiles = @([PSCustomObject]@{"FileName"="/bin/Company.Feature.Unused.d
 $package.Metadata.PostStep = "Spe.Package.Install.PackagePostStep, Spe.Package"
 $package.Metadata.Comment = New-PackagePostStep -PackageFiles $newPackageFiles
 ```
-
-The function `New-PackagePostStep` used by the example above can be included in the same script. 
-```text
-function New-PackagePostStep {
-    param(
-        $PackageItems,
-        $PackageFiles
-    )
-    
-    $writer = New-Object System.IO.StringWriter
-    $output = New-Object System.Xml.XmlTextWriter([System.IO.TextWriter]$writer)
-    $output.Formatting = [System.Xml.Formatting]::Indented
-    $output.WriteStartElement("uninstall")
-    
-    if($PackageItems) {
-        $output.WriteStartElement("items")
-        foreach($packageItem in $PackageItems) {
-            $output.WriteStartElement("item")
-            $output.WriteAttributeString("database", $packageItem.Database)
-            $output.WriteAttributeString("id", $packageItem.ID.ToString())
-            $output.WriteEndElement()
-        }
-        $output.WriteEndElement()
-    }
-    if($PackageFiles) {
-        $output.WriteStartElement("files")
-        foreach($packageFile in $PackageFiles) {
-            $output.WriteStartElement("file")
-            $output.WriteAttributeString("filename", $packageFile.FileName)
-            $output.WriteEndElement()
-        }
-        $output.WriteEndElement()            
-    }
-
-    $output.WriteEndElement()
-    $writer.ToString()
-}
-```
-
