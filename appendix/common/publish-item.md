@@ -32,7 +32,7 @@ Specifies that subitems should also get published with the root item.
 
 ### -Target  &lt;String\[\]&gt;
 
-Specifies the publishing targets. The default target database is "web".
+Specifies one or many publishing targets. The default target database is "web".
 
 | Aliases |  |
 | :--- | :--- |
@@ -209,6 +209,13 @@ PS master:\> Get-Item -Path master:\content\home | Publish-Item -Recurse -Publis
 
 ```text
 PS master:\> Get-Item -Path master:\content\home | Publish-Item -Recurse -Language "en*"
+```
+
+### EXAMPLE 4
+Publish to many databases
+```text
+PS master:\> $targets = [string[]]@('web','internet')
+PS master:\> Publish-Item -Path master:\content\home -Target $targets
 ```
 
 ## Related Topics
