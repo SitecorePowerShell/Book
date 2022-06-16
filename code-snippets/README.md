@@ -101,7 +101,7 @@ foreach($version in $item.Versions.GetVersions()) {
 
 **Example:** The following restores items in the media library that were removed yesterday. [Credit](https://gist.github.com/technomaz/58890edff903123083c77ad8f1b1b2e2) @technomaz.
 
-```text
+```powershell
 Write-Host "Restoring items recycled after $($archivedDate.ToShortDateString())"
 
 foreach($archive in Get-Archive -Name "recyclebin") {
