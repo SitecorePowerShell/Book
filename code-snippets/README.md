@@ -118,6 +118,28 @@ foreach($archive in Get-Archive -Name "recyclebin") {
 }
 ```
 
+## Purge Recycle bin items
+
+**Example:** The following will incrementally purge items from the recycle bin (master db) with a progress counter.
+
+```text
+$database = Get-Database -Name "master"
+$archiveName = "recyclebin"
+$archive = Get-Archive -Database $database -Name $archiveName
+$items = Get-ArchiveItem -Archive $archive
+
+$count = 0
+$total = $items.Count
+foreach($item in $items) {
+    $count++
+    if($count % 100 -eq 0) {
+        Write-Host "[$(Get-Date -Format 'yyyy-MM-dd hh:mm:ss')] $([math]::round($count * 100 / $total, 2))% complete"
+    }
+    $item | Remove-ArchiveItem
+}
+Write-Host "Completed processing recycle bin"
+```
+
 ## Run JavaScript
 
 **Example:** The following logs messages to the browser console and then alerts the user with a message.
