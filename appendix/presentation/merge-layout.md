@@ -4,7 +4,7 @@ The Merge-Layout command takes all the layout information stored in the FinalLay
 
 ## Syntax
 
-```text
+```powershell
 Merge-Layout [-Item] <Item> [-Language <String[]>]
 
 Merge-Layout [-Path] <String> [-Language <String[]>]
@@ -84,7 +84,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following retrieves all pages under home and merges the layout.
 
-```text
+```powershell
 Get-ChildItem master:\content\Showcase\int\home -Recurse | Merge-Layout
 ```
 

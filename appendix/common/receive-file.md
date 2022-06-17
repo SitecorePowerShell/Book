@@ -200,7 +200,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Upload text.txt file to server disk drive. A new file is created with a non-conflicting name and the path to it is returned
 
-```text
+```powershell
 PS master:\> Receive-File -Path "C:\temp\upload"
 C:\temp\upload\text_029.txt
 ```
@@ -209,7 +209,7 @@ C:\temp\upload\text_029.txt
 
 Upload text.txt file to media library under the 'master:\media library\Files' item A new media item is created and returned
 
-```text
+```powershell
 PS master:\> Receive-File -ParentItem (get-item "master:\media library\Files") 
 Name Children Languages Id                                     TemplateName
 ---- -------- --------- --                                     ------------
@@ -220,7 +220,7 @@ text False    {en}      {7B11CE12-C0FC-4650-916C-2FC76F3DCAAF} File
 
 Upload text.txt file to media library under the 'master:\media library\Files' item using advanced dialog. A new media item is created but "undetermined" is returned as the dialog does not return the results.
 
-```text
+```powershell
 PS master:\> Receive-File (get-item "master:\media library\Files") -AdvancedDialog
 undetermined
 ```
@@ -229,7 +229,7 @@ undetermined
 
 Upload text.txt file to media library under the 'master:\media library\Files' item. A new versioned media item in Danish language is created and returned. If the media item existed - it will be overwritten.
 
-```text
+```powershell
 PS master:\> Receive-File -ParentItem (get-item "master:\media library\Files") -Overwrite -Language "da" -Versioned
 Name Children Languages Id                                     TemplateName
 ---- -------- --------- --                                     ------------

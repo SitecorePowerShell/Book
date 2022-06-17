@@ -46,7 +46,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> #Convert original item to xml
 PS master:\> $myCliXmlItem = Get-Item -Path master:\content\home | ConvertTo-CliXml 
 PS master:\> #print the CliXml

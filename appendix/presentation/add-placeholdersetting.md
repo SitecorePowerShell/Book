@@ -4,7 +4,7 @@ Adds a placeholder setting to a chosen device for the presentation of an item.
  
 ## Syntax 
  
-```text
+```powershell
 Add-PlaceholderSetting [-Item] <Item> -Instance <PlaceholderDefinition> [-MetaDataItemId <string>] [-Key <string>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
 
 Add-PlaceholderSetting [-Path] <string> -Instance <PlaceholderDefinition> [-MetaDataItemId <string>] [-Key <string>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
@@ -382,7 +382,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
  
 Create item defining placeholder setting and add to an item
  
-```text
+```powershell
 $placeholderSetting = gi "master:\layout\Placeholder Settings\content" | New-PlaceholderSetting -Key "content"
 $item = gi master:\content\Home
 # Add the placeholder setting to the item
@@ -393,7 +393,7 @@ Add-PlaceholderSetting -Item $item -Instance $placeholderSetting
  
 Create item defining placeholder setting and add to an item, overriding the key
  
-```text 
+```powershell 
 $placeholderSetting = gi "master:\layout\Placeholder Settings\content" | New-PlaceholderSetting -Key "content"
 # find item you want the placeholder setting added to
 $item = gi master:\content\Home

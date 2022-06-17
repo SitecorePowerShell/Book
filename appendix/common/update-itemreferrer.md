@@ -142,7 +142,7 @@ This example covers global operations
 
 Assuming Sitecore PowerShell Extensions 4.2 or newer is installed Assuming your Home has an "Image" field of type "Image" Assuming you have second item next to Home called Home2 that has an "Image" field of type "Image"
 
-```text
+```powershell
 $coverImage = Get-Item 'master:\media library\Default Website\cover'
 $scLogoImage = Get-item 'master:\media library\Default Website\sc_logo'
 
@@ -175,7 +175,7 @@ This example covers more fine-grained filtered approach to removing links
 
 Assuming Sitecore PowerShell Extensions 4.2 or newer is installed Assuming your Home has an "Image" field of type "Image" Assuming you have second item next to Home called Home2 that has an "Image" field of type "Image"
 
-```text
+```powershell
 $coverImage = Get-Item 'master:\media library\Default Website\cover'
 $scLogoImage = Get-item 'master:\media library\Default Website\sc_logo'
 
@@ -202,7 +202,7 @@ This example covers more fine-grained filtered approach to removing links
 
 Assuming Sitecore PowerShell Extensions 4.2 or newer is installed Assuming your Home has an "Image" field of type "Image" Assuming you have second item next to Home called Home2 that has an "Image" field of type "Image"
 
-```text
+```powershell
 $coverImage = Get-Item 'master:\media library\Default Website\cover'
 $scLogoImage = Get-item 'master:\media library\Default Website\sc_logo'
 

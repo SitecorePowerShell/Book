@@ -22,7 +22,7 @@ The path structure needs to follow `[MODULE]/Internal/ISE Plugins/[PLUGIN_NAME]`
 
 Use the following sample to fill in the script body.
 
-```text
+```powershell
 if([string]::IsNullOrWhiteSpace($scriptText)){
     Show-Alert "Script is empty - nothing to format."
     exit

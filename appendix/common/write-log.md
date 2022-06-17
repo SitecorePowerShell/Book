@@ -72,7 +72,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Write-Log "Information."
 ```
 

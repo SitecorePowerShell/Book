@@ -114,7 +114,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Show Content Editor in new window \(or as an overlay in modal mode in Sitecore 7.2+\) with "/sitecore/templates" item selected.
 
-```text
+```powershell
 $item = gi master:\templates
 
 Show-Application `
@@ -127,7 +127,7 @@ Show-Application `
 
 Show Content Editor as a new application on desktop with "/sitecore/content/home" item selected.
 
-```text
+```powershell
 $item = gi master:\content\home
 
 Show-Application `

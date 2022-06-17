@@ -6,7 +6,7 @@ In this section we'll show how to manage item renderings.
 
 **Example:** The following demonstrates the use of `Get-LayoutDevice` and `Get-Rendering` to find all renderings on a page associated with the FinalLayout.
 
-```text
+```powershell
 $defaultLayout = Get-LayoutDevice -Default
 $rootItem = Get-Item -Path "master:" -ID "{961563FC-3445-4558-BF3A-06DF06BA6298}"
 Get-Rendering -Item $rootItem -Device $defaultLayout -FinalLayout
@@ -16,7 +16,7 @@ Get-Rendering -Item $rootItem -Device $defaultLayout -FinalLayout
 
 **Example:** The following demonstrates the use of `Get-Rendering` and `Set-Rendering` for updating values on templates.
 
-```text
+```powershell
 $rendering = Get-Item -Path "master:\sitecore\layout\Sublayouts\Sample Sublayout"
 
 $items = Get-ChildItem -Path "master:\sitecore\templates\Sample Item" -Recurse 
@@ -35,7 +35,7 @@ foreach($item in $items) {
 
 **Example:** The following demonstrates how to report on pages referencing the specified rendering.
 
-```text
+```powershell
 Get-Item "master:\layout\Renderings\Feature\Experience Accelerator\Page Content\Page Content" | 
     Get-ItemReferrer | Where-Object { $_.ContentPath.StartsWith("/Demo/usa/Home") } | Show-ListView
 ```
@@ -44,7 +44,7 @@ Get-Item "master:\layout\Renderings\Feature\Experience Accelerator\Page Content\
 
 **Example:** The following demonstrates how to report on which renderings are globally set to "Cacheable".
 
-```text
+```powershell
 Get-ChildItem -Path "master:\layout\Renderings" -Recurse | 
     Where-Object { $_.Cacheable -eq "1" } | 
     Select-Object -Property Name, Cacheable, ClearOnIndexUpdate, VaryBy* | 
@@ -55,7 +55,7 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
 
 **Example:** The following demonstrates how to find renderings with a conditions node set on the item.
 
-```text
+```powershell
 $query = "fast:/sitecore/content//*[@__renderings='%<conditions%' or @#__Final Renderings#='%<conditions%']"
 $items = Get-Item -Path "master:" -Query $query
 ```
@@ -64,7 +64,7 @@ $items = Get-Item -Path "master:" -Query $query
 
 **Example:** The following demonstrates how to disable global caching on all renderings.
 
-```text
+```powershell
 $VerbosePreference = "Continue"
 Get-ChildItem -Path "master:\layout\Renderings" -Recurse | 
     Where-Object { $_.Cacheable -eq "1" } | 
@@ -77,7 +77,7 @@ Get-ChildItem -Path "master:\layout\Renderings" -Recurse |
 
 **Example:** The following moves renderings from one placeholder to another. [See this article for more details](https://www.kasaku.co.uk/2018/02/28/updating-rendering-placeholders/).
 
-```text
+```powershell
 $placeholderMappings = @(
  @("/old-placeholder","/new-placeholder"),
  @("/another-old-placeholder","/new-placeholder")
@@ -118,14 +118,14 @@ foreach ( $item in Get-ChildItem -Item $rootItem -Recurse )
 
 **Example:** The following removes a datasource from a rendering on the FinalLayout.
 
-```text
+```powershell
 Get-Rendering -Item $item -PlaceHolder "main" | 
   Foreach-Object { Set-Rendering -Item $item -Instance $_ -DataSource $null -FinalLayout }
 ```
 
 ### Replace compatible rendering
 
-```text
+```powershell
 $rendering = Get-Item master:\layout\path\to\your\rendering
 $renderingPageContainer = Get-Rendering -Item $item "{F39BAC93-1EEC-446B-A4A1-AB7F7C1B6267}" -Device $defaultLayout
 $renderingPageContainer.ItemID = $rendering.ID

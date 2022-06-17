@@ -118,7 +118,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\>Get-ItemReference -Path master:\content\home
 
 Name                             Children Languages                Id                                     TemplateName
@@ -129,7 +129,7 @@ Home                             True     {en, de-DE, es-ES, pt... {110D559F-DEA
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\>Get-Item master:\content\home | Get-ItemReference -ItemLink
 
 SourceItemLanguage : en

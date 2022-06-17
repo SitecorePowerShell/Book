@@ -20,7 +20,7 @@ The Identity parameter specifies the Sitecore user to create. You can specify a 
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: developer
 Fully Qualified Name
@@ -131,19 +131,19 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> New-User -Identity michael
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> New-User -Identity michael -Enabled -Password b -Email michaellwest@gmail.com -FullName "Michael West"
 ```
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> New-User -Identity michael -PassThru
 
 Name                     Domain       IsAdministrator IsAuthenticated

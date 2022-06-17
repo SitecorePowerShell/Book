@@ -18,13 +18,13 @@ When executed, this report provides a paged view of the SPE commands.
 
 To display the available help for a command in the Console, simply use the Get-Help command:
 
-```text
+```powershell
 Get-Help Get-Rendering
 ```
 
 For full documentation, including examples, use the `-Full` parameter:
 
-```text
+```powershell
 Get-Help Get-Rendering -Full
 ```
 
@@ -44,7 +44,7 @@ When writing scripts, you are able to include formatted comments that will be us
 
 **Example:** A simple function with documentation:
 
-```text
+```powershell
 <#
     .SYNOPSIS 
     A short synopsis of this function.
@@ -68,7 +68,7 @@ Function Output-String
 
 Once the script containing this function has been invoked, the help text will be available:
 
-```text
+```powershell
 Get-Help Output-String
 ```
 

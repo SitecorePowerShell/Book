@@ -4,7 +4,7 @@ Adds a rendering to a chosen device for the presentation of an item.
 
 ## Syntax
 
-```text
+```powershell
 Add-Rendering [-Item] <Item> -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>] [-PassThru]
 
 Add-Rendering [-Path] <String> -Instance <RenderingDefinition> [-Parameter <Hashtable>] -PlaceHolder <String> [-DataSource <String>] [-Index <Int32>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>] [-PassThru]
@@ -194,7 +194,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Find item defining rendering and create rendering definition.
 
-```text
+```powershell
 # Find the rendering item and convert to a rendering
 $renderingPath = "/sitecore/layout/Renderings/Feature/Experience Accelerator/Page Content/Page Content"
 $renderingItem = Get-Item -Database "master" -Path $renderingPath | New-Rendering -Placeholder "main"

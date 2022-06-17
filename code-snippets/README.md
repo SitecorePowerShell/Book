@@ -8,7 +8,7 @@ description: Useful code snippets to help you with those complex scripts.
 
 **Example:** The following demonstrates how to list all of the fields of a template excluding the Standard Template fields.
 
-```text
+```powershell
 # Create a list of field names on the Standard Template. This will help us filter out extraneous fields.
 $standardTemplate = Get-Item -Path "master:" -ID "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 $standardTemplateTemplateItem = [Sitecore.Data.Items.TemplateItem]$standardTemplate
@@ -25,7 +25,7 @@ $filterFields = $itemTemplateFields | Where-Object { $standardFields -notcontain
 
 **Example:** The following demonstrates how to generate the public facing url from a media item.
 
-```text
+```powershell
 $item = Get-Item -Path "master:{04DAD0FD-DB66-4070-881F-17264CA257E1}"
 $siteName = "website"
 
@@ -41,7 +41,7 @@ New-UsingBlock (New-Object Sitecore.Sites.SiteContextSwitcher $site) {
 
 **Example:** The following demonstrates the use of the **HtmlAgilityPack** for parsing html.
 
-```text
+```powershell
 $html = "<ul><li>foo</li><li>bar</li></ul>"
 $htmlDocument = New-Object -TypeName HtmlAgilityPack.HtmlDocument
 $htmlDocument.LoadHtml($html)
@@ -52,7 +52,7 @@ foreach($x in $htmlDocument.DocumentNode.SelectNodes("//li")) {
 
 **Example:** The following demonstrates how to update text in the document and exclude certain nodes.
 
-```text
+```powershell
 $html = @"
 <div class="kitchen">
    <div class="kitchen">
@@ -83,7 +83,7 @@ $htmlDocument.DocumentNode.OuterHtml
 
 **Example:** The following prints the workflow history of the home item.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -Id "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 
 $db = Get-Database -Name "master"
@@ -122,7 +122,7 @@ foreach($archive in Get-Archive -Name "recyclebin") {
 
 **Example:** The following will incrementally purge items from the recycle bin (master db) with a progress counter.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName
@@ -144,7 +144,7 @@ Write-Host "Completed processing recycle bin"
 
 **Example:** The following logs messages to the browser console and then alerts the user with a message.
 
-```text
+```powershell
 1..5 | ForEach-Object { 
     Start-Sleep -Seconds 1
     Invoke-JavaScript -Script "console.log('Hello World! Call #$($_) from PowerShell...');" 
@@ -159,7 +159,7 @@ Invoke-JavaScript -Script "alert('hello from powershell');"
 
 **Example:** [Remote Package Installation](https://gist.github.com/michaellwest/14e9ef98f9e8b450c1b39813d13cbc50)
 
-```text
+```powershell
 Import-Module -Name SPE -Force
 
 $packageName = "$($SitecorePackageFolder)\[PACKAGE].zip"

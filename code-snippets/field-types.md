@@ -8,14 +8,14 @@ description: Examples for managing complex field types such as MultilistField an
 
 **Example:** The following demonstrates how to set a field to a known list of Ids. The Id is already converted to a GUID string.
 
-```text
+```powershell
 # Hardcoded list of Ids.
 $item.Editing.BeginEdit()
 $item["Allowed Controls"] = "{guid1}|{guid2}|{guid3}"
 $item.Editing.EndEdit()
 ```
 
-```text
+```powershell
 # Array of Ids.
 $array = [System.Collections.ArrayList]@()
 $array.Add({guid1}) > $null
@@ -28,7 +28,7 @@ $item.Editing.EndEdit()
 
 **Example:** The following replaces an instance of an Id with an alternate Id. The Id is already converted to a GUID string.
 
-```text
+```powershell
 [Sitecore.Data.Fields.MultilistField]$field = $item.Fields["Allowed Controls"]
 $item.Editing.BeginEdit()
 $field.Replace("{493B3A83-0FA7-4484-8FC9-4680991CF742}","{493B3A83-0FA7-4484-8FC9-4680991CF743}")
@@ -37,7 +37,7 @@ $item.Editing.EndEdit()
 
 **Example:** The following adds new Ids to an existing list. Makes use of the `Sitecore.Text.ListString` class.
 
-```text
+```powershell
 [Sitecore.Text.ListString]$ids = $item.Fields["Rendering"].Value
 $ids.AddAt(0,"{guid1}") > $null
 $ids.Add("{guid2}") > $null
@@ -50,7 +50,7 @@ $item.Editing.EndEdit() > $null
 
 **Example:** The following appends a an `ID` to a set of items in all languages. It verifies that the field _Keywords_ exists.
 
-```text
+```powershell
 $items = Get-ChildItem -Path "master:\sitecore\content\home" -Recurse -Language *
 foreach($item in $items) {
     if ($item.Keywords -and $item.Keywords.Length -gt 0) {
@@ -63,7 +63,7 @@ foreach($item in $items) {
 
 **Example:** The following example gets all of the items of a `MultilistField` and append a specific `ID`, ensuring that it's delimited with the `|` character.
 
-```text
+```powershell
 $items = Get-ChildItem -Path "master:\sitecore\content\home" -Recurse -Language *
 foreach($item in $items) {
     $item.Keywords = (@() + $item.Keywords.GetItems().ID + "{6D1EACDD-0DE7-4F3D-B55A-2CAE8EBFF3D0}" | Select-Object -Unique) -join "|"
@@ -72,7 +72,7 @@ foreach($item in $items) {
 
 **Example:** The following example extracts the items from a 'keywords' field, comma separates the values, and then outputs to a report.
 
-```text
+```powershell
 function Get-KeywordsAsString($item) {
     [Sitecore.Data.Fields.MultilistField] $field = $item.Fields["Keywords"]
     $items = $field.GetItems()
@@ -88,7 +88,7 @@ Get-ChildItem -Path 'master:\content\home\path-to-item' `
 
 **Example:** The following example gets all of the name/value pairs of a `NameValueListField` and appends a new pair.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -ID "{371EEE15-B6F3-423A-BB25-0B5CED860EEA}"
 
 $nameValues = [System.Web.HttpUtility]::ParseQueryString($item.UrlMapping)

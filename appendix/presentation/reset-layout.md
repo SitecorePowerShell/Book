@@ -4,7 +4,7 @@ Resets the SharedLayout or FinalLayout field for the specified item.
 
 ## Syntax
 
-```text
+```powershell
 Reset-Layout [-Item] <Item> [-FinalLayout] [-Language <String[]>]
 
 Reset-Layout [-Path] <String> [-FinalLayout] [-Language <String[]>]
@@ -112,7 +112,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 The following resets the layout information on the SharedLayout.
 
-```text
+```powershell
 Reset-Layout -Path master:\content\home
 ```
 

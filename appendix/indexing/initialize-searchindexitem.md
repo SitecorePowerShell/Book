@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```powershell
 Initialize-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
 Initialize-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
 Initialize-SearchIndexItem -SearchResultItem <SearchResultItem> [-AsJob]
@@ -68,7 +68,7 @@ The following abbreviations are aliases for this cmdlet:
 
 The following rebuilds the index for a given tree with the specified root node and index name.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $indexName = "sitecore_master_index"
 Initialize-SearchIndexItem -Item $item -Name $indexName
@@ -78,7 +78,7 @@ Initialize-SearchIndexItem -Item $item -Name $indexName
 
 The following rebuilds the indexes matching the wildcard pattern for a given tree with the specified root node and index name.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $indexName = "sitecore_*_index"
 Initialize-SearchIndexItem -Item $item -Name $indexName

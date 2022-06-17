@@ -4,7 +4,7 @@ The Get-PlaceholderSetting command returns PlaceholderSettingDefinition(s) for a
  
 ## Syntax 
  
-```text
+```powershell
 Get-PlaceholderSetting -Item <Item> [-Key <string>] [-PlaceholderSetting <Item>] [-Index <int>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
 
 Get-PlaceholderSetting -Item <Item> -Instance <PlaceholderDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
@@ -462,7 +462,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
  
 Get all placeholder settings for "Default" device, using any key matching the wildcard "content*"
  
-```text
+```powershell
 Get-Item master:\content\home | Get-PlaceholderSetting -Key "content*" -Device (Get-LayoutDevice "Default") 
 ``` 
  

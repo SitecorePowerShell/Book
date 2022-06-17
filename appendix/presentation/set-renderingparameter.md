@@ -4,7 +4,7 @@ Adds and updates the specified rendering parameter from the rendering.
 
 ## Syntax
 
-```text
+```powershell
 Set-RenderingParameter -Instance <RenderingDefinition> -Parameter <IDictionary> [-Overwrite]
 ```
 
@@ -74,7 +74,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following updates the specified rendering parameter and updates the item.
 
-```text
+```powershell
 $item = Get-Item -Path "master" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 
 # Accepts Hashtable, Ordered Dictionaries, etc.

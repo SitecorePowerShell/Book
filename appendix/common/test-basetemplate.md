@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```powershell
 Test-BaseTemplate -Item <Item> -TemplateItem <TemplateItem[]>
 Test-BaseTemplate -Item <Item> -Template <String[]>
 Test-BaseTemplate -Path <String> -TemplateItem <TemplateItem[]>
@@ -88,7 +88,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following example determines if the item inherits from the specified template.
 
-```text
+```powershell
 $item = Get-Item -Path "master:\content\home"
 Test-BaseTemplate -Item $item -Template "Sample/Sample Content"
 

@@ -114,7 +114,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 Remove base template of /sitecore/templates/User Defined/BaseTemplate from a template, using a path.
 
-```text
+```powershell
 PS master:\> Remove-BaseTemplate -Path "master:/sitecore/content/User Defined/Page" -Template "/sitecore/templates/User Defined/BaseTemplate"
 ```
 
@@ -122,7 +122,7 @@ PS master:\> Remove-BaseTemplate -Path "master:/sitecore/content/User Defined/Pa
 
 Remove multiple base templates from a template, using items.
 
-```text
+```powershell
 PS master:\> $baseA = Get-Item -Path master:/sitecore/content/User Defined/BaseTemplateA
        PS master:\> $baseB = Get-Item -Path master:/sitecore/content/User Defined/BaseTemplateB
        PS master:\> Remove-BaseTemplate -Path "master:/sitecore/content/User Defined/Page" -TemplateItem @($baseA, $baseB)

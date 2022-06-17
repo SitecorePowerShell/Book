@@ -80,7 +80,7 @@ The _Ribbon_ integration reveals commands to the user in the ribbon. The Sitecor
 
 **Example:** The following script gets the selected Context Menu item and displays an alert using the item name.
 
-```text
+```powershell
 # Use the notation "." to get the current directory/item.
 $item = Get-Item -Path .
 Show-Alert -Title $item.Name

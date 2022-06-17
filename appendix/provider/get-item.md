@@ -152,7 +152,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following gets the item using the path.
 
-```text
+```powershell
 Get-Item -Path "master:\content\home"
 ```
 
@@ -160,7 +160,7 @@ Get-Item -Path "master:\content\home"
 
 The following gets all items in the master database, located under Content, which are based on the template **Sample Item** using a Sitecore query.
 
-```text
+```powershell
 Get-Item -Path "master:" -Query "/sitecore/content//*[@@templatename='Sample Item']"
 ```
 
@@ -168,7 +168,7 @@ Get-Item -Path "master:" -Query "/sitecore/content//*[@@templatename='Sample Ite
 
 The following gets the item in the master database with the specified `ID`.
 
-```text
+```powershell
 Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 ```
 
@@ -176,7 +176,7 @@ Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 
 The following gets the item in the master database using the Uri.
 
-```text
+```powershell
 Get-Item -Path "master:" -Uri "sitecore://master/{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}?lang=en&ver=1"
 ```
 

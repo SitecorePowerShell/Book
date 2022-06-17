@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```powershell
 Remove-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
 Remove-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
 Remove-SearchIndexItem -SearchResultItem <SearchResultItem> [-AsJob]
@@ -62,7 +62,7 @@ Removes an indexed item from the specified index. Supports wildcard filtering fo
 
 The following removes the indexed item from the specified search index.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $indexName = "sitecore_master_index"
 Remove-SearchIndexItem -Item $item -Name $indexName
@@ -72,7 +72,7 @@ Remove-SearchIndexItem -Item $item -Name $indexName
 
 The following removes the indexed item from the indexes matching the wildcard pattern.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $indexName = "sitecore_*_index"
 Remove-SearchIndexItem -Item $item -Name $indexName

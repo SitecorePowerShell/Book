@@ -4,7 +4,7 @@ Updates rendering with new values.
 
 ## Syntax
 
-```text
+```powershell
 Set-Rendering [-Item] <Item> -Instance <RenderingDefinition> [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <String>] [-Index <Int32>] [-FinalLayout] [-Device <DeviceItem>] [-Language <String[]>]
 
 Set-Rendering [-Path] <String> -Instance <RenderingDefinition> [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <String>] [-Index <Int32>] [-FinalLayout] [-Device <DeviceItem>] [-Language <String[]>]
@@ -178,7 +178,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Change all rendering's placeholder from main to footer.
 
-```text
+```powershell
 $item = Get-Item -Path master:\content\home
 Get-Rendering -Item $item -PlaceHolder "main" | 
     Foreach-Object { 
@@ -191,7 +191,7 @@ Get-Rendering -Item $item -PlaceHolder "main" |
 
 Clear the datasource value for a rendering.
 
-```text
+```powershell
 $item = Get-Item -Path master:\content\home
 Get-Rendering -Item $item -PlaceHolder "main" | 
     Foreach-Object { 

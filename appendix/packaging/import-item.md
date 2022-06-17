@@ -157,13 +157,13 @@ Help Author: Marek Musielak, Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Import-Item -path "c:\project\data\serialization\master\sitecore\content\articles" -root "c:\project\data\serialization\"
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Import-Item -path "c:\project\data\serialization\master\sitecore\content\articles" -root "c:\project\data\serialization\" -recurse
 ```
 

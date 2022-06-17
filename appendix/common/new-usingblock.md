@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Assuming all items under /sitecore/content/home have both 'Title' and 'MetaTitle' fields... Using New-UsingBlock to bulk update items under /sitecore/Content/ to have their 'MetaTitle' field to be equal to the 'Title' field
 
-```text
+```powershell
 New-UsingBlock (New-Object Sitecore.Data.BulkUpdateContext) {
 foreach ( $item in (Get-ChildItem -Path master:\Content\Home -Recurse -WithParent) ) {
         $item."MetaTitle" = $item.Title
@@ -72,7 +72,7 @@ foreach ( $item in (Get-ChildItem -Path master:\Content\Home -Recurse -WithParen
 
 Using New-UsingBlock to perform a test with UserSwitcher - checking whether an anonymous user can change a field The test should end up showing the error as below and the Title should not be changed!
 
-```text
+```powershell
 $anonymous = Get-User -Identity "extranet\Anonymous"
 $testItem = Get-Item -Path master:\Content\Home
 

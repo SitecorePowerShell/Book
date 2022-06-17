@@ -195,19 +195,19 @@ Help Author: Michael West, Adam Najmanowicz
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Publish-Item -Path master:\content\home -Target Internet
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-Item -Path master:\content\home | Publish-Item -Recurse -PublishMode Incremental
 ```
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Get-Item -Path master:\content\home | Publish-Item -Recurse -Language "en*"
 ```
 

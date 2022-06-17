@@ -58,7 +58,7 @@ Actions are simply commands powered by scripts and with visibility dependent on 
 
 You define an action as a script located in an SPE script library and appears in the Actions panel. In the simplest scenario the action would appear when the script library name matches the .Net class name of the items displayed. In the above scenario the actions are placed under `/Platform/Internal/List View/Ribbon/Item/` where _Platform_ is the module and _Item_ is a script library. Let's take a look at the script here `/Platform/Internal/List View/Ribbon/Item/Open`
 
-```text
+```powershell
 foreach($item in $selectedData){
 # Run Sheer application on Desktop
 Show-Application `
@@ -107,7 +107,7 @@ For specific reports this global state might not always be enough. You can narro
 
 Consider the following script:
 
-```text
+```powershell
 Get-ChildItem master:\ | Show-ListView -ViewName ListChildren
 ```
 
@@ -129,7 +129,7 @@ Now you can specify that you want the action to only appear when the report is n
 
 Confirm the save on all dialogs to persist your changes. Now our action appears when we run this script in ISE.
 
-```text
+```powershell
 Get-ChildItem master:\ | Show-ListView -ViewName ListChildren -Property Name, ProviderPath
 ```
 
@@ -137,7 +137,7 @@ Get-ChildItem master:\ | Show-ListView -ViewName ListChildren -Property Name, Pr
 
 The action does not appear if no view name is provided to the `-ViewName` parameter. Running the script below will produce a report with the action not shown:
 
-```text
+```powershell
 Get-ChildItem master:\ | Show-ListView -Property Name, ProviderPath
 ```
 
@@ -155,7 +155,7 @@ In this case we're not closing the existing report but rather updating the list 
 
 One last thing that you might wonder is if the Write-Progress command works as it does in case of ISE or the dialog that runs scripts from Content Editor context menu. Let’s copy the following script into your action:
 
-```text
+```powershell
 for($i = 0; $i -le 10; $i++){
   Write-Progress -Activity "I need to do something important for 5 seconds" `
     -Status "I'm quite on track..." `
@@ -213,7 +213,7 @@ Add parameter `-Hide` with one or more of the following options:
 
 **Example:** The following example all of the UI elements in the report.
 
-```text
+```powershell
 Get-ChildItem master:\ | 
     Show-ListView `
         -Hide AllActions, AllExport, Filter, PagingWhenNotNeeded, StatusBar `

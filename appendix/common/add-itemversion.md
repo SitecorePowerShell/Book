@@ -4,7 +4,7 @@ Creates a version of the item in a new language based on an existing language ve
 
 ## Syntax
 
-```text
+```powershell
 Add-ItemVersion [-Item] <Item> [-Recurse] [-IfExist <Append | Skip | OverwriteLatest>] [-TargetLanguage <String[]>] [-DoNotCopyFields] [-IgnoredFields <String[]>] [-Language <String[]>]
 
 Add-ItemVersion [-Path] <String> [-Recurse] [-IfExist <Append | Skip | OverwriteLatest>] [-TargetLanguage <String[]>] [-DoNotCopyFields] [-IgnoredFields <String[]>] [-Language <String[]>]
@@ -200,13 +200,13 @@ Help Author: Adam Najmanowicz, Michael West
 
 Translate the Home Item from English to US and Polish leaving the "Title" field blank. If a version exists don't do anything
 
-```text
+```powershell
 PS master:\> Add-ItemVersion -Path "master:\content\home" -Language "en" -TargetLanguage "pl-pl", "en-us" -IfExist Skip -IgnoredFields "Title"
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 Add a Japanese version to /sitecore/content/home item in the master database based on itself
 PS master:\> Add-ItemVersion -Path "master:\content\home" -Language ja-JP -IfExist Append
 ```
@@ -215,7 +215,7 @@ PS master:\> Add-ItemVersion -Path "master:\content\home" -Language ja-JP -IfExi
 
 Translate the children of Home item \(but only those of Template Name "Sample Item"\) from English to US and Polish. If a version exists create a new version for that language. Display results in a table listing item name, language and created version number.
 
-```text
+```powershell
 Get-ChildItem "master:\content\home" -Language "en" -Recurse | `
     Where-Object { $_.TemplateName -eq "Sample Item" } | `
     Add-ItemVersion -TargetLanguage "pl-pl" -IfExist Append | `

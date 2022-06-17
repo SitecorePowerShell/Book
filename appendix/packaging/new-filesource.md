@@ -88,7 +88,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Following example creates a new package, adds content of the Console folder under the site folder saves it in the Sitecore Package folder + gives you an option to download the saved package.
 
-```text
+```powershell
 # Create package
 $package = New-Package "Packing in Powerful Ways";
 

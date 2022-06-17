@@ -4,7 +4,7 @@ Retrieves a list of items found in the specified archive.
 
 ## Syntax
 
-```text
+```powershell
 Get-ArchiveItem -Archive <Archive>
 Get-ArchiveItem -Archive <Archive> [-ItemId <ID>]
 Get-ArchiveItem -Archive <Archive> [-Identity <AccountIdentity>]
@@ -74,7 +74,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following returns all items found in the specified archive.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName
@@ -85,7 +85,7 @@ Get-ArchiveItem -Archive $archive
 
 The following returns items matching the ItemId found in the specified archive.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName
@@ -96,7 +96,7 @@ Get-ArchiveItem -Archive $archive -ItemId "{1BB32980-66B4-4ADA-9170-10A9D3336613
 
 The following returns items moved to the recycle bin by the user found in the specified archive.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName

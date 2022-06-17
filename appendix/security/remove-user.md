@@ -22,7 +22,7 @@ The Identity parameter specifies the Sitecore user to remove. You can specify a 
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: admin
 Fully Qualified Name
@@ -71,19 +71,19 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Remove-User -Identity michael
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> "michael","adam","mike" | Remove-User
 ```
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Get-User -Filter sitecore\m* | Remove-User
 ```
 

@@ -36,7 +36,7 @@ User or role name including domain for which the access rule is being created. I
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: adam
 Fully Qualified Name
@@ -121,7 +121,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Following example creates a new package, adds sitecore\admin user to it and saves it in the Sitecore Package folder+ gives you an option to download the saved package.
 
-```text
+```powershell
 # Create package
 $package = New-Package "Packing in Powerful Ways";
 
@@ -148,7 +148,7 @@ Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Versi
 
 Following example creates a new package, adds all roles within the "sitecore" domain to it and saves it in the Sitecore Package folder+ gives you an option to download the saved package.
 
-```text
+```powershell
 $package = New-Package "Packing in Powerful Ways";
 
 # Set package metadata

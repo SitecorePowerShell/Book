@@ -54,7 +54,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 The following removes the script session using the specified Id.
 
 PS master:\> Remove-ScriptSession -Id "Long running script"

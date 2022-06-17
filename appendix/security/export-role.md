@@ -26,7 +26,7 @@ The Export-Role command exports \(serializes\) Sitecore roles to the filesystem 
 
 Specifies the Sitecore role by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: developer
 Fully Qualified Name
@@ -117,25 +117,25 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Export-Role -Identity sitecore\Author
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Export-Role -Filter sitecore\*
 ```
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Export-Role -Root C:\my\Serialization\Folder\ -Filter *\*
 ```
 
 ### EXAMPLE 4
 
-```text
+```powershell
 PS master:\> Export-Role -Path C:\my\Serialization\Folder\Authors.role -Identity sitecore\Author
 ```
 

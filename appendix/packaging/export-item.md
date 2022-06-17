@@ -148,7 +148,7 @@ Help Author: Marek Musielak, Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Export-Item -Path master:\content\home
 ```
 

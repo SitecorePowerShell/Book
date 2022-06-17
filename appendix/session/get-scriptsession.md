@@ -96,7 +96,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\>Get-ScriptSession
 
 Type         Key                                                                              Location                                 Auto Disposed
@@ -108,7 +108,7 @@ Context      $scriptSession$|zwlyrcmmzwisv22djsv0ej2a|packageBuilder            
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\>Get-ScriptSession -Current
 
 Type         Key                                                                              Location                                 Auto Disposed

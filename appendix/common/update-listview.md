@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 This example consists of 2 scripts - a report that shows a list view and the second one that updates the list view from an action.
 
-```text
+```powershell
 # THE INITIAL SCRIPT showing the list of tasks in a list view
 # This script does not yet make use of Update-ListView but tests the state for actions to be performed
 

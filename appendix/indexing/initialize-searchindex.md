@@ -4,7 +4,7 @@ Rebuilds the Sitecore index.
 
 ## Syntax
 
-```text
+```powershell
 Initialize-SearchIndex -Index <ISearchIndex> [-IncludeRemoteIndex] [-AsJob]
 Initialize-SearchIndex [-IncludeRemoteIndex] [-Name <String>] [-AsJob]
 Initialize-SearchIndex [-Name <String>] [-AsJob]
@@ -92,7 +92,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 The following rebuilds the index.
 
 Initialize-SearchIndex -Name sitecore_master_index
@@ -100,7 +100,7 @@ Initialize-SearchIndex -Name sitecore_master_index
 
 ### EXAMPLE 2
 
-```text
+```powershell
 The following rebuilds the index.
 
 Get-SearchIndex -Name sitecore_master_index | Initialize-SearchIndex

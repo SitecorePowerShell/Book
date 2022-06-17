@@ -20,7 +20,7 @@ The Identity parameter specifies the Sitecore role to get. You can specify a rol
 
 Specifies the Sitecore role by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: developer
 Fully Qualified Name
@@ -67,7 +67,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Add-RoleMember -Identity developer -Members "michael","adam","mike"
 ```
 
@@ -75,7 +75,7 @@ PS master:\> Add-RoleMember -Identity developer -Members "michael","adam","mike"
 
 The following adds all users of a given domain to the Developer role.
 
-```text
+```powershell
 $users = Get-User -Filter * | Where-Object { @("ad1","ad2") -contains $_.Domain }
 Add-RoleMember -Identity "sitecore\Developer" -Members $users
 ```

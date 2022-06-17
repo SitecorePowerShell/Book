@@ -204,7 +204,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Show field editor that shows all non-standard fields on sitecore/content/home item except for field "title" The dialog will be titled "My Home Item" all fields inside will be in single section.
 
-```text
+```powershell
 PS master:\> Show-FieldEditor -Path master:\content\home -Name "*" , "-Title" -Title "My Home Item"
 ```
 
@@ -212,7 +212,7 @@ PS master:\> Show-FieldEditor -Path master:\content\home -Name "*" , "-Title" -T
 
 Show field editor that shows all fields including standard fields on sitecore/content/home The dialog will preserve the item sections.
 
-```text
+```powershell
 PS master:\> Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -IncludeStandardFields -PreserveSections
 ```
 

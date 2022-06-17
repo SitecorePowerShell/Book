@@ -4,7 +4,7 @@ Sets item layout for a device.
 
 ## Syntax
 
-```text
+```powershell
 Set-Layout [-Item] <Item> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
 
 Set-Layout [-Path] <String> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
@@ -128,7 +128,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 # where my test page will go
 $path = 'master:\content\Sample'
 

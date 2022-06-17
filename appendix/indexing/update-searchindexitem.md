@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```powershell
 Update-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
 Update-SearchIndexItem -Item <Item> [-Name <String>] [-AsJob]
 Update-SearchIndexItem -SearchResultItem <SearchResultItem> [-AsJob]
@@ -62,7 +62,7 @@ Update-SearchIndexItem -SearchResultItem <SearchResultItem> [-AsJob]
 
 The following updates the index for a given item and index name.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $indexName = "sitecore_master_index"
 Update-SearchIndexItem -Item $item -Name $indexName
@@ -72,7 +72,7 @@ Update-SearchIndexItem -Item $item -Name $indexName
 
 The following updates the indexed item for the indexes matching the wildcard pattern.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $indexName = "sitecore_*_index"
 Update-SearchIndexItem -Item $item -Name $indexName

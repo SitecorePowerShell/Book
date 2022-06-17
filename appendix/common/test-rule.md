@@ -72,7 +72,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Specifies a rule as "items that have layout" and runs the rule againste all items under the ome Item
 
-```text
+```powershell
 $rule = '<ruleset>
 <rule uid="{9CF02118-F189-49C4-9F2B-6698D64ACF23}">
 <conditions>
@@ -88,7 +88,7 @@ Get-ChildItem master:\content\Home -Recurse | ? { Test-Rule -InputObject $_ -Rul
 
 Asks user for the rule and root under which items should be filtered, and lists all items fulfilling the rule under the selected path
 
-```text
+```powershell
 $rule = '<ruleset></ruleset>'
 $root = Get-Item master:\content\home\ 
 

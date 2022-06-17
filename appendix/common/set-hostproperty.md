@@ -72,7 +72,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Set width of the console buffer to 80 and persist it for the future instances
 
-```text
+```powershell
 PS master:\> Set-HostProperty -HostWidth 80 -Persist
 ```
 
@@ -80,7 +80,7 @@ PS master:\> Set-HostProperty -HostWidth 80 -Persist
 
 Set color of the console text to cyan. Next instance of the console will revert to default \(white\).
 
-```text
+```powershell
 PS master:\> Set-HostProperty -ForegroundColor Cyan
 ```
 

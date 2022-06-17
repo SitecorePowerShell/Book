@@ -4,7 +4,7 @@ Adds new access rule to an item allowing for the item to have the access granted
 
 ## Syntax
 
-```text
+```powershell
 Add-ItemAcl -PropagationType <Unknown | Descendants | Entity | Any> -SecurityPermission <NotSet | AllowAccess | DenyAccess | AllowInheritance | DenyInheritance> -AccessRight <String> -Identity <AccountIdentity> -Path <String> [-PassThru]
 Add-ItemAcl -PropagationType <Unknown | Descendants | Entity | Any> -SecurityPermission <NotSet | AllowAccess | DenyAccess | AllowInheritance | DenyInheritance> -AccessRight <String> -Identity <AccountIdentity> -Id <String> [-Database <String>] [-PassThru]
 Add-ItemAcl -PropagationType <Unknown | Descendants | Entity | Any> -SecurityPermission <NotSet | AllowAccess | DenyAccess | AllowInheritance | DenyInheritance> -AccessRight <String> -Identity <AccountIdentity> -Item <Item> [-PassThru]
@@ -121,7 +121,7 @@ User name including domain for which the access rule is being created. If no dom
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: adam
 Fully Qualified Name
@@ -206,7 +206,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 allows the "sitecore\adam" user to rename the Home item and all of its childre
 
-```text
+```powershell
 PS master:\> Add-ItemAcl -Path master:\content\Home -AccessRight "item:rename" -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\admin"
 ```
 
@@ -214,7 +214,7 @@ PS master:\> Add-ItemAcl -Path master:\content\Home -AccessRight "item:rename" -
 
 Allows the "sitecore\adam" user to delete the Home item and all of its children. Denies the "sitecore\mikey" user reading the descendants of the Home item. ;P The security info is created prior to adding it to the item. The item is delivered to the Add-ItemAcl from the pipeline and returned to the pipeline after processing due to the -PassThru parameter.
 
-```text
+```powershell
 $acl1 = New-ItemAcl -AccessRight item:delete -PropagationType Any -SecurityPermission AllowAccess -Identity "sitecore\admin"
 $acl2 = New-ItemAcl -AccessRight item:read -PropagationType Descendants -SecurityPermission DenyAccess -Identity "sitecore\mikey"
 Get-Item -Path master:\content\home | Add-ItemAcl -AccessRules $acl1, $acl2 -PassThru
@@ -228,7 +228,7 @@ Home   False    {en, ja-JP, de-DE, da}   {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9} 
 
 The following demonstrates how to add several AccessRule to an item when the PropogationType and SecurityPermission are the same.
 
-```text
+```powershell
 $item = Get-Item -Path master:\content\youritem
 $role = "sitecore\role"
 $rights = @("item:create", "item:write", "item:rename", "item:delete")

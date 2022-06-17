@@ -124,7 +124,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Clone /sitecore/content/home/ under /sitecore/content/new-target/ with the "New Home" name.
 
-```text
+```powershell
 PS master:\> $newTarget = Get-Item master:\content\new-target\
 PS master:\> New-ItemClone -Path master:\content\home -Destination $newTarget -Name "New Home"
 ```

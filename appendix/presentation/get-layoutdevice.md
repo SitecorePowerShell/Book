@@ -4,7 +4,7 @@ Returns the layout for the specified device.
 
 ## Syntax
 
-```text
+```powershell
 Get-LayoutDevice [-Name] <String>
 
 Get-LayoutDevice [-Default]
@@ -64,7 +64,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Get Print device
 
-```text
+```powershell
 PS master:\> Get-LayoutDevice "Print"
 ```
 
@@ -72,7 +72,7 @@ PS master:\> Get-LayoutDevice "Print"
 
 Get default device
 
-```text
+```powershell
 PS master:\> Get-LayoutDevice -Default
 ```
 
@@ -80,7 +80,7 @@ PS master:\> Get-LayoutDevice -Default
 
 Get all layout devices
 
-```text
+```powershell
 PS master:\> Get-LayoutDevice *
 ```
 

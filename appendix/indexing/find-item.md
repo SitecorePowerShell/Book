@@ -4,7 +4,7 @@ Finds items using the Sitecore Content Search API.
 
 ## Syntax
 
-```text
+```powershell
 Find-Item [-Index] <String> [-Criteria <SearchCriteria[]>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
 Find-Item [-Index] <String> [-Where <String>] [-WhereValues <Object[]>] [-Filter <String>] [-FilterValues <Object[]>] [-FacetOn <String[]>] [-FacetMinCount <Int32>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
 Find-Item [-Index] <String> [-WherePredicate <Expression<Func<SearchResultItem, bool>>>] [-FilterPredicate <Expression<Func<SearchResultItem, bool>>>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
@@ -37,7 +37,7 @@ Find-Item -Index sitecore\_master\_index -First 10
 
 Simple form of search in which logical "AND" operations are needed.
 
-```text
+```powershell
 @{ Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; }, 
 @{ Filter = "DescendantOf"; Value = (Get-Item "master:/content/") }
 ```
@@ -84,7 +84,7 @@ Where "Boost" is a positive number greater than 0
 
 Fields by which you can filter can be discovered using the following script:
 
-```text
+```powershell
 $criteria = @(
     @{Filter = "StartsWith"; Field = "_fullpath"; Value = "/sitecore/content/" }
 )
@@ -113,7 +113,7 @@ Where "Invert" is a boolean to indicate the following:
 
 Where the "Where" is the Dynamic Linq query and "WhereValues" includes the array of values to be replaced in the query.
 
-```text
+```powershell
 $props = @{
     Index = "sitecore_master_index"
     Where = 'TemplateName = @0 And Language=@1'
@@ -279,7 +279,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Fields by which filtering can be performed using the -Criteria parameter.
 
-```text
+```powershell
 $criteria = @(
     @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"}, 
     @{Filter = "Contains"; Field = "Title"; Value = "Sitecore"},
@@ -297,7 +297,7 @@ Find-Item @props
 
 Find items using a search built by the Query Builder field.
 
-```text
+```powershell
 $props = @{
     Index = "sitecore_master_index"
     ScopeQuery = "location:{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9};custom:title|Sitecore"
@@ -310,7 +310,7 @@ Find-Item @props
 
 Find all items of template "Sample Item" which are in "English" under the "Home" item using Dynamic LINQ syntax.
 
-```text
+```powershell
 $templateId = [ID]::Parse("{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}")
 $homeId = [ID]::Parse("{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}")
 $language = "en"
@@ -328,7 +328,7 @@ Find-Item @props
 
 Find items using a complex search predicate.
 
-```text
+```powershell
 $criteriaTemplate = @(
     @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"; }, 
     @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; Boost=25; }, 
@@ -362,7 +362,7 @@ Find items using logical AND conditions with ContainsAny. Demonstrates that diff
 
 **Note:** When searching for `ID`s you can use the proper type like `[ID[]]@("{C852E80E-ED49-4354-A397-6F66487F0E26}")` so SPE will handle the conversion to `ShortID`.
 
-```text
+```powershell
 $criteria = @(
     @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; Boost=25; },
     @{Filter = "ContainsAny"; Field = "Title"; Value = [string[]]@('$name','$date')},
@@ -382,7 +382,7 @@ Find-Item @props
 
 Find items using logical AND with ContainsAll. Demonstrates looking in multilist fields.
 
-```text
+```powershell
 $criteria = @(
     @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; Boost=25; },
     @{Filter = "ContainsAll"; Field = "RelatedImages"; Value = @('{4D427A1D-312D-4EEE-A519-1F5700675BAF}','{4B603402-62AB-4ECB-9CAE-98790DDBC35A}')}
@@ -399,7 +399,7 @@ Find-Item @props
 
 Find an item by ID.
 
-```text
+```powershell
 $criteria = @(
     @{Filter = "Equals"; Field = "_group"; Value = "{C89D37FF-3919-4D69-9925-943B67BD22D6}"}
 )
@@ -414,7 +414,7 @@ Find-Item @props
 
 Find items within a data range. Possible filters are `InclusiveRange` and `ExclusiveRange` . When using dates, only **yyyyMMdd** is considered in the comparison so no need to get too precise.
 
-```text
+```powershell
 $props = @{
     Index = "sitecore_master_index"
     Criteria = @{
@@ -435,7 +435,7 @@ Find-Item @props
 
 Find and count all items beneath a root item using the item path.
 
-```text
+```powershell
 $criteria = @(
     @{Filter = "Contains"; Field = "_fullpath"; Value = "/sitecore/content/home"},
     @{Filter = "Equals"; Field = "_latestversion"; Value = "1"}
@@ -452,7 +452,7 @@ Find-Item @props | Measure-Object
 
 Find and count all items beneath a root item using the item id.
 
-```text
+```powershell
 $criteria = @(
     @{Filter = "Contains"; Field = "_path"; Value = "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"},
     @{Filter = "Equals"; Field = "_latestversion"; Value = "1"}
@@ -469,7 +469,7 @@ Find-Item @props | Measure-Object
 
 Find items and sort (boost) based on the date field. If this were used on a field containing future dates you should expect to see them mixed with past dates. This example demonstrates using Solr functions.
 
-```text
+```powershell
 $criteria = @(
     @{Filter = "Equals"; Field = "_val_"; Value = "recip(abs(ms(NOW/HOUR,__smallcreateddate_tdt)),3.16e-11,4,.4)"}
 )
@@ -485,7 +485,7 @@ Find-Item @props | Select-Object Name,CreatedDate
 
 Find items where the created date is older than the specified time in UTC.
 
-```text
+```powershell
 $date = New-Object DateTime 2019, 8, 1, 0, 0, 0, ([DateTimeKind]::Utc)
 
 $criteria = @(
@@ -503,7 +503,7 @@ Find-Item @props
 
 Find items where the title contains the specified value. A custom implementation of `SearchResultItem` is used to enable the use of the property `Title` in the Dynamic Query.
 
-```text
+```powershell
 class TitleSearchResultItem : SearchResultItem
 {
    [Sitecore.ContentSearch.IndexField("title")]
@@ -524,7 +524,7 @@ Find-Item @props
 
 Find items where the path contains the specified Id and base templates contain the specified Id using a Dynamic Query. A custom implementation of `SearchResultItem` is used to enable the use of the property `TemplateIds` in the Dynamic Query.
 
-```text
+```powershell
 class TemplatesSearchResultItem : SearchResultItem
 {
    # For items contained within an SXA index try using the name "inheritance_sm".
@@ -546,7 +546,7 @@ Find-Item @props
 
 Find items where the title contains "Sitecore" using a Scope Query. A custom implementation of `SearchResultItem` is used to enable the use of the property `Title` in the Scope Query.
 
-```text
+```powershell
 class TitleSearchResultItem : SearchResultItem
 {
    [Sitecore.ContentSearch.IndexField("title")]
@@ -566,7 +566,7 @@ Find-Item @props | Select-Object -Property Title
 
 Find items where the template is "Sample Content" and the title contains "Sitecore" and created by "admin" using the Criteria Query. A custom implementation of `SearchResultItem` is used to enable the use of the property `Title` and `Creator` in the Dynamic Query.
 
-```text
+```powershell
 class TitleSearchResultItem : SearchResultItem
 {
    [Sitecore.ContentSearch.IndexField("title")]
@@ -593,7 +593,7 @@ Find-Item @props
 
 Find items matching a complex query. A custom implementation of `SearchResultItem` is used to enable the use of the property `Title` in the Predicate Query.
 
-```text
+```powershell
 class TitleSearchResultItem : SearchResultItem
 {
    [Sitecore.ContentSearch.IndexField("title")]
@@ -627,7 +627,7 @@ Find-Item @props
 
 Find items under the Content tree where the language is "en" and there are more than two occurrences. This could be used to find duplicate item names at the same path.
 
-```text
+```powershell
 $props = @{
     Index = "sitecore_master_index"
     Where = 'Paths.Contains(@0)'
@@ -645,7 +645,7 @@ Find-Item @props | Select-Object -Expand Categories | Select-Object -Expand Valu
 
 Find the most recently updated item.
 
-```text
+```powershell
 $templateId = "{C382C7B8-7567-40CB-AE89-7F5680735D4E}"
 $criteria = @(
     @{Filter = "Equals"; Field = "_template"; Value = $templateId}
@@ -664,7 +664,7 @@ Find-Item @props | Select-Object -Property ItemId, Name, Path, Updated
 
 Find items where the expiration date has not passed (now to the future) or the expiration date is empty (never expires).
 
-```text
+```powershell
 $props = @{
     Index = "sitecore_sxa_master_index"
     ScopeQuery = "+location:{447D82A5-BDBD-4898-8598-D79B3EB9BE6D};+template:{51ED5851-1A61-4DAE-B803-6C7FAE6B43D8};custom:EventEndDate|[* TO NOW-100YEARS];custom:EventEndDate|[NOW TO *];"

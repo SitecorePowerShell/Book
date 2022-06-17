@@ -6,14 +6,14 @@ The section on [working with items](./) provided a variety of examples in retrie
 
 **Example:** The following example queries all of the content items and adds a new language version of "en-ca", while overwriting any that exist.
 
-```text
+```powershell
 Get-ChildItem "master:\content" -Recurse | 
     Add-ItemLanguage -Language "en-us" -TargetLanguage "en-ca" -IfExist OverwriteLatest
 ```
 
 **Example:** The following example adds a language version from English to US and Polish while leaving the `Title` field blank. If a version already exists nothing happens.
 
-```text
+```powershell
 $languageParameters = @{
     Path = "master:\content\home"
     Language = "en"
@@ -26,7 +26,7 @@ Add-ItemLanguage @languageParameters
 
 **Example:** The following example adds a language version from English to Polish of Template Name _Sample Item_. If the version exists a new version is created for that language. Finally the results are displayed as a table showing only the `Name`, `Language`, and `Version`.
 
-```text
+```powershell
 Get-ChildItem "master:\content\home" -Language "en" -Recurse |
     Where-Object { $_.TemplateName -eq "Sample Item" } |
     Add-ItemLanguage -TargetLanguage "pl-pl" -IfExist Append |
@@ -35,7 +35,7 @@ Get-ChildItem "master:\content\home" -Language "en" -Recurse |
 
 **Example:** The following example adds a language version in Polish to the _Home_ item and all its children. If the version exists nothing happens. No fields were harmed in the making of this version.
 
-```text
+```powershell
 Add-ItemLanguage -Path "master:\content\home" -TargetLanguage "pl-pl" -IfExist Skip -DoNotCopyFields -Recurse
 ```
 
@@ -43,7 +43,7 @@ Add-ItemLanguage -Path "master:\content\home" -TargetLanguage "pl-pl" -IfExist S
 
 **Example:** The following example queries all of the content items and removes the language version of "fr-CA".
 
-```text
+```powershell
 Get-ChildItem "master:\content" -Recurse | 
     Remove-ItemLanguage -Language "fr-CA"
 ```
@@ -52,7 +52,7 @@ Get-ChildItem "master:\content" -Recurse |
 
 **Example:** The following example creates a new item with language versions only matching the specified languages; all other language version are removed.
 
-```text
+```powershell
 $itemPath = "master:\content\home\sample item\Sample Item 3"
 New-Item -Path $itemPath -ItemType "Sample/Sample Item" -Language "en-CA"
 

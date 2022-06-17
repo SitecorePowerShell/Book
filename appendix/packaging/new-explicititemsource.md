@@ -107,7 +107,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Following example creates a new package, adds content/home item and all of its children to it and saves it in the Sitecore Package folder + gives you an option to download the saved package.
 
-```text
+```powershell
 $package = New-Package "Packing in Powerful Ways";
 
 # Set package metadata

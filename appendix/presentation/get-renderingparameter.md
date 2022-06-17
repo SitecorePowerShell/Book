@@ -4,7 +4,7 @@ Gets the available rendering parameters found for a given rendering.
 
 ## Syntax
 
-```text
+```powershell
 Get-RenderingParameter -Instance <RenderingDefinition> [-Name <String[]>]
 ```
 
@@ -62,7 +62,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following gets all renderings for a given item and lists the available rendering parameters.
 
-```text
+```powershell
 $item = Get-Item -Path "master" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 
 foreach($itemRendering in Get-Rendering -Item $item -FinalLayout) {

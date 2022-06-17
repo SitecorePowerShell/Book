@@ -9,7 +9,7 @@ The console prompt typically begins with `PS master:\>`. The present working dir
 
 **Example:** Change directories between providers.
 
-```text
+```powershell
  PS master:\> cd core:
  PS core:\> cd C:
  PS C:\windows\system32\inetsrv> Set-Location -Path master:

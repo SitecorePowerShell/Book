@@ -32,7 +32,7 @@ var total = 1 + 1;
 total += 2;
 ```
 
-```text
+```powershell
 # Perform simple math in PowerShell
 $total = 1 + 1
 $total += 2
@@ -51,7 +51,7 @@ names.Add("Michael");
 names.Add("Adam");
 ```
 
-```text
+```powershell
 <#
   Create a new fixed list of strings in PowerShell
 #>
@@ -69,7 +69,7 @@ table["Name"] = "Michael";
 table["Age"] = 33;
 ```
 
-```text
+```powershell
 # Create a new hashtable of data in PowerShell
 $table = @{}
 $table["Name"] = "Michael"
@@ -85,7 +85,7 @@ od.Add("z","Last Letter");
 od.Add("a","First Letter");
 ```
 
-```text
+```powershell
 # Ordered Dictionary in PowerShell
 $od = [ordered]@{}
 $od.Add("z","Last Letter")
@@ -103,7 +103,7 @@ else {
 }
 ```
 
-```text
+```powershell
 # Check if the string is null or empty using a static method in PowerShell
 if([string]::IsNullOrEmpty($name)) {
   ...
@@ -119,7 +119,7 @@ name == "Michael"
 total <= 3 names.Count() > 2 && name[0] != "Adam"
 ```
 
-```text
+```powershell
 # Compare values in PowerShell
 $name -eq "Michael"
 
@@ -133,7 +133,7 @@ $total -le 3 $names.Count -gt 2 –and $name[0] -ne "Adam"
 var isTrue = !false;
 ```
 
-```text
+```powershell
 # Negate value in PowerShell
 $isTrue = !$false
 $isTrue = -not $false
@@ -145,7 +145,7 @@ $isTrue = -not $false
 var message = $"Hello, {name}";
 ```
 
-```text
+```powershell
 # String interpolation in PowerShell
 $message = "Hello, $($name)"
 ```
@@ -159,7 +159,7 @@ message = 'I said, "Thanks!"';
 message = "We celebrated together, 'Go SPE!'";
 ```
 
-```text
+```powershell
 # Escape characters in PowerShell
 $message = "They said to me, `"SPE is the greatest!`"."
 $message = 'I said, "Thanks!".'
@@ -172,7 +172,7 @@ $message = "We celebrated together, 'Go SPE!'."
 var today = DateTime.Today;
 ```
 
-```text
+```powershell
 # Access static property in PowerShell
 $today = [datetime]::Today
 ```
@@ -189,7 +189,7 @@ You may find yourself trying to optimize your scripts. A few things that might h
 {% tab title="Collections" %}
 **Example:** The following demonstrates the use of an **ArrayList**. Performs much better than purely using `@()`.
 
-```text
+```powershell
 # Use ArrayList to append items rather than creating new fixed dimensional arrays
 $names = [System.Collections.ArrayList]@()
 $names.Add("Michael") > $null
@@ -198,7 +198,7 @@ $names.Add("Adam") > $null
 
 **Example:** The following demonstrates the use of **List&lt;string&gt;**. This is ideal when statically typed arrays are required.
 
-```text
+```powershell
 # Optionally create static static typed arrays
 $names = [System.Collections.Generic.List[string]]@()
 $names.Add("Michael") > $null
@@ -207,14 +207,14 @@ $names.Add("Adam") > $null
 
 **Example:** The following demonstrates the use of **HashSet**. Use when a distinct list of items is needed. Performs like a **Dictionary** but without the requirement for a key.
 
-```text
+```powershell
 # HashSet when only values are needed
 $nameLookup = New-Object System.Collections.Generic.HashSet[string]
 $nameLookup.Add("Michael") > $null
 ```
 
 **Example:** The following demonstrates the use of **HashSet** where the casing of the items are ignored.
-```text
+```powershell
 # Case insensitive lookup
 $nameLookup = New-Object System.Collections.Generic.HashSet[string]([StringComparer]::OrdinalIgnoreCase)
 $nameLookup.Add("Michael") > $null
@@ -227,7 +227,7 @@ if($nameLookup.Contains("michael")) {
 ```
 
 **Example:** The following demonstrates how to replace the use of Compare-Object with **HashSet**. This is useful and important when the collection size is large and you are working with simple data like strings. Compare-Object does offer a way to compare specific properties. 
-```text
+```powershell
 # Instead of using Compare-Object to compare two datasets, such as for strings or integeters, consider using HashSet instead.
 # Populate collection
 $referenceIds = [System.Collections.Generic.List[string]]@()
@@ -249,7 +249,7 @@ $leftOnlyObjects = $leftOnlyHash
 
 **Example:** The following demonstrates the use of **Queue**. A Sitecore Stack Exchange answer to [find items based on a template](https://sitecore.stackexchange.com/a/15168/95) may be helpful.
 
-```text
+```powershell
 # Queue when ... a queue is needed
 $queue = New-Object System.Collections.Queue
 $queue.Enqueue("{GUID}")
@@ -260,7 +260,7 @@ $queue.Dequeue()
 {% tab title="Measure Time" %}
 **Example:** The following measures code execution time using `Measure-Command`.
 
-```text
+```powershell
 Measure-Command -Expression {
     Get-Item -Path "master:" > $null
 } | Select-Object -ExpandProperty TotalMilliseconds
@@ -268,7 +268,7 @@ Measure-Command -Expression {
 
 **Example:** The following measures code execution time using a `Stopwatch`.
 
-```text
+```powershell
 $watch = [System.Diagnostics.Stopwatch]::StartNew()
 Get-Item -Path "master:" > $null
 $watch.Stop()
@@ -279,7 +279,7 @@ $watch.ElapsedMilliseconds
 {% tab title="Terminate Output" %}
 **Example:** The following terminates the output.
 
-```text
+```powershell
 # Slow but functional
 $builder = New-Object System.Text.StringBuilder
 $builder.Append("Hello World!") | Out-Null
@@ -307,7 +307,7 @@ Learning PowerShell begins with running your first command. In this section we l
 
 **Example:** The following provides an example syntax for a fake command.
 
-```text
+```powershell
 Get-Something [[-SomeParameter] <sometype[]>] [-AnotherParameter <anothertype>] [-SomeSwitch]
 ```
 
@@ -327,7 +327,7 @@ The brackets surrounding the parameter and the brackets immediately following a 
 
 **Example**: The following provides possible permutations for the fake command.
 
-```text
+```powershell
 <#
     All of the parameters in the command are surrounded by square brackets 
     indicating they are optional.
@@ -335,7 +335,7 @@ The brackets surrounding the parameter and the brackets immediately following a 
 Get-Something
 ```
 
-```text
+```powershell
 <# 
     SomeParameter has double brackets around the parameter name and argument 
     indicating the name is optional and when an argument is passed the name 
@@ -344,7 +344,7 @@ Get-Something
 Get-Something "data"
 ```
 
-```text
+```powershell
 <#
     AnotherParameter has single brackets indicating that the parameter is 
     optional. If the argument is used so must the name. The same reasoning 
@@ -353,7 +353,7 @@ Get-Something "data"
 Get-Something "data","data2" -AnotherParameter 100 –SomeSwitch
 ```
 
-```text
+```powershell
 # Splat parameters to command
 $props = @{
     "SomeParameter" = @("data","data2")
@@ -397,7 +397,7 @@ The characters `$_` and `$PSItem` represent the current object getting processed
 
 **Example:** The following queries a Sitecore item and removes it.
 
-```text
+```powershell
 # The remove command accepts pipeline input.
 Get-Item -Path "master:\content\home\sample item" | Remove-Item
 
@@ -409,7 +409,7 @@ PowerShell also comes with a set of useful commands for filtering and sorting. L
 
 **Example:** The following queries a tree of Sitecore items and returns only those that meet the criteria. The item properties are reduced and then sorted.
 
-```text
+```powershell
 # Use variables for parameters such as paths to make scripts easier to read.
 $path = "master:\content\home\"
 
@@ -425,7 +425,7 @@ A best practice in PowerShell is to reduce the number of objects passed through 
 
 **Example:** The following demonstrates how commands can be written clearly with little confusion on the intent, then how aliases and abbreviations can get in the way. Always think about the developer that comes after you to maintain the code.
 
-```text
+```powershell
 # Longhand - recommended
 Get-Command -Name ForEach-Object –Type cmdlet | Select-Object -ExpandProperty ParameterSets
 
@@ -437,7 +437,7 @@ Windows PowerShell is bundled with a ton of documentation that could not possibl
 
 **Example:** The following examples demonstrate ways to get help…with PowerShell.
 
-```text
+```powershell
 # Displays all of the about help documents.
 help about_*
 
@@ -472,7 +472,7 @@ The default provider used by the PowerShell Console and ISE is the **CmsItemProv
 
 **Example:** The following demonstrates switching between providers using the function **cd**, an alias for **Set-Location**, while in the Console.
 
-```text
+```powershell
 PS master:\> cd c:\
 PS C:\> cd hklm:
 PS HKLM:\> cd env:

@@ -100,7 +100,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Unprotect the Home item providing its path
 
-```text
+```powershell
 PS master:\> Unprotect-Item -Path master:\content\home
 ```
 
@@ -108,7 +108,7 @@ PS master:\> Unprotect-Item -Path master:\content\home
 
 Unprotect the Home item providing it from the pipeline and passing it back to the pipeline
 
-```text
+```powershell
 PS master:\> Get-Item -Path master:\content\home | Unprotect-Item -PassThru
 
 Name   Children Languages                Id                                     TemplateName

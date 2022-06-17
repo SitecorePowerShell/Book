@@ -8,7 +8,7 @@ description: Examples for managing item referrers maintained by the Link Databas
 
 **Example:** The following changes the image linked on an item to a new image. Originally posted [here](https://gist.github.com/michaellwest/f563b0b3597f6c0a75d6).
 
-```text
+```powershell
 $item = Get-Item -Path "master:\media library\images\koala"
 $itemNew = Get-Item -Path "master:\media library\images\penguins"
 $links = Get-ItemReferrer -Item $item -ItemLink
@@ -27,7 +27,7 @@ foreach($link in $links) {
 
 Example: The following removes an item link followed by removing the item. Originally posted [here](https://gist.github.com/michaellwest/f563b0b3597f6c0a75d6).
 
-```text
+```powershell
 # Crafted by Dylan
 
 function Remove-ItemLink {

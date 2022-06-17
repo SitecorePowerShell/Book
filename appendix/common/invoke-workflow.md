@@ -124,7 +124,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Submit item to approval, item gotten from path
 
-```text
+```powershell
 PS master:\> Invoke-Workflow -Path master:/content/home -CommandName "Submit" -Comments "Automated"
 ```
 
@@ -132,7 +132,7 @@ PS master:\> Invoke-Workflow -Path master:/content/home -CommandName "Submit" -C
 
 Reject item, item gotten from pipeline
 
-```text
+```powershell
 PS master:\> Get-Item master:/content/home | Invoke-Workflow -CommandName "Reject" -Comments "Automated"
 ```
 

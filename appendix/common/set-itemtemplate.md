@@ -4,7 +4,7 @@ Sets the item template.
 
 ## Syntax
 
-```text
+```powershell
 Set-ItemTemplate -Item <Item> -TemplateItem <TemplateItem> [-FieldsToCopy <Hashtable>]
 Set-ItemTemplate -Item <Item> -Template <String> [-FieldsToCopy <Hashtable>]
 Set-ItemTemplate -Path <String> -TemplateItem <TemplateItem> [-FieldsToCopy <Hashtable>]
@@ -124,7 +124,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 Set template of /sitecore/content/home item using a Template path.
 
-```text
+```powershell
 Set-ItemTemplate -Path master:/sitecore/content/home -Template "/sitecore/templates/User Defined/Page"
 ```
 
@@ -132,7 +132,7 @@ Set-ItemTemplate -Path master:/sitecore/content/home -Template "/sitecore/templa
 
 Set template of /sitecore/content/home item using a TemplateItem.
 
-```text
+```powershell
 $template = Get-ItemTemplate -Path master:\content\home\page1
 Set-ItemTemplate -Path master:\content\home\page2 -TemplateItem $template
 ```
@@ -141,7 +141,7 @@ Set-ItemTemplate -Path master:\content\home\page2 -TemplateItem $template
 
 Set the template and remap fields to their new name.
 
-```text
+```powershell
 Set-ItemTemplate -Path "master:\content\home\Page1" `
     -Template "User Defined/Target" `
     -FieldsToCopy @{Field1="Field4"; Field2="Field5"; Field3="Field6"}

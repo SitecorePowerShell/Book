@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Get-Database
 Name                 Languages                      Protected  Read Only
 ----                 ---------                      ---------  ---------
@@ -72,7 +72,7 @@ filesystem           {en, en-US}                    False      True
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-Database -Name "master"
 
 Name                 Languages                      Protected  Read Only
@@ -82,7 +82,7 @@ master               {en, de-DE, es-ES, pt-BR...}   False      False
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Get-Item . | Get-Database
 
 Name                 Languages                      Protected  Read Only

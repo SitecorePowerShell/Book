@@ -4,7 +4,7 @@ Removes the specified rendering parameter from the rendering.
 
 ## Syntax
 
-```text
+```powershell
 Remove-RenderingParameter -Instance <RenderingDefinition> [-Name <String[]>]
 ```
 
@@ -62,7 +62,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following removes the specified rendering parameter and updates the item.
 
-```text
+```powershell
 $item = Get-Item -Path "master" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 
 Get-Rendering -Item $item -FinalLayout | 

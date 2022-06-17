@@ -98,7 +98,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Start-TaskSchedule -Path "master:/system/Tasks/Schedules/Email Campaign/Clean Message History"
 
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run
@@ -108,7 +108,7 @@ Clean Message History            master          True     False        False    
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Get-TaskSchedule -Name "Check Bounced Messages" -Database "master" | Start-TaskSchedule
 
 Name                             Database        Active   Auto Remove  Is Due   Expired  Completed    Last Run               Next Run

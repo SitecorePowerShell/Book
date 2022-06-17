@@ -118,7 +118,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Launch Publishing Viewer for /sitecore/content/home item.
 
-```text
+```powershell
 PS master:\> Get-Item master:\content\home\ | Invoke-ShellCommand "item:publishingviewer"
 ```
 
@@ -126,7 +126,7 @@ PS master:\> Get-Item master:\content\home\ | Invoke-ShellCommand "item:publishi
 
 Initiate /sitecore/content/home item duplication.
 
-```text
+```powershell
 PS master:\> Get-Item master:/content/home | Invoke-ShellCommand "item:duplicate"
 ```
 
@@ -134,7 +134,7 @@ PS master:\> Get-Item master:/content/home | Invoke-ShellCommand "item:duplicate
 
 Show properties of the /sitecore/content/home item.
 
-```text
+```powershell
 PS master:\> Get-Item master:/content/home | Invoke-ShellCommand "contenteditor:properties"
 ```
 

@@ -20,7 +20,7 @@ Headers:
 
 Use the **Basic** header to provide authentication information. Here is an example of how to build that for a script.
 
-```text
+```powershell
 $username = "admin"
 $password = "b"
 

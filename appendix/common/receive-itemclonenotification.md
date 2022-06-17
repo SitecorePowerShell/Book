@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```powershell
 Receive-ItemCloneNotification [-Notification <Notification>] -Notification <Notification> -Action <None | Accept | Reject | Dismiss> [-NotificationType <Notification | ChildCreatedNotification | FieldChangedNotification | FirstVersionAddedNotification | ItemMovedChildCreatedNotification | ItemMovedChildRemovedNotification | ItemMovedNotification | ItemTreeMovedNotification | ItemVersionNotification | OriginalItemChangedTemplateNotification | VersionAddedNotification>] [-Language <String[]>]
 Receive-ItemCloneNotification [-Item] <Item> -Notification <Notification> -Action <None | Accept | Reject | Dismiss> [-NotificationType <Notification | ChildCreatedNotification | FieldChangedNotification | FirstVersionAddedNotification | ItemMovedChildCreatedNotification | ItemMovedChildRemovedNotification | ItemMovedNotification | ItemTreeMovedNotification | ItemVersionNotification | OriginalItemChangedTemplateNotification | VersionAddedNotification>] [-Language <String[]>]
 Receive-ItemCloneNotification [-Path] <String> -Notification <Notification> -Action <None | Accept | Reject | Dismiss> [-NotificationType <Notification | ChildCreatedNotification | FieldChangedNotification | FirstVersionAddedNotification | ItemMovedChildCreatedNotification | ItemMovedChildRemovedNotification | ItemMovedNotification | ItemTreeMovedNotification | ItemVersionNotification | OriginalItemChangedTemplateNotification | VersionAddedNotification>] [-Language <String[]>]
@@ -101,7 +101,7 @@ Receive-ItemCloneNotification -Id <String> [-Database <String>] -Notification <N
 
 The following gets the cloned `Item`, returns the available notifications, and finally accepts the notifications.
 
-```text
+```powershell
 $clonedItem = Get-Item -Path "master:" -ID "{9F158637-52C2-4005-8329-21527685CB71}"
 $clonedItem  | Get-ItemCloneNotification | Receive-ItemCloneNotification -Action Accept
 ```
@@ -110,7 +110,7 @@ $clonedItem  | Get-ItemCloneNotification | Receive-ItemCloneNotification -Action
 
 The following gets the cloned `Item`, returns the available notifications, and finally rejects the notifications.
 
-```text
+```powershell
 $clonedItem = Get-Item -Path "master:" -ID "{9F158637-52C2-4005-8329-21527685CB71}"
 $clonedItem  | Get-ItemCloneNotification | Receive-ItemCloneNotification -Action Reject
 ```

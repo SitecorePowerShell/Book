@@ -105,7 +105,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following expands tokens in fields on the item.
 
-```text
+```powershell
 Get-Item -Path "master:\content\home" | Expand-Token
 ```
 
@@ -113,7 +113,7 @@ Get-Item -Path "master:\content\home" | Expand-Token
 
 The following expands tokens in fields on the item. If the standard value of the field contains a token we modify the field to the token so the expansion will work (Sitecore API does not expand if the field is the same as Standard Values and never modified).
 
-```text
+```powershell
 $tokens = @('$name', '$id', '$parentId', '$parentname', '$date', '$time', '$now')
 
 $item = Get-Item -Path "master:\content\home"

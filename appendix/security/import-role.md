@@ -24,7 +24,7 @@ The Import-Role command imports \(deserializes\) Sitecore roles from the Sitecor
 
 Specifies the Sitecore role to be deserialized by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: developer
 Fully Qualified Name
@@ -109,25 +109,25 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Import-Role -Identity sitecore\Author
 ```
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> Import-Role -Filter sitecore\*
 ```
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Import-Role -Root C:\my\Serialization\Folder\ -Filter *\*
 ```
 
 ### EXAMPLE 4
 
-```text
+```powershell
 PS master:\> Import-Role -Path C:\my\Serialization\Folder\Admins.role
 ```
 

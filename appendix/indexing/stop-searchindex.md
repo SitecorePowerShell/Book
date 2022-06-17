@@ -60,7 +60,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 The following stops the indexing process from running.
 
 PS master:\> Stop-SearchIndex -Name sitecore_master_index
@@ -68,7 +68,7 @@ PS master:\> Stop-SearchIndex -Name sitecore_master_index
 
 ### EXAMPLE 2
 
-```text
+```powershell
 The following stops the indexing process from running.
 
 PS master:\> Get-SearchIndex -Name sitecore_master_index | Stop-SearchIndex

@@ -4,7 +4,7 @@ Restores items to the original database from the specified archive.
 
 ## Syntax
 
-```text
+```powershell
 Restore-ArchiveItem -Archive <Archive> [-WhatIf] [-Confirm]  [<CommonParameters>]
 Restore-ArchiveItem -Archive <Archive> [-ItemId <ID>] [-WhatIf] [-Confirm]  [<CommonParameters>]
 Restore-ArchiveItem -Archive <Archive> [-Identity <AccountIdentity>] [-WhatIf] [-Confirm]  [<CommonParameters>]
@@ -88,7 +88,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following restores items matching the ItemId found in the specified archive.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName
@@ -99,7 +99,7 @@ Restore-ArchiveItem -Archive $archive -ItemId "{1BB32980-66B4-4ADA-9170-10A9D333
 
 The following restores items from the recycle bin by the user found in the specified archive.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName
@@ -110,7 +110,7 @@ Restore-ArchiveItem -Archive $archive -Identity "sitecore\admin"
 
 The following restores all items from the recycle bin found in the specified archive.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName

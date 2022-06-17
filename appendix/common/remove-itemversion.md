@@ -4,7 +4,7 @@ Removes Language/Version from a single item or a branch of items
 
 ## Syntax
 
-```text
+```powershell
 Remove-ItemVersion -Language <String[]> [-Version <String[]>] [-ExcludeLanguage <String[]>] [-Path] <String> [-Recurse] [-MaxRecentVersions <Int32>]
 
 Remove-ItemVersion -Language <String[]> [-Version <String[]>] [-ExcludeLanguage <String[]>] -Id <String> [-Database <String>] [-Recurse] [-MaxRecentVersions <Int32>]
@@ -164,7 +164,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Remove Polish and Spanish language from /sitecore/content/home item in the master database
 
-```text
+```powershell
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language "pl-pl", "es-es"
 ```
 
@@ -172,7 +172,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -Language "pl-pl", "e
 
 Remove all english based languages defined in /sitecore/content/home item and all of its children in the master database
 
-```text
+```powershell
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language "en-*" -Recurse
 ```
 
@@ -180,7 +180,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -Language "en-*" -Rec
 
 Remove all languages except those that are "en" based defined in /sitecore/content/home item and all of its children in the master database
 
-```text
+```powershell
 PS master:\> Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*" -Recurse
 ```
 
@@ -188,7 +188,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*
 
 Trim all languages to 3 latest versions for /sitecore/content/home item and all of its children in the master database
 
-```text
+```powershell
 PS master:\> Remove-ItemVersion -Path master:\content\home -Language * -Recurse
 ```
 
@@ -196,7 +196,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -Language * -Recurse
 
 The following moves the specified item version to the archive.
 
-```text
+```powershell
 $itemId = "{72EB19F8-E62A-4B99-80A3-63E03F4FD036}"
 Get-Item -Path "master:" -ID $itemId -Version 2 | Remove-ItemVersion -Archive
 ```

@@ -42,7 +42,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following assumes that the project file is located in the default package directory.
 
-```text
+```powershell
 PS master:\> Get-Package -Path myproject.xml
 ```
 

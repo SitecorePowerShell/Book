@@ -4,7 +4,7 @@ Removes renderings from an item.
 
 ## Syntax
 
-```text
+```powershell
 Remove-Rendering -Item <Item> [-DataSource <String>] [-Rendering <Item>] [-Index <Int32>] [-PlaceHolder <String>] [-Parameter <Hashtable>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
 Remove-Rendering -Item <Item> -Instance <RenderingDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
@@ -220,7 +220,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 remove all renderings for "Default" device
 
-```text
+```powershell
 Remove-Rendering -Path master:\content\home -Device (Get-LayoutDevice "Default")
 ```
 
@@ -228,7 +228,7 @@ Remove-Rendering -Path master:\content\home -Device (Get-LayoutDevice "Default")
 
 remove all renderings from the "main" placeholder and all of its embedded placeholders.
 
-```text
+```powershell
 Remove-Rendering -Path master:\content\home -PlaceHolder "main*"
 ```
 
@@ -236,7 +236,7 @@ Remove-Rendering -Path master:\content\home -PlaceHolder "main*"
 
 remove all renderings from the "main" placeholder and all of its embedded placeholders, but only in the "Default" device
 
-```text
+```powershell
 Remove-Rendering -Path master:\content\home -PlaceHolder "main*" -Device (Get-LayoutDevice "Default")
 ```
 

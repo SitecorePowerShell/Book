@@ -110,7 +110,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Get-ItemWorkflowEvent -Path master:\content\home
 Date     : 2014-07-27 14:23:33
 NewState : {190B1C84-F1BE-47ED-AA41-F42193D9C8FC}

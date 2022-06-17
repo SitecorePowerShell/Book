@@ -6,7 +6,7 @@ description: Examples for managing item templates.
 
 ## Change Template
 
-```text
+```powershell
 # Sample Item
 $sourceTemplate = Get-Item -Path "master:\{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}"
 # Sample Content

@@ -16,7 +16,7 @@ A well known and widely adopted module [Unicorn](https://github.com/SitecoreUnic
 
 **Example:** The following lists configurations by name.
 
-```text
+```powershell
 # Default returns all configurations
 Get-UnicornConfiguration
 
@@ -31,7 +31,7 @@ Get-UnicornConfiguration -Filter "Foundation.*"
 
 **Example:** The following syncs configurations just like you would through the Unicorn Control Panel or the PowerShell API.
 
-```text
+```powershell
 # Sync one
 Sync-UnicornConfiguration "Foundation.Foo"
 
@@ -52,7 +52,7 @@ Sync-UnicornConfiguration -LogLevel Warn
 
 ### Partial Syncing
 
-```text
+```powershell
 # Sync a single item (note: must be under Unicorn control)
 Get-Item "/sitecore/content" | Sync-UnicornItem
 
@@ -65,7 +65,7 @@ Get-Item "/sitecore/content" | Sync-UnicornItem -Recurse -LogLevel Warn
 
 ### Reserializing
 
-```text
+```powershell
 # Reserialize one
 Export-UnicornConfiguration "Foundation.Foo"
 
@@ -78,7 +78,7 @@ Get-UnicornConfiguration "Foundation.*" | Export-UnicornConfiguration
 
 ### Partial Reserializing
 
-```text
+```powershell
 # Reserialize a single item (note: must be under Unicorn control)
 Get-Item "/sitecore/content" | Export-UnicornItem
 
@@ -91,7 +91,7 @@ Get-Item "/sitecore/content" | Export-UnicornItem -Recurse
 
 ### Converting to Raw Yaml
 
-```text
+```powershell
 # Convert an item to YAML format (always uses default excludes and field formatters)
 Get-Item "/sitecore/content" | ConvertTo-RainbowYaml
 
@@ -108,7 +108,7 @@ Get-Item "/sitecore/content" | ConvertTo-RainbowYaml -Raw
 
 ### Converting from Raw Yaml
 
-```text
+```powershell
 # Get IItemDatas from YAML variable
 $rawYaml | ConvertFrom-RainbowYaml
 
@@ -121,7 +121,7 @@ $yaml | ConvertFrom-RainbowYaml -Raw
 
 ### Deserialization
 
-```text
+```powershell
 # Deserialize IItemDatas from ConvertFrom-RainbowYaml
 $rawYaml | ConvertFrom-RainbowYaml | Import-RainbowItem
 
@@ -144,7 +144,7 @@ Get-ChildItem "/sitecore/content" | ConvertTo-RainbowYaml | Import-RainbowItem
 
 ### Packaging
 
-```text
+```powershell
 # Create a new Sitecore Package (SPE cmdlet)
 $pkg = New-Package -Name MyCustomPackage
 

@@ -4,7 +4,7 @@ Prompts user to provide values for variables required by the script to perform i
 
 ## Syntax
 
-```text
+```powershell
 Read-Variable [-Parameters <Object[]>] [-Description <String>] [-CancelButtonName <String>] [-OkButtonName <String>] [-ShowHints] [-Validator <ScriptBlock>] [-Title <String>] [-Width <Int32>] [-Height <Int32>]
 ```
 
@@ -158,7 +158,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following provides a dialog with a dropdown of options.
 
-```text
+```powershell
 $options = @{
     "A"="a"
     "B"="b"
@@ -184,7 +184,7 @@ Following is an example of a simple dialog asking user for various variable type
 
 The type of some of the controls displayed to the user are iferred from the variable type \(like the $item variable or DateTime\) The editors for some other are set by providing the "editor" value
 
-```text
+```powershell
 $item = Get-Item master:\content\home
 $result = Read-Variable -Parameters `
     @{ Name = "someText"; Value="Some Text"; Title="Single Line Text"; Tooltip="Tooltip for singleline"; Placeholder="You see this when text box is empty"}, 
@@ -202,7 +202,7 @@ Following is an example of a multi tabbed dialog asking user for various variabl
 
 The type of some of the controls displayed to the user are inferred from the variable type \(like the $item variable or DateTime\) The editors for some other are set by providing the "editor" value
 
-```text
+```powershell
 $item = Get-Item master:\content\home
 $result = Read-Variable -Parameters `
     @{ Name = "silent"; Value=$true; Title="Proceed Silently"; Tooltip="Check this if you don't want to be interrupted"; Tab="Simple"}, 

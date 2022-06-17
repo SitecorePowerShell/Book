@@ -106,7 +106,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> ConvertFrom-ItemClone -Path master:\content\home
 ```
 

@@ -28,13 +28,13 @@ Specifies the Sitecore user by providing one of the following values.
 
 Local Name:
 
-```text
+```powershell
 admin
 ```
 
 Fully Qualified Name:
 
-```text
+```powershell
 sitecore\admin
 ```
 
@@ -54,13 +54,13 @@ Examples: The following examples show how to use the filter syntax.
 
 To get all the users, use the asterisk wildcard:
 
-```text
+```powershell
 Get-User -Filter *
 ```
 
 To get all the users in a domain use the following command:
 
-```text
+```powershell
 Get-User -Filter "sitecore\*"
 ```
 
@@ -128,7 +128,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Get-User -Identity admin
 
 Name                     Domain       IsAdministrator IsAuthenticated
@@ -138,7 +138,7 @@ sitecore\admin           sitecore     True            False
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> "admin","michael" | Get-User
 
 Name                     Domain       IsAdministrator IsAuthenticated
@@ -149,7 +149,7 @@ sitecore\michael         sitecore     False           False
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Get-User -Filter *
 
 Name                     Domain       IsAdministrator IsAuthenticated
@@ -162,7 +162,7 @@ sitecore\michael         sitecore     False           False
 
 ### EXAMPLE 4
 
-```text
+```powershell
 PS master:\> Get-User -Filter "michaellwest@*.com"
 
 Name                     Domain       IsAdministrator IsAuthenticated
@@ -174,7 +174,7 @@ sitecore\michael         sitecore     False           False
 
 Expand the MemberOf property to see a list of roles that the specified user is a member.
 
-```text
+```powershell
 PS master:\> Get-User -Identity sitecore\michael | Select-Object -ExpandProperty MemberOf
 
 Name                                     Domain       IsEveryone

@@ -4,7 +4,7 @@ Managing users and roles is a big topic and this section won't cover everything.
 
 **Example:** The following command returns the security commands available.
 
-```text
+```powershell
 Get-Command -Noun Role*,User,ItemAcl* | Sort-Object -Property Noun,Verb
 ```
 
@@ -16,7 +16,7 @@ Managing users should be a pretty straight forward task. While the User Manager 
 
 **Example:** The following generates a batch of test users in the default domain with the out-of-the-box user profile template. The users are then queried filtering on the name.
 
-```text
+```powershell
 foreach($num in 0..10) {
     $key = -join ((65..90) + (97..122) | Get-Random -Count 7 | % {[char]$_})  
     New-User -Identity "TestUser$($key)" -Enabled -Password "b" -ProfileItemId "{AE4C4969-5B7E-4B4E-9042-B2D8701CE214}" | Out-Null
@@ -29,14 +29,14 @@ In case you forgot to set the user profile for accounts, we have a solution for 
 
 **Example:** The following queries a user and sets the profile template. Note that changing the profile template requires the user to be authenticated.
 
-```text
+```powershell
 Get-User -Id "michael" -Authenticated | 
     Set-User -ProfileItemId "{AE4C4969-5B7E-4B4E-9042-B2D8701CE214}"
 ```
 
 **Example:** The follow queries all the user accounts for the default provider and filters those over the age of 18. The _age_ property is custom on the _Profile_. Finally, export to CSV.
 
-```text
+```powershell
 $users = Get-User -Filter * | Where-Object { $_.Profile.GetCustomProperty("age") -gt 18 } 
 
 $property = @(
@@ -57,7 +57,7 @@ Using `Set-User` to update AD accounts may result in an "Access denied message";
 
 **Example:** The following queries roles using the specified identity.
 
-```text
+```powershell
 # Identity can be "[domain]\[name]", "Creator-Owner", and "\Everyone"
 Get-Role -Identity "default\Everyone"
 ```
@@ -68,7 +68,7 @@ The ACL commands provide an automated way of granting privileges to items.
 
 **Example:** The following creates a new ACL and assigns to an item.
 
-```text
+```powershell
 $aclForEveryone = New-ItemAcl -Identity "\Everyone" -PropagationType Any -SecurityPermission DenyInheritance -AccessRight *
 Get-Item -Path "master:\content\home" | Add-ItemAcl -AccessRules $aclForEveryone -PassThru
 ```

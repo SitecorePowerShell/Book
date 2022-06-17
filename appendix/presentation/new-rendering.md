@@ -4,7 +4,7 @@ Creates new rendering definition that can later be added to an item.
 
 ## Syntax
 
-```text
+```powershell
 New-Rendering [-Item] <Item> [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <Item>] [-Cacheable] [-VaryByData] [-VaryByDevice] [-VaryByLogin] [-VaryByParameters] [-VaryByQueryString] [-VaryByUser] [-Language <String[]>]
 
 New-Rendering [-Path] <String> [-Parameter <Hashtable>] [-PlaceHolder <String>] [-DataSource <Item>] [-Cacheable] [-VaryByData] [-VaryByDevice] [-VaryByLogin] [-VaryByParameters] [-VaryByQueryString] [-VaryByUser] [-Language <String[]>]
@@ -220,7 +220,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Find item defining rendering and create rendering definition.
 
-```text
+```powershell
 # Find the rendering item and convert to a rendering
 $renderingPath = "/sitecore/layout/Renderings/Feature/Experience Accelerator/Page Content/Page Content"
 $renderingItem = Get-Item -Database "master" -Path $renderingPath | New-Rendering -Placeholder "main"

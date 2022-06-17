@@ -4,7 +4,7 @@ Removes items permanently from the specified archive.
 
 ## Syntax
 
-```text
+```powershell
 Remove-ArchiveItem -Archive <Archive> [-ItemId <ID>]
 Remove-ArchiveItem -Archive <Archive> [-Identity <AccountIdentity>]
 Remove-ArchiveItem -Archive <Archive> [-ArchiveItem <ArchiveEntry[]>]
@@ -87,7 +87,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following removes items matching the ItemId found in the specified archive.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName
@@ -98,7 +98,7 @@ Remove-ArchiveItem -Archive $archive -ItemId "{1BB32980-66B4-4ADA-9170-10A9D3336
 
 The following removes items from the recycle bin by the user found in the specified archive.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName
@@ -109,7 +109,7 @@ Remove-ArchiveItem -Archive $archive -Identity "sitecore\admin"
 
 The following removes all items from the recycle bin found in the specified archive.
 
-```text
+```powershell
 $database = Get-Database -Name "master"
 $archiveName = "recyclebin"
 $archive = Get-Archive -Database $database -Name $archiveName

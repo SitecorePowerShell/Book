@@ -48,7 +48,7 @@ User name including domain for which the item is to be locked. If no domain is s
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: adam
 Fully Qualified Name
@@ -133,7 +133,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Lock the Home item providing its path
 
-```text
+```powershell
 PS master:\> Lock-Item -Path master:\content\home
 ```
 
@@ -141,7 +141,7 @@ PS master:\> Lock-Item -Path master:\content\home
 
 Lock the Home item by providing it from the pipeline and passing it back to the pipeline. The Item is locked by the "sitecore\adam" user.
 
-```text
+```powershell
 PS master:\> Get-Item -Path master:\content\home | Lock-Item -PassThru -Identity sitecore\adam
 
 Name   Children Languages                Id                                     TemplateName

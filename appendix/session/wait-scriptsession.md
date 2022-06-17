@@ -84,7 +84,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE
 
-```text
+```powershell
 PS master:\> Wait-ScriptSession -Id "My Background Script Session"
 ```
 

@@ -194,7 +194,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 The following starts the progress demo script in interactive mode (showing dialogs for each script) in 3 different ways.
 
 In the first case script path is used, second case shows the script item beign retrieved and provided to the cmdlet.
@@ -212,7 +212,7 @@ Start-ScriptSession -ScriptBlock $script -Interactive -AutoDispose
 
 ### EXAMPLE 2
 
-```text
+```powershell
 The following starts a script that changes its path to "master:\" and sleeps for 4 seconds. The session will persist in memory as no -AutoDispose parameter has been provided.
 
 Start-ScriptSession -ScriptBlock { cd master:\; Start-Sleep -Seconds 4 } -Id "Background Task"

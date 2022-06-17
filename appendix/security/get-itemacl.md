@@ -36,7 +36,7 @@ User name including domain for which the access rule is being created. If no dom
 
 Specifies the Sitecore user by providing one of the following values.
 
-```text
+```powershell
 Local Name
     Example: adam
 Fully Qualified Name
@@ -139,7 +139,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Take the security information from the Home item and apply it to the Settings item
 
-```text
+```powershell
 $acl = Get-ItemAcl -Path master:\content\home
 Set-ItemAcl -Path master:\content\Settings -AccessRules $acl -PassThru
 ```
@@ -148,7 +148,7 @@ Set-ItemAcl -Path master:\content\Settings -AccessRules $acl -PassThru
 
 Take the security information from the Home item and add it to the access rules on the Settings item
 
-```text
+```powershell
 $acl = Get-ItemAcl -Path master:\content\home
 Add-ItemAcl -Path master:\content\Settings -AccessRules $acl -PassThru
 ```

@@ -4,7 +4,7 @@ Creates new placeholder setting definition that can later be added to an item.
  
 ## Syntax 
  
-```text
+```powershell
 New-PlaceholderSetting [-Item] <Item> [-Key <string>] [-Language <string[]>]
 
 New-PlaceholderSetting [-Path] <string> [-Key <string>] [-Language <string[]>]
@@ -242,7 +242,7 @@ The output type is the type of the objects that the cmdlet emits.
  
 Create item defining placeholder setting
  
-```text
+```powershell
 $placeholderSetting = gi "master:\layout\Placeholder Settings\content" | New-PlaceholderSetting -Key "content"
 ```
 

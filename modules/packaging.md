@@ -6,7 +6,7 @@ Ever wanted to package up items and files without opening the Sitecore Package D
 
 **Example:** The following example demonstrates how to generate a package.
 
-```text
+```powershell
 $package = New-Package "Package-of-Stuff"
 $package.Sources.Clear()
 
@@ -36,7 +36,7 @@ Download-File "$SitecorePackageFolder\$($package.Name)-$($package.Metadata.Versi
 
 **Example:** The following adds a Post Step and custom attributes.
 
-```text
+```powershell
 $package = New-Package "Package-of-Stuff"
 $package.Sources.Clear()
 
@@ -54,7 +54,7 @@ Export-Package -Project $package -Path "$($package.Name)-$($package.Metadata.Ver
 
 **Example:** The following adds a Post Step included with SPE to delete a file. The SPE Post Step code reads xml data stored in the comment section of the package.
 
-```text
+```powershell
 Import-Function -Name New-PackagePostStep
 
 $package = New-Package "Package-of-Stuff"
@@ -73,7 +73,7 @@ $package.Metadata.Comment = New-PackagePostStep -PackageFiles $newPackageFiles
 
 **Example:** The following adds a Post Step Script included with SPE to change icons. The SPE Post Step code executes a script included with the package as stored in the attributes section.
 
-```text
+```powershell
 $package = New-Package "Package-of-Stuff"
 $package.Sources.Clear()
 
@@ -87,7 +87,7 @@ $package.Metadata.PostStep = "Spe.Integrations.Install.ScriptPostStep, Spe"
 $package.Metadata.Attributes = "scriptId={737CD0CC-12F7-4528-8FBD-E0FDEFC41325}"
 ```
 
-```text
+```powershell
 Write-Log "Processing changes to ensure backwards compatibility."
 $oldVersion = New-Object System.Version(10,0)
 if($PSVersionTable["SitecoreVersion"] -lt $oldVersion) {

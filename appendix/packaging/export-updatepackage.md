@@ -96,7 +96,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Create an update package that transforms the serialized database state defined in C:\temp\SerializationSource into into set defined in C:\temp\SerializationTarget
 
-```text
+```powershell
 $diff = Get-UpdatePackageDiff -SourcePath C:\temp\SerializationSource -TargetPath C:\temp\SerializationTarget
 Export-UpdatePackage -Path C:\temp\SerializationDiff.update -CommandList $diff -Name name
 ```

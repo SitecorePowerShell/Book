@@ -54,7 +54,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Required addition to web.config file for the functionality to work:
 
-```text
+```powershell
 <configuration>
   <configSections>
     <section name="sitecorediff" type="Sitecore.Update.Configuration.ConfigReader, Sitecore.Update"/>
@@ -95,7 +95,7 @@ Required addition to web.config file for the functionality to work:
 
 Create an update package that transforms the serialized database state defined in C:\temp\SerializationSource into into set defined in C:\temp\SerializationTarget
 
-```text
+```powershell
 $diff = Get-UpdatePackageDiff -SourcePath C:\temp\SerializationSource -TargetPath C:\temp\SerializationTarget
 Export-UpdatePackage -Path C:\temp\SerializationDiff.update -CommandList $diff -Name name
 ```

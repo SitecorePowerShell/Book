@@ -4,7 +4,7 @@ Returns the layout for the specified item.
 
 ## Syntax
 
-```text
+```powershell
 Get-Layout [-Item] <Item> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
 Get-Layout [-Path] <String> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
@@ -124,7 +124,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 The following retrieves the layouts defined on the home item.
 
-```text
+```powershell
 Get-Layout -Path "master:{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 ```
 

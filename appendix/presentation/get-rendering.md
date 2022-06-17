@@ -4,7 +4,7 @@ Returns a RenderingDefinition for an item using the filtering parameters.
 
 ## Syntax
 
-```text
+```powershell
 Get-Rendering -Item <Item> [-DataSource <String>] [-Rendering <Item>] [-Index <Int32>] [-PlaceHolder <String>] [-Parameter <Hashtable>] [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
 
 Get-Rendering -Item <Item> -Instance <RenderingDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <String[]>]
@@ -220,7 +220,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Get all renderings for "Default" device, located in the any placeholder that has name in it or any of its sub-placeholders.
 
-```text
+```powershell
 Get-Item master:\content\home | 
     Get-Rendering -Placeholder "*main*" -Device (Get-LayoutDevice "Default")
 ```
@@ -229,7 +229,7 @@ Get-Item master:\content\home |
 
 The following example returns all renderings on the home page.
 
-```text
+```powershell
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $defaultLayout = Get-LayoutDevice "Default"
 Get-Rendering -Item $item -Device $defaultLayout -FinalLayout

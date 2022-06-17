@@ -4,7 +4,7 @@ Removes placeholder setting(s) from an item using the filtering parameters.
  
 ## Syntax 
  
-```text
+```powershell
 Remove-PlaceholderSetting -Item <Item> [-Key <string>] [-PlaceholderSetting <Item>] [-Index <int>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
 
 Remove-PlaceholderSetting -Item <Item> -Instance <PlaceholderDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>]
@@ -457,7 +457,7 @@ Help Author: Adam Najmanowicz, Michael West
  
 Remove all placeholder settings for "Default" device 
  
-```text
+```powershell
 Remove-PlaceholderSetting -Path master:\content\home -Device (Get-LayoutDevice "Default")  
 ``` 
  
@@ -465,7 +465,7 @@ Remove-PlaceholderSetting -Path master:\content\home -Device (Get-LayoutDevice "
  
 Remove all placeholder settings with the "content" key. 
  
-```text
+```powershell
 Remove-PlaceholderSetting -Path master:\content\home -Key "content" 
 ``` 
  

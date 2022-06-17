@@ -4,7 +4,7 @@ Resets item fields, specified as either names, fields or template fields.
 
 ## Syntax
 
-```text
+```powershell
 Reset-ItemField [-Item] <Item> [-IncludeStandardFields] [-Name <String[]>]
 Reset-ItemField [-Path] <String> [-IncludeStandardFields] [-Name <String[]>]
 Reset-ItemField -Id <String> [-Database <String>] [-IncludeStandardFields] [-Name <String[]>]
@@ -112,7 +112,7 @@ Help Author: Adam Najmanowicz, Michael West, Alex Washtell
 
 Reset all item fields, excluding standard fields.
 
-```text
+```powershell
 PS master:\> Reset-ItemField -Path master:\content\home
 ```
 
@@ -120,7 +120,7 @@ PS master:\> Reset-ItemField -Path master:\content\home
 
 Reset all item fields, including standard fields.
 
-```text
+```powershell
 PS master:\> Reset-ItemField -Path master:\content\home -IncludeStandardFields
 ```
 
@@ -128,7 +128,7 @@ PS master:\> Reset-ItemField -Path master:\content\home -IncludeStandardFields
 
 Reset all item fields with names beginning with "a", excluding standard fields.
 
-```text
+```powershell
 PS master:\> Get-Item master:\content\home | Reset-ItemField -Name "a*"
 ```
 
@@ -136,7 +136,7 @@ PS master:\> Get-Item master:\content\home | Reset-ItemField -Name "a*"
 
 The following resets one of the Standard Values fields for all versions and languages.
 
-```text
+```powershell
 Get-ChildItem -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" -Version * -Language * -Recurse |
     Reset-ItemField -Name "__Workflow State" -IncludeStandardFields
 ```

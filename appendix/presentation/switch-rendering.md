@@ -4,7 +4,7 @@ Switches an existing rendering with an alternate one to a chosen device for the 
 
 ## Syntax
 
-```text
+```powershell
 Switch-Rendering -NewRendering <RenderingDefinition> -Item <Item> [-DataSource <string>] [-Rendering <Item>] [-Index <int>] [-PlaceHolder <string>] [-Parameter <hashtable>] [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 
 Switch-Rendering -NewRendering <RenderingDefinition> -Item <Item> -Instance <RenderingDefinition> [-Device <DeviceItem>] [-FinalLayout] [-Language <string[]>] [-WhatIf] [-Confirm][<CommonParameters>]
@@ -218,7 +218,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Switch an old rendering for the new.
 
-```text
+```powershell
 $itemId = "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $item = Get-Item -Path "master:" -ID $itemId
 $defaultLayout = Get-LayoutDevice "Default"

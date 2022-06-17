@@ -70,7 +70,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 Initialize the item obtained directly through the Sitecore API with additional PowerShell properties
 
-```text
+```powershell
 $item = [Sitecore.Configuration.Factory]::GetDatabase("master").GetItem("/sitecore/content/home");
 #So far the item does not have PowerShell instrumentation wrapped around it yet - the following like wraps $item in those additional properties
 $item = Initialize-Item -Item $item

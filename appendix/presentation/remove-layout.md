@@ -4,7 +4,7 @@ Removes item layout for a device.
 
 ## Syntax
 
-```text
+```powershell
 Remove-Layout [-Item] <Item> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
 
 Remove-Layout [-Path] <String> -Device <DeviceItem> [-Layout <Item>] [-FinalLayout] [-Language <String[]>]
@@ -128,7 +128,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-```text
+```powershell
 $itemId = "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $layoutDevice = Get-LayoutDevice -Name "Print"

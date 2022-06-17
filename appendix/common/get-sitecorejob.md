@@ -30,7 +30,7 @@ Help Author: Vangansewinkel Benjamin
 
 ### EXAMPLE 1
 
-```text
+```powershell
 PS master:\> Get-SitecoreJob
 
 Category     : PowerShell
@@ -66,7 +66,7 @@ MessageQueue : Sitecore.Jobs.AsyncUI.MessageQueue
 
 ### EXAMPLE 2
 
-```text
+```powershell
 PS master:\> $jobs = Get-SitecoreJob
 PS master:\> $jobs[0].Status
 
@@ -83,7 +83,7 @@ MessageQueue : Sitecore.Jobs.AsyncUI.MessageQueue
 
 ### EXAMPLE 3
 
-```text
+```powershell
 PS master:\> Get-SitecoreJob | Show-ListView -Property "Category", "IsDone", "Name", "QueueTime", `
     @{Label="Status Expiry"; Expression={$_.Status.Expiry} },
     @{Label="Status Failed"; Expression={$_.Status.Failed} },

@@ -2,7 +2,7 @@
 
 ## Syntax
 
-```text
+```powershell
 Get-ItemCloneNotification [-Item] <Item> [-NotificationType <Notification | ChildCreatedNotification | FieldChangedNotification | FirstVersionAddedNotification | ItemMovedChildCreatedNotification | ItemMovedChildRemovedNotification | ItemMovedNotification | ItemTreeMovedNotification | ItemVersionNotification | OriginalItemChangedTemplateNotification | VersionAddedNotification>] [-Language <String[]>]
 Get-ItemCloneNotification [-Path] <String> [-NotificationType <Notification | ChildCreatedNotification | FieldChangedNotification | FirstVersionAddedNotification | ItemMovedChildCreatedNotification | ItemMovedChildRemovedNotification | ItemMovedNotification | ItemTreeMovedNotification | ItemVersionNotification | OriginalItemChangedTemplateNotification | VersionAddedNotification>] [-Language <String[]>]
 Get-ItemCloneNotification -Id <String> [-Database <String>] [-NotificationType <Notification | ChildCreatedNotification | FieldChangedNotification | FirstVersionAddedNotification | ItemMovedChildCreatedNotification | ItemMovedChildRemovedNotification | ItemMovedNotification | ItemTreeMovedNotification | ItemVersionNotification | OriginalItemChangedTemplateNotification | VersionAddedNotification>] [-Language <String[]>]
@@ -80,7 +80,7 @@ Get-ItemCloneNotification -Id <String> [-Database <String>] [-NotificationType <
 
 The following gets the cloned `Item` and returns the available notifications.
 
-```text
+```powershell
 $clonedItem = Get-Item -Path "master:" -ID "{9F158637-52C2-4005-8329-21527685CB71}"
 Get-ItemCloneNotification -Item $clonedItem
 ```
@@ -89,7 +89,7 @@ Get-ItemCloneNotification -Item $clonedItem
 
 The following gets the cloned `Item` based on the specified type of notification.
 
-```text
+```powershell
 $clonedItem = Get-Item -Path "master:" -ID "{9F158637-52C2-4005-8329-21527685CB71}"
 $clonedItem | Get-ItemCloneNotification -NotificationType ItemMovedChildRemovedNotification
 ```
