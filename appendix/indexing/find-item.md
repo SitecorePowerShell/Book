@@ -666,11 +666,44 @@ Find items where the expiration date has not passed (now to the future) or the e
 
 ```powershell
 $props = @{
-    Index = "sitecore_sxa_master_index"
+    Index = "sitecore_master_index"
     ScopeQuery = "+location:{447D82A5-BDBD-4898-8598-D79B3EB9BE6D};+template:{51ED5851-1A61-4DAE-B803-6C7FAE6B43D8};custom:EventEndDate|[* TO NOW-100YEARS];custom:EventEndDate|[NOW TO *];"
 }
 
 Find-Item @props
+```
+
+### EXAMPLE 21
+
+Use Skip and Take to page through results until all are returned.
+
+```powershell
+$criteria = @(
+    @{Filter = "Contains"; Field = "_fullpath"; Value = "/sitecore/content/home"},
+    @{Filter = "Equals"; Field = "_latestversion"; Value = "1"}
+)
+$props = @{
+    Index = "sitecore_master_index"
+    Criteria = $criteria
+}
+
+$items = [System.Collections.ArrayList]@()
+$pageSize = 250
+$offset = 0
+$keepGoing = $true
+while($keepGoing) {
+    $pagedItems = @(Find-Item @props -Skip $offset -First $pageSize)
+    if($pagedItems) {
+        $lastCount = $pagedItems.Count
+        $offset += $lastCount
+        $items.AddRange($pagedItems) > $null
+    } else {
+        $keepGoing = $false
+    }
+}
+
+Find-Item @props | Measure-Object
+
 ```
 
 ## Related Topics
