@@ -258,7 +258,7 @@ Show-ModalDialog -HandleParameters @{
 **Example:** The following displays a Sheer UI control without any additional parameters.
 
 ```powershell
-Show-ModalDialog -Control "ControlPanel"
+Show-ModalDialog -Control "SetIcon"
 ```
 
 ### Data List
