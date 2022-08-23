@@ -21,7 +21,7 @@ if($comment) {
 Close-Window
 ```
 
-See how Adam integrated [workflow actions](https://github.com/SitecorePowerShell/Book/tree/5daee3160885dadd7031fee723dccf12a33abd7b/modules/integration-points/[https:/blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/]/README.md) if you are really curious to know more.
+See how Adam integrated [workflow actions](https:/blog.najmanowicz.com/2014/11/09/introducing-powershell-actions-for-sitecore-workflows/) if you are really curious to know more.
 
 ## References
 
