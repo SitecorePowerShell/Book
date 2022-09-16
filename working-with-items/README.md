@@ -61,7 +61,7 @@ Copy-Item -Path "master:\content\home\Demo1" -Destination "master:\content\home\
 
 ### Command Parameters
 
-The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using [Dynamic Parameters](https://msdn.microsoft.com/en-us/library/dd878299%28v=vs.85%29.aspx). These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provided this table to help you discover the hidden gems within each command.
+The following commands provide you with the core methods needed to manage your content. Due to the nature of Windows PowerShell, commands such as these are extended with custom parameters and switches using [Dynamic Parameters](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/cmdlet-dynamic-parameters?view=powershell-5.1). These parameters are then added to the command at the time of use and only appear when the conditions are right. We've provided this table to help you discover the hidden gems within each command.
 
 | **Parameter Name** | **Description** | **Copy-Item** | **Get-Item** | **Get-ChildItem** | **Move-Item** | **New-Item** | **Remove-Item** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
