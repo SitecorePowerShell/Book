@@ -80,6 +80,7 @@ The following commands provide you with the core methods needed to manage your c
 | TransferOptions | Options flag used when copying from one database to another. | ✓ | – | – | ✓ | – | – |
 | Uri | Matches the item by ItemUri. | – | ✓ | – | – | – | – |
 | Version | Specifies the version to include. | – | ✓ | ✓ | – | – | – |
+| WithParent | Specifies the command should include the parent item. | – | - | ✓ | – | – | – |
 
 **Legend:** "–" - not applicable; "✓" - available.
 
