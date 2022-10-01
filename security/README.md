@@ -91,6 +91,7 @@ Actions supported out of the box:
 * **Allow** - Always allow the session to run elevated without prompting the user for permission. This should never be used outside of a developer's machine.
 * **Block** - Always block the session from running elevated without prompting the user for permission.
 * **Password** - Prompt the user for a password before running the session elevated, unless an unexpired session is active.
+* **Confirm** - Prompt the user for a confirmation before running the session elevated.
 
 **Example:** The following extends the token expiration to 10 minutes and blocks the use of the Console.
 
