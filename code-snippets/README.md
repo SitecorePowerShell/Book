@@ -79,6 +79,22 @@ $htmlDocument.DocumentNode.OuterHtml
 
 [Sitecore Stack Exchanage](https://sitecore.stackexchange.com/a/20845/95)
 
+**Example:** The following demonstrates removing style attributes from the html.
+
+```powershell
+$html = @"
+<div style='padding: 10px 10px;'>Some Text</div>
+"@
+
+$htmlDocument = New-Object -TypeName HtmlAgilityPack.HtmlDocument
+$htmlDocument.LoadHtml($html)
+$nodes = $htmlDocument.DocumentNode.SelectNodes("//@style");
+foreach($node in $nodes) {
+    $node.Attributes["style"].Remove()
+}
+$htmlDocument.DocumentNode.OuterHtml
+```
+
 ## Workflow History
 
 **Example:** The following prints the workflow history of the home item.
