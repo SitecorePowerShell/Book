@@ -58,7 +58,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ## Examples
 
-### EXAMPLE
+### EXAMPLE 1
 
 The following gets all renderings for a given item and lists the available rendering parameters.
 
