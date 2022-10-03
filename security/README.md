@@ -40,7 +40,7 @@ The following settings are configured under `core:\content\Applications\PowerShe
 | PowerShell ISE | sitecore\Developer \(read\) |
 | PowerShell ListView | sitecore\Sitecore Client Users \(read\) |
 | PowerShell Runner | sitecore\Sitecore Client Users \(read\) |
-| PowerShell Reports | No default settings. See [here](../modules/integration-points/reports/) for instructions. |
+| PowerShell Reports | sitecore\Sitecore Client Authoring. See [here](../modules/integration-points/reports/) for instructions. |
 
 **Note:** The security is validated in each SPE application within the function `OnLoad`.
 
@@ -116,7 +116,7 @@ Actions supported out of the box:
 </sitecore>
 ```
 
-Gates with **Password** protection enabled prompt the user when no elevated session is available.
+Gates with **Password** protection enabled prompt the user when no elevated session is available. When using Azure AD and or similar provider you should use the **Confirm** action.
 
 ![Elevate Session State](../.gitbook/assets/security-elevatedsessionstate-password.png)
 
@@ -196,7 +196,7 @@ Look for the following section and enable as needed.
 * **Media Download** - Used when the url contains all the information needed to download a media item from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
 * **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
 * **Handle Download** - Used when a file is downloaded through the Sitecore interface. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-  * Required for the following features: [Out-Download](../appendix/common/out-download.md) command.
+  * Required for the following features: [Out-Download](../appendix/common/out-download.md) command. If the report export buttons do not work it could be because of this setting.
 * **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
   * Required for the following features: PowerShell [Console](../interfaces/console.md), PowerShell [ISE](../interfaces/scripting.md), 
 * **Execution** - Used when SPE checks if the user has access to run the application.
@@ -290,7 +290,17 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 </configuration>
 ```
 
-#### IIS level security
+### Delegated Access
+
+There may be scenarios in which you need to grant users access to run scripts which perform operations elevated higher than the current access. The various integration points made visible in the Content Editor (Context Menu, Ribbon, Reports) can be configured to run the scripts impersonating a power user. This has the advantage of giving lower privileged users "special" access without having to make members of more privileged roles. In [#1283](https://github.com/SitecorePowerShell/Console/issues/1283) this feature introduced a simple configuration item to apply the "special" access.
+
+**Step 1:** Create a new delegated access item using the provided insert option.
+**Step 2:** Enter the role in which lower privileged users are members.
+**Step 3:** Enter the user account with elevated access. This could be `sitecore\Admin` or any other user your environment has configured. This user will be impersonated during script execution.
+**Step 4:** Select each script/library that should be delegated. Script/library items with a rule checking for delegated access should be included as well as scripts that should be run with the impersonated account.
+**Step 5:** Enable the delegated access item when ready for use.
+
+### IIS level security
 
 Deny access to the web services for unauthenticated users and roles using the `<deny>` element as described [here](https://msdn.microsoft.com/en-us/library/8aeskccd%28v=vs.71%29.aspx) in `sitecore modules\PowerShell\Services\web.config`.
 
@@ -340,7 +350,7 @@ You will also need to patch the configuration with the following:
 </configuration>
 ```
 
-For your convenience we've included a package bundled with all of the above called _SPE Minimal-4.x for Sitecore x.zip_. Any of the disabled configuration files should be enabled following extraction.
+For your convenience we've included a package bundled with all of the above called _SPE.Minimal-6.x.zip_. Any of the disabled configuration files should be enabled following extraction.
 
 ### References
 
