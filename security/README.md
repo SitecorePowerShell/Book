@@ -292,13 +292,13 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 
 ### Delegated Access
 
-There may be scenarios in which you need to grant users access to run scripts which perform operations elevated higher than the current access. The various integration points made visible in the Content Editor (Context Menu, Ribbon, Reports) can be configured to run the scripts impersonating a power user. This has the advantage of giving lower privileged users "special" access without having to make members of more privileged roles. In [#1283](https://github.com/SitecorePowerShell/Console/issues/1283) this feature introduced a simple configuration item to apply the "special" access.
+There may be scenarios in which you need to grant users access to run scripts which require access to be higher the what is currently configured for the user. The various integration points made visible in the Content Editor (Context Menu, Ribbon, Reports) can be configured to run the scripts impersonating a power user. This has the advantage of giving lower privileged users "special" access without having to make members of more privileged roles. In [#1283](https://github.com/SitecorePowerShell/Console/issues/1283) this feature introduced a simple configuration item to apply the "special" access.
 
-**Step 1:** Create a new delegated access item using the provided insert option.
-**Step 2:** Enter the role in which lower privileged users are members.
-**Step 3:** Enter the user account with elevated access. This could be `sitecore\Admin` or any other user your environment has configured. This user will be impersonated during script execution.
-**Step 4:** Select each script/library that should be delegated. Script/library items with a rule checking for delegated access should be included as well as scripts that should be run with the impersonated account.
-**Step 5:** Enable the delegated access item when ready for use.
+* **Step 1:** Create a new delegated access item using the provided insert option.
+* **Step 2:** Enter the role in which lower privileged users are members.
+* **Step 3:** Enter the user account with elevated access. This could be `sitecore\Admin` or any other user your environment has configured. This user will be impersonated during script execution.
+* **Step 4:** Select each script/library that should be delegated. Script/library items with a rule checking for delegated access should be included as well as scripts that should be run with the impersonated account.
+* **Step 5:** Enable the delegated access item when ready for use.
 
 ### IIS level security
 
