@@ -295,10 +295,16 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 There may be scenarios in which you need to grant users access to run scripts which require access to be higher the what is currently configured for the user. The various integration points made visible in the Content Editor (Context Menu, Ribbon, Reports) can be configured to run the scripts impersonating a power user. This has the advantage of giving lower privileged users "special" access without having to make members of more privileged roles. In [#1283](https://github.com/SitecorePowerShell/Console/issues/1283) this feature introduced a simple configuration item to apply the "special" access.
 
 * **Step 1:** Create a new delegated access item using the provided insert option.
+![image](https://user-images.githubusercontent.com/933163/191065624-65c400c8-8628-4ede-b669-52d1e3e1c513.png) ![image](https://user-images.githubusercontent.com/933163/191063313-7c51250e-9740-4054-890e-7fb282912ddc.png)
 * **Step 2:** Enter the role in which lower privileged users are members.
 * **Step 3:** Enter the user account with elevated access. This could be `sitecore\Admin` or any other user your environment has configured. This user will be impersonated during script execution.
 * **Step 4:** Select each script/library that should be delegated. Script/library items with a rule checking for delegated access should be included as well as scripts that should be run with the impersonated account.
+![image](https://user-images.githubusercontent.com/933163/191064401-d135e275-aeea-4315-a505-acca61d6c963.png)
 * **Step 5:** Enable the delegated access item when ready for use.
+
+When scripts are executed you should see them logged to the SPE log where the context user and impersonated user appear.
+
+> 2304 14:02:32 INFO [Gutter] Executing script {CFE81AF6-2468-4E62-8BF2-588B7CC60F80} for Context User sitecore\test as sitecore\Admin.
 
 ### IIS level security
 
