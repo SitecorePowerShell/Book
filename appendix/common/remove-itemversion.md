@@ -165,7 +165,7 @@ Help Author: Adam Najmanowicz, Michael West
 Remove Polish and Spanish language from /sitecore/content/home item in the master database
 
 ```powershell
-PS master:\> Remove-ItemVersion -Path master:\content\home -Language "pl-pl", "es-es"
+Remove-ItemVersion -Path master:\content\home -Language "pl-pl", "es-es"
 ```
 
 ### EXAMPLE 2
@@ -173,7 +173,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -Language "pl-pl", "e
 Remove all english based languages defined in /sitecore/content/home item and all of its children in the master database
 
 ```powershell
-PS master:\> Remove-ItemVersion -Path master:\content\home -Language "en-*" -Recurse
+Remove-ItemVersion -Path master:\content\home -Language "en-*" -Recurse
 ```
 
 ### EXAMPLE 3
@@ -181,7 +181,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -Language "en-*" -Rec
 Remove all languages except those that are "en" based defined in /sitecore/content/home item and all of its children in the master database
 
 ```powershell
-PS master:\> Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*" -Recurse
+Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*" -Recurse
 ```
 
 ### EXAMPLE 4
@@ -189,7 +189,7 @@ PS master:\> Remove-ItemVersion -Path master:\content\home -ExcludeLanguage "en*
 Trim all languages to 3 latest versions for /sitecore/content/home item and all of its children in the master database
 
 ```powershell
-PS master:\> Remove-ItemVersion -Path master:\content\home -Language * -Recurse
+Remove-ItemVersion -Path master:\content\home -Language * -MaxRecentVersions 3 -Recurse
 ```
 
 ### EXAMPLE 5
@@ -203,7 +203,6 @@ Get-Item -Path "master:" -ID $itemId -Version 2 | Remove-ItemVersion -Archive
 
 ## Related Topics
 
-* [https://github.com/SitecorePowerShell/Console/](https://github.com/SitecorePowerShell/Console/) 
 * [Add-ItemVersion](add-itemversion.md)
 * Remove-Item
 * [https://gist.github.com/AdamNaj/b36ea095e3668c22c07e](https://gist.github.com/AdamNaj/b36ea095e3668c22c07e) 
