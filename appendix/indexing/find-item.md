@@ -687,7 +687,7 @@ $props = @{
     Criteria = $criteria
 }
 
-$items = [System.Collections.ArrayList]@()
+$searchItems = [System.Collections.ArrayList]@()
 $pageSize = 250
 $offset = 0
 $keepGoing = $true
@@ -696,13 +696,13 @@ while($keepGoing) {
     if($pagedItems) {
         $lastCount = $pagedItems.Count
         $offset += $lastCount
-        $items.AddRange($pagedItems) > $null
+        $searchItems.AddRange($pagedItems) > $null
     } else {
         $keepGoing = $false
     }
 }
 
-Find-Item @props | Measure-Object
+$searchItems
 
 ```
 
