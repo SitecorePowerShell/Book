@@ -120,27 +120,6 @@ Gates with **Password** protection enabled prompt the user when no elevated sess
 
 ![Elevate Session State](../.gitbook/assets/security-elevatedsessionstate-password.png)
 
-**Note:** If you are using Sitecore 9.1 or later with Identity Server, there is a configuration file that should be enabled.
-
-* `Spe.IdentityServer.config`
-
-```markup
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:security="http://www.sitecore.net/xmlconfig/security/">
-  <sitecore role:require="Standalone or ContentManagement" security:require="Sitecore">
-    <pipelines>
-      <owin.cookieAuthentication.validateIdentity>
-        <processor type="Sitecore.Owin.Authentication.Pipelines.CookieAuthentication.ValidateIdentity.ValidateSiteNeutralPaths, Sitecore.Owin.Authentication">
-          <siteNeutralPaths hint="list">
-            <!-- This entry corrects the infinite loop of ExecuteCommand in the SPE Console -->
-            <path hint="spe">/sitecore%20modules/PowerShell</path>
-          </siteNeutralPaths>
-        </processor>
-      </owin.cookieAuthentication.validateIdentity>
-    </pipelines>
-  </sitecore>
-</configuration>
-```
-
 **Content Editor**
 
 A Content Editor Warning is displayed when a PowerShell Module, Script Library, and Script is selected. Click "Elevate session" to show the hidden fields and enable the management of the item.
@@ -362,3 +341,25 @@ For your convenience we've included a package bundled with all of the above call
 
 * [Shields Down Example](https://alan-null.github.io/2017/01/spe-dev-config)
 
+## Identity Server
+
+**Note:** If you are using Sitecore 9.1 or later with Identity Server, there is a configuration file that should be enabled.
+
+* `Spe.IdentityServer.config`
+
+```markup
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:security="http://www.sitecore.net/xmlconfig/security/">
+  <sitecore role:require="Standalone or ContentManagement" security:require="Sitecore">
+    <pipelines>
+      <owin.cookieAuthentication.validateIdentity>
+        <processor type="Sitecore.Owin.Authentication.Pipelines.CookieAuthentication.ValidateIdentity.ValidateSiteNeutralPaths, Sitecore.Owin.Authentication">
+          <siteNeutralPaths hint="list">
+            <!-- This entry corrects the infinite loop of ExecuteCommand in the SPE Console -->
+            <path hint="spe">/sitecore%20modules/PowerShell</path>
+          </siteNeutralPaths>
+        </processor>
+      </owin.cookieAuthentication.validateIdentity>
+    </pipelines>
+  </sitecore>
+</configuration>
+```
