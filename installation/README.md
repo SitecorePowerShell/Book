@@ -26,7 +26,7 @@ You can find two flavors of the images:
 * Sitecore Built
   * Ex: `docker pull scr.sitecore.com/sxp/modules/sitecore-spe-assets:6.4-1809`
 
-With this approach you essentialy add a new layer during your image build to include the files from the asset image. Here are some samples of what you can add to your existing setup. Check out Sitecore's samples for additional guidence.
+With this approach, you essentially add a new layer during your image build to include the files from the asset image. Here are some samples of what you can add to your existing setup. Check out Sitecore's samples for additional guidance.
 
 **docker-compose.yml**
 
