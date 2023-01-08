@@ -6,43 +6,86 @@ description: Review prerequisites and details on how to get setup with SPE.
 
 ## Prerequisites
 
-* Windows 7+
-* Microsoft .NET Framework 4.5.2+ : [Download](https://www.microsoft.com/en-us/download/details.aspx?id=30653)  
-* Windows Management Framework 3+ : [Download](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
-  * The link provided will get you up to PowerShell 5
-  * [Detecting your PowerShell version](https://stackoverflow.com/questions/1825585/determine-installed-powershell-version)
+Take a quick look at the [appendix](../appendix/README.md) to see which version of SPE you should be installing that is compatible with your Sitecore environment. Generally SPE has pretty good backwards compatibility but may require a new version to support the latest Sitecore CMS release.
+
+ 
+* Windows Management Framework 5.1 (PowerShell) is generally available for most Windows environments. 
 * PowerShell [Execution Policy](https://technet.microsoft.com/en-us/library/ee176961.aspx) set to `RemoteSigned` \(probably optional\)
 
 {% hint style="info" %}
 The release of SPE 6.0 introduced name changes to some files which are now reflected throughout the documentation. Review [issue #1109](https://github.com/SitecorePowerShell/Console/issues/1109) to see the full scope of what changed. Any place where the name _Cognifide_ or _Cognifide.PowerShell_ was used is now replaced with _Spe_.
 {% endhint %}
 
-{% hint style="warning" %}
-Sitecore versions 7.x and below are no longer supported with the release of SPE 5.0.
-{% endhint %}
+## Docker
 
-## Installation Walkthrough
+Working with Docker is going to be the preferred method of installation. 
 
-We have a short [video tutorial here](https://youtu.be/bVqa4DAANYk) walking through the installation here. The irony is that it's recorded for Sitecore version 7.x which is no longer supported.  ¯\\_\(ツ\)\_/¯ 
+You can find two flavors of the images:
+* [Community Built](https://hub.docker.com/r/sitecorepowershell/sitecore-powershell-extensions)
+ * Ex: `docker pull sitecorepowershell/sitecore-powershell-extensions:6.4-1809`
+* Sitecore Built
+ * Ex: `docker pull scr.sitecore.com/sxp/modules/sitecore-spe-assets:6.4-1809`
 
-## Download the Module
+With this approach you essentialy add a new layer during your image build to include the files from the asset image. Here are some samples of what you can add to your existing setup. Check out Sitecore's samples additional guidence.
 
-The SPE module installs like any other for Sitecore.
+**docker-compose.yml**
+
+```text
+services:
+  mssql-init:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-mssql-init:${VERSION:-latest}
+    build:
+      context: ./docker/build/mssql-init
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-mssql-init:${SITECORE_VERSION}
+        SPE_IMAGE: ${SITECORE_MODULE_REGISTRY}sitecore-spe-assets:${SPE_VERSION}
+  cm:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-cm:${VERSION:-latest}
+    build:
+      context: ./docker/build/cm
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-cm:${SITECORE_VERSION}
+        SPE_IMAGE: ${SITECORE_MODULE_REGISTRY}sitecore-spe-assets:${SPE_VERSION}
+```
+
+**Dockerfile (mssql-init)**
+
+```text
+# escape=`
+
+ARG BASE_IMAGE
+ARG SPE_IMAGE
+
+FROM ${SPE_IMAGE} as spe
+FROM ${BASE_IMAGE}
+
+COPY --from=spe C:\module\db C:\resources\spe
+```
+
+**Dockerfile (cm)**
+
+```text
+# escape=`
+
+ARG BASE_IMAGE
+ARG SPE_IMAGE
+
+FROM ${SPE_IMAGE} as spe
+FROM ${BASE_IMAGE}
+
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+
+WORKDIR /inetpub/wwwroot
+
+COPY --from=spe \module\cm\content .\
+```
+
+## Installation Wizard
+
+The SPE module installs like any other for Sitecore. This approach is appropriate for installations not within a containerized environment.
 
 [Download](https://github.com/SitecorePowerShell/Console/releases) the module from the GitHub releases page and install through the _Installation Wizard_.
-
-Following the installation you'll find these new items added to the Sitecore menu:
-
-* Sitecore &gt; [PowerShell Console](../interfaces/console.md)
-* Sitecore &gt; [PowerShell Toolbox](../modules/integration-points/toolbox.md)
-* Sitecore &gt; Development Tools &gt; [PowerShell ISE](../interfaces/scripting.md)
-* Sitecore &gt; Reporting Tools &gt; [PowerShell Reports](../modules/integration-points/reports/)
-
-## Compile Your Own Binaries
-
-You may also clone the project from [GitHub](https://git.io/spe) and compile it. This allows you to access the latest functionality without waiting for a new release. See the following [contributor guide](contributor-guide.md) for instructions on how to get up and running.
 
 ## Troubleshooting
 
 See the troubleshooting section [here](../troubleshooting.md)
-
