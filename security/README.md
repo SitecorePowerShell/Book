@@ -349,7 +349,7 @@ For your convenience we've included a package bundled with all of the above call
 
 ```markup
 <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:security="http://www.sitecore.net/xmlconfig/security/">
-  <sitecore role:require="Standalone or ContentManagement" security:require="Sitecore">
+  <sitecore role:require="Standalone or ContentManagement or XMCloud" security:require="Sitecore">
     <pipelines>
       <owin.cookieAuthentication.validateIdentity>
         <processor type="Sitecore.Owin.Authentication.Pipelines.CookieAuthentication.ValidateIdentity.ValidateSiteNeutralPaths, Sitecore.Owin.Authentication">
