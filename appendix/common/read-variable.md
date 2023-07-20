@@ -238,12 +238,6 @@ if($result -ne "ok")
 }
 ```
 
-### EXAMPLE 4
-
-```
-
-```
-
 ## Related Topics
 
 * [Show-Alert](show-alert.md)
