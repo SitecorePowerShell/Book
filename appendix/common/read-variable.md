@@ -156,7 +156,7 @@ Help Author: Adam Najmanowicz, Michael West
 
 ### EXAMPLE 1
 
-The following provides a dialog with a dropdown of options.
+The following provides a dialog with a dropdown of options, and how to read the selected value.
 
 ```powershell
 $options = @{
@@ -175,7 +175,12 @@ $props = @{
     ShowHints = $true
 }
 
-Read-Variable @props
+$result = Read-Variable @props
+
+if($result -eq "ok")
+{
+    Write-Host "You chose: $($selectedOption)"
+}
 ```
 
 ### EXAMPLE 2
@@ -235,6 +240,9 @@ if($result -ne "ok")
 
 ### EXAMPLE 4
 
+```
+
+```
 
 ## Related Topics
 
