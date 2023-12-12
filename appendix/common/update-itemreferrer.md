@@ -1,6 +1,6 @@
 # Update-ItemReferrer
 
-Updates references to specified item to point to a new provided in the -NewTarget ore removes links to the item.
+Updates references to specified item to point to a new provided in the -NewTarget or removes links to the item.
 
 ## Syntax
 
