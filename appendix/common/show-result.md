@@ -143,12 +143,6 @@ Shows a new instance of ISE
 Show-Result -Url "/sitecore/shell/Applications/PowerShell/PowerShellIse"
 ```
 
-### EXAMPLE 4
-
-```powershell
-
-```
-
 ## Related Topics
 
 * [Read-Variable](read-variable.md)
