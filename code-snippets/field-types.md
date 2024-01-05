@@ -48,7 +48,7 @@ $item.Fields["Rendering"].Value = $ids.ToString()
 $item.Editing.EndEdit() > $null
 ```
 
-**Example:** The following appends a an `ID` to a set of items in all languages. It verifies that the field _Keywords_ exists.
+**Example:** The following appends an `ID` to a set of items in all languages. It verifies that the field _Keywords_ exists.
 
 ```powershell
 $items = Get-ChildItem -Path "master:\sitecore\content\home" -Recurse -Language *

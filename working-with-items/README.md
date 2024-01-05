@@ -434,7 +434,24 @@ $item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
 $item."__Display name" = "I Like Turtles"
 ```
 
-This technique may be used for a wide variety of property types. There are a other hidden gems in those properties. For example if we detect that the field is a _Date_ or _Datetime_ field, we will return `System.DateTime` typed value from a field rather than the `System.String` Sitecore stores internally.
+This technique may be used for a wide variety of property types. 
+
+{% hint style="info" %}
+If you need to dynamically reference a property via a property name that is stored in a variable, there are numerous ways to reference it.
+{% endhint %}
+
+**Example:** 
+```powershell
+$item = Get-Item -Path "master:" -ID "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+$fieldName = "__Display name"
+
+# All variations will work
+Write-Host ($item.$fieldName)
+Write-Host ($item."$fieldName")
+Write-Host ($item."$($fieldName)")
+```
+
+There are a other hidden gems in automated PowerShell properties. For example, if we detect that the field is a _Date_ or _Datetime_ field, we will return `System.DateTime` typed value from a field rather than the `System.String` Sitecore stores internally.
 
 **Example:** The following gets the created date.
 
