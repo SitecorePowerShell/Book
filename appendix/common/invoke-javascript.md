@@ -2,7 +2,9 @@
 
 ## Syntax
 
-Invoke-JavaScript \[-Script\] &lt;String&gt;
+```powershell
+Invoke-JavaScript [-Script] <String> [-OnScriptEnd <SwitchParameter>] [<CommonParameters>]
+```
 
 ## Detailed Description
 
@@ -12,11 +14,20 @@ Invoke-JavaScript \[-Script\] &lt;String&gt;
 
 ### -Script  &lt;String&gt;
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | true |
-| Position? | 1 |
-| Default Value |  |
-| Accept Pipeline Input? | true \(ByValue\) |
-| Accept Wildcard Characters? | false |
+| Aliases                     |                  |
+| :-------------------------- | :--------------- |
+| Required?                   | true             |
+| Position?                   | 1                |
+| Default Value               |                  |
+| Accept Pipeline Input?      | true \(ByValue\) |
+| Accept Wildcard Characters? | false            |
 
+### -OnScriptEnd &lt;SwitchParameter&gt;
+
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
+| Accept Wildcard Characters? | false |

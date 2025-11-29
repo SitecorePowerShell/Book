@@ -5,10 +5,20 @@ Finds items using the Sitecore Content Search API.
 ## Syntax
 
 ```powershell
-Find-Item [-Index] <String> [-Criteria <SearchCriteria[]>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
-Find-Item [-Index] <String> [-Where <String>] [-WhereValues <Object[]>] [-Filter <String>] [-FilterValues <Object[]>] [-FacetOn <String[]>] [-FacetMinCount <Int32>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
-Find-Item [-Index] <String> [-WherePredicate <Expression<Func<SearchResultItem, bool>>>] [-FilterPredicate <Expression<Func<SearchResultItem, bool>>>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
-Find-Item [-Index] <String> [-ScopeQuery <String>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [<CommonParameters>]
+Find-Item [-Criteria <SearchCriteria[]>] [-FacetOn <String[]>] [-FacetMinCount <Int32>] [[-Index] <String>] [-Path <String>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [-Property
+    <String[]>] [-Template <String[]>] [-LatestVersion <SwitchParameter>] [<CommonParameters>]
+
+Find-Item [-Where <String>] [-WhereValues <Object[]>] [-Filter <String>] [-FilterValues <Object[]>] [-FacetOn <String[]>] [-FacetMinCount <Int32>] [[-Index] <String>] [-Path <String>] [-QueryType <Type>] [-OrderBy <String>] [-First
+    <Int32>] [-Last <Int32>] [-Skip <Int32>] [-Property <String[]>] [-Template <String[]>] [-LatestVersion <SwitchParameter>] [<CommonParameters>]
+
+Find-Item [-FacetOn <String[]>] [-FacetMinCount <Int32>] [-WherePredicate <Object>] [-FilterPredicate <Object>] [[-Index] <String>] [-Path <String>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip
+    <Int32>] [-Property <String[]>] [-Template <String[]>] [-LatestVersion <SwitchParameter>] [<CommonParameters>]
+
+Find-Item [-FacetOn <String[]>] [-FacetMinCount <Int32>] [-ScopeQuery <String>] [[-Index] <String>] [-Path <String>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>] [-Property <String[]>]
+    [-Template <String[]>] [-LatestVersion <SwitchParameter>] [<CommonParameters>]
+
+Find-Item [-FacetOn <String[]>] [-FacetMinCount <Int32>] [-SearchStringModels <SearchStringModel[]>] [[-Index] <String>] [-Path <String>] [-QueryType <Type>] [-OrderBy <String>] [-First <Int32>] [-Last <Int32>] [-Skip <Int32>]
+    [-Property <String[]>] [-Template <String[]>] [-LatestVersion <SwitchParameter>] [<CommonParameters>]
 ```
 
 ## Detailed Description
@@ -19,66 +29,66 @@ The Find-Item command searches for items using the Sitecore Content Search API. 
 
 ## Parameters
 
-### -Index  &lt;String&gt;
+### -Index &lt;String&gt;
 
 Name of the Index that will be used for the search:
 
-Find-Item -Index sitecore\_master\_index -First 10
+Find-Item -Index sitecore_master_index -First 10
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | true |
-| Position? | 1 |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | true  |
+| Position?                   | 1     |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -Criteria  &lt;SearchCriteria\[\]&gt;
+### -Criteria &lt;SearchCriteria\[\]&gt;
 
 Simple form of search in which logical "AND" operations are needed.
 
 ```powershell
-@{ Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; }, 
+@{ Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; },
 @{ Filter = "DescendantOf"; Value = (Get-Item "master:/content/") }
 ```
 
 Where "Filter" is one of the following values:
 
-* Equals
-* StartsWith
-* Contains
-* ContainsAny
-* ContainsAll
-* EndsWith
-* DescendantOf - performs a _Contains_ with the field **\_path**
-* Fuzzy
-* InclusiveRange - performs a _Between_ using `int`, `double`, `datetime`, and `string`types
-* ExclusiveRange - same as _InclusiveRange_
-* MatchesRegex - use something like `^.*$`
-* MatchesWildcard - use something like `H?li*m`
-* LessThan
-* GreaterThan
+- Equals
+- StartsWith
+- Contains
+- ContainsAny
+- ContainsAll
+- EndsWith
+- DescendantOf - performs a _Contains_ with the field **\_path**
+- Fuzzy
+- InclusiveRange - performs a _Between_ using `int`, `double`, `datetime`, and `string`types
+- ExclusiveRange - same as _InclusiveRange_
+- MatchesRegex - use something like `^.*$`
+- MatchesWildcard - use something like `H?li*m`
+- LessThan
+- GreaterThan
 
 Where "Field" is the Index Field name found on the `SearchResultItem` such as the following:
 
-* \_\_smallcreateddate - CreatedDate
-* \_\_smallupdateddate - Updated
-* \_group - ID
-* \_template - TemplateId
-* \_templatename - TemplateName
-* \_fullpath - Path
+- \_\_smallcreateddate - CreatedDate
+- \_\_smallupdateddate - Updated
+- \_group - ID
+- \_template - TemplateId
+- \_templatename - TemplateName
+- \_fullpath - Path
 
 Where "Value" is one of the following:
 
-* string
-* string\[\]
-* Sitecore.Data.ID
-* Sitecore.Data.Items.Item
-* Sitecore.Data.Items.Item\[\]
-* object\[\] - when using `@()` you'll get this type, which will be treated as an array of strings
-* PSObject\[\]
-* System.Collections.ArrayList
-* System.Collections.Generics.List&lt;string&gt;
+- string
+- string\[\]
+- Sitecore.Data.ID
+- Sitecore.Data.Items.Item
+- Sitecore.Data.Items.Item\[\]
+- object\[\] - when using `@()` you'll get this type, which will be treated as an array of strings
+- PSObject\[\]
+- System.Collections.ArrayList
+- System.Collections.Generics.List&lt;string&gt;
 
 Where "Boost" is a positive number greater than 0
 
@@ -98,18 +108,18 @@ Find-Item @props -First 1 | Select-Object -Expand "Fields"
 
 Where "Invert" is a boolean to indicate the following:
 
-* $false - This is the default value. Do exactly as the query is defined.
-* $true - Reverse the logic. For example, "Contains" is treated like "NotContains", "Equals" is treated like "NotEquals".
+- $false - This is the default value. Do exactly as the query is defined.
+- $true - Reverse the logic. For example, "Contains" is treated like "NotContains", "Equals" is treated like "NotEquals".
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -Where  &lt;String&gt;
+### -Where &lt;String&gt;
 
 Where the "Where" is the Dynamic Linq query and "WhereValues" includes the array of values to be replaced in the query.
 
@@ -125,149 +135,185 @@ Find-Item @props
 
 Filtering Criteria using Dynamic Linq syntax: [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -WhereValues  &lt;Object\[\]&gt;
+### -WhereValues &lt;Object\[\]&gt;
 
 An Array of objects for Dynamic Linq "-Where" parameter as explained in: [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -Filter  &lt;String&gt;
+### -Filter &lt;String&gt;
 
 Where the "Filter" is the Dynamic Linq query and "FilterValues" includes the array of values to be replaced in the query.
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -FilterValues  &lt;Object\[\]&gt;
+### -FilterValues &lt;Object\[\]&gt;
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -WherePredicate  &lt;Expression&lt;Func&lt;SearchResultItem,bool&gt;&gt;&gt;
+### -WherePredicate &lt;Expression&lt;Func&lt;SearchResultItem,bool&gt;&gt;&gt;
 
 Use the `New-SearchPredicate` command to build the appropriate predicates.
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -FilterPredicate  &lt;Expression&lt;Func&lt;SearchResultItem,bool&gt;&gt;&gt;
+### -FilterPredicate &lt;Expression&lt;Func&lt;SearchResultItem,bool&gt;&gt;&gt;
 
 Use the `New-SearchPredicate` command to build the appropriate predicates.
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -ScopeQuery  &lt;String&gt;
+### -ScopeQuery &lt;String&gt;
 
 When combined with the Query Builder field, a simple query can be crafted to return search results.
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -OrderBy  &lt;String&gt;
+### -OrderBy &lt;String&gt;
 
 Field by which the search results sorting should be performed. This is the .Net Property name as see on the SearchResultItem class. Dynamic Linq ordering syntax used. [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -First  &lt;Int32&gt;
+### -First &lt;Int32&gt;
 
 Number of returned search results.
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -Last  &lt;Int32&gt;
+### -Last &lt;Int32&gt;
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -Skip  &lt;Int32&gt;
+### -Skip &lt;Int32&gt;
 
 Number of search results to be skipped skip before returning the results commences.
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
-### -Property  &lt;String\[\]&gt;
+### -Property &lt;String\[\]&gt;
 
-An array of property names which match with the `SearchResultItem` type. 
+An array of property names which match with the `SearchResultItem` type.
 
 **Note:** The use of `Initialize-Item` is not supported because the object returned is no longer a `SearchResultItem` and therefore unable to guarantee that `Item` objects can be returned. [#1123](https://github.com/SitecorePowerShell/Console/issues/1123)
 
-| Aliases |  |
-| :--- | :--- |
-| Required? | false |
-| Position? | named |
-| Default Value |  |
-| Accept Pipeline Input? | false |
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
+| Accept Wildcard Characters? | false |
+
+### -Template &lt;String\[\]&gt;
+
+An array of template path names relative to the `-Path`.
+
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
+| Accept Wildcard Characters? | false |
+
+### -LatestVersion &lt;SwitchParameter&gt;
+
+Specifies that the latest item version should be returned.
+
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
+| Accept Wildcard Characters? | false |
+
+### -Path &lt;String&gt;
+
+Specifies the root directory to find items.
+
+| Aliases                     |       |
+| :-------------------------- | :---- |
+| Required?                   | false |
+| Position?                   | named |
+| Default Value               |       |
+| Accept Pipeline Input?      | false |
 | Accept Wildcard Characters? | false |
 
 ## Outputs
 
 The output type is the type of the objects that the cmdlet emits.
 
-* Sitecore.ContentSearch.SearchTypes.SearchResultItem 
+- Sitecore.ContentSearch.SearchTypes.SearchResultItem
 
 ## Notes
 
@@ -281,7 +327,7 @@ Fields by which filtering can be performed using the -Criteria parameter.
 
 ```powershell
 $criteria = @(
-    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"}, 
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"},
     @{Filter = "Contains"; Field = "Title"; Value = "Sitecore"},
     @{Filter = "Contains"; Field = "Title"; Value = "Powerful ways"; "Invert" = $true}
 )
@@ -330,8 +376,8 @@ Find items using a complex search predicate.
 
 ```powershell
 $criteriaTemplate = @(
-    @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"; }, 
-    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; Boost=25; }, 
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Template Field"; },
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Item"; Boost=25; },
     @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"; }
 )
 
@@ -489,7 +535,7 @@ Find items where the created date is older than the specified time in UTC.
 $date = New-Object DateTime 2019, 8, 1, 0, 0, 0, ([DateTimeKind]::Utc)
 
 $criteria = @(
-    @{Filter = "LessThan"; Field = "__smallupdateddate"; Value = $date} 
+    @{Filter = "LessThan"; Field = "__smallupdateddate"; Value = $date}
 )
 $props = @{
     Index = "sitecore_master_index"
@@ -576,7 +622,7 @@ class TitleSearchResultItem : SearchResultItem
 }
 
 $criteria = @(
-    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"}, 
+    @{Filter = "Equals"; Field = "_templatename"; Value = "Sample Content"},
     @{Filter = "Contains"; Field = "Title"; Value = "Sitecore"},
     @{Filter = "Contains"; Field = "_creator"; Value = "admin"}
 )
@@ -706,13 +752,22 @@ $searchItems
 
 ```
 
+### EXAMPLE 22
+
+```powershell
+Find-Item `
+    -Template "Modules/PowerShell Console/PowerShell Script" `
+    -LatestVersion `
+    -Path master:\templates | Initialize-Item
+```
+
 ## Related Topics
 
-* [Initialize-Item](initialize-item.md)
-* [https://gist.github.com/AdamNaj/273458beb3f2b179a0b6](https://gist.github.com/AdamNaj/273458beb3f2b179a0b6) 
-* [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library) 
-* [#1128](https://github.com/SitecorePowerShell/Console/issues/1128) Added support for GreaterThan and LessThan
-* [#1120](https://github.com/SitecorePowerShell/Console/issues/1120) Added support for custom `SearchResultItem` type
-* [#1174](https://github.com/SitecorePowerShell/Console/issues/1174) Added support for Facet
-* [#1176](https://github.com/SitecorePowerShell/Console/issues/1176) Added support for Filter
-
+- [Initialize-Item](initialize-item.md)
+- [https://gist.github.com/AdamNaj/273458beb3f2b179a0b6](https://gist.github.com/AdamNaj/273458beb3f2b179a0b6)
+- [https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library](https://weblogs.asp.net/scottgu/dynamic-linq-part-1-using-the-linq-dynamic-query-library)
+- [#1128](https://github.com/SitecorePowerShell/Console/issues/1128) Added support for GreaterThan and LessThan
+- [#1120](https://github.com/SitecorePowerShell/Console/issues/1120) Added support for custom `SearchResultItem` type
+- [#1174](https://github.com/SitecorePowerShell/Console/issues/1174) Added support for Facet
+- [#1176](https://github.com/SitecorePowerShell/Console/issues/1176) Added support for Filter
+- [#1393](https://github.com/SitecorePowerShell/Console/issues/1393) Added support for Template/LatestVersion/Path
