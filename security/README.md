@@ -226,6 +226,8 @@ The preferred way to override the settings is through the use of a configuration
 
 The file types (i.e. `.csv`) and upload locations (i.e. `$SitecoreTempFolder`) is restricted by default and can be extended through a patch configuration file.
 
+**Example:** The following limits the file types and location.
+
 ```xml
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
@@ -239,7 +241,7 @@ The file types (i.e. `.csv`) and upload locations (i.e. `$SitecoreTempFolder`) i
           <pattern>.csv</pattern>
         </allowedFileTypes>
         <allowedLocations>
-          <!--<path>$SitecoreTempFolder</path>-->
+          <path>$SitecoreTempFolder</path>
           <!--<path>$SitecoreDataFolder</path>-->
           <!--<path>$SitecorePackageFolder</path>-->
         </allowedLocations>
