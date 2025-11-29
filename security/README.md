@@ -14,8 +14,8 @@ Installing SPE in internet facing \(DMZ\) scenarios is not recommend. Please avo
 
 There are two main security policies to consider when using the SPE module:
 
-* Application Pool service account
-* Sitecore user account
+- Application Pool service account
+- Sitecore user account
 
 ### Application Pool Service Account
 
@@ -34,24 +34,24 @@ The second policy relates to the Sitecore user account. The code executed throug
 **Application Security**  
 The following settings are configured under `core:\content\Applications\PowerShell`.
 
-| **Feature** | **Visibility** |
-| :--- | :--- |
-| PowerShell Console | sitecore\Developer \(read\) |
-| PowerShell ISE | sitecore\Developer \(read\) |
-| PowerShell ListView | sitecore\Sitecore Client Users \(read\) |
-| PowerShell Runner | sitecore\Sitecore Client Users \(read\) |
-| PowerShell Reports | sitecore\Sitecore Client Authoring. See [here](../modules/integration-points/reports/) for instructions. |
+| **Feature**         | **Visibility**                                                                                           |
+| :------------------ | :------------------------------------------------------------------------------------------------------- |
+| PowerShell Console  | sitecore\Developer \(read\)                                                                              |
+| PowerShell ISE      | sitecore\Developer \(read\)                                                                              |
+| PowerShell ListView | sitecore\Sitecore Client Users \(read\)                                                                  |
+| PowerShell Runner   | sitecore\Sitecore Client Users \(read\)                                                                  |
+| PowerShell Reports  | sitecore\Sitecore Client Authoring. See [here](../modules/integration-points/reports/) for instructions. |
 
 **Note:** The security is validated in each SPE application within the function `OnLoad`.
 
 **Menu Item Security**  
 The following settings are configured under `core:\content\Applications\Content Editor\Context Menues\Default\`.
 
-| **Feature** | **Visibility** | **Command State** |
-| :--- | :--- | :--- |
-| Edit with ISE | sitecore\Developer \(read\) | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden** |
-| Console | sitecore\Developer \(read\) | **Enabled** when user is _admin_ or in the role _sitecore\Sitecore Client Developing_ otherwise **Hidden** |
-| Scripts | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** when the service and user are authorized to execute otherwise **Hidden** |
+| **Feature**   | **Visibility**                                         | **Command State**                                                                                          |
+| :------------ | :----------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| Edit with ISE | sitecore\Developer \(read\)                            | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden**                                 |
+| Console       | sitecore\Developer \(read\)                            | **Enabled** when user is _admin_ or in the role _sitecore\Sitecore Client Developing_ otherwise **Hidden** |
+| Scripts       | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** when the service and user are authorized to execute otherwise **Hidden**                       |
 
 **Note:** See the _Interactive_ section on _PowerShell Script Library_ and _PowerShell Script_ items for visibility and enabled rules. To hide each feature you can change the security settings for the roles that should not see the menu.
 
@@ -71,31 +71,31 @@ Let's have a look at the configurable features which make up the UAC.
 
 The way in which scripts make their way into Sitecore through built-in interfaces. Includes the [Console](../interfaces/console.md), [ISE](../interfaces/scripting.md), and Content Editor via _Item Saving_.
 
-| Attribute | Description |
-| :--- | :--- |
-| name | built-in name for the gate |
-| token | name of the token to use for the elevated session |
+| Attribute | Description                                       |
+| :-------- | :------------------------------------------------ |
+| name      | built-in name for the gate                        |
+| token     | name of the token to use for the elevated session |
 
 **Token**
 
 The object which expires after a predetermined time. These can be unique to each gate or shared.
 
-| Attribute | Description |
-| :--- | :--- |
-| name | unique string used for the gate _token_ attribute |
-| expiration | timespan used to determine the elevated session lifetime \(hh:mm:ss\) |
+| Attribute       | Description                                                                      |
+| :-------------- | :------------------------------------------------------------------------------- |
+| name            | unique string used for the gate _token_ attribute                                |
+| expiration      | timespan used to determine the elevated session lifetime \(hh:mm:ss\)            |
 | elevationAction | action to perform when session elevation is triggered \(allow, block, password\) |
 
 Actions supported out of the box:
 
-* **Allow** - Always allow the session to run elevated without prompting the user for permission. This should never be used outside of a developer's machine.
-* **Block** - Always block the session from running elevated without prompting the user for permission.
-* **Password** - Prompt the user for a password before running the session elevated, unless an unexpired session is active.
-* **Confirm** - Prompt the user for a confirmation before running the session elevated.
+- **Allow** - Always allow the session to run elevated without prompting the user for permission. This should never be used outside of a developer's machine.
+- **Block** - Always block the session from running elevated without prompting the user for permission.
+- **Password** - Prompt the user for a password before running the session elevated, unless an unexpired session is active.
+- **Confirm** - Prompt the user for a confirmation before running the session elevated.
 
 **Example:** The following extends the token expiration to 10 minutes and blocks the use of the Console.
 
-```markup
+```xml
 <sitecore>
   <powershell>
     <userAccountControl>
@@ -146,7 +146,7 @@ The web services providing external access to Sitecore are disabled by default. 
 
 Look for the following section and enable as needed.
 
-```markup
+```xml
 <sitecore>
   <powershell>
     <services>
@@ -167,26 +167,26 @@ Look for the following section and enable as needed.
 
 #### Service Descriptions
 
-* **Remoting** - Used when passing scripts to SPE for execution. Enable when using the **SPE Remoting** module. Service associated with `RemoteAutomation.asmx`.
-* **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
-  * Required for the following features: PowerShell [Web API](../modules/integration-points/web-api.md).
-* **File Download** - Used when the url contains all the information needed to download a file from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-* **File Upload** - Used when the url contains all the information needed to upload a file to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-* **Media Download** - Used when the url contains all the information needed to download a media item from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-* **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-* **Handle Download** - Used when a file is downloaded through the Sitecore interface. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-  * Required for the following features: [Out-Download](../appendix/common/out-download.md) command. If the report export buttons do not work it could be because of this setting.
-* **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
-  * Required for the following features: PowerShell [Console](../interfaces/console.md), PowerShell [ISE](../interfaces/scripting.md), 
-* **Execution** - Used when SPE checks if the user has access to run the application.
-  * Required for the following features: [Download File](../interfaces/interactive-dialogs.md) dialog, PowerShell Script Runner, [Content Editor](../modules/integration-points/content-editor.md) \(Context Menu, Insert Options, Ribbon\). 
-* **RESTful v1** - Used in early version of SPE. Avoid using this if possible. Service associated with `RemoteScriptCall.ashx`.
+- **Remoting** - Used when passing scripts to SPE for execution. Enable when using the **SPE Remoting** module. Service associated with `RemoteAutomation.asmx`.
+- **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
+  - Required for the following features: PowerShell [Web API](../modules/integration-points/web-api.md).
+- **File Download** - Used when the url contains all the information needed to download a file from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+- **File Upload** - Used when the url contains all the information needed to upload a file to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+- **Media Download** - Used when the url contains all the information needed to download a media item from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+- **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+- **Handle Download** - Used when a file is downloaded through the Sitecore interface. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
+  - Required for the following features: [Out-Download](../appendix/common/out-download.md) command. If the report export buttons do not work it could be because of this setting.
+- **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
+  - Required for the following features: PowerShell [Console](../interfaces/console.md), PowerShell [ISE](../interfaces/scripting.md),
+- **Execution** - Used when SPE checks if the user has access to run the application.
+  - Required for the following features: [Download File](../interfaces/interactive-dialogs.md) dialog, PowerShell Script Runner, [Content Editor](../modules/integration-points/content-editor.md) \(Context Menu, Insert Options, Ribbon\).
+- **RESTful v1** - Used in early version of SPE. Avoid using this if possible. Service associated with `RemoteScriptCall.ashx`.
 
 The preferred way to override the settings is through the use of a configuration patch file.
 
 **Example:** The following enables the file and media downloads.
 
-```markup
+```xml
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>
@@ -205,7 +205,7 @@ The preferred way to override the settings is through the use of a configuration
 
 **Example:** The following enables the SPE Remoting service and requires a secure connection using HTTPS.
 
-```markup
+```xml
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>
@@ -222,6 +222,35 @@ The preferred way to override the settings is through the use of a configuration
 
 **Note:** When using the attribute `requireSecureConnection`, you may find that this causes a 403 status code when testing against a server hosted behind a load balancer. If the load balancer maintains the TLS certificate and forwards traffic to a backend web server over port 80 .Net will not recognize this as a secure connection.
 
+### Restrict File Types and Locations
+
+The file types (i.e. `.csv`) and upload locations (i.e. `$SitecoreTempFolder`) is restricted by default and can be extended through a patch configuration file.
+
+```xml
+<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <powershell>
+       <uploadFile>
+        <!-- Mime type or extension: .png, image/*, text/csv -->
+        <allowedFileTypes>
+          <pattern>image/*</pattern>
+          <pattern>.xls</pattern>
+          <pattern>.xlsx</pattern>
+          <pattern>.csv</pattern>
+        </allowedFileTypes>
+        <allowedLocations>
+          <!--<path>$SitecoreTempFolder</path>-->
+          <!--<path>$SitecoreDataFolder</path>-->
+          <!--<path>$SitecorePackageFolder</path>-->
+        </allowedLocations>
+      </uploadFile>
+    </powershell>
+  </sitecore>
+</configuration>
+```
+
+**Note:** Feature introduced with [#1362](https://github.com/SitecorePowerShell/Console/issues/1362)
+
 ### Restrict Users and Roles
 
 #### Sitecore level security
@@ -230,7 +259,7 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 
 **Example:** The following configuration defines the roles that have access to use SPE Remoting. Any role previously defined in the `<authorization/>` section is removed and custom roles are then added.
 
-```markup
+```xml
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>
@@ -251,7 +280,7 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 
 **Example:** The following configuration grants access to custom roles without removing any existing roles.
 
-```markup
+```xml
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
   <sitecore>
     <powershell>
@@ -273,13 +302,13 @@ You are required to explicitly grant the SPE Remoting session user account to a 
 
 There may be scenarios in which you need to grant users access to run scripts which require access to be higher the what is currently configured for the user. The various integration points made visible in the Content Editor (Context Menu, Ribbon, Reports) can be configured to run the scripts impersonating a power user. This has the advantage of giving lower privileged users "special" access without having to make members of more privileged roles. In [#1283](https://github.com/SitecorePowerShell/Console/issues/1283) this feature introduced a simple configuration item to apply the "special" access.
 
-* **Step 1:** Create a new delegated access item using the provided insert option.
-![image](https://user-images.githubusercontent.com/933163/191065624-65c400c8-8628-4ede-b669-52d1e3e1c513.png) ![image](https://user-images.githubusercontent.com/933163/191063313-7c51250e-9740-4054-890e-7fb282912ddc.png)
-* **Step 2:** Enter the role in which lower privileged users are members.
-* **Step 3:** Enter the user account with elevated access. This could be `sitecore\Admin` or any other user your environment has configured. This user will be impersonated during script execution.
-* **Step 4:** Select each script/library that should be delegated. Script/library items with a rule checking for delegated access should be included as well as scripts that should be run with the impersonated account.
-![image](https://user-images.githubusercontent.com/933163/191064401-d135e275-aeea-4315-a505-acca61d6c963.png)
-* **Step 5:** Enable the delegated access item when ready for use.
+- **Step 1:** Create a new delegated access item using the provided insert option.
+  ![image](https://user-images.githubusercontent.com/933163/191065624-65c400c8-8628-4ede-b669-52d1e3e1c513.png) ![image](https://user-images.githubusercontent.com/933163/191063313-7c51250e-9740-4054-890e-7fb282912ddc.png)
+- **Step 2:** Enter the role in which lower privileged users are members.
+- **Step 3:** Enter the user account with elevated access. This could be `sitecore\Admin` or any other user your environment has configured. This user will be impersonated during script execution.
+- **Step 4:** Select each script/library that should be delegated. Script/library items with a rule checking for delegated access should be included as well as scripts that should be run with the impersonated account.
+  ![image](https://user-images.githubusercontent.com/933163/191064401-d135e275-aeea-4315-a505-acca61d6c963.png)
+- **Step 5:** Enable the delegated access item when ready for use.
 
 When scripts are executed you should see them logged to the SPE log where the context user and impersonated user appear.
 
@@ -291,7 +320,7 @@ Deny access to the web services for unauthenticated users and roles using the `<
 
 **Example:** The following configuration will deny anonymous calls to the web services.
 
-```markup
+```xml
 <configuration>
     <system.web>
       <authorization>
@@ -309,17 +338,17 @@ The following files are the bare minimum required to support SPE web services. T
 
 **Required:**
 
-* `App_Config\Include\Spe\Spe.config`
-* `App_Config\Include\Spe\Spe.Minimal.config`
-* `bin\Spe.dll`
-* `bin\Spe.Abstractions.dll`
-* `sitecore modules\PowerShell\Services\web.config`
-* `sitecore modules\PowerShell\Services\RemoteAutomation.asmx`
-* `sitecore modules\PowerShell\Services\RemoteScriptCall.ashx`
+- `App_Config\Include\Spe\Spe.config`
+- `App_Config\Include\Spe\Spe.Minimal.config`
+- `bin\Spe.dll`
+- `bin\Spe.Abstractions.dll`
+- `sitecore modules\PowerShell\Services\web.config`
+- `sitecore modules\PowerShell\Services\RemoteAutomation.asmx`
+- `sitecore modules\PowerShell\Services\RemoteScriptCall.ashx`
 
 You will also need to patch the configuration with the following:
 
-```markup
+```xml
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
     <sitecore>
         <controlSources>
@@ -339,15 +368,15 @@ For your convenience we've included a package bundled with all of the above call
 
 ### References
 
-* [Shields Down Example](https://alan-null.github.io/2017/01/spe-dev-config)
+- [Shields Down Example](https://alan-null.github.io/2017/01/spe-dev-config)
 
 ## Identity Server
 
 **Note:** If you are using Sitecore 9.1 or later with Identity Server, there is a configuration file that should be enabled.
 
-* `Spe.IdentityServer.config`
+- `Spe.IdentityServer.config`
 
-```markup
+```xml
 <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:security="http://www.sitecore.net/xmlconfig/security/">
   <sitecore role:require="Standalone or ContentManagement or XMCloud" security:require="Sitecore">
     <pipelines>
