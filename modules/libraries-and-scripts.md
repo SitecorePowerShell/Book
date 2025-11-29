@@ -30,23 +30,23 @@ Show-Alert (Get-DateMessage)
 
 Some names we've used included:
 
-* Beginner Tutorials
-* **Content Editor**
-* Content Maintenance
-* Content Interrogation
-* Development
-* **Event Handlers**
-* **Functions**
-* **Internal**
-* **Page Editor**
-* **Pipelines**
-* Profile and Security
-* **Reports**
-* Script Testing
-* **Tasks**
-* **Toolbox**
-* User Interaction
-* **Web API**
+- Beginner Tutorials
+- **Content Editor**
+- Content Maintenance
+- Content Interrogation
+- Development
+- **Event Handlers**
+- **Functions**
+- **Internal**
+- **Page Editor**
+- **Pipelines**
+- Profile and Security
+- **Reports**
+- Script Testing
+- **Tasks**
+- **Toolbox**
+- User Interaction
+- **Web API**
 
 {% hint style="info" %}
 Many of the libraries are integration points for the module. When the integration point wizard runs, you will see that these can be generated automatically.
@@ -56,43 +56,54 @@ Many of the libraries are integration points for the module. When the integratio
 
 **Interactive** : The following fields support the two custom rules as well as a variety of out-of-the-box rules.
 
-* **ShowRule** \(Show if rules are met or not defined\) - typically controls visibility of integration points.
-  * **PowerShell**
-    * where _specific_ persistent PowerShell session was already initiated
-    * where _specific_ persistent PowerShell session was already initiated and has the _specific_ variable defined and not null
-    * where exposed in a _specific_ view
-  * **PowerShell ISE**
-    * when _length_ script length is _compares to_ _number_ characters long
-    * when the edited script is _in a state_
-* **EnableRule** \(Enable if rules are met or not defined\) - typically controls enabled state of integration points.
-  * _**Same as above**_ 
+- **ShowRule** \(Show if rules are met or not defined\) - typically controls visibility of integration points.
+  - **PowerShell**
+    - where calling the _specific_ PowerShell script returns $True [#1388](https://github.com/SitecorePowerShell/Console/issues/1388)
+    - where calling the _specific_ PowerShell script returns value that _compares to_ _value_ [#1388](https://github.com/SitecorePowerShell/Console/issues/1388)
+    - where _specific_ persistent PowerShell session was already initiated [#153](https://github.com/SitecorePowerShell/Console/issues/153)
+    - where _specific_ persistent PowerShell session was already initiated and has the _specific_ variable defined and not null
+    - where exposed in a _specific_ view [#156](https://github.com/SitecorePowerShell/Console/issues/156)
+      - Used with the command `Show-ListView` to allow actions to be visible only on views with a corresponding name.
+  - **PowerShell ISE**
+    - when _length_ script length is _compares to_ _number_ characters long [#383](https://github.com/SitecorePowerShell/Console/issues/383)
+    - when the edited script is _in a state_ [#383](https://github.com/SitecorePowerShell/Console/issues/383)
+  - **PowerShell Security**
+    - where the current user has delegated access [#1283](https://github.com/SitecorePowerShell/Console/issues/1283)
+    - where the current user is a member of the _specific_ role, either directory or through inheritance [#1036](https://github.com/SitecorePowerShell/Console/issues/1036)
+  - **PowerShell System**
+    - where the Sitecore.config numeric setting _name_ _compares to_ _number_ [#1385](https://github.com/SitecorePowerShell/Console/issues/1385)
+    - where the Sitecore.config string setting _name_ _compares to_ _value_ [#1385](https://github.com/SitecorePowerShell/Console/issues/1385)
+    - where the Web.config numeric AppSetting _name_ _compares to_ _number_ [#1385](https://github.com/SitecorePowerShell/Console/issues/1385)
+    - where the Web.config string setting _name_ _compares to_ _value_ [#1385](https://github.com/SitecorePowerShell/Console/issues/1385)
+- **EnableRule** \(Enable if rules are met or not defined\) - typically controls enabled state of integration points.
+  - _**Same as above**_
 
 #### Rules Usage
 
-There are a number of use cases for the **EnableRule** and **ShowRule**. 
+There are a number of use cases for the **EnableRule** and **ShowRule**.
 
-* If there is a UI component the **ShowRule** can be used to ensure it appears while the **EnableRule** can toggle when it can be clicked.
-* If there is no UI component, the **EnableRule** is used to determine when the script should be executed; useful to limit creation of PowerShell runspaces.
+- If there is a UI component the **ShowRule** can be used to ensure it appears while the **EnableRule** can toggle when it can be clicked.
+- If there is no UI component, the **EnableRule** is used to determine when the script should be executed; useful to limit creation of PowerShell runspaces.
 
-| ShowRule | EnableRule |
-| :--- | :--- |
-| Content Editor [Context Menu](integration-points/content-editor.md#context-menu) | Content Editor [Context Menu](integration-points/content-editor.md#context-menu) |
-|  | Content Editor [Gutter](integration-points/content-editor.md#gutter) |
-| Content Editor [Insert Item](integration-points/content-editor.md#insert-item) |  |
-| Content Editor [Ribbon](integration-points/content-editor.md#ribbon) | Content Editor [Ribbon](integration-points/content-editor.md#ribbon) |
-|  | Content Editor [Warning](integration-points/content-editor.md#warning) |
-|  | [DataSources](integration-points/data-sources.md) |
-|  | [Event Handlers](integration-points/event-handlers.md) |
-| ISE Plugin | ISE Plugin |
-| [Reports](integration-points/reports/) | [Reports](integration-points/reports/) |
-| Reports List View Action | Reports List View Action |
-| Reports List View Export | Reports List View Export |
-|  | Page Editor [Notification](integration-points/page-editor.md#notification) |
-|  | Page Editor [Experience Button](integration-points/page-editor.md#experience-button) |
-|  | [Pipelines](integration-points/pipelines.md) |
-|  | [Tasks](integration-points/tasks/) |
-| [Toolbox](integration-points/toolbox.md) |  |
-|  | [Workflow Action](integration-points/workflows.md) |
+| ShowRule                                                                         | EnableRule                                                                           |
+| :------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------- |
+| Content Editor [Context Menu](integration-points/content-editor.md#context-menu) | Content Editor [Context Menu](integration-points/content-editor.md#context-menu)     |
+|                                                                                  | Content Editor [Gutter](integration-points/content-editor.md#gutter)                 |
+| Content Editor [Insert Item](integration-points/content-editor.md#insert-item)   |                                                                                      |
+| Content Editor [Ribbon](integration-points/content-editor.md#ribbon)             | Content Editor [Ribbon](integration-points/content-editor.md#ribbon)                 |
+|                                                                                  | Content Editor [Warning](integration-points/content-editor.md#warning)               |
+|                                                                                  | [DataSources](integration-points/data-sources.md)                                    |
+|                                                                                  | [Event Handlers](integration-points/event-handlers.md)                               |
+| ISE Plugin                                                                       | ISE Plugin                                                                           |
+| [Reports](integration-points/reports/)                                           | [Reports](integration-points/reports/)                                               |
+| Reports List View Action                                                         | Reports List View Action                                                             |
+| Reports List View Export                                                         | Reports List View Export                                                             |
+|                                                                                  | Page Editor [Notification](integration-points/page-editor.md#notification)           |
+|                                                                                  | Page Editor [Experience Button](integration-points/page-editor.md#experience-button) |
+|                                                                                  | [Pipelines](integration-points/pipelines.md)                                         |
+|                                                                                  | [Tasks](integration-points/tasks/)                                                   |
+| [Toolbox](integration-points/toolbox.md)                                         |                                                                                      |
+|                                                                                  | [Workflow Action](integration-points/workflows.md)                                   |
 
 ## PowerShell Script
 
@@ -102,9 +113,9 @@ The script items represent the code that will be executed.
 
 There are three conventions that we recommend you follow which are shown with an example below.
 
-* **Title Casing** - This should be used when the name will be exposed in places such as the _Content Editor_, script library names, and _Reports_ root directory.
-* **Sentence casing** - This should be used when the name is long and will not be visible to the user or is a report with a very long name.
-* **Noun-Verb** - This should be used when the script is stored within the _Functions_ script library and will be imported using the command _Import-Function_.
+- **Title Casing** - This should be used when the name will be exposed in places such as the _Content Editor_, script library names, and _Reports_ root directory.
+- **Sentence casing** - This should be used when the name is long and will not be visible to the user or is a report with a very long name.
+- **Noun-Verb** - This should be used when the script is stored within the _Functions_ script library and will be imported using the command _Import-Function_.
 
 ### Fields
 
@@ -112,9 +123,8 @@ There are three conventions that we recommend you follow which are shown with an
 
 **Scripting**
 
-* **Script** \(Script body\) : This is a multi-line text than should be edited using the **PowerShell ISE** application. 
+- **Script** \(Script body\) : This is a multi-line text than should be edited using the **PowerShell ISE** application.
 
 **Session Persistency**
 
-* **PersistentSessionId** \(Persistent Session ID\) : Context scripts using this ID will execute in a single session and be reused; leaving empty will cause the session to be discarded after execution. This value should be used for rules requesting the session ID.
-
+- **PersistentSessionId** \(Persistent Session ID\) : Context scripts using this ID will execute in a single session and be reused; leaving empty will cause the session to be discarded after execution. This value should be used for rules requesting the session ID.
