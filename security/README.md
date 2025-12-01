@@ -188,43 +188,29 @@ Comprehensive validation before deployment:
 SPE security uses multiple layers for comprehensive protection:
 
 ```
-┌─────────────────────────────────────────────┐
-│  1. Network Security                        │
-│     - Firewall rules                        │
-│     - VPN/private network                   │
-│     - Not internet-facing                   │
-└─────────────────────────────────────────────┘
-           ↓
-┌─────────────────────────────────────────────┐
-│  2. IIS-Level Security                      │
-│     - Deny anonymous access                 │
-│     - IP restrictions                       │
-│     - HTTPS requirements                    │
-│     - Request filtering                     │
-└─────────────────────────────────────────────┘
-           ↓
-┌─────────────────────────────────────────────┐
-│  3. Sitecore User Security                  │
-│     - Role-based access control             │
-│     - Application-level permissions         │
-│     - Item-level security                   │
-└─────────────────────────────────────────────┘
-           ↓
-┌─────────────────────────────────────────────┐
-│  4. SPE Security Hardening                  │
-│     - Session Elevation (UAC)               │
-│     - Web service controls                  │
-│     - File upload restrictions              │
-│     - Delegated access controls             │
-└─────────────────────────────────────────────┘
-           ↓
-┌─────────────────────────────────────────────┐
-│  5. Logging and Monitoring                  │
-│     - Comprehensive logging                 │
-│     - Real-time alerting                    │
-│     - Regular audit reviews                 │
-│     - SIEM integration                      │
-└─────────────────────────────────────────────┘
+1. Network Security
+   - Firewall rules
+   - VPN/private network
+   - Not internet-facing
+2. IIS-Level Security
+   - Deny anonymous access
+   - IP restrictions
+   - HTTPS requirements
+   - Request filtering
+3. Sitecore User Security
+   - Role-based access control
+   - Application-level permissions
+   - Item-level security
+4. SPE Security Hardening
+   - Session Elevation (UAC)
+   - Web service controls
+   - File upload restrictions
+   - Delegated access controls
+5. Logging and Monitoring
+   - Comprehensive logging
+   - Real-time alerting
+   - Regular audit reviews
+   - SIEM integration
 ```
 
 Each layer provides additional protection. If one layer is compromised, others provide continued security.
@@ -390,6 +376,23 @@ Enable the Identity Server configuration:
 - File: `App_Config\Include\Spe\Spe.IdentityServer.config`
 - Purpose: Prevents infinite loop in SPE Console
 - Use `elevationAction="Confirm"` instead of "Password"
+
+```xml
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:security="http://www.sitecore.net/xmlconfig/security/">
+  <sitecore role:require="Standalone or ContentManagement or XMCloud" security:require="Sitecore">
+    <pipelines>
+      <owin.cookieAuthentication.validateIdentity>
+        <processor type="Sitecore.Owin.Authentication.Pipelines.CookieAuthentication.ValidateIdentity.ValidateSiteNeutralPaths, Sitecore.Owin.Authentication">
+          <siteNeutralPaths hint="list">
+            <!-- This entry corrects the infinite loop of ExecuteCommand in the SPE Console -->
+            <path hint="spe">/sitecore%20modules/PowerShell</path>
+          </siteNeutralPaths>
+        </processor>
+      </owin.cookieAuthentication.validateIdentity>
+    </pipelines>
+  </sitecore>
+</configuration>
+```
 
 ### Sitecore XM Cloud
 
