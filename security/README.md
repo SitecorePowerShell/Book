@@ -1,396 +1,403 @@
----
-description: View important details on how to keep Sitecore secure while using SPE.
----
-
 # Security
 
-You need to be mindful that Sitecore PowerShell Extensions is a very sharp tool and while it can be leveraged to do great things, it can also be a vector of dangerous attacks if not secured properly. This is why we recommend that you **do not install** it on Content Delivery instances and if possible avoid deploying it on servers that face Internet altogether.
+Sitecore PowerShell Extensions (SPE) is a powerful administrative tool that requires proper security configuration. This guide provides comprehensive security documentation to help you secure your SPE installation.
 
 {% hint style="danger" %}
-Installing SPE in internet facing \(DMZ\) scenarios is not recommend. Please avoid installing in the Content Delivery instances. Implement a strategy which provides the least amount of access required. Consider locking down the web server to only allow connections to your databases and preapproved web services.
+**Critical Warning:** SPE is a powerful tool that should NEVER be installed on Content Delivery (CD) instances or internet-facing servers. Always implement security best practices and follow the principle of least privilege.
 {% endhint %}
 
-## Security Policies
+## Quick Start
 
-There are two main security policies to consider when using the SPE module:
+New to SPE security? Start here:
 
-- Application Pool service account
-- Sitecore user account
+1. **[Getting Started](getting-started.md)** - Essential security setup for new installations
+2. **[Security Policies](security-policies.md)** - Understand the SPE security model
+3. **[Security Checklist](security-checklist.md)** - Validate your deployment before going live
 
-### Application Pool Service Account
+## Security Documentation
 
-The first policy relates to the Application Pool service account running in IIS. The Windows PowerShell runspace will have access to the local system via providers \(i.e. FileSystem, Registry\), and be managed through the Console or ISE. If the service account is capable of removing files from the root directory, then SPE can accomplish the same.
+### Core Security Topics
 
-When using the IIS identities such as _ApplicationPoolIdentity_ and _NetworkService_ the scripts may have access to directories outside of the application such as the drive root; you should perform a due dilligence to make sure this is the case! You may also notice that the _$HOME_ variable is empty; this is because only named service accounts have profiles.
+#### [Security Policies](security-policies.md)
 
-{% hint style="warning" %}
-The application pool service account can give SPE access to many features in the OS.
-{% endhint %}
+Understand the two-layer security model that governs SPE:
 
-### Sitecore User Account
+- Application Pool Service Account (OS-level access)
+- Sitecore User Account (API-level access)
+  - Application and menu item security
+- Best practices for both security contexts
 
-The second policy relates to the Sitecore user account. The code executed through SPE operates within the privileges of the logged in user. Keep in mind that this can be bypassed just as can be done through the Sitecore API as PowerShell scripts can call the APIs that disable the Sitecore security.
+#### [Session Elevation (UAC)](session-elevation.md)
 
-**Application Security**  
-The following settings are configured under `core:\content\Applications\PowerShell`.
+Configure User Account Control to require reauthentication:
 
-| **Feature**         | **Visibility**                                                                                           |
-| :------------------ | :------------------------------------------------------------------------------------------------------- |
-| PowerShell Console  | sitecore\Developer \(read\)                                                                              |
-| PowerShell ISE      | sitecore\Developer \(read\)                                                                              |
-| PowerShell ListView | sitecore\Sitecore Client Users \(read\)                                                                  |
-| PowerShell Runner   | sitecore\Sitecore Client Users \(read\)                                                                  |
-| PowerShell Reports  | sitecore\Sitecore Client Authoring. See [here](../modules/integration-points/reports/) for instructions. |
+- How Session Elevation works
+- Elevation actions (Allow, Block, Password, Confirm)
+- Token configuration and expiration
+- Environment-specific recommendations
+- Interface behaviors (Console, ISE, Content Editor)
 
-**Note:** The security is validated in each SPE application within the function `OnLoad`.
+#### [Web Services Security](web-services.md)
 
-**Menu Item Security**  
-The following settings are configured under `core:\content\Applications\Content Editor\Context Menues\Default\`.
+Control external access to SPE through web services:
 
-| **Feature**   | **Visibility**                                         | **Command State**                                                                                          |
-| :------------ | :----------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
-| Edit with ISE | sitecore\Developer \(read\)                            | **Enabled** when item template is _PowerShell Script_ otherwise **Hidden**                                 |
-| Console       | sitecore\Developer \(read\)                            | **Enabled** when user is _admin_ or in the role _sitecore\Sitecore Client Developing_ otherwise **Hidden** |
-| Scripts       | sitecore\Sitecore Limited Content Editor \(deny read\) | **Enabled** when the service and user are authorized to execute otherwise **Hidden**                       |
+- Service descriptions and security implications
+- Enable/disable individual services
+- HTTPS and requireSecureConnection
+- Role-based authorization
+- Configuration examples for different scenarios
 
-**Note:** See the _Interactive_ section on _PowerShell Script Library_ and _PowerShell Script_ items for visibility and enabled rules. To hide each feature you can change the security settings for the roles that should not see the menu.
+### Hardening and Protection
 
-## Security Hardening
+#### [File Upload Restrictions](file-upload-restrictions.md)
 
-The following section outlines steps you can take to minimize the surface area for attack. The following topics describe how to manage security for interfaces and services for the various parts of the module.
+Prevent malicious file uploads:
 
-### Session Elevation
+- File type restrictions (extensions and MIME types)
+- Upload location restrictions
+- Dangerous file types to never allow
+- Configuration examples
+- Testing upload restrictions
 
-The [interfaces](../interfaces/) bundled with the module provide convenient ways to interact with the Sitecore API. The module provides a **User Account Control** \(UAC\) feature akin to that of Microsoft Windows.
+#### [Delegated Access](delegated-access.md)
 
-#### User Account Control
+Grant controlled privilege escalation:
 
-Let's have a look at the configurable features which make up the UAC.
+- How delegated access works
+- Configuration steps
+- Use cases (publishing, reports, bulk operations)
+- Script implementation patterns
+- Security best practices and monitoring
 
-**Gate**
+#### [IIS-Level Security](iis-security.md)
 
-The way in which scripts make their way into Sitecore through built-in interfaces. Includes the [Console](../interfaces/console.md), [ISE](../interfaces/scripting.md), and Content Editor via _Item Saving_.
+Add defense in depth at the web server level:
 
-| Attribute | Description                                       |
-| :-------- | :------------------------------------------------ |
-| name      | built-in name for the gate                        |
-| token     | name of the token to use for the elevated session |
+- Deny anonymous access
+- Windows Authentication
+- IP address restrictions
+- SSL/TLS requirements
+- Request filtering and URL rewrite rules
 
-**Token**
+### User Management
 
-The object which expires after a predetermined time. These can be unique to each gate or shared.
+#### [Users and Roles](users-and-roles.md)
 
-| Attribute       | Description                                                                      |
-| :-------------- | :------------------------------------------------------------------------------- |
-| name            | unique string used for the gate _token_ attribute                                |
-| expiration      | timespan used to determine the elevated session lifetime \(hh:mm:ss\)            |
-| elevationAction | action to perform when session elevation is triggered \(allow, block, password\) |
+Manage Sitecore users and roles:
 
-Actions supported out of the box:
+- Bulk user operations
+- Role queries and management
+- Item Access Control Lists (ACL)
+- Active Directory integration
+- PowerShell examples for user management
 
-- **Allow** - Always allow the session to run elevated without prompting the user for permission. This should never be used outside of a developer's machine.
-- **Block** - Always block the session from running elevated without prompting the user for permission.
-- **Password** - Prompt the user for a password before running the session elevated, unless an unexpired session is active.
-- **Confirm** - Prompt the user for a confirmation before running the session elevated.
+### Deployment and Operations
 
-**Example:** The following extends the token expiration to 10 minutes and blocks the use of the Console.
+#### [Minimal Web Service Deployment](minimal-deployment.md)
 
-```xml
-<sitecore>
-  <powershell>
-    <userAccountControl>
-      <tokens>
-        <token name="Console">
-          <patch:attribute name="expiration">00:10:00</patch:attribute>
-          <patch:attribute name="elevationAction">Block</patch:attribute>
-        </token>
-        <token name="ISE">
-          <patch:attribute name="expiration">00:10:00</patch:attribute>
-        </token>
-        <token name="ItemSave">
-          <patch:attribute name="expiration">00:10:00</patch:attribute>
-        </token>
-      </tokens>
-    </userAccountControl>
-  </powershell>
-</sitecore>
+Deploy only what's needed for CI/CD:
+
+- Required files for web services only
+- Disable UI components
+- Configuration for automation scenarios
+- Security best practices
+- Common deployment patterns
+
+#### [Logging and Monitoring](logging-and-monitoring.md)
+
+Track security events and detect incidents:
+
+- What gets logged
+- Log levels and configuration
+- Real-time monitoring strategies
+- Log analysis examples
+- Integration with SIEM systems
+- Security metrics and dashboards
+
+### Validation and Compliance
+
+#### [Security Checklist](security-checklist.md)
+
+Comprehensive validation before deployment:
+
+- Pre-deployment validation
+- Configuration checklist
+- Testing procedures
+- Environment-specific checklists
+- Post-deployment monitoring
+- Emergency procedures
+
+## Security by Environment
+
+### Development Environment
+
+**Priority:** Productivity with basic security
+
+**Recommendations:**
+
+- Session Elevation: Relaxed (Allow or long timeouts)
+- Web Services: Enable as needed for testing
+- Logging: DEBUG level for troubleshooting
+- IP Restrictions: Not required
+
+**Start here:** [Getting Started - Development](getting-started.md#development-environment)
+
+### QA/Staging Environment
+
+**Priority:** Match production security for testing
+
+**Recommendations:**
+
+- Session Elevation: Password or Confirm (5-15 minute timeout)
+- Web Services: Match production configuration
+- Logging: INFO level
+- IP Restrictions: Optional
+
+**Start here:** [Getting Started - QA/Staging](getting-started.md#qastaging-environment)
+
+### Production Environment
+
+**Priority:** Maximum security
+
+**Recommendations:**
+
+- Session Elevation: Password or Confirm (3-5 minute timeout)
+- Web Services: Only handleDownload, client, execution (disable remoting)
+- Logging: INFO or WARN level
+- IP Restrictions: Recommended
+- HTTPS: Required
+
+**Start here:** [Security Checklist - Production](security-checklist.md#production-environment)
+
+### CI/CD Environment
+
+**Priority:** Automation with strict access control
+
+**Recommendations:**
+
+- Minimal Deployment: Use minimal package
+- Remoting: Enabled with IP restrictions
+- Web Services: Only required services
+- Logging: INFO level with monitoring
+- HTTPS: Required
+
+**Start here:** [Minimal Deployment](minimal-deployment.md)
+
+## Security Layers (Defense in Depth)
+
+SPE security uses multiple layers for comprehensive protection:
+
+```
+┌─────────────────────────────────────────────┐
+│  1. Network Security                        │
+│     - Firewall rules                        │
+│     - VPN/private network                   │
+│     - Not internet-facing                   │
+└─────────────────────────────────────────────┘
+           ↓
+┌─────────────────────────────────────────────┐
+│  2. IIS-Level Security                      │
+│     - Deny anonymous access                 │
+│     - IP restrictions                       │
+│     - HTTPS requirements                    │
+│     - Request filtering                     │
+└─────────────────────────────────────────────┘
+           ↓
+┌─────────────────────────────────────────────┐
+│  3. Sitecore User Security                  │
+│     - Role-based access control             │
+│     - Application-level permissions         │
+│     - Item-level security                   │
+└─────────────────────────────────────────────┘
+           ↓
+┌─────────────────────────────────────────────┐
+│  4. SPE Security Hardening                  │
+│     - Session Elevation (UAC)               │
+│     - Web service controls                  │
+│     - File upload restrictions              │
+│     - Delegated access controls             │
+└─────────────────────────────────────────────┘
+           ↓
+┌─────────────────────────────────────────────┐
+│  5. Logging and Monitoring                  │
+│     - Comprehensive logging                 │
+│     - Real-time alerting                    │
+│     - Regular audit reviews                 │
+│     - SIEM integration                      │
+└─────────────────────────────────────────────┘
 ```
 
-Gates with **Password** protection enabled prompt the user when no elevated session is available. When using Azure AD and or similar provider you should use the **Confirm** action.
+Each layer provides additional protection. If one layer is compromised, others provide continued security.
 
-![Elevate Session State](../.gitbook/assets/security-elevatedsessionstate-password.png)
+## Common Security Scenarios
 
-**Content Editor**
+### Scenario 1: Locking Down Production CM
 
-A Content Editor Warning is displayed when a PowerShell Module, Script Library, and Script is selected. Click "Elevate session" to show the hidden fields and enable the management of the item.
+**Goal:** Secure SPE for production content management server
 
-![Elevate session](../.gitbook/assets/security-elevatedsessionstate-contenteditor.png)
+**Steps:**
 
-The "Drop session" option appears after credentials are verified. All scripts can be edited while the session is elevated.
+1. Review [Security Policies](security-policies.md) to understand the model
+2. Configure [Session Elevation](session-elevation.md) with 5-minute Password timeout
+3. Disable unnecessary [Web Services](web-services.md)
+4. Configure [IIS Security](iis-security.md) to deny anonymous access
+5. Enable [Logging and Monitoring](logging-and-monitoring.md)
+6. Complete the [Security Checklist](security-checklist.md)
 
-![Drop session](../.gitbook/assets/security-elevatedsessionstate-dropcontenteditor.png)
+### Scenario 2: Setting Up CI/CD Automation
 
-**ISE**
+**Goal:** Enable remote automation from build servers
 
-A warning is presented in the ISE when no elevated session state is available.
+**Steps:**
 
-![Elevated session state required](../.gitbook/assets/security-elevatedsessionstate-ise.png)
+1. Use [Minimal Deployment](minimal-deployment.md) package
+2. Enable Remoting in [Web Services](web-services.md) with specific user
+3. Configure [IIS Security](iis-security.md) with IP restrictions to build servers
+4. Configure [File Upload Restrictions](file-upload-restrictions.md) for packages only
+5. Set up [Logging and Monitoring](logging-and-monitoring.md) for automation activity
+6. Test with [Security Checklist - CI/CD](security-checklist.md#cicd-environment)
 
-The following warning is rendered in the ISE while the session state is elevated. Click "Drop elevated session state" if you do not want to wait for the elevated session to timeout.
+### Scenario 3: Delegating Report Access
 
-![Drop elevated session state](../.gitbook/assets/security-elevatedsessionstate-dropise.png)
+**Goal:** Allow content authors to run administrative reports
 
-### Configure Web Services
+**Steps:**
 
-The web services providing external access to Sitecore are disabled by default. You can override this behavior by patching the following configuration file `\App_Config\Include\Spe.config`.
+1. Understand [Delegated Access](delegated-access.md) concepts
+2. Create delegated access configuration for reporting role
+3. Configure impersonated user with read-only administrative access
+4. Test report access as content author
+5. Monitor usage via [Logging and Monitoring](logging-and-monitoring.md)
 
-Look for the following section and enable as needed.
+### Scenario 4: Identity Server Integration (Sitecore 9.1+)
 
-```xml
-<sitecore>
-  <powershell>
-    <services>
-      <restfulv1 enabled="false" />
-      <restfulv2 enabled="false" />
-      <remoting enabled="false" />
-      <fileDownload enabled="false" />
-      <fileUpload enabled="false" />
-      <mediaDownload enabled="false" />
-      <mediaUpload enabled="false" />
-      <handleDownload enabled="true" />
-      <client enabled="true" />
-      <execution enabled="true" />
-    </services>
-  </powershell>
-</sitecore>
-```
+**Goal:** Configure SPE with Sitecore Identity Server
 
-#### Service Descriptions
+**Steps:**
 
-- **Remoting** - Used when passing scripts to SPE for execution. Enable when using the **SPE Remoting** module. Service associated with `RemoteAutomation.asmx`.
-- **RESTful v2** - Used when the url contains all the information needed to execute a script saved in the SPE library. Service associated with `RemoteScriptCall.ashx`.
-  - Required for the following features: PowerShell [Web API](../modules/integration-points/web-api.md).
-- **File Download** - Used when the url contains all the information needed to download a file from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-- **File Upload** - Used when the url contains all the information needed to upload a file to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-- **Media Download** - Used when the url contains all the information needed to download a media item from the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-- **Media Upload** - Used when the url contains all the information needed to upload a media item to the server. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-- **Handle Download** - Used when a file is downloaded through the Sitecore interface. Enable when using the **SPE Remoting** module. Service associated with `RemoteScriptCall.ashx`.
-  - Required for the following features: [Out-Download](../appendix/common/out-download.md) command. If the report export buttons do not work it could be because of this setting.
-- **Client** - Used for the SPE Console. Service associated with `PowerShellWebService.asmx`.
-  - Required for the following features: PowerShell [Console](../interfaces/console.md), PowerShell [ISE](../interfaces/scripting.md),
-- **Execution** - Used when SPE checks if the user has access to run the application.
-  - Required for the following features: [Download File](../interfaces/interactive-dialogs.md) dialog, PowerShell Script Runner, [Content Editor](../modules/integration-points/content-editor.md) \(Context Menu, Insert Options, Ribbon\).
-- **RESTful v1** - Used in early version of SPE. Avoid using this if possible. Service associated with `RemoteScriptCall.ashx`.
+1. Enable `Spe.IdentityServer.config`
+2. Configure [Session Elevation](session-elevation.md) with Confirm action (not Password)
+3. Test Console and ISE with federated authentication
+4. Configure [Web Services](web-services.md) if needed
 
-The preferred way to override the settings is through the use of a configuration patch file.
+## Security Best Practices Summary
 
-**Example:** The following enables the file and media downloads.
+### ✅ Do
 
-```xml
-<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
-  <sitecore>
-    <powershell>
-      <services>
-        <fileDownload>
-          <patch:attribute name="enabled">true</patch:attribute>
-        </fileDownload>
-        <mediaDownload>
-          <patch:attribute name="enabled">true</patch:attribute>
-        </mediaDownload>
-      </services>
-    </powershell>
-  </sitecore>
-</configuration>
-```
+- **Always** deny anonymous access at IIS level
+- **Always** use Session Elevation (UAC) in production
+- **Always** require HTTPS for any enabled web services
+- **Always** follow principle of least privilege
+- **Always** monitor logs for suspicious activity
+- Only enable web services you specifically need
+- Use short session elevation timeouts in production (3-5 minutes)
+- Restrict SPE access to trusted administrators only
+- Configure file upload restrictions when upload service is enabled
+- Regular security audits and role membership reviews
+- Document your security configuration
+- Test security in non-production before deploying
 
-**Example:** The following enables the SPE Remoting service and requires a secure connection using HTTPS.
+### ❌ Don't
 
-```xml
-<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
-  <sitecore>
-    <powershell>
-      <services>
-        <remoting>
-          <patch:attribute name="requireSecureConnection">true</patch:attribute>
-          <patch:attribute name="enabled">true</patch:attribute>
-        </remoting>
-      </services>
-    </powershell>
-  </sitecore>
-</configuration>
-```
+- **Never** install SPE on Content Delivery (CD) servers
+- **Never** expose SPE to internet-facing servers
+- **Never** use `elevationAction="Allow"` in production
+- **Never** enable all web services "just in case"
+- **Never** grant broad role access (e.g., "Everyone")
+- **Never** allow dangerous file types (.exe, .dll, .ps1, .bat)
+- Don't skip Session Elevation configuration
+- Don't ignore failed authentication attempts in logs
+- Don't use administrator accounts for automation
+- Don't forget to configure authorization when enabling remoting
 
-**Note:** When using the attribute `requireSecureConnection`, you may find that this causes a 403 status code when testing against a server hosted behind a load balancer. If the load balancer maintains the TLS certificate and forwards traffic to a backend web server over port 80 .Net will not recognize this as a secure connection.
+## Quick Reference
 
-### Restrict File Types and Locations
+### Configuration Files
 
-The file types (i.e. `.csv`) and upload locations (i.e. `$SitecoreTempFolder`) is restricted by default and can be extended through a patch configuration file.
+| File                                               | Purpose                     | Documentation                                                                   |
+| :------------------------------------------------- | :-------------------------- | :------------------------------------------------------------------------------ |
+| `App_Config\Include\Spe\Spe.config`                | Core SPE configuration      | [Web Services](web-services.md)                                                 |
+| `App_Config\Include\Spe\Spe.IdentityServer.config` | Identity Server integration | [Getting Started](getting-started.md#identity-server-configuration-sitecore-91) |
+| `App_Config\Include\Spe\Custom\*.config`           | Your security patches       | All topics                                                                      |
+| `sitecore modules\PowerShell\Services\web.config`  | IIS-level security          | [IIS Security](iis-security.md)                                                 |
 
-**Example:** The following limits the file types and location.
+### Security Policies Location
 
-```xml
-<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
-  <sitecore>
-    <powershell>
-       <uploadFile>
-        <!-- Mime type or extension: .png, image/*, text/csv -->
-        <allowedFileTypes>
-          <pattern>image/*</pattern>
-          <pattern>.xls</pattern>
-          <pattern>.xlsx</pattern>
-          <pattern>.csv</pattern>
-        </allowedFileTypes>
-        <allowedLocations>
-          <path>$SitecoreTempFolder</path>
-          <!--<path>$SitecoreDataFolder</path>-->
-          <!--<path>$SitecorePackageFolder</path>-->
-        </allowedLocations>
-      </uploadFile>
-    </powershell>
-  </sitecore>
-</configuration>
-```
+| Policy                  | Location                                                            | Documentation                             |
+| :---------------------- | :------------------------------------------------------------------ | :---------------------------------------- |
+| Application Visibility  | `core:\content\Applications\PowerShell`                             | [Security Policies](security-policies.md) |
+| Menu Item Security      | `core:\content\Applications\Content Editor\Context Menues\Default\` | [Security Policies](security-policies.md) |
+| Script Library Security | Item-level security on scripts                                      | [Users and Roles](users-and-roles.md)     |
+| Delegated Access        | SPE configuration items                                             | [Delegated Access](delegated-access.md)   |
 
-**Note:** Feature introduced with [#1362](https://github.com/SitecorePowerShell/Console/issues/1362)
+### Default Roles
 
-### Restrict Users and Roles
+| Role                                      | Default Access          | Recommendation                     |
+| :---------------------------------------- | :---------------------- | :--------------------------------- |
+| `sitecore\Developer`                      | Console, ISE            | Keep restricted to developers only |
+| `sitecore\Sitecore Client Users`          | ListView, Runner        | Appropriate for content authors    |
+| `sitecore\Sitecore Client Authoring`      | Reports                 | Appropriate for content authors    |
+| `sitecore\PowerShell Extensions Remoting` | Remoting (when enabled) | Use custom role instead            |
 
-#### Sitecore level security
+## Getting Help
 
-You are required to explicitly grant the SPE Remoting session user account to a predefined role found in the configuration `Spe.config`. There is a generic list of permissions configured by default but we highly encourage you to adjust to meet your security requirements.
+### Documentation Navigation
 
-**Example:** The following configuration defines the roles that have access to use SPE Remoting. Any role previously defined in the `<authorization/>` section is removed and custom roles are then added.
+- **New to SPE Security?** Start with [Getting Started](getting-started.md)
+- **Deploying to production?** Use the [Security Checklist](security-checklist.md)
+- **Setting up automation?** See [Minimal Deployment](minimal-deployment.md)
+- **Need to debug?** Check [Logging and Monitoring](logging-and-monitoring.md)
+- **Configuring a specific feature?** See topic-specific guides below
 
-```xml
-<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
-  <sitecore>
-    <powershell>
-      <services>
-        <remoting>
-          <authorization>
-            <patch:delete />
-          </authorization>
-          <authorization>
-            <add Permission="Allow" IdentityType="Role" Identity="sitecore\PowerShell Extensions Remoting" />
-          </authorization>
-        </remoting>
-      </services>
-    </powershell>
-  </sitecore>
-</configuration>
-```
+### Support Resources
 
-**Example:** The following configuration grants access to custom roles without removing any existing roles.
+- **GitHub Issues:** [SitecorePowerShell/Console](https://github.com/SitecorePowerShell/Console/issues)
+- **Slack:** #module-spe on Sitecore Community Slack
+- **Documentation:** [Full SPE Documentation](../)
 
-```xml
-<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
-  <sitecore>
-    <powershell>
-      <services>
-        <remoting>
-          <patch:attribute name="enabled">true</patch:attribute>
-          <authorization>
-            <add Permission="Allow" IdentityType="User" Identity="sitecore\test1"  desc="test1" />
-            <add Permission="Allow" IdentityType="User" Identity="sitecore\test2"  desc="test2" />
-          </authorization>
-        </remoting>
-      </services>
-    </powershell>
-  </sitecore>
-</configuration>
-```
+### Security Incident Response
 
-### Delegated Access
+If you suspect a security breach:
 
-There may be scenarios in which you need to grant users access to run scripts which require access to be higher the what is currently configured for the user. The various integration points made visible in the Content Editor (Context Menu, Ribbon, Reports) can be configured to run the scripts impersonating a power user. This has the advantage of giving lower privileged users "special" access without having to make members of more privileged roles. In [#1283](https://github.com/SitecorePowerShell/Console/issues/1283) this feature introduced a simple configuration item to apply the "special" access.
+1. Immediately lock down SPE using [Emergency Procedures](security-checklist.md#emergency-procedures)
+2. Review logs using [Logging and Monitoring](logging-and-monitoring.md) guidance
+3. Document the incident
+4. Contact your security team
+5. Report to SPE maintainers if it's a product vulnerability
 
-- **Step 1:** Create a new delegated access item using the provided insert option.
-  ![image](https://user-images.githubusercontent.com/933163/191065624-65c400c8-8628-4ede-b669-52d1e3e1c513.png) ![image](https://user-images.githubusercontent.com/933163/191063313-7c51250e-9740-4054-890e-7fb282912ddc.png)
-- **Step 2:** Enter the role in which lower privileged users are members.
-- **Step 3:** Enter the user account with elevated access. This could be `sitecore\Admin` or any other user your environment has configured. This user will be impersonated during script execution.
-- **Step 4:** Select each script/library that should be delegated. Script/library items with a rule checking for delegated access should be included as well as scripts that should be run with the impersonated account.
-  ![image](https://user-images.githubusercontent.com/933163/191064401-d135e275-aeea-4315-a505-acca61d6c963.png)
-- **Step 5:** Enable the delegated access item when ready for use.
+## Additional Resources
 
-When scripts are executed you should see them logged to the SPE log where the context user and impersonated user appear.
+### Related Documentation
 
-> 2304 14:02:32 INFO [Gutter] Executing script {CFE81AF6-2468-4E62-8BF2-588B7CC60F80} for Context User sitecore\test as sitecore\Admin.
+- [Installation](../installation.md) - Initial SPE installation
+- [Interfaces](../interfaces/) - Console, ISE, and Interactive Dialogs
+- [Remoting](../remoting.md) - Using SPE Remoting for automation
+- [Modules](../modules/) - Integration points and features
+- [Appendix - Security Cmdlets](../appendix/security/) - PowerShell security commands
 
-### IIS level security
+### External References
 
-Deny access to the web services for unauthenticated users and roles using the `<deny>` element as described [here](https://msdn.microsoft.com/en-us/library/8aeskccd%28v=vs.71%29.aspx) in `sitecore modules\PowerShell\Services\web.config`.
+- [Sitecore Security Best Practices](https://doc.sitecore.com/xp/en/developers/latest/platform-administration-and-architecture/security.html)
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+- [Principle of Least Privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)
 
-**Example:** The following configuration will deny anonymous calls to the web services.
+## Version-Specific Notes
 
-```xml
-<configuration>
-    <system.web>
-      <authorization>
-        <deny users="?" />
-      </authorization>
-    </system.web>
-</configuration>
-```
+### Sitecore 9.1+ with Identity Server
 
-If you disable _Anonymous Authentication_ and enable _Windows Authentication_ in IIS, such as the directory `sitecore modules\PowerShell\Services\` you'll need to use the **Credential** parameter for any command that interacts with the services. See the [Remoting](../remoting.md) section for examples.
+Enable the Identity Server configuration:
 
-### Minimal Web Service Configuration
+- File: `App_Config\Include\Spe\Spe.IdentityServer.config`
+- Purpose: Prevents infinite loop in SPE Console
+- Use `elevationAction="Confirm"` instead of "Password"
 
-The following files are the bare minimum required to support SPE web services. This setup is suitable for environments such as servers built within a Continuous Integration environment that need remoting enabled. Remoting is **disabled** by default. If you need this functionality, enable it separately using a config patch file.
+### Sitecore XM Cloud
 
-**Required:**
+Consult the latest SPE documentation for XM Cloud-specific security configurations.
 
-- `App_Config\Include\Spe\Spe.config`
-- `App_Config\Include\Spe\Spe.Minimal.config`
-- `bin\Spe.dll`
-- `bin\Spe.Abstractions.dll`
-- `sitecore modules\PowerShell\Services\web.config`
-- `sitecore modules\PowerShell\Services\RemoteAutomation.asmx`
-- `sitecore modules\PowerShell\Services\RemoteScriptCall.ashx`
+---
 
-You will also need to patch the configuration with the following:
+**Remember:** Security is not a one-time configuration. Regular reviews, monitoring, and updates are essential to maintaining a secure SPE installation.
 
-```xml
-<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
-    <sitecore>
-        <controlSources>
-            <source mode="on" namespace="Spe.Client.Controls" assembly="Spe">
-                <patch:delete />
-            </source>
-            <source mode="on" namespace="Spe.Client.Applications"
-                  folder="/sitecore modules/Shell/PowerShell/" deep="true">
-                <patch:delete />
-            </source>
-        </controlSources>
-    </sitecore>
-</configuration>
-```
-
-For your convenience we've included a package bundled with all of the above called _SPE.Minimal-6.x.zip_. Any of the disabled configuration files should be enabled following extraction.
-
-### References
-
-- [Shields Down Example](https://alan-null.github.io/2017/01/spe-dev-config)
-
-## Identity Server
-
-**Note:** If you are using Sitecore 9.1 or later with Identity Server, there is a configuration file that should be enabled.
-
-- `Spe.IdentityServer.config`
-
-```xml
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:security="http://www.sitecore.net/xmlconfig/security/">
-  <sitecore role:require="Standalone or ContentManagement or XMCloud" security:require="Sitecore">
-    <pipelines>
-      <owin.cookieAuthentication.validateIdentity>
-        <processor type="Sitecore.Owin.Authentication.Pipelines.CookieAuthentication.ValidateIdentity.ValidateSiteNeutralPaths, Sitecore.Owin.Authentication">
-          <siteNeutralPaths hint="list">
-            <!-- This entry corrects the infinite loop of ExecuteCommand in the SPE Console -->
-            <path hint="spe">/sitecore%20modules/PowerShell</path>
-          </siteNeutralPaths>
-        </processor>
-      </owin.cookieAuthentication.validateIdentity>
-    </pipelines>
-  </sitecore>
-</configuration>
-```
+**Last Updated:** 2025
+**Maintained By:** SPE Community
