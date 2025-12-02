@@ -19,6 +19,7 @@ The Sitecore PowerShell Extensions (SPE) is a Sitecore development accelerator t
 
 ## Repository Structure
 
+- `SUMMARY.md` - Table of contents for the book and required for the navigation to work properly.
 - `/appendix/` - Appendix sections covering common topics (language, indexing, packaging, security, session)
 - `/modules/` - Documentation for SPE modules and integration points
 - `/interfaces/` - Documentation for user interfaces (Console, ISE, Interactive Dialogs)

@@ -10,9 +10,9 @@ Sitecore PowerShell Extensions (SPE) is a powerful administrative tool that requ
 
 New to SPE security? Start here:
 
-1. **[Getting Started](./getting-started.md)** - Essential security setup for new installations
-2. **[Security Policies](./security-policies.md)** - Understand the SPE security model
-3. **[Security Checklist](./security-checklist.md)** - Validate your deployment before going live
+1. **[Getting Started](getting-started.md)** - Essential security setup for new installations
+2. **[Security Policies](security-policies.md)** - Understand the SPE security model
+3. **[Security Checklist](security-checklist.md)** - Validate your deployment before going live
 
 ## Security Documentation
 
