@@ -17,6 +17,8 @@ The Sitecore PowerShell Extensions (SPE) is a Sitecore development accelerator t
 - PowerShell-based automation for Sitecore tasks
 - Content management and reporting tools
 
+**Note:** SPE is built by creating a custom Windows PowerShell 5 provider where the underlying code interacts with the Sitecore API. While the provider closely follows the filesystem provider, there are some situations in which commands, such as `Get-Item` and `Get-ChildItem`, deviate from the typical behavior. Many custom commands are only known in the context of Sitecore, such as `Publish-Item`.
+
 ## Repository Structure
 
 - `SUMMARY.md` - Table of contents for the book and required for the navigation to work properly.

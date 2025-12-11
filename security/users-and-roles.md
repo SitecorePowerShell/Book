@@ -5,7 +5,7 @@ Managing users and roles is a big topic and this section won't cover everything.
 **Example:** The following command returns the security commands available.
 
 ```powershell
-Get-Command -Noun Role*,User,ItemAcl* | Sort-Object -Property Noun,Verb
+Get-Command -Noun Role*,User,ItemAcl* | Select-Object -Property Name | Sort-Object -Property Name
 ```
 
 ## Users
@@ -34,7 +34,7 @@ Get-User -Id "michael" -Authenticated |
     Set-User -ProfileItemId "{AE4C4969-5B7E-4B4E-9042-B2D8701CE214}"
 ```
 
-**Example:** The follow queries all the user accounts for the default provider and filters those over the age of 18. The _age_ property is custom on the _Profile_. Finally, export to CSV.
+**Example:** The following queries all the user accounts for the default provider and filters those over the age of 18. The _age_ property is custom on the _Profile_. Finally, export to CSV.
 
 ```powershell
 $users = Get-User -Filter * | Where-Object { $_.Profile.GetCustomProperty("age") -gt 18 } 
@@ -44,14 +44,8 @@ $property = @(
     @{Name="Age";Expression={ $PSItem.Profile.GetCustomProperty("age") }}
 )
 $users | Select-Object -Property $property | 
-  Export-CSV -Path "C:\temp\users-over-eighteen.csv" -NoTypeInformation
+  Export-CSV -Path "$($SitecoreDataFolder)\export\users-over-eighteen.csv" -NoTypeInformation
 ```
-
-#### Active Directory
-
-When using the [Active Directory module](https://dev.sitecore.net/Downloads/Active_Directory/) you may need to increase the setting `LDAP.SizeLimit` if you wish to return all Active Directory accounts.
-
-Using `Set-User` to update AD accounts may result in an "Access denied message"; this is due to the fact that the account querying user does not have write access to profile properties or the profile provider is not configured properly.
 
 ## Roles
 
@@ -62,16 +56,32 @@ Using `Set-User` to update AD accounts may result in an "Access denied message";
 Get-Role -Identity "default\Everyone"
 ```
 
-## Item Access Control Lists \(ACL\)
-
-The ACL commands provide an automated way of granting privileges to items.
-
-**Example:** The following creates a new ACL and assigns to an item.
+**Example:** The following finds all roles and exports to a report.
 
 ```powershell
-$aclForEveryone = New-ItemAcl -Identity "\Everyone" -PropagationType Any -SecurityPermission DenyInheritance -AccessRight *
-Get-Item -Path "master:\content\home" | Add-ItemAcl -AccessRules $aclForEveryone -PassThru
+Get-Role -Filter * | Show-ListView -Property Name, Domain
 ```
+
+**Example:** The following adds a user to a role.
+
+```powershell
+$user = Get-User -Identity "sitecore\author"
+$role = Get-Role -Identity "sitecore\Sitecore Client Authoring"
+Add-RoleMember -Identity $role -Members $user
+```
+
+**Example:** The following removes a user from a role.
+
+```powershell
+$user = Get-User -Identity "sitecore\author"
+$role = Get-Role -Identity "sitecore\Sitecore Client Authoring"
+Remove-RoleMember -Identity $role -Members $user
+```
+
+## See Also
+
+- [Working with Items - Item Security](../working-with-items/item-security.md) - Managing item-level security and ACLs
+- [Appendix - Security Commands](../appendix/security/README.md) - Full security cmdlet reference
 
 ## References
 
