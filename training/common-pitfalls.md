@@ -102,80 +102,22 @@ SPE is powerful, which makes security critical.
 
 ### Common Security Mistakes
 
-#### Mistake 1: Running Untrusted Scripts
-
-- ❌ **NEVER** run scripts from unknown sources in production
-- ❌ **NEVER** skip testing in development first
-- ✅ Always review and understand scripts before running
-- ✅ Use source control for all scripts
-
-#### Mistake 2: Skipping Security Hardening
-
+- ❌ **NEVER** run scripts from unknown sources
 - ❌ **NEVER** deploy SPE without reviewing security settings
 - ❌ **NEVER** install SPE on CD (Content Delivery) servers
-- ❌ **NEVER** expose SPE on internet-facing instances
-
-#### Mistake 3: Granting Excessive Permissions
-
-```powershell
-# DON'T give everyone access to everything!
-# Use role-based access control instead
-```
-
-### Security Checklist
-
-Before deploying SPE to any non-development environment:
-
-1. ✅ Review [Security Hardening Guide](../security/README.md)
-2. ✅ Complete [Security Checklist](../security/security-checklist.md)
-3. ✅ Configure [Security Policies](../security/security-policies.md)
-4. ✅ Set up [Users and Roles](../security/users-and-roles.md)
-5. ✅ Implement [Session Elevation](../security/session-elevation.md)
+- ✅ Always review and understand scripts before running
+- ✅ Use role-based access control
+- ✅ Test in development first
 
 {% hint style="danger" %}
-**CRITICAL**: SPE should **NEVER** be installed on Content Delivery (CD) servers or be accessible from internet-facing instances.
+Review the [Security Hardening Guide](../security/README.md) and complete the [Security Checklist](../security/security-checklist.md) before deploying to any non-development environment.
 {% endhint %}
 
 ## Confusing PowerShell Comparison Operators
 
-PowerShell uses different operators than most programming languages.
-
-### Comparison Operator Reference
-
-| C#                        | PowerShell    | Description           |
-| :------------------------ | :------------ | :-------------------- |
-| `==`                      | `-eq`         | Equal to              |
-| `!=`                      | `-ne`         | Not equal to          |
-| `<`                       | `-lt`         | Less than             |
-| `>`                       | `-gt`         | Greater than          |
-| `<=`                      | `-le`         | Less than or equal    |
-| `>=`                      | `-ge`         | Greater than or equal |
-| `&&`                      | `-and`        | Logical AND           |
-| <code>&#124;&#124;</code> | `-or`         | Logical OR            |
-| `!`                       | `-not` or `!` | Logical NOT           |
+PowerShell uses different operators than most programming languages. See [Language Basics](language-basics.md#comparisons) for the complete comparison operator reference.
 
 ### Examples
-
-```powershell
-# String comparison (case-insensitive by default)
-$name -eq "Michael"          # True for "michael", "MICHAEL", "Michael"
-$name -ceq "Michael"         # Case-sensitive: only true for exact match
-
-# Wildcard matching
-$item.Name -like "*Sample*"  # Matches "Sample Item", "My Sample", etc.
-$item.Name -notlike "*Test*" # Excludes items with "Test" in name
-
-# Regular expressions
-$item.Name -match "^Article\d+$"  # Matches "Article1", "Article23", etc.
-
-# Multiple conditions
-$item.TemplateName -eq "Article" -and $_."__Updated" -gt $date
-
-# Collection contains
-$languages -contains "en"    # Check if array contains value
-```
-
-### Common Mistakes
 
 ```powershell
 # WRONG - Using C# operators
@@ -190,6 +132,8 @@ if($name -eq "MICHAEL") { }  # Will match "michael"!
 # RIGHT - Explicit case-sensitive check
 if($name -ceq "MICHAEL") { } # Only matches exact case
 ```
+
+Learn more: [Language Basics - Comparisons](language-basics.md#comparisons)
 
 ## Forgetting About Language Versions
 

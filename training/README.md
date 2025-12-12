@@ -51,63 +51,7 @@ This guide provides a progressive roadmap from beginner to advanced SPE user. Fo
 - **NEVER** deploy SPE on internet-facing instances
 {% endhint %}
 
-## Training Modules
-
-Follow the complete learning path:
-
-### 1. 🚀 [Getting Started](getting-started.md)
-**Start here!** Get up and running in minutes:
-- Opening the Console and ISE
-- Running your first command
-- Understanding the basics
-- Quick reference guide
-
-### 2. 📖 [Language Basics](language-basics.md)
-Learn PowerShell syntax (especially for C# developers):
-- C# to PowerShell translation
-- Variables, strings, and collections
-- Comparison operators
-- Loops and conditions
-- Working with .NET types
-
-### 3. ⚡ [Commands and Pipelines](commands-and-pipelines.md)
-Master PowerShell commands:
-- Command syntax (Verb-Noun pattern)
-- Essential commands
-- Pipeline fundamentals
-- Getting help
-- Best practices
-
-### 4. 🗂️ [Providers](providers.md)
-Understand the provider architecture:
-- What are providers?
-- The Sitecore provider
-- Path formats
-- Switching between providers
-
-### 5. 🎯 [Your First Scripts](first-scripts.md)
-Practice with hands-on examples:
-- Find items by workflow state
-- Bulk update item fields
-- Generate content reports
-- Interactive user input
-- Practice exercises
-
-### 6. ⚠️ [Common Pitfalls](common-pitfalls.md)
-Avoid beginner mistakes:
-- Provider path confusion
-- Item editing context issues
-- Performance problems
-- Security oversights
-
-### 7. 🌟 [Next Steps](next-steps.md)
-Continue your SPE journey:
-- Advanced learning paths
-- Practice projects
-- Command reference
-- Community resources
-
-## Learning Resources
+## Resources & Support
 
 ### Official Documentation
 - **This book** - Comprehensive reference for all SPE features
@@ -121,19 +65,8 @@ Continue your SPE journey:
 ### Hands-On Practice
 - [Console](../interfaces/console.md) - Interactive PowerShell terminal in Sitecore
 - [ISE (Integrated Scripting Environment)](../interfaces/scripting.md) - Full-featured script editor with IntelliSense
-- [Training Modules](../README.md#bundled-tools) - Sample scripts included with SPE
 
-## After Training
-
-Once you've completed all the training modules, see [Next Steps](next-steps.md) for:
-- Advanced learning paths
-- Practice project ideas
-- Complete command reference
-- Community resources and support
-
-## Get Help
-
-If you get stuck or have questions:
+### Get Help
 - **Built-in help**: Use `Get-Help <command-name>` in the Console
 - **Troubleshooting**: [Troubleshooting Guide](../troubleshooting.md)
 - **Community**: Join the [#module-spe](../community.md) channel on Sitecore Slack

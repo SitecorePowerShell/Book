@@ -350,12 +350,8 @@ Commands that change data:
 ### Review Security
 
 {% hint style="danger" %}
-**IMPORTANT**: SPE is powerful and requires proper security configuration.
-
-- Never run untrusted scripts
-- Review [Security Guide](../security/README.md) before deploying
-- Follow the [Security Checklist](../security/security-checklist.md)
-  {% endhint %}
+**IMPORTANT**: SPE is powerful and requires proper security configuration. Review the [Security Guide](../security/README.md) before deploying to any non-development environment.
+{% endhint %}
 
 ## Next Steps
 

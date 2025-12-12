@@ -54,25 +54,13 @@ Take your skills to the next level:
 - [Web API](../modules/integration-points/web-api.md) - Expose scripts via REST API
 - [Libraries and Scripts](../modules/libraries-and-scripts.md) - Organize reusable code
 
-## Reference Documentation
+## Reference Materials
 
-### Command Reference
+Beyond the learning paths above, you'll find these resources helpful:
 
-Browse the complete command reference in the [Appendix](../appendix/README.md):
-
-- [Common Commands](../appendix/common/README.md) - Core SPE cmdlets (100+ commands)
-- [Indexing](../appendix/indexing/README.md) - Content Search integration
-- [Packaging](../appendix/packaging/README.md) - Package management
-- [Presentation](../appendix/presentation/README.md) - Layout and rendering manipulation
-- [Security](../appendix/security/README.md) - User, role, and permission management
-
-### Code Snippets
-
-Ready-to-use examples for common scenarios:
-
-- [Field Types](../code-snippets/field-types.md) - Working with different field types
-- [Item Links](../code-snippets/item-links.md) - Managing item references
-- [Manage Templates](../code-snippets/manage-templates.md) - Template operations
+- **[Command Reference](../appendix/README.md)** - Complete list of all SPE cmdlets
+- **[Code Snippets](../code-snippets/README.md)** - Ready-to-use examples for common scenarios
+- **[Interfaces Guide](../interfaces/README.md)** - Deep dive into Console, ISE, and dialogs
 
 ## Practice Projects
 
@@ -141,56 +129,17 @@ Here are some project ideas to practice your skills:
 ## Essential Security Review
 
 {% hint style="danger" %}
-**CRITICAL**: Before deploying SPE to any non-development environment:
-
-1. **Review the security guide**: [Security Hardening](../security/README.md)
-2. **Complete the checklist**: [Security Checklist](../security/security-checklist.md)
-3. **Configure policies**: [Security Policies](../security/security-policies.md)
-4. **Set up proper access**: [Users and Roles](../security/users-and-roles.md)
-5. **Never expose to internet**: [IIS Security](../security/iis-security.md)
-6. **Enable monitoring**: [Logging and Monitoring](../security/logging-and-monitoring.md)
-
-**Remember**:
-- SPE should **NEVER** be installed on CD (Content Delivery) servers
-- SPE should **NEVER** be accessible from internet-facing servers
-- Always test scripts in development before running in production
-- Use [Session Elevation](../security/session-elevation.md) for administrative tasks
-- Follow the [Minimal Deployment](../security/minimal-deployment.md) guide for production
+**CRITICAL**: Before deploying SPE to any non-development environment, review [Security Hardening](../security/README.md) and complete the [Security Checklist](../security/security-checklist.md). Remember: SPE should **NEVER** be installed on CD servers or be accessible from internet-facing instances.
 {% endhint %}
 
 ## Get Help and Support
 
-### Built-in Help
+### When You Get Stuck
 
-```powershell
-# Get help for any command
-Get-Help Get-Item
-
-# Get detailed help with examples
-Get-Help Get-Item -Detailed
-
-# Get just the examples
-Get-Help Get-Item -Examples
-
-# Search for commands
-Get-Command *Item*
-
-# See object properties and methods
-$item | Get-Member
-```
-
-### Documentation
-
-- **This book**: Comprehensive reference for all SPE features
-- [Troubleshooting Guide](../troubleshooting.md) - Common issues and solutions
-- [Interface Help](../interfaces/help.md) - Using the built-in help system
-
-### Community
-
-- **Slack**: Join [#module-spe](../community.md) on Sitecore Community Slack
-- **GitHub**: Report issues or request features at [GitHub](https://github.com/SitecorePowerShell/Console)
-- **Stack Exchange**: Ask questions on [Sitecore Stack Exchange](https://sitecore.stackexchange.com/questions/tagged/powershell-extensions)
-- **Blogs**: Read community content at [Blog Collection](https://blog.najmanowicz.com/sitecore-powershell-console/)
+- **Built-in help**: Use `Get-Help <command-name>` in the Console
+- **[Troubleshooting Guide](../troubleshooting.md)** - Common issues and solutions
+- **[#module-spe](../community.md)** - Sitecore Community Slack channel
+- **[GitHub](https://github.com/SitecorePowerShell/Console)** - Report issues or request features
 
 ## Best Practices Checklist
 
@@ -232,51 +181,22 @@ As you continue working with SPE, keep these best practices in mind:
 - ✅ Share knowledge with team
 - ✅ Review and refactor regularly
 
-## Learning Resources
+## Additional Learning Resources
 
-### Official Resources
+- **[Video Series](https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b)** - Official tutorial videos
+- **[Blog Collection](https://blog.najmanowicz.com/sitecore-powershell-console/)** - Community articles and examples
+- **[Microsoft PowerShell Docs](https://docs.microsoft.com/en-us/powershell/)** - General PowerShell reference
 
-- [Video Series](https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b) - Official tutorial videos
-- [Blog Collection](https://blog.najmanowicz.com/sitecore-powershell-console/) - Community articles
-- [GitHub Repository](https://github.com/SitecorePowerShell/Console) - Source code and examples
+## Share and Contribute
 
-### PowerShell Learning
+As you gain experience:
 
-While SPE is Sitecore-specific, general PowerShell knowledge helps:
+- Share your scripts with the community on GitHub
+- Help answer questions on Slack and Stack Exchange
+- Write blog posts about solutions you've built
+- Submit improvements to this documentation
 
-- [Microsoft PowerShell Documentation](https://docs.microsoft.com/en-us/powershell/)
-- [PowerShell Gallery](https://www.powershellgallery.com/) - Community modules
-- [about_* Topics](about:blank) - Run `help about_*` in PowerShell for core concepts
-
-## Share Your Work
-
-As you build useful scripts and tools:
-
-### Contribute Back
-
-- **Submit examples**: Share your scripts on GitHub
-- **Write blog posts**: Document your solutions
-- **Answer questions**: Help others on Slack and Stack Exchange
-- **Create packages**: Package useful tools for the community
-- **Improve documentation**: Submit pull requests to this book
-
-### Build Your Portfolio
-
-- **GitHub repository**: Maintain a collection of your SPE scripts
-- **Blog series**: Write about real-world problems you've solved
-- **Presentations**: Share your knowledge at user groups
-- **Open source**: Create and maintain SPE extensions
-
-## Continuous Improvement
-
-Keep learning and improving:
-
-1. **Read the release notes**: Stay current with new SPE features
-2. **Explore the Script Library**: Learn from bundled examples
-3. **Review community scripts**: See how others solve problems
-4. **Experiment safely**: Try new techniques in development
-5. **Ask questions**: Don't hesitate to ask the community
-6. **Teach others**: The best way to master something is to teach it
+The best way to solidify your learning is to teach others!
 
 ## Quick Reference Card
 

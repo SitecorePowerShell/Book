@@ -199,15 +199,9 @@ $items | Select-Object Name, TemplateName |
 
 ## Learn More
 
-This page provides an introduction to providers. For comprehensive details about the Sitecore provider, including:
+This introduction covers the basics of the provider architecture and how to use paths in SPE.
 
-- Working with item fields
-- Handling languages and versions
-- Using wildcards in paths
-- Performance considerations
-- Advanced querying techniques
-
-See the complete guide: [Providers](../working-with-items/providers.md)
+For comprehensive details about working with the Sitecore provider (item fields, languages, versions, wildcards, performance optimization, and advanced techniques), see the complete guide: [Working with Items - Providers](../working-with-items/providers.md)
 
 ## Next Steps
 
