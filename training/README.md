@@ -1,4 +1,3 @@
-
 ---
 description: Comprehensive guide to learning SPE from beginner to advanced.
 ---
@@ -44,29 +43,34 @@ This guide provides a progressive roadmap from beginner to advanced SPE user. Fo
 
 {% hint style="danger" %}
 **BEFORE deploying to any environment**, you MUST review security:
+
 - [Security Hardening Guide](../security/README.md) - Overview of security concepts
 - [Security Checklist](../security/security-checklist.md) - Step-by-step hardening
 - [Security Policies](../security/security-policies.md) - Configure access control
 - **NEVER** install SPE on Content Delivery (CD) servers
 - **NEVER** deploy SPE on internet-facing instances
-{% endhint %}
+  {% endhint %}
 
 ## Resources & Support
 
 ### Official Documentation
+
 - **This book** - Comprehensive reference for all SPE features
 - [Command Reference](../appendix/common/README.md) - Complete list of SPE cmdlets
 - [Code Snippets](../code-snippets/README.md) - Ready-to-use examples
 
 ### Video Tutorials
+
 - [SPE Video Series](https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b) - Beginner walkthroughs
 - [Blogs and Videos Collection](https://blog.najmanowicz.com/sitecore-powershell-console/) - Community content
 
 ### Hands-On Practice
+
 - [Console](../interfaces/console.md) - Interactive PowerShell terminal in Sitecore
 - [ISE (Integrated Scripting Environment)](../interfaces/scripting.md) - Full-featured script editor with IntelliSense
 
 ### Get Help
+
 - **Built-in help**: Use `Get-Help <command-name>` in the Console
 - **Troubleshooting**: [Troubleshooting Guide](../troubleshooting.md)
 - **Community**: Join the [#module-spe](../community.md) channel on Sitecore Slack

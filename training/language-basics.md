@@ -34,8 +34,6 @@ $count = 5
 
 Use the tables below to aid in translating from C# to PowerShell. Some of the examples below are not "exact" translations, but should give you a good idea on what it would look like.
 
-{% tabs %}
-{% tab title="Arithmetic" %}
 ```csharp
 // Perform simple math in C#
 var total = 1 + 1;
@@ -51,14 +49,12 @@ $result = $total * 3 / 2
 ```
 
 **Operators are the same:**
+
 - Addition: `+`
 - Subtraction: `-`
 - Multiplication: `*`
 - Division: `/`
 - Modulus: `%`
-{% endtab %}
-
-{% tab title="Collections" %}
 
 ### Arrays
 
@@ -127,9 +123,7 @@ $od = [ordered]@{}
 $od.Add("z","Last Letter")
 $od.Add("a","First Letter")
 ```
-{% endtab %}
 
-{% tab title="If-Else" %}
 ```csharp
 // Check if the string is null or empty using a static method in C#
 if(string.IsNullOrEmpty(name)) {
@@ -180,9 +174,6 @@ switch($value) {
     }
 }
 ```
-{% endtab %}
-
-{% tab title="Comparisons" %}
 
 **Important:** PowerShell uses different comparison operators than C#!
 
@@ -202,22 +193,22 @@ $names.Count -gt 2 -and $name[0] -ne "Adam"
 
 ### Comparison Operators
 
-| C# | PowerShell | Description |
-|:---|:---|:---|
-| `==` | `-eq` | Equal to |
-| `!=` | `-ne` | Not equal to |
-| `<` | `-lt` | Less than |
-| `>` | `-gt` | Greater than |
-| `<=` | `-le` | Less than or equal |
-| `>=` | `-ge` | Greater than or equal |
+| C#   | PowerShell | Description           |
+| :--- | :--------- | :-------------------- |
+| `==` | `-eq`      | Equal to              |
+| `!=` | `-ne`      | Not equal to          |
+| `<`  | `-lt`      | Less than             |
+| `>`  | `-gt`      | Greater than          |
+| `<=` | `-le`      | Less than or equal    |
+| `>=` | `-ge`      | Greater than or equal |
 
 ### Logical Operators
 
-| C# | PowerShell | Description |
-|:---|:---|:---|
-| `&&` | `-and` | Logical AND |
-| <code>&#124;&#124;</code> | `-or` | Logical OR |
-| `!` | `-not` or `!` | Logical NOT |
+| C#                        | PowerShell    | Description |
+| :------------------------ | :------------ | :---------- |
+| `&&`                      | `-and`        | Logical AND |
+| <code>&#124;&#124;</code> | `-or`         | Logical OR  |
+| `!`                       | `-not` or `!` | Logical NOT |
 
 ### Pattern Matching
 
@@ -239,9 +230,7 @@ $name -match "^\d{3}"    # Matches names starting with 3 digits
 {% endhint style="info" %}
 Most comparisons in PowerShell are case-insensitive by default. Use operators starting with `c` (like `-ceq`) for case-sensitive comparisons.
 {% endhint %}
-{% endtab %}
 
-{% tab title="Negate" %}
 ```csharp
 // Negate value in C#
 var isTrue = !false;
@@ -258,11 +247,9 @@ $isNotEmpty = -not [string]::IsNullOrEmpty($value)
 ```
 
 **Both work the same:**
+
 - `!$value` - Shorter syntax
 - `-not $value` - More explicit
-{% endtab %}
-
-{% tab title="Strings" %}
 
 ### String Interpolation
 
@@ -348,9 +335,6 @@ $joined = $parts -join ", "
 $upper = $name.ToUpper()
 $lower = $name.ToLower()
 ```
-{% endtab %}
-
-{% tab title="Loops" %}
 
 ### For Loop
 
@@ -399,9 +383,6 @@ while($count -lt 100) {
     $count++
 }
 ```
-{% endtab %}
-
-{% tab title="Static Members" %}
 
 ### Accessing .NET Types
 
@@ -461,8 +442,6 @@ $dict = New-Object 'System.Collections.Generic.Dictionary[string,int]'
 # Alternative syntax
 $list = [System.Collections.Generic.List[string]]::new()
 ```
-{% endtab %}
-{% endtabs %}
 
 ## Comments
 
@@ -597,18 +576,18 @@ $list.Add($item) > $null
 
 ## Key Differences Summary
 
-| Concept | C# | PowerShell |
-|:---|:---|:---|
-| **Variables** | `var name` | `$name` |
-| **Equals** | `==` | `-eq` |
-| **Not equals** | `!=` | `-ne` |
-| **And** | `&&` | `-and` |
-| **Or** | <code>&#124;&#124;</code> | `-or` |
-| **Not** | `!` | `-not` or `!` |
-| **Escape char** | `\` | `` ` `` |
-| **String interpolation** | `$"text {var}"` | `"text $var"` |
-| **Static access** | `DateTime.Today` | `[datetime]::Today` |
-| **Comments** | `//` or `/* */` | `#` or `<# #>` |
+| Concept                  | C#                        | PowerShell          |
+| :----------------------- | :------------------------ | :------------------ |
+| **Variables**            | `var name`                | `$name`             |
+| **Equals**               | `==`                      | `-eq`               |
+| **Not equals**           | `!=`                      | `-ne`               |
+| **And**                  | `&&`                      | `-and`              |
+| **Or**                   | <code>&#124;&#124;</code> | `-or`               |
+| **Not**                  | `!`                       | `-not` or `!`       |
+| **Escape char**          | `\`                       | `` ` ``             |
+| **String interpolation** | `$"text {var}"`           | `"text $var"`       |
+| **Static access**        | `DateTime.Today`          | `[datetime]::Today` |
+| **Comments**             | `//` or `/* */`           | `#` or `<# #>`      |
 
 ## Next Steps
 
