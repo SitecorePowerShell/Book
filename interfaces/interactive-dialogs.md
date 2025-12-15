@@ -31,9 +31,9 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 ```
 
 | Button Name | Return Value |
-| :--- | :--- |
-| OK | yes |
-| Cancel | no |
+| :---------- | :----------- |
+| OK          | yes          |
+| Cancel      | no           |
 
 ![Show Confirm](../.gitbook/assets/modaldialog-showconfirm.png)
 
@@ -45,10 +45,10 @@ Show-Confirm -Title "Click OK to acknowledge SPE is great!"
 Show-Input "Please provide 5 characters at most" -MaxLength 5
 ```
 
-| Button Name | Return Value |
-| :--- | :--- |
-| OK | &lt; user input &gt; |
-| Cancel | $null |
+| Button Name | Return Value         |
+| :---------- | :------------------- |
+| OK          | &lt; user input &gt; |
+| Cancel      | $null                |
 
 ![Show Input](../.gitbook/assets/modaldialog-showinput.png)
 
@@ -97,60 +97,60 @@ $props = @{
 Read-Variable @props
 ```
 
-| Button Name | Return Value |
-| :--- | :--- |
-| OK | ok |
-| Cancel | cancel |
+| Button Name         | Return Value        |
+| :------------------ | :------------------ |
+| OK                  | ok                  |
+| Cancel              | cancel              |
 | &lt; variables &gt; | &lt; selection &gt; |
 
 ![Read Variable](../.gitbook/assets/modaldialog-readvariable.png)
 
 **Supported Parameter Values**
 
-| Key | Type | Description | Example |
-| :--- | :--- | :--- | :--- |
-| Name | string | Variable name | isSilent |
-| Value | bool string int float datetime Item | Default value | $true |
-| Title | string | Header or Label | "Proceed Silently |
-| Tooltip \(optional\) | string | Short description or tooltip | "Check to run quietly |
-| Tab \(optional\) | string | Tab title | "Simple" |
-| Placeholder \(optional\) | string | Textbox placeholder | "Search text..." |
-| Lines \(optional\) | int | Line count | 3 |
-| Editor \(optional\) | string | Control type | "date time" |
-| Domain \(optional\) | string | Domain name for security editor | "sitecore" |
-| Options \(optional\) | string OrderedDictionary Hashtable | Data for checklist or dropdown | @{"Monday"=1;"Tuesday"=2} |
-| Columns | int string | Number between 1 and 12 and string 'first' or 'last' | 6 first |
+| Key                      | Type                                | Description                                          | Example                   |
+| :----------------------- | :---------------------------------- | :--------------------------------------------------- | :------------------------ |
+| Name                     | string                              | Variable name                                        | isSilent                  |
+| Value                    | bool string int float datetime Item | Default value                                        | $true                     |
+| Title                    | string                              | Header or Label                                      | "Proceed Silently         |
+| Tooltip \(optional\)     | string                              | Short description or tooltip                         | "Check to run quietly     |
+| Tab \(optional\)         | string                              | Tab title                                            | "Simple"                  |
+| Placeholder \(optional\) | string                              | Textbox placeholder                                  | "Search text..."          |
+| Lines \(optional\)       | int                                 | Line count                                           | 3                         |
+| Editor \(optional\)      | string                              | Control type                                         | "date time"               |
+| Domain \(optional\)      | string                              | Domain name for security editor                      | "sitecore"                |
+| Options \(optional\)     | string OrderedDictionary Hashtable  | Data for checklist or dropdown                       | @{"Monday"=1;"Tuesday"=2} |
+| Columns                  | int string                          | Number between 1 and 12 and string 'first' or 'last' | 6 first                   |
 
 **Editor Types**
 
-* bool
-* check
-* date
-* date time
-* droplist
-* droptree
-* email
-* groupeddroplink
-* groupeddroplist
-* info
-* item
-* link
-* marquee
-* multilist
-* multilist search
-* multiple user
-* multiple user role
-* multiple role
-* multitext
-* number
-* pass
-* radio
-* rule
-* rule action
-* tree
-* treelist
-* tristate
-* time
+- bool
+- check
+- date
+- date time
+- droplist
+- droptree
+- email
+- groupeddroplink
+- groupeddroplist
+- info
+- item
+- link
+- marquee
+- multilist
+- multilist search
+- multiple user
+- multiple user role
+- multiple role
+- multitext
+- number
+- pass
+- radio
+- rule
+- rule action
+- tree
+- treelist
+- tristate
+- time
 
 ### Confirmation Choice
 
@@ -162,13 +162,13 @@ The _Confirmation Choice_ dialog allows for multiple combinations like that seen
 Show-ModalDialog -Control "ConfirmChoice" -Parameters @{btn_0="Yes - returns btn_0"; btn_1="No - returns btn_1"; btn_2="returns btn_2"; te="Have you downloaded SPE?"; cp="Important Questions"} -Height 120 -Width 650
 ```
 
-**Note:** The hashtable keys should be incremented like _btn\_0_, _btn\_1_, and so on. The return value is the key name.
+**Note:** The hashtable keys should be incremented like _btn_0_, _btn_1_, and so on. The return value is the key name.
 
-| Button Name | Return Value |
-| :--- | :--- |
-| &lt; first button &gt; | btn\_0 |
-| &lt; second button &gt; | btn\_1 |
-| &lt; third button &gt; | btn\_2 |
+| Button Name             | Return Value |
+| :---------------------- | :----------- |
+| &lt; first button &gt;  | btn_0        |
+| &lt; second button &gt; | btn_1        |
+| &lt; third button &gt;  | btn_2        |
 
 ![Show Confirm Choice](../.gitbook/assets/modaldialog-showconfirmchoice.png)
 
@@ -209,9 +209,9 @@ Get-Item "master:\content\home" | Show-FieldEditor -Name "*" -PreserveSections
 ```
 
 | Button Name | Return Value |
-| :--- | :--- |
-| OK | ok |
-| Cancel | cancel |
+| :---------- | :----------- |
+| OK          | ok           |
+| Cancel      | cancel       |
 
 ![Show Field Editor](../.gitbook/assets/modaldialog-showfieldeditor.png)
 
@@ -223,9 +223,9 @@ The _File Browser_ is an obvious choice when you need to upload, download, or de
 
 ```powershell
 Show-ModalDialog -HandleParameters @{
-    "h"="Create an Anti-Package"; 
-    "t" = "Select a package that needs an anti-package"; 
-    "ic"="People/16x16/box.png"; 
+    "h"="Create an Anti-Package";
+    "t" = "Select a package that needs an anti-package";
+    "ic"="People/16x16/box.png";
     "ok"="Pick";
     "ask"="";
     "path"= "packPath:$SitecorePackageFolder";
@@ -233,10 +233,10 @@ Show-ModalDialog -HandleParameters @{
 } -Control "Installer.Browse"
 ```
 
-| Button Name | Return Value |
-| :--- | :--- |
-| OK | &lt; selected file &gt; |
-| Cancel | undetermined |
+| Button Name | Return Value            |
+| :---------- | :---------------------- |
+| OK          | &lt; selected file &gt; |
+| Cancel      | undetermined            |
 
 ![Show File Browser](../.gitbook/assets/modaldialog-showfilebrowser.png)
 
@@ -248,10 +248,10 @@ Show-ModalDialog -HandleParameters @{
 } -Control "FileBrowser" -Width 500
 ```
 
-| Button Name | Return Value |
-| :--- | :--- |
-| OK | &lt; selected file &gt; |
-| Cancel | undetermined |
+| Button Name | Return Value            |
+| :---------- | :---------------------- |
+| OK          | &lt; selected file &gt; |
+| Cancel      | undetermined            |
 
 ![Show File Browser](../.gitbook/assets/modaldialog-simplefilebrowser.png)
 
@@ -288,4 +288,3 @@ Show-Result -Text
 ```
 
 ![Show Result Text](../.gitbook/assets/modaldialog-showresulttext.png)
-
