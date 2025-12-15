@@ -4,7 +4,7 @@ description: Examples for managing complex interactive dialogs.
 
 # Dialogs
 
-**Example:** Basic text controls
+## Basic text controls
 
 ```powershell
 <#
@@ -63,7 +63,7 @@ if ($result -eq "ok") {
 }
 ```
 
-**Example:** Number controls
+## Number controls
 
 ```powershell
 <#
@@ -118,7 +118,7 @@ if ($result -eq "ok") {
 }
 ```
 
-**Example:** Checkbox control
+## Checkbox control
 
 ```powershell
 <#
@@ -182,7 +182,7 @@ if ($result -eq "ok") {
 }
 ```
 
-**Example:** Dropdown combo controls
+## Dropdown combo controls
 
 ```powershell
 <#
@@ -257,7 +257,7 @@ if ($result -eq "ok") {
 }
 ```
 
-**Example:** Checklist control
+## Checklist control
 
 ```powershell
 <#
@@ -339,7 +339,7 @@ if ($result -eq "ok") {
 }
 ```
 
-**Example:** Radio button control
+## Radio button control
 
 ```powershell
 <#
@@ -411,7 +411,7 @@ if ($result -eq "ok") {
 }
 ```
 
-**Example:** Date Time control
+## Date Time control
 
 ```powershell
 <#
@@ -488,7 +488,7 @@ if ($result -eq "ok") {
 }
 ```
 
-**Example:** Single item picker with a tree
+## Single item picker with a tree
 
 ```powershell
 <#
@@ -561,7 +561,7 @@ if ($result -eq "ok") {
 }
 ```
 
-**Example:** Treelist control
+## Treelist control
 
 ```powershell
 <#
@@ -641,7 +641,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Multilist controls
+## Multilist controls
 
 ```powershell
 <#
@@ -731,7 +731,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example::** Droplist contol
+## Droplist contol
 
 ```powershell
 <#
@@ -803,7 +803,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Grouped dropdown controls
+## Grouped dropdown controls
 
 ```powershell
 <#
@@ -886,7 +886,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** User role pickers
+## User role pickers
 
 ```powershell
 <#
@@ -987,7 +987,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Rule editor controls
+## Rule editor controls
 
 ```powershell
 <#
@@ -1084,7 +1084,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Info display controls
+## Info display controls
 
 ```powershell
 <#
@@ -1160,7 +1160,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Variable binding
+## Variable binding
 
 ```powershell
 <#
@@ -1257,7 +1257,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Tabbed dialog
+## Tabbed dialog
 
 ```powershell
 <#
@@ -1397,7 +1397,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Conditional visibility
+## Conditional visibility
 
 ```powershell
 <#
@@ -1546,7 +1546,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Column layout
+## Column layout
 
 ```powershell
 <#
@@ -1700,7 +1700,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Mandatory fields
+## Mandatory fields
 
 ```powershell
 <#
@@ -1815,7 +1815,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Dialog customization
+## Dialog customization
 
 ```powershell
 <#
@@ -1926,7 +1926,7 @@ if ($result -eq "ok") {
 #>
 ```
 
-**Example:** Simple dialog
+## Simple dialog
 
 ```powershell
 <#
@@ -2034,7 +2034,7 @@ if ($targetItem) {
 #>
 ```
 
-**Example:** Comprehensive example
+## Comprehensive example
 
 ```powershell
 <#
