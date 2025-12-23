@@ -29,6 +29,7 @@
   - [Item Languages](working-with-items/item-languages.md)
   - [Item Renderings](working-with-items/item-renderings.md)
   - [Item Security](working-with-items/item-security.md)
+  - [Archiving Items](working-with-items/archiving-items.md)
   - [Best Practices](working-with-items/best-practices.md)
 - [Modules](modules/README.md)
   - [Libraries and Scripts](modules/libraries-and-scripts.md)

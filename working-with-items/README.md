@@ -41,6 +41,7 @@ Handle specific aspects of item management:
 - **[Item Languages](item-languages.md)** - Add, remove, and manage language versions
 - **[Item Renderings](item-renderings.md)** - Work with presentation details and renderings
 - **[Item Security](item-security.md)** - Manage item permissions and access control
+- **[Archiving Items](archiving-items.md)** - Work with archives, recycle bin, and item restoration
 
 ### Advanced Topics
 
