@@ -70,6 +70,28 @@ Below are the shortcuts available in the ISE.
 
 For more commands built into the script editor see [here](https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts)
 
+## Editor Features
+
+The ISE uses the [Ace editor](https://ace.c9.io/) for script editing with a custom PowerShell mode tailored for SPE.
+
+### Syntax Highlighting
+
+The editor provides rich syntax highlighting for PowerShell, including:
+
+- **Keywords** — `catch`, `class`, `data`, `dynamicparam`, `enum`, `exit`, `finally`, `hidden`, `parallel`, `static`, `try`, `using`, `workflow`, and more
+- **Here-strings** — `@'...'@` (literal) and `@"..."@` (expandable)
+- **Braced variables** — `${variable}`
+- **Backtick escape sequences** — escape characters in expandable strings
+- **Sub-expressions** — `$()`, `@()`, `@{}` inside strings
+- **Operators** — including `xor`, `bnot`, `bxor`, `notin`, `shl`, `shr`, `split`, `join`, and case-sensitive/insensitive variants
+- **Cmdlet detection** — SPE cmdlets following the `Verb-Noun` pattern are automatically recognized
+
+### Snippets and Autocomplete
+
+The editor provides snippet-based autocomplete for common PowerShell patterns. Type a snippet prefix and press **Tab** to expand, or use **Ctrl-Space** to browse available completions.
+
+![ISE Snippets](../.gitbook/assets/ise-snippets.png)
+
 ## Split Orientation
 
 {% hint style="info" %}
