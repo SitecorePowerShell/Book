@@ -283,6 +283,7 @@ This issue occurs due to the fact that the remoting session defaults to the `Fil
 
 ## References
 
+* [CORS Configuration](security/web-services.md#cors-configuration) - Configure cross-origin access for SPE web services
 * Michael's follow up post on [Remoting](https://michaellwest.blogspot.com/2015/07/sitecore-powershell-extensions-remoting.html)
 * Adam's initial post on [Remoting](https://blog.najmanowicz.com/2014/10/10/sitecore-powershell-extensions-remoting/)
 

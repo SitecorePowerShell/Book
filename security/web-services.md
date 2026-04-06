@@ -416,6 +416,51 @@ Grant access to individual users:
 </authorization>
 ```
 
+## CORS Configuration
+
+{% hint style="info" %}
+Introduced in SPE 9.0.
+{% endhint %}
+
+Cross-Origin Resource Sharing (CORS) can be configured per service to allow browser-based cross-origin requests to SPE web services. This is useful when calling SPE APIs from JavaScript in a different origin, such as external admin tools, single-page applications, or CI dashboards.
+
+CORS is configured within each service node in `Spe.config` using the `<cors>` element:
+
+```xml
+<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <powershell>
+      <services>
+        <remoting>
+          <cors>
+            <allowedOrigins>
+              <origin>https://admin.example.com</origin>
+              <origin>https://dashboard.example.com</origin>
+            </allowedOrigins>
+            <allowCredentials>true</allowCredentials>
+          </cors>
+        </remoting>
+      </services>
+    </powershell>
+  </sitecore>
+</configuration>
+```
+
+### CORS Settings
+
+| Setting | Description |
+| :--- | :--- |
+| `allowedOrigins` | List of origins permitted to make cross-origin requests. Use `<origin>*</origin>` to allow all origins. |
+| `allowCredentials` | When `true`, the response includes `Access-Control-Allow-Credentials: true`, allowing cookies and authorization headers. |
+
+{% hint style="warning" %}
+When `allowCredentials` is `true`, you cannot use `*` as an allowed origin. Each origin must be explicitly listed.
+{% endhint %}
+
+CORS can be configured independently for each service: `remoting`, `restfulv2`, `fileDownload`, `fileUpload`, `mediaDownload`, and `mediaUpload`. Preflight (`OPTIONS`) requests are handled automatically and do not require authentication.
+
+See the [Remoting](../remoting.md) page for details on using SPE web services.
+
 ## IIS-Level Protection
 
 Add an additional security layer by configuring IIS authentication.
