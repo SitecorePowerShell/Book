@@ -21,6 +21,52 @@ The setup of the module only requires a few steps: 1. In the Sitecore instance i
 
 The remoting services use a combination of a SOAP service \(ASMX\) and HttpHandler \(ASHX\). Remoting features are disabled by default and should be configured as needed as can be seen in the [security section here](security/). The SOAP service may require additional Windows authentication using the `-Credential` parameter which is common when logged into a Windows Active Directory domain.
 
+### Authentication
+
+{% hint style="info" %}
+Introduced in SPE 9.0.
+{% endhint %}
+
+SPE remoting supports multiple authentication methods. **API keys are the recommended approach** for new integrations as they provide per-consumer security profiles, rate limiting, and user impersonation without sharing a global secret.
+
+#### API Key Authentication (Recommended)
+
+API keys are managed as Sitecore content items under `/sitecore/system/Modules/PowerShell/Settings/Remoting/API Keys/`. Each key can be configured with:
+
+| Property | Description |
+| :--- | :--- |
+| `Shared Secret` | The authentication secret for this key. |
+| `Enabled` | Activate or deactivate the key. |
+| `Profile` | The restriction profile applied to sessions using this key. |
+| `Impersonate User` | Optional user context for the remote session. |
+| `Request Limit` | Maximum requests within the throttle window. |
+| `Throttle Window` | Time window for rate limiting. |
+
+When rate limits are exceeded, the server returns HTTP 429 with rate limit headers:
+
+| Header | Description |
+| :--- | :--- |
+| `X-RateLimit-Limit` | Maximum requests allowed. |
+| `X-RateLimit-Remaining` | Remaining requests in the current window. |
+| `X-RateLimit-Reset` | When the rate limit resets. |
+
+{% hint style="warning" %}
+**Prefer API keys over SharedSecret.** The legacy shared secret approach uses a single global secret for all consumers. API keys provide individual secrets with per-key profiles, rate limiting, and audit trails.
+{% endhint %}
+
+#### Shared Secret Authentication (Legacy)
+
+The original authentication method uses a single shared secret configured in `Spe.config`. This method is retained for backwards compatibility.
+
+#### JWT Improvements
+
+SPE 9.0 includes several JWT enhancements:
+
+- **HS512 support** — stronger signing algorithm alongside the existing HS256
+- **`iat`/`nbf` claim validation** — tokens are validated for issued-at and not-before claims
+- **Configurable token lifetime** — adjust token expiration to match your security requirements
+- **Proper HTTP status codes** — authentication failures now return HTTP 401 instead of 500, making it easier to distinguish auth problems from server errors
+
 ### Windows Authenticated Requests
 
 If you have configured the web services to run under _Windows Authentication_ mode in IIS then you'll need to use the **Credential** parameter for the commands.
@@ -260,6 +306,19 @@ Invoke-RemoteScript -ScriptBlock {
 ```
 
 ## Troubleshooting
+
+### HTTP 401 Unauthorized
+
+Authentication failures return HTTP 401 with a descriptive message. Common causes:
+
+- Wrong shared secret or API key
+- JWT audience mismatch
+- Expired or malformed token
+- User not in the remoting authorization list
+
+Check the [Logging and Monitoring](security/logging-and-monitoring.md) page for detailed auth event logs.
+
+### FileSystem Provider Error
 
 If you receive the following error when trying to run a script (note the namespace is `Microsoft.PowerShell.Commands` instead of `Spe` or similar):
 
