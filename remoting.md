@@ -77,6 +77,49 @@ Receive-RemoteItem -Session $session -Path "/Default Website/cover" -Destination
 Stop-ScriptSession -Session $session
 ```
 
+### Output Formats
+
+{% hint style="info" %}
+Introduced in SPE 9.0.
+{% endhint %}
+
+The `Invoke-RemoteScript` command supports three output formats through the `-OutputFormat` parameter.
+
+| Format | Description | Use Case |
+| :--- | :--- | :--- |
+| `CliXml` | Default. Full type-preserving serialization via PowerShell's CliXml. | When you need deserialized PowerShell objects with type information. |
+| `Json` | Structured JSON with an `{"output":[], "errors":[]}` envelope. | When performance matters or when consumers expect JSON (APIs, CI/CD). |
+| `Raw` | Unstructured `.ToString()` output. | When you only need simple string output. |
+
+JSON serialization is approximately **2.4x faster** than CliXml for large result sets while still preserving structured property data.
+
+**Example:** The following retrieves items using JSON output format.
+
+```powershell
+Import-Module -Name SPE
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
+$response = Invoke-RemoteScript -Session $session -OutputFormat Json -ScriptBlock {
+    Get-ChildItem -Path "master:\content\Home" | 
+        Select-Object -Property Name, TemplateName, "__Updated"
+}
+Stop-ScriptSession -Session $session
+```
+
+The JSON response envelope separates output from errors:
+
+```json
+{
+  "output": [
+    { "Name": "About", "TemplateName": "Sample Item", "__Updated": "20250401T120000Z" }
+  ],
+  "errors": []
+}
+```
+
+{% hint style="info" %}
+The `-Raw` switch is equivalent to `-OutputFormat Raw` and continues to work for backwards compatibility.
+{% endhint %}
+
 ### Script Sessions and Web API Tutorial
 
 ![SPE Web API](https://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)
