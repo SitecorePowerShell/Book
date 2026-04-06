@@ -183,6 +183,7 @@ As you continue working with SPE, keep these best practices in mind:
 
 ## Additional Learning Resources
 
+- **[Interactive Tutorials](https://sitecorepowershell.com/tutorials)** - 29 browser-based lessons with a simulated Sitecore tree, REPL and ISE modes, and optional live Sitecore connection — no instance required to get started
 - **[Video Series](https://www.youtube.com/playlist?list=PLph7ZchYd_nCypVZSNkudGwPFRqf1na0b)** - Official tutorial videos
 - **[Blog Collection](https://blog.najmanowicz.com/sitecore-powershell-console/)** - Community articles and examples
 - **[Microsoft PowerShell Docs](https://docs.microsoft.com/en-us/powershell/)** - General PowerShell reference

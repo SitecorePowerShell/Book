@@ -161,6 +161,16 @@ $configs | New-UnicornItemSource -Project $pkg
 Export-Package -Project $pkg -Path "C:\foo.zip" -Zip
 ```
 
+## Interactive Tutorials
+
+The [SPE Tutorials](https://sitecorepowershell.com/tutorials) site offers 29 interactive browser-based lessons for learning SPE. Features include:
+
+- Simulated Sitecore content tree — no Sitecore instance required
+- REPL and ISE modes for hands-on practice
+- Optional live Sitecore connection for real-world exercises
+
+Source: [SitecorePowerShell/tutorials](https://github.com/SitecorePowerShell/tutorials)
+
 ## SPE Modules
 
 The following are Sitecore modules that enhance the SPE experience.
