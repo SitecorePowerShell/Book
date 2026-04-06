@@ -24,7 +24,7 @@ Services are configured in `App_Config\Include\Spe\Spe.config`:
     <services>
       <restfulv1 enabled="false" />
       <restfulv2 enabled="false" />
-      <remoting enabled="false" />
+      <remoting enabled="false" profile="unrestricted" />
       <fileDownload enabled="false" />
       <fileUpload enabled="false" />
       <mediaDownload enabled="false" />
@@ -36,6 +36,10 @@ Services are configured in `App_Config\Include\Spe\Spe.config`:
   </powershell>
 </sitecore>
 ```
+
+{% hint style="info" %}
+The `profile` attribute assigns a [restriction profile](restriction-profiles.md) that controls language mode, command access, and item path restrictions for all requests through that service. The profile can be overridden per-request by JWT scope claims or [API Key](api-keys.md) configuration. See [Restriction Profiles](restriction-profiles.md) for details.
+{% endhint %}
 
 ## Service Descriptions
 
@@ -113,7 +117,7 @@ Services are configured in `App_Config\Include\Spe\Spe.config`:
 
 #### Securing Remoting Service
 
-**Enable with HTTPS requirement:**
+**Enable with HTTPS requirement and restriction profile:**
 
 ```xml
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
@@ -122,6 +126,7 @@ Services are configured in `App_Config\Include\Spe\Spe.config`:
       <services>
         <remoting>
           <patch:attribute name="enabled">true</patch:attribute>
+          <patch:attribute name="profile">read-only</patch:attribute>
           <patch:attribute name="requireSecureConnection">true</patch:attribute>
           <authorization>
             <add Permission="Allow" IdentityType="Role" Identity="sitecore\PowerShell Extensions Remoting" />
@@ -292,7 +297,7 @@ Default configuration - only services needed for Console and ISE:
 
 ### CI/CD Configuration
 
-Enable remoting for build automation, with strict security:
+Enable remoting for build automation, with strict security and a restriction profile:
 
 ```xml
 <configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
@@ -301,6 +306,7 @@ Enable remoting for build automation, with strict security:
       <services>
         <remoting>
           <patch:attribute name="enabled">true</patch:attribute>
+          <patch:attribute name="profile">content-editor</patch:attribute>
           <patch:attribute name="requireSecureConnection">true</patch:attribute>
           <authorization>
             <patch:delete />
@@ -569,6 +575,8 @@ $session = New-ScriptSession -Username "domain\user" -Password "password" -Conne
 
 ## Related Topics
 
+- [Restriction Profiles](restriction-profiles.md) - Configure language mode and command restrictions per service
+- [API Keys](api-keys.md) - Per-consumer credentials with profile binding and rate limiting
 - [File Upload Restrictions](file-upload-restrictions.md) - Configure allowed file types and paths
 - [IIS Security](iis-security.md) - Additional IIS-level hardening
 - [Remoting](../remoting.md) - Using SPE Remoting features
