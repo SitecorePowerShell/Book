@@ -59,7 +59,7 @@ Add the following to your Claude Desktop configuration file (`claude_desktop_con
 }
 ```
 
-<!-- TODO: Screenshot showing Claude Desktop with MCP server connected -->
+![MCP Server Enabled in Claude Desktop](../.gitbook/assets/mcp-tool-enabled.png)
 
 ### 2. Create a Dedicated Service Account
 
@@ -80,6 +80,8 @@ Once configured, ask Claude to test the connection:
 > "Test the connection to my Sitecore instance"
 
 Claude will use the `spe_test_connection` tool to verify connectivity and report the Sitecore version, SPE version, and active user.
+
+![MCP Server Test Connection](../.gitbook/assets/mcp-tool-test-connection.png)
 
 ### 4. Run Your First Script
 
