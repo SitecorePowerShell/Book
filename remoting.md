@@ -120,6 +120,65 @@ The JSON response envelope separates output from errors:
 The `-Raw` switch is equivalent to `-OutputFormat Raw` and continues to work for backwards compatibility.
 {% endhint %}
 
+### Structured Errors
+
+{% hint style="info" %}
+Introduced in SPE 9.0.
+{% endhint %}
+
+By default, errors in JSON responses are returned as flat strings. The `-StructuredErrors` switch on `Invoke-RemoteScript` opts into rich error objects that include diagnostic context for programmatic error handling.
+
+{% hint style="warning" %}
+Structured errors require `-OutputFormat Json`.
+{% endhint %}
+
+Each error object contains the following fields:
+
+| Field | Description |
+| :--- | :--- |
+| `errorCategory` | The PowerShell error category (e.g., `ObjectNotFound`, `InvalidArgument`). |
+| `fullyQualifiedErrorId` | Unique identifier for the error. |
+| `exceptionType` | The .NET exception type name. |
+| `exceptionMessage` | The exception message text. |
+| `scriptStackTrace` | Stack trace showing where the error occurred in the script. |
+| `invocationInfo` | Invocation details including line and column numbers. |
+
+**Example:** The following demonstrates programmatic error handling with structured errors.
+
+```powershell
+Import-Module -Name SPE
+$session = New-ScriptSession -Username admin -Password b -ConnectionUri https://remotesitecore
+$response = Invoke-RemoteScript -Session $session -OutputFormat Json -StructuredErrors -ScriptBlock {
+    Get-Item -Path "master:\content\NonExistent"
+}
+Stop-ScriptSession -Session $session
+
+if ($response.errors) {
+    foreach ($err in $response.errors) {
+        Write-Warning "[$($err.errorCategory)] $($err.exceptionMessage)"
+        Write-Verbose $err.scriptStackTrace
+    }
+}
+```
+
+A structured error response looks like the following:
+
+```json
+{
+  "output": [],
+  "errors": [
+    {
+      "errorCategory": "ObjectNotFound",
+      "fullyQualifiedErrorId": "ItemNotFound,Spe.Commands.Data.GetItemCommand",
+      "exceptionType": "System.Management.Automation.ItemNotFoundException",
+      "exceptionMessage": "Cannot find path 'master:\\content\\NonExistent'.",
+      "scriptStackTrace": "at <ScriptBlock>, <No file>: line 1",
+      "invocationInfo": { "line": 1, "column": 5 }
+    }
+  ]
+}
+```
+
 ### Script Sessions and Web API Tutorial
 
 ![SPE Web API](https://img.youtube.com/vi/SmZBGKOryzQ/0.jpg)
