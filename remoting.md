@@ -305,6 +305,27 @@ Invoke-RemoteScript -ScriptBlock {
 } -Session $session
 ```
 
+## Restriction Profiles
+
+{% hint style="info" %}
+Introduced in SPE 9.0.
+{% endhint %}
+
+Remoting endpoints can be secured with [restriction profiles](security/restriction-profiles.md) that control language mode, command access, and content path visibility. When a profile is active, response headers indicate the restriction state:
+
+| Header | Description |
+| :--- | :--- |
+| `X-SPE-Profile` | The active restriction profile name. |
+| `X-SPE-LanguageMode` | `FullLanguage` or `ConstrainedLanguage`. |
+| `X-SPE-Restriction` | Set on 403 responses when a command is blocked. |
+| `X-SPE-BlockedCommand` | The specific command that was blocked. |
+
+For configuration details, see:
+- [Restriction Profiles](security/restriction-profiles.md) — Profile definitions and features
+- [API Keys](security/api-keys.md) — Per-consumer credentials with profile binding
+- [Trusted Scripts](security/trusted-scripts.md) — Allow specific scripts to bypass CLM
+- [Item Path Restrictions](security/item-path-restrictions.md) — Control content tree access
+
 ## Troubleshooting
 
 ### HTTP 401 Unauthorized
@@ -317,6 +338,18 @@ Authentication failures return HTTP 401 with a descriptive message. Common cause
 - User not in the remoting authorization list
 
 Check the [Logging and Monitoring](security/logging-and-monitoring.md) page for detailed auth event logs.
+
+### HTTP 403 Forbidden (Command Blocked)
+
+A restriction profile is blocking a command. Check the `X-SPE-BlockedCommand` response header to identify which command was blocked and `X-SPE-Profile` for the active profile. Options:
+
+- Use an alternative command that is not blocked
+- Register the script as a [trusted script](security/trusted-scripts.md)
+- Adjust the profile's command list via [item-based overrides](security/restriction-profiles.md#item-based-overrides)
+
+### HTTP 429 Too Many Requests
+
+An [API Key](security/api-keys.md) rate limit has been exceeded. The `Retry-After` header indicates how long to wait. The `Invoke-RemoteScript` client handles this automatically.
 
 ### FileSystem Provider Error
 
