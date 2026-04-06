@@ -66,6 +66,7 @@ This guide provides a progressive roadmap from beginner to advanced SPE user. Fo
 
 ### Hands-On Practice
 
+- [Interactive Tutorials](https://sitecorepowershell.com/tutorials) - 29 browser-based lessons with a simulated Sitecore tree — no Sitecore instance required
 - [Console](../interfaces/console.md) - Interactive PowerShell terminal in Sitecore
 - [ISE (Integrated Scripting Environment)](../interfaces/scripting.md) - Full-featured script editor with IntelliSense
 
