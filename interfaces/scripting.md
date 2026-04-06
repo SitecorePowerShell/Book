@@ -69,3 +69,23 @@ Below are the shortcuts available in the ISE.
 | Ctrl-F           | Search for keywords in the script                                                                             |
 
 For more commands built into the script editor see [here](https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts)
+
+## Split Orientation
+
+{% hint style="info" %}
+Introduced in SPE 9.0.
+{% endhint %}
+
+The ISE supports toggling the results pane between horizontal (top/bottom) and vertical (left/right) split orientations. A toggle button in the status bar switches between the two layouts.
+
+![ISE Horizontal Split](../.gitbook/assets/ise-split-horizontal.png)
+
+![ISE Vertical Split](../.gitbook/assets/ise-split-vertical.png)
+
+### Features
+
+- **Toggle button** in the status bar switches between horizontal and vertical split. The icon updates to reflect the current orientation.
+- **Draggable splitter** with visual grip indicators. Drag to resize the editor and results panes.
+- **Double-click** the splitter to reset to a 50/50 split.
+- **Minimum pane size** of 100px is enforced to prevent panes from collapsing.
+- **Persistence** — the splitter orientation and position are saved to `localStorage` and restored on the next visit.
