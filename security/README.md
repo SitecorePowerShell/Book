@@ -47,6 +47,41 @@ Control external access to SPE through web services:
 - Role-based authorization
 - Configuration examples for different scenarios
 
+#### [Restriction Profiles](restriction-profiles.md)
+
+Control what remote sessions can do with tiered security profiles:
+
+- Built-in profiles (unrestricted, read-only, read-only-strict, content-editor)
+- Constrained Language Mode (CLM) enforcement
+- Command blocklists and allowlists
+- Profile resolution order (JWT scope, API Key, service-level)
+- Item-based overrides for customization
+
+#### [API Keys](api-keys.md)
+
+Per-consumer credentials with granular access control:
+
+- Profile binding per API key
+- User impersonation
+- Per-key rate limiting and throttling
+- Replaces shared global secret approach
+
+#### [Trusted Scripts](trusted-scripts.md)
+
+Allow specific scripts to bypass CLM restrictions:
+
+- Binary trust model (trusted or untrusted)
+- Profile-bound trust entries
+- Built-in trusted scripts for SPE core functions
+
+#### [Item Path Restrictions](item-path-restrictions.md)
+
+Control which Sitecore content paths are accessible through remoting:
+
+- Blocklist and allowlist modes
+- Prefix-based path matching
+- Enforce or audit-only modes
+
 ### Hardening and Protection
 
 #### [File Upload Restrictions](file-upload-restrictions.md)
@@ -206,6 +241,10 @@ SPE security uses multiple layers for comprehensive protection:
    - Web service controls
    - File upload restrictions
    - Delegated access controls
+   - Restriction Profiles (CLM)
+   - Remoting API Keys
+   - Trusted Script Registry
+   - Item Path Restrictions
 5. Logging and Monitoring
    - Comprehensive logging
    - Real-time alerting
@@ -255,7 +294,24 @@ Each layer provides additional protection. If one layer is compromised, others p
 4. Test report access as content author
 5. Monitor usage via [Logging and Monitoring](logging-and-monitoring.md)
 
-### Scenario 4: Identity Server Integration (Sitecore 9.1+)
+### Scenario 4: Securing Remoting with Restriction Profiles
+
+**Goal:** Lock down remoting endpoints with CLM and per-consumer API keys
+
+**Steps:**
+
+1. Choose a [restriction profile](restriction-profiles.md) (`read-only`, `read-only-strict`, or `content-editor`)
+2. Assign the profile to the remoting service in [Web Services](web-services.md)
+3. Create [API Keys](api-keys.md) for each consumer with appropriate profiles
+4. Start with `enforcement="Audit"` for dry-run validation
+5. Monitor logs for `[Security]` violations
+6. Switch to `enforcement="Enforce"` after validating audit logs
+7. Configure [item path restrictions](item-path-restrictions.md) for sensitive content
+8. Register essential scripts as [trusted](trusted-scripts.md) if needed
+
+See the [CLM Migration Guide](clm-migration.md) for detailed rollout steps.
+
+### Scenario 5: Identity Server Integration (Sitecore 9.1+)
 
 **Goal:** Configure SPE with Sitecore Identity Server
 
@@ -332,8 +388,11 @@ Each layer provides additional protection. If one layer is compromised, others p
 - **New to SPE Security?** Start with [Getting Started](getting-started.md)
 - **Deploying to production?** Use the [Security Checklist](security-checklist.md)
 - **Setting up automation?** See [Minimal Deployment](minimal-deployment.md)
+- **Securing remoting endpoints?** See [Restriction Profiles](restriction-profiles.md)
+- **Per-consumer credentials?** See [API Keys](api-keys.md)
+- **Trusting built-in functions?** See [Trusted Scripts](trusted-scripts.md)
+- **Migrating to CLM?** See [CLM Migration Guide](clm-migration.md)
 - **Need to debug?** Check [Logging and Monitoring](logging-and-monitoring.md)
-- **Configuring a specific feature?** See topic-specific guides below
 
 ### Support Resources
 
