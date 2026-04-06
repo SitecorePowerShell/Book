@@ -76,48 +76,109 @@ Edit your log4net configuration (typically in `App_Config\Sitecore.config` or a 
 | **QA/Staging**  | INFO         | Balance detail and volume                 |
 | **Production**  | INFO or WARN | Important events without excessive detail |
 
+## Log Output Format
+
+{% hint style="info" %}
+Introduced in SPE 9.0.
+{% endhint %}
+
+SPE uses a standardized structured log format across all messages. You can choose between two output formats by configuring the setting in `Spe.config`:
+
+| Format | Description |
+| :--- | :--- |
+| `keyvalue` | Default. Machine-parseable key=value pairs compatible with Splunk `KV_MODE=auto`. |
+| `json` | Structured JSON objects for log aggregation tools like Splunk, ELK, and Datadog. |
+
+### Key-Value Format (default)
+
+```
+[Category] action=verb key=value key="quoted value"
+```
+
+**Example:**
+
+```
+AUDIT (sitecore\admin) [Remoting] action=scriptStarting user=sitecore\admin ip=127.0.0.1 session=abc123 scriptHash=def456
+```
+
+### JSON Format
+
+```json
+{"type":"Remoting","action":"scriptStarting","user":"sitecore\\admin","ip":"127.0.0.1","session":"abc123","scriptHash":"def456","auditUser":"sitecore\\admin"}
+```
+
+### Configuration
+
+```xml
+<configuration xmlns:patch="https://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <powershell>
+      <settings>
+        <setting name="Spe.LogFormat" value="json" />
+      </settings>
+    </powershell>
+  </sitecore>
+</configuration>
+```
+
 ## What Gets Logged
+
+All log messages follow the structured format with one of 24 categories. Security-relevant events are promoted to AUDIT level.
+
+### Categories
+
+| Category | Description |
+| :--- | :--- |
+| `Remoting` | Remote script execution via the remoting service |
+| `Remoting(SOAP)` | SOAP-based remoting calls |
+| `JWT` | JWT token creation and validation |
+| `ApiKey` | API key authentication events |
+| `Security` | Authorization checks and access control |
+| `Trust` | Trusted authentication events |
+| `DelegatedAccess` | Delegated access and impersonation |
+| `Session` | Session elevation and management |
+| `Console` | Console interactions |
+| `ISE` | ISE script execution |
+| `Runner` | Script runner execution |
+| `Report` | Report execution |
+| `Task` | Scheduled task execution |
+| `Rule` | Rules engine script execution |
+| `Provider` | PowerShell provider operations |
+| `Upload` | File and media upload operations |
+| `Pipeline` | Pipeline processing |
+| `Command` | Command execution |
+| `Dialog` | Dialog interactions |
+| `Profile` | User profile operations |
+| `Gutter` | Gutter script execution |
+| `Timer` | Timer and performance events |
+| `Host` | PowerShell host events |
+| `Settings` | Configuration changes |
 
 ### Script Execution
 
-**Format:**
-
 ```
-INFO Arbitrary script execution in ISE by user: 'sitecore\Admin'
+AUDIT (sitecore\admin) [ISE] action=scriptExecuting user=sitecore\admin scriptId={CFE81AF6-2468-4E62-8BF2-588B7CC60F80}
 ```
 
 ### Session Elevation
 
-**Format:**
-
 ```
-WARN Session state elevated for 'ISE' by user: sitecore\Admin
+AUDIT (sitecore\admin) [Session] action=elevated interface=ISE user=sitecore\admin
 ```
 
 ### Delegated Access
 
-**Format:**
-
 ```
-INFO [Gutter] Executing script {CFE81AF6-2468-4E62-8BF2-588B7CC60F80} for Context User sitecore\test as sitecore\Admin.
+AUDIT (sitecore\admin) [DelegatedAccess] action=scriptExecuting contextUser=sitecore\test impersonatedAs=sitecore\admin scriptId={CFE81AF6-2468-4E62-8BF2-588B7CC60F80}
 ```
 
-**Includes:**
-
-- Script ID
-- Context user (actual logged-in user)
-- Impersonated user (elevated account)
-
-This is critical for audit trails showing privilege escalation.
+This is critical for audit trails showing privilege escalation — the log includes the actual context user and the impersonated account.
 
 ### Web Service Calls
 
-**Format:**
-
 ```
-INFO A request to the remoting service was made from IP 10.0.0.27
-INFO A request to the mediaUpload service was made from IP 10.0.0.27
-WARN A request to the mediaUpload service could not be completed because the provided credentials are invalid.
+AUDIT (sitecore\admin) [Remoting] action=requestReceived ip=10.0.0.27 service=remoting
+WARN  [Remoting] action=authFailed ip=10.0.0.27 service=mediaUpload reason="invalid credentials"
 ```
 
 **Logged Events:**
@@ -129,32 +190,20 @@ WARN A request to the mediaUpload service could not be completed because the pro
 
 ### Authentication Events
 
-**Format:**
-
 ```
-INFO [Runner] Executing script {BD07C7D1-700D-450C-B79B-8526C6643BF3} for Context User sitecore\test2 as sitecore\Admin.
+AUDIT (sitecore\admin) [JWT] action=bearerAuthSuccess user=sitecore\admin ip=127.0.0.1
+WARN  [ApiKey] action=authFailed ip=10.0.0.27 reason="invalid key"
 ```
 
 **Logged Events:**
 
-- Successful authentication
+- Successful authentication (bearer, API key, Windows)
 - Failed authentication
 - Authorization denials
 
 ### Errors and Exceptions
 
-**Format:**
-
-```powershell
-# TODO
-```
-
-**Includes:**
-
-- Exception details
-- Stack traces
-- User context
-- Operation being performed
+Errors include exception details, stack traces, user context, and the operation being performed.
 
 ## Monitoring Strategies
 
@@ -176,12 +225,17 @@ Get-ChildItem -Path $SitecoreLogFolder -Filter "SPE.log.*.txt" | Sort-Object -De
 #### Monitor for Specific Events
 
 ```powershell
-# Watch for tasks
+# Watch for task execution
 Get-Content "$SitecoreLogFolder\SPE.log.20251201.txt" | Where-Object { $_ -match "\[Task\]" }
 ```
 
 ```powershell
-# Watch for warnings
+# Watch for authentication failures
+Get-Content "$SitecoreLogFolder\SPE.log.20251201.txt" | Where-Object { $_ -match "action=authFailed" }
+```
+
+```powershell
+# Watch for all warnings
 Get-Content "$SitecoreLogFolder\SPE.log.20251201.txt" | Where-Object { $_ -match "WARN" }
 ```
 
@@ -192,22 +246,17 @@ Get-Content "$SitecoreLogFolder\SPE.log.20251201.txt" | Where-Object { $_ -match
 ```powershell
 $logPath = "$SitecoreLogFolder\SPE.log.20251201.txt"
 $failedAuth = Get-Content $logPath |
-    Where-Object { $_ -match "credentials are invalid" } |
-    ForEach-Object {
-        if ($_ -match "(\d{2}:\d{2}:\d{2}).*WARN\s*(\S+)") {
-            [PSCustomObject]@{
-                Timestamp = $matches[1]
-                User = $matches[2]
-                LogLine = $_
-            }
+    Where-Object { $_ -match "action=authFailed" }
+
+$failedAuth | ForEach-Object {
+    if ($_ -match "(?<time>\d{2}:\d{2}:\d{2}).*ip=(?<ip>[\d\.]+).*reason=""(?<reason>[^""]+)""") {
+        [PSCustomObject]@{
+            Timestamp = $matches["time"]
+            IP = $matches["ip"]
+            Reason = $matches["reason"]
         }
     }
-
-$failedAuth
-
-# Timestamp User LogLine
-# --------- ---- -------
-# 11:20:23  A    1508 11:20:23 WARN  A request to the mediaUpload service could not be completed because the provided credentials are invalid.
+}
 ```
 
 #### Track Delegated Access Usage
@@ -215,63 +264,48 @@ $failedAuth
 ```powershell
 $logPath = "$SitecoreLogFolder\SPE.log.20251201.txt"
 $delegated = Get-Content $logPath |
-    Where-Object { $_ -match "Executing script" } |
-    ForEach-Object {
-        if ($_ -match "(?<time>\d{2}:\d{2}:\d{2}).*Runner\s*.*Context User\s(?<user>[0-9a-zA-Z\\]*)\sas\s(?<impersonated>[0-9a-zA-Z\\]*).*") {
-            [PSCustomObject]@{
-                Timestamp = $matches["time"]
-                ContextUser = $matches["user"]
-                ImpersonatedAs = $matches["impersonated"]
-                LogLine = $_
-            }
+    Where-Object { $_ -match "\[DelegatedAccess\]" }
+
+$delegated | ForEach-Object {
+    if ($_ -match "(?<time>\d{2}:\d{2}:\d{2}).*contextUser=(?<user>\S+)\simpersonatedAs=(?<impersonated>\S+)") {
+        [PSCustomObject]@{
+            Timestamp = $matches["time"]
+            ContextUser = $matches["user"]
+            ImpersonatedAs = $matches["impersonated"]
         }
     }
-
-$delegated | Group-Object ContextUser |
+} | Group-Object ContextUser |
     Select-Object Name, Count |
     Sort-Object Count -Descending
-
-# Name           Count
-# ----           -----
-# sitecore\test2     1
 ```
 
 #### Find Unauthorized Access Attempts
 
 ```powershell
 $logPath = "$SitecoreLogFolder\SPE.log.20251201.txt"
-$unauthorized = Get-Content $logPath |
-    Where-Object { $_ -match "credentials are invalid" }
-
-$unauthorized | ForEach-Object {
-    Write-Host $_ -ForegroundColor Red -BackgroundColor White
-}
-
-# 1508 11:20:23 WARN  A request to the mediaUpload service could not be completed because the provided credentials are invalid.
+Get-Content $logPath |
+    Where-Object { $_ -match "action=authFailed|action=accessDenied" } |
+    ForEach-Object {
+        Write-Host $_ -ForegroundColor Red -BackgroundColor White
+    }
 ```
 
 #### Analyze Web Service Usage
 
 ```powershell
 $logPath = "$SitecoreLogFolder\SPE.log.20251201.txt"
-$webServiceCalls = Get-Content $logPath |
-    Where-Object { $_ -match "remoting" }
-
-# Group by IP address
-$webServiceCalls | ForEach-Object {
-    if ($_ -match "IP\s*(?<ip>[\d\.]+)") {
-        [PSCustomObject]@{
-            IP = $matches['ip']
-            LogLine = $_
+Get-Content $logPath |
+    Where-Object { $_ -match "\[Remoting\]" } |
+    ForEach-Object {
+        if ($_ -match "ip=(?<ip>[\d\.]+)") {
+            [PSCustomObject]@{
+                IP = $matches['ip']
+                LogLine = $_
+            }
         }
-    }
-} | Group-Object IP |
+    } | Group-Object IP |
     Select-Object Name, Count |
     Sort-Object Count -Descending
-
-# Name      Count
-# ----      -----
-# 10.0.0.27   105
 ```
 
 ### Scheduled Log Review
